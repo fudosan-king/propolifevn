@@ -1,0 +1,123 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ELT Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Sat Sep 19 2015 09:53:24 GMT+0700 (ICT)\n"
+"PO-Revision-Date: Sat Sep 19 2015 10:11:49 GMT+0700 (ICT)\n"
+"Last-Translator: admin <tam@fudosan-king.jp>\n"
+"Language-Team: \n"
+"Language: Korean\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Loco-Target-Locale: ko_KR"
+
+#: ../functions.php:296 ../functions.php:385
+msgid "その他の製品"
+msgstr ""
+
+#: ../functions.php:302
+msgid "あなたの玄関口に毎週配信！"
+msgstr ""
+
+#: ../functions.php:350 ../functions.php:433
+msgid "続きを読みます"
+msgstr ""
+
+#: ../functions.php:485 ../functions.php:494 ../functions.php:503 ../functions.
+#: php:512
+msgid "食肉の加工"
+msgstr ""
+
+#: ../functions.php:537
+msgid ""
+"アドレス: Đường Trung tâm, KCN Long Hậu mở rộng, Xã Long Hậu, Huyện Cần Giuộc, "
+"Long An"
+msgstr ""
+
+#: ../functions.php:561 ../header.php:91 ../index.php:90
+msgid "私たちのサービス"
+msgstr ""
+
+#: ../functions.php:594
+msgid "当社のクライアント"
+msgstr ""
+
+#: ../functions.php:649
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../header.php:69
+msgid "ホーム"
+msgstr ""
+
+#: ../header.php:70 ../index.php:38 ../index.php:80
+msgid "私達について"
+msgstr ""
+
+#: ../header.php:72
+msgid "プロダクト"
+msgstr ""
+
+#: ../header.php:92 ../index.php:100
+msgid "クライアント"
+msgstr ""
+
+#: ../header.php:93
+msgid "お問い合わせ"
+msgstr ""
+
+#: ../index.php:57
+msgid "食品新鮮な"
+msgstr ""
+
+#: ../index.php:60
+msgid "すべての家族のために必要な"
+msgstr ""
+
+#: ../index.php:72
+msgid "ELT Vietnam について"
+msgstr ""
+
+#. Name of the template
+msgid "AboutPage"
+msgstr ""
+
+#. Name of the template
+msgid "ClientsPage"
+msgstr ""
+
+#. Name of the template
+msgid "ContactPage"
+msgstr ""
+
+#. Name of the template
+msgid "ServicesPage"
+msgstr ""
+
+#. Name of the theme
+msgid "ELT Theme"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://www.propolife.co.jp/"
+msgstr ""
+
+#. Description of the theme
+msgid "Propolife VietNam"
+msgstr ""
+
+#. Author of the theme
+msgid "Propolife"
+msgstr ""

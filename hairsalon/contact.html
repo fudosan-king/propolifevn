@@ -1,0 +1,292 @@
+<!doctype html>
+<html>
+<head>
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta charset="UTF-8">
+<title>Hair salon</title>
+<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css" type="text/css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/styles.css" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Mr+De+Haviland' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jssor.js"></script>
+<script type="text/javascript" src="js/jssor.slider.js"></script>
+<script>
+jQuery(function ($) {
+	var _SlideshowTransitions = [{ $Duration: 1200, $Opacity: 2 }];
+	var options = {
+		$FillMode:2,
+		$AutoPlay: false,
+		$AutoPlayInterval: 4000,
+		$PauseOnHover: 1,
+		$ArrowKeyNavigation: true,
+		$SlideEasing: $JssorEasing$.$EaseOutQuint,
+		$SlideDuration: 800,
+		$MinDragOffsetToSlide: 20,
+		$SlideSpacing: 0,
+		$DisplayPieces: 1,
+		$ParkingPosition: 0,
+		$UISearchMode: 1,
+		$PlayOrientation: 1,
+		$DragOrientation: 1,
+			$SlideshowOptions: {
+			$Class: $JssorSlideshowRunner$,
+			$Transitions: _SlideshowTransitions,
+			$TransitionsOrder: 1,
+			$ShowLink: true
+		},
+		$BulletNavigatorOptions: {
+			$Class: $JssorBulletNavigator$,
+			$ChanceToShow:0,
+			$AutoCenter: 1,
+			$Steps: 1,
+			$Lanes: 1,
+			$SpacingX: 8,
+			$SpacingY: 8,
+			$Orientation: 1
+		},
+		$ArrowNavigatorOptions: {
+			$Class: $JssorArrowNavigator$,
+			$ChanceToShow:2,
+			$AutoCenter: 0,
+			$Steps: 1
+		}
+	};
+
+	var jssorslider = new $JssorSlider$("slider", options);
+	function ScaleSlider() {
+		var bodyWidth = document.body.clientWidth;
+		if (bodyWidth)
+			jssorslider.$ScaleWidth(Math.min(bodyWidth, 1920));				
+		else
+			window.setTimeout(ScaleSlider, 30);	
+	}
+	ScaleSlider();
+	$(window).bind("load", ScaleSlider);
+	$(window).bind("resize", ScaleSlider);
+	$(window).bind("orientationchange", ScaleSlider);	
+});
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+<script>
+var stockholm = new google.maps.LatLng(10.792200, 106.705543);
+var parliament = new google.maps.LatLng(10.792200, 106.705543);
+var marker;
+var map;
+
+function initialize() {
+  var mapOptions = {
+    zoom: 13,
+    center: stockholm
+  };
+
+  map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+
+  marker = new google.maps.Marker({
+    map:map,
+    draggable:true,
+    animation: google.maps.Animation.DROP,
+    position: parliament
+  });
+  google.maps.event.addListener(marker, 'click', toggleBounce);
+}
+
+function toggleBounce() {
+
+  if (marker.getAnimation() != null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+
+<body>
+<header>
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-8 col-xs-2">
+<a href="index.html"><img src="images/top-logo.png" width="188" height="73"></a>
+</div>
+
+<div class="col-lg-6 col-md-6 hidden-sm hidden-xs" align="left" style="padding:0px">
+<h2 style="padding: 0px;margin: 15px 0px 0px 0px;">Propolife Viet Nam</h2>
+<p style="padding:0px;margin:0px">No.2 Le Thanh Ton, District 1, HCM</p>
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-10" align="right">
+<img src="images/hotline.png" class="hidden-sm hidden-xs">
+<div class="mobile-number"><a href="tel:0120-15-3718"><abbr title="Call to Us: 0120-15-3718">0120-15-3718</abbr></a></div>
+<div class="datetime hidden-lg hidden-md"><a href="#">9:00～19:00〔定休日：水曜日〕</a></div>
+</div>    
+</div>
+</div>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>      
+      <a class="navbar-brand" href="index.html"><i class="fa fa-home visible-xs"></i></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+	    <li class="hidden-xs"><a href="index.html">ホーム</a></li>
+        <li><a href="menu.html">メニュー<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>
+        <li><a href="faq.html">お客様の声<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>
+        <li><a href="access.htlm">アクセス<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>
+        <li><a href="coupon.html">coupon<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>
+        <li><a href="booking.html">来店予約<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>
+        <li><a href="about.html">会社概要<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>         
+        <li class="active"><a href="contact.html">お問い合わせ<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>        
+      </ul>
+      <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs"><li><a href="#" class="datetime">9:00～19:00〔定休日：水曜日〕</a></li></ul>
+    </div>
+  </div>
+</nav>  
+  
+</header>
+
+<div class="slider-shadow">
+<div id="slider" style="position: relative; margin:0px;top: 0px; left: 0px; width: 1900px; height:564px; overflow: hidden;">
+<div u="loading" style="position: absolute; top: 0px; left: 0px;">
+<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+<div style="position: absolute; display: block; background: url(images/controls/ajax-loader.gif) no-repeat center center;top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+</div>
+<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1900px;height: 564px; overflow: hidden;">
+<div><img u="image" src="images/slides/1.jpg" /></div>
+<div><img u="image" src="images/slides/2.jpg" /></div>
+<div><img u="image" src="images/slides/3.jpg" /></div>
+</div>
+<div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;"><div u="prototype"></div></div>
+<span u="arrowleft" class="jssora21l" style="top:485px; left:881px;"></span>
+<span u="arrowright" class="jssora21r" style="top:485px; right:881px;"></span>
+</div>
+</div>
+
+<div class="container">
+<div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center"><h2 class="heading">Contact Page</h2></div></div>
+<p align="center" style="font-size:16px;font-style:italic">Want to make an appointment with us? Feel free to let us know below! Or email us at info@aodaihousing.com</p>
+</div>
+
+<form data-toggle="validator" role="form">
+<div class="container">
+<div class="row">
+
+<div class="col-lg-6">
+
+<div class="form-group has-feedback">
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-user"></i></span>
+<input type="text" class="form-control" placeholder="Fullname" data-error="Oh, must be input fullname" required>
+</div>
+<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+<span class="help-block with-errors"></span>
+</div>
+
+<div class="form-group has-feedback">
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+<input type="email" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="name@email.com" data-error="Oh, The value is not a valid email address" required>
+</div>
+<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+<span class="help-block with-errors"></span>
+</div>
+
+<div class="form-group has-feedback">
+<div class="input-group">
+<span class="input-group-addon"><i class="fa fa-phone"></i></span>
+<input type="tel" pattern="[0-9]{10,14}" class="form-control" placeholder="Phone" data-error="Oh, that phone is invalid" required>
+</div>
+<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+<span class="help-block with-errors"></span>
+</div>
+
+<div class="form-group has-feedback">
+<textarea placeholder="Address" class="form-control" rows="2" required></textarea>
+<span class="glyphicon form-control-feedback" aria-hidden="true"></span>
+<span class="help-block with-errors"></span>
+</div>
+</div>
+
+<div class="col-lg-6"><div class="form-group has-feedback"><textarea placeholder="Message" class="form-control" rows="9" style="height:186px;"></textarea></div></div>
+<div class="col-lg-12" align="center"><input type="submit" value="SEND MAIL" class="btn btn-primary"></div>
+
+</div>
+</div>
+</form>
+
+<div class="container">
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6 col-xs-12" align="center">
+<div><p>info@aodaihousing.com</p></div>
+<div><p>営業時間：月曜日～金曜日 8:00～17:00土曜日ご案内は可能（日祝定休）</p></div>
+<div><p>Unit1904 19Floor CJ TOWER(旧GEMADEPT TOWER), 6 Le Thanh Ton, District1,HCMC, Vietnam</p></div>
+<div><p><a href="tel:84-91-667-0027">＋84-91-667-0027（日本人担当者）</a></p></div>
+</div>
+<div class="col-md-3"></div>
+</div>
+
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6 col-xs-12" align="center">
+<div class="map"><div id="map-canvas"></div></div>
+</div>
+<div class="col-md-3"></div>
+</div>
+
+</div>
+<footer class="doc-footer">
+<div class="container">
+<div align="center">
+<ul class="footer-menu">
+<li><a href="#">TOP</a></li>
+<li><a href="#">メニュー</a></li>
+<li><a href="#">お客様の声</a></li>
+<li><a href="#">アクセス</a></li>
+<li><a href="#">coupon</a></li>
+<li><a href="#">お問い合わせ</a></li>
+<li><a href="#">来店予約</a></li>
+<li><a href="#">会社概要</a></li>
+</ul>
+</div>
+</div>
+<hr>
+<div>
+<address>
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-sm-12" align="center"><img src="images/mb-logo.png" width="72" height="70" class="img-responsive center-block"></div>
+</div>
+</div>
+</address>
+
+<div class="socials" align="center">
+<a class="fa fa-facebook" href="#"></a>
+<a class="fa fa-twitter" href="#"></a>
+<a class="fa fa-google-plus" href="#"></a>
+</div>
+<div class="clearfix"></div>
+<div class="footer-privacy">Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span id="copyright-year">2015</span>. <a href="#">Privacy Policy</a></div>
+</div>
+</footer>
+<script src="js/validator.min.js"></script>
+</body>
+</html>

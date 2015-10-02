@@ -1,0 +1,14 @@
+/*
+Theme Name: ELT Theme
+Theme URI: https://www.propolife.co.jp/
+Description: Propolife VietNam
+Author: Propolife
+Author URI: https://www.propolife.co.jp/
+Template: twentyfifteen
+Version: 1.0
+Text Domain: elt
+*/
+
+/*@import url("../twentyfifteen/style.css");*/
+@import url("css/styles.css");
+@import url("css/elt.css");

@@ -1,0 +1,505 @@
+<!doctype html>
+<html>
+<head>
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta charset="UTF-8">
+<title>Hair salon</title>
+<link rel="stylesheet" href="bootstrap-3.3.5-dist/css/bootstrap.css" type="text/css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/styles.css" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Mr+De+Haviland' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<!--<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jssor.js"></script>
+<script type="text/javascript" src="js/jssor.slider.js"></script>
+<script>
+jQuery(function ($) {
+	var _SlideshowTransitions = [{ $Duration: 1200, $Opacity: 2 }];
+	var options = {
+		$FillMode:2,
+		$AutoPlay: false,
+		$AutoPlayInterval: 4000,
+		$PauseOnHover: 1,
+		$ArrowKeyNavigation: true,
+		$SlideEasing: $JssorEasing$.$EaseOutQuint,
+		$SlideDuration: 800,
+		$MinDragOffsetToSlide: 20,
+		$SlideSpacing: 0,
+		$DisplayPieces: 1,
+		$ParkingPosition: 0,
+		$UISearchMode: 1,
+		$PlayOrientation: 1,
+		$DragOrientation: 1,
+			$SlideshowOptions: {
+			$Class: $JssorSlideshowRunner$,
+			$Transitions: _SlideshowTransitions,
+			$TransitionsOrder: 1,
+			$ShowLink: true
+		},
+		$BulletNavigatorOptions: {
+			$Class: $JssorBulletNavigator$,
+			$ChanceToShow:0,
+			$AutoCenter: 1,
+			$Steps: 1,
+			$Lanes: 1,
+			$SpacingX: 8,
+			$SpacingY: 8,
+			$Orientation: 1
+		},
+		$ArrowNavigatorOptions: {
+			$Class: $JssorArrowNavigator$,
+			$ChanceToShow:2,
+			$AutoCenter:0,
+			$Steps: 1
+		}
+	};
+
+	var jssorslider = new $JssorSlider$("slider", options);
+	function ScaleSlider() {
+		var bodyWidth = document.body.clientWidth;
+		if (bodyWidth)
+			jssorslider.$ScaleWidth(Math.min(bodyWidth, 1920));				
+		else
+			window.setTimeout(ScaleSlider, 30);	
+	}
+	ScaleSlider();
+	$(window).bind("load", ScaleSlider);
+	$(window).bind("resize", ScaleSlider);
+	$(window).bind("orientationchange", ScaleSlider);	
+});
+
+jQuery(function ($) {
+	var options = {
+		$AutoPlay: true,
+		$AutoPlaySteps: 4,
+		$AutoPlayInterval: 4000,
+		$PauseOnHover: 1,
+		$ArrowKeyNavigation: true,
+		$SlideDuration: 160,
+		$MinDragOffsetToSlide: 20,
+		$SlideWidth:272,
+		//$SlideHeight: 150,
+		$SlideSpacing:20,
+		$DisplayPieces:4,
+		$ParkingPosition: 0,
+		$UISearchMode: 1,
+		$PlayOrientation: 1,
+		$DragOrientation: 1,
+		$BulletNavigatorOptions: {
+			$Class: $JssorBulletNavigator$,
+			$ChanceToShow: 2,
+			$AutoCenter: 1,
+			$Steps:4,
+			$Lanes: 1,
+			$SpacingX: 0,
+			$SpacingY: 0,
+			$Orientation: 1
+		},
+		$ArrowNavigatorOptions: {
+			$Class: $JssorArrowNavigator$,
+			$ChanceToShow:0,
+			$AutoCenter: 2,
+			$Steps: 4
+		}
+	};
+
+	var jssorCat = new $JssorSlider$("sliderCat", options);
+	function ScaleSlider() {
+		var bodyWidth = document.body.clientWidth-30;
+		if (bodyWidth)
+			jssorCat.$ScaleWidth(Math.min(bodyWidth,1170));
+		else
+			window.setTimeout(ScaleSlider, 30);
+	}
+	ScaleSlider();
+	$(window).bind("load", ScaleSlider);
+	$(window).bind("resize", ScaleSlider);
+	$(window).bind("orientationchange", ScaleSlider);
+});
+
+jQuery(function ($) {
+	var options = {
+		$FillMode: 1,
+		$DragOrientation: 3,
+		$AutoPlay: false,
+		$AutoPlayInterval: 2500,
+		$BulletNavigatorOptions: {
+			$Class: $JssorBulletNavigator$,
+			$ChanceToShow:2,
+			$AutoCenter:1,
+			$Steps: 1,
+			$Lanes: 1,
+			$SpacingX:0,
+			$SpacingY:0,
+			$Orientation: 1
+		}
+	};
+
+	var jssorStaff = new $JssorSlider$("sliderStaff", options);
+	function ScaleSlider() {
+		var parentWidth = jssorStaff.$Elmt.parentNode.clientWidth;
+		if (parentWidth)
+			jssorStaff.$ScaleWidth(Math.min(parentWidth));
+		else
+			window.setTimeout(ScaleSlider, 30);
+	}
+	ScaleSlider();
+
+	$(window).bind("load", ScaleSlider);
+	$(window).bind("resize", ScaleSlider);
+	$(window).bind("orientationchange", ScaleSlider);
+});
+</script>
+
+</head>
+
+<body>
+<header>
+<div class="container">
+<div class="row">
+<div class="col-lg-3 col-md-3 col-sm-8 col-xs-2">
+<a href="index.html"><img src="images/top-logo.png" width="188" height="73"></a>
+</div>
+
+<div class="col-lg-6 col-md-6 hidden-sm hidden-xs" align="left" style="padding:0px">
+<h2 style="padding: 0px;margin: 15px 0px 0px 0px;">Propolife Viet Nam</h2>
+<p style="padding:0px;margin:0px">No.2 Le Thanh Ton, District 1, HCM</p>
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-4 col-xs-10" align="right">
+<img src="images/hotline.png" class="hidden-sm hidden-xs">
+<div class="mobile-number"><a href="tel:0120-15-3718"><abbr title="Call to Us: 0120-15-3718">0120-15-3718</abbr></a></div>
+<div class="datetime hidden-lg hidden-md"><a href="#">9:00～19:00〔定休日：水曜日〕</a></div>
+</div>    
+</div>
+</div>
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>      
+      <a class="navbar-brand" href="index.html"><i class="fa fa-home visible-xs"></i></a>
+    </div>
+    <div class="collapse navbar-collapse" id="navbar-collapse">
+      <ul class="nav navbar-nav">
+	    <li class="active hidden-xs"><a href="index.html">ホーム</a></li>
+        <li><a href="menu.html">メニュー<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>
+        <li><a href="faq.html">お客様の声<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>
+        <li><a href="access.html">アクセス<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>
+        <li><a href="coupon.html">coupon<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>
+        <li><a href="booking.html">来店予約<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>
+        <li><a href="about.html">会社概要<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>
+        <li><a href="contact.html">お問い合わせ<i class="fa fa-chevron-circle-right fa-2x visible-xs"></i></a></li>                 
+      </ul>
+      <ul class="nav navbar-nav navbar-right hidden-sm hidden-xs"><li><a href="#" class="datetime">9:00～19:00〔定休日：水曜日〕</a></li></ul>
+    </div>
+  </div>
+</nav>  
+  
+</header>
+
+<div class="slider-shadow">
+<div id="slider" style="position: relative; margin:0px;top: 0px; left: 0px; width: 1900px; height:564px; overflow: hidden;">
+<div u="loading" style="position: absolute; top: 0px; left: 0px;">
+<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+<div style="position: absolute; display: block; background: url(images/controls/ajax-loader.gif) no-repeat center center;top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+</div>
+<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1900px;height: 564px; overflow: hidden;">
+<div><img u="image" src="images/slides/1.jpg" /></div>
+<div><img u="image" src="images/slides/2.jpg" /></div>
+<div><img u="image" src="images/slides/3.jpg" /></div>
+</div>
+<div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;"><div u="prototype"></div></div>
+<span u="arrowleft" class="jssora21l" style="top:485px; left:881px;"></span>
+<span u="arrowright" class="jssora21r" style="top:485px; right:881px;"></span>
+
+</div>
+</div>
+
+<div class="container">
+
+<div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center"><h2 class="heading">Welcome!</h2></div></div>
+
+<div class="row">
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6" align="center">
+<div class="thumbnail"><img src="images/sp1.jpg" class="img-responsive">
+<div class="caption" align="center">
+<h5 class="color-pink">PACKAGE 1</h5>
+<p class="excerpt">Award winning hair stylists and master stylists will cut your hair using the best of Japanese, American, and European cutting techiques that make you look not only stylish but are also easy to maintain daily. </p>    
+</div>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6" align="center">
+<div class="thumbnail"><img src="images/sp2.jpg" class="img-responsive">
+<div class="caption" align="center">
+<h5 class="color-pink">PACKAGE 2</h5>
+<p class="excerpt">You have the choice from 5 minute coloring without ammonia using Nano Technology, to the most moisturizing color treatment, depending on your needs.</p>    
+</div>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6" align="center">
+<div class="thumbnail"><img src="images/sp3.jpg" class="img-responsive">
+<div class="caption" align="center">
+<h5 class="color-pink">PACKAGE 3</h5>
+<p class="excerpt">Our large Variety of straightening techniques and products will make your hair as straight as you wish. We can even make African American hair straight! </p>    
+</div>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-6" align="center">
+<div class="thumbnail"><img src="images/sp4.jpg" class="img-responsive">
+<div class="caption" align="center">
+<h5 class="color-pink">PACKAGE 4</h5>
+<p class="excerpt">We are 1 of 3 salons in all of California that can create natural dreadlocks for any type of hair. We do have many different kinds of dread techniques and styles for your needs including natural dreadlocks or extensions.</p>    
+</div>
+</div>
+</div>
+
+</div>    
+
+<div class="custom_newsletter">
+<div class="custom_newsletter_wrap_inner">
+<div class="row ">
+<div class="col-lg-3"><img class="alignnone size-full wp-image-2159" src="images/news_bg.png" alt="news_bg" ><br></div>
+<div class="col-lg-9">
+<section class="lazy-load-box" style="margin-top:50px;"><h2>Newsletter</h2></section>
+<section class="lazy-load-box"><h3 style="color:#EC3994">Sign up to get promotion from our.</h3></section>
+<section class="lazy-load-box">
+<form method="post">
+<input type="email" name="EMAIL" placeholder="Your email address" required="" style="background-color:#000000;color:#ffffff;width:70%;height: 50px;border: navajowhite;padding: 0px 10px;font-size: 18px;">
+<input type="submit" value="Sign up" style="font-size: 18px;height: 50px;width: 19%;background-color: #ED3A94;border: none;color: #ffffff;">
+</form>
+</section>
+</div>
+</div> 
+</div>
+</div>
+
+
+<div class="row">
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+<div class="topics">
+<div align="center" class="heading-topics">TOPICS</div>
+<div class="scroll">
+<section>
+<div class="content mCustomScrollbar" data-mcs-theme="minimal" style="height:295px">
+<h5>WELCOME 2015!</h5>
+<p>As 2015 begins, we can't help but reflect on how fabulous 2014 was!
+A big thank you to each and every one of you for your support, patronage, and love this past year. We truly appreciate you being a part of The O'HAIR Family.</p>
+<p>We are looking forward to a bunch of exciting things coming up in 2015! Not limited to the celebration of our 35th year of business; which we anticipate with hearts full of gratitude!</p>
+<p>Keep checking back for promotions and the most recent news updates!</p>
+<p>Here's to 2015!</p>
+<p>Best Wishes from all us; to you and your families!</p>
+</div>			
+</section>
+</div>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+<div class="staffcomment">
+<div id="sliderStaff" style="position: relative; width:262.5px;min-height:362px;overflow: hidden;">
+<div u="loading" style="position: absolute; top: 0px; left: 0px;">
+<div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;"></div>
+<div style="position: absolute; display: block; background: url(images/controls/ajax-loader.gif) no-repeat center center;top: 0px; left: 0px;width: 100%;height:100%;"></div>
+</div>
+<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:262.5px;min-height:362px;overflow: hidden;">
+<div align="center">
+<div class="avatar"><div class="view"><img src="images/avartar-1.jpg" class="img-responsive"></div></div>
+<blockquote>
+<i class="fa fa-quote-left"></i>
+My mother was able to raise two children with her own hands. We grew up with a mother that ran a hair salon. She won a number of contests, and was often featured as a guest lecturer.
+</blockquote>
+</div>
+<div align="center">
+<div class="avatar"><div class="view"><i class="fa fa-user"></i></div></div>
+<blockquote>
+<i class="fa fa-quote-left"></i>
+My mother was able to raise two children with her own hands. We grew up with a mother that ran a hair salon. She won a number of contests, and was often featured as a guest lecturer.
+</blockquote>
+</div>
+<div align="center">
+<div class="avatar"><div class="view"><img src="images/avartar-2.jpg" class="img-responsive"></div></div>
+<blockquote>
+<i class="fa fa-quote-left"></i>
+My mother was able to raise two children with her own hands. We grew up with a mother that ran a hair salon. She won a number of contests, and was often featured as a guest lecturer.
+</blockquote>
+</div>
+</div>
+<div u="navigator" class="jssorb13" style="bottom:16px; right: 6px;"><div u="prototype"></div></div>
+</div>
+</div>
+</div>
+
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+<dl class="menu-service">
+<div align="center" class="tt-menu-sv">MENU</div>
+<div class="scroll">
+<section>
+<div class="content mCustomScrollbar" data-mcs-theme="minimal">
+
+<dd><a href="#" >haircut</a><i class="fa fa-leaf pull-right"></i></dd>
+<dd><a href="#" >color</a><i class="fa fa-leaf pull-right"></i></dd>
+<dd><a href="#" >perm</a><i class="fa fa-leaf pull-right"></i></dd>
+<dd><a href="#" >straightening</a><i class="fa fa-leaf pull-right"></i></dd>
+<dd><a href="#" >extensions</a><i class="fa fa-leaf pull-right"></i></dd>
+<dd><a href="#" >dread locks</a><i class="fa fa-leaf pull-right"></i></dd>
+<dd><a href="#" >hair thickening</a><i class="fa fa-leaf pull-right"></i></dd>
+<dd><a href="#" >up-do & makeup</a><i class="fa fa-leaf pull-right"></i></dd>
+<dd><a href="#" >treatment</a><i class="fa fa-leaf pull-right"></i></dd>
+<dd><a href="#" >scalp massage</a><i class="fa fa-leaf pull-right"></i></dd>
+<dd><a href="#" >wedding</a><i class="fa fa-leaf pull-right"></i></dd>
+<dd><a href="#" >eyelash perm</a><i class="fa fa-leaf pull-right"></i></dd>
+<dd><a href="#" >tattoo</a><i class="fa fa-leaf pull-right"></i></dd>
+                 
+</div>			
+</section>
+</div>
+</dl>
+</div>
+
+</div>
+</div>
+
+
+<div align="center"><h3 class="heading">Recomending Service</h3></div>
+
+<div class="blockrecomen">
+<div class="container">
+
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div id="sliderCat" style="position: relative; top: 0px; left: 0px; width:1170px; height:380px; overflow: hidden;">
+<div u="loading" style="position: absolute; top: 0px; left: 0px;">
+<div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;"></div>
+<div style="position: absolute; display: block; background: url(images/controls/ajax-loader.gif) no-repeat center center;top: 0px; left: 0px;width: 100%;height:100%;"></div>
+</div>
+
+<!-- Slides Container -->
+<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:1170px; height:350px; overflow: hidden;">
+<div align="center">
+<img src="images/sp1.jpg" class="img-circle">
+<h4>HAIRCUT 1</h4>
+<p>Award winning hair stylists and master stylists will cut your hair using the best of Japanese, American.</p>
+</div>
+
+<div align="center">
+<img src="images/sp2.jpg" class="img-circle">
+<h4>COLOR 2</h4>
+<p>Award winning hair stylists and master stylists will cut your hair using the best of Japanese, American.</p>
+</div>
+
+<div align="center">
+<img src="images/sp3.jpg" class="img-circle">
+<h4>STRAIGHTENING 3</h4>
+<p>Award winning hair stylists and master stylists will cut your hair using the best of Japanese, American.</p>
+</div>
+
+<div align="center">
+<img src="images/sp4.jpg" class="img-circle">
+<h4>DREAD LOCKS 4</h4>
+<p>Award winning hair stylists and master stylists will cut your hair using the best of Japanese, American.</p>
+</div>
+
+<div align="center">
+<img src="images/sp1.jpg" class="img-circle">
+<h4>HAIRCUT 5</h4>
+<p>Award winning hair stylists and master stylists will cut your hair using the best of Japanese, American.</p>
+</div>
+
+<div align="center">
+<img src="images/sp2.jpg" class="img-circle">
+<h4>COLOR 6</h4>
+<p>Award winning hair stylists and master stylists will cut your hair using the best of Japanese, American.</p>
+</div>
+
+<div align="center">
+<img src="images/sp3.jpg" class="img-circle">
+<h4>STRAIGHTENING 7</h4>
+<p>Award winning hair stylists and master stylists will cut your hair using the best of Japanese, American.</p>
+</div>
+
+<div align="center">
+<img src="images/sp4.jpg" class="img-circle">
+<h4>DREAD LOCKS 8</h4>
+<p>Award winning hair stylists and master stylists will cut your hair using the best of Japanese, American.</p>
+</div>
+</div>
+
+<div u="navigator" class="jssorb03" style="bottom: 4px; right: 6px;"><div u="prototype"><div u="numbertemplate"></div></div></div>
+<span u="arrowleft" class="jssora03l" style="top: 123px; left: 8px;"></span>
+<span u="arrowright" class="jssora03r" style="top: 123px; right: 8px;"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="row">
+<div class="col-md-3"></div>
+<div class="col-md-6">
+<div class="panel panel-primary">
+<div class="panel-heading">FACEBOOK</div>
+<div class="panel-body"></div>
+</div>
+</div>
+<div class="col-md-3"></div>
+</div>
+
+</div>
+<footer class="doc-footer">
+<div class="container">
+<div align="center">
+<ul class="footer-menu">
+<li><a href="#">TOP</a></li>
+<li><a href="#">メニュー</a></li>
+<li><a href="#">お客様の声</a></li>
+<li><a href="#">アクセス</a></li>
+<li><a href="#">coupon</a></li>
+<li><a href="#">お問い合わせ</a></li>
+<li><a href="#">来店予約</a></li>
+<li><a href="#">会社概要</a></li>
+</ul>
+</div>
+</div>
+<hr>
+<div>
+<address>
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-sm-12" align="center"><img src="images/mb-logo.png" width="72" height="70" class="img-responsive center-block"></div>
+</div>
+</div>
+</address>
+
+<div class="socials" align="center">
+<a class="fa fa-facebook" href="#"></a>
+<a class="fa fa-twitter" href="#"></a>
+<a class="fa fa-google-plus" href="#"></a>
+</div>
+<div class="clearfix"></div>
+<div class="footer-privacy">Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span id="copyright-year">2015</span>. <a href="#">Privacy Policy</a></div>
+</div>
+</footer>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+</body>
+</html>

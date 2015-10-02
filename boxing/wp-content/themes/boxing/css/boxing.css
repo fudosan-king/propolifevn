@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+.wpcf7-form-control-wrap input,
+.wpcf7-form-control-wrap textarea {
+    width: 100%;
+}
+
+.captchac-left {
+    width: 25%;
+    height: 100%;
+}
+.bg-quick-contact {
+    z-index: 2;
+}
+
+.bgzoom {
+    display: table-cell !important;
+    vertical-align: middle;
+    background-color: #F4F4F4;
+}
+
+.container.quote {
+    margin-bottom: 25px;
+}
+
+.wpcf7-form-control-wrap .captchac-right {
+    width: 73.7%
+}
+
+.teacher {
+    margin-top: 10px;
+}
+
+.caption p.excerpt {
+    min-height: 80px;
+}
+
+.title-caption {
+    min-height: 54px;
+}
+
+.comment-caption {
+    min-height:  90px;
+}
+
+.course .caption {
+    padding: 5px;
+}
+
+.container-fluid .show-grid .title {
+    min-height: 60px;
+    display: -webkit-box;
+    margin: -10px 0 20px 0;
+    -webkit-line-clamp:2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.topic .thumbnail {
+    height: 350px;
+}
+
+@media (max-width: 1200px) {
+    .course .caption h4 a {
+        font-size: 14px;
+    }
+    .title-caption {
+    min-height: 60px;
+    }
+
+    .comment-caption {
+        min-height:  100px;
+    }
+}
+
+@media (max-width: 980px) {
+    .course .caption h4 a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .container .show-grid .img-responsive.gym-class {
+        height: 265px;
+    }
+}
+@media (max-width: 767px) {
+    .wpcf7-form-control-wrap .captchac-right {
+        width: 73.6%;
+    }
+    .container .show-grid .img-responsive.gym-class {
+        height: 350px;
+    }
+}
+
+@media (max-width: 550px) {
+    .container .show-grid .img-responsive.gym-class {
+        height: auto;
+    }
+}
+@media (max-width: 410px) {
+    .wpcf7-form-control-wrap .captchac-right {
+        width: 73.5%;
+    }
+}
+
+

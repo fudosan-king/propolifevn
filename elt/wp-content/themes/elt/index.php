@@ -1,0 +1,116 @@
+<?php
+/**
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * e.g., it puts together the home page when no home.php file exists.
+ *
+ * Learn more: {@link https://codex.wordpress.org/Template_Hierarchy}
+ *
+ * @package WordPress
+ * @subpackage Boxing
+ * @since Boxing
+ */
+?>
+<?php
+    $lang = get_bloginfo('language');
+    $template_directory = str_replace("twentyfifteen", "elt", get_template_directory_uri());
+?>
+
+<?php
+    add_action( 'wp_head_customer', 'add_javascript_slider', 10);
+    add_action( 'wp_head_customer', 'add_javascript_sliderAbout', 15);
+    get_header();
+?>
+
+<?php
+    // show slider
+    show_slider();
+?>
+
+
+<div class="show-grid">
+<div class="container">
+<div class="row">
+<div class="col-lg-12 col-sm-12 col-xs-12 center-block" align="center">
+<span class="title-about"><?php _e('私達について', 'elt'); ?></span>
+<p class="about-text">当社では、安心で安全な商品とサービスを通じて、 常にお客様に満足して頂く事を念頭に 置いています。</p>
+<p class="about-text">￼社員一人ひとりが、現状に満足する事なく常に、改善・進化・原点にかえり、 あらゆる可能性に挑戦し新しい時代を切り開いて行きます </p>
+
+<?php
+    // show gallery page top
+    show_gallery();
+?>
+
+</div>
+</div>
+</div>
+</div>
+
+<div class="slogan-row" data-stellar-background-ratio="0.5">
+<div class="container">
+<div class="row">
+<div class="col-lg-12"><div class="slogan">
+    <div style="font-size: 50px;">
+        <?php _e('高品質、衛生的な食肉を、手間なく使える状態で提供しております。', 'elt'); ?>
+    </div>
+</div></div>
+</div>
+</div>
+</div>
+
+<div class="bg-default">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-12" align="center">
+    <h3>
+        <?php _e('ELT Vietnam について', 'elt');?>
+    </h3>
+
+    </div>
+    <div class="clearfix"></div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" align="center">
+        <a href="/?page_id=35" class="lazy-item">
+        <span class="list-title"><?php _e( '私達について', 'elt' ); ?></span>
+        <span class="lazy-container lazyloaded">
+        <span class="lazy_preloader"></span>
+        <img src="<?php echo $template_directory;?>/images/blank.gif" data-src="http://www.eltvn.com/wp-content/uploads/2015/09/1.jpg" class="lazy img-responsive" alt="牛の肉鶏肉" style="display: block;">
+        </span>
+        </a>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" align="center">
+        <a href="/?page_id=38" class="lazy-item">
+        <span class="list-title"><?php _e( '私たちのサービス', 'elt' ); ?></span>
+        <span class="lazy-container lazyloaded">
+        <span class="lazy_preloader"></span>
+        <img src="<?php echo $template_directory;?>/images/blank.gif" data-src="http://www.eltvn.com/wp-content/uploads/2015/09/2.jpg" class="lazy img-responsive" alt="鶏肉" style="display: block;">
+        </span>
+        </a>
+        </div>
+
+        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" align="center">
+        <a href="/?page_id=40" class="lazy-item">
+        <span class="list-title"><?php _e( 'クライアント', 'elt' ); ?></span>
+        <span class="lazy-container lazyloaded">
+        <span class="lazy_preloader"></span>
+        <img src="<?php echo $template_directory;?>/images/blank.gif" data-src="http://www.eltvn.com/wp-content/uploads/2015/09/3.jpg" class="lazy img-responsive" alt="PORK MEAT" style="display: block;">
+        </span>
+        </a>
+        </div>
+    </div>
+    </div>
+</div>
+
+<?php
+    // show all categories
+    // show_product_categories_index();
+?>
+
+<?php
+    add_action( 'wp_footer', 'add_script_footer', 30 );
+    get_footer();
+?>

@@ -751,7 +751,7 @@ function _wp_render_title_tag() {
 		return;
 	}
 
-	echo '<title>' . wp_title( '|', false, 'right' ) . "</title>\n";
+	// echo '<title>' . wp_title( '|', false, 'right' ) . "</title>\n";
 }
 
 /**

@@ -150,7 +150,13 @@ add_action( 'wp_head', 'add_google_map', 0 );
                 <div class="caption" align="center">
                 <h3>' . $topic['message'][0]['message_title'] . '</h3>
                 <img src="' . $topic['message'][0]['image']['url'] . '" class="img-responsive">
-                <p align="justify">' . $topic['message'][0]['message_content'] . '</p>
+                <div class="scroll">
+                    <section>
+                    <div class="content mCustomScrollbar" data-mcs-theme="minimal">
+                    <p>' . htmlspecialchars_decode($topic['message'][0]['message_content']) . '</p>
+                    </div>
+                    </section>
+                </div>
                 </div>
                 </div>
             </div>
@@ -274,11 +280,13 @@ $videos = get_field('videos', 307);
     $index = 1;
     foreach($videos as $video):
         foreach ($video['categories'] as $categorie) {
-            echo '
-            <li><a href="#" rel="' . $categorie['video_id'] . '" title="' . $categorie['title'] . '"><i class="fa fa-circle-bg">' . $index . '</i>' . $categorie['title'] . '</a></li>
+            if ($index <= 10) {
+                echo '
+                <li><a href="#" rel="' . $categorie['video_id'] . '" title="' . $categorie['title'] . '"><i class="fa fa-circle-bg">' . $index . '</i>' . $categorie['title'] . '</a></li>
 
-            ';
-            $index += 1;
+                ';
+                $index += 1;
+            }
         }
      endforeach;
 ?>
@@ -289,7 +297,7 @@ $videos = get_field('videos', 307);
 </div>
 
 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-<div class="bg-default block-right">
+<div class="bg-default block-right mn-scroll">
 <div style="background-color: #000000;  color: #ffffff;  padding: 15px !important;  margin: -15px;">
     <?php if ($lang == 'ja') { ?>
         クラス
@@ -302,6 +310,8 @@ $videos = get_field('videos', 307);
 
     <?php } ?>
 </div>
+<section>
+<div class="content mCustomScrollbar" data-mcs-theme="minimal">
 <ul style="margin-top:15px;">
 <?php
      if ($lang == 'vi'){
@@ -331,20 +341,32 @@ $videos = get_field('videos', 307);
         'suppress_filters' => true
     );
     $posts_arrays = get_posts( $args );
+    $class_arrays = array();
+
     if($posts_arrays):
-        foreach($posts_arrays as $posts_array):
-            $name = get_field('name', $posts_array->ID);
-            $href = $posts_array->guid;
+        foreach (range(1, count($posts_arrays)) as $number) {
+            foreach($posts_arrays as $posts_array){
+                if ($number == get_field('oder', $posts_array->ID)){
+                    array_push($class_arrays, $posts_array);
+                }
+            }
+        }
+
+        foreach($class_arrays as $class_array):
+            $name = get_field('name', $class_array->ID);
+            $href = $class_array->guid;
             $name = str_replace('<br>', '', $name);
 
             echo '
-            <li><a href="' . get_bloginfo('siteurl'). '&p='. $posts_array->ID . '"><i class="fa fa-angle-right"></i> ' . $name . '</a></li>
+            <li><a href="' . get_bloginfo('siteurl'). '&p='. $class_array->ID . '"><i class="fa fa-angle-right"></i> ' . $name . '</a></li>
             ';
         endforeach;
     endif;
 
 ?>
 </ul>
+</div>
+</section>
 </div>
 </div>
 </div>
@@ -367,21 +389,6 @@ $videos = get_field('videos', 307);
         }
     }
 ?>
-
-    <?php if ($lang == 'ja') { ?>
-        <a href="/?page_id=96&lang=ja" class="btn btn-default more">
-        についての詳細
-
-    <?php } else if ($lang == 'vi') { ?>
-        <a href="/?page_id=89&lang=vi" class="btn btn-default more">
-        Thêm
-
-    <?php } else { ?>
-        <a href="/?page_id=257&lang=en" class="btn btn-default more">
-        More About
-
-    <?php } ?>
-<i class="fa fa-long-arrow-right"></i></a>
 
 </div>
 </div>

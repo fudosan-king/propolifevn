@@ -19,7 +19,6 @@ body{padding-top:50px !important;}
 .course .view .viewdetail{top:25% !important;left:38% !important;}
 .heading{font-size:2vw !important;  margin: 10px 0px 10px 0px !important;}
 .heading span abbr{font-size:6.5vw !important;}
-
 .heading:before {content:normal !important}
 .heading:after {content:normal !important}
 }
@@ -37,7 +36,7 @@ a{color:#000000}
 a:hover{text-decoration:none}
 header .row{padding:10px 0px 10px 0px}
 ul,li{list-style:none;padding:0;margin:0}
-.topic p{text-align:justify;white-space:pre;text-overflow:ellipsis;overflow:hidden;margin-top:10px;color:#000000}
+.topic p{text-align:justify;color:#000000}
 .caption p.excerpt{text-align:center;margin-top:10px;color:#FFFFFF;white-space: normal;}
 .panel-heading h3{color:#000;font-size:12px;margin:0px}
 .form-control{border-radius:0px;}
@@ -234,18 +233,8 @@ h3.title-detail{font-size:24px;}
 .dl-contact-form dd,.dl-contact-form dt{}
 .panel-edit .panel-heading{background-color:#000000;color:#fFFFFF}
 .fact {position: relative;margin: 2px 0px 1px 0px;}
-.fact:before{
-font-size: 16px;
-padding: 2px 7px 3px 7px;
-content: 'View!';
-background: #59b200;
-line-height: 24px;
-color: #FFF;
-position: absolute;
-left:48%;
-top:5px;
-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-border-radius: 2px;
+.fact:before{font-size: 16px;padding: 2px 7px 3px 7px;content: 'View!';background: #59b200;line-height: 24px;
+color: #FFF;position: absolute;left:48%;top:5px;box-shadow: 0 2px 4px rgba(0,0,0,0.2);border-radius: 2px;
 -webkit-transform: rotate(-5deg) translateX(-10px) translateY(-25px);
 -moz-transform: rotate(-5deg) translateX(-10px) translateY(-25px);
 -ms-transform: rotate(-5deg) translateX(-10px) translateY(-25px);
@@ -254,3 +243,17 @@ transform: rotate(-5deg) translateX(-10px) translateY(-25px);
 }
 .fact {border-bottom: 1px dotted #59b200;}
 .notice {clear: both;padding:15px;margin:15px 0px;color: #333;font-style: italic;}
+/*----------Topic scroll-------------*/
+.scroll{position: relative;margin: 0 auto;line-height: 20px;padding:10px 0px;}
+.scroll section, .content{ -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;text-align:justify}
+.scroll section{padding: 0px 5px 0px 0px;margin:0px;overflow: hidden;}
+.scroll section .content{overflow: auto;position: relative;height:80px;margin-right:10px;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.pagination{margin:0px;}
+.news-thumb{margin:5px 0px;}
+.list-group-item time{color: #F20000;}
+
+/*----------Menu scroll-------------*/
+.mn-scroll{position: relative;margin: 0 auto;line-height: 20px;padding:10px}
+.mn-scroll section, .content{ -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;text-align:justify}
+.mn-scroll section{padding: 5px;margin:0px;overflow: hidden;}
+.mn-scroll section .content{overflow: auto;position: relative;height:340px;margin-right:10px;-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}

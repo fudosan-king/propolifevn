@@ -5,6 +5,11 @@
     width: 100%;
 }
 
+.h1tag {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 .captchac-left {
     width: 25%;
     height: 100%;
@@ -36,7 +41,7 @@
 }
 
 .title-caption {
-    min-height: 54px;
+    min-height: 55px;
 }
 
 .comment-caption {
@@ -45,6 +50,16 @@
 
 .course .caption {
     padding: 5px;
+}
+
+.samurai-text {
+    position: relative;
+    left: -230px;
+}
+
+.samurai-name {
+    position: relative;
+    left: -290px;
 }
 
 .container-fluid .show-grid .title {
@@ -61,7 +76,7 @@
 }
 
 .topic .thumbnail {
-    height: 350px;
+    height: 370px;
 }
 
 @media (max-width: 1200px) {
@@ -81,6 +96,16 @@
     .course .caption h4 a {
         font-size: 18px;
     }
+    .samurai-text {
+        position: relative;
+        left: -100px;
+    }
+
+    .samurai-name {
+        position: relative;
+        left: -150px;
+    }
+
 }
 
 @media (max-width: 1000px) {
@@ -100,6 +125,15 @@
 @media (max-width: 550px) {
     .container .show-grid .img-responsive.gym-class {
         height: auto;
+    }
+    .samurai-text {
+        position: relative;
+        left: -40px;
+    }
+
+    .samurai-name {
+        position: relative;
+        left: -90px;
     }
 }
 @media (max-width: 410px) {

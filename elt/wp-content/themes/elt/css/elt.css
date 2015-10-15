@@ -1,5 +1,10 @@
 @charset "UTF-8";
-
+.list-title {
+    bottom: 10%;
+}
+.h1tag {
+    margin: 0;
+}
 .thumbnail.shop {
     background-color: #F0EFEB;
 }
@@ -29,11 +34,11 @@
 }
 
 .ourservice .panel-body {
-    min-height: 120px;
+    min-height: 170px;
 }
 
 .body-services {
-    min-height: 120px;
+    min-height: 170px;
 }
 
 .user-logged-in {
@@ -45,8 +50,39 @@
     display: none;
 }
 
+.content-about {
+    color: #B26B24;
+    margin-bottom: 20px;
+}
+
+.tel {
+    color: #ffffff;
+}
+
 .topmenu ul {
     text-transform: uppercase;
+}
+
+.content-philosophy {
+    overflow:hidden;
+}
+
+.philosophy-img {
+    display: inline;
+    margin: 5px;
+    height: 140px;
+    width: 270px;
+    float: left;
+}
+
+@media (max-width: 992px) {
+    .philosophy-img {
+        display: block;
+        margin: 5px;
+        height: 140px;
+        width: 270px;
+        float: none;
+    }
 }
 
 @media (max-width: 767px) {

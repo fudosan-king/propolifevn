@@ -145,6 +145,7 @@ $template_directory = str_replace("twentyfifteen", "boxing", get_template_direct
         </div>
         </div>
     </footer>
+    <script src="<?php echo $template_directory ?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
     <?php wp_footer(); ?>
     </body>
 </html>

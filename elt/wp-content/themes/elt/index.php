@@ -35,9 +35,13 @@
 <div class="container">
 <div class="row">
 <div class="col-lg-12 col-sm-12 col-xs-12 center-block" align="center">
-<span class="title-about"><?php _e('私達について', 'elt'); ?></span>
-<p class="about-text">当社では、安心で安全な商品とサービスを通じて、 常にお客様に満足して頂く事を念頭に 置いています。</p>
-<p class="about-text">￼社員一人ひとりが、現状に満足する事なく常に、改善・進化・原点にかえり、 あらゆる可能性に挑戦し新しい時代を切り開いて行きます </p>
+<?php
+    $post_id = get_post( 167 );
+    $content = $post_id->post_content;
+    $content = apply_filters('the_content', $content);
+    $content = str_replace(']]>', ']]>', $content);
+    echo $content;
+?>
 
 <?php
     // show gallery page top
@@ -54,7 +58,7 @@
 <div class="row">
 <div class="col-lg-12"><div class="slogan">
     <div style="font-size: 50px;">
-        <?php _e('高品質、衛生的な食肉を、手間なく使える状態で提供しております。', 'elt'); ?>
+        <?php _e('品質管理された新鮮なお肉を手間なく使える状態でお届けしております。', 'elt'); ?>
     </div>
 </div></div>
 </div>
@@ -77,7 +81,7 @@
         <span class="list-title"><?php _e( '私達について', 'elt' ); ?></span>
         <span class="lazy-container lazyloaded">
         <span class="lazy_preloader"></span>
-        <img src="<?php echo $template_directory;?>/images/blank.gif" data-src="http://www.eltvn.com/wp-content/uploads/2015/09/1.jpg" class="lazy img-responsive" alt="牛の肉鶏肉" style="display: block;">
+        <img src="<?php echo $template_directory;?>/images/blank.gif" data-src="http://www.eltvn.com/wp-content/uploads/2015/10/elt-thumb.jpg" class="lazy img-responsive" alt="牛の肉鶏肉" style="display: block;">
         </span>
         </a>
         </div>

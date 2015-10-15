@@ -78,8 +78,8 @@ get_header(); ?>
     Lệ phí tuyển sinh và lệ phí hàng tháng chưa bao gồm 10% VAT
 
 <?php } else if ($lang == 'ja') { ?>
+    年間申し込み割引、6ヶ月申し込み割引、3ヶ月申し込み割引をご用意しております。詳しくはお問い合わせ下さい。<br>
     入会金と月額料金にはVAT10%は含まれておりません。
-
 <?php } else { ?>
     Entrance fee and monthly fee are not included 10% VAT
 
@@ -98,7 +98,7 @@ get_header(); ?>
 </div>
 
 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-<div class="bg-default block-right">
+<div class="bg-default block-right mn-scroll">
 <div style="background-color: #000000;  color: #ffffff;  padding: 15px !important;  margin: -15px;">
 <?php if ($lang == 'ja') { ?>
     クラス
@@ -111,6 +111,8 @@ get_header(); ?>
 
 <?php } ?>
 </div>
+<section>
+<div class="content mCustomScrollbar" data-mcs-theme="minimal">
 <ul style="margin-top:15px;">
 
 <?php
@@ -141,19 +143,31 @@ get_header(); ?>
         'suppress_filters' => true
     );
     $posts_arrays = get_posts( $args );
+    $class_arrays = array();
+
     if($posts_arrays):
-        foreach($posts_arrays as $posts_array):
-            $name = get_field('name', $posts_array->ID);
-            $href = $posts_array->guid;
+        foreach (range(1, count($posts_arrays)) as $number) {
+            foreach($posts_arrays as $posts_array){
+                if ($number == get_field('oder', $posts_array->ID)){
+                    array_push($class_arrays, $posts_array);
+                }
+            }
+        }
+
+        foreach($class_arrays as $class_array):
+            $name = get_field('name', $class_array->ID);
+            $href = $class_array->guid;
             $name = str_replace('<br>', '', $name);
             echo '
-            <li><a href="' . get_bloginfo('siteurl'). '&p='. $posts_array->ID . '"><i class="fa fa-angle-right"></i> ' . $name . '</a></li>
+            <li><a href="' . get_bloginfo('siteurl'). '&p='. $class_array->ID . '"><i class="fa fa-angle-right"></i> ' . $name . '</a></li>
             ';
         endforeach;
     endif;
 
 ?>
 </ul>
+</div>
+</section>
 </div>
 </div>
 </div>

@@ -48,21 +48,26 @@ $template_directory = str_replace("twentyfifteen", "boxing", get_template_direct
         'suppress_filters' => true
     );
     $posts_arrays = get_posts( $args );
+    $class_arrays = array();
     if($posts_arrays):
-        foreach($posts_arrays as $posts_array):
-            $name = get_field('name', $posts_array->ID);
-            $href = $posts_array->guid;
-            $image = get_field('image', $posts_array->ID);
-            $description = substr(get_field('description', $posts_array->ID), 0, 60);
-
-            // print_r($posts_array);
-            // print_r(get_field('image', $posts_array->ID));
+        foreach (range(1, count($posts_arrays)) as $number) {
+            foreach($posts_arrays as $posts_array){
+                if ($number == get_field('oder', $posts_array->ID)){
+                    array_push($class_arrays, $posts_array);
+                }
+            }
+        }
+        foreach($class_arrays as $class_array):
+            $name = get_field('name', $class_array->ID);
+            $href = $class_array->guid;
+            $image = get_field('image', $class_array->ID);
+            $description = substr(get_field('description', $class_array->ID), 0, 60);
 
             echo '
             <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
             <div class="course" align="center">
             <div class="view" align="center">
-            <a href="' . get_bloginfo('siteurl'). '&p='. $posts_array->ID . '">
+            <a href="' . get_bloginfo('siteurl'). '&p='. $class_array->ID . '">
               <div style="height: 265px; display: table-cell; vertical-align: middle;">
                 <img src="' . $image['url'] . '" class="img-responsive gym-class">
               </div>
@@ -70,10 +75,7 @@ $template_directory = str_replace("twentyfifteen", "boxing", get_template_direct
             </div>
             <div class="caption">
             <div class="title-caption">
-            <h4><a href="' . get_bloginfo('siteurl'). '&p='. $posts_array->ID . '">' . $name . '</a><div class="line">&nbsp;</div></h4>
-            </div>
-            <div class="comment-caption">
-            <p>' . $description . ' ...</p>
+            <h4><a href="' . get_bloginfo('siteurl'). '&p='. $class_array->ID . '">' . $name . '</a><div class="line">&nbsp;</div></h4>
             </div>
             </div>
             </div>

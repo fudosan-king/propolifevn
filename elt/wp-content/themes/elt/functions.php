@@ -555,11 +555,31 @@ function add_services_clients() {
         <address>
     ';
 
-    _e( 'アドレス: Đường Trung tâm, KCN Long Hậu, Xã Long Hậu, Huyện Cần Giuộc, Tỉnh Long An', 'elt' );
+    echo '<h2>';
+    _e('ELT VIETNAM CO.,LTD概要', 'elt');
+    echo '</h2>';
+
+    echo '<p>';
+    _e('営業時間:月曜日 – 金曜日  8:00 - 17:00', 'elt');
+    echo '</p>';
+
+    echo '<p>';
+    _e( 'アドレス: Lot M-5A, Trung Tam st, Long Hau Expand lP, Long Hau Commune, Can Giuoc Dist, Long An Province', 'elt' );
+    echo '</p>';
+
+    echo '<p>';
+
+    _e('電話', 'elt');
+        ;
+    echo ': <a href="tel:08 3873 4081" class="tel">08 3873 4081</a></p>';
+
+    echo '<p>Email: info@eltvn.com</p>';
+
+    echo '</p>';
+    _e('＊自社加工工場は、ベトナムホーチミン市より車で40分程度の中心地からとても近いロンハウ工業団地内にございます。', 'elt');
+    echo '</p>';
 
     echo '
-        <a href="tel:08 6288 2008" class="mobile">08 6288 2008</a>
-        Email: admin@eltvn.com
         </address>
         <div class="socials">
         <div class="socials_wrapper">
@@ -593,7 +613,7 @@ function add_services_clients() {
     echo '</span></div>
         <div class="panel-body"><p align="justify">';
 
-    _e('品質、衛生管理を徹底した工場で新鮮で良質なお肉を加工いたします。お客様が負担されている調理場での加工、品質の確保の手間とコストを省きます。', 'elt');
+    _e('温度管理、衛生管理が徹底した自社加工工場で、高品質の新鮮なお肉をお客様がすぐに使えるようにカット加工、ミンチ加工、パン粉付け加工、加熱加工などの加工をいたします。お客様が調理場で均一に加工する手間とコストの負担を省きます。', 'elt');
 
     echo '</p></div>
         </div>
@@ -608,7 +628,7 @@ function add_services_clients() {
     echo '</span></div>
         <div class="panel-body"><p align="justify">';
 
-    _e('加工したお肉を鮮度を保った状態でお届け致します。レストラン、スーパー、個人宅などどこでも柔軟に対応しております。', 'elt');
+    _e('鮮度を保った状態でお肉をお届け致します。日本通運様と配送に関する業務提携を行い、食料品スーパー様、飲食店様、ご家庭などに柔軟に個別配送を行っております。', 'elt');
 
     echo '</p></div>
         </div>
@@ -623,7 +643,7 @@ function add_services_clients() {
     echo '</span></div>
         <div class="panel-body"><p align="justify">';
 
-    _e('弊社では、野菜、魚、鶏肉などを取り扱っているパートナーがおり、お肉の加工以外にも様々な商品作りに対応しております。', 'elt');
+    _e('お肉の加工以外にも様々な商品作りのご相談が可能です。新鮮な野菜、魚、鶏肉なども仕入れることができるので、焼肉セットや鍋セットなどの商品作りにも対応可能です。', 'elt');
 
     echo '</p></div>
         </div>

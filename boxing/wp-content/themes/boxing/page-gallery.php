@@ -50,26 +50,31 @@ get_header();
 
 <?php
 $videos = get_field('videos', 307);
+$video_contents =  get_field('video_content');
+
+$loop = 0;
 foreach($videos as $video):
     echo '
     <div class="container">
     <div class="row top-row">
-    <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">&nbsp;</div>
-    <div class="col-lg-4 col-sm-4 col-xs-12" align="center">
+    <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs">&nbsp;</div>
+    <div class="col-lg-6 col-sm-6 col-xs-12" align="center">
     <div class="title" align="center"><h3>' . $video['title_category'] . '</h3></div>
     </div>
-    <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">&nbsp;</div>
+    <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs">&nbsp;</div>
     </div>
 
     <div class="row">
     <div class="col-lg-1" align="center"></div>
     <div class="col-lg-10 col-xs-12" align="center">
-    <p class="notice fact">';
+    <p class="notice fact"></p><p>';
 
-    while ( have_posts() ) : the_post();
-        the_content();
-    endwhile;
-    wp_reset_query();
+    echo $video_contents[$loop]['content'];
+
+    // while ( have_posts() ) : the_post();
+    //     the_content();
+    // endwhile;
+    // wp_reset_query();
 
     echo '</p>
     </div>
@@ -80,12 +85,28 @@ foreach($videos as $video):
     <div class="container-fluid">
     <div class="row show-grid">
     ';
-
+    $colum = count($video['categories']);
     $index = 1;
     foreach($video['categories'] as $categorie):
+        if ($colum < 6) {
+            $col = intval(12 / $colum);
+            echo '
+                <div class="col-lg-'. $col . ' col-md-' . $col . ' col-sm-' . $col . ' col-xs-12"><div class="gallery" align="center"';
+
+            if ($col == 12 ) { echo ' style="width: 50%; margin: 10px auto;"'; }
+            else if ($col == 6 ) { echo ' style="width: 70%; margin: 10px auto;"'; }
+            else if ($col == 4 ) { echo ' style="width: 100%; margin: 10px auto;"'; }
+
+            echo '>';
+
+        } else {
+            echo '
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6" align="center">
+                <div class="gallery" align="center">
+            ';
+        }
+
         echo '
-            <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6" align="center">
-            <div class="gallery" align="center">
             <div class="view" align="center">
             <a href="https://www.youtube.com/embed/' . $categorie['video_id'] . '" class="fancybox-media" rel="media-gallery"><img src="http://img.youtube.com/vi/' . $categorie['video_id'] . '/0.jpg" class="img-responsive"></a>
             </div>
@@ -100,6 +121,7 @@ foreach($videos as $video):
     </div>
     </div>
     ';
+    $loop += 1;
 endforeach;
 ?>
 

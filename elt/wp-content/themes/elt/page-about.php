@@ -37,8 +37,6 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
 </div>
 </div>
 
-<div align="center"><i class="fa fa-get-pocket" style="font-size: 40px;color: #A51418;margin-top:-5px;"></i></div>
-
 <div class="show-grid">
 <div class="container">
 <div class="row">

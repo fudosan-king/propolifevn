@@ -165,9 +165,8 @@ endforeach;
 
     <div class="socials">
     <div class="socials_wrapper">
-    <a class="fa fa-facebook" href="#"></a>
-    <a class="fa fa-twitter" href="#"></a>
-    <a class="fa fa-google-plus" href="#"></a>
+    <a class="fa fa-facebook" href="https://www.facebook.com/pages/Samurai-Boxing-Gym/972758416076004" target="_blank"></a>
+        <a class="fa fa-youtube" href="https://www.youtube.com/channel/UCMH8Z4BQH_cNxp3Me03ojiQ" target="_blank"></a>
     </div>
     </div>
     <div class="clearfix"></div>

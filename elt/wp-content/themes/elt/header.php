@@ -21,33 +21,27 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <link rel="icon" href="<?php echo $template_directory ?>/images/favico.gif" type="image/gif" sizes="16x16">
-    <title><?php wp_title( '|', true, 'right' ); ?></title>
-    <?php if (is_page( 35 )) { ?>
-        <meta property="og:title" content="<?php _e( '経営理念│ELT VIETNAM', 'elt' ); ?>">
-        <meta property="og:description" content="<?php _e( 'ベトナムホーチミン至近に自社の加工工場を持つ肉総合商社ELT VIETNAMの経営理念です。当社では、安心で安全な商品とサービスを通じて、常にお客様に満足して頂く事を念頭に 置いています。社員一人ひとりが、現状に満足する事なく常に、改善・進化・原点にかえり、あらゆる可能性に挑戦し新しい時代を切り開いて行きます。', 'elt' ); ?>">
-        <meta name="description" content="<?php _e( 'ベトナムホーチミン至近に自社の加工工場を持つ肉総合商社ELT VIETNAMの経営理念です。当社では、安心で安全な商品とサービスを通じて、常にお客様に満足して頂く事を念頭に 置いています。社員一人ひとりが、現状に満足する事なく常に、改善・進化・原点にかえり、あらゆる可能性に挑戦し新しい時代を切り開いて行きます。', 'elt' ); ?>">
-    <?php } elseif (is_page( 38 )) { ?>
-        <meta property="og:title" content="<?php _e( '私たちのサービス│ELT VIETNAM', 'elt' ); ?>">
-        <meta property="og:description" content="<?php _e( 'ベトナムホーチミン至近に自社の加工工場を持つ肉総合商社ELT VIETNAMのサービスの紹介です。私たちの世界の拠点から高品質の新鮮なお肉を直接輸入しています。温度管理、衛生管理が徹底され、効率的な製造ラインを持つ自社加工工場で、お客様がすぐ使いやすいように加工し、食料品スーパー様、飲食店様、ご家庭に鮮度を保ったままお届けしております。', 'elt' ); ?>">
-        <meta name="description" content="<?php _e( 'ベトナムホーチミン至近に自社の加工工場を持つ肉総合商社ELT VIETNAMのサービスの紹介です。私たちの世界の拠点から高品質の新鮮なお肉を直接輸入しています。温度管理、衛生管理が徹底され、効率的な製造ラインを持つ自社加工工場で、お客様がすぐ使いやすいように加工し、食料品スーパー様、飲食店様、ご家庭に鮮度を保ったままお届けしております。', 'elt' ); ?>">
-    <?php } elseif (is_page( 40 )) { ?>
-        <meta property="og:title" content="<?php _e( '当社のクライアント│ELT VIETNAM', 'elt' ); ?>">
-        <meta property="og:description" content="<?php _e( 'ベトナムホーチミン至近に自社の加工工場を持つ肉総合商社ELT VIETNAMのクライアント様の声です。ELT VIETNAMでは、ベトナム国内の食品スーパー様、レストラン様、個人宅様、全てのお客様に品質管理された「安心」「安全」「新鮮」なお肉をお届けしております。', 'elt' ); ?>">
-        <meta name="description" content="<?php _e( 'ベトナムホーチミン至近に自社の加工工場を持つ肉総合商社ELT VIETNAMのクライアント様の声です。ELT VIETNAMでは、ベトナム国内の食品スーパー様、レストラン様、個人宅様、全てのお客様に品質管理された「安心」「安全」「新鮮」なお肉をお届けしております。', 'elt' ); ?>">
-    <?php } elseif (is_page( 122 )) { ?>
-        <meta property="og:title" content="<?php _e( '代表ご挨拶 | ELT VIETNAM', 'elt' ); ?>">
-        <meta property="og:description" content="<?php _e( 'ベトナムホーチミン至近に自社の加工工場を持つ肉総合商社ELTVIETNAMの代表挨拶です。日本国内でご提供している「安心」「安全」「新鮮」なお肉をベトナムでもローコストでご提供する為、自社工場の建設の際には徹底した温度と衛生管理ができる工場にすることにこだわりました。', 'elt' ); ?>">
-        <meta name="description" content="<?php _e( 'ベトナムホーチミン至近に自社の加工工場を持つ肉総合商社ELTVIETNAMの代表挨拶です。日本国内でご提供している「安心」「安全」「新鮮」なお肉をベトナムでもローコストでご提供する為、自社工場の建設の際には徹底した温度と衛生管理ができる工場にすることにこだわりました。', 'elt' ); ?>">
-    <?php } elseif (is_page( 42 )) { ?>
-        <meta property="og:title" content="<?php _e( 'お問い合わせ | ELT VIETNAM', 'elt' ); ?>">
-        <meta property="og:description" content="<?php _e( 'ELTVIETNAMお問い合わせフォームです。取扱商品や費用、工場を見学のご希望などへのお問い合わせはこちらのフォームからできます。', 'elt' ); ?>">
-        <meta name="description" content="<?php _e( 'ELTVIETNAMお問い合わせフォームです。取扱商品や費用、工場を見学のご希望などへのお問い合わせはこちらのフォームからできます。', 'elt' ); ?>">
-    <?php } else {?>
-        <meta property="og:title" content="<?php _e( 'ELT VIETNAM │ ベトナムホーチミン肉の総合商社', 'elt' ); ?>">
-        <meta property="og:description" content="<?php _e( 'ベトナムホーチミン市至近に自社加工工場を持つ日系肉の総合商社ELT VIETNAM公式HPです。食肉業者として食料品スーパー様、飲食店様の業務用お肉の仕入れ向けからご家庭の食卓向けまで、新鮮なお肉をお届け後に手間なく、すぐに使える加工をしてご提供しております。', 'elt' ); ?>">
-        <meta name="description" content="<?php _e( 'ベトナムホーチミン市至近に自社加工工場を持つ日系肉の総合商社ELT VIETNAM公式HPです。食肉業者として食料品スーパー様、飲食店様の業務用お肉仕入れ向けからご家庭の食卓向けまで、新鮮なお肉をお届け後に手間なく、すぐに使える加工をしてご提供しております。', 'elt' ); ?>">
+    <?php
+        $post_id = get_post()->ID;
+        $title_seo = get_field('title_seo', $post_id);
+        $title_og = get_field('title_og', $post_id);
+        $description_seo = get_field('description_seo', $post_id);
+        $description_og = get_field('description_og', $post_id);
+        $keywords = get_field('keywords', $post_id);
+    ?>
+    <?php if (($title_seo) && ($description_seo)) { ?>
+        <title><?php echo $title_seo; ?></title>
+        <meta property="og:title" content="<?php echo $title_og; ?>">
+        <meta property="og:description" content="<?php echo $description_og; ?>">
+        <meta name="description" content="<?php echo $description_seo; ?>">
+        <meta name="keywords" content="<?php echo $keywords; ?>">
+    <?php } else { ?>
+        <title><?php wp_title( '|', true, 'right' ); ?></title>
+        <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?>">
+        <meta property="og:description" content="<?php _e( 'ベトナムホーチミン市至近に自社加工工場を持つ日系肉の総合商社ELT VIETNAM公式HPです。食肉業者として業務用お肉の仕入れ向けからご家庭の食卓向けまで、手間なくすぐに使える新鮮なお肉をご提供しております。', 'elt' ); ?>">
+        <meta name="description" content="<?php _e( 'ベトナムホーチミン市至近に自社加工工場を持つ日系肉の総合商社ELT VIETNAM公式HPです。食肉業者として業務用お肉の仕入れ向けからご家庭の食卓向けまで、手間なくすぐに使える新鮮なお肉をご提供しております。', 'elt' ); ?>">
+        <meta name="keywords" content="<?php _e( '肉業者,肉商社,肉仕入れ,ホーチミン,ベトナム,ELTベトナム,ELT VIETNAM,和牛業者,US,輸入,加工,工場', 'elt' ); ?>">
     <?php } ?>
-    <meta name="keywords" content="<?php _e( 'ELT VIETNAM,肉業者,肉商社,肉仕入れ,ホーチミン,ベトナム,ELTベトナム,和牛業者,US,輸出入,加工,工場,', 'elt' ); ?>">
 
 	<!--[if lt IE 9]>
 	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>

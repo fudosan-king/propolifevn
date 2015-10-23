@@ -29,7 +29,7 @@ $template_directory = str_replace("twentyfifteen", "boxing", get_template_direct
         $description_og = get_field('description_og', $post_id);
         $keywords = get_field('keywords', $post_id);
     ?>
-    <?php if (($title_seo) && ($description_seo)) { ?>
+    <?php if (($title_seo) && ($description_seo) && !(is_home())) { ?>
         <title><?php echo $title_seo; ?></title>
         <meta property="og:title" content="<?php echo $title_og; ?>">
         <meta property="og:description" content="<?php echo $description_og; ?>">
@@ -38,9 +38,9 @@ $template_directory = str_replace("twentyfifteen", "boxing", get_template_direct
     <?php } else { ?>
         <title><?php wp_title( '|', true, 'right' ); ?></title>
         <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?>">
-        <meta property="og:description" content="ベトナムホーチミン市のボクシングエクササイズ、サムライボクシングジム公式HPです。スポーツジムやフィットネスクラブをお考えの方も是非ボクシングエクササイズもご検討ください。何かスポーツを始めてみたい、理想の体型を目指したいなどフィットネス目的の方から本格的にボクシングをしたいという方までご年齢、性別問わずに楽しんで頂ける日系ボクシングジムです。">
-        <meta name="description" content="ベトナムホーチミン市のボクシングエクササイズ、サムライボクシングジム公式HPです。スポーツジムやフィットネスクラブをお考えの方も是非ボクシングエクササイズもご検討ください。何かスポーツを始めてみたい、理想の体型を目指したいなどフィットネス目的の方から本格的にボクシングをしたいという方までご年齢、性別問わずに楽しんで頂ける日系ボクシングジムです。">
-        <meta name="keywords" content="ボクシング,サムライボクシングジム,ホーチミン,ベトナム,スポーツジム,フィットネスクラブ,ジム,ホーチミン市,格闘技,ダイエット">
+        <meta property="og:description" content="ベトナムホーチミン市のサムライボクシングジム公式HPです。何かスポーツを始めたい、理想の体型を目指したいなどフィットネス目的の方から本格的にボクシングをしたいという方まで、ご満足頂ける1回60分のクラスレッスンになっています。サムライボクシングジムは、ご年齢、性別問わずに楽しんで頂ける日系ボクシングジムです。">
+        <meta name="description" content="ベトナムホーチミン市のサムライボクシングジム公式HPです。何かスポーツを始めたい、理想の体型を目指したいなどフィットネス目的の方から本格的にボクシングをしたいという方まで、ご満足頂ける1回60分のクラスレッスンになっています。サムライボクシングジムは、ご年齢、性別問わずに楽しんで頂ける日系ボクシングジムです。">
+        <meta name="keywords" content="サムライボクシングジム,ホーチミン,ベトナム,ジム,スポーツジム,フィットネスクラブ">
     <?php } ?>
 
 	<!--[if lt IE 9]>

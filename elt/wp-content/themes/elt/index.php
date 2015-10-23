@@ -70,7 +70,7 @@
     <div class="row">
     <div class="col-lg-12" align="center">
     <h3>
-        <?php _e('ELT Vietnam について', 'elt');?>
+        <?php _e('ELTベトナム', 'elt');?>
     </h3>
 
     </div>

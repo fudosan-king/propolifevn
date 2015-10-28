@@ -40,7 +40,7 @@ ELT VIETNAM
 Hosting:
 -       https://118.69.204.220:2222
 -       User: eltvncom
--       Pass: 04ZCyl!$
+-       Pass: Eltvn01
 
 
 Mysql:

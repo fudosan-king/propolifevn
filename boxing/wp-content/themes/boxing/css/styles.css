@@ -199,16 +199,17 @@ h3.title-detail{font-size:24px;}
 .navbar-fixed-top .select-lang{position: absolute;right: 15px;top: 115px;background-color: #000000;padding:0px 10px 4px 10px}
 .navbar-fixed-top .select-lang li{display:inline;top:115px;}
 /*----------Course page-------------*/
-.course{background-color:#FFFFFF;margin-bottom:15px;box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.11);}
-.course .caption{padding:15px;}
+.course{background-color:#000000;margin-bottom:15px;box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.11);position: relative;}
+.course .caption{padding:15px;background-color:#ffffff}
 .course .caption h4 .line{width: 100px;height: 3px;background-color: #dadada;}
 .course .caption p{text-align:center;overflow:hidden;text-overflow:ellipsis;margin-top:10px;white-space:pre}
 .quote p{text-align:center;}
 .quote p .fa-quote-left{margin-right:10px;}
 .quote p .fa-quote-right{margin-left:10px;}
-.course .view{background-color:#000000}
-.course .view:after{content:'[ Detail ]';position:absolute;width:100%;left:0px;top:30%;color:#ffffff;font-size:24px;}
-.course .view a{transition: all .5s linear;-o-transition: all .5s linear;-moz-transition: all .5s linear;-webkit-transition: all .5s linear;display:block;position:relative;z-index:1}
+.course .view{background-color:#000000;height:262px;display:inline-table;table-layout:fixed;vertical-align:top}
+.course .view:after{content:'[ Detail ]';position:absolute;width:100%;left:0px;top:30%;color:#ffffff;font-size:24px;opacity:1;z-index:0}
+.course .view a{transition: all .5s linear;-o-transition: all .5s linear;-moz-transition: all .5s linear;-webkit-transition: all .5s linear;display:table-cell;z-index:1;vertical-align:middle;position:relative}
+.course .view a img{width: 100%;}
 .course .view a:hover{opacity:0.1;}
 .course .caption h4 a{position: relative;padding: 0px 0px 5px;color: #111111;font-size: 18px;line-height: 24px;text-transform: uppercase;}
 .course .caption h4 a:before {content: '[';position:relative;top: 0px;left: 0px;opacity:0;visibility:hidden;color: #e45914;font-size: 20px;

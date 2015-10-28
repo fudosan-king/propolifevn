@@ -55,11 +55,19 @@ function wpsites_nav_class($classes, $item){
         $classes[] = "active";
     }
 
+    if ((is_page( 1038 ) || is_page( 1036 ) || is_page( 1040 )) && ($classes[8] == 'menu-item-1066' || $classes[8] == 'menu-item-1064' || $classes[8] == 'menu-item-1063')){
+        $classes[] = "active";
+    }
+
     if ((in_category( 'NEWS-VN' ) || in_category( 'NEWS-EN' ) || in_category( 'チャート' )) && ($classes[4] == 'menu-item-831' || $classes[4] == 'menu-item-832' || $classes[4] == 'menu-item-833') && !is_home()){
         $classes[] = "active";
     }
 
     if ((in_category( 'CLASS-VN' ) || in_category( 'CLASS-EN' ) || in_category( 'CLASS-JP' )) && ($classes[4] == 'menu-item-126' || $classes[4] == 'menu-item-119' || $classes[4] == 'menu-item-130') && !is_home()){
+        $classes[] = "active";
+    }
+
+    if ((in_category( 'LESSON-VN' ) || in_category( 'LESSON-EN' ) || in_category( 'LESSON-JP' )) && ($classes[4] == 'menu-item-1066' || $classes[4] == 'menu-item-1064' || $classes[4] == 'menu-item-1063') && !is_home()){
         $classes[] = "active";
     }
 
@@ -115,6 +123,11 @@ function get_custom_cat_template($single_template) {
     if ( in_category( 'NEWS-VN' ) || in_category( 'NEWS-EN' ) || in_category( 'チャート' )) {
         $single_template = dirname( __FILE__ ) . '/single-news.php';
     }
+
+    if ( in_category( 'LESSON-VN' ) || in_category( 'LESSON-EN' ) || in_category( 'LESSON-JP' )) {
+        $single_template = dirname( __FILE__ ) . '/single-lesson.php';
+    }
+
     return $single_template;
 }
 

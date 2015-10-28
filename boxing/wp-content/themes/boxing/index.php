@@ -100,9 +100,11 @@ add_action( 'wp_head', 'add_google_map', 0 );
 <?php
     $sliders = get_field('slider', 307);
         foreach($sliders as $slider):
-            echo '
-            <div><img u="image" src="' . $slider['image']['url'] . '" /></div>
-            ';
+            echo '<div>';
+            if ($slider['link']) { echo '<a href="' . $slider['link'] . '" target="_blank">';}
+            echo '<img u="image" src="' . $slider['image']['url'] . '" />';
+            if ($slider['link']) { echo '</a>';}
+            echo '</div>';
          endforeach;
 ?>
 </div>

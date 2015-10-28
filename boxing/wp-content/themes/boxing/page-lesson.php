@@ -1,6 +1,6 @@
 <?php
 /**
-Template Name: ClassPage
+Template Name: LessonPage
 */
 ?>
 
@@ -22,11 +22,14 @@ $template_directory = str_replace("twentyfifteen", "boxing", get_template_direct
 <div class="row show-grid">
 <?php
     if ($lang == 'vi'){
-        $cat = 37;
+        $cat = 68;
+        $lesson = 'Bài học';
     } else if ($lang == 'ja') {
-        $cat = 39;
+        $cat = 70;
+        $lesson = 'レッスン';
     } else {
-        $cat = 35;
+        $cat = 66;
+        $lesson = 'LESSON';
     }
     $args = array(
         'cat'              => $cat,
@@ -60,7 +63,7 @@ $template_directory = str_replace("twentyfifteen", "boxing", get_template_direct
         foreach($class_arrays as $class_array):
             $name = get_field('name', $class_array->ID);
             $href = $class_array->guid;
-            $image = get_field('image', $class_array->ID);
+            $image = 'http://img.youtube.com/vi/' . get_field('id_youtube', $class_array->ID) . '/0.jpg';
             $description = substr(get_field('description', $class_array->ID), 0, 60);
 
             echo '
@@ -68,12 +71,13 @@ $template_directory = str_replace("twentyfifteen", "boxing", get_template_direct
             <div class="course" align="center">
             <div class="view" align="center">
             <a href="' . get_bloginfo('siteurl'). '&p='. $class_array->ID . '">
-                <img src="' . $image['url'] . '" class="img-responsive">
+                <img src="' . $image . '" class="img-responsive">
             </a>
             </div>
             <div class="caption">
             <div class="title-caption">
-            <h4><a href="' . get_bloginfo('siteurl'). '&p='. $class_array->ID . '">' . $name . '</a><div class="line">&nbsp;</div></h4>
+            <h4><a href="' . get_bloginfo('siteurl'). '&p='. $class_array->ID . '">' . $lesson . ' ' . get_field('oder', $class_array->ID) . '</a><div class="line">&nbsp;</div></h4>
+            <p>' . $name . '</p>
             </div>
             </div>
             </div>

@@ -5,6 +5,11 @@
     width: 100%;
 }
 
+.staffInfo .mask img {
+    width: 187px;
+    height: 164px;
+}
+
 .h1tag {
     margin-top: 0px;
     margin-bottom: 0px;

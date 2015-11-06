@@ -11,6 +11,7 @@
 ?><!DOCTYPE html>
 <?php
 $template_directory = str_replace("twentyfifteen", "boxing", get_template_directory_uri());
+$lang = get_bloginfo('language_code');
 ?>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -38,9 +39,19 @@ $template_directory = str_replace("twentyfifteen", "boxing", get_template_direct
     <?php } else { ?>
         <title><?php wp_title( '|', true, 'right' ); ?></title>
         <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?>">
-        <meta property="og:description" content="ベトナムホーチミン市のサムライボクシングジム公式HPです。何かスポーツを始めたい、理想の体型を目指したいなどフィットネス目的の方から本格的にボクシングをしたいという方まで、ご満足頂けるレッスンになっています。サムライボクシングジムは、ご年齢、性別問わずに楽しんで頂ける日系ボクシングジムです。">
-        <meta name="description" content="ベトナムホーチミン市のサムライボクシングジム公式HPです。何かスポーツを始めたい、理想の体型を目指したいなどフィットネス目的の方から本格的にボクシングをしたいという方まで、ご満足頂けるレッスンになっています。サムライボクシングジムは、ご年齢、性別問わずに楽しんで頂ける日系ボクシングジムです。">
-        <meta name="keywords" content="サムライボクシングジム,ホーチミン,ベトナム,ジム,スポーツジム,スポーツ,フィットネスクラブ,フィットネス,汗を流す公園,運動">
+        <?php if ($lang == 'vi'){ ?>
+            <meta property="og:description" content="“samurai-boxing-gym.vn” là wedsite chính thức của câu lạc bộ quyền anh Samurai đến từ Nhật Bản, có trụ sở tại thành phố Hồ Chí Minh. Nếu bạn đang có dự định bắt đầu thử sức với một môn thể thao nào đó với mục tiêu mong muốn là một thân hình lí tưởng, gọn gàng, săn chắc; hoặc là bạn ước mơ trở thành một võ sĩ quyền anh chuyên nghiệp… Hãy liên hệ với chúng tôi. Tuổi tác, giới tính hoàn toàn không phải là vấn đề đối với môn thể thao quyền anh này. Vì vậy, hãy đừng do dự mà tham gia vào môn thể thao yêu thích của bạn ngay bây giờ nhé!!!">
+            <meta name="description" content="“samurai-boxing-gym.vn” là wedsite chính thức của câu lạc bộ quyền anh Samurai đến từ Nhật Bản, có trụ sở tại thành phố Hồ Chí Minh. Nếu bạn đang có dự định bắt đầu thử sức với một môn thể thao nào đó với mục tiêu mong muốn là một thân hình lí tưởng, gọn gàng, săn chắc; hoặc là bạn ước mơ trở thành một võ sĩ quyền anh chuyên nghiệp… Hãy liên hệ với chúng tôi. Tuổi tác, giới tính hoàn toàn không phải là vấn đề đối với môn thể thao quyền anh này. Vì vậy, hãy đừng do dự mà tham gia vào môn thể thao yêu thích của bạn ngay bây giờ nhé!!!">
+            <meta name="keywords" content="samurai boxing gym, ho chi minh, viet nam, thể hình, thể thao thể hình, fitness, câu lạc bộ fitness">
+        <?php  } else if ($lang == 'ja') { ?>
+            <meta property="og:description" content="ベトナムホーチミン市のサムライボクシングジム公式HPです。何かスポーツを始めたい、理想の体型を目指したいなどフィットネス目的の方から本格的にボクシングをしたいという方まで、ご満足頂けるレッスンになっています。サムライボクシングジムは、ご年齢、性別問わずに楽しんで頂ける日系ボクシングジムです。">
+            <meta name="description" content="ベトナムホーチミン市のサムライボクシングジム公式HPです。何かスポーツを始めたい、理想の体型を目指したいなどフィットネス目的の方から本格的にボクシングをしたいという方まで、ご満足頂けるレッスンになっています。サムライボクシングジムは、ご年齢、性別問わずに楽しんで頂ける日系ボクシングジムです。">
+            <meta name="keywords" content="サムライボクシングジム,ホーチミン,ベトナム,ジム,スポーツジム,スポーツ,フィットネスクラブ,フィットネス,汗を流す公園,運動">
+        <?php } else { ?>
+            <meta property="og:description" content="“samurai-boxing-gym.vn” is official website  of Samurai boxing club from Japan, based in Ho Chi Minh City. If you are planning on starting to try a sport that the desired goal is an ideal body, neat and firm; or you are dreaming of becoming a professional boxer ... Please contact us. Age, sex is not absolutely a matter for the sport of boxing. So, please do not be hesitate to engage in  your favorite sport now !!!">
+            <meta name="description" content="“samurai-boxing-gym.vn” is official website  of Samurai boxing club from Japan, based in Ho Chi Minh City. If you are planning on starting to try a sport that the desired goal is an ideal body, neat and firm; or you are dreaming of becoming a professional boxer ... Please contact us. Age, sex is not absolutely a matter for the sport of boxing. So, please do not be hesitate to engage in  your favorite sport now !!!">
+            <meta name="keywords" content="samurai boxing gym, ho chi minh, viet nam, gym, sport gym, fitness club,park,">
+        <?php } ?>
     <?php } ?>
 
 	<!--[if lt IE 9]>

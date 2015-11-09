@@ -226,8 +226,9 @@ transition: box-shadow .4s ease-in-out;opacity:0.5
 .bg-pt p.work{font-size: 20px;color: #C6FF00;margin-top: 15px;}
 .bg-pt-2{background:url(../images/bg-1.jpg);color:#FFFFFF;padding:0px 0px 40px 0px;margin-top:30px;}
 .bg-pt-3{background:url(../images/office-bg.jpg);color:#FFFFFF;padding:40px 0px 40px 0px;margin-top:30px;}
-.bg-pt p,.bg-pt-2 p,.b-web p{margin-bottom:15px;line-height:26px;font-size:18px;margin-top:30px;text-align:center}
+.bg-pt p,.bg-pt-2 p,.b-web p{margin-bottom:15px;line-height:26px;font-size:24px;margin-top:30px;text-align:center}
 .b-web{background:url(../images/b_web.jpg);color:#FFFFFF;padding:30px 0px 40px 0px;margin-top:30px;}
+.b-web .btn{border:none;}
 hr{border-top: 1px dotted rgba(68, 68, 68, 0.18);}
 .per-name{font-size:18px;margin-top:20px;}
 .per-pos{color: #C6FF00;font-size: 20px;margin-bottom:15px;display: inline-block;}
@@ -322,9 +323,9 @@ body.home{background: url(../images/bg-home.jpg);}
 .proCol h2{font-size:20px;margin-bottom:20px;}
 .proCol a{color:#ffffff;}
 .proCol p{font-size:12px;}
-.proCol address{color: #000000;padding: 25px 40px;}
+.proCol address{color: #ffffff;padding: 25px 40px;}
 .proCol .tel{color: #ffffff;padding: 25px 40px;}
-.proCol .thumbnail{margin-bottom:0px;box-shadow:none;background-color: rgba(0, 0, 0, 0.2);}
+.proCol .thumbnail{margin-bottom:0px;box-shadow:none;background-color: rgba(0, 0, 0, 0.6);}
 .proCol .yellow{background-color:#e7a800;}
 .proCol .orange{background-color:#ac3416;}
 .proCol .green{background-color:#009a6d;}

@@ -46,7 +46,7 @@ $lang = get_bloginfo('language_code');
         <?php  } else if ($lang == 'ja') { ?>
             <meta property="og:description" content="ベトナムホーチミン市初の日系ボクシングエクササイズジムです。消費カロリーが高い効果的なエクササイズとフィットネスバイク、ランニングマシン、ウェイトマシンでのトレーニングで汗を流せます。何かスポーツを始めたい、理想の体型を目指したいなどフィットネス目的の方から本格的にボクシングをしてみたいという方まで、ご年齢、性別問わずに楽しんで頂けます。">
             <meta name="description" content="ベトナムホーチミン市初の日系ボクシングエクササイズジムです。消費カロリーが高い効果的なエクササイズとフィットネスバイク、ランニングマシン、ウェイトマシンでのトレーニングで汗を流せます。何かスポーツを始めたい、理想の体型を目指したいなどフィットネス目的の方から本格的にボクシングをしてみたいという方まで、ご年齢、性別問わずに楽しんで頂けます。">
-            <meta name="keywords" content="ジム,ホーチミン,スポーツ,フィットネス,駐在,汗を流す,サムライボクシングジム,ベトナム,公園,運動">
+            <meta name="keywords" content="ホーチミン,ベトナム,ジム,スポーツ ジム,フィット ネスジム,汗を流す,サムライ ボクシングジム,駐在,公園,運動">
         <?php } else { ?>
             <meta property="og:description" content="“samurai-boxing-gym.vn” is official website  of Samurai boxing club from Japan, based in Ho Chi Minh City. If you are planning on starting to try a sport that the desired goal is an ideal body, neat and firm; or you are dreaming of becoming a professional boxer ... Please contact us. Age, sex is not absolutely a matter for the sport of boxing. So, please do not be hesitate to engage in  your favorite sport now !!!">
             <meta name="description" content="“samurai-boxing-gym.vn” is official website  of Samurai boxing club from Japan, based in Ho Chi Minh City. If you are planning on starting to try a sport that the desired goal is an ideal body, neat and firm; or you are dreaming of becoming a professional boxer ... Please contact us. Age, sex is not absolutely a matter for the sport of boxing. So, please do not be hesitate to engage in  your favorite sport now !!!">

@@ -1,11 +1,13 @@
 @charset "UTF-8";
 /* CSS Document */
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+
+@media (min-width: 769px) and (max-width: 991px){.nav > li > a {padding: 10px 8px;}.sildermain{padding-top:84px !important}}
 @media (min-width: 768px) and (max-width: 991px) {.bgColor .col-xs-6{padding:0px;}.staff .img-circle{width:65%}}
 @media (min-width: 992px) and (max-width: 1199px) {.staff .img-circle{width:65%}}
 @media (max-width: 767px){
 .center-block{text-align:center}
-.navbar-toggle{padding-right:0px;margin-right:0px;}
+.navbar-toggle{padding-right:0px;margin-right:0px;padding: 21px 10px;}
 .navbar-nav > li > a {line-height:normal !important;color:#ffffff;text-align:center}
 .navbar-nav {margin: 0px -15px 0px -15px;}
 .navbar-brand .img-responsive{height:45px;width:auto;transition: all 0.5s ease;}
@@ -25,6 +27,7 @@
 .doc-footer p{text-align: left;border-top: 1px solid #1C9DAF;margin-top: 15px;padding-top: 15px;}
 .doc-footer address{text-align: left;}
 .doc-footer .socials{text-align:left}
+.sildermain{padding-top:76px !important}
 }
 /*----------Gerneral transition setup-------------*/
 .btn,.navbar-nav li,.navbar ul li ul,.jssora20l, .jssora20r{-webkit-transition: all 0.2s linear;-moz-transition: all 0.2s linear;-o-transition: all 0.2s linear;transition: all 0.2s linear;}
@@ -42,7 +45,7 @@ ul,li{list-style:none;padding:0;margin:0}
 .logo{display: block;/*border-bottom: solid 5px #41BDCE;*/}
 p.excerpt {display: -webkit-box;-webkit-line-clamp: 3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
 h2, h3 {font-family:'Lato', Arial, sans-serif;}
-h3{color: #41BDCE;font-size:30px; line-height:44px;font-weight:100;margin-top:30px;}
+h3{color: #41BDCE;font-size:30px; line-height:44px;font-weight:bold;margin-top:30px;}
 .btn:hover{transform: scale(1.1);-o-transform: scale(1.1);-moz-transform: scale(1.1);-webkit-transform: scale(1.1);-ms-transform: scale(1.1);}
 .btn .fa{margin-right:10px;}
 .centerIn{display:table-cell;width:inherit;height:inherit;vertical-align:middle}
@@ -141,14 +144,14 @@ a.captionOrange:hover{color: #eb5100;text-decoration: underline;background-color
 /*----------Top menu-------------*/
 .navbar address{color:#ffffff;font-size:14px;text-align:center;bottom:150px;position:absolute}
 .navbar{margin:0px;border-radius: 0px;border:none}
-.navbar-nav li{font-size:12px;border-bottom: solid 5px #000000;line-height:38px;}
-.navbar-brand{height:inherit;padding:0px;}
+.navbar-nav li{font-size:12px;border-bottom: solid 5px #000000;}
+.navbar-brand{height:inherit;padding:15px 0px;}
 .navbar-nav .navbar-collapse{border:none}
 .navbar-nav ul {list-style: none;}
 .navbar-nav a{text-decoration:none;}
-.navbar ul li {position:relative;z-index:99;margin: 0px 0px 0px 1px;line-height:38px;}
+.navbar ul li {position:relative;z-index:99;}
 .navbar ul li:last-child{border-right:none}
-.navbar ul li a{-webkit-transition: color .15s;-moz-transition: color .15s;-o-transition: color .15s;transition: color .15s;color:#ffffff;line-height:38px;}
+.navbar ul li a{-webkit-transition: color .15s;-moz-transition: color .15s;-o-transition: color .15s;transition: color .15s;color:#ffffff;line-height:59px;}
 .navbar ul li:hover{border-bottom: solid 5px #41BDCE;background-color:#ffffff}
 .navbar ul li:hover a{color: black;}
 .navbar ul li.active{color: #ffffff;border-bottom: solid 5px #41BDCE;}
@@ -323,9 +326,9 @@ body.home{background: url(../images/bg-home.jpg);}
 .proCol h2{font-size:20px;margin-bottom:20px;}
 .proCol a{color:#ffffff;}
 .proCol p{font-size:12px;}
-.proCol address{color: #ffffff;padding: 25px 40px;}
+.proCol address{color: #ffffff;padding: 25px 40px;margin-bottom:0px;}
 .proCol .tel{color: #ffffff;padding: 25px 40px;}
-.proCol .thumbnail{margin-bottom:0px;box-shadow:none;background-color: rgba(0, 0, 0, 0.6);}
+.proCol .thumbnail{margin-bottom:0px;box-shadow:none;background-color: rgba(0, 0, 0, 0.7);}
 .proCol .yellow{background-color:#e7a800;}
 .proCol .orange{background-color:#ac3416;}
 .proCol .green{background-color:#009a6d;}
@@ -333,8 +336,9 @@ body.home{background: url(../images/bg-home.jpg);}
 .proCol .black{background-color:#000000;}
 .proCol .yellow p,.proCol .green p{color:#000000}
 .proCol .yellow,.proCol .orange,.proCol .green,.proCol .blue,.proCol .black{padding:15px;min-height:260px;}
-.proCol .thumbnail .thumb{position:relative;height:260px;overflow: hidden;}
+.proCol .thumbnail .thumb{height:260px;overflow: hidden;}
 .proCol .thumbnail .caption{position:absolute;top:0px;height: 260px;overflow: hidden;padding: 10px;}
 .proCol .thumbnail .caption h2{font-size:20px;margin-top:0px;}
 .proCol .fa-angle-right{opacity:0.5}
 .proCol .fa-right{position: absolute;right: 25px;bottom: 25px;}
+.sildermain{padding-top:89px}

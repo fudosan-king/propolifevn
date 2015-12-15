@@ -40,7 +40,7 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
         <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?>">
         <meta property="og:description" content="<?php _e( 'ベトナムホーチミン市至近に自社加工工場を持つ日系肉の総合商社ELT VIETNAM公式HPです。食肉業者として業務用お肉の仕入れ向けからご家庭の食卓向けまで、手間なくすぐに使える新鮮なお肉をご提供しております。', 'elt' ); ?>">
         <meta name="description" content="<?php _e( 'ベトナムホーチミン市至近に自社加工工場を持つ日系肉の総合商社ELT VIETNAM公式HPです。食肉業者として業務用お肉の仕入れ向けからご家庭の食卓向けまで、手間なくすぐに使える新鮮なお肉をご提供しております。', 'elt' ); ?>">
-        <meta name="keywords" content="<?php _e( '肉業者,肉商社,肉仕入れ,ホーチミン,ベトナム,ELTベトナム,ELT VIETNAM,和牛業者,US,輸入,加工,工場', 'elt' ); ?>">
+        <meta name="keywords" content="<?php _e( 'ホーチミン,ベトナム,精肉,和牛,豚肉,輸入,肉商社,肉仕入れ,加工工場,ELTベトナム,ELT VIETNAM', 'elt' ); ?>">
     <?php } ?>
 
 	<!--[if lt IE 9]>

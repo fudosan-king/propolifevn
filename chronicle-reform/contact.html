@@ -25,7 +25,7 @@ function imgLoaded(img){
     imgWrapper.className += imgWrapper.className ? ' loaded' : 'loaded';
 };
 
-$(window).load(function() {	
+$(window).load(function() {
 	$(".se-pre-con").fadeOut("slow");
 	$(".view-effect").addClass('fadeInLeft animated');
 });
@@ -87,12 +87,12 @@ google.maps.event.addDomListener(window, 'load', initialize);
 <ul class="nav navbar-nav">
 <li><a href="index.html">HOME</a></li>
 <li><a href="about.html">ABOUT</a></li>
-<li><a href="office.html">CHRONICLE OFFICE</a></li>   
+<li><a href="office.html">CHRONICLE OFFICE</a></li>
 <li><a href="home.html">CHRONICLE HOME</a></li>
-<li><a href="lotus.html">LOTUS</a></li>       
-<li><a href="web.html">WEB</a></li>  
+<li><a href="lotus.html">LOTUS</a></li>
+<li><a href="web.html">WEB</a></li>
 <li><a href="http://aodaihousing.com/" target="_blank">AODAIHOUSING</a></li>
-<li class="active"><a href="contact.html">CONTACT</a></li> 
+<li class="active"><a href="contact.html">CONTACT</a></li>
 </ul>
 <address class="visible-xs">
 <div class="socials">
@@ -143,7 +143,7 @@ Unit1904 19Floor CJ BUILDING(旧GEMADEPT TOWER), 6 Le Thanh Ton, District1,HCMC,
 <div class="form-group has-feedback">
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-<input type="tel" pattern="[0-9]{10,14}" class="form-control" placeholder="Phone" data-error="Oh, that phone is invalid" required>
+<input type="tel" class="form-control" placeholder="Phone" data-error="Oh, that phone is invalid">
 </div>
 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 <span class="help-block with-errors"></span>
@@ -190,11 +190,11 @@ Unit1904 19Floor CJ BUILDING(旧GEMADEPT TOWER), 6 Le Thanh Ton, District1,HCMC,
 <script src="js/functions.js"></script>
 <script type="text/javascript" src="js/jquery.simplr.smoothscroll.stellar.min.js"></script>
 <script>
-jQuery(function($) {	
+jQuery(function($) {
 	$.srSmoothscroll({ease: 'easeOutQuart'});
 	$(window).load(function(){
 	  $.stellar({responsive: true,horizontalScrolling: false});
-	});	
+	});
 });
 </script>
 <script src="js/validator.min.js"></script>
@@ -203,9 +203,9 @@ jQuery(function($) {
 jQuery(document).ready(function() {
 	jQuery('.effect').css('opacity','0').viewportChecker({
 	    classToAdd: 'visible animated fadeInUp',
-	    offset:100    
-	   });   
-});            
+	    offset:100
+	   });
+});
 </script>
 </body>
 </html>

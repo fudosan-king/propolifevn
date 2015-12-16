@@ -38,8 +38,8 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
     <?php } else { ?>
         <title><?php wp_title( '|', true, 'right' ); ?></title>
         <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?>">
-        <meta property="og:description" content="<?php _e( 'ベトナムホーチミン市至近に自社加工工場を持つ日系肉の総合商社ELT VIETNAM公式HPです。食肉業者として業務用お肉の仕入れ向けからご家庭の食卓向けまで、手間なくすぐに使える新鮮なお肉をご提供しております。', 'elt' ); ?>">
-        <meta name="description" content="<?php _e( 'ベトナムホーチミン市至近に自社加工工場を持つ日系肉の総合商社ELT VIETNAM公式HPです。食肉業者として業務用お肉の仕入れ向けからご家庭の食卓向けまで、手間なくすぐに使える新鮮なお肉をご提供しております。', 'elt' ); ?>">
+        <meta property="og:description" content="<?php _e( 'ベトナムホーチミン市至近に自社の加工工場を持つ、肉の総合商社ELT VIETNAM公式HPです。精肉業者として、新鮮なお肉を業務用お肉の仕入れ向けからご家庭の食卓向けまで、手間なくすぐに使える加工をしてご提供しております。', 'elt' ); ?>">
+        <meta name="description" content="<?php _e( 'ベトナムホーチミン市至近に自社の加工工場を持つ、肉の総合商社ELT VIETNAM公式HPです。精肉業者として、新鮮なお肉を業務用お肉の仕入れ向けからご家庭の食卓向けまで、手間なくすぐに使える加工をしてご提供しております。', 'elt' ); ?>">
         <meta name="keywords" content="<?php _e( 'ホーチミン,ベトナム,精肉,和牛,豚肉,輸入,肉商社,肉仕入れ,加工工場,ELTベトナム,ELT VIETNAM', 'elt' ); ?>">
     <?php } ?>
 

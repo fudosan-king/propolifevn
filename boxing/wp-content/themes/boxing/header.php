@@ -38,8 +38,8 @@ $lang = get_bloginfo('language_code');
         <meta name="keywords" content="<?php echo $keywords; ?>">
     <?php } else { ?>
         <?php if ($lang == 'vi'){ ?>
-            <title><?php wp_title( '|', true, 'right' ); ?></title>
-            <meta property="og:title" content="<?php wp_title( '|', true, 'right' ); ?>">
+            <title>KHÁI QUÁT VỀ BOXING | Samurai boxing gym</title>
+            <meta property="og:title" content="KHÁI QUÁT VỀ BOXING | Samurai boxing gym">
             <meta property="og:description" content="“samurai-boxing-gym.vn” là wedsite chính thức của câu lạc bộ quyền anh Samurai đến từ Nhật Bản, có trụ sở tại thành phố Hồ Chí Minh. Nếu bạn đang có dự định bắt đầu thử sức với một môn thể thao nào đó với mục tiêu mong muốn là một thân hình lí tưởng, gọn gàng, săn chắc; hoặc là bạn ước mơ trở thành một võ sĩ quyền anh chuyên nghiệp… Hãy liên hệ với chúng tôi. Tuổi tác, giới tính hoàn toàn không phải là vấn đề đối với môn thể thao quyền anh này. Vì vậy, hãy đừng do dự mà tham gia vào môn thể thao yêu thích của bạn ngay bây giờ nhé!!!">
             <meta name="description" content="“samurai-boxing-gym.vn” là wedsite chính thức của câu lạc bộ quyền anh Samurai đến từ Nhật Bản, có trụ sở tại thành phố Hồ Chí Minh. Nếu bạn đang có dự định bắt đầu thử sức với một môn thể thao nào đó với mục tiêu mong muốn là một thân hình lí tưởng, gọn gàng, săn chắc; hoặc là bạn ước mơ trở thành một võ sĩ quyền anh chuyên nghiệp… Hãy liên hệ với chúng tôi. Tuổi tác, giới tính hoàn toàn không phải là vấn đề đối với môn thể thao quyền anh này. Vì vậy, hãy đừng do dự mà tham gia vào môn thể thao yêu thích của bạn ngay bây giờ nhé!!!">
             <meta name="keywords" content="samurai boxing gym, ho chi minh, viet nam, thể hình, thể thao thể hình, fitness, câu lạc bộ fitness">

@@ -54,12 +54,19 @@ $video_contents =  get_field('video_content');
 
 $loop = 0;
 foreach($videos as $video):
+    if ($lang == 'vi'){
+        $title_category = $video['title_category_vn'];
+    } else if ($lang == 'ja') {
+        $title_category = $video['title_category'];
+    } else {
+        $title_category = $video['title_category_en'];
+    }
     echo '
     <div class="container">
     <div class="row top-row">
     <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs">&nbsp;</div>
     <div class="col-lg-6 col-sm-6 col-xs-12" align="center">
-    <div class="title" align="center"><h3>' . $video['title_category'] . '</h3></div>
+    <div class="title" align="center"><h3>' . $title_category . '</h3></div>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-4 hidden-xs">&nbsp;</div>
     </div>

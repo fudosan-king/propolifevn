@@ -51,14 +51,18 @@ Mysql:
 www.starmica-r.co.jp
 ======
 
+SSH:
+-       ssh -p 32768 fudosanking@103.9.92.69
+-       PASS: 7ehCsCOj
+-       sudo su
+
+
 Hosting:
-  ssh -p 32768 fudosanking@103.9.92.69
-  PASS: 7ehCsCOj
-  sudo su
+-       103.9.92.69
+-       ID: starmica-r
+-       PW: mica2015
 
-  103.9.92.69
-  ID: starmica-r
-  PW: mica2015
 
-  scp -P 32768 -r fudosanking@103.9.92.69:/var/www/starmica-r.co.jp /home/ec2-user
-  scp -r webapp1.intra.fudosan-king.jp:/home/ec2-user/starmica-r.co.jp ~/Desktop
+Copy:
+-       scp -P 32768 -r fudosanking@103.9.92.69:/var/www/starmica-r.co.jp /home/ec2-user
+-       scp -r webapp1.intra.fudosan-king.jp:/home/ec2-user/starmica-r.co.jp ~/Desktop

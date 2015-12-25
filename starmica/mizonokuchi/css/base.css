@@ -1,0 +1,383 @@
+@charset "UTF-8";
+/* base style
+================================================== */
+ 
+* {
+	margin:0;
+	padding:0;
+}
+html, body {
+	height: 100%;
+}
+body {
+	font-family: "ＭＳ Ｐゴシック", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", Verdana, Osaka, sans-serif;
+	font-size: 80%;
+	color: #333333;
+	line-height: 1.6em;
+	height:100%;
+	padding: 0;
+	margin: 0;
+ 	background: #ffffff;
+}
+
+form textarea {
+	font-size: 100%;
+}
+h1, h2, h3, h4, h5, h6, div, p, pre, ul, ol, dl, dt, dd, address, form, blockquote {
+	padding: 0;
+	margin: 0;
+	font-size: 100%;
+	font-weight: normal;
+	display: block;
+}
+ul, ol, li{
+	list-style-type: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+hr {
+	display: none;
+}
+img {
+	border: 0;
+	vertical-align:bottom;
+}
+a {
+	color: #2d2828;
+	text-decoration: none;
+	overflow:hidden;
+}
+a:hover {
+	color: #2d2828;
+	text-decoration:underline;
+}
+/* 
+==================================================
+header
+==================================================
+ */
+#header {
+	width:100%;
+}
+#header .clear-box {
+	width:980px;
+	overflow:hidden;
+	margin:0 auto;
+}
+#header .clear-box .left {
+	float:left;
+	padding:5px 0 0px 0;
+}
+#header .clear-box .right {
+	width:238px;
+	float:right;
+	padding:10px 0 10px 0;
+}
+#header .clear-box .right #mini-navi {
+}
+#header .clear-box .right #mini-navi li {
+	display:inline;
+}
+#header .clear-box .right #mini-navi li a {
+	float:left;
+	display:block;
+	padding-left:0px;
+}
+
+/* 
+==================================================
+header2
+==================================================
+ */
+#header2 {
+	width:700px;
+	margin:10px auto 30px auto;
+}
+#header2  h1 {
+	padding:5px 0 10px 0;
+}
+
+
+/* 
+==================================================
+globalnavi
+==================================================
+ */
+#globalnavi {
+	padding-top:5.8em;
+}
+#globalnavi ul {
+	width:100%;
+	overflow:hidden;
+}
+#globalnavi li {
+	float:left;
+}
+/* 
+==================================================
+globalnavi-kasou
+==================================================
+ */
+#globalnavi-s {
+	padding-top:5.8em;
+}
+#globalnavis ul {
+	width:100%;
+	overflow:hidden;
+}
+#globalnavi-s li {
+	float:left;
+}
+/* 
+==================================================
+wrapper
+==================================================
+ */
+#wrapper {
+	margin:0px auto;
+	width:980px;
+ 	background: #ffffff;
+}
+/* 
+==================================================
+bread-crumb
+==================================================
+ */
+#bread-crumb {
+	margin:12px 0 5px 15px;
+	overflow:hidden;
+	text-align:left;
+}
+#bread-crumb li.arrow {
+	background-image:url(../img/bread-crumb.gif);
+	background-repeat:no-repeat;
+	background-position:5px 0.1em;
+	padding-left:20px;
+}
+#bread-crumb li {
+	color:#707070;
+	display:inline;
+	font-size:85%;
+}
+#bread-crumb li a {
+	color:#707070;
+	text-decoration:underline;
+}
+/* 
+==================================================
+top-main-area
+==================================================
+ */
+#top-main-area {
+	margin:0px auto 0 auto;
+	overflow:hidden;
+	text-align:center;
+
+}
+#top-main-area h2 {
+	width:980px;
+	height:460px;
+	margin:0px auto 0 auto;
+	overflow:hidden;
+	text-align:center;
+
+}
+/* 
+==================================================
+container
+==================================================
+ */
+#container {
+	width:980px;
+	overflow:hidden;
+}
+
+
+/* 
+==================================================
+content
+==================================================
+ */
+#content {
+	width:660px;
+	float:left;
+}
+
+
+
+/* 
+==================================================
+page-top
+==================================================
+ */
+#page-top {
+	text-align:right;
+	padding:15px 10px 15px 0;
+}
+/* 
+==================================================
+footer
+==================================================
+ */
+#footer {
+ 	background: #ffffff;
+}
+
+
+#footer .item2 {
+	margin:0 auto;
+	width:980px;
+	border-top:solid 1px #cccccc;
+}
+#footer .item2 .clear-box {
+	text-align:center;
+	width:980px;
+	margin:0 auto;
+	overflow:hidden;
+	padding:10px 0 10px 0;
+}
+#footer .item2 ul {
+}
+#footer .item2 .copy {
+	text-align:center;
+	font-size:90%;
+	color:#707070;
+}
+#footer .item2 ul li {
+	display:inline;
+	padding-right:10px;
+	padding-left:10px;
+	background-image:url(../img/footer_line.gif);
+	background-position:0 0;
+	background-repeat:no-repeat;
+}
+
+#footer .clear-box li.first {
+	padding-left:0px;
+	background-image:none;
+}
+#footer .item2 ul li a {
+	color:#707070;
+}
+
+#footer .footer-banner {
+	width:980px;
+	text-align:center;
+	padding:5px 0 10px 0;
+	margin:0 auto;
+	overflow:hidden;
+}
+#footer .footer-banner ol li{
+	float:left;
+	padding:0px 0px 0px 0;
+}
+
+.style1{
+	text-align: left;
+	padding-top:10px;
+	padding-bottom:5px;
+	font-size: 14px;
+	color: #2b66af;
+	font-weight: bold;
+}
+.style2 {
+	text-align: left;
+	padding:5px;
+	font-size: 14px;
+	color: #b02e2e;
+}
+.style4 {
+	text-align: left;
+	padding:5px;
+	font-size: 13px;
+	color: #333333;
+}
+.style3 {
+	text-align: center;
+	padding:5px;
+	font-size: 12px;
+	color: #333333;
+}
+.style5 {
+	text-align: left;
+	padding-bottom:5px;
+	font-size: 12px;
+	color: #2b66af;
+	font-weight: bold;
+}
+.style6 {
+	text-align: left;
+	padding-left:0px;
+	font-size: 17px;
+	color: #4583d8;
+	font-weight: bold;
+        line-height:25px;
+}
+.style7 {
+	padding :0 0 5px 0px;
+	font-size: 12px;
+	color: #cf5050;
+	font-weight: bold;
+}
+.style8 {
+	text-align: left;
+	padding-bottom:5px;
+	font-size: 14px;
+	color: #cf5050;
+	font-weight: bold;
+}
+.style9 {
+	text-align: left;
+	padding-bottom:5px;
+	font-size: 16px;
+	color: #cf5050;
+	font-weight: bold;
+        line-height:25px;
+}
+.style10 {
+	text-align: left;
+	padding-left:10px;
+	font-size: 10px;
+        line-height:14px;
+}
+.style10-r {
+	text-align: right;
+	padding:0px;
+        line-height:20px;
+}
+.style11 {
+	text-align: left;
+	font-size: 15px;
+	color: #4583d8;
+	font-weight: bold;
+        line-height:22px;
+}
+.style12 {
+	text-align: left;
+	padding:0px;
+	font-size: 10px;
+        line-height:14px;
+}
+.style7-left {
+	padding :0 0 5px 290px;
+	font-size: 12px;
+	color: #cf5050;
+	font-weight: bold;
+}
+
+.musubi {
+	text-align: right;
+	padding:5px;
+        line-height:22px;
+}
+
+#errmsg {
+	font-size: 10px;
+	text-align: left;
+	color: #cf5050;
+ 	background: #ffffff;
+	padding: 0px;
+}
+

@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+/* 
+==================================================
+content   main-copy
+==================================================
+ */
+#content .main-copy{
+	padding-top:20px;
+}
+#content .main-copy p{
+	padding-top:10px;
+}
+
+/* 
+==================================================
+sub-title
+==================================================
+ */
+#content .sub-title{
+	width:900px;
+	height:44px;
+	background-image:url(../img/subtitle-bg.png);
+	background-repeat:no-repeat;
+	background-position:0 0.2em;
+	padding:17px 0px 0px 0;
+}
+#content .sub-title span{
+	padding:0px 0px 0px 3px;
+	font-size:130%;
+	line-height:100%;
+	font-weight:bold;
+	letter-spacing:0.05em
+}
+
+/* 
+==================================================
+アクセス
+==================================================
+ */
+table.access {
+	width:800px;
+	margin-top:15px;
+	margin-left:15px;
+}
+table.access th{
+	width:60px;
+	background-image:url(../img/base_mark.gif);
+	background-position:0 0.3em;
+	background-repeat:no-repeat;
+	padding:0 0 10px 13px;
+	font-weight:bold;
+	text-align:left;
+}
+table.access td{
+	padding-bottom:10px;
+	font-weight:normal;
+	text-align:left;
+	line-height:160%;
+}
+.map2
+      {　/* Googlemapを使う場合 */
+	text-align: center;
+	width:700px;
+        margin: 5px auto;
+	padding:8px;
+	border:solid 1px #cccccc;
+	background-color:#ffffff;
+      }
+
+.map   {　/* 作成した地図を使う場合 */
+	text-align: center;
+	width:460px;
+        margin: 5px auto;
+	padding:5px;
+	border:solid 1px #cccccc;
+	background-color:#ededed;
+      }
+/* 
+==================================================
+間取り
+==================================================
+ */
+ul.list-yoko{
+	width:900px;
+	overflow:hidden;
+        clear: both;
+	margin:0 auto;
+	padding:20px 0px 0px 0;
+}
+ul.list-yoko li{
+	float:left;
+	padding-right:22px;
+	padding-bottom:40px;
+}
+ul.list-yoko li.fin{
+	float:left;
+}
+
+/* 
+==================================================
+周辺環境
+==================================================
+ */
+.location_01{
+	width:900px;
+	height:480px;
+	background-image:url(../img/page1-img01.png);
+	background-position:0 0em;
+	background-repeat:no-repeat;
+}
+.location_01 p{
+	width:390px;
+	padding:85px 0px 0px 20px;
+}
+.location_02{
+	width:900px;
+	height:450px;
+	background-image:url(../img/page1-img02.png);
+	background-position:0 0em;
+	background-repeat:no-repeat;
+}
+.location_02 p{
+	width:620px;
+	padding:90px 0px 0px 185px;
+}
+.location_02 ul{
+	width:800px;
+	height:70px;
+	margin:0 auto;
+	margin-top:170px;
+	font-weight:bold;
+	font-size:85%;
+	text-align:center;
+
+}
+.location_02 li.shop1{
+	padding:45px 0px 0px 20px;
+	float: left;
+}
+.location_02 li.shop2{
+	padding:10px 0px 0px 85px;
+	float: left;
+}
+.location_02 li.shop3{
+	padding:45px 0px 0px 95px;
+	float: left;
+}
+
+
+
+
+/* 
+==================================================
+content700 小窓
+==================================================
+ */
+#content700 {
+	width:700px;
+	margin:0 auto;
+}
+.bukken700 {
+	width:694px;
+	border: 3px solid #decb55;
+	display:block;
+	margin:0 auto;
+	background-image:url(../img/bukken-bg.png);
+	background-position:left top;
+	background-repeat:repeat;
+}
+.bukken700 .item-title{
+	width:670px;
+	height:60px;
+	margin:0 auto;
+}
+.bukken700 .item-title h5{
+	margin-top:10px;
+}
+.tyuui{
+	font-size:90%;
+}
+
+/* 
+==================================================
+#bukken1　sec1
+==================================================
+ */
+.dai-photowaku{
+	width:670px;
+	margin:0 auto;
+	margin-top:10px;
+}
+.dai-photowaku_shiawase{
+	width:670px;
+	height:600px;
+	margin:0 auto;
+	margin-top:10px;
+	background-image:url(../img/madori_301.png);
+	background-position:center top;
+	background-repeat:no-repeat;
+}
+#bukken.page1 #content .sec2 .image1 {
+	background-image:url(../img/syashin1.jpg);
+	background-position:left top;
+	background-repeat:no-repeat;
+	padding-left:180px;
+}
+
+.mini-photo{
+	width:620px;
+ 	margin-left: 5px;
+ 	margin-top: 15px;
+	padding:0 5px 5px 5px;
+	line-height:16px;
+}
+.mini-photowaku{
+	width:120px;
+	padding:5px;
+	margin-bottom: 5px;
+	margin-right: 3px;
+	border:solid 1px #CCCCCC;
+	background:#FFF;
+}
+
+div.sec2 .bukken700 .bukken{
+	width:665px;
+	padding:7px 0 7px 10px;
+	margin:20px 5px 10px 10px;
+	background-color:#decb55;
+}
+
+
+/* 
+==================================================
+content一棟
+==================================================
+ */
+#content .title {
+	margin-top: 30px;
+}
+#content .itou-setumei {
+	margin-top: 20px;
+	margin-bottom: 10px;
+	line-height:180%;
+}
+
+#content .setumei {
+	width:200px;
+ 	margin:0;
+	text-align: left;
+	padding:5px 20px 0px 0px;
+	font-size:10px;
+	line-height:16px;
+	vertical-align:top;
+}

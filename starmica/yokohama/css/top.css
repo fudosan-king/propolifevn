@@ -1,0 +1,129 @@
+@charset "UTF-8";
+
+/* 
+==================================================
+wrapper
+==================================================
+ */
+#top #wrapper {
+
+}
+
+#mainImg {
+    margin: 0 auto;
+    width: 100%;
+    height: 486px;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+}
+ 
+#mainImg img {
+top: 0;
+left:50%;
+margin-left:-650px;
+position: absolute;
+}
+/* 
+==================================================
+sec1
+==================================================
+ */
+#top #content .sec1 h4 {
+padding:13px 0px 20px 0;
+}
+/* 
+==================================================
+#container content-info
+==================================================
+ */
+#container .content-info{
+	width:100%;
+	background-color:#2d2d2d;
+}
+#container .infoarea{
+	width:900px;
+	height:90px;
+	margin:0 auto;
+}
+
+
+/* 
+==================================================
+ニュース
+==================================================
+ */
+#top #content .sec1 .news dl {
+	margin:0 5px;
+}
+#top #content .sec1 .news dl dt {
+	float:left;
+	width:5.5em;
+	padding: 0px 0px 0px 12px;
+	background-image:url(../img/icon-arrow.png);
+	background-repeat:no-repeat;
+	background-position:0 5px;
+}
+#top #content .sec1 .news dl dt.first {
+	border-top:none;
+	background-image:url(../img/icon-arrow.png);
+	background-repeat:no-repeat;
+}
+#top #content .sec1 .news dl dt span {
+	font-size: 12px;
+	font-weight: bold;
+	color: #525252;
+}
+#top #content .sec1 .news dl dd {
+	margin-left:5.5em;
+	padding: 3px 0 0 25px;
+}
+#top #content .sec1 .news dl dd.first {
+	padding: 0px 0 0 25px;
+}
+#top #content .sec1 .news dl dd div {
+	margin-left:10px;
+}
+* html #top #content .sec1 .news dl dd div {
+	display:inline-block;
+}
+
+#top #content .sec1 .news dl dd div a {
+	text-align: left;
+	padding:0px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.right-bannar {
+	float: right;
+	padding-top:30px;
+}
+
+
+
+/* 
+==================================================
+バナー
+==================================================
+ */
+div.content-banner{
+	width:900px;
+	margin:0 auto;
+}
+div.content-banner ul{
+	padding:0px;
+	margin-bottom:20px;
+}
+div.content-banner li{
+	float:left;
+	padding-right: 8px;
+	margin-bottom:20px;
+}
+div.content-banner li.tail{
+	float:left;
+	padding: 0px;
+	margin-bottom:20px;
+}
+
+

@@ -1,0 +1,336 @@
+@charset "UTF-8";
+
+ 
+/* 
+==================================================
+wrapper
+==================================================
+ */
+#top #wrapper {
+	background-color:#ffffff;
+}
+
+
+/* 
+==================================================
+sec1
+==================================================
+ */
+#top #content .sec1 h4 {
+padding:0px 0px 20px 0;
+}
+/* 
+==================================================
+#container content-info
+==================================================
+ */
+#container .content-info{
+	width:900px;
+	padding-bottom:30px;
+	margin:0 auto;
+}
+.content-info ul {
+	width:900px;
+	overflow:hidden;
+	margin:0 auto;
+}
+.content-info li {
+	float:left;
+}
+/* 
+==================================================
+sec2
+==================================================
+ */
+#top #content .sec2 ul {
+overflow:hidden;
+}
+#top #content .sec2 li.item1 {
+float:left;
+}
+#top #content .sec2 li.item2 {
+float:right;
+}
+
+
+/* 
+==================================================
+物件情報
+==================================================
+ */
+.sec1 .image1 {
+	background-image:url(../img/investment_image1.jpg);
+	background-position:right top;
+	background-repeat:no-repeat;
+	padding-right:240px;
+}
+
+div#bukken-top {
+	width:630px;
+	padding:0px;
+ 	margin-bottom: 20px;
+ 	text-align: left;
+	background-color:#ffffff;
+	border:solid 8px #4f89d0;
+}
+div#bukken-top-right .left {
+	width:200px;
+	float:left;
+ 	margin-left: 0px;
+	padding-top:25px;
+}
+div#bukken-top-right .right {
+	width:87px;
+	float:right;
+ 	padding-right: 10px;
+ 	padding-top: 5px;
+	text-align: right;
+}
+
+div#bukken-top-right .mijikai{
+	width:180px;
+	font-size:13px;
+	display:block;
+	position:relative;
+ 	margin-left: 20px;
+	padding-left:12px;
+	padding-right:5px;
+	padding-bottom:3px;
+	line-height:24px;
+	border-bottom:solid 1px #CCCCCC;
+	background:url(../img/base_title_item.gif) 0 0.4em no-repeat;
+}
+
+
+.clearbox {
+ clear:both;
+ margin: 0px;
+}
+
+div#bukken-top-left {
+	width:300px;
+	float:left;
+ 	margin-left: 0px;
+	padding:0px;
+
+}
+div#bukken-top-left div#photo{
+	width:100px;
+ 	margin-left: 10px;
+ 	margin-top: 7px;
+	margin-bottom: 5px;
+	padding:5px;
+	border:solid 1px #CCCCCC;
+}
+.bukkenmei{
+	width:268px;
+ 	margin-left: 10px;
+ 	margin-top: 7px;
+	padding:5px;
+	border:solid 1px #CCCCCC;
+	background:url(../img/bukkenmei-b.gif);
+
+}
+div#bukken-top-left a{
+	color:#FFFFFF;
+	font-weight: bold;
+	font-size:13px;
+	text-decoration:underline;
+}
+
+
+.rimawari{
+	width:150px;
+	height:80px;
+ 	margin-left: 5px;
+ 	margin-top: 7px;
+	margin-bottom: 3px;
+	padding:5px;
+	background-color:#cccccc;
+	border:solid 1px #b6b2b2;
+	font-weight: bold;
+	font-size:13px;
+}
+.rimawari-100{
+	width:150px;
+	height:100px;
+ 	margin-left: 5px;
+ 	margin-top: 7px;
+	margin-bottom: 3px;
+	padding:5px;
+	background-color:#cccccc;
+	border:solid 1px #b6b2b2;
+	font-weight: bold;
+	font-size:13px;
+}
+div#bukken-top-right {
+	width:330px;
+	float:right;
+}
+
+div#bukken-top-right h2{
+	font-size:16px;
+	color: #FF6600;
+ 	margin-bottom: 10px;
+	padding:5px 0px 3px 5px;
+
+}
+
+div#bukken-top-right ul{
+	display:block;
+	position:relative;
+	padding-top:0px;
+}
+
+div#bukken-top-right li{
+	width:280px;
+	font-size:13px;
+	display:block;
+	position:relative;
+ 	margin-left: 20px;
+	padding-left:12px;
+	padding-right:5px;
+	padding-bottom:3px;
+	line-height:24px;
+	border-bottom:solid 1px #CCCCCC;
+	background:url(../img/base_title_item.gif) 0 0.4em no-repeat;
+}
+
+#container h4.sub-title3 {
+	width:650px;
+	height:28px;
+	padding-top:7px;
+	background-image:url(../img/base_title_sub.gif);
+	background-repeat:no-repeat;
+	display:block;
+	margin-bottom:15px;
+}
+#container h4.sub-title3 span {
+	padding-left:17px;
+	font-size:110%;
+	font-weight:bold;
+	color: #cf5050;
+}
+
+div#bukkenclearbox {
+ clear:both;
+ margin: 0px;
+}
+
+.komento {
+	width:280px;
+ 	margin-top: 5px;
+	text-align: left;
+	padding-bottom:5px;
+	padding-left:15px;
+	font-size: 12px;
+	color: #cf5050;
+	font-weight: bold;
+	line-height:18px;
+}
+.aikon {
+	width:300px;
+	text-align:right;
+	padding-top:10px;
+	padding-bottom:5px;
+	padding-left:15px;
+	font-size: 12px;
+	color: #cf5050;
+	font-weight: bold;
+}
+
+/* 
+==================================================
+content-top-banner
+==================================================
+ */
+#content-top-banner ul {
+	width:900px;
+	margin-bottom:5px;
+	overflow:hidden;
+	clear:both;
+}
+#content-top-banner ul li{
+	width:310px;
+        height:120px;
+	padding:0 10px;
+	float:left;
+}
+#content-top-banner ul li.content-top-banner-1 {
+	background-image:url(../img/banner-1.gif);
+	background-repeat:no-repeat;
+}
+#content-top-banner ul li.content-top-banner-2 {
+	background-image:url(../img/banner-2.gif);
+	background-repeat:no-repeat;
+}
+#content-top-banner .setumei{
+	text-align: left;
+	padding:90px 5px 5px 10px;
+}
+#content-top-banner .setumei a {;
+	font-size: 12px;
+	color: #333333;
+	font-weight: bold;
+}
+/* 
+==================================================
+インフォメーション
+==================================================
+ */
+#top #content .sec1 .news {
+	width:620px;
+	border:solid 1px #ffffff;
+	padding:5px;
+	margin-top:20px;
+	text-align:left;
+}
+
+#top #content .sec1 .news dl {
+	border-bottom:1px dotted #cccccc;
+	margin:0 10px;
+}
+#top #content .sec1 .news dl dt {
+	float:left;
+	width:5.5em;
+	border-top:1px dotted #cccccc;
+	padding-top:7px;
+	padding-left:11px;
+	background-image:url(../img/base_arrow1.gif);
+	background-repeat:no-repeat;
+	background-position:0 13px;
+}
+#top #content .sec1 .news dl dt.first {
+	border-top:none;
+}
+#top #content .sec1 .news dl dt span {
+}
+#top #content .sec1 .news dl dd {
+	margin-left:5.5em;
+	padding-top:7px;
+	padding-bottom:7px;
+	padding-right:7px;
+	border-top:1px dotted #cccccc;
+}
+#top #content .sec1 .news dl dd.first {
+	border-top:none;
+}
+#top #content .sec1 .news dl dd div {
+	padding-left:10px;
+	margin-left:10px;
+}
+* html #top #content .sec1 .news dl dd div {
+	display:inline-block;
+}
+
+#top #content .sec1 .news dl dd div a {
+	text-align: left;
+	padding:0px;
+	font-size: 15px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+#top #content .sec1 .news .news-bottom-box{
+	padding-top:20px;
+}

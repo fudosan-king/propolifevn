@@ -1,0 +1,181 @@
+@charset "UTF-8";
+/* 
+==================================================
+title-area
+==================================================
+ */
+#header #title-areatop {
+	width:980px;
+	margin:0 auto;
+	position:relative;
+}
+#title-areatop h2{
+	background-color:#000000;
+	padding:0px;
+}
+#wrapper #title-area {
+	width:980px;
+	height:115px;
+	margin:0 auto;
+	margin-bottom:0px;
+	background-image:url(../img/kasou-main.jpg);
+	background-repeat:no-repeat;
+	display:block;
+}
+#title-area h2{
+	background-color:#efefef;
+	padding:0px;
+}
+#title-area980 h2{
+	background-color:#efefef;
+	padding:0px;
+
+}
+#wrapper #title-area980 {
+	width:980px;
+	margin:0 auto;
+	margin-bottom:0px;
+}
+#content h3.main-title {
+	width:650px;
+	height:92px;
+	background-image:url(../img/base_title_main.gif);
+	background-repeat:no-repeat;
+	display:block;
+	margin-bottom:15px;
+}
+#content h3.main-title span {
+	padding-left:24px;
+	font-size:140%;
+	font-weight:bold;
+	color:#FFFFFF;
+	padding-top:18px;
+	display:block;
+}
+#content h4.sub-title {
+	width:650px;
+	height:28px;
+	padding-top:7px;
+	background-image:url(../img/base_title_sub.gif);
+	background-repeat:no-repeat;
+	display:block;
+	margin-bottom:15px;
+}
+#content h4.sub-title span {
+	padding-left:17px;
+	font-size:110%;
+	font-weight:bold;
+}
+#content .item-title {
+	background-image:url(../img/base_title_item_border.gif);
+	background-position:left bottom;
+	background-repeat:no-repeat;
+	padding-bottom:5px;
+	margin-bottom:7px;
+}
+#content .item-title h5 {
+	background-image:url(../img/base_title_item.gif);
+	background-position:0 0.3em;
+	background-repeat:no-repeat;
+	padding:0 0 0 18px;
+	font-weight:bold;
+	color:#3b2807;
+}
+#content .midashi h6 {
+
+	background-position:0 0.3em;
+	background-repeat:no-repeat;
+	padding:10px 0 5px 0px;
+	font-weight:bold;
+	color:#3a75be;
+}
+#content .midashi h7 {
+	background-position:0 0.3em;
+	background-repeat:no-repeat;
+	padding:10px 0 5px 0px;
+	font-weight:bold;
+	color:#3a75be;
+}
+
+/* 
+==================================================
+link
+==================================================
+ */
+.link {
+	background-image:url(../img/base_arrow2.gif);
+	background-repeat:no-repeat;
+	background-position:0 0.3em;
+	padding:0 0 0 20px;
+}
+/* 
+==================================================
+.indent-area
+==================================================
+ */
+#content .indent-area {
+	padding-left:15px;
+}
+
+/* 
+==================================================
+スペース
+==================================================
+ */
+.bottom-15 {
+	padding-bottom:15px;
+	overflow:hidden;
+        clear: both;
+}
+.bottom-20 {
+	padding-bottom:20px;
+	overflow:hidden;
+        clear: both;
+}
+.bottom-30 {
+	padding-bottom:30px;
+	overflow:hidden;
+        clear: both;
+}
+.top-5 {
+	padding-top:5px;
+	overflow:hidden;
+        clear: both;
+}
+
+.top-10 {
+	padding-top:10px;
+	overflow:hidden;
+        clear: both;
+}
+.top-15 {
+	padding-top:15px;
+	overflow:hidden;
+        clear: both;
+}
+.top-20 {
+	padding-top:20px;
+	overflow:hidden;
+        clear: both;
+}
+.top-30 {
+	padding-top:30px;
+	overflow:hidden;
+        clear: both;
+}
+.top-40 {
+	padding-top:30px;
+	overflow:hidden;
+        clear: both;
+}
+.left-20 {
+	padding-left:20px;
+	padding-bottom:20px;
+	overflow:hidden;
+        clear: both;
+}
+.left-80 {
+	padding-left:80px;
+	overflow:hidden;
+        clear: both;
+}

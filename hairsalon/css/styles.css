@@ -39,10 +39,10 @@ abbr[title], abbr[data-original-title]{border:none}
 .mobile-number abbr{font-size:35px;line-height:35px;color:#c22889;text-decoration:none}
 .datetime{font-size:14px;}
 ul,li{list-style:none;padding:0;margin:0}
-p.excerpt{display:-webkit-box;margin: 0 auto;-webkit-line-clamp:3;-webkit-box-orient: vertical;overflow: hidden;text-overflow: ellipsis;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
-box-sizing: border-box;}
-label{font-weight:normal}
-.bg-default{background-color:#fff}
+p.excerpt{display:-webkit-box;margin: 0 auto;-webkit-line-clamp:3;-webkit-box-orient: vertical;overflow: hidden;text-overflow:clip ellipsis;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;
+box-sizing: border-box;height:55px;-o-text-overflow: ellipsis;white-space:pre-line;-moz-binding: url(<q>../assets/ellipsis.xml#ellipsis<q>);}
+.line-clamp:after {background: linear-gradient(to right, rgba(255, 255, 255, 0), #FFFFFF 50%) repeat scroll 0 0 rgba(255, 255, 255, 0);bottom: 0;content: "...";font-weight: bold;padding: 0 20px 1px 45px;position: absolute;right: 0;}
+.line-clamp {height:50px;line-height: 1.4em;overflow: hidden;position: relative;}label{font-weight:normal}.bg-default{background-color:#fff}
 /*----------Jssor Slider-------------*/
 .slider-shadow{border-bottom: solid 4px #ffffff;}
 .slider-caption{position: absolute; width:600px;bottom:25px; left:650px; padding:10px;text-align: center; line-height:36px; text-transform: uppercase; font-size:24px;color: #FFFFFF;background-color:#000000}
@@ -137,7 +137,7 @@ label{font-weight:normal}
 .heading{line-height: 55px;color: #EC3994;text-align: center;font-family: 'Mr De Haviland', cursive;font-size: 50px;margin-top:30px;}
 .blockrecomen{display:block;content:"";background:url(../images/bg_hair.jpg) center 0 no-repeat;color:#FFFFFF;padding-top:30px;margin-bottom:20px;padding-bottom:20px}
 .blockrecomen h4{color:#c22889}
-.blockrecomen p{text-overflow:ellipsis;overflow:hidden;-webkit-line-clamp:3;display:-webkit-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;-webkit-box-orient: vertical;}
+.blockrecomen p{text-overflow:ellipsis;overflow:hidden;-webkit-line-clamp:3;display:-webkit-box;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;-webkit-box-orient: vertical;height:38px;}
 .thumbnail {border: 1px solid #FFF;box-shadow: 2px 2px 2px #CBCBCB;padding:15px;}
 .topics,.menu-service,.staffcomment{margin-bottom:15px;border-radius:4px;box-shadow: 2px 2px 2px #CBCBCB;}
 .menu-service,.staffcomment{background:#fff;}

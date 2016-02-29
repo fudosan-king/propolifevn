@@ -18,81 +18,91 @@ abstract class Lingotek_Actions {
 	 */
 	public function __construct($type) {
 		// confirm message
-		self::$confirm_message = sprintf(' onclick = "return confirm(\'%s\');"', __('You are about to overwrite existing translations. Are you sure?', 'wp-lingotek'));
+		self::$confirm_message = sprintf(' onclick = "return confirm(\'%s\');"', __('You are about to overwrite existing translations. Are you sure?', 'lingotek-translation'));
 
 		// row actions
 		self::$actions = array(
 			'upload'   => array(
-				'action'      => __('Upload to Lingotek', 'wp-lingotek'),
-				'progress'    => __('Uploading...', 'wp-lingotek'),
-				'description' => __('Upload this item to Lingotek TMS', 'wp-lingotek' ),
+				'action'      => __('Upload to Lingotek', 'lingotek-translation'),
+				'progress'    => __('Uploading...', 'lingotek-translation'),
+				'description' => __('Upload this item to Lingotek TMS', 'lingotek-translation' ),
 			),
 
 			'request'  => array(
-				'action'      => __('Request translations', 'wp-lingotek'),
-				'progress'    => __('Requesting translations...', 'wp-lingotek'),
-				'description' => __('Request translations of this item to Lingotek TMS', 'wp-lingotek' ),
+				'action'      => __('Request translations', 'lingotek-translation'),
+				'progress'    => __('Requesting translations...', 'lingotek-translation'),
+				'description' => __('Request translations of this item to Lingotek TMS', 'lingotek-translation' ),
 			),
 
 			'status'   => array(
-				'action'      => __('Update translations status', 'wp-lingotek'),
-				'progress'    => __('Updating translations status...', 'wp-lingotek'),
-				'description' => __('Update translations status of this item in Lingotek TMS', 'wp-lingotek' ),
+				'action'      => __('Update translations status', 'lingotek-translation'),
+				'progress'    => __('Updating translations status...', 'lingotek-translation'),
+				'description' => __('Update translations status of this item in Lingotek TMS', 'lingotek-translation' ),
 			),
 
 			'download' => array(
-				'action'      => __('Download translations', 'wp-lingotek'),
-				'progress'    => __('Downloading translations...', 'wp-lingotek'),
-				'description' => __('Download translations of this item from Lingotek TMS', 'wp-lingotek' ),
+				'action'      => __('Download translations', 'lingotek-translation'),
+				'progress'    => __('Downloading translations...', 'lingotek-translation'),
+				'description' => __('Download translations of this item from Lingotek TMS', 'lingotek-translation' ),
 			),
 
 			'delete' => array(
-				'action'      => __('Disassociate translations', 'wp-lingotek'),
-				'progress'    => __('Disassociating translations...', 'wp-lingotek'),
-				'description' => __('Disassociate the translations of this item from Lingotek TMS', 'wp-lingotek' ),
+				'action'      => __('Disassociate translations', 'lingotek-translation'),
+				'progress'    => __('Disassociating translations...', 'lingotek-translation'),
+				'description' => __('Disassociate the translations of this item from Lingotek TMS', 'lingotek-translation' ),
 			),
 		);
 
 		// action icons
 		self::$icons = array(
 			'upload' => array(
-				'title' => __('Upload Now', 'wp-lingotek'),
+				'title' => __('Upload Now', 'lingotek-translation'),
 				'icon'  => 'upload'
 			),
 
 			'importing' => array(
-				'title' => __('Importing source', 'wp-lingotek'),
+				'title' => __('Importing source', 'lingotek-translation'),
 				'icon'  => 'clock'
 			),
 
 			'uploaded' => array(
-				'title' => __('Source uploaded', 'wp-lingotek'),
+				'title' => __('Source uploaded', 'lingotek-translation'),
 				'icon'  => 'yes'
 			),
 
 			'request' => array(
-				'title' => __('Request a translation', 'wp-lingotek'),
+				'title' => __('Request a translation', 'lingotek-translation'),
 				'icon'  => 'plus'
 			),
 
 			'pending' => array(
-				'title' => __('In Progress', 'wp-lingotek'),
+				'title' => __('In Progress', 'lingotek-translation'),
 				'icon'  => 'clock'
 			),
 
 			'ready' => array(
-				'title' => __('Ready to download', 'wp-lingotek'),
+				'title' => __('Ready to download', 'lingotek-translation'),
 				'icon'  => 'download'
 			),
 
 			'current' => array(
-				'title' => __('Current', 'wp-lingotek'),
+				'title' => __('Current', 'lingotek-translation'),
 				'icon'  => 'edit'
 			),
 
 			'not-current' => array(
-				'title' => __('The target translation is no longer current as the source content has been updated', 'wp-lingotek'),
+				'title' => __('The target translation is no longer current as the source content has been updated', 'lingotek-translation'),
 				'icon'  => 'edit'
+			),
+
+			'error' => array(
+				'title' => __('There was an error contacting Lingotek', 'lingotek-translation'),
+				'icon'  => 'warning'
+			),
+
+			'copy' => array(
+				'title' => __('Copy source language', 'lingotek-translation'),
+				'icon'  => 'welcome-add-page'
 			),
 		);
 
@@ -182,6 +192,19 @@ abstract class Lingotek_Actions {
 	}
 
 	/*
+	 * outputs an API error icon
+	 *
+	 * @since 1.2
+	 *
+	 * @param string $name
+	 * @param string $additional parameters to add (js, target)
+	 */
+	public static function display_error_icon($name, $api_error, $additional = '') {
+		return sprintf('<span class="lingotek-error dashicons dashicons-%s" title="%s"></span>',
+			self::$icons[$name]['icon'], self::$icons[$name]['title'] . "\n" . $api_error, $additional);
+	}
+
+	/*
 	 * outputs an upload icon
 	 *
 	 * @since 0.2
@@ -193,6 +216,20 @@ abstract class Lingotek_Actions {
 		$args = array($this->type => $object_id, 'action' => 'lingotek-upload', 'noheader' => true);
 		$link = wp_nonce_url(defined('DOING_AJAX') && DOING_AJAX ? add_query_arg($args, wp_get_referer()) : add_query_arg($args), 'lingotek-upload');
 		return self::display_icon('upload', $link, $confirm ? self::$confirm_message : '');
+	}
+
+	/*
+	 * outputs a copy icon
+	 *
+	 *
+	 * @param int|string $object_id
+	 * @param string $target
+	 * @param bool $warning
+	 */
+	public function copy_icon($object_id, $target, $confirm = false) {
+		$args = array($this->type => $object_id, 'target' => $target, 'action' => 'lingotek-copy', 'noheader' => true);
+		$link = wp_nonce_url(defined('DOING_AJAX') && DOING_AJAX ? add_query_arg($args, wp_get_referer()) : add_query_arg($args), 'lingotek-copy');
+		return self::display_icon('copy', $link, $confirm ? self::$confirm_message : '');
 	}
 
 	/*
@@ -221,6 +258,9 @@ abstract class Lingotek_Actions {
 			if ('ready' == $document->translations[$language->locale]) {
 				$link = wp_nonce_url(add_query_arg(array('document_id' => $document->document_id, 'locale' => $language->locale, 'action' => 'lingotek-download', 'noheader' => true)), 'lingotek-download');
 				return self::display_icon($document->translations[$language->locale], $link);
+			}
+			else if ('not-current' == $document->translations[$language->locale]) {
+				return  '<div class="lingotek-color dashicons dashicons-no"></div>';
 			}
 			else {
 				$link = self::workbench_link($document->document_id, $language->lingotek_locale);
@@ -272,9 +312,24 @@ abstract class Lingotek_Actions {
 			return $actions;
 
 		$document = $this->lgtm->get_group($this->type, $id);
+		if ($this->type != 'string' && isset($document->desc_array['lingotek']['source'])) {
+			$id = $document->desc_array['lingotek']['source'];
+		}
 
 		if ($this->lgtm->can_upload($this->type, $id) || (isset($document->source) && 'string' != $this->type && $this->lgtm->can_upload($this->type, $document->source))) {
-			$actions['lingotek-upload'] = $this->get_action_link(array($this->type => $id, 'action' => 'upload'));
+			if ($document) {
+				$desc_array = $document->desc_array;
+				unset($desc_array['lingotek']);
+				if (count($desc_array) >= 2) {
+					$actions['lingotek-upload'] = $this->get_action_link(array($this->type => $id, 'action' => 'upload'), true);
+				}
+				else {
+					$actions['lingotek-upload'] = $this->get_action_link(array($this->type => $id, 'action' => 'upload'));
+				}
+			}
+			else {
+				$actions['lingotek-upload'] = $this->get_action_link(array($this->type => $id, 'action' => 'upload'));
+			}
 		}
 
 		elseif (isset($document->translations)) {
@@ -291,8 +346,14 @@ abstract class Lingotek_Actions {
 
 			// remove disabled target language from untranslated languages list
 			foreach ($untranslated as $k => $v) {
-				if ($document->is_disabled_target($this->pllm->get_language($k)))
+				if ($this->type == 'term') {
+					if ($document->is_disabled_target($language, $this->pllm->get_language($k)))
 					unset($untranslated[$k]);
+				}
+				else {
+					if ($document->is_disabled_target($language, $this->pllm->get_language($k)))
+					unset($untranslated[$k]);
+				}
 			}
 
 			if ('current' == $document->status && !empty($untranslated))
@@ -351,7 +412,7 @@ abstract class Lingotek_Actions {
 					'taxonomy' => empty($_GET['taxonomy']) || !taxonomy_exists($_GET['taxonomy']) ? '' : $_GET['taxonomy'],
 					'sendback' => remove_query_arg( array('bulk-lingotek-' . $action, 'ids', 'lingotek_warning'), wp_get_referer() ),
 					'ids'      => array_map('intval', explode(',', $_GET['ids'])),
-					'warning'  => empty($_GET['lingotek_warning']) ? '' : __('You are about to overwrite existing translations. Are you sure?', 'wp-lingotek'),
+					'warning'  => empty($_GET['lingotek_warning']) ? '' : __('You are about to overwrite existing translations. Are you sure?', 'lingotek-translation'),
 					'nonce'    => wp_create_nonce('lingotek_progress')
 				));
 				return;
@@ -391,6 +452,11 @@ abstract class Lingotek_Actions {
 			case 'lingotek-delete':
 				check_admin_referer('lingotek-delete');
 				$document->disassociate();
+				if (isset($_GET['lingotek_redirect']) && $_GET['lingotek_redirect'] == true) {
+					$site_id = get_current_blog_id();
+					wp_redirect(get_site_url($site_id, '/wp-admin/edit.php?post_type=page'));
+					exit();
+				}
 				break;
 
 			default:
@@ -410,8 +476,9 @@ abstract class Lingotek_Actions {
 
 		if ($document = $this->lgtm->get_group($this->type, $_POST['id'])) {
 			foreach ($document->translations as $locale => $status) {
-				if ('pending' == $status || 'ready' == $status)
+				if ('pending' == $status || 'ready' == $status) {
 					$document->create_translation($locale);
+				}
 			}
 		}
 		die();
@@ -424,8 +491,9 @@ abstract class Lingotek_Actions {
 	 */
 	public function ajax_request() {
 		check_ajax_referer('lingotek_progress', '_lingotek_nonce');
-		if ($document = $this->lgtm->get_group($this->type, $_POST['id']))
+		if ($document = $this->lgtm->get_group($this->type, $_POST['id'])) {
 			$document->request_translations();
+		}
 		die();
 	}
 
@@ -450,8 +518,35 @@ abstract class Lingotek_Actions {
 	 */
 	public function ajax_delete() {
 		check_ajax_referer('lingotek_progress', '_lingotek_nonce');
-		if ($document = $this->lgtm->get_group($this->type, $_POST['id']))
-		$document->disassociate();
+		if ($document = $this->lgtm->get_group($this->type, $_POST['id'])) {
+			$document->disassociate();
+		}
 		die();
+	}
+
+	/*
+	 * collects and returns all API errors
+	 *
+	 * @since 1.1
+	 *
+	 * @param string errors
+	 */
+	public static function retrieve_api_error($errors) {
+		$api_error = "\n";
+
+		foreach($errors as $error => $error_message) {
+			if (is_array($error_message)) {
+				if (!empty($error_message)) {
+					foreach ($error_message as $locale => $message) {
+						$api_error = $api_error . $message . "\n";
+					}
+				}
+			}
+			else {
+				$api_error = $api_error . $error_message . "\n";
+			}
+		}
+
+		return $api_error;
 	}
 }

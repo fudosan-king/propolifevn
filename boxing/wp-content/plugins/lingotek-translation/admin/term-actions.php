@@ -32,7 +32,7 @@ class Lingotek_Term_actions extends Lingotek_Actions {
 	 * @return object
 	 */
 	protected function get_language($term_id) {
-		return $this->pllm->get_term_language($term_id);
+		return PLL()->model->term->get_language($term_id);
 	}
 
 	/*
@@ -62,7 +62,7 @@ class Lingotek_Term_actions extends Lingotek_Actions {
 		if ($this->pllm->is_translated_taxonomy($term->taxonomy)) {
 			$actions = $this->_row_actions($actions, $term->term_id);
 
-			$language = $this->pllm->get_term_language($term->term_id);
+			$language = PLL()->model->term->get_language($term->term_id);
 			if (!empty($language)) {
 				$profile = Lingotek_Model::get_profile($term->taxonomy, $language);
 				if ('disabled' == $profile['profile'])
@@ -119,7 +119,7 @@ class Lingotek_Term_actions extends Lingotek_Actions {
 					// the document is already translated so will be overwritten
 					elseif(($document = $this->lgtm->get_group('term', $term_id)) && empty($document->source)) {
 						// take care to upload only one post in a translation group
-						$intersect = array_intersect($term_ids, $this->pllm->get_translations('term', $term_id));
+						$intersect = array_intersect($term_ids, PLL()->model->term->get_translations($term_id));
 						if (empty($intersect)) {
 							$term_ids[] = $term_id;
 							$redirect = add_query_arg('lingotek_warning', 1, $redirect);
@@ -130,7 +130,7 @@ class Lingotek_Term_actions extends Lingotek_Actions {
 				// check if translation is disabled
 				if (!empty($term_ids)) {
 					foreach ($term_ids as $key => $term_id) {
-						$language = $this->pllm->get_term_language($term_id);
+						$language = PLL()->model->term->get_language($term_id);
 						$profile = Lingotek_Model::get_profile($taxnow, $language);
 						if ('disabled' == $profile['profile'])
 							unset($term_ids[$key]);

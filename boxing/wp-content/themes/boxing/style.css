@@ -11,3 +11,13 @@ Version: 0.1
 /*@import url("../twentyfifteen/style.css");*/
 
 @import url("css/boxing.css");
+.aodai-popup{position:fixed;right:0px;top:45%;box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);}
+.aodai-popup a{transition: all .5s linear;-o-transition: all .5s linear;-moz-transition: all .5s linear;-webkit-transition: all .5s linear;;opacity:0.5}
+.aodai-popup a:hover{opacity:100}
+.logo-list{background-color:#ffffff;padding:10px;}
+.news-date{color:#BE0003}
+.inews{background-color:#000000 !important;border-color: #000000 !important;border-radius:0px !important;}
+.list-group-item{border-radius:0px !important;}
+.caption .excerpt{min-height:78px;}
+.caption .excerpt p{text-align:center;margin-top:10px;color:#FFFFFF;white-space: normal;margin-bottom:0px}
+.staffInfo .mask img {width:187px;height:164px;}

@@ -5,7 +5,10 @@ Template Name: GalleryPage
 ?>
 
 <?php
-$lang = get_bloginfo('language_code');
+$lang = $_GET['lang'];
+if (!$lang) {
+    $lang = 'ja';
+}
 $template_directory = str_replace("twentyfifteen", "boxing", get_template_directory_uri());
 
 function add_script_video(){

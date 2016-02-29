@@ -22,7 +22,7 @@ class Lingotek_Admin {
 		// adds the link to the languages panel in the wordpress admin menu
 		add_action('admin_menu', array(&$this, 'add_menus'));
 
-		add_action('load-translation_page_wp-lingotek_manage',  array(&$this, 'load_manage_page'));
+		add_action('load-translation_page_lingotek-translation_manage',  array(&$this, 'load_manage_page'));
 		add_filter('set-screen-option', array($this, 'set_screen_option'), 10, 3);
 
     add_action('wp_ajax_'.$this->ajax_dashboard_language_endpoint, array(&$this->dashboard, 'ajax_language_dashboard'));
@@ -31,44 +31,97 @@ class Lingotek_Admin {
 		add_action('network_admin_menu', array($this, 'add_network_admin_menu'));
 	}
   public function ajax_get_current_status(){
-    global $wpdb;
     $lgtm = &$GLOBALS['wp_lingotek']->model;
+    $pllm = $GLOBALS['polylang']->model;
     $languages = pll_languages_list(array('fields' => 'locale'));
     $object_ids = $_POST['check_ids'];
     if($object_ids === null){
       return;
     }
     $terms = isset($_POST['terms_translations']);
-    $taxonomy = $terms ? 'term'
-        : 'post';
 
     //The main array consists of
     //ids and nonces. Each id has a source language, languages with statuses, and a workbench link
-    $content_metadata = [];
+    $content_metadata = array();
     foreach($object_ids as $object_id) {
       $id = $object_id;
-      $document = $lgtm->get_group($taxonomy, $object_ids[$object_id]);
-      $source_language = $terms ? pll_get_term_language($document->source, 'locale')
-        : pll_get_post_language($document->source, 'locale');
-      $content_metadata[$id]['source'] = $source_language;
-      $content_metadata[$id]['doc_id'] = $document->document_id;
-      $content_metadata[$id][$source_language]['status'] = $document->status;
-      if(is_array($document->translations)){
-        foreach($document->translations as $locale => $translation_status){
-          $content_metadata[$id][$locale]['status'] = $translation_status;
-          $workbench_link = Lingotek_Actions::workbench_link($document->document_id, $locale);
-          $content_metadata[$id][$locale]['workbench_link'] = $workbench_link;
-        }
-      }
+      $type = $terms ? 'term' : 'post';
+		if (isset($_POST['taxonomy'])) {
+			$taxonomy = $_POST['taxonomy'];
+			if (strpos($_POST['taxonomy'], '&')) {
+				$taxonomy = strstr($_POST['taxonomy'], '&', true);
+			}
+		}
+		else {
+			$taxonomy = get_post_type($id);
+		}
+        $content_metadata[$id] = array(
+          'existing_trans' => false,
+          'source' => false,
+          'doc_id' => null,
+          'source_id' => null,
+          'source_status' => null,
+        );
+
+		$document = $lgtm->get_group($type, $object_id);
+		if($document && !isset($document->source) && count($document->desc_array) >= 3) {
+			$content_metadata[$id]['existing_trans'] = true;
+		}
+		if ($document && isset($document->source) && isset($document->document_id) && isset($document->status) && isset($document->translations)) {
+	        if($document->source !== (int) $object_id){
+	          $document = $lgtm->get_group($type, $document->source);
+	        }
+	        $source_id = $document->source !== null ? $document->source : $object_id;
+	        $source_language = $terms ? pll_get_term_language($document->source, 'locale')
+	          : pll_get_post_language($document->source, 'locale');
+	        $existing_translations = $type = 'term' ? PLL()->model->term->get_translations($source_id) : PLL()->model->post->get_translations($source_id);
+
+	        if(count($existing_translations) > 1){
+	          $content_metadata[$id]['existing_trans'] = true;
+	        }
+	        $content_metadata[$id]['source'] = $source_language;
+	        $content_metadata[$id]['doc_id'] = $document->document_id;
+	        $content_metadata[$id]['source_id'] = $document->source;
+	        $content_metadata[$id]['source_status'] = $document->status;
+	        $target_status = $document->status == 'edited' || $document->status == null ? 'edited' : 'current';
+	        $content_metadata[$id][$source_language]['status'] = $document->source == $object_id ? $document->status : $target_status;
+
+	        if(is_array($document->translations)){
+	          foreach($document->translations as $locale => $translation_status) {
+	            $content_metadata[$id][$locale]['status'] = $translation_status;
+	            $workbench_link = Lingotek_Actions::workbench_link($document->document_id, $locale);
+	            $content_metadata[$id][$locale]['workbench_link'] = $workbench_link;
+	          }
+	        }
+
+	        //fills in missing languages, makes life easier for the updater
+		    foreach ($languages as $language) {
+				foreach ($content_metadata as $group => $status) {
+					$language_obj = $pllm->get_language($source_language);
+					$target_lang_obj = $pllm->get_language($language);
+					$profile = Lingotek_Model::get_profile($taxonomy, $language_obj, $group);
+					if ($profile['profile'] != 'disabled' && $status['source'] != false) {
+						if (!isset($status[$language])) {
+							$content_metadata[$group][$language]['status'] = "none";
+							if ($document->is_disabled_target($pllm->get_language($source_language), $pllm->get_language($language)) || (isset($document->desc_array[$target_lang_obj->slug]) && !isset($document->source))) {
+								$content_metadata[$group][$language]['status'] = 'disabled';
+							}
+						}
+					}
+				}
+			}
+		}
+
+		$language = $type == 'post' ? pll_get_post_language($id) : pll_get_term_language($id);
+		$language = $pllm->get_language($language);
+		if ($language) {
+		  $profile = Lingotek_Model::get_profile($taxonomy, $language, $id);
+		  if ($profile['profile'] == 'disabled' && $content_metadata[$id]['source'] == false) {
+		    $content_metadata[$id]['source'] = 'disabled';
+		  }
+		}
     }
-    //fills in missing languages to be able to update all the ones listed on Wordpress
-    foreach($languages as $language){
-      foreach($content_metadata as $group => $status){
-        if(!isset($status[$language])){
-          $content_metadata[$group][$language]['status'] = "none";
-        }
-      }
-    }
+
     //get the nonces associated with the different actions
     $content_metadata['request_nonce'] = $this->lingotek_get_matching_nonce('lingotek-request');
     $content_metadata['download_nonce'] = $this->lingotek_get_matching_nonce('lingotek-download');
@@ -117,12 +170,12 @@ class Lingotek_Admin {
 		// 2 => 1 if loaded in footer
 		// FIXME: check if I can load more scripts in footer
 		$scripts = array(
-			'progress'	=> array(array('edit', 'upload', 'edit-tags', 'translation_page_wp-lingotek_manage', 'translation_page_wp-lingotek_settings'), array('jquery-ui-progressbar', 'jquery-ui-dialog', 'wp-ajax-response'), 1),
+			'progress'	=> array(array('edit', 'upload', 'edit-tags', 'translation_page_lingotek-translation_manage', 'translation_page_lingotek-translation_settings'), array('jquery-ui-progressbar', 'jquery-ui-dialog', 'wp-ajax-response'), 1),
 			'updater'	=> array(array('edit', 'upload', 'edit-tags'), array('jquery-ui-progressbar', 'jquery-ui-dialog', 'wp-ajax-response'), 1),
 		);
 
 		$styles = array(
-			'admin'	=> array(array('edit', 'upload', 'edit-tags', 'translation_page_wp-lingotek_manage', 'translation_page_wp-lingotek_settings'), array('wp-jquery-ui-dialog')),
+			'admin'	=> array(array('edit', 'upload', 'edit-tags', 'translation_page_lingotek-translation_manage', 'translation_page_lingotek-translation_settings'), array('wp-jquery-ui-dialog')),
 		);
 
 		foreach ($scripts as $script => $v)
@@ -143,7 +196,7 @@ class Lingotek_Admin {
 	 * @return array modified list of links
 	 */
 	public function plugin_action_links($links) {
-		array_unshift($links, '<a href="admin.php?page=wp-lingotek">' . __('Settings', 'wp-lingotek') . '</a>');
+		array_unshift($links, '<a href="admin.php?page=lingotek-translation">' . __('Settings', 'lingotek-translation') . '</a>');
 		return $links;
 	}
 
@@ -154,17 +207,17 @@ class Lingotek_Admin {
 	 */
 	public function add_menus() {
 		add_menu_page(
-			$title = __('Translation', 'wp-lingotek'),
+			$title = __('Translation', 'lingotek-translation'),
 			$title,
 			'manage_options',
 			$this->plugin_slug,
 			array($this, 'display_dashboard_page'), 'dashicons-translation'
 		);
 
-		add_submenu_page($this->plugin_slug, __('Translation Dashboard', 'wp-lingotek'), __('Dashboard', 'wp-lingotek'), 'manage_options', $this->plugin_slug, array($this, 'display_dashboard_page'));
-		add_submenu_page($this->plugin_slug, __('Translation Management', 'wp-lingotek'), __('Manage', 'wp-lingotek'), 'manage_options', $this->plugin_slug . '_manage', array($this, 'display_manage_page'));
-		add_submenu_page($this->plugin_slug, __('Translation Settings', 'wp-lingotek'), __('Settings', 'wp-lingotek'), 'manage_options', $this->plugin_slug . '_settings', array($this, 'display_settings_page'));
-		add_submenu_page($this->plugin_slug, __('Lingotek Tutorial', 'wp-lingotek'), __('Tutorial', 'wp-lingotek'), 'manage_options', $this->plugin_slug . '_tutorial', array($this, 'display_tutorial_page'));
+		add_submenu_page($this->plugin_slug, __('Translation Dashboard', 'lingotek-translation'), __('Dashboard', 'lingotek-translation'), 'manage_options', $this->plugin_slug, array($this, 'display_dashboard_page'));
+		add_submenu_page($this->plugin_slug, __('Translation Management', 'lingotek-translation'), __('Manage', 'lingotek-translation'), 'manage_options', $this->plugin_slug . '_manage', array($this, 'display_manage_page'));
+		add_submenu_page($this->plugin_slug, __('Translation Settings', 'lingotek-translation'), __('Settings', 'lingotek-translation'), 'manage_options', $this->plugin_slug . '_settings', array($this, 'display_settings_page'));
+		add_submenu_page($this->plugin_slug, __('Lingotek Tutorial', 'lingotek-translation'), __('Tutorial', 'lingotek-translation'), 'manage_options', $this->plugin_slug . '_tutorial', array($this, 'display_tutorial_page'));
 	}
 
 	/*
@@ -188,29 +241,29 @@ class Lingotek_Admin {
 			$token_details = $client->get_token_details($_GET['access_token']);
 			if ($token_details && strlen($token_details->login_id)) {
 				update_option('lingotek_token', array('access_token' => $_GET['access_token'], 'login_id' => $token_details->login_id));
-				add_settings_error( 'lingotek_token', 'account-connection', __('Your Lingotek account has been successfully connected.', 'wp-lingotek'), 'updated' );
+				add_settings_error( 'lingotek_token', 'account-connection', __('Your Lingotek account has been successfully connected.', 'lingotek-translation'), 'updated' );
 			}
 			else {
-				add_settings_error('lingotek_token', 'account-connection', __('Your Lingotek account was not connected.	The Access Token received was invalid.', 'wp-lingotek'), 'error');
+				add_settings_error('lingotek_token', 'account-connection', __('Your Lingotek account was not connected.	The Access Token received was invalid.', 'lingotek-translation'), 'error');
 			}
 		}
 
 		// set page key primarily used for form submissions
 		$page_key = $this->plugin_slug.'_settings';
 		if(isset($_GET['sm'])){
-			$page_key .= '&sm='.$_GET['sm'];
+			$page_key .= '&sm='.sanitize_text_field($_GET['sm']);
 		}
 
 		// set community
 		if (!empty($_POST) && key_exists('lingotek_community', $_POST) && strlen($_POST['lingotek_community'])) {
 			check_admin_referer($page_key, '_wpnonce_' . $page_key);
 			update_option('lingotek_community', $_POST['lingotek_community']);
-			add_settings_error('lingotek_community', 'update', __('Your community has been successfully saved.', 'wp-lingotek'), 'updated');
+			add_settings_error('lingotek_community', 'update', __('Your community has been successfully saved.', 'lingotek-translation'), 'updated');
 			$this->set_community_resources($_POST['lingotek_community']);
 		}
 		$community_id = get_option('lingotek_community');
 		if (!$community_id) {
-			add_settings_error('lingotek_community', 'error', __('Select and save the community that you would like to use.', 'wp-lingotek'), 'error');
+			add_settings_error('lingotek_community', 'error', __('Select and save the community that you would like to use.', 'lingotek-translation'), 'error');
 		}
 
 		$token_details = self::has_token_details();
@@ -234,7 +287,7 @@ class Lingotek_Admin {
 					update_option('lingotek_base_url', Lingotek_API::PRODUCTION_URL);
 				}
 				$client = new Lingotek_API();
-				echo '<div class="wrap"><p class="description">'.__("Redirecting to Lingotek to connect your account...",'wp-lingotek').'</p></div>';
+				echo '<div class="wrap"><p class="description">'.__("Redirecting to Lingotek to connect your account...",'lingotek-translation').'</p></div>';
 
 				$connect_url = (strcasecmp($_GET['connect'],'new')==0) ? $client->get_new_url($redirect_url) : $client->get_connect_url($redirect_url);
 			}
@@ -255,37 +308,40 @@ class Lingotek_Admin {
 	public function get_profiles_settings($defaults = false) {
 		$resources = get_option('lingotek_community_resources');
 		$options = array(
-			'manual' => __('Manual', 'wp-lingotek'),
-			'automatic' => __('Automatic', 'wp-lingotek')
+			'manual' => __('Manual', 'lingotek-translation'),
+			'automatic' => __('Automatic', 'lingotek-translation')
 		);
 
 		return array(
 			'upload' => array(
-				'label'       => __('Upload content', 'wp-lingotek'),
+				'label'       => __('Upload content', 'lingotek-translation'),
 				'options'     => $options,
-				'description' => __('How should new and modified content be uploaded to Lingotek?', 'wp-lingotek')
+				'description' => __('How should new and modified content be uploaded to Lingotek?', 'lingotek-translation')
 			),
 			'download' => array(
-				'label'       => __('Download translations', 'wp-lingotek'),
+				'label'       => __('Download translations', 'lingotek-translation'),
 				'options'     => $options,
-				'description' => __('How should completed translations be downloaded to WordPress?', 'wp-lingotek')
+				'description' => __('How should completed translations be downloaded to WordPress?', 'lingotek-translation')
 			),
 			'project_id' => array(
-				'label'	      => $defaults ? __('Default Project', 'wp-lingotek') : __('Project', 'wp-lingotek'),
+				'label'	      => $defaults ? __('Default Project', 'lingotek-translation') : __('Project', 'lingotek-translation'),
 				'options'     => $resources['projects'],
-				'description' => __('Changes will affect new entities only', 'wp-lingotek')
+				'description' => __('Changes will affect new entities only', 'lingotek-translation')
 			),
 			'workflow_id' => array(
-				'label'	      => $defaults ? __('Default Workflow', 'wp-lingotek') : __('Workflow', 'wp-lingotek'),
+				'label'	      => $defaults ? __('Default Workflow', 'lingotek-translation') : __('Workflow', 'lingotek-translation'),
 				'options'     => $resources['workflows'],
+				'description' => __('Changes will affect new entities only', 'lingotek-translation')
 			),
 			'primary_filter_id' => array(
-				'label'       => $defaults ? __('Primary Filter', 'wp-lingotek') : __('Primary Filter', 'wp-lingotek'),
+				'label'       => $defaults ? __('Primary Filter', 'lingotek-translation') : __('Primary Filter', 'lingotek-translation'),
 				'options'     => $resources['filters'],
+				'description' => __('Changes will affect new entities only', 'lingotek-translation')
 			),
 			'secondary_filter_id' => array(
-				'label'       => $defaults ? __('Secondary Filter', 'wp-lingotek') : __('Secondary Filter', 'wp-lingotek'),
+				'label'       => $defaults ? __('Secondary Filter', 'lingotek-translation') : __('Secondary Filter', 'lingotek-translation'),
 				'options'     => $resources['filters'],
+				'description' => __('Changes will affect new entities only', 'lingotek-translation')
 			),
 		);
 	}
@@ -336,41 +392,45 @@ class Lingotek_Admin {
 
 		$api_data = $client->get_projects($community_id);
 		$projects = array();
-	        if ($api_data && $api_data != 'empty') {
-	            foreach ($api_data->entities as $project) {
-	                $projects[$project->properties->id] = $project->properties->title;
-	            }
-	            if ($api_data->properties->total == 1) {
-	                if (!$project->properties->callback_url) {
-	                    $client->update_callback_url($project->properties->id);
-	                }
-	            }
-	            natcasesort($projects); //order by title (case-insensitive)
-	            $refresh_success['projects'] = TRUE;
-	        }
-	        else if ($api_data == 'empty') {
-	            add_settings_error('lingotek_community_resources', 'error', __('Your Community currently has no projects.', 'wp-lingotek'), 'error');
-	        }
-	        else {
-	            add_settings_error('lingotek_community_resources', 'error', __('Projects could not be refreshed', 'wp-lingotek'), 'error');
-	        }
+        if ($api_data !== FALSE) {
+            foreach ($api_data->entities as $project) {
+                $projects[$project->properties->id] = $project->properties->title;
+            }
+            if ($api_data->properties->total == 1) {
+                if (!$project->properties->callback_url) {
+                    $client->update_callback_url($project->properties->id);
+                }
+            }
+            natcasesort($projects); //order by title (case-insensitive)
+            $refresh_success['projects'] = TRUE;
+        }
 
 		$api_data = $client->get_workflows($community_id);
+		$default_workflows = array(
+			'c675bd20-0688-11e2-892e-0800200c9a66' => 'Machine Translation',
+			'ddf6e3c0-0688-11e2-892e-0800200c9a66' => 'Machine Translation + Post-Edit',
+			'6ff1b470-33fd-11e2-81c1-0800200c9a66' => 'Machine Translation + Translate',
+			'2b5498e0-f3c7-4c49-9afa-cca4b3345af7' => 'Translation + 1 review',
+			'814172a6-3744-4da7-b932-5857c1c20976' => 'Translation + 2 reviews',
+			'2210b148-0c44-4ae2-91d0-ca2ee47c069e' => 'Translation + 3 reviews',
+			'7993b4d7-4ada-46d0-93d5-858db46c4c7d' => 'Translation Only'
+		);
 		$workflows = array();
 		if ($api_data) {
 			foreach ($api_data->entities as $workflow) {
 				$workflows[$workflow->properties->id] = $workflow->properties->title;
 			}
+			$diff = array_diff_key($workflows, $default_workflows);
+			if (empty($diff)) {
+				$workflows = array('c675bd20-0688-11e2-892e-0800200c9a66' => 'Machine Translation');
+			}
 			natcasesort($workflows); //order by title (case-insensitive)
 			$refresh_success['workflows'] = TRUE;
-		}
-		else {
-			add_settings_error('lingotek_community_resources', 'error', __('Workflows could not be refreshed', 'wp-lingotek'), 'error');
 		}
 
 		$api_data = $client->get_filters();
 		$filters = array();
-		if ($api_data->properties->total > 0) {
+		if ($api_data && $api_data->properties->total > 0) {
 			foreach ($api_data->entities as $filter) {
 				if (!$filter->properties->is_public) {
 					$filters[$filter->properties->id] = $filter->properties->title;
@@ -434,7 +494,7 @@ class Lingotek_Admin {
 		$num_valid_defaults = array_sum($valid_default);
 
 		if($num_valid_defaults < count($valid_default)){
-			add_settings_error( 'lingotek_defaults', 'community-selected', sprintf(__('Your <a href="%s"><i>Defaults</i></a> have been updated to valid options for this community.', 'wp-lingotek'), admin_url('admin.php?page=wp-lingotek_settings&sm=defaults')), 'updated' );
+			add_settings_error( 'lingotek_defaults', 'community-selected', sprintf(__('Your <a href="%s"><i>Defaults</i></a> have been updated to valid options for this community.', 'lingotek-translation'), admin_url('admin.php?page=lingotek-translation_settings&sm=defaults')), 'updated' );
 		}
 		unset($defaults['filter_id']);
 		update_option('lingotek_defaults', $defaults);
@@ -461,7 +521,7 @@ class Lingotek_Admin {
 	 */
 	public function load_manage_page() {
 		add_screen_option('per_page', array(
-			'label'   => __('Strings groups', 'wp-lingotek'),
+			'label'   => __('Strings groups', 'lingotek-translation'),
 			'default' => 10,
 			'option'  => 'lingotek_strings_per_page'
 		));
@@ -550,7 +610,7 @@ class Lingotek_Admin {
 	 * @since 0.1.0
 	 */
 	public function add_network_admin_menu() {
-		add_submenu_page('settings.php', __('Lingotek Settings', 'wp-lingotek'), __('Lingotek Settings', 'wp-lingotek'), 'manage_network_options', $this->plugin_slug . '_network', array($this, 'display_network_settings_page'), 'dashicons-translation');
+		add_submenu_page('settings.php', __('Lingotek Settings', 'lingotek-translation'), __('Lingotek Settings', 'lingotek-translation'), 'manage_network_options', $this->plugin_slug . '_network', array($this, 'display_network_settings_page'), 'dashicons-translation');
 	}
 
 	public function display_tutorial_page() {

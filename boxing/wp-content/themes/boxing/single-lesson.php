@@ -11,7 +11,10 @@
 
 get_header(); ?>
 <?php
-    $lang = get_bloginfo('language_code');
+    $lang = $_GET['lang'];
+    if (!$lang) {
+        $lang = 'ja';
+    }
     $post_id = get_post()->ID;
     $oder = get_field('oder', $post_id);
     $name = get_field('name', $post_id);

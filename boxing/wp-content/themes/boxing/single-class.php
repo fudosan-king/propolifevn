@@ -11,8 +11,10 @@
 
 get_header(); ?>
 <?php
-    $lang = get_bloginfo('language_code');
-    $post_id = get_post()->ID;
+    $lang = $_GET['lang'];
+    if (!$lang) {
+        $lang = 'ja';
+    }
     $name = get_field('name', $post_id);
     $badge_active = get_field('badge-active', $post_id);
     $image = get_field('image', $post_id);

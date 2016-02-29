@@ -75,12 +75,12 @@
 			}
 
 			if (isset($_POST['utility_set_default_language'])) {
-				add_settings_error('network', 'utilities', __('The language utility ran successfully.', 'wp-lingotek'), 'updated');
+				add_settings_error('network', 'utilities', __('The language utility ran successfully.', 'lingotek-translation'), 'updated');
 			}
-			add_settings_error('network', 'destination', __('Your chosen settings have updated successfully for all selected sites.', 'wp-lingotek'), 'updated');
+			add_settings_error('network', 'destination', __('Your chosen settings have updated successfully for all selected sites.', 'lingotek-translation'), 'updated');
 		}
 		else {
-			add_settings_error('network', 'destination', __('Please choose at least one destination site.', 'wp-lingotek'), 'error');
+			add_settings_error('network', 'destination', __('Please choose at least one destination site.', 'lingotek-translation'), 'error');
 		}
 
 		//Refreshes community resources so that the defaults are set when you visit the sites translation settings
@@ -92,10 +92,10 @@
 			}
 			$num = count($destination_site);
 			if ($num > 1) {
-				add_settings_error('network', 'projects', __('Your new projects were successfully created.', 'wp-lingotek'), 'updated');
+				add_settings_error('network', 'projects', __('Your new projects were successfully created.', 'lingotek-translation'), 'updated');
 			}
 			else {
-				add_settings_error('network', 'projects', __('Your new project was successfully created.', 'wp-lingotek'), 'updated');
+				add_settings_error('network', 'projects', __('Your new project was successfully created.', 'lingotek-translation'), 'updated');
 			}
 		}
 	}
@@ -109,14 +109,14 @@
 </style>
 
 <div class="wrap">
-	<h2><?php _e('Lingotek Network Settings', 'wp-lingotek'); ?></h2>
-	<p><?php _e('Copy Lingotek settings from the source site to multiple sites', 'wp-lingotek'); ?></p>
+	<h2><?php _e('Lingotek Network Settings', 'lingotek-translation'); ?></h2>
+	<p><?php _e('Copy Lingotek settings from the source site to multiple sites', 'lingotek-translation'); ?></p>
 
-	<form id="network-settings" method="post" action="admin.php?page=wp-lingotek_network" class="validate" onsubmit="return confirm('Are you sure you want to submit this request? It will overwrite any current settings you have for the destination sites.');">
+	<form id="network-settings" method="post" action="admin.php?page=lingotek-translation_network" class="validate" onsubmit="return confirm('Are you sure you want to submit this request? It will overwrite any current settings you have for the destination sites.');">
 
 		<table class="form-table">
 			<tr>
-				<th><?php echo _e('Source Site', 'wp-lingotek'); ?></th>
+				<th><?php echo _e('Source Site', 'lingotek-translation'); ?></th>
 				<td>
 					<select name="source" id="source"><?php foreach ($site_data as $site) {
 								echo "\n\t<option value='" . esc_attr($site['blog_id']) . "'>" . $site['blogname'] . '</option>'; 
@@ -125,7 +125,7 @@
 				</td>
 			</tr>
 			<tr>
-				<th><?php echo _e('Destination Site', 'wp-lingotek'); ?></th>
+				<th><?php echo _e('Destination Site', 'lingotek-translation'); ?></th>
 				<td>
 					<select multiple="multiple" name="destination[]" id="destination"><?php foreach ($site_data as $site) {
 								echo "\n\t<option value='" . esc_attr($site['blog_id']) . "'>" . $site['blogname'] . '</option>';
@@ -134,33 +134,33 @@
 				</td>
 			</tr>
 			<tr>
-				<th><?php echo _e('Settings to copy', 'wp-lingotek'); ?></th>
+				<th><?php echo _e('Settings to copy', 'lingotek-translation'); ?></th>
 				<td>
-					<input checked type="checkbox" id="account" name="settings[]" value="token"><label for="account"><?php echo _e('Account', 'wp-lingotek'); ?></label>
-					<input checked type="checkbox" id="community" name="settings[]" value="community"><label for="community"><?php echo _e('Community', 'wp-lingotek'); ?></label>
-					<input checked type="checkbox" id="defaults" name="settings[]" value="defaults"><label for="defaults"><?php echo _e('Defaults', 'wp-lingotek'); ?></label>
-					<input checked type="checkbox" id="resources" name="settings[]" value="community_resources"><label for="resources"><?php echo _e('Resources', 'wp-lingotek'); ?></label>
-					<input checked type="checkbox" id="profiles" name="settings[]" value="profiles"><label for="profiles"><?php echo _e('Profiles', 'wp-lingotek'); ?></label>
-					<input checked type="checkbox" id="content_types" name="settings[]" value="content_type"><label for="content_types"><?php echo _e('Content Types', 'wp-lingotek'); ?></label>
-					<input checked type="checkbox" id="preferences" name="preferences" value="preferences"><label for="preferences"><?php echo _e('Preferences', 'wp-lingotek'); ?></label>
+					<input checked type="checkbox" id="account" name="settings[]" value="token"><label for="account"><?php echo _e('Account', 'lingotek-translation'); ?></label>
+					<input checked type="checkbox" id="community" name="settings[]" value="community"><label for="community"><?php echo _e('Community', 'lingotek-translation'); ?></label>
+					<input checked type="checkbox" id="defaults" name="settings[]" value="defaults"><label for="defaults"><?php echo _e('Defaults', 'lingotek-translation'); ?></label>
+					<input checked type="checkbox" id="resources" name="settings[]" value="community_resources"><label for="resources"><?php echo _e('Resources', 'lingotek-translation'); ?></label>
+					<input checked type="checkbox" id="profiles" name="settings[]" value="profiles"><label for="profiles"><?php echo _e('Profiles', 'lingotek-translation'); ?></label>
+					<input checked type="checkbox" id="content_types" name="settings[]" value="content_type"><label for="content_types"><?php echo _e('Content Types', 'lingotek-translation'); ?></label>
+					<input checked type="checkbox" id="preferences" name="preferences" value="preferences"><label for="preferences"><?php echo _e('Preferences', 'lingotek-translation'); ?></label>
 				</td>
 			</tr>
 			<tr>
-				<th><?php echo _e('New Project', 'wp-lingotek'); ?></th>
+				<th><?php echo _e('New Project', 'lingotek-translation'); ?></th>
 				<td>
-					<input checked type="checkbox" name="new_project" id="new_project" ><label for="new_project"><?php echo _e('Create a new project using the name of the selected site (Recommended for a newly created site)', 'wp-lingotek'); ?></label>
+					<input checked type="checkbox" name="new_project" id="new_project" ><label for="new_project"><?php echo _e('Create a new project using the name of the selected site (Recommended for a newly created site)', 'lingotek-translation'); ?></label>
 				</td>
 			</tr>
 			<tr>
-				<th><?php echo _e('Language', 'wp-lingotek'); ?></th>
+				<th><?php echo _e('Language', 'lingotek-translation'); ?></th>
 				<td>
-					<input checked type="checkbox" name="utility_set_default_language" id="utility_set_default_language" ><label for="utility_set_default_language"><?php echo _e('Set <i>default language</i> as the language for all existing content that has not been assigned a language.', 'wp-lingotek'); ?></label>
+					<input checked type="checkbox" name="utility_set_default_language" id="utility_set_default_language" ><label for="utility_set_default_language"><?php echo _e('Set <i>default language</i> as the language for all existing content that has not been assigned a language.', 'lingotek-translation'); ?></label>
 				</td>
 			</tr>
 		</table>
 
 		<p>
-		<?php submit_button(__('Update Options', 'wp-lingotek'), 'primary', 'submit', false); ?>
+		<?php submit_button(__('Update Options', 'lingotek-translation'), 'primary', 'submit', false); ?>
 		</p>
 
 	</form>

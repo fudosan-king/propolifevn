@@ -1,11 +1,14 @@
 <div class="wrap">
-  <h2><?php _e('Manage', 'wp-lingotek'); ?></h2>
+  <h2><?php _e('Manage', 'lingotek-translation'); ?></h2>
 
     <?php
 
     $menu_items = array(
-      'string-groups' => __('String Groups', 'wp-lingotek'),
-      'strings' => __('Strings', 'wp-lingotek'),
+      'content' => __('Content Type Configuration', 'lingotek-translation'),
+      'profiles' => __('Translation Profiles', 'lingotek-translation'),
+      'custom-fields' => __('Custom Fields', 'lingotek-translation'),
+      'string-groups' => __('String Groups', 'lingotek-translation'),
+      'strings' => __('Strings', 'lingotek-translation'),
     );
 
     ?>
@@ -27,7 +30,7 @@
 
     <?php
     settings_errors();
-    $submenu = isset($_GET['sm']) ? $_GET['sm'] : current(array_keys($menu_items));
+    $submenu = isset($_GET['sm']) ? sanitize_text_field($_GET['sm']) : current(array_keys($menu_items));
     $dir = dirname(__FILE__) . '/manage/';
     $filename = $dir . 'view-' . $submenu . ".php";
     if (file_exists($filename))

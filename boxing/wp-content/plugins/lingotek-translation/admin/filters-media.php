@@ -50,7 +50,7 @@ class Lingotek_Filters_Media extends PLL_Admin_Filters_Media {
 	 * @param int $post_id
 	 */
 	public function add_attachment($post_id) {
-		if ($this->model->is_translated_post_type('attachment') && 'automatic' == Lingotek_Model::get_profile_option('upload', 'attachment', $this->model->get_post_language($post_id)) && $this->lgtm->can_upload('post', $post_id))
+		if ($this->model->is_translated_post_type('attachment') && 'automatic' == Lingotek_Model::get_profile_option('upload', 'attachment', PLL()->model->post->get_language($post_id)) && $this->lgtm->can_upload('post', $post_id))
 			$this->lgtm->upload_post($post_id);
 	}
 }

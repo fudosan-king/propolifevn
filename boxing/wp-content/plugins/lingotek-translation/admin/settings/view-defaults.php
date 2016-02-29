@@ -6,17 +6,19 @@ wp_enqueue_script('defaults', LINGOTEK_URL . '/js/defaults.js');
 
 if (!empty($_POST)) {
 	check_admin_referer($page_key, '_wpnonce_' . $page_key);
-
 	if (array_key_exists('refresh', $_POST)) {
             $refresh_success = $this->set_community_resources($community_id);
             if ($refresh_success['projects'] == TRUE && $refresh_success['workflows'] == TRUE) {
-                add_settings_error('lingotek_community_resources', 'options', __('Resources from Lingotek were successfully updated for projects and workflows.', 'wp-lingotek'), 'updated');
+                add_settings_error('lingotek_community_resources', 'options', __('Resources from Lingotek were successfully updated for projects and workflows.', 'lingotek-translation'), 'updated');
             }
             else if ($refresh_success['projects'] == TRUE) {
-                add_settings_error('lingotek_community_resources', 'error', __('Resources from Lingotek were successfully updated for projects.', 'wp-lingotek'), 'updated');
+                add_settings_error('lingotek_community_resources', 'error', __('Resources from Lingotek were successfully updated for projects.', 'lingotek-translation'), 'updated');
             }
             else if ($refresh_success['workflows'] == TRUE) {
-                add_settings_error('lingotek_community_resources', 'error', __('Resources from Lingotek were successfully updated for workflows.', 'wp-lingotek'), 'updated');
+                add_settings_error('lingotek_community_resources', 'error', __('Resources from Lingotek were successfully updated for workflows.', 'lingotek-translation'), 'updated');
+            }
+            else if ($refresh_success['workflows'] == FALSE || $refresh_success['projects'] == FALSE) {
+                add_settings_error('lingotek_community_resources', 'error', __('The Lingotek TMS is currently unavailable. Please try again later. If the problem persists, contact Lingotek Support.', 'lingotek-translation'), 'error');
             }
 	}
 	else {
@@ -28,12 +30,12 @@ if (!empty($_POST)) {
                 }
             }
             update_option('lingotek_defaults', $options);
-            add_settings_error('lingotek_defaults', 'defaultgs', __('Your <i>Defaults</i> were sucessfully saved.', 'wp-lingotek'), 'updated');
+            add_settings_error('lingotek_defaults', 'defaultgs', __('Your <i>Defaults</i> were sucessfully saved.', 'lingotek-translation'), 'updated');
 
             if (isset($_POST['update_callback'])) {
                 $client = new Lingotek_API();
                 if ($client->update_callback_url($options['project_id']))
-                    add_settings_error('lingotek_defaults', 'defaultgs', __('Your callback url was successfully updated.', 'wp-lingotek'), 'updated');
+                    add_settings_error('lingotek_defaults', 'defaultgs', __('Your callback url was successfully updated.', 'lingotek-translation'), 'updated');
             }
 
             //adds new project if text box is filled out
@@ -42,7 +44,7 @@ if (!empty($_POST)) {
                 $title = stripslashes($_POST['new_project']);
 
                 if ($new_id = $client->create_project($title, $community_id)) {
-                    add_settings_error('lingotek_defaults', 'defaultgs', __('Your new project was successfully created.', 'wp-lingotek'), 'updated');
+                    add_settings_error('lingotek_defaults', 'defaultgs', __('Your new project was successfully created.', 'lingotek-translation'), 'updated');
                     $this->set_community_resources($community_id);// updates the cache to include the newly created project
                     $options['project_id'] = $new_id;
                     update_option('lingotek_defaults', $options);
@@ -84,8 +86,8 @@ unset($settings['primary_filter_id']['options'][$secondary_filter_id]);
 unset($settings['secondary_filter_id']['options'][$primary_filter_id]);
 ?>
 
-<h3><?php _e('Defaults', 'wp-lingotek'); ?></h3>
-<p class="description"><?php _e('The default automation settings and resources that should be used for this site.  These settings can be overriden using translation profiles and content type configuration.', 'wp-lingotek'); ?></p>
+<h3><?php _e('Defaults', 'lingotek-translation'); ?></h3>
+<p class="description"><?php _e('The default automation settings and resources that should be used for this site.  These settings can be overriden using translation profiles and content type configuration.', 'lingotek-translation'); ?></p>
 
 
 <form id="lingotek-settings" method="post" action="admin.php?page=<?php echo $page_key; ?>" class="validate">
@@ -103,19 +105,18 @@ unset($settings['secondary_filter_id']['options'][$primary_filter_id]);
 				</select><?php
 				if ('project_id' == $key) { ?>
                                     <?php
-                                    $client = new Lingotek_API();
 
-                                    if ($client->get_projects($community_id) == 'empty') { ?>
+                                    if (empty($setting['options'])) { ?>
                                         <script> document.getElementById('project_id').style.display = 'none';</script>
-                                        <input type="text" name="new_project" id="new_project" placeholder="<?php _e('Enter new project name', 'wp-lingotek') ?>" />
+                                        <input type="text" name="new_project" id="new_project" placeholder="<?php _e('Enter new project name', 'lingotek-translation') ?>" />
                                     <?php }
                                     else { ?>
 
-                                        <input type="text" style="display:none" name="new_project" id="new_project" placeholder="<?php _e('Enter new project name', 'wp-lingotek') ?>" />
+                                        <input type="text" style="display:none" name="new_project" id="new_project" placeholder="<?php _e('Enter new project name', 'lingotek-translation') ?>" />
                                         <input type="checkbox" name="update_callback" id="update_callback"/>
-                                        <label for="update_callback" id="callback_label"><?php _e('Update the callback url for this project.', 'wp-lingotek') ?></label>
+                                        <label for="update_callback" id="callback_label"><?php _e('Update the callback url for this project.', 'lingotek-translation') ?></label>
 
-                                        <br/><a href="#" id="create" onclick="toggleTextbox()" style="padding-left:3px; color:#999; font-size:80%; text-decoration:none"><b>+</b> <?php echo _e('Create New Project', 'wp-lingotek') ?></a>
+                                        <br/><a href="#" id="create" onclick="toggleTextbox()" style="padding-left:3px; color:#999; font-size:80%; text-decoration:none"><b>+</b> <?php echo _e('Create New Project', 'lingotek-translation') ?></a>
                                     <?php } ?>
                                 <?php } ?>
             <!-- Code to handle displaying of Primary and Secondary Filters -->
@@ -123,7 +124,7 @@ unset($settings['secondary_filter_id']['options'][$primary_filter_id]);
                         <script> document.getElementById("primary_filter_id_row").style.display = "none";</script>
                         <script> document.getElementById("secondary_filter_id_row").style.display = "none";</script> <?php
                         if ('primary_filter_id' == $key) { ?>
-                            <tr id="filters_row"><th><?php _e('Filters', 'wp-lingotek') ?></th><td><i><?php _e('Not configured', 'wp-lingotek') ?></i></td></tr>
+                            <tr id="filters_row"><th><?php _e('Filters', 'lingotek-translation') ?></th><td><i><?php _e('Not configured', 'lingotek-translation') ?></i></td></tr>
                     <?php }
                     }
                     if ($default_filters_exist) { ?>
@@ -135,7 +136,7 @@ unset($settings['secondary_filter_id']['options'][$primary_filter_id]);
 	</table>
 
 	<p>
-	<?php submit_button(__('Save Changes', 'wp-lingotek'), 'primary', 'submit', false); ?>
-	<?php submit_button(__( 'Refresh Resources', 'wp-lingotek'), 'secondary', 'refresh', false ); ?>
+	<?php submit_button(__('Save Changes', 'lingotek-translation'), 'primary', 'submit', false); ?>
+	<?php submit_button(__( 'Refresh Resources', 'lingotek-translation'), 'secondary', 'refresh', false ); ?>
 	</p>
 </form>

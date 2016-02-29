@@ -75,7 +75,7 @@ class Lingotek_Utilities {
 			if (!empty($nolang['terms']))
 				$this->pllm->set_language_in_mass('term', $nolang['terms'], $this->pllm->options['default_lang']);
 		}
-		add_settings_error('lingotek_utilities', 'utilities', __('The language update utility ran successfully.', 'wp-lingotek'), 'updated');
+		add_settings_error('lingotek_utilities', 'utilities', __('The language update utility ran successfully.', 'lingotek-translation'), 'updated');
 		return 0;
 	}
 

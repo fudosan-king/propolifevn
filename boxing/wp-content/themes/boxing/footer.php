@@ -10,7 +10,10 @@
  */
 ?>
 <?php
-$lang = get_bloginfo('language_code');
+$lang = $_GET['lang'];
+if (!$lang) {
+    $lang = 'ja';
+}
 $template_directory = str_replace("twentyfifteen", "boxing", get_template_directory_uri());
 ?>
     <div class="blockgallery">
@@ -124,7 +127,7 @@ $template_directory = str_replace("twentyfifteen", "boxing", get_template_direct
         </div>
         </div>
         <div class="clearfix"></div>
-        <div class="footer-privacy">Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span id="copyright-year">2015</span>. <a href="#">Privacy Policy</a></div>
+        <div class="footer-privacy">Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span id="copyright-year">2015</span>. Privacy Policy&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.propolifevietnam.com/" target="_blank">Propolife Viet Nam</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://aodaihousing.com/" target="_blank">Aodaihousing</a></div>
         <div class="container" role="alert">
         <div class="hidden-lg hidden-md hidden-sm col-xs-12 quick-contact" align="center">
         <div align="center" class="alert bg-quick-contact">

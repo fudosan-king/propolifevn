@@ -11,7 +11,10 @@
 
 get_header(); ?>
 <?php
-    $lang = get_bloginfo('language_code');
+    $lang = $_GET['lang'];
+    if (!$lang) {
+        $lang = 'ja';
+    }
     $post_id = get_post()->ID;
     $post_date = substr(get_post()->post_date, 0, 10);
     $post_content = get_post()->post_content;
@@ -67,43 +70,7 @@ get_header(); ?>
         </div>
     </div>
 
-    <div class="col-md-4">
-        <div class="list-group">
-        <a href="#" class="list-group-item active"><h4 class="list-group-item-heading">最近の投稿</h4></a>
-        <?php
-            $posts_recents = get_posts( $args_recent );
-            if($posts_recents) {
-                foreach($posts_recents as $posts_recent):
-                    $description = substr($posts_recent->post_content, 0, 200);
-                    echo '
-                    <a href="' . get_bloginfo('siteurl'). '&p='. $posts_recent->ID . '" class="list-group-item">
-                    <p class="list-group-item-text">' . $description .'</p>
-                    </a>
-                    ';
-                endforeach;
-            }
-        ?>
-        </div>
-        <?php
-            $args_archives = array(
-                'type'            => 'monthly',
-                'cat'             => $cat,
-                'limit'           => '',
-                'format'          => '',
-                'before'          => '',
-                'after'           => '',
-                'show_post_count' => false,
-                'echo'            => 1,
-                'order'           => 'DESC'
-            );
-        ?>
-
-        <div class="list-group">
-            <a href="#" class="list-group-item active"><h4 class="list-group-item-heading">アーカイブ</h4></a>
-            <?php wp_get_archives_customer( $args_archives ); ?>
-        </div>
-    </div>
-
+    <div class="col-md-4"><?php get_sidebar('news');?></div>
 </div>
 </div>
 </div>

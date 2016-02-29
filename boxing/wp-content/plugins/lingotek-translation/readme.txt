@@ -3,12 +3,12 @@ Contributors: chouby, smithworx, erichie
 Donate link: http://lingotek.com/
 Tags: automation, bilingual, international, language, Lingotek, localization, multilanguage, multilingual, translate, translation
 Requires at least: 3.8
-Tested up to: 4.2
-Stable tag: 1.0.3
+Tested up to: 4.4
+Stable tag: 1.1.11
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Lingotek Translation offers convenient cloud-based localization and translation for WordPress.
+Convenient cloud-based localization and translation for WordPress.
 
 == Description ==
 
@@ -28,7 +28,7 @@ WordPress administrators use Translation Profiles to categorize content by its r
 
 = Cloud-Based Translation Management System =
 
-Need access to a enterprise level Translation Management System designed to work directly with Wordpress and other content management systems allowing you can get complete transparent access with all your translation projects? The cloud-based Lingotek Translation Management Systems helps your business access new markets and customers. Contact sales@lingotek.com for more information and pricing of these features.
+Need access to an enterprise level Translation Management System designed to work directly with Wordpress and other content management systems, allowing you complete transparent access with all your translation projects? The cloud-based Lingotek Translation Management Systems helps your business access new markets and customers. Contact sales@lingotek.com for more information and pricing of these features.
 
 = Benefits =
 
@@ -48,7 +48,7 @@ Lingotek works in conjuction with the [Polylang](https://wordpress.org/plugins/p
 * You can translate posts, pages, media, categories, post tags, menus, widgets...
 * Custom post types, custom taxonomies, sticky posts and post formats, RSS feeds and all default WordPress widgets are supported.
 * The language is either set by the content or by the language code in the url, or you can use one different subdomain or domain per language.
-* Categories, post tags as well as some other metas are automatically copied when adding a new post or page translation.
+* Categories, post tags, and some other metas are automatically copied when adding a new post or page translation.
 * A customizable language switcher is provided as a widget or in the nav menu.
 * The admin interface is of course multilingual too and each user can set the WordPress admin language in its profile.
 
@@ -58,20 +58,27 @@ Wherever third party code has been used, credit has been given in the code’s c
 
 = Do you like Lingotek? =
 
-Don't hesitate to [give your feedback](http://wordpress.org/support/view/plugin-reviews/lingotek#postform). It will help make the plugin better. Other [contributions](http://lingotek.wordpress.com/documentation/contribute/) (helping other users on the support forum) are welcome!
+Don't hesitate to [give your feedback](https://wordpress.org/support/view/plugin-reviews/lingotek-translation). It will help make the plugin better. Other [contributions](https://wordpress.org/support/plugin/lingotek-translation) (helping other users on the support forum) are welcome!
 
 == Installation ==
 
 1. Make sure you have [Polylang](https://wordpress.org/plugins/polylang/) installed as it provides the framework for the Lingotek plugin.
-1. Upload the `wp-lingotek` folder to the `/wp-content/plugins/` directory.
+1. Upload the `lingotek-translation` folder to the `/wp-content/plugins/` directory.
 1. Activate the Lingotek plugin through the 'Plugins' menu in Wordpress.
-1. Create a Lingotek account by going to the `Translation` menu that appears in your admin menu.
+1. Navigate to the `Translation` menu that appears in your admin menu.
+1. From here you can create a new Lingotek account if you do not have one, or you can connect to an existing Lingotek account.
+1. After creating a new account or connecting with your existing account you will be redirected to the Lingotek Translation tutorial and admin pages.
+1. For more information and help visit [Getting Started](https://lingotek.atlassian.net/wiki/display/PDOC/WordPress) in the Lingotek Translation Documentation or contact support@lingotek.com
 
 == Frequently Asked Questions ==
 
 = What does the Lingotek plugin do? =
 
 Lingotek has teamed up with [Polylang](https://wordpress.org/plugins/polylang/) to offer a simple way to make your WordPress site truly multilingual. Manage all your multilingual content in the same site. No need to have a different site for each language!
+
+= Why won't the plugin connect to my Lingotek account? =
+
+The Lingotek plugin requires access to a third party API server. Your hosting provider may have a firewall in place that could be blocking those requests to outside servers. Please check with your host to allow access to Lingotek's API server. Contact support@lingotek.com for more help.
 
 = How can I add a language? =
 
@@ -104,7 +111,7 @@ The *translation dashboard* not only shows how much of your content is translate
 
 When content is disassociated, the connection between WordPress and Lingotek is safely removed so that translations can be solely managed inside of WordPress.
 
-For more, visit the [Lingotek documentation site](https://lingotek.atlassian.net/wiki/display/PDOC/WordPress)
+For more, visit the [Lingotek documentation site](https://lingotek.atlassian.net/wiki/display/PDOC/WordPress).
 
 == Screenshots ==
 
@@ -114,6 +121,99 @@ For more, visit the [Lingotek documentation site](https://lingotek.atlassian.net
 4. Content type profiles. Manually choosing which content to upload and download is rarely what a content administrator wants to do, and automating the upload of every change is not workable because there are various types of content. Each type of translatable content can be assigned to a customizable profile. For example, by default, we like to have Posts use an Automatic profile so that content will automatically be uploaded for translation and the resulting translations automatically be downloaded back into WordPress.
 
 == Changelog ==
+
+= 1.1.11 (2016-2-16) =
+
+* Improved the copy source feature by allowing manual copying when using a manual Translation Profile
+* Fixed a bug that prevented synchronization of translation taxonomies
+
+= 1.1.10 (2016-1-21) =
+
+* Fixed a bug that prevented images from being uploaded to the Media Library
+
+= 1.1.9 (2016-1-19) =
+
+* Updated code to be compatible with Polylang 1.8 structural changes
+* Minor bug fixes
+
+= 1.1.8 (2015-11-19) =
+
+* Simplified authentication to Lingotek
+
+= 1.1.7 (2015-11-2) =
+
+* Increased timeout for GET requests to 30 seconds
+
+= 1.1.6 (2015-10-30) =
+
+* Removed debugging code that was causing conflicts with other plugins and themes
+* Other minor bug fixes
+
+= 1.1.5 (2015-10-9) =
+
+* Fixed some minor bugs related to error reporting
+
+= 1.1.4 (2015-10-5) =
+
+* Fixed a bug that prevented the ability to add new Translation profiles
+
+= 1.1.3 (2015-10-2) =
+
+* Greatly improved API error reporting
+* Fixed a bug that caused existing profiles to be overwritten
+* Fixed a bug that prevented users from being notified that existing translations would be overwritten
+* Fixed a bug that caused blank posts being created upon download of translations
+
+= 1.1.2 (2015-09-18) =
+
+* Fix for copy feature
+* Fix for content status displays
+* Other minor fixes
+
+= 1.1.1 (2015-09-11) =
+
+* Added better logging and display of Lingotek API errors
+* New Translation Profile option to copy content from source language to target languages
+* Fixes for display of selected Profile
+* Minor fixes for real-time translation status updates
+
+= 1.1 (2015-08-28) =
+
+* Added the option to set a Translation Profile per Post/Page which will override the Content Type default Translation Profile
+* The selected Translation Profile is now displayed on bulk display of Posts/Pages
+* Minor fixes for real-time translation status updates
+* Fixed a bug that prevented updating of content
+* Custom fields enhancements and fixes
+* Moved Content Type Configuration, Translation Profiles, and Custom Fields tabs from the Settings Page to the Manage Page
+* Fixed Lingotek Dashboard counting error
+
+= 1.0.9 (2015-08-19) =
+
+* Fixed error with YouTube videos not displaying in translations
+* Fixed a minor bug which prevented real-time translation status updates
+* Fixed custom fields settings page error
+
+= 1.0.8 (2015-08-19) =
+
+* Fixed custom fields error upon saving or updating posts
+
+= 1.0.7 (2015-08-18) =
+
+* Enhanced custom field support including compatibility with user created custom fields, the Advanced Custom Fields (ACF) plugin, and the use of language configuration files (i.e., wpml-config.xml) for default settings.
+* Fixed issue with sub-category translation
+
+= 1.0.6 (2015-07-30) =
+
+* Enhanced String Groups functionality and removed unecessary statuses
+* Fixed incorrect counting and extra term_taxonomy creation when importing content
+
+= 1.0.5 (2015-07-23) =
+
+* Fixed dashboard reporting issue, reduced workflow select options for new users, and other usability improvements.
+
+= 1.0.4 (2015-07-21) =
+
+* Plugin and PHP compatability improvements
 
 = 1.0.3 (2015-07-20) =
 

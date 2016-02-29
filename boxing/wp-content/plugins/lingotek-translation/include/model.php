@@ -8,6 +8,8 @@
  */
 class Lingotek_Model {
 	public $pllm; // Polylang model
+	static public $copying_post;
+	static public $copying_term;
 
 	/*
 	 * constructor
@@ -16,6 +18,9 @@ class Lingotek_Model {
 	 */
 	public function __construct() {
 		$this->pllm = $GLOBALS['polylang']->model;
+
+		register_taxonomy('lingotek_profile', null , array('label' => false, 'public' => false, 'query_var' => false, 'rewrite' => false));
+		register_taxonomy('lingotek_hash', null , array('label' => false, 'public' => false, 'query_var' => false, 'rewrite' => false));
 	}
 
 	/*
@@ -70,8 +75,9 @@ class Lingotek_Model {
 	public function get_group($type, $id) {
 		switch ($type) {
 			case 'post':
+				return ($post = PLL()->model->post->get_object_term((int) $id, $type . '_translations')) && !empty($post) ? $this->convert_term($post) : false;
 			case 'term':
-				return ($term = $this->pllm->get_object_term((int) $id, $type . '_translations')) && !empty($term) ? $this->convert_term($term) : false;
+				return ($term = PLL()->model->term->get_object_term((int) $id, $type . '_translations')) && !empty($term) ? $this->convert_term($term) : false;
 			case 'string':
 				if (is_numeric($id)) {
 					$strings = self::get_strings();
@@ -109,9 +115,20 @@ class Lingotek_Model {
 	 * @param object $language
 	 * @return array
 	 */
-	static public function get_profile($type, $language) {
+	static public function get_profile($type, $language, $post_id = null) {
 		$content_types = get_option('lingotek_content_type');
 		$profiles = get_option('lingotek_profiles');
+
+		// If a profile is set for a specific post/page get that first
+		if ($post_id) {
+			$terms = get_terms('lingotek_profile', 'orderby=count&hide_empty=0');
+			foreach ($terms as $term) {
+				$extracted_post_id = str_replace('lingotek_profile_', '', $term->name);
+				if ($extracted_post_id == $post_id) {
+					return $profiles[$term->description];
+				}
+			}
+		}
 
 		// default profile is manual except for post
 		$default = 'post' == $type ? 'automatic' : 'manual';
@@ -137,7 +154,7 @@ class Lingotek_Model {
 				'delete' => 1,
 			),
 		);
-		$prefs = get_option('lingotek_prefs', $default);
+		$prefs = array_merge($default, get_option('lingotek_prefs', $default)); // ensure defaults are set for missing keys
 		return $prefs;
 	}
 
@@ -152,8 +169,8 @@ class Lingotek_Model {
 	 * @param object $target_language optional, needed to get custom target informations 'workflow_id' | 'download'
 	 * @return string | bool either the option or false if the translation is disabled
 	 */
-	static public function get_profile_option($item, $type, $source_language, $target_language = false) {
-		$profile = self::get_profile($type, $source_language);
+	static public function get_profile_option($item, $type, $source_language, $target_language = false, $post_id = null) {
+		$profile = self::get_profile($type, $source_language, $post_id);
 		if ('disabled' == $profile['profile'])
 			return false;
 
@@ -168,6 +185,78 @@ class Lingotek_Model {
 	}
 
 	/*
+	 * find targets that are set to copy in a profile
+	 *
+	 * @since 1.1.1
+	 *
+	 * @param array $profile (use get_profile to retrieve)
+	 * @return array of targets that should be copied. if none exist returns empty array
+	 */
+	public function targets_to_be_copied($profile) {
+		if (isset($profile['targets']) && in_array('copy', $profile['targets'])) {
+			$targets_to_copy = array_keys($profile['targets'], 'copy');
+			return $targets_to_copy;
+		}
+		else {
+			return array();
+		}
+	}
+
+	/*
+	 * copy a post from the source language to a target language
+	 *
+	 * @since 1.1.1
+	 *
+	 * @param object $post
+	 * @param string $target polylang language slug (ex: en, de, fr, etc)
+	 * @return $new_post_id if copy of post is successful, false otherwise
+	 */
+	public function copy_post($post, $target) {
+		self::$copying_post = true;
+		$document = $this->get_group('post', $post->ID);
+		$prefs = self::get_prefs();
+		$cp_lang = $this->pllm->get_language($target);
+		$cp_post = (array) $post;
+		$cp_post['post_status'] = ($prefs['download_post_status'] === 'SAME_AS_SOURCE')? $post->post_status : $prefs['download_post_status']; // status
+		unset($cp_post['ID']);
+		unset($cp_post['post_name']);
+		if (!isset($document->desc_array[$target])) {
+			$new_post_id = wp_insert_post($cp_post, true);
+			if (!is_wp_error($new_post_id)) {
+				PLL()->model->post->set_language($new_post_id, $cp_lang);
+				wp_set_object_terms($new_post_id, $document->term_id, 'post_translations');
+				$GLOBALS['polylang']->sync->copy_taxonomies($document->source, $new_post_id, $cp_lang->slug);
+				$GLOBALS['polylang']->sync->copy_post_metas($document->source, $new_post_id, $cp_lang->slug);
+				Lingotek_Group_Post::copy_or_ignore_metas($post->ID, $new_post_id);
+				$document->desc_array[$target] = $new_post_id;
+				$document->save();
+			}
+		}
+		self::$copying_post = false;
+	}
+
+	public function copy_term($term, $target, $taxonomy) {
+		self::$copying_term = true;
+		$document = $this->get_group('term', $term->term_id);
+		$cp_lang = $this->pllm->get_language($target);
+		$cp_term = (array) $term;
+		//unset($cp_term['term_id']);
+
+		if (isset($cp_term['slug']) && term_exists($cp_term['slug'])) {
+			$cp_term['slug'] .= '-' . $cp_lang->slug;
+		}
+		$new_term = wp_insert_term($cp_term['name'], $taxonomy, $cp_term);
+
+		if (!is_wp_error($new_term)) {
+			PLL()->model->post->set_language($new_term['term_id'], $cp_lang);
+			wp_set_object_terms($new_term['term_id'], $document->term_id, 'term_translations');
+			$document->desc_array[$target] = $new_term['term_id'];
+			$document->save();
+		}
+		self::$copying_term = false;
+	}
+
+	/*
 	 * uploads a new post to Lingotek TMS
 	 *
 	 * @since 0.1
@@ -176,11 +265,11 @@ class Lingotek_Model {
 	 */
 	public function upload_post($post_id) {
 		$post = get_post($post_id);
-		$language = $this->pllm->get_post_language($post_id);
+		$language = PLL()->model->post->get_language($post_id);
 		if (empty($post) || empty($language))
 			return;
 
-		$profile = self::get_profile($post->post_type, $language);
+		$profile = self::get_profile($post->post_type, $language, $post_id);
 		if ('disabled' == $profile['profile'])
 			return;
 
@@ -191,17 +280,17 @@ class Lingotek_Model {
 			'title' => $post->post_title,
 			'content' => Lingotek_Group_Post::get_content($post),
 			'locale_code' => $language->lingotek_locale,
-			'project_id' => self::get_profile_option('project_id', $post->post_type, $language),
-			'workflow_id' => self::get_profile_option('workflow_id', $post->post_type, $language),
+			'project_id' => self::get_profile_option('project_id', $post->post_type, $language, false, $post_id),
+			'workflow_id' => self::get_profile_option('workflow_id', $post->post_type, $language, false, $post_id),
 			'external_url' => $external_url,
 		);
 
 		$filter_ids = array();
-		if (self::get_profile_option('primary_filter_id', $post->post_type, $language)) {
-			$filter_ids['fprm_id'] = self::get_profile_option('primary_filter_id',$post->post_type, $language);
+		if (self::get_profile_option('primary_filter_id', $post->post_type, $language, false, $post_id)) {
+			$filter_ids['fprm_id'] = self::get_profile_option('primary_filter_id',$post->post_type, $language, false, $post_id);
 		}
-		if (self::get_profile_option('secondary_filter_id', $post->post_type, $language)) {
-			$filter_ids['fprm_subfilter_id'] = self::get_profile_option('secondary_filter_id',$post->post_type, $language);
+		if (self::get_profile_option('secondary_filter_id', $post->post_type, $language, false, $post_id)) {
+			$filter_ids['fprm_subfilter_id'] = self::get_profile_option('secondary_filter_id',$post->post_type, $language, false, $post_id);
 		}
 		$params = array_merge($params, $filter_ids);
 
@@ -209,11 +298,20 @@ class Lingotek_Model {
 			$document->patch($post->post_title, $post, $external_url, $filter_ids);
 		}
 
-		elseif (!Lingotek_Group::$creating_translation) {
-			$document_id = $client->upload_document($params);
+		elseif (!Lingotek_Group::$creating_translation && !self::$copying_post) {
+			$document_id = $client->upload_document($params, $post->ID);
 
 			if ($document_id) {
 				Lingotek_Group_Post::create($post->ID , $language, $document_id);
+
+				// If a translation profile has targets set to copy then copy them
+				$targets_to_copy = $this->targets_to_be_copied($profile);
+				$upload = self::get_profile_option('upload', $post->post_type, $language, false, $post_id);
+				if (!empty($targets_to_copy) && $upload == 'automatic') {
+					foreach ($targets_to_copy as $target) {
+						$this->copy_post($post, $target);
+					}
+				}
 			}
 		}
 	}
@@ -228,7 +326,7 @@ class Lingotek_Model {
 	 */
 	public function upload_term($term_id, $taxonomy) {
 		$term = get_term($term_id, $taxonomy);
-		$language = $this->pllm->get_term_language($term_id);
+		$language = PLL()->model->term->get_language($term_id);
 		if (empty($term) || empty($language))
 			return;
 
@@ -259,11 +357,19 @@ class Lingotek_Model {
 			$document->patch($term->name, $term, '', $filter_ids);
 		}
 
-		elseif (!Lingotek_Group::$creating_translation) {
-			$document_id = $client->upload_document($params);
+		elseif (!Lingotek_Group::$creating_translation && !self::$copying_term) {
+			$document_id = $client->upload_document($params, $term_id);
 
 			if ($document_id) {
 				Lingotek_Group_Term::create($term_id, $taxonomy , $language, $document_id);
+
+				// If a translation profile has targets set to copy then copy them
+				$targets_to_copy = $this->targets_to_be_copied($profile);
+				if (!empty($targets_to_copy)) {
+					foreach ($targets_to_copy as $target) {
+						$this->copy_term($term, $target, $taxonomy);
+					}
+				}
 			}
 		}
 	}
@@ -287,10 +393,10 @@ class Lingotek_Model {
 			$group = $strings[$group]['context'];
 		}
 
-		// check that we have a valid string group 
+		// check that we have a valid string group
 		if (!in_array($group, wp_list_pluck(self::get_strings(), 'context')))
 			return;
-			
+
 		$client = new Lingotek_API();
 
 		$params = array(
@@ -314,7 +420,7 @@ class Lingotek_Model {
 			$document->patch($group);
 		}
 		else {
-			$document_id = $client->upload_document($params);
+			$document_id = $client->upload_document($params, $group);
 
 			if ($document_id) {
 				Lingotek_Group_String::create($group, $language, $document_id);
@@ -353,14 +459,17 @@ class Lingotek_Model {
 				return false;
 
 			case 'post':
+				$language = PLL()->model->post->get_language($object_id);
+				return !empty($language) && (empty($document) ||
+					(isset($document) && 'edited' == $document->status && $document->source == $object_id));
 			case 'term':
 				// first check that a language is associated to the object
-				$language = call_user_func(array(&$this->pllm, 'get_'.$type.'_language'), $object_id);
+				$language = PLL()->model->term->get_language($object_id);
 
 				// FIXME how to get profile to check if disabled?
 
 				return !empty($language) && (empty($document) ||
-					(1 == count($this->pllm->get_translations($type, $object_id)) && empty($document->source))  || // specific for terms as document is never empty
+					(empty($document->translations) && empty($document->source))  || // specific for terms as document is never empty
 					(isset($document) && 'edited' == $document->status && $document->source == $object_id));
 		}
 	}
@@ -377,12 +486,12 @@ class Lingotek_Model {
 			$client = new Lingotek_API();
 
 			if ($document->source == $object_id) {
-				$client->delete_document($document->document_id);
+				$client->delete_document($document->document_id, $object_id);
 			}
 			else {
-				$this->pllm->delete_translation('post', $object_id);
-				$lang = $this->pllm->get_post_language($object_id);
-				$client->delete_translation($document->document_id, $lang->lingotek_locale);
+				PLL()->model->post->delete_translation($object_id);
+				$lang = PLL()->model->post->get_language($object_id);
+				$client->delete_translation($document->document_id, $lang->lingotek_locale, $object_id);
 			}
 		}
 	}
@@ -399,13 +508,13 @@ class Lingotek_Model {
 			$client = new Lingotek_API();
 
 			if ($document->source == $object_id) {
-				$client->delete_document($document->document_id);
+				$client->delete_document($document->document_id, $object_id);
 			}
 			else {
-				$lang = $this->pllm->get_term_language($object_id);
-				$this->pllm->delete_term_language($object_id);
-				$this->pllm->delete_translation('term', $object_id);
-				$client->delete_translation($document->document_id, $lang->lingotek_locale);
+				$lang = PLL()->model->term->get_language($object_id);
+				PLL()->model->term->delete_language($object_id);
+				PLL()->model->term->delete_translation($object_id);
+				$client->delete_translation($document->document_id, $lang->lingotek_locale, $object_id);
 			}
 		}
 	}
@@ -447,7 +556,7 @@ class Lingotek_Model {
 		static $r = array();
 		if (!empty($r[$post_type]))
 			return $r[$post_type];
-		
+
 		if (!post_type_exists($post_type))
 			return;
 
@@ -464,6 +573,10 @@ class Lingotek_Model {
 
 		$targets = $this->get_target_count($groups);
 
+
+		$group_ids = array();
+		$disabled = array();
+
 		foreach ($this->pllm->get_languages_list() as $language) {
 			// counts all the posts in one language
 			$n = $wpdb->get_var($wpdb->prepare("
@@ -475,8 +588,37 @@ class Lingotek_Model {
 				$language->term_taxonomy_id, $post_type
 			));
 
+			$objects = $wpdb->get_col($wpdb->prepare("
+				SELECT object_id FROM $wpdb->term_relationships AS tr
+				INNER JOIN $wpdb->posts AS p ON p.ID = tr.object_id
+				WHERE tr.term_taxonomy_id = %d
+				AND p.post_type = %s
+				AND p.post_status NOT IN ('trash', 'auto-draft')",
+				$language->term_taxonomy_id, $post_type
+			));
+
+			foreach ($groups as $group) {
+				$group = unserialize($group);
+				if (array_key_exists($language->slug, $group)) {
+					$group_ids[] = $group[$language->slug];
+				}
+			}
+
+			$count = 0;
+			foreach ($objects as $object) {
+				$id = $object;
+				if (!in_array($id, $group_ids)) {
+					$profile = self::get_profile($post_type, $language, $id);
+					if ($profile['profile'] == 'disabled' && in_array($id, $objects)) {
+						$count += 1;
+					}
+				}
+			}
+			$disabled[$language->slug] = $count;
+
 			// if a post is not a target, then it is source
 			$sources[$language->slug] = $n - $targets[$language->slug];
+			$sources[$language->slug] -= $disabled[$language->slug];
 		}
 
 		// untranslated posts have no associated translation group in DB
@@ -493,13 +635,11 @@ class Lingotek_Model {
 			'post_translations', $post_type
 		));
 
-
-
 		// untranslated = total - translated
 		// total of posts translations groups = untranslated + number of translation groups stored in DB
 		$count_posts = (array) wp_count_posts($post_type);
 		unset($count_posts['trash'], $count_posts['auto-draft']); // don't count trash and auto-draft
-		$total = array_sum($count_posts) - $n_translated + count($groups);
+		$total = array_sum($count_posts) - $n_translated + count($groups) - array_sum($disabled);
 
 		return $r[$post_type] = compact('sources', 'targets', 'total');
 	}
@@ -518,7 +658,7 @@ class Lingotek_Model {
 		static $r = array();
 		if (!empty($r[$taxonomy]))
 			return $r[$taxonomy];
-			
+
 		if (!taxonomy_exists($taxonomy))
 			return;
 
@@ -534,6 +674,9 @@ class Lingotek_Model {
 
 		$targets = $this->get_target_count($groups);
 
+		$group_ids = array();
+		$disabled = array();
+
 		foreach ($this->pllm->get_languages_list() as $language) {
 			// counts all the terms in one language
 			$n = $wpdb->get_var($wpdb->prepare("
@@ -544,8 +687,32 @@ class Lingotek_Model {
 				$language->tl_term_taxonomy_id, $taxonomy
 			));
 
+			$objects = $wpdb->get_col($wpdb->prepare("
+				SELECT object_id FROM $wpdb->term_relationships AS tr
+				INNER JOIN $wpdb->term_taxonomy AS tt ON tt.term_id = tr.object_id
+				WHERE tr.term_taxonomy_id = %d
+				AND tt.taxonomy = %s",
+				$language->tl_term_taxonomy_id, $taxonomy
+			));
+
+			$count = 0;
+			foreach ($groups as $group) {
+				$group = unserialize($group);
+				if (array_key_exists($language->slug, $group)) {
+					$group_ids[] = $group[$language->slug];
+					$profile = self::get_profile($taxonomy, $language, $group[$language->slug]);
+					if ($profile['profile'] == 'disabled' && !isset($group['lingotek'])) {
+						$count += 1;
+					}
+				}
+			}
+
+
+			$disabled[$language->slug] = $count;
+
 			// if a term is not a target, then it is a source
 			$sources[$language->slug] = $n - $targets[$language->slug];
+			$sources[$language->slug] -= $disabled[$language->slug];
 		}
 
 		$total = count($groups);
@@ -567,13 +734,20 @@ class Lingotek_Model {
 				$group = unserialize($group);
 				if (isset($group['lingotek']['translations'])) {
 					foreach ($group['lingotek']['translations'] as $locale => $status) {
-						if (('pending' == $status || 'ready' == $status) && $language = $this->pllm->get_language($locale))
-							$sources[$language->slug]--;
+						if (('pending' == $status || 'ready' == $status) && $language = $this->pllm->get_language($locale)) {
+							if ($sources[$language->slug] > 0) {
+								$sources[$language->slug]--;
+							}
+						}
 					}
 				}
 			}
+			if (count($sources) == 1 && $total != $sources[$this->pllm->options['default_lang']]) {
+				$total = $sources[$this->pllm->options['default_lang']];
+			}
 		}
 
+		$total -= array_sum($disabled);
 		return $r[$taxonomy] = compact('sources', 'targets', 'total');
 	}
 }

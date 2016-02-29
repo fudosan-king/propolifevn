@@ -37,7 +37,8 @@ class Lingotek_Filters_Columns extends PLL_Admin_Filters_Columns {
 	 * @return array modified list of columns
 	 */
 	protected function add_column($columns, $before) {
-		if ($n = array_search($before, array_keys($columns))) {
+		$n = array_search($before, array_keys($columns));
+		if ($n) {
 			$end = array_slice($columns, $n);
 			$columns = array_slice($columns, 0, $n);
 		}
@@ -63,16 +64,21 @@ class Lingotek_Filters_Columns extends PLL_Admin_Filters_Columns {
 	 * @param string $column column name
 	 * @param int $object_id id of the current object in row
 	 */
-	protected function _column($type, $column, $object_id) {
+	protected function _column($type, $column, $object_id, $custom_data = NULL) {
 		$action = 'post' == $type ? 'inline-save' : 'inline-save-tax';
 		$inline = defined('DOING_AJAX') && $_REQUEST['action'] == $action && isset($_POST['inline_lang_choice']);
 		$lang = $inline ?
 			$this->model->get_language($_POST['inline_lang_choice']) :
-			call_user_func(array($this->model, 'get_' . $type . '_language'), $object_id);
+			$type == 'post' ? PLL()->model->post->get_language($object_id) : PLL()->model->term->get_language($object_id);
 
 		if (false === strpos($column, 'language_') || !$lang) {
-			return '';
-    }
+			if ($custom_data) {
+				return $custom_data;
+			}
+			else {
+				return '';
+			}
+		}
 
 		$language = $this->model->get_language(substr($column, 9));
 
@@ -82,44 +88,64 @@ class Lingotek_Filters_Columns extends PLL_Admin_Filters_Columns {
 		// hidden field containing the post language for quick edit (used to filter categories since Polylang 1.7)
 		if ($column == $this->get_first_language_column()  /*&& !$this->model->get_translation_id('post', $post_id)*/) {
 			printf('<div class="hidden" id="lang_%d">%s</div>', esc_attr($object_id), esc_html($lang->slug));
-    }
+		}
 
 		$id = ($inline && $lang->slug != $this->model->get_language($_POST['old_lang'])->slug) ?
 			($language->slug == $lang->slug ? $object_id : 0) :
-			call_user_func(array($this->model, 'get_' . $type), $object_id, $language);
+			$type == 'post' ? PLL()->model->post->get($object_id, $language) : PLL()->model->term->get($object_id, $language);
 
 		$document = $this->lgtm->get_group($type, $object_id);
+		if (isset($document->source)) {
+			$source_language = $type == 'post' ? PLL()->model->post->get_language($document->source) : PLL()->model->term->get_language($document->source);
+			$source_profile = Lingotek_Model::get_profile($this->content_type, $source_language, $document->source);
+		}
+		else {
+			$source_language = $lang;
+		}
 
 		// FIXME not very clean
 		$actions = 'post' == $type ? $GLOBALS['wp_lingotek']->post_actions : $GLOBALS['wp_lingotek']->term_actions;
 
-		$profile = Lingotek_Model::get_profile($this->content_type, $language);
+		$profile = Lingotek_Model::get_profile($this->content_type, $language, $object_id);
 		$disabled = 'disabled' == $profile['profile'];
 
 		// post ready for upload
 		if ($this->lgtm->can_upload($type, $object_id) && $object_id == $id) {
-			return $disabled ?
-				('post' == $type ? parent::post_column($column, $object_id) 
-          : parent::term_column('', $column, $object_id)) 
-          :	$actions->upload_icon($object_id);
-    }
+			return $disabled ? ('post' == $type ? parent::post_column($column, $object_id) : parent::term_column('', $column, $object_id))
+			: ($document && (count($document->desc_array) >= 3) ? $actions->upload_icon($object_id, true) : $actions->upload_icon($object_id));
+		}
+
+		// if language is set to copy and profile is manual
+		elseif ((isset($source_profile['targets'][$language->slug]) && $source_profile['targets'][$language->slug] == 'copy') || (isset($profile['targets'][$language->slug]) && $profile['targets'][$language->slug] == 'copy') && isset($document->source)) {
+			if (isset($document->desc_array[$language->slug])) {
+				return 'post' == $type ? parent::post_column($column, $object_id) : parent::term_column('', $column, $object_id);
+			}
+			else {
+				if ($document) {
+					return $actions->copy_icon($document->source, $language->slug);
+				}
+				else {
+					return $actions->copy_icon($object_id, $language->slug);
+				}
+			}
+		}
 
 		// translation disabled
-		elseif (isset($document->source) && $document->is_disabled_target($language)) {
+		elseif (isset($document->source) && $document->is_disabled_target($source_language, $language) && !isset($document->translations[$language->locale])) {
 			return 'post' == $type ? parent::post_column($column, $object_id) : parent::term_column('', $column, $object_id);
-    }
+		}
 
 		// source post is uploaded
 		elseif (isset($document->source) && $document->source == $id) {
 			// source ready for upload
 			if ($this->lgtm->can_upload($type, $id)) {
 				return $actions->upload_icon($id);
-      }
+			}
 
 			// importing source
 			if ($id == $object_id && 'importing' == $document->status) {
 				return Lingotek_Actions::importing_icon($document);
-      }
+			}
 
 			// uploaded
 			return 'post' == $type ? Lingotek_Post_actions::uploaded_icon($id) : Lingotek_Term_actions::uploaded_icon($id);
@@ -128,19 +154,21 @@ class Lingotek_Filters_Columns extends PLL_Admin_Filters_Columns {
 		// translations
 		elseif (isset($document->translations[$language->locale]) || (isset($document->source) && 'current' == $document->status)){
 			return Lingotek_Actions::translation_icon($document, $language);
-    }
+		}
+
+		elseif ($type == 'term' && !isset($document->translations[$language->locale]) && $document->source != $object_id) {
+			return parent::term_column('', $column, $object_id);
+		}
 
 		// translations exist but are not managed by Lingotek TMS
 		elseif (empty($document->source)) {
-			return $object_id == $id && !$disabled ? $actions->upload_icon($object_id, true) 
-          : ('post' == $type ? parent::post_column($column, $object_id) 
-          : parent::term_column('', $column, $object_id));
-    }
+			return $object_id == $id && !$disabled ? $actions->upload_icon($object_id, true) : ('post' == $type ? parent::post_column($column, $object_id) : parent::term_column('', $column, $object_id));
+		}
 
 		// no translation
 		else {
 			return  '<div class="lingotek-color dashicons dashicons-no"></div>';
-    }
+		}
 	}
 
 	/*
@@ -154,7 +182,18 @@ class Lingotek_Filters_Columns extends PLL_Admin_Filters_Columns {
 	 */
 	public function post_column($column, $post_id) {
 		$this->content_type = get_post_type($post_id);
+
 		echo $this->_column('post', $column, $post_id);
+
+		// checking for api errors
+		$document = $this->lgtm->get_group('post', $post_id);
+		if (isset($document->source)) {
+			$source_language = PLL()->model->post->get_language($document->source);
+			$this->error_icon_html($column, $post_id, $source_language->locale);
+		}
+		else {
+			$this->error_icon_html($column, $post_id);
+		}
 	}
 
 	/*
@@ -167,8 +206,37 @@ class Lingotek_Filters_Columns extends PLL_Admin_Filters_Columns {
 	 * @param string $column column name
 	 * @param int term_id
 	 */
-	public function term_column($empty, $column, $term_id) {
+	public function term_column($custom_data, $column, $term_id) {
 		$this->content_type = $GLOBALS['taxonomy'];
-		return $this->_column('term', $column, $term_id);
+		if (!$custom_data) {
+			echo $this->_column('term', $column, $term_id);
+		}
+		else {
+			echo $this->_column('term', $column, $term_id, $custom_data);
+		}
+		// checking for api errors
+		$this->error_icon_html($column, $term_id);
+	}
+
+	/*
+	 * checks for errors in the lingotek_log_errors option and displays an icon
+	 *
+	 * @since 1.2
+	 *
+	 * @param string $column
+	 * @param string $object_id
+	 */
+	protected function error_icon_html($column, $object_id, $source_locale = null) {
+		// checking for api errors
+		$source_column = substr($column, 9);
+		$column_language_only = substr($column, 0, 11);
+		$errors = get_option('lingotek_log_errors');
+
+		if ($source_column == $source_locale) {
+			if (isset($errors[$object_id])) {
+				$api_error = Lingotek_Actions::retrieve_api_error($errors[$object_id]);
+				echo Lingotek_Actions::display_error_icon('error', $api_error);
+			}
+		}
 	}
 }

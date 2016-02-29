@@ -3,34 +3,34 @@
 $setting_details = array(
   'download_post_status' => array(
     'type' => 'dropdown',
-    'label' => __('Download translation status', 'wp-lingotek'),
-    'description' => __('The post status for newly downloaded translations', 'wp-lingotek'),
+    'label' => __('Download translation status', 'lingotek-translation'),
+    'description' => __('The post status for newly downloaded translations', 'lingotek-translation'),
     'values' => array(
-      Lingotek_Group_Post::SAME_AS_SOURCE => __('Same as source post', 'wp-lingotek'),
-      'draft' => __('Draft', 'wp-lingotek'),
-      'pending' => __('Pending Review', 'wp-lingotek'),
-      'publish' => __('Published', 'wp-lingotek'),
-      //'future' => __('Scheduled', 'wp-lingotek'),
-      'private' => __('Privately Published', 'wp-lingotek'),
+      Lingotek_Group_Post::SAME_AS_SOURCE => __('Same as source post', 'lingotek-translation'),
+      'draft' => __('Draft', 'lingotek-translation'),
+      'pending' => __('Pending Review', 'lingotek-translation'),
+      'publish' => __('Published', 'lingotek-translation'),
+      //'future' => __('Scheduled', 'lingotek-translation'),
+      'private' => __('Privately Published', 'lingotek-translation'),
     )),
   'auto_upload_post_statuses' => array( // blacklist
     'type' => 'checkboxes',
-    'label' => __('Auto upload statuses', 'wp-lingotek'),
-    'description' => __('The post statuses checked above are enabled for automatic upload (when using automatic uploading translation profiles).', 'wp-lingotek'),
+    'label' => __('Auto upload statuses', 'lingotek-translation'),
+    'description' => __('The post statuses checked above are enabled for automatic upload (when using automatic uploading translation profiles).', 'lingotek-translation'),
     'values' => array(
-      'draft' => __('Draft', 'wp-lingotek'),
-      'pending' => __('Pending Review', 'wp-lingotek'),
-      'publish' => __('Published', 'wp-lingotek'),
-      'future' => __('Scheduled', 'wp-lingotek'),
-      'private' => __('Privately Published', 'wp-lingotek'),
+      'draft' => __('Draft', 'lingotek-translation'),
+      'pending' => __('Pending Review', 'lingotek-translation'),
+      'publish' => __('Published', 'lingotek-translation'),
+      'future' => __('Scheduled', 'lingotek-translation'),
+      'private' => __('Privately Published', 'lingotek-translation'),
     )
   ),
   'delete_document_from_tms' => array(
     'type' => 'checkboxes',
-    'label' => __('Disassociation', 'wp-lingotek'),
-    'description' => __('Your documents will remain in your WordPress site but will be deleted from the Lingotek TMS if this option is checked.', 'wp-lingotek'),
+    'label' => __('Disassociation', 'lingotek-translation'),
+    'description' => __('Your documents will remain in your WordPress site but will be deleted from the Lingotek TMS if this option is checked.', 'lingotek-translation'),
     'values' => array(
-      'delete' => __('Delete documents from Lingotek TMS when disassociating.', 'wp-lingotek'),
+      'delete' => __('Delete documents from Lingotek TMS when disassociating.', 'lingotek-translation'),
     )
   ),
 );
@@ -50,7 +50,7 @@ if (!empty($_POST)) {
   }
   update_option('lingotek_prefs', $options);
 
-  add_settings_error('lingotek_prefs', 'prefs', __('Your preferences were successfully updated.', 'wp-lingotek'), 'updated');
+  add_settings_error('lingotek_prefs', 'prefs', __('Your preferences were successfully updated.', 'lingotek-translation'), 'updated');
   settings_errors();
 }
 
@@ -58,8 +58,8 @@ $selected_options = Lingotek_Model::get_prefs();
 
 ?>
 
-<h3><?php _e('Preferences', 'wp-lingotek'); ?></h3>
-<p class="description"><?php _e('These are your preferred settings.', 'wp-lingotek'); ?></p>
+<h3><?php _e('Preferences', 'lingotek-translation'); ?></h3>
+<p class="description"><?php _e('These are your preferred settings.', 'lingotek-translation'); ?></p>
 
 
 <form id="lingotek-settings" method="post" action="admin.php?page=<?php echo $page_key; ?>" class="validate">
@@ -93,5 +93,5 @@ $selected_options = Lingotek_Model::get_prefs();
       </tr><?php } ?>
   </table>
 
-<?php submit_button(__('Save Changes', 'wp-lingotek'), 'primary', 'submit', false); ?>
+<?php submit_button(__('Save Changes', 'lingotek-translation'), 'primary', 'submit', false); ?>
 </form>

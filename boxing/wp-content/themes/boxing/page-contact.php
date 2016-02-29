@@ -95,7 +95,10 @@ function facebook_pixel(){
 add_action( 'wp_head', 'add_google_map_contact', 0 );
 add_action( 'wp_head', 'facebook_pixel', 10 );
 
-$lang = get_bloginfo('language_code');
+$lang = $_GET['lang'];
+if (!$lang) {
+    $lang = 'ja';
+}
 ?>
 
 <?php get_header(); ?>

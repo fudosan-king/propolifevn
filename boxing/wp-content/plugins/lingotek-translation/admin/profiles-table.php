@@ -41,8 +41,8 @@ class Lingotek_Profiles_Table extends WP_List_Table {
 	 */
 	function column_usage($item){
 		return empty($item['usage']) ?
-			__('No content types', 'wp-lingotek') :
-			sprintf(_n('1 content type', '%d content types', $item['usage'], 'wp-lingotek'), number_format_i18n($item['usage']));
+			__('No content types', 'lingotek-translation') :
+			sprintf(_n('1 content type', '%d content types', $item['usage'], 'lingotek-translation'), number_format_i18n($item['usage']));
 	}
 
 	/*
@@ -59,16 +59,16 @@ class Lingotek_Profiles_Table extends WP_List_Table {
 		if ('disabled' != $item['profile'])
 			$actions[] = sprintf(
 				'<a href=%s>%s</a>',
-				esc_url(admin_url('admin.php?page=wp-lingotek_settings&sm=edit-profile&profile='.$item['profile'])),
-				__('Edit', 'wp-lingotek')
+				esc_url(admin_url('admin.php?page=lingotek-translation_manage&sm=edit-profile&profile='.$item['profile'])),
+				__('Edit', 'lingotek-translation')
 			);
 
 		if (!in_array($item['profile'], array('automatic', 'manual', 'disabled')) && empty($item['usage']))
 			$actions[] = sprintf(
 				'<a href="%s" onclick = "return confirm(\'%s\');">%s</a>',
-				esc_url(wp_nonce_url('admin.php?page=wp-lingotek_settings&sm=profiles&lingotek_action=delete-profile&noheader=true&profile='.$item['profile'], 'delete-profile')),
-				__('You are about to permanently delete this profile. Are you sure?', 'wp-lingotek'),
-				__('Delete', 'wp-lingotek')
+				esc_url(wp_nonce_url('admin.php?page=lingotek-translation_manage&sm=profiles&lingotek_action=delete-profile&noheader=true&profile='.$item['profile'], 'delete-profile')),
+				__('You are about to permanently delete this profile. Are you sure?', 'lingotek-translation'),
+				__('Delete', 'lingotek-translation')
 			);
 
 		return implode(' | ', $actions);
@@ -83,9 +83,9 @@ class Lingotek_Profiles_Table extends WP_List_Table {
 	 */
 	function get_columns() {
 		return array(
-			'name' => __('Profile name', 'wp-lingotek'),
-			'usage'   => __('Usage', 'wp-lingotek'),
-			'actions' => __('Actions', 'wp-lingotek'),
+			'name' => __('Profile name', 'lingotek-translation'),
+			'usage'   => __('Usage', 'lingotek-translation'),
+			'actions' => __('Actions', 'lingotek-translation'),
 		);
 	}
 

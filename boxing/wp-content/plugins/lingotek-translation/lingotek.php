@@ -2,23 +2,23 @@
 /*
 Plugin name: Lingotek Translation
 Plugin URI: http://lingotek.com/wordpress#utm_source=wpadmin&utm_medium=plugin&utm_campaign=wplingotektranslationplugin
-Version: 1.0.3
+Version: 1.1.11
 Author: Lingotek and Frédéric Demarle
 Author uri: http://lingotek.com
 Description: Lingotek offers convenient cloud-based localization and translation.
-Text Domain: wp-lingotek
+Text Domain: lingotek-translation
 Domain Path: /languages
-GitHub Plugin URI: https://github.com/lingotek/wp-lingotek
+GitHub Plugin URI: https://github.com/lingotek/lingotek-translation
 */
 
 // don't access directly
 if (!function_exists('add_action'))
 	exit();
 
-define('LINGOTEK_VERSION', '1.0.3'); // plugin version (should match above meta)
-define('LINGOTEK_MIN_PLL_VERSION', '1.7.4.2');
+define('LINGOTEK_VERSION', '1.1.11'); // plugin version (should match above meta)
+define('LINGOTEK_MIN_PLL_VERSION', '1.8');
 define('LINGOTEK_BASENAME', plugin_basename(__FILE__)); // plugin name as known by WP
-define('LINGOTEK_PLUGIN_SLUG', 'wp-lingotek');// plugin slug (should match above meta: Text Domain)
+define('LINGOTEK_PLUGIN_SLUG', 'lingotek-translation');// plugin slug (should match above meta: Text Domain)
 define('LINGOTEK_DIR', dirname(__FILE__)); // our directory
 define('LINGOTEK_INC', LINGOTEK_DIR . '/include');
 define('LINGOTEK_ADMIN_INC',  LINGOTEK_DIR . '/admin');
@@ -114,6 +114,11 @@ class Lingotek {
 		if (!get_option('lingotek_token')) {
 			add_action('init', array(&$this, 'lingotek_activation_pointer'));
 		}
+
+		// adds extra plugin compatibility - borrowed from Polylang
+		if (!defined('LINGOTEK_PLUGINS_COMPAT') || LINGOTEK_PLUGINS_COMPAT) {
+			Lingotek_Plugins_Compat::instance();
+		}
 	}
 
 	/**
@@ -195,19 +200,19 @@ class Lingotek {
 			$profiles = array(
 				'automatic' => array(
 					'profile'  => 'automatic',
-					'name'     => __('Automatic', 'wp-lingotek'),
+					'name'     => __('Automatic', 'lingotek-translation'),
 					'upload'   => 'automatic',
 					'download' => 'automatic'
 				),
 				'manual' => array(
 					'profile'  => 'manual',
-					'name'     => __('Manual', 'wp-lingotek'),
+					'name'     => __('Manual', 'lingotek-translation'),
 					'upload'   => 'manual',
 					'download' => 'manual'
 				),
 				'disabled' => array(
 					'profile'  => 'disabled',
-					'name'     => __('Disabled', 'wp-lingotek'),
+					'name'     => __('Disabled', 'lingotek-translation'),
 				),
 			);
 			update_option('lingotek_profiles', $profiles);
@@ -226,16 +231,42 @@ class Lingotek {
 	 * @return array
 	 */
 	public static function get_profiles() {
+		$default_profiles = array(
+			'automatic' => array(
+				'profile'  => 'automatic',
+				'name'     => __('Automatic', 'lingotek-translation'),
+				'upload'   => 'automatic',
+				'download' => 'automatic'
+			),
+			'manual' => array(
+				'profile'  => 'manual',
+				'name'     => __('Manual', 'lingotek-translation'),
+				'upload'   => 'manual',
+				'download' => 'manual'
+			),
+			'disabled' => array(
+				'profile'  => 'disabled',
+				'name'     => __('Disabled', 'lingotek-translation'),
+			),
+		);
+
 		$profiles = get_option('lingotek_profiles');
+		if (is_array($profiles)) {
+			$profiles = array_merge($default_profiles, $profiles);
+		}
+		else {
+			$profiles = $default_profiles;
+		}
 
 		//localize canned profile names
 		foreach($profiles as $k=>$v){
 			if(in_array($k,array('automatic','manual','disabled'))){
 				$profile_name = $profiles[$k]['name'];
-				$profiles[$k]['name'] = __($profile_name,'wp-lingotek');// localize canned profile names
+				$profiles[$k]['name'] = __($profile_name,'lingotek-translation');// localize canned profile names
 			}
 		}
 
+		update_option('lingotek_profiles', $profiles);
 		return $profiles;
 	}
 
@@ -300,7 +331,7 @@ class Lingotek {
 	 * @return string modified class 'PLL_Model' | 'PLL_Admin_Model'
 	 */
 	public function pll_model($class) {
-		if (PLL_ADMIN && isset($_GET['page']) && in_array($_GET['page'], array('wp-lingotek', 'wp-lingotek_manage', 'wp-lingotek_settings', 'wp-lingotek_network')))
+		if (PLL_ADMIN && isset($_GET['page']) && in_array($_GET['page'], array('lingotek-translation', 'lingotek-translation_manage', 'lingotek-translation_settings', 'lingotek-translation_network')))
 			return 'PLL_Admin_Model';
 		return $class;
 	}
@@ -357,7 +388,7 @@ class Lingotek {
 	 */
 	public function admin_init() {
 		// plugin i18n, only needed for backend
-		load_plugin_textdomain('wp-lingotek', false, basename(LINGOTEK_DIR).'/languages');
+		load_plugin_textdomain('lingotek-translation', false, basename(LINGOTEK_DIR).'/languages');
 
 		if (!defined('POLYLANG_VERSION'))
 			add_action('all_admin_notices', array(&$this, 'pll_inactive_notice'));
@@ -377,9 +408,21 @@ class Lingotek {
 	 * @since 0.1
 	 */
 	public function pll_inactive_notice() {
+		$action = 'install-plugin';
+		$slug = 'polylang';
+		$url = wp_nonce_url(
+		    add_query_arg(
+		        array(
+		            'action' => $action,
+		            'plugin' => $slug
+		        ),
+		        admin_url( 'update.php' )
+		    ),
+		    $action.'_'.$slug
+		);
 		printf(
-			'<div class="error"><p>%s</p></div>',
-			__('Lingotek Translation requires Polylang to work. Please install Polylang.', 'wp-lingotek')
+			'<div class="error" style="height:55px"><p style="font-size:1.5em">%s<a href="%s">%s</a></p></div>',
+			__('Lingotek Translation requires Polylang to work. ', 'lingotek-translation'), $url, __('Install Polylang', 'lingotek-translation')
 		);
 	}
 
@@ -392,7 +435,7 @@ class Lingotek {
 		printf(
 			'<div class="error"><p>%s</p></div>',
 			sprintf(
-				__('Lingotek Translation requires Polylang %s to work. Please upgrade Polylang.', 'wp-lingotek'),
+				__('Lingotek Translation requires Polylang %s to work. Please upgrade Polylang.', 'lingotek-translation'),
 				'<strong>' . LINGOTEK_MIN_PLL_VERSION . '</strong>'
 			)
 		);
@@ -513,51 +556,33 @@ class Lingotek {
 	 * @since 1.0.1
 	 */
 	public function lingotek_activation_pointer() {
-		$content = __('You’ve just installed Lingotek Translation! Click below to activate your account and automatically translate your website for free!', 'wp-lingotek');
+		$content = __('You’ve just installed Lingotek Translation! Click below to activate your account and automatically translate your website for free!', 'lingotek-translation');
 
 		$buttons = array(
 			array(
 				'label' => __('Close')
 			),
 			array(
-				'label' => __('Activate Account', 'wp-lingotek'),
+				'label' => __('Activate Account', 'lingotek-translation'),
 				'link' => admin_url('admin.php?page=' . $this->plugin_slug . '_settings&connect=new'),
 			)
 		);
 
 		$args = array(
-			'pointer' => 'wp-lingotek',
-			'id' => 'toplevel_page_wp-lingotek',
+			'pointer' => 'lingotek-translation',
+			'id' => 'toplevel_page_lingotek-translation',
 			'position' => array(
 				'edge' => 'bottom',
 				'align' => 'left',
 			),
 			'width' => 380,
-			'title' => __('Congratulations!', 'wp-lingotek'),
+			'title' => __('Congratulations!', 'lingotek-translation'),
 			'content' => $content,
 			'buttons' => $buttons
 		);
 
 		new Lingotek_Pointer($args);
 	}
-}
-
-// Helpers - development functions
-if (!function_exists('dc')) {
-  function dc($data, $label = NULL, $die = FALSE) {
-    echo '<pre style="background: #f3f3f3; color: #000">';
-    if (is_string($label))
-      echo '<h1>' . $label . '</h1>';
-    print_r($data);
-    echo '</pre>';
-    if ($die || (is_bool($label) && $label))
-      die();
-  }
-}
-if (!function_exists('dd')) {
-  function dd($data, $label = NULL, $die = FALSE) {
-    return dc($data, $label, TRUE);
-  }
 }
 
 $GLOBALS['wp_lingotek'] = Lingotek::get_instance();

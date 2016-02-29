@@ -11,7 +11,10 @@
 ?><!DOCTYPE html>
 <?php
 $template_directory = str_replace("twentyfifteen", "boxing", get_template_directory_uri());
-$lang = get_bloginfo('language_code');
+$lang = $_GET['lang'];
+if (!$lang) {
+    $lang = 'ja';
+}
 ?>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -44,11 +47,11 @@ $lang = get_bloginfo('language_code');
             <meta name="description" content="“samurai-boxing-gym.vn” là wedsite chính thức của câu lạc bộ quyền anh Samurai đến từ Nhật Bản, có trụ sở tại thành phố Hồ Chí Minh. Nếu bạn đang có dự định bắt đầu thử sức với một môn thể thao nào đó với mục tiêu mong muốn là một thân hình lí tưởng, gọn gàng, săn chắc; hoặc là bạn ước mơ trở thành một võ sĩ quyền anh chuyên nghiệp… Hãy liên hệ với chúng tôi. Tuổi tác, giới tính hoàn toàn không phải là vấn đề đối với môn thể thao quyền anh này. Vì vậy, hãy đừng do dự mà tham gia vào môn thể thao yêu thích của bạn ngay bây giờ nhé!!!">
             <meta name="keywords" content="samurai boxing gym, ho chi minh, viet nam, thể hình, thể thao thể hình, fitness, câu lạc bộ fitness">
         <?php  } else if ($lang == 'ja') { ?>
-            <title>サムライボクシングジム【公式】ホーチミン市スポーツジムでフィットネスをお考えなら</title>
-            <meta property="og:title" content="サムライボクシングジム【公式】ホーチミン市スポーツジムでフィットネスをお考えなら">
+            <title>サムライボクシングジム【公式】ジムやフィットネスをお考えなら</title>
+            <meta property="og:title" content="サムライボクシングジム【公式】ジムやフィットネスをお考えなら">
             <meta property="og:description" content="女性コースも充実。日本で人気の消費カロリーが高いボクシングエクササイズとスポーツジムの効率的なフィットネスバイク、ランニングマシン、ウェイトマシンでのトレーニングをベトナムホーチミン市でもご提供しております。">
             <meta name="description" content="女性コースも充実。日本で人気の消費カロリーが高いボクシングエクササイズとスポーツジムの効率的なフィットネスバイク、ランニングマシン、ウェイトマシンでのトレーニングをベトナムホーチミン市でもご提供しております。">
-            <meta name="keywords" content="ホーチミン,ジム,スポーツジム,フィットネス,サムライボクシングジム,ダイエット,ボクシング,ベトナム,公園,駐在,">
+            <meta name="keywords" content="ホーチミン,ジム,スポーツジム,フィットネス,サムライボクシングジム,ベトナム,公園,駐在">
         <?php } else { ?>
             <title>Boxing Exercise In HCMC | Samurai Boxing Gym</title>
             <meta property="og:title" content="Boxing Exercise In HCMC | Samurai Boxing Gym">

@@ -72,23 +72,23 @@ class Lingotek_API extends Lingotek_HTTP {
 	 *
 	 * @param string $title
 	 */
-        public function create_project($title, $community_id) {
-                $args = array(
-                    'title' => $title,
-                    'community_id' => $community_id,
-                    'workflow_id' => $this->defaults['workflow_id'],
-                    'callback_url' => add_query_arg('lingotek', 1, site_url()),
-                );
+	public function create_project($title, $community_id) {
+		$args = array(
+			'title' => $title,
+			'community_id' => $community_id,
+			'workflow_id' => $this->defaults['workflow_id'],
+			'callback_url' => add_query_arg('lingotek', 1, site_url()),
+		);
 
-                $response = $this->post($this->api_url . '/project', $args);
-                if(!is_wp_error($response) && 201 == wp_remote_retrieve_response_code($response)) {
-                    $new_id = json_decode(wp_remote_retrieve_body($response));
-                    return $new_id->properties->id;
-                }
-                else {
-                    return false;
-                }
-        }
+		$response = $this->post($this->api_url . '/project', $args);
+		if(!is_wp_error($response) && 201 == wp_remote_retrieve_response_code($response)) {
+			$new_id = json_decode(wp_remote_retrieve_body($response));
+			return $new_id->properties->id;
+		}
+		else {
+			return false;
+		}
+	}
 
 	/*
 	 * uploads a document
@@ -98,11 +98,29 @@ class Lingotek_API extends Lingotek_HTTP {
 	 * @param array $args expects array with title, content and locale_code
 	 * @returns bool|string document_id, false if something got wrong
 	 */
-	public function upload_document($args) {
+	public function upload_document($args, $wp_id = null) {
 		$args = wp_parse_args($args, array('format' => 'JSON', 'project_id' => $this->defaults['project_id'], 'workflow_id' => $this->defaults['workflow_id']));
-
 		$this->format_as_multipart($args);
 		$response = $this->post($this->api_url . '/document', $args);
+
+		if ($wp_id){
+			$arr = get_option('lingotek_log_errors');
+
+			if (202 == wp_remote_retrieve_response_code($response)) {
+				if (isset($arr[$wp_id])) {
+					unset($arr[$wp_id]);
+				}
+			}
+			else if (is_wp_error($response)) {
+				$arr[$wp_id]['wp_error'] = __('Make sure you have internet connectivity', 'lingotek-translation');
+			}
+			else if (400 == wp_remote_retrieve_response_code($response)) {
+				$arr[$wp_id]['upload_document'] = sprintf(
+					__('There was an error uploading WordPress item %1$s', 'lingotek-translation'), $wp_id
+				);
+			}
+			update_option('lingotek_log_errors', $arr);
+		}
 
 		if (!is_wp_error($response) && 202 == wp_remote_retrieve_response_code($response)) {
 			$b = json_decode(wp_remote_retrieve_body($response));
@@ -120,10 +138,30 @@ class Lingotek_API extends Lingotek_HTTP {
 	 * @param array $args expects array with content
 	 * @return bool false if something got wrong
 	 */
-	public function patch_document($id, $args) {
+	public function patch_document($id, $args, $wp_id = null) {
 		$args = wp_parse_args($args, array('format' => 'JSON'));
 		$this->format_as_multipart($args);
 		$response = $this->patch($this->api_url . '/document/' . $id, $args);
+
+		if ($wp_id) {
+			$arr = get_option('lingotek_log_errors');
+
+			if (202 == wp_remote_retrieve_response_code($response)) {
+				if (isset($arr[$wp_id])) {
+					unset($arr[$wp_id]);
+				}
+			}
+			else if (is_wp_error($response)) {
+				$arr[$wp_id]['wp_error'] = __('Make sure you have internet connectivity', 'lingotek-translation');
+			}
+			else if (400 == wp_remote_retrieve_response_code($response) || 404 == wp_remote_retrieve_response_code($response)) {
+				$arr[$wp_id]['patch_document'] = sprintf(
+					__('There was an error updating WordPress item %1$s', 'lingotek-translation') ,$wp_id
+				);
+			}
+			update_option('lingotek_log_errors', $arr);
+		}
+
 		return !is_wp_error($response) && 202 == wp_remote_retrieve_response_code($response);
 	}
 
@@ -134,8 +172,17 @@ class Lingotek_API extends Lingotek_HTTP {
 	 *
 	 * @param string $id document id
 	 */
-	public function delete_document($id) {
+	public function delete_document($id, $wp_id = null) {
 		$response = $this->delete($this->api_url . '/document/' . $id);
+
+		if ($wp_id) {
+			$arr = get_option('lingotek_log_errors');
+			if (isset($arr[$wp_id])) {
+				unset($arr[$wp_id]);
+				update_option('lingotek_log_errors', $arr);
+			}
+		}
+
 		return !is_wp_error($response) && 204 == wp_remote_retrieve_response_code($response);
 	}
 
@@ -166,8 +213,28 @@ class Lingotek_API extends Lingotek_HTTP {
 	 * @param string $id document id
 	 * @return bool
 	 */
-	public function document_exists($id) {
-		$response = $this->get($this->api_url . '/document/' . $id);
+	public function document_exists($doc_id, $wp_id = null) {
+		$response = $this->get($this->api_url . '/document/' . $doc_id);
+
+		if ($wp_id) {
+			$arr = get_option('lingotek_log_errors');
+
+			if (200 == wp_remote_retrieve_response_code($response)) {
+				if (isset($arr[$wp_id])) {
+					unset($arr[$wp_id]	);
+				}
+			}
+			else if (is_wp_error($response)) {
+				$arr[$wp_id]['wp_error'] = __('Make sure you have internet connectivity', 'lingotek-translation');
+			}
+			else if (400 == wp_remote_retrieve_response_code($response)) {
+				$arr[$wp_id]['document_exists'] = sprintf(
+					__('There was an error updating the translations status for WordPress item %1$s', 'lingotek-translation'), $wp_id
+				);
+			}
+			update_option('lingotek_log_errors', $arr);
+		}
+
 		return !is_wp_error($response) && 200 == wp_remote_retrieve_response_code($response);
 	}
 
@@ -179,13 +246,32 @@ class Lingotek_API extends Lingotek_HTTP {
 	 * @param string $id document id
 	 * @return array with locale as key and status as value
 	 */
-	public function get_translations_status($id) {
-		$response = $this->get($this->api_url . '/document/' . $id . '/translation');
+	public function get_translations_status($doc_id, $wp_id = null) {
+		$response = $this->get($this->api_url . '/document/' . $doc_id . '/translation');
 		if (!is_wp_error($response) && 200 == wp_remote_retrieve_response_code($response)) {
 			$b = json_decode(wp_remote_retrieve_body($response));
 			foreach ($b->entities as $e) {
 				$translations[$e->properties->locale_code] = $e->properties->percent_complete;
 			}
+		}
+
+		if($wp_id) {
+			$arr = get_option('lingotek_log_errors');
+
+			if (200 == wp_remote_retrieve_response_code($response)) {
+				if (isset($arr[$wp_id])) {
+					unset($arr[$wp_id]);
+				}
+			}
+			else if (is_wp_error($response)) {
+				$arr[$wp_id]['wp_error'] = __('Make sure you have internet connectivity', 'lingotek-translation');
+			}
+			else if (400 == wp_remote_retrieve_response_code($response)) {
+				$arr[$wp_id]['get_translations_status'] = sprintf(
+					__('There was an error updating the translations status for WordPress item %1$s', 'lingotek-translation'), $wp_id
+				);
+			}
+			update_option('lingotek_log_errors', $arr);
 		}
 
 		return empty($translations) ? array() : $translations;
@@ -201,10 +287,34 @@ class Lingotek_API extends Lingotek_HTTP {
 	 * @param array $args optional arguments (only workflow_id at the moment)
 	 * @return bool true if the request succeeded
 	 */
-	public function request_translation($id, $locale, $args = array()) {
+	public function request_translation($id, $locale, $args = array(), $wp_id = null) {
 		$args = wp_parse_args($args, array('workflow_id' => $this->defaults['workflow_id']));
 		$args = array_merge(array('locale_code' => $locale), $args);
 		$response = $this->post($this->api_url . '/document/' . $id . '/translation', $args);
+
+		if ($wp_id) {
+			$arr = get_option('lingotek_log_errors');
+
+			if (201 == wp_remote_retrieve_response_code($response)) {
+				if (isset($arr[$wp_id])) {
+					unset($arr[$wp_id]['wp_error']);
+					unset($arr[$wp_id]['request_translation'][$locale]);
+					if (empty($arr[$wp_id])){
+						unset($arr[$wp_id]);
+					}
+				}
+			}
+			else if (is_wp_error($response)) {
+				$arr[$wp_id]['wp_error'] = __('Make sure you have internet connectivity', 'lingotek-translation');
+			}
+			else if (400 == wp_remote_retrieve_response_code($response) || 404 == wp_remote_retrieve_response_code($response)) {
+				$arr[$wp_id]['request_translation'][$locale] = sprintf(
+					__('There was an error requesting translation %1$s for WordPress item %2$s', 'lingotek-translation'), $locale, $wp_id
+				);
+			}
+			update_option('lingotek_log_errors', $arr);
+		}
+
 		return !is_wp_error($response) && 201 == wp_remote_retrieve_response_code($response);
 	}
 
@@ -217,8 +327,32 @@ class Lingotek_API extends Lingotek_HTTP {
 	 * @param string $locale Lingotek locale
 	 * @return string|bool the translation, false if there is none
 	 */
-	public function get_translation($id, $locale) {
-		$response = $this->get(add_query_arg(array('locale_code' => $locale, 'auto_format' => 'true') , $this->api_url . '/document/' . $id . '/content'));
+	public function get_translation($doc_id, $locale, $wp_id = null) {
+		$response = $this->get(add_query_arg(array('locale_code' => $locale, 'auto_format' => 'true') , $this->api_url . '/document/' . $doc_id . '/content'));
+
+		if ($wp_id) {
+			$arr = get_option('lingotek_log_errors');
+
+			if (200 == wp_remote_retrieve_response_code($response)) {
+				if (isset($arr[$wp_id])) {
+					unset($arr[$wp_id]['wp_error']);
+					unset($arr[$wp_id]['get_translation'][$locale]);
+					if (empty($arr[$wp_id])) {
+						unset($arr[$wp_id]);
+					}
+				}
+			}
+			else if (is_wp_error($response)) {
+				$arr[$wp_id]['wp_error'] = __('Make sure you have internet connectivity', 'lingotek-translation');
+			}
+			else if (400 == wp_remote_retrieve_response_code($response) || 404 == wp_remote_retrieve_response_code($response)) {
+				$arr[$wp_id]['get_translation'][$locale] = sprintf(
+					__('There was an error downloading translation %1$s for WordPress item %2$s'), $locale, $wp_id
+				);
+			}
+			update_option('lingotek_log_errors', $arr);
+		}
+
 		return !is_wp_error($response) && 200 == wp_remote_retrieve_response_code($response) ? wp_remote_retrieve_body($response) : false;
 	}
 
@@ -230,8 +364,16 @@ class Lingotek_API extends Lingotek_HTTP {
 	 * @param string $id document id
 	 * @param string $locale Lingotek locale
 	 */
-	public function delete_translation($id, $locale) {
+	public function delete_translation($id, $locale, $wp_id = null) {
 		$response = $this->delete($this->api_url . '/document/' . $id . '/translation/' . $locale);
+
+		if ($wp_id) {
+			$arr = get_option('lingotek_log_errors');
+			if (isset($arr[$wp_id])) {
+				unset($arr[$wp_id]);
+				update_option('lingotek_log_errors', $arr);
+			}
+		}
 		// FIXME send a response
 	}
 
@@ -265,7 +407,7 @@ class Lingotek_API extends Lingotek_HTTP {
 	public function get_projects($community_id) {
 		$response = $this->get(add_query_arg(array('community_id' => $community_id, 'limit' => 100), $this->api_url . '/project'));
 		if (wp_remote_retrieve_response_code($response) == 204) {
-			return 'empty';
+			return array();// there are currently no projects
 		}
 		return !is_wp_error($response) && 200 == wp_remote_retrieve_response_code($response) ? json_decode(wp_remote_retrieve_body($response)) : false;
 	}

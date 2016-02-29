@@ -41,10 +41,10 @@ class Lingotek_Group_Term extends Lingotek_Group {
 	 */
 	static public function get_content_type_fields($taxonomy) {
 		$arr = array(
-			'name' => __('Name', 'wp-lingotek'),
+			'name' => __('Name', 'lingotek-translation'),
 			'args' => array(
-				'slug'        => __('Slug', 'wp-lingotek'),
-				'description' => __('Description', 'wp-lingotek')
+				'slug'        => __('Slug', 'lingotek-translation'),
+				'description' => __('Description', 'lingotek-translation')
 			)
 		);
 
@@ -86,7 +86,7 @@ class Lingotek_Group_Term extends Lingotek_Group {
 	 */
 	public function request_translations() {
 		if (isset($this->source)) {
-			$language = $this->pllm->get_term_language((int) $this->source);
+			$language = PLL()->model->term->get_language((int) $this->source);
 			$this->_request_translations($language);
 		}
 	}
@@ -102,7 +102,7 @@ class Lingotek_Group_Term extends Lingotek_Group {
 	public function create_translation($locale) {
 		$client = new Lingotek_API();
 
-		if (false === ($translation = $client->get_translation($this->document_id, $locale)))
+		if (false === ($translation = $client->get_translation($this->document_id, $locale, $this->source)))
 			return;
 
 		self::$creating_translation = true;
@@ -111,7 +111,7 @@ class Lingotek_Group_Term extends Lingotek_Group {
 		$args = $translation['args'];
 
 		// update existing translation
-		if ($tr_id = $this->pllm->get_term($this->source, $locale)) {
+		if ($tr_id = PLL()->model->term->get($this->source, $locale)) {
 			$args['name'] = $translation['name'];
 			wp_update_term($tr_id, $this->type, $args);
 
@@ -124,7 +124,7 @@ class Lingotek_Group_Term extends Lingotek_Group {
 
 			// translate parent
 			$term = get_term($this->source, $this->type);
-			$args['parent'] = ($term->parent && $tr_parent = $this->model->get_translation('term', $term->parent, $locale)) ? $tr_parent : 0;
+			$args['parent'] = ($term->parent && $tr_parent = PLL()->model->term->get_translation($term->parent, $locale)) ? $tr_parent : 0;
 
 			// attempt to get a unique slug in case it already exists in another language
 			if (isset($args['slug']) && term_exists($args['slug'])) {
@@ -134,7 +134,7 @@ class Lingotek_Group_Term extends Lingotek_Group {
 			$tr = wp_insert_term($translation['name'], $this->type, $args);
 
 			if (!is_wp_error($tr)) {
-				$this->pllm->set_term_language($tr['term_id'], $tr_lang);
+				PLL()->model->term->set_language($tr['term_id'], $tr_lang);
 				$this->safe_translation_status_update($locale, 'current', array($tr_lang->slug => $tr['term_id']));
 				wp_set_object_terms($tr['term_id'], $this->term_id, 'term_translations');
 			}
@@ -162,6 +162,6 @@ class Lingotek_Group_Term extends Lingotek_Group {
 	 * @return object
 	 */
 	public function get_source_language() {
-		return $this->pllm->get_term_language($this->source);
+		return PLL()->model->term->get_language($this->source);
 	}
 }

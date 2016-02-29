@@ -1,4 +1,10 @@
 <?php
+$client = new Lingotek_API();
+$api_communities = $client->get_communities();
+if (!isset($api_communities->entities)) {
+  add_settings_error('lingotek_community_resources', 'error', __('The Lingotek TMS is currently unavailable. Please try again later. If the problem persists, contact Lingotek Support.', 'lingotek-translation'), 'error');
+  settings_errors();
+}
 if (!$community_id) {
   $ltk_client = new Lingotek_API();
   $ltk_communities = $ltk_client->get_communities();
@@ -6,28 +12,28 @@ if (!$community_id) {
   if ($ltk_num_communities == 1) {
     $ltk_community_id = $ltk_communities->entities[0]->properties->id;
     $this->set_community_resources($ltk_community_id);
-    echo '<script type="text/javascript">document.body.innerHTML = ""; window.location = "admin.php?page=wp-lingotek_tutorial";</script>';
+    echo '<script type="text/javascript">document.body.innerHTML = ""; window.location = "admin.php?page=lingotek-translation_tutorial";</script>';
   }
 }
 ?>
 
-<h3><?php _e('Account', 'wp-lingotek'); ?></h3>
-<p class="description"><?php _e('Lingotek account connection and community selection.', 'wp-lingotek'); ?></p>
+<h3><?php _e('Account', 'lingotek-translation'); ?></h3>
+<p class="description"><?php _e('Lingotek account connection and community selection.', 'lingotek-translation'); ?></p>
 
 <table class="form-table">
   <tr>
     <th scope="row">
-      <?php _e('Connected', 'wp-lingotek') ?>
+      <?php _e('Connected', 'lingotek-translation') ?>
       <a id="cd-show-link" class="dashicons dashicons-arrow-right" onclick="document.getElementById('connection-details').style.display = ''; document.getElementById('cd-hide-link').style.display = ''; this.style.display = 'none'; return false;"></a>
       <a id="cd-hide-link" class="dashicons dashicons-arrow-down" onclick="document.getElementById('connection-details').style.display = 'none'; document.getElementById('cd-show-link').style.display = ''; this.style.display = 'none'; return false;" style="display: none;"></a>
     </th>
     <td>
-        <?php _e('Yes', 'wp-lingotek') ?><span title="<?php _e('Connected', 'wp-lingotek') ?>" class="dashicons dashicons-yes" style="color: green;"></span>
+        <?php _e('Yes', 'lingotek-translation') ?><span title="<?php _e('Connected', 'lingotek-translation') ?>" class="dashicons dashicons-yes" style="color: green;"></span>
     </td>
   </tr>
   <tbody id="connection-details" style="display: none;">
   <tr>
-    <th scope="row"><?php echo __('Login ID', 'wp-lingotek') ?></th>
+    <th scope="row"><?php echo __('Login ID', 'lingotek-translation') ?></th>
     <td>
       <label>
         <?php
@@ -39,7 +45,7 @@ if (!$community_id) {
     </td>
   </tr>
   <tr>
-    <th scope="row"><?php echo __('Access Token', 'wp-lingotek') ?></th>
+    <th scope="row"><?php echo __('Access Token', 'lingotek-translation') ?></th>
     <td>
       <label>
         <?php
@@ -54,7 +60,7 @@ if (!$community_id) {
     </td>
   </tr>
   <tr>
-    <th scope="row"><?php echo __('API Endpoint', 'wp-lingotek') ?></th>
+    <th scope="row"><?php echo __('API Endpoint', 'lingotek-translation') ?></th>
     <td>
       <label>
         <?php
@@ -69,8 +75,8 @@ if (!$community_id) {
     <th></th>
     <td>
       <?php
-        $confirm_message = __('Are you sure you would like to disconnect your Lingotek account? \n\nAfter disconnecting, you will need to re-connect an account to continue using Lingotek.', 'wp-lingotek');
-        echo '<a class="button" href="' . $redirect_url . '&delete_access_token=true" onclick="return confirm(\'' . $confirm_message . '\')">' . __('Disconnect', 'wp-lingotek') . '</a>';
+        $confirm_message = __('Are you sure you would like to disconnect your Lingotek account? \n\nAfter disconnecting, you will need to re-connect an account to continue using Lingotek.', 'lingotek-translation');
+        echo '<a class="button" href="' . $redirect_url . '&delete_access_token=true" onclick="return confirm(\'' . $confirm_message . '\')">' . __('Disconnect', 'lingotek-translation') . '</a>';
         ?>
     </td>
   </tr>
@@ -84,31 +90,31 @@ if (!$community_id) {
 
   <table class="form-table">
     <tr>
-      <th scope="row"><label for="lingotek_community"><?php _e('Community', 'wp-lingotek') ?></label></th>
+      <th scope="row"><label for="lingotek_community"><?php _e('Community', 'lingotek-translation') ?></label></th>
       <td>
         <select name="lingotek_community" id="lingotek_community">
           <?php
           $default_community_id = $community_id;
 
-          $client = new Lingotek_API();
-
           // Community
-          $api_communities = $client->get_communities();
-          $communities = array();
-          foreach ($api_communities->entities as $community) {
-            $communities[$community->properties->id] = $community->properties->title; // . ' (' . $community->properties->id . ')';
-          }
 
-          $num_communities = count($communities);
-          if($num_communities == 1 && !$community_id){
-            update_option('lingotek_community', current(array_keys($communities)));
-          }
-          if(!$community_id && $num_communities > 1) {
-            echo "\n\t" . '<option value="">'.__('Select', 'wp-lingotek').'...</option>';
-          }
-          foreach ($communities as $community_id_option => $community_title) {
-            $selected = ($default_community_id == $community_id_option) ? 'selected="selected"' : '';
-            echo "\n\t" . '<option value="' . esc_attr($community_id_option) . '" '.$selected.'>' . $community_title . '</option>';
+          $communities = array();
+          if (isset($api_communities->entities)) {
+            foreach ($api_communities->entities as $community) {
+              $communities[$community->properties->id] = $community->properties->title; // . ' (' . $community->properties->id . ')';
+            }
+
+            $num_communities = count($communities);
+            if($num_communities == 1 && !$community_id){
+              update_option('lingotek_community', current(array_keys($communities)));
+            }
+            if(!$community_id && $num_communities > 1) {
+              echo "\n\t" . '<option value="">'.__('Select', 'lingotek-translation').'...</option>';
+            }
+            foreach ($communities as $community_id_option => $community_title) {
+              $selected = ($default_community_id == $community_id_option) ? 'selected="selected"' : '';
+              echo "\n\t" . '<option value="' . esc_attr($community_id_option) . '" '.$selected.'>' . $community_title . '</option>';
+            }
           }
           ?>
         </select>
@@ -116,5 +122,5 @@ if (!$community_id) {
     </tr>
   </table>
 
-  <?php submit_button(__('Save Changes', 'wp-lingotek'), 'primary', 'submit', false); ?>
+  <?php submit_button(__('Save Changes', 'lingotek-translation'), 'primary', 'submit', false); ?>
 </form>

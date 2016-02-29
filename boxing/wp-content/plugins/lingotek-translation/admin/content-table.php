@@ -58,7 +58,7 @@ class Lingotek_Content_Table extends WP_List_Table {
 
 			printf('<ul class="sources-name" id="sources-name[%s]" style="display:none;">', $item['type']);
 			foreach ($polylang->model->get_languages_list() as $language) {
-				printf('<li>%s</li>', sprintf(__('%s source', 'wp-lingotek'), esc_html($language->name)));
+				printf('<li>%s</li>', sprintf(__('%s source', 'lingotek-translation'), esc_html($language->name)));
 			}
 			echo '</ul>';
 		}
@@ -82,7 +82,7 @@ class Lingotek_Content_Table extends WP_List_Table {
 		}
 		echo '</select>';
 
-		$options = array_merge(array('default' => array('name' => __('Use content type default', 'wp-lingotek'))), $this->profiles);
+		$options = array_merge(array('default' => array('name' => __('Use content type default', 'lingotek-translation'))), $this->profiles);
 
 		// the source language for strings is always the default language
 		if ('string' != $item['type']) {
@@ -112,6 +112,9 @@ class Lingotek_Content_Table extends WP_List_Table {
 	protected function display_fields($labels, $values, $name) {
 		foreach ($labels as $key => $str) {
 			if (is_array($str)) {
+				if ($key === 'metas') {
+					continue;
+				}
 				$this->display_fields($str, isset($values[$key]) ? $values[$key] : array(), $name . "[$key]");
 			}
 			else {
@@ -150,9 +153,9 @@ class Lingotek_Content_Table extends WP_List_Table {
 	 */
 	function get_columns() {
 		return array(
-			'name'    => __('Content Type', 'wp-lingotek'),
-			'profile' => __('Profile', 'wp-lingotek'),
-			'fields'  => __('Fields', 'wp-lingotek'),
+			'name'    => __('Content Type', 'lingotek-translation'),
+			'profile' => __('Profile', 'lingotek-translation'),
+			'fields'  => __('Fields', 'lingotek-translation'),
 		);
 	}
 

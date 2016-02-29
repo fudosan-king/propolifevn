@@ -5,14 +5,15 @@ Template Name: NewsPage
 ?>
 
 <?php
-$lang = get_bloginfo('language_code');
+$lang = $_GET['lang'];
+if (!$lang) {
+    $lang = 'ja';
+}
 $template_directory = str_replace("twentyfifteen", "boxing", get_template_directory_uri());
 $page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
 $total_item = 10;
 ?>
-
 <?php get_header(); ?>
-
 <?php
     while ( have_posts() ) : the_post();
         the_content();
@@ -56,26 +57,6 @@ $total_item = 10;
         'cat'              => $cat,
         'category'         => '',
         'category_name'    => '',
-        'include'          => '',
-        'exclude'          => '',
-        'meta_key'         => '',
-        'meta_value'       => '',
-        'post_type'        => 'post',
-        'post_mime_type'   => '',
-        'post_parent'      => '',
-        'author'       => '',
-        'post_status'      => 'publish',
-        'suppress_filters' => true
-    );
-
-    $args_recent = array(
-        'cat'              => $cat,
-        'posts_per_page'   => 5,
-        'offset'           => 0,
-        'category'         => '',
-        'category_name'    => '',
-        'orderby'          => 'date',
-        'order'            => 'DESC',
         'include'          => '',
         'exclude'          => '',
         'meta_key'         => '',
@@ -149,55 +130,9 @@ $total_item = 10;
         ';
 
     endif;
-    echo '</div>';
-
-
-    echo '
-        <div class="col-md-4">
-
-        <div class="list-group">
-        <a href="#" class="list-group-item active"><h4 class="list-group-item-heading">最近の投稿</h4></a>
-    ';
-
-    $posts_recents = get_posts( $args_recent );
-    if($posts_recents) {
-        foreach($posts_recents as $posts_recent):
-            $description = substr($posts_recent->post_content, 0, 200);
-            echo '
-            <a href="' . get_bloginfo('siteurl'). '&p='. $posts_recent->ID . '" class="list-group-item">
-            <p class="list-group-item-text">' . $description .'</p>
-            </a>
-            ';
-        endforeach;
-    }
-
-    echo '</div>';
-
-    $args_archives = array(
-        'type'            => 'monthly',
-        'cat'             => $cat,
-        'limit'           => '',
-        'format'          => '',
-        'before'          => '',
-        'after'           => '',
-        'show_post_count' => false,
-        'echo'            => 1,
-        'order'           => 'DESC'
-    );
-
-    echo '
-        <div class="list-group"><a href="#" class="list-group-item active"><h4 class="list-group-item-heading">アーカイブ</h4></a>';
-
-    wp_get_archives_customer( $args_archives );
-
-    echo '</div>';
-
-    echo '</div>';
-
 ?>
-
+</div>
+<div class="col-md-4"><?php get_sidebar('news');?></div>
 </div>
 </div>
-</div>
-
 <?php get_footer(); ?>

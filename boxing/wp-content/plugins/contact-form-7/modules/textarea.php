@@ -28,7 +28,7 @@ function wpcf7_textarea_shortcode_handler( $tag ) {
 	$atts = array();
 
 	$atts['cols'] = $tag->get_cols_option( '40' );
-	$atts['rows'] = $tag->get_rows_option( '5' );
+	$atts['rows'] = $tag->get_rows_option( '10' );
 	$atts['maxlength'] = $tag->get_maxlength_option();
 	$atts['minlength'] = $tag->get_minlength_option();
 
@@ -118,9 +118,7 @@ function wpcf7_textarea_validation_filter( $result, $tag ) {
 
 /* Tag generator */
 
-if ( is_admin() ) {
-	add_action( 'admin_init', 'wpcf7_add_tag_generator_textarea', 20 );
-}
+add_action( 'wpcf7_admin_init', 'wpcf7_add_tag_generator_textarea', 20 );
 
 function wpcf7_add_tag_generator_textarea() {
 	$tag_generator = WPCF7_TagGenerator::get_instance();

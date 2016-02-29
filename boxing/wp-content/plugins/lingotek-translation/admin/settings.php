@@ -1,5 +1,5 @@
 <div class="wrap">
-  <h2><?php _e('Settings', 'wp-lingotek'); ?></h2>
+  <h2><?php _e('Settings', 'lingotek-translation'); ?></h2>
 
   <?php
   if (strlen($access_token)) {
@@ -8,17 +8,15 @@
     <?php
 
     $menu_items = array(
-      'account' => __('Account', 'wp-lingotek'),
+      'account' => __('Account', 'lingotek-translation'),
     );
 
     $community_required_menu_items = array(
-      'defaults' => __('Defaults', 'wp-lingotek'),
-      'profiles' => __('Translation Profiles', 'wp-lingotek'),
-      'content' => __('Content Type Configuration', 'wp-lingotek'),
-      'preferences' => __('Preferences', 'wp-lingotek'),
-      //'advanced' => __('Advanced', 'wp-lingotek'),
-      //'logging' => __('Logging', 'wp-lingotek'),
-      'utilities' => __('Utilities', 'wp-lingotek'),
+      'defaults' => __('Defaults', 'lingotek-translation'),
+      'preferences' => __('Preferences', 'lingotek-translation'),
+      //'advanced' => __('Advanced', 'lingotek-translation'),
+      //'logging' => __('Logging', 'lingotek-translation'),
+      'utilities' => __('Utilities', 'lingotek-translation'),
     );
 
     if($community_id !== FALSE){
@@ -49,7 +47,7 @@
 
     <?php
     settings_errors();
-    $submenu = isset($_GET['sm']) ? $_GET['sm'] : 'account';
+    $submenu = isset($_GET['sm']) ? sanitize_text_field($_GET['sm']) : 'account';
     $dir = dirname(__FILE__) . '/settings/';
     $filename = $dir . 'view-' . $submenu . ".php";
     if (file_exists($filename))

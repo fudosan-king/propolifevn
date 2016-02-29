@@ -48,7 +48,7 @@ class Lingotek_String_actions extends Lingotek_Actions {
 	 * @return string
 	 */
 	protected function get_action_link($args, $warning = false) {
-		$args['page'] = 'wp-lingotek_manage';
+		$args['page'] = 'lingotek-translation_manage';
 		$args['noheader'] = true;
 		return parent::get_action_link($args, $warning);
 	}
@@ -74,7 +74,7 @@ class Lingotek_String_actions extends Lingotek_Actions {
 
 		$redirect = remove_query_arg( array('action', 'action2'), wp_get_referer() );
 		if (!$redirect)
-			$redirect = admin_url("admin.php?page=wp-lingotek_manage&sm=strings");
+			$redirect = admin_url("admin.php?page=lingotek-translation_manage&sm=strings");
 
 		switch($action) {
 			case 'bulk-lingotek-upload':

@@ -32,12 +32,12 @@ class Lingotek_Dashboard {
 					$name = $_REQUEST['native'];
 					$slug = substr($_REQUEST['code'], 0, strpos($_REQUEST['code'], '_')); // 3rd parameter of strstr needs PHP 5.3
 					$locale = Lingotek::map_to_wp_locale($_REQUEST['code']);
-					
+
 					// avoid conflicts between language slugs
 					$existing_slugs = $polylang->model->get_languages_list(array('fields' => 'slug'));
 					if (!empty($existing_slugs) && in_array($slug, $existing_slugs))
 						$slug = strtolower(str_replace('_', '-', $locale));
-					
+
 					$rtl = $_REQUEST['direction'] == 'RTL';
 					$term_group = 0;
 
@@ -76,7 +76,7 @@ class Lingotek_Dashboard {
 						'request' => sprintf('DELETE: remove language from CMS and project (%s)', $code),
 						'code' => $code,
 						'success' => false,
-						'message' => __('You must keep at least one language.', 'wp-lingotek')
+						'message' => __('You must keep at least one language.', 'lingotek-translation')
 					);
 					status_header(403);
 				}
@@ -85,7 +85,16 @@ class Lingotek_Dashboard {
 					$default_category = pll_get_term(get_option('default_category'), $lang->slug);
 					$polylang->model->delete_language((int) $lang->term_id);
 					wp_delete_term( $default_category, 'category' ); // delete the default category after the language
-					
+
+					// Deletes the translation status so when re-adding a language the string groups translations won't display as current
+					$lingotek_model = new Lingotek_Model();
+					$strings = $lingotek_model->get_strings();
+					foreach ($strings as $string) {
+						$group = $lingotek_model->get_group('string', $string['context']);
+						unset($group->translations[$lang->locale]);
+						$group->save();
+					}
+
 					$response = array (
 						'request' => sprintf('DELETE: remove language from CMS and project (%s)', $code),
 						'code' => $code,
@@ -100,7 +109,7 @@ class Lingotek_Dashboard {
 						'request' => sprintf('DELETE: remove language from CMS and project (%s)', $code),
 						'code' => $code,
 						'success' => false,
-						'message' => __('The language can only be removed when no existing content is using it.  If you would like to remove this language from the site, then first remove any content assigned to this language.', 'wp-lingotek')
+						'message' => __('The language can only be removed when no existing content is using it.  If you would like to remove this language from the site, then first remove any content assigned to this language.', 'lingotek-translation')
 					);
 					status_header(403);
 				}
@@ -121,14 +130,14 @@ class Lingotek_Dashboard {
 	 */
 	function get_language_details($locale_requested = NULL) {
 		global $polylang;
-		
+
 		$response = array();
 		$available_languages = $polylang->model->get_languages_list();
 		$source_total = 0;
 		$target_total = 0;
 		$source_totals = array();
 		$target_totals = array();
-		
+
 		// If we get a parameter, only return that language. Otherwise return all languages.
 		foreach ($available_languages as $lang_details) {
 			$wordpress_lang_code = $lang_details->slug;

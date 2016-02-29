@@ -266,6 +266,13 @@ function theme_name_wp_title( $title, $sep ) {
     return $title;
 }
 add_filter( 'wp_title', 'theme_name_wp_title', 10, 2 );
-
+function getLimitContent($page_id,$count){
+	$content_post = get_post($page_id);
+	$content = $content_post->post_content;
+	$content = strip_shortcodes($content);
+	$content = str_replace(']]>', ']]&gt;', $content);
+	$content = strip_tags($content);		
+	return mb_strimwidth($content,0,$count,'。。。');
+}
 ?>
 

@@ -63,7 +63,7 @@ class Lingotek_HTTP {
     if (!empty($args)) {
       Lingotek::log($args);
     }
-    return wp_remote_get($url, array('headers' => $this->headers, 'body' => $args, 'timeout' => 8));
+    return wp_remote_get($url, array('headers' => $this->headers, 'body' => $args, 'timeout' => 30));
   }
 
   /*

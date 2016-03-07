@@ -147,4 +147,15 @@
     }
 }
 
+.list-group .news-items{
+    border-radius:1px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #555;
+}
+.list-group .news-items time{color: #F20000;}
+
 

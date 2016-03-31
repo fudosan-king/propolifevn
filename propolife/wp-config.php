@@ -34,6 +34,7 @@ define('DB_CHARSET', 'utf8mb4');
 define('DB_COLLATE', '');
 
 define('FS_METHOD','direct');
+define('WP_POST_REVISIONS', false );
 
 /**#@+
  * Authentication Unique Keys and Salts.

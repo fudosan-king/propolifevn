@@ -3,11 +3,11 @@
 
 <div class="effect">
 <form data-toggle="validator" role="form" id="contactForm">
-<div class="container">
+<div class="container align-top">
 <div class="row">
 <div class="col-lg-3"></div>
 <div class="col-lg-6">
-<div class="well" style="margin-top:120px;"><h3 align="center" style="margin-top:0px;line-height:normal;margin-bottom:0px;">WEBからの お問い合わせ</h3></div>
+<div class="well"><h3 align="center" style="margin-top:0px;line-height:normal;margin-bottom:0px;">WEBからの お問い合わせ</h3></div>
 <div class="form-group has-feedback">
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-user"></i></span>
@@ -29,7 +29,7 @@
 <div class="form-group has-feedback">
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-phone"></i></span>
-<input type="tel" id="phonenumber" pattern="[0-9]{10,14}" class="form-control" placeholder="電話番号" data-error="Oh, that phone is invalid" required>
+<input type="tel" id="phonenumber" class="form-control" placeholder="電話番号" data-error="Oh, that phone is invalid" >
 </div>
 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 <span class="help-block with-errors"></span>
@@ -44,7 +44,7 @@
 </div>
 
 <div class="col-lg-3"></div>
-<div class="col-lg-12" align="center"><input type="submit" name="sendmail" value="記入内容確認へ" class="btn btn-info"></div>
+<div class="col-lg-12" align="center"><input type="submit" name="sendmail" value="送信する" class="btn btn-info"></div>
 
 </div>
 </div>

@@ -1,6 +1,6 @@
 <?php get_header();?>
 <header class="header" role="masthead"><div class="container"><?php get_sidebar('main-menu');?></div></header>
-<div align="center" style="padding-top:73px">
+<div align="center" class="slidermain">
 <div id="slider1_container" style="position: relative; width:2000px;height:700px; overflow: hidden;">
 <div u="loading" style="position: absolute; top: 0px; left: 0px;">
 <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;background-color: #000; top: 0px; left: 0px;width: 100%; height:100%;"></div> 
@@ -9,46 +9,43 @@
 
 <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:2000px; height:700px;overflow: hidden;">
 <div>
-<img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/home/1.jpg" />
-<div u=caption t="CLIP|LR" du="1500" style="position:absolute; left:55%; top:115px; width:700px;font-size:30px;text-align:right;color:#ffffff;text-shadow: rgba(0, 0, 0, 0.39) 1px 1px 5px;">
-<span class="title-slide">「働き方」を施工する</span><br>We always make design and construct<br>comfortable residence.
+<img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/1.jpg" />
+<div u=caption t="CLIP|LR" du="1500" style="position:absolute; left:1100px; top:115px; width:700px;font-size:30px;color:#ffffff;text-shadow: rgba(0, 0, 0, 0.39) 1px 1px 5px;text-align:right">
+<span class="title-slide">「働き方」を施工する</span><br>We always make design and construct.
 </div>
-<div u="caption" t="ZMF|10" d=-1300 class="captionOrange" style="left:69%;top:315px;">Design</div>
-<div u="caption" t="CLIP|L" d=-300 class="captionBlack" style="left:76%;top:315px;text-align: center;">Interior</div>
-<a class="captionOrange" u="caption" t="CLIP|L" d=-300 href="#" style="left:83%;top:315px;">Artchive</a>
+<div u="caption" t="ZMF|10" d=-1300 class="captionOrange" style="left:1370px;top:315px;">Design</div>
+<div u="caption" t="CLIP|L" d=-300 class="captionBlack" style="left:1503px;top:315px;text-align: center;">Interior</div>
+<a class="captionOrange" u="caption" t="CLIP|L" d=-300 href="#" style="left:1637px;top:315px;">Construct</a>
 </div>
 
 <div> 
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/home/2.jpg" />
-<div u=caption t="CLIP|LR" du="1500" style="position:absolute; left:24%; top:425px;text-align:right;text-shadow: rgba(0, 0, 0, 0.39) 1px 1px 5px;"><span class="title-slide">「働き方」を施工する</span></div>
-<div u="caption" t="MCLIP|T" t2="T" class="captionOrange" d=-450 style="left:505px;top:40px;">Reform office & Home</div>
-<div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:505px;top:90px;">Lotus Service</div>
-<div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:505px;top:140px;">Web advertisement HP</div>
-<div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:505px;top:190px;">Interior & Artchive</div>
+<div u="caption" t="CLIP|LR" du="1500" style="position:absolute; left:24%;font-size:30px;color:#ffffff;top:425px;text-shadow: rgba(0, 0, 0, 0.39) 1px 1px 5px;">
+<span class="title-slide">「住み方」を施工する</span><br>We always make design and construct<br>comfortable residence.</div>
+<div u="caption" t="MCLIP|T" t2="T" class="captionOrange" d=-450 style="left:505px;top:250px;">Design</div>
+<div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:638px;top:250px;">Interior</div>
+<div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:772px;top:250px;">Construct</div>
 </div>
 
 <div> 
-<img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/home/3.jpg" />
-<div u=caption t="T" t2=NO style="position: absolute; left:150px; top:30px;color: #fff;text-align:left;font-size:30px;text-shadow: rgba(0, 0, 0, 0.39) 1px 1px 5px;">
-<span class="title-slide">「働き方」を施工する</span><br>We always make design and construct<br>comfortable residence.
+<img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/3.jpg" />
+<div u="caption" t="T" t2=NO style="position: absolute; left:150px; top:30px;color: #fff;font-size:30px;text-shadow: rgba(0, 0, 0, 0.39) 1px 1px 5px;">
+<span class="title-slide">「働き方」を施工する</span><br>We always make design and construct.
 </div>
-<div u=caption t="L" d=-750 class="captionOrange" style="left:150px; top: 300px;">Reform Office</div>
-<div u=caption t="CLIP|L" t2=B d=-450 class="captionBlack" style="left:370px; top: 300px;">and</div>
-<div u=caption t="DDG|TR" t2="TORTUOUS|VB" d=-750 class="captionOrange" style="left:460px; top: 300px;">Reform Home</div>
-<div u=caption t="TORTUOUS|VB" d=-750 class="captionOrange" style="left:690px; top:300px;">Lotus Service</div>
-<div u=caption t="T" d=-450 class="captionOrange" style="left:915px; top:300px;">Web advertisement</div>
+<div u="caption" t="TORTUOUS|VB" d=-750 class="captionOrange" style="left:200px; top:300px;">Design</div>
+<div u="caption" t="L" d=-750 class="captionOrange" style="left:333px; top: 300px;">Construct</div>
+<div u="caption" t="CLIP|L" t2=B d=-450 class="captionBlack" style="left:505px; top: 300px;">and</div>
+<div u="caption" t="DDG|TR" t2="TORTUOUS|VB" d=-750 class="captionOrange" style="left:596px; top: 300px;">Interior</div>
 </div>
 
 <div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/home/4.jpg" />
-<div u=caption t="RTTS|T" d=-300 t2="B" style="position:absolute; left:150px; top: 330px;font-size:30px;text-shadow: rgba(0, 0, 0, 0.39) 1px 1px 5px;color:#FFFFFF">
-<span class="title-slide">「働き方」を施工する</span><br>We always make design and construct<br>comfortable residence.
+<div u="caption" t="RTTS|T" d=-300 t2="B" style="position:absolute; left:150px; top: 330px;font-size:30px;text-shadow: rgba(0, 0, 0, 0.39) 1px 1px 5px;color:#FFFFFF">
+<span class="title-slide">「住み方」を施工する</span><br>We always make design and construct<br>comfortable residence.
 </div>
-<div u=caption t="T|IB" t2="T" d=-300 class="captionOrange"  style="position:absolute; left:150px; top: 100px;">Reform Office</div>
-<div u=caption t="T|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; left:150px; top: 170px;">Reform Home</div>
-<div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="captionOrange" style="position: absolute; top:170px; left:390px;text-align: left;">Interior & Artchive</div>
-<div u=caption t="LISTH|R"  t2=R d=-900 class="captionBlack" style="left:670px; top:170px;">Lotus Service</div>
-<div u=caption t="LISTH|R" t2=R d=-900 class="captionBlack" style="left:900px; top: 170px;">Web advertisement</div>
+<div u="caption" t="T|IB" t2="T" d=-300 class="captionOrange"  style="position:absolute; left:180px; top: 170px;">Design</div>
+<div u="caption" t="T|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; left:325px; top: 170px;">Interior</div>
+<div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="captionOrange" style="position: absolute; top:170px; left:470px;text-align: left;">Construct</div>
 </div>       
 </div> 
 
@@ -66,7 +63,7 @@
 $term = get_term_by('slug','reform-home','cat-chronicle');
 echo '<a href="'.get_term_link('reform-home','cat-chronicle').'"><h3 align="center">'.$term->name.'</h3></a>';
 echo '<h4>Furniture & Interior</h4>';
-echo '<p>'.$term->description.'</p>';
+echo '<p>'.nl2br($term->description).'</p>';
 ?>
 </div>
 </div>
@@ -110,7 +107,7 @@ while ( $the_query->have_posts() ) : $the_query->the_post();
 $term = get_term_by('slug','reform-office','cat-chronicle');
 echo '<a href="'.get_term_link('reform-office','cat-chronicle').'"><h3 align="center">'.$term->name.'</h3></a>';
 echo '<h4>Furniture & Interior</h4>';
-echo '<p>'.$term->description.'</p>';
+echo '<p>'.nl2br($term->description).'</p>';
 ?>
 </div>
 </div>

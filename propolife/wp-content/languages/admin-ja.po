@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-12-13 01:36:53+0000\n"
+"PO-Revision-Date: 2016-02-25 13:08:14+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,79 +16,79 @@ msgstr "更新ありがとうございます。WordPress %s はサイトをよ�
 
 #. translators: 1: WP_Term class name, WP_Comment class name, WP_Network class
 #. name
-#: wp-admin/about.php:177
+#: wp-admin/about.php:189
 msgid "New %1$s, %2$s, and %3$s objects make interacting with terms, comments, and networks more predictable and intuitive in code."
 msgstr "新しい %1$s や %2$s、%3$s のオブジェクトはタームやコメント、ネットワークと接することを、コード内でも、より予測可能かつ直感的にします。"
 
-#: wp-admin/about.php:174
+#: wp-admin/about.php:186
 msgid "Term, comment, and network objects"
 msgstr "ターム・コメント・ネットワークのオブジェクト"
 
 #. translators: WP_Comment_Query class name
-#: wp-admin/about.php:170
+#: wp-admin/about.php:182
 msgid "Comment queries now have cache handling to improve performance. New arguments in %s make crafting robust comment queries simpler."
 msgstr "コメントクエリはパフォーマンスの改善のため、キャッシュ処理を行うようになりました。%s の新しい引数は堅牢なコメントクエリを作り上げることをよりシンプルなものにします。"
 
-#: wp-admin/about.php:167
+#: wp-admin/about.php:179
 msgid "Comment query improvements"
 msgstr "コメントクエリの改善"
 
-#: wp-admin/about.php:156
+#: wp-admin/about.php:168
 msgid "Term meta"
 msgstr "タームメタ"
 
 #. translators: 1: add_term_meta() docs link, 2: get_term_meta() docs link, 3:
 #. update_term_meta() docs link
-#: wp-admin/about.php:159
+#: wp-admin/about.php:171
 msgid "Terms now support metadata, just like posts. See %1$s, %2$s, and %3$s for more information."
 msgstr "タームは投稿のようなメタデータをサポートするようになりました。詳細は %1$s や %2$s、%3$s を参照してください。"
 
 #. translators: WordPress REST API plugin link
-#: wp-admin/about.php:148
+#: wp-admin/about.php:160
 msgid "Infrastructure is the first part of a multi-stage rollout for the REST API. Inclusion of core endpoints is targeted for an upcoming release. To get a sneak peek of the core endpoints, and for more information on extending the REST API, check out the official %s plugin."
 msgstr "インフラは REST API の段階的導入における最初の部分です。コアエンドポイントの追加は、今後のリリースで実施される予定になっています。コアエンドポイントを事前にチェックしたり、REST API を拡張するための情報をさらに入手したりしたい場合は、公式 %s プラグインをご利用ください。"
 
-#: wp-admin/about.php:131
+#: wp-admin/about.php:143
 msgid "Infrastructure for the REST API has been integrated into core, marking a new era in developing with WordPress. The REST API serves to provide developers with a path forward for building and extending RESTful APIs on top of WordPress."
 msgstr "REST API のためのインフラがコアに統合され、WordPress を使った開発の新時代を画することとなりました。REST API は、WordPress 上に RESTful API を構築・拡張していくための今後の軌道を開発者に提供する働きをします。"
 
-#: wp-admin/about.php:118
+#: wp-admin/about.php:130
 msgid "In addition to post embeds, WordPress 4.4 also adds support for five new oEmbed providers: Cloudup, Reddit&nbsp;Comments, ReverbNation, Speaker&nbsp;Deck, and VideoPress."
 msgstr "投稿の埋め込みに加えて、WordPress 4.4 では新しい oEmbed プロバイダを5つ追加しました。Cloudup、Reddit コメント、ReverbNation、Speaker&nbsp;Deck、VideoPress です。"
 
-#: wp-admin/about.php:129
+#: wp-admin/about.php:141
 msgid "REST API infrastructure"
 msgstr "REST API インフラ"
 
-#: wp-admin/about.php:104
+#: wp-admin/about.php:116
 msgid "Now you can embed your posts on other sites, even other WordPress sites. Simply drop a post URL into the editor and see an instant embed preview, complete with the title, excerpt, and featured image if you&#8217;ve set one. We&#8217;ll even include your site icon and links for comments and sharing."
 msgstr "投稿を他のサイトを埋め込めるようになりました。他の WordPress サイトにも埋め込み可能です。エディターに投稿の URL を入れるだけで、設定したタイトル、抜粋、アイキャッチ画像を備えた埋め込みプレビューがすぐに表示されます。さらに、サイトアイコンやコメント・共有用リンクも含まれます。"
 
-#: wp-admin/about.php:117
+#: wp-admin/about.php:129
 msgid "Even more embed providers"
 msgstr "埋め込みプロバイダの追加"
 
-#: wp-admin/about.php:103
+#: wp-admin/about.php:115
 msgid "Embed your WordPress content"
 msgstr "WordPress のコンテンツを埋め込もう"
 
-#: wp-admin/about.php:90
+#: wp-admin/about.php:102
 msgid "WordPress now takes a smarter approach to displaying appropriate image sizes on any device, ensuring a perfect fit every time. You don&#8217;t need to do anything to your theme, it just works."
 msgstr "WordPress はあらゆるデバイスで、毎回完全にフィットした適切な画像サイズを表示するためによりスマートな手法を使用するようになりました。テーマでは何もする必要はありません。そのままで動作します。"
 
-#: wp-admin/about.php:89
+#: wp-admin/about.php:101
 msgid "Responsive images"
 msgstr "レスポンシブ画像"
 
-#: wp-admin/about.php:67
+#: wp-admin/about.php:79
 msgid "Twenty Sixteen was built to look great on any device. A fluid grid design, flexible header, fun color schemes, and more, will make your content shine."
 msgstr "Twenty Sixteen はどんなデバイス上でも美しく表示されるように作られました。柔軟にサイズが変わるグリッドデザイン、自由自在なヘッダー、楽しい配色などがコンテンツを輝かせるでしょう。"
 
-#: wp-admin/about.php:66
+#: wp-admin/about.php:78
 msgid "Our newest default theme, Twenty Sixteen, is a modern take on a classic blog design."
 msgstr "新しいデフォルトテーマ、Twenty Sixteen はクラシックなブログの流れを汲むモダンなデザインです。"
 
-#: wp-admin/about.php:59
+#: wp-admin/about.php:71
 msgid "Twenty Sixteen"
 msgstr "Twenty Sixteen"
 
@@ -112,7 +112,7 @@ msgid "Welcome to %s. This is your first post. Edit or delete it, then start blo
 msgstr "%s へようこそ。これは最初の投稿です。編集もしくは削除してブログを始めてください！"
 
 #. translators: %s: WordPress version number
-#: wp-admin/about.php:214
+#: wp-admin/about.php:226
 msgid "<strong>Version %s</strong> addressed one security issue."
 msgstr "<strong>バージョン %s</strong> ではセキュリティ問題1件に対応しました。"
 
@@ -129,15 +129,15 @@ msgstr "<a href=\"%s\">Gravatar</a> でプロフィール画像を変更でき�
 msgid "Profile Picture"
 msgstr "プロフィール写真"
 
-#: wp-admin/about.php:205
+#: wp-admin/about.php:217
 msgid "Maintenance Releases"
 msgstr "メンテナンスリリース"
 
-#: wp-admin/about.php:208
+#: wp-admin/about.php:220
 msgid "Security Releases"
 msgstr "セキュリティリリース"
 
-#: wp-admin/about.php:211
+#: wp-admin/about.php:223
 msgid "Maintenance and Security Releases"
 msgstr "メンテナンスとセキュリティのリリース"
 
@@ -317,7 +317,7 @@ msgstr "%s ディレクトリ内のファイルは自動的に実行されます
 msgid "You are not allowed to manage these items."
 msgstr "これらのアイテムを管理する権限がありません。"
 
-#: wp-admin/widgets.php:431
+#: wp-admin/widgets.php:436
 msgid "This will clear all items from the inactive widgets list. You will not be able to restore any customizations."
 msgstr "非アクティブなウィジェットのリストからすべてのアイテムをクリアします。カスタマイズを復元することはできません。"
 
@@ -329,7 +329,7 @@ msgstr "ユーザー一覧"
 msgid "Users list navigation"
 msgstr "ユーザーリストナビゲーション"
 
-#: wp-admin/widgets.php:423
+#: wp-admin/widgets.php:426
 msgid "Clear Inactive Widgets"
 msgstr "停止中のウィジェットをクリア"
 
@@ -910,10 +910,6 @@ msgstr "投稿を公開しました。"
 msgid "View page"
 msgstr "ページを表示"
 
-#: wp-admin/edit-form-advanced.php:115 wp-admin/edit-form-advanced.php:121
-msgid "Preview page"
-msgstr "プレヴューページ"
-
 #: wp-admin/edit-comments.php:174
 msgid "Comments list"
 msgstr "コメント一覧"
@@ -929,6 +925,10 @@ msgstr "コメントリストの絞り込み"
 #: wp-admin/edit-comments.php:173
 msgid "Comments list navigation"
 msgstr "コメントリストナビゲーション"
+
+#: wp-admin/edit-form-advanced.php:115 wp-admin/edit-form-advanced.php:121
+msgid "Preview page"
+msgstr "固定ページをプレビュー"
 
 #: wp-admin/edit-comments.php:159
 msgid "In the <strong>Submitted On</strong> column, the date and time the comment was left on your site appears. Clicking on the date/time link will take you to that comment on your live site."
@@ -969,7 +969,7 @@ msgstr "%s への返信"
 msgid "You&rsquo;re using the auto-generated password for your account. Would you like to change it?"
 msgstr "お使いのアカウントでは自動生成されたパスワードを使用しています。変更しますか？"
 
-#: wp-admin/users.php:360
+#: wp-admin/users.php:361
 msgid "You have specified this user for removal:"
 msgstr "以下のユーザーの除外が指定されました:"
 
@@ -1537,11 +1537,11 @@ msgstr "メインメニュー"
 msgid "Enter the location on the server where the public and private keys are located. If a passphrase is needed, enter that in the password field above."
 msgstr "公開鍵と秘密鍵があるサーバー上の場所を入力してください。パスフレーズが必要な場合は上のパスワードの項目に入力してください。"
 
-#: wp-admin/users.php:266
+#: wp-admin/users.php:267
 msgid "What should be done with content owned by these users?"
 msgstr "これらのユーザーのコンテンツをどのように処理しますか？"
 
-#: wp-admin/users.php:241
+#: wp-admin/users.php:242
 msgid "You have specified these users for deletion:"
 msgstr "これらのユーザーを削除します:"
 
@@ -1560,7 +1560,7 @@ msgid "%d media attachment permanently deleted."
 msgid_plural "%d media attachments permanently deleted."
 msgstr[0] "%d個の添付メディアを永久に削除しました。"
 
-#: wp-admin/users.php:419
+#: wp-admin/users.php:420
 msgid "%s user deleted."
 msgid_plural "%s users deleted."
 msgstr[0] "%s人のユーザーを削除しました。"
@@ -1954,7 +1954,7 @@ msgstr "右側のアイコンを使用して集中執筆モードを有効にす
 msgid "Log Out Everywhere"
 msgstr "すべての場所でログアウト"
 
-#: wp-admin/about.php:65
+#: wp-admin/about.php:77
 msgid "Introducing Twenty Sixteen"
 msgstr "Twenty Sixteen の導入"
 
@@ -2042,15 +2042,6 @@ msgstr "お使いのバージョンの WordPress ではテストされていま�
 msgid "You are now logged out everywhere else."
 msgstr "他のすべてでログアウトしました。"
 
-#: wp-admin/includes/class-wp-links-list-table.php:113
-#: wp-admin/includes/class-wp-posts-list-table.php:437
-msgid "Filter by category"
-msgstr "カテゴリーで絞り込む"
-
-#: wp-admin/includes/class-wp-comments-list-table.php:328
-msgid "Filter by comment type"
-msgstr "コメントの種類で絞り込む"
-
 #: wp-admin/includes/class-wp-links-list-table.php:106
 #: wp-admin/includes/class-wp-posts-list-table.php:429
 msgid "All categories"
@@ -2101,6 +2092,15 @@ msgstr "ビジュアルモードでは WYSIWYG エディターが利用できま
 #: wp-admin/edit-form-advanced.php:365
 msgid "<strong>Post editor</strong> &mdash; Enter the text for your post. There are two modes of editing: Visual and Text. Choose the mode by clicking on the appropriate tab."
 msgstr "<strong> 投稿エディター </strong> &mdash; 投稿のテキストを入力します。ビジュアルモードとテキストモード: 編集には2つのモードがあります。タブをクリックしてモードを選択します。"
+
+#: wp-admin/includes/class-wp-links-list-table.php:113
+#: wp-admin/includes/class-wp-posts-list-table.php:437
+msgid "Filter by category"
+msgstr "カテゴリーで絞り込み"
+
+#: wp-admin/includes/class-wp-comments-list-table.php:328
+msgid "Filter by comment type"
+msgstr "コメントの種類で絞り込み"
 
 #: wp-admin/includes/class-wp-screen.php:1046
 msgctxt "Welcome panel"
@@ -2425,11 +2425,11 @@ msgctxt "theme"
 msgid "Details &amp; Preview"
 msgstr "詳細 &amp; プレビュー"
 
-#: wp-admin/includes/ms.php:1055 wp-admin/users.php:270
+#: wp-admin/includes/ms.php:1055 wp-admin/users.php:271
 msgid "Delete all content."
 msgstr "すべてのコンテンツを消去します。"
 
-#: wp-admin/users.php:264
+#: wp-admin/users.php:265
 msgid "What should be done with content owned by this user?"
 msgstr "このユーザーが所有するコンテンツをどのように処理しますか ?"
 
@@ -2437,7 +2437,7 @@ msgstr "このユーザーが所有するコンテンツをどのように処理
 msgid "Delete brings you to the Delete Users screen for confirmation, where you can permanently remove a user from your site and delete their content. You can also delete multiple users at once by using Bulk Actions."
 msgstr "「削除」をクリックすると、ユーザーを削除する確認画面が表示されます。確認画面で削除すると、ユーザーとそのユーザーのコンテンツを永久に削除します。「一括操作」を使うと、複数のユーザーを一度に削除できます。"
 
-#: wp-admin/includes/ms.php:1057 wp-admin/users.php:272
+#: wp-admin/includes/ms.php:1057 wp-admin/users.php:273
 msgid "Attribute all content to:"
 msgstr "すべてのコンテンツを以下のユーザーのものにする:"
 
@@ -2733,7 +2733,7 @@ msgstr "前のテーマを表示"
 msgid "Show next theme"
 msgstr "次のテーマを表示"
 
-#: wp-admin/widgets.php:498
+#: wp-admin/widgets.php:504
 msgid "Add Widget"
 msgstr "ウィジェットを追加"
 
@@ -3746,11 +3746,11 @@ msgstr "ファイルの URL:"
 msgid "In the <strong>In Response To</strong> column, there are three elements. The text is the name of the post that inspired the comment, and links to the post editor for that entry. The View Post link leads to that post on your live site. The small bubble with the number in it shows the number of approved comments that post has received. If there are pending comments, a red notification circle with the number of pending comments is displayed. Clicking the notification circle will filter the comments screen to show only pending comments on that post."
 msgstr "<strong>コメント先</strong>の欄には、3つの要素があります。テキストはコメントの元となった投稿のタイトルとその投稿の編集画面へのリンクです。「投稿を表示」リンクをクリックすると、サイト上のその投稿に移動します。数字が書かれている小さな吹き出しは、承認済みのコメント数を表します。吹き出しがグレーになっている場合はすべてのコメントが承認済み、青になっている場合は承認が必要なコメントがあることを意味しています。吹き出しをクリックすると、その投稿のみについたコメントを表示する画面へ移動します。"
 
-#: wp-admin/users.php:252 wp-admin/users.php:376
+#: wp-admin/users.php:253 wp-admin/users.php:377
 msgid "ID #%1$s: %2$s"
 msgstr "ID #%1$s: %2$s"
 
-#: wp-admin/users.php:250
+#: wp-admin/users.php:251
 msgid "ID #%1$s: %2$s <strong>The current user will not be deleted.</strong>"
 msgstr "ID #%1$s: %2$s <strong>現在のユーザーは削除されません。</strong>"
 
@@ -3758,15 +3758,15 @@ msgstr "ID #%1$s: %2$s <strong>現在のユーザーは削除されません。<
 msgid "Used: %1$s%% of %2$s"
 msgstr "使用済み: %1$s%% of %2$s"
 
-#: wp-admin/users.php:372
+#: wp-admin/users.php:373
 msgid "ID #%1$s: %2$s <strong>The current user will not be removed.</strong>"
 msgstr "ID #%1$s: %2$s <strong>現在のユーザーは除外されません。</strong>"
 
-#: wp-admin/users.php:374
+#: wp-admin/users.php:375
 msgid "ID #%1$s: %2$s <strong>You don't have permission to remove this user.</strong>"
 msgstr "ID #%1$s: %2$s <strong>このユーザーを除外する権限がありません。</strong>"
 
-#: wp-admin/users.php:234
+#: wp-admin/users.php:235
 msgid "Please select an option."
 msgstr "オプションを選択してください。"
 
@@ -4150,11 +4150,11 @@ msgstr "<code>wp-config.php</code> ファイルでデータベース接頭辞が
 msgid "Revert to the <strong>Browser Uploader</strong> by clicking the link below the drag and drop box."
 msgstr "<strong>ブラウザーアップローダー</strong>に戻るにはドラッグアンドドロップボックスのリンクをクリックしてください。"
 
-#: wp-admin/users.php:425
+#: wp-admin/users.php:426
 msgid "New user created. <a href=\"%s\">Edit user</a>"
 msgstr "新規ユーザーを作成しました。<a href=\"%s\">ユーザーを編集</a>"
 
-#: wp-admin/users.php:417
+#: wp-admin/users.php:418
 msgid "User deleted."
 msgstr "ユーザーを削除しました。"
 
@@ -4913,25 +4913,25 @@ msgstr "貢献開発者"
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:223
+#: wp-admin/about.php:235
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>バージョン %1$s</strong> はセキュリティ問題に対応し、%2$s個のバグを修正しました。"
 
 #. translators: %s: Codex URL
-#: wp-admin/about.php:231
+#: wp-admin/about.php:55 wp-admin/about.php:59 wp-admin/about.php:243
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "詳しくは<a href=\"%s\">リリースノート</a>をご覧ください。"
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:227
+#: wp-admin/about.php:53 wp-admin/about.php:57 wp-admin/about.php:239
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>バージョン %1$s</strong> はいくつかのセキュリティ問題に対応し、%2$s個のバグを修正しました。"
 
 #. translators: 1: WordPress version number, 2: plural number of bugs.
-#: wp-admin/about.php:219
+#: wp-admin/about.php:231
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>バージョン %1$s</strong> では%2$s個のバグを修正しました。"
@@ -4944,20 +4944,21 @@ msgstr "WordPress のダッシュボードへようこそ ! これはサイト�
 msgid "What&#8217;s New"
 msgstr "新着情報"
 
-#: wp-admin/about.php:207
+#: wp-admin/about.php:219
 msgid "Security Release"
 msgstr "セキュリティリリース"
 
-#: wp-admin/about.php:204
+#: wp-admin/about.php:216
 msgid "Maintenance Release"
 msgstr "メンテナンスリリース"
 
-#: wp-admin/about.php:210
+#: wp-admin/about.php:52 wp-admin/about.php:222
 msgid "Maintenance and Security Release"
-msgstr "メンテナンスとセキュリティのリリース"
+msgid_plural "Maintenance and Security Releases"
+msgstr[0] "メンテナンスとセキュリティのリリース"
 
 #. translators: %s: WordPress version number
-#: wp-admin/about.php:216
+#: wp-admin/about.php:228
 msgid "<strong>Version %s</strong> addressed some security issues."
 msgstr "<strong>バージョン %s</strong> では複数のセキュリティ問題に対応しました。"
 
@@ -4969,7 +4970,7 @@ msgstr "この画面ではパーマリンク構造を選択できます。共通
 msgid "Welcome to WordPress %1$s. <a href=\"%2$s\">Learn more</a>."
 msgstr "WordPress %1$s へようこそ。<a href=\"%2$s\">詳細を読む</a>。"
 
-#: wp-admin/about.php:189
+#: wp-admin/about.php:201
 msgid "Return to Updates"
 msgstr "更新ページへ戻る"
 
@@ -5257,11 +5258,11 @@ msgstr "add_meta_box() を使用するために wp-admin/includes/template.php �
 msgid "Welcome to WordPress %s"
 msgstr "WordPress %s へようこそ"
 
-#: wp-admin/about.php:192
+#: wp-admin/about.php:204
 msgid "Go to Dashboard &rarr; Home"
 msgstr "ダッシュボード &rarr; ホームへ移動"
 
-#: wp-admin/about.php:189
+#: wp-admin/about.php:201
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "ダッシュボード &rarr; 更新へ戻る"
 
@@ -5273,7 +5274,7 @@ msgstr "WordPress は、世界中の熱心な人々によって作られてい�
 msgid "Core Developers"
 msgstr "コア開発者"
 
-#: wp-admin/about.php:125
+#: wp-admin/about.php:137
 msgid "Under the Hood"
 msgstr "開発者向けの変更"
 
@@ -5486,7 +5487,7 @@ msgstr "既存のユーザーを追加"
 msgid "For more information:"
 msgstr "詳細情報:"
 
-#: wp-admin/users.php:444
+#: wp-admin/users.php:445
 msgid "User removed from this site."
 msgstr "このサイトからユーザーを除外しました。"
 
@@ -5519,7 +5520,7 @@ msgid "Updates %s"
 msgstr "更新 %s"
 
 #: wp-admin/menu.php:220 wp-admin/menu.php:222 wp-admin/user-edit.php:194
-#: wp-admin/users.php:474
+#: wp-admin/users.php:475
 msgctxt "user"
 msgid "Add New"
 msgstr "新規追加"
@@ -5529,21 +5530,21 @@ msgstr "新規追加"
 msgid "Add New User"
 msgstr "新規ユーザーの追加"
 
-#: wp-admin/includes/ms.php:1085 wp-admin/users.php:286
+#: wp-admin/includes/ms.php:1085 wp-admin/users.php:287
 msgid "Confirm Deletion"
 msgstr "削除を実行"
 
 #: wp-admin/includes/dashboard.php:406 wp-admin/includes/dashboard.php:408
-#: wp-admin/users.php:487
+#: wp-admin/users.php:488
 msgid "Search Users"
 msgstr "ユーザーを検索"
 
-#: wp-admin/users.php:433
+#: wp-admin/users.php:434
 msgid "Changed roles."
 msgstr "権限グループを変更しました。"
 
-#: wp-admin/users.php:300 wp-admin/users.php:308 wp-admin/users.php:335
-#: wp-admin/users.php:343
+#: wp-admin/users.php:301 wp-admin/users.php:309 wp-admin/users.php:336
+#: wp-admin/users.php:344
 msgid "You can&#8217;t remove users."
 msgstr "ユーザーを除外する権限がありません。"
 
@@ -5595,7 +5596,7 @@ msgstr "インストール"
 #. translators: %s: search keywords
 #: wp-admin/edit-comments.php:197 wp-admin/edit-tags.php:311
 #: wp-admin/edit.php:307 wp-admin/link-manager.php:78 wp-admin/plugins.php:515
-#: wp-admin/upload.php:224 wp-admin/users.php:480
+#: wp-admin/upload.php:224 wp-admin/users.php:481
 msgid "Search results for &#8220;%s&#8221;"
 msgstr "&#8220;%s&#8221; の検索結果"
 
@@ -5947,7 +5948,7 @@ msgstr "アップロードした画像"
 msgid "Layout"
 msgstr "レイアウト"
 
-#: wp-admin/users.php:239
+#: wp-admin/users.php:240
 msgid "You have specified this user for deletion:"
 msgstr "これらのユーザーを削除しようとしています"
 
@@ -5982,7 +5983,7 @@ msgstr "デフォルトの投稿フォーマット"
 msgid "You do not have sufficient permissions to update this site."
 msgstr "このサイトを更新する権限がありません。"
 
-#: wp-admin/user-edit.php:196 wp-admin/users.php:476
+#: wp-admin/user-edit.php:196 wp-admin/users.php:477
 msgctxt "user"
 msgid "Add Existing"
 msgstr "既存のユーザーを追加"
@@ -6577,7 +6578,7 @@ msgid "Home: %s"
 msgstr "ホーム: %s"
 
 #: wp-admin/import.php:57 wp-admin/includes/network.php:105
-#: wp-admin/includes/network.php:122 wp-admin/users.php:234
+#: wp-admin/includes/network.php:122 wp-admin/users.php:235
 msgid "ERROR:"
 msgstr "エラー:"
 
@@ -6954,7 +6955,7 @@ msgstr "Press This を使ってテキストや画像、動画を任意のウェ�
 msgid "&mdash; No role for this site &mdash;"
 msgstr "&mdash; このサイトでの権限なし &mdash;"
 
-#: wp-admin/users.php:357
+#: wp-admin/users.php:358
 msgid "Remove Users from Site"
 msgstr "サイトからのユーザーの除外"
 
@@ -7090,11 +7091,11 @@ msgstr "表示オプション"
 msgid "User deletion is not allowed from this screen."
 msgstr "この画面からユーザーを削除することはできません。"
 
-#: wp-admin/users.php:384
+#: wp-admin/users.php:385
 msgid "Confirm Removal"
 msgstr "確認して削除を実行"
 
-#: wp-admin/users.php:447
+#: wp-admin/users.php:448
 msgid "You can't remove the current user."
 msgstr "現在のユーザーは削除できません。"
 
@@ -7102,15 +7103,15 @@ msgstr "現在のユーザーは削除できません。"
 msgid "You can&#8217;t delete that user."
 msgstr "このユーザーを削除できません。"
 
-#: wp-admin/users.php:362
+#: wp-admin/users.php:363
 msgid "You have specified these users for removal:"
 msgstr "以下のユーザーの除外が指定されました: "
 
-#: wp-admin/users.php:386
+#: wp-admin/users.php:387
 msgid "There are no valid users selected for removal."
 msgstr "除外するユーザーが選択されていません。"
 
-#: wp-admin/users.php:448
+#: wp-admin/users.php:449
 msgid "Other users have been removed."
 msgstr "他のユーザーを除外しました。"
 
@@ -7427,7 +7428,7 @@ msgid "Drop-ins <span class=\"count\">(%s)</span>"
 msgid_plural "Drop-ins <span class=\"count\">(%s)</span>"
 msgstr[0] "ドロップイン <span class=\"count\">(%s)</span>"
 
-#: wp-admin/about.php:192
+#: wp-admin/about.php:204
 msgid "Go to Dashboard"
 msgstr "ダッシュボードへ移動"
 
@@ -8435,23 +8436,23 @@ msgstr "このユーザーを編集する権限がありません。"
 msgid "You can&#8217;t delete users."
 msgstr "ユーザーを削除する権限がありません。"
 
-#: wp-admin/users.php:231
+#: wp-admin/users.php:232
 msgid "Delete Users"
 msgstr "ユーザーの削除"
 
-#: wp-admin/users.php:288
+#: wp-admin/users.php:289
 msgid "There are no valid users selected for deletion."
 msgstr "削除できるユーザーが選択されていません。"
 
-#: wp-admin/users.php:429
+#: wp-admin/users.php:430
 msgid "New user created."
 msgstr "新規ユーザーを作成しました。"
 
-#: wp-admin/users.php:436
+#: wp-admin/users.php:437
 msgid "The current user&#8217;s role must have user editing capabilities."
 msgstr "現行のユーザーにはユーザーを編集する権限がありません。"
 
-#: wp-admin/users.php:441
+#: wp-admin/users.php:442
 msgid "Other users have been deleted."
 msgstr "他のユーザーを削除しました。"
 
@@ -8660,7 +8661,7 @@ msgstr "新規ユーザーのデフォルト権限グループ"
 msgid "Change role to&hellip;"
 msgstr "権限グループを変更&hellip;"
 
-#: wp-admin/users.php:437
+#: wp-admin/users.php:438
 msgid "Other user roles have been changed."
 msgstr "他のユーザーの権限グループを変更しました。"
 
@@ -8668,7 +8669,7 @@ msgstr "他のユーザーの権限グループを変更しました。"
 msgid "Compare Revisions of &#8220;%1$s&#8221;"
 msgstr "&#8220;%1$s&#8221; のリビジョン比較"
 
-#: wp-admin/users.php:440
+#: wp-admin/users.php:441
 msgid "You can&#8217;t delete the current user."
 msgstr "このユーザーを削除する権限がありません。"
 

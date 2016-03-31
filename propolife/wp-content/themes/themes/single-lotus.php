@@ -1,23 +1,20 @@
-<?php get_header();?>
+<?php get_header();global $lienhe;$hl = explode(';',$lienhe['hotline']);?>
 <header class="header" role="masthead"><div class="container"><?php get_sidebar('main-menu');?></div></header>
-
 <div class="effect">
 <div class="container" style="padding-top:120px;">
 <div class="row">
 <div class="col-md-9">
 <div class="panel panel-default">
-<div class="panel-heading"><h4><?php the_title();?></h4></div>
 <div class="panel-body">
+<div align="center" style="margin-bottom:15px;"><img src="<?php bloginfo( 'template_directory' );?>/images/r-lotus.png" class="img-responive"></div>
 <?php while ( have_posts() ) : the_post();the_content();endwhile;?>
+<?php echo htmlContactButton3();?>
 </div>
-<div class="panel-footer"><h4>ＴＥＬ ＋84‐8‐3824‐1418（ロータスサービス代表）	<a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" style="color: #04978D;">
-<i class="fa fa-envelope" style="margin-right:10px;"></i><span class="hidden-xs">WEBからの お問い合わせ</span>
-</a></h4></div>
-</div>
-</div>
-<div class="col-lg-3"><?php get_sidebar('right-lotus');?></div>
+<div class="panel-footer" align="center"><h4>TEL <?php echo $hl[2];?></h4></div>
 </div>
 </div>
+<div class="col-lg-3"><?php get_sidebar('right');?></div>
 </div>
-
+</div>
+</div>
 <?php get_footer();?>

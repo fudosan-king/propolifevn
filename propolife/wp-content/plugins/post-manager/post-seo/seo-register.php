@@ -12,7 +12,7 @@ array('name' => 'Meta keywords:','id' => $prefix . 'meta-key','type' => 'textare
 )
 );
 function getItermFiled($list_fields,$post){	
-echo '<table>';
+echo '<table class="table">';
 foreach ($list_fields['fields'] as $field) {
 $meta = get_post_meta($post->ID, $field['id'], true);
 include(dirname( __FILE__ ).DIRECTORY_SEPARATOR.'../includes/content-controls.php');

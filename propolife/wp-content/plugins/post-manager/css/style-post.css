@@ -2,10 +2,10 @@
 @media screen and (max-width: 782px){.mcp-metabox .meta-controls,.mcp-metabox .meta-label{display:block !important;width:100% !important}}
 .thumbtax img,.dashicons{-webkit-transition: all 0.3s linear;-moz-transition: all 0.3s linear;-o-transition: all 0.3s linear;transition: all 0.3s linear;}
 .mcp-metabox ul{list-style:none;padding:0px;margin:0px}
-.mcp-metabox .meta-controls,.mcp-metabox .meta-label{display:inline-block;}
+.mcp-metabox .meta-controls,.mcp-metabox .meta-label{display:inline-block;vertical-align: top;}
 .mcp-metabox .meta-controls{width:79%;margin-bottom:5px}
 .meta-controls input[type='text']{width:100%}
-.mcp-metabox .meta-label{width:20%;}
+.mcp-metabox .meta-label{width:20%;padding-top: 5px;}
 .mcp-metabox li.img_upload {width:200px;}
 .mcp-metabox li input[type="text"]{width:250px;}
 .mcp-metabox li input[type='checkbox']{width: auto !important;}
@@ -45,7 +45,7 @@ input[type='text'],select, textarea{box-shadow: none !important;}
 .seo{width: 100%;}
 .seo input[type='text']{width:100% !important;margin:0px;}
 .seo textarea{width:100%;height: 100px; margin:5px 0px 0px 0px;}
-.seo-label{width:10%;text-align:left;vertical-align: top !important;}
+.seo-label{width:10%;text-align:left;vertical-align: top !important;padding-top: 3px;}
 .seo-label label{font-size:13px;}
 .seo-label>div{padding-top:4px;}
 .table_thongtin{width:100%;border-collapse:collapse;}
@@ -54,7 +54,7 @@ input[type='text'],select, textarea{box-shadow: none !important;}
 .inside table.table{width:100%}
 .table_thongtin label{margin-right: 10px;}
 .table_thongtin input[type='text']{width:80%;}
-.meta-textarea{width:100% !important;display: block;margin-bottom: 5px;padding:3px 5px !important;}
+.meta-textarea{width:100% !important;display: block;margin-bottom: 5px;padding:3px 5px !important;min-height: 100px;}
 .term-name-wrap p,.term-slug-wrap p,.term-parent-wrap p{display:none}
 .tax-thumbnail{width:150px;height:100px;border:solid 1px #DDD;background:#fff url(../images/choose_images.png) no-repeat center center;vertical-align:middle;cursor:pointer}
 #edit-slug-box{display:none !important; }
@@ -150,3 +150,5 @@ a.postdoc:after{content: "\f335";font-family: dashicons;position:absolute;opacit
 a.postdoc:hover:after{opacity:100;color:#ffffff;}
 a.postdoc:hover{background-color:#000000}
 a.postdoc:hover div{opacity:0.7}
+
+input, select{margin:0px;}

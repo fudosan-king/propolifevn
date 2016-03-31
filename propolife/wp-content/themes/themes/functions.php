@@ -16,6 +16,47 @@ function htmlContactButton(){global $lienhe;$hl = explode(';',$lienhe['hotline']
 	ob_end_clean();
 	return $cform;
 }
+
+function htmlContactButton2(){
+	ob_start();?>    
+    <div align="center" style="margin:15px 0px;"><a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-success btn-lg btn-big">内装工事について相談する<i class="fa fa-chevron-circle-right" style="margin:0px 0px 0px 10px;color:#ffffff"></i></a></div>
+<?php
+	$cform = ob_get_contents();
+	ob_end_clean();
+	return $cform;
+}
+function htmlContactButton3(){
+	ob_start();?>    
+<div align="center" style="margin-top:30px;"><a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-success btn-lg btn-big">問い合わせする<i class="fa fa-chevron-circle-right" style="margin:0px 0px 0px 10px;color:#ffffff"></i></a></div>
+<?php
+	$cform = ob_get_contents();
+	ob_end_clean();
+	return $cform;
+}
+function htmlContactButton4(){
+	ob_start();?>    
+<div align="center" style="margin-top:30px;"><a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-success btn-lg btn-big">ロンハウ工業団地相談する<i class="fa fa-chevron-circle-right" style="margin:0px 0px 0px 10px;color:#ffffff"></i></a></div>
+<?php
+	$cform = ob_get_contents();
+	ob_end_clean();
+	return $cform;
+}
+function htmlContactButton5(){
+	ob_start();?>    
+<div align="center" style="margin-top:30px;"><a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-success btn-lg btn-big">問い合わせする<i class="fa fa-chevron-circle-right" style="margin:0px 0px 0px 10px;color:#ffffff"></i></a></div>
+<?php
+	$cform = ob_get_contents();
+	ob_end_clean();
+	return $cform;
+}
+function htmlContactButton6(){
+	ob_start();?>    
+<div align="center" style="margin-top:30px;"><a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-success btn-lg btn-big">制作について相談する<i class="fa fa-chevron-circle-right" style="margin:0px 0px 0px 10px;color:#ffffff"></i></a></div>
+<?php
+	$cform = ob_get_contents();
+	ob_end_clean();
+	return $cform;
+}
 /*-----------------------------------------------------------------------*/
 function new_wp_title( $title, $sep ) {
 	global $paged, $page;
@@ -47,18 +88,32 @@ function get_page_ID_by_slug($page_slug) {
 }
 /*-----------------------------------------------------------------------*/
 function getExcerptByID($page_id){
-	$my_post = get_post($page_id);
-	$my_excerpt=$my_post->post_excerpt;		
-	return $my_excerpt;
+	$content_post = get_post($page_id);
+	$my_excerpt = $content_post->post_excerpt;
+	$my_excerpt = apply_filters('the_excerpt', $my_excerpt);
+	$my_excerpt = str_replace(']]>', ']]&gt;', $my_excerpt);
+	return $my_excerpt;	
 }
-
+/*-----------------------------------------------------------------------*/
 function getContentByID($page_id){
 	$content_post = get_post($page_id);
 	$content = $content_post->post_content;
 	$content = apply_filters('the_content', $content);
 	$content = str_replace(']]>', ']]&gt;', $content);
-	return $content;	
-	
+	return $content;		
+}
+/*-----------------------------------------------------------------------*/
+function get_limit_characters($str,$max){
+//$content_post = get_post($page_id);
+//$content = $content_post->post_content;	
+//$content = preg_replace(" (\[.*?\])",'',$str);
+//$content = strip_shortcodes($content);
+$content = strip_tags($str);
+$content = substr($content, 0, $max);
+$content = substr($content, 0, strripos($content, "。"));
+//$content = trim(preg_replace( '/\s+/', ' ', $content));
+$content = $content.'。。。';
+return $content;
 }
 /*-----------------------------------------------------------------------*/
 include('functions/theme-script.php');
@@ -72,4 +127,30 @@ include('functions/theme-shopcart.php');
 include('functions/theme-display.php');
 /*-----------------------------------------------------------------------*/
 include('functions/theme-url.php');
+/*-----------------------------------------------------------------------*/
+include('functions/theme-dashboard.php');
+/*-----------------------------------------------------------------------*/
+include('functions/theme-login.php');
+/*-----------------------------------------------------------------------*/
+include('functions/theme-order.php');
+/*-----------------------------------------------------------------------*/
+add_image_size('web-thumb',263,300,true);
+/*-----------------------------------------------------------------------*/
+add_image_size('perth-thumb',360,270,true);
+/*-----------------------------------------------------------------------*/
+remove_action('wp_head', 'rest_output_link_wp_head', 10); 
+remove_action('wp_head', 'wp_oembed_add_discovery_links', 10);
+remove_action('wp_head', 'wp_shortlink_wp_head', 10, 0);
+remove_action('wp_head', 'rel_canonical');
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10,0);
+remove_action ('wp_head', 'rsd_link');
+remove_action( 'wp_head', 'wlwmanifest_link');
+
+function stop_loading_wp_embed_and_jquery() {
+	if (!is_admin()) {
+		wp_deregister_script('wp-embed');
+		wp_deregister_script('jquery');
+	}
+}
+add_action('init', 'stop_loading_wp_embed_and_jquery');
 ?>

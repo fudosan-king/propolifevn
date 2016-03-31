@@ -1,3 +1,6 @@
+<meta name="google-site-verification" content="GkP-KBYNZzloZJ_UdHZdBOQ-NPJzTQHtgmb0it62a9Q" />
+<meta name='revisit-after' content='7 days' />
+<meta http-equiv="content-language" content="ja" />
 <?php
 if(is_page() || is_singular()){
 $titlepage = get_post_meta($post->ID,'title-page',true);
@@ -13,8 +16,8 @@ if(is_tax()){
 	$link = $_SERVER['REQUEST_URI'];
 	$arr = array();
 	$arr=explode( '/', $link );
-	$tax = $arr[2];
-	$slug = $arr[3];
+	$tax = $arr[1];
+	$slug = $arr[2];
 	$terms = get_term_by('slug',$slug,$tax);		
 	$titlepage = get_tax_meta($terms->term_taxonomy_id,'term_meta[title_meta]',true);
 	$description = get_tax_meta($terms->term_taxonomy_id,'term_meta[description_meta]',true);
@@ -36,3 +39,6 @@ if(is_tax()){
 <meta name="description" content="<?php echo $description; ?>" />
 <meta name="keywords" content="<?php echo $metakeyword; ?>" />
 <meta name="robots" content="index, follow" />
+<link rel="alternate" href="http://www.propolifevietnam.com" hreflang="ja" />
+<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' );?>/images/favicon.png" type="image/x-icon" />
+<link rel="icon" href="<?php bloginfo( 'template_directory' );?>/images/favicon.png" type="image/x-icon" />

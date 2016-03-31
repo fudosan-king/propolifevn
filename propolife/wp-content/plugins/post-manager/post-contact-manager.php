@@ -1,21 +1,21 @@
 <?php
 $thong_tin = array(
 'id' => 'my-thong-tin',
-'title' => 'Thông tin Công Ty',
+'title' => 'Company Information',
 'page' => 'page',	
 'context' => 'normal',
 'priority' => 'high',
 'fields' => array(
-array('name' => 'Tên Công Ty','id' => $prefix . 'ten-cong-ty','type' => 'text','std' => 'Tên Công Ty'),					  
+array('name' => 'Company','id' => $prefix . 'ten-cong-ty','type' => 'text','std' => 'Tên Công Ty'),					  
 array('name' => 'Hotline','id' => $prefix . 'hotline','type' => 'text','std' => 'Hotline'),
 array('name' => 'Fax','id' => $prefix . 'fax','type' => 'text','std' => 'Fax'),
 array('name' => 'Mobile','id' => $prefix . 'mobile','type' => 'text','std' => 'Mobile Number'),
-array('name' => 'Mail','id' => $prefix . 'mail','type' => 'text','std' => 'Địa chỉ mail'),
-array('name' => 'Facebook','id' => $prefix . 'facebook','type' => 'text','std' => 'Địa chỉ facebook'),
-array('name' => 'Danh sách DT','id' => $prefix . 'dt-ho-tro','type' => 'textarea','std' => 'Danh sách điện thoại'),		
+array('name' => 'Email Address','id' => $prefix . 'mail','type' => 'textarea','std' => 'Địa chỉ mail'),
+array('name' => 'Tel list','id' => $prefix . 'dt-ho-tro','type' => 'textarea','std' => 'Danh sách điện thoại'),		
 array('name' => 'Yahoo','id' => $prefix . 'yahoo','type' => 'textarea','std' => 'Danh sách nickname'),	
 array('name' => 'Skype','id' => $prefix . 'skype','type' => 'textarea','std' => 'Danh sách nickname'),
-array('name' => 'Video','id' => $prefix . 'video','type' => 'textarea','std' => 'Danh sách video'),			
+array('name' => 'Video','id' => $prefix . 'video','type' => 'textarea','std' => 'Danh sách video'),
+array('name' => 'Facebook','id' => $prefix . 'facebook','type' => 'text','std' => 'Địa chỉ facebook'),			
 array('name' => 'Google plus','id' => $prefix . 'gplus','type' => 'text','std' => 'Địa chỉ Google plus'),		
 array('name' => 'Twitter','id' => $prefix . 'twitter','type' => 'text','std' => 'Địa chỉ twitter'),
 array('name' => 'Youtube','id' => $prefix . 'youtube','type' => 'text','std' => 'Địa chỉ Youtube'),
@@ -25,7 +25,7 @@ array('name' => 'Copyright','id' => $prefix . 'copyright','type' => 'text','std'
 );
 $google_map = array(
 'id' => 'my-google-map',
-'title' => 'Sơ đồ hướng dẫn',
+'title' => 'Google sitemap',
 'page' => 'page',	
 'context' => 'normal',
 'priority' => 'high',
@@ -118,7 +118,7 @@ $myposts = get_post($post_id );
 $lienhe["mail"]=get_post_meta($post_id ,'mail',true);
 $lienhe["fax"]=get_post_meta($post_id ,'fax',true);
 $lienhe["diachi"]=get_post_meta($post_id ,'dia-chi',true);
-$lienhe["dienthoai"]=get_post_meta($post_id ,'dien-thoai',true);	
+$lienhe["dienthoai"]=get_post_meta($post_id ,'dt-ho-tro',true);	
 $lienhe["mobile"]=get_post_meta($post_id ,'mobile',true);	
 $lienhe["tencongty"]=get_post_meta($post_id ,'ten-cong-ty',true);
 $lienhe["hotline"]=get_post_meta($post_id ,'hotline',true);

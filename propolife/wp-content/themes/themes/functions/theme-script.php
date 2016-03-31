@@ -1,7 +1,4 @@
-<?php
-function scriptAbout(){
-	if(!is_page('lotus') && !is_page('contact') && !is_singular('lotus') && !is_singular('web') && !is_tax('cat-web')){
-?>
+<?php function scriptMember(){if(is_page('about')){?>
 <script type="text/javascript">
 jQuery(function ($) {
 	var options = {
@@ -13,7 +10,7 @@ jQuery(function ($) {
 		$SlideDuration: 160,
 		$MinDragOffsetToSlide:10,
 		$SlideWidth:100,
-		$SlideHeight:60,
+		$SlideHeight:100,
 		$SlideSpacing:7,
 		$DisplayPieces:9,
 		$ParkingPosition: 0,
@@ -22,11 +19,11 @@ jQuery(function ($) {
 		$DragOrientation: 1
 	};
 
-	var jssorCat = new $JssorSlider$("sliderAbout", options);
+	var jssorMember = new $JssorSlider$("sliderMember", options);
 	function ScaleSlider() {
 		var bodyWidth = document.body.clientWidth-30;
 		if (bodyWidth)
-			jssorCat.$ScaleWidth(Math.min(bodyWidth,840));
+			jssorMember.$ScaleWidth(Math.min(bodyWidth,847));
 		else
 			window.setTimeout(ScaleSlider, 30);
 	}
@@ -36,6 +33,11 @@ jQuery(function ($) {
 	$(window).bind("orientationchange", ScaleSlider);
 });
 </script>
+<?php
+}}
+add_action('wp_head','scriptMember');
+?>
+<?php function fancybox(){ ?>
 <script type="text/javascript" src="<?php bloginfo( 'template_directory' );?>/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_directory' );?>/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen">
 <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'template_directory' );?>/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5">
@@ -60,11 +62,10 @@ jQuery(function($) {
 	});
 });
 </script>
-<?php	
-}}
-add_action('wp_head','scriptAbout');
-function scriptBanner(){
-	if(!is_page('about') && !is_page('web') && !is_page('contact')  && !is_singular('lotus') && !is_tax('cat-web')){
+<?php } add_action('wp_footer','fancybox');?>
+<?php
+function scriptBanner(){global $post;
+	if(is_tax('cat-chronicle') || is_page('chronicle') || (is_singular('support') && $post->ID==264 || $post->ID==266 || $post->ID==267) || $post->ID==407 || is_page('web-step') || is_page('web') || is_page('development')){
 	?>
 <script>
 jQuery(document).ready(function ($) {
@@ -172,7 +173,7 @@ jQuery(document).ready(function ($) {
 	_CaptionTransitions["FADE"] = { $Duration: 900, $Opacity: 2 };
 
 	var options = {
-		$AutoPlay: true,
+		$AutoPlay:true,
 		$AutoPlaySteps: 1,
 		$AutoPlayInterval: 2000,
 		$PauseOnHover: 1,
@@ -221,7 +222,7 @@ jQuery(document).ready(function ($) {
 		}
 	};
 
-	var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+	var jssor_slider1 = new $JssorSlider$("sliderContainer", options);
 	function ScaleSlider() {
 		var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
 		if (parentWidth)

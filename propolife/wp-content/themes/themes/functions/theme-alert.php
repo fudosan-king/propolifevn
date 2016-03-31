@@ -2,13 +2,13 @@
 function alertDialog($flag){
 switch ($flag){
 case 0:
-$header='ĐANG XỬ LÝ THÔNG TIN';
-$content='Thông tin đang xác nhận, vui lòng đợi trong giây lát <i class="fa fa-spinner fa-spin"></i>';
+$header='ただ今処理中です。';
+$content='しばらくお待ちください <i class="fa fa-spinner fa-spin"></i>';
 $footer = '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>';
 break;
 case 1:
-$header='データの成功を送信';
-$content='Thông tin gởi thành công, chúng tôi sẽ liên hệ lại bạn, Xin cảm ơn.';
+$header='正常に送信されました';
+$content='担当者より折り返しご連絡をさせて頂きます。宜しくお願い致します。.';
 $footer = '<a href="'.home_url().'" class="btn btn-default">Close</a>';
 break;
 case 2: 

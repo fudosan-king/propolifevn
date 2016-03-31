@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-12-09 06:53:29+0000\n"
+"PO-Revision-Date: 2016-02-24 00:12:01+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -16,79 +16,79 @@ msgstr "업데이트를 해주셔서 감사합니다! 워드프레스 %s은 사�
 
 #. translators: 1: WP_Term class name, WP_Comment class name, WP_Network class
 #. name
-#: wp-admin/about.php:177
+#: wp-admin/about.php:189
 msgid "New %1$s, %2$s, and %3$s objects make interacting with terms, comments, and networks more predictable and intuitive in code."
 msgstr "새로운 %1$s, %2$s, %3$s 오브젝트는 코드를 텀스, 댓글, 네트워크에서 더욱 예측 가능하며 직관적으로 상호 작용하도록 합니다."
 
 #. translators: WP_Comment_Query class name
-#: wp-admin/about.php:170
+#: wp-admin/about.php:182
 msgid "Comment queries now have cache handling to improve performance. New arguments in %s make crafting robust comment queries simpler."
 msgstr "댓글 쿼리는 이제 성능을 개선하여 캐시 처리가 가능합니다. %s의 새로운 인수는 활발한 댓글 쿼리 작업을 보다 단순하게 합니다."
 
-#: wp-admin/about.php:174
+#: wp-admin/about.php:186
 msgid "Term, comment, and network objects"
 msgstr "텀, 댓글, 네트워크 오브젝트"
 
-#: wp-admin/about.php:167
+#: wp-admin/about.php:179
 msgid "Comment query improvements"
 msgstr "댓글 쿼리 개선"
 
-#: wp-admin/about.php:156
+#: wp-admin/about.php:168
 msgid "Term meta"
 msgstr "텀 메타"
 
 #. translators: 1: add_term_meta() docs link, 2: get_term_meta() docs link, 3:
 #. update_term_meta() docs link
-#: wp-admin/about.php:159
+#: wp-admin/about.php:171
 msgid "Terms now support metadata, just like posts. See %1$s, %2$s, and %3$s for more information."
 msgstr "텀은 이제 글처럼 메타데이터를 지원합니다. 자세한 정보는 %1$s, %2$s, %3$s를 참고하세요."
 
 #. translators: WordPress REST API plugin link
-#: wp-admin/about.php:148
+#: wp-admin/about.php:160
 msgid "Infrastructure is the first part of a multi-stage rollout for the REST API. Inclusion of core endpoints is targeted for an upcoming release. To get a sneak peek of the core endpoints, and for more information on extending the REST API, check out the official %s plugin."
 msgstr "인프라구조는 REST API의 다단계 프로젝트 중 첫 번째 부분입니다. 코어 종말점(Endpoint)을 포함 시킨 것은 앞으로 있을 릴리즈에 대비하기 위한 것입니다. 코어 종말점에 대한 정보나 REST API에 대한 더 자세한 정보는 공식 %s 플러그인을 참고하세요."
 
-#: wp-admin/about.php:131
+#: wp-admin/about.php:143
 msgid "Infrastructure for the REST API has been integrated into core, marking a new era in developing with WordPress. The REST API serves to provide developers with a path forward for building and extending RESTful APIs on top of WordPress."
 msgstr "REST API의 인프라구조가 코어에 결합됐습니다. 워드프레스 개발에 있어서 새로운 시대를 열게 됩니다. REST API는 개발자에게 워드프레스보다 상위에서 RESTful API를 구축하거나 확장할 수 있는 길을 열어줍니다."
 
-#: wp-admin/about.php:118
+#: wp-admin/about.php:130
 msgid "In addition to post embeds, WordPress 4.4 also adds support for five new oEmbed providers: Cloudup, Reddit&nbsp;Comments, ReverbNation, Speaker&nbsp;Deck, and VideoPress."
 msgstr "임베드 글 발행에 있어서 워드프레스 4.4는 다섯 개의 새로운 oEmbed 제공자를 지원합니다. Cloudup, Reddit&nbsp;Comments, ReverbNation, Speaker&nbsp;Deck, VideoPress."
 
-#: wp-admin/about.php:129
+#: wp-admin/about.php:141
 msgid "REST API infrastructure"
 msgstr "REST API 인프라 구조"
 
-#: wp-admin/about.php:104
+#: wp-admin/about.php:116
 msgid "Now you can embed your posts on other sites, even other WordPress sites. Simply drop a post URL into the editor and see an instant embed preview, complete with the title, excerpt, and featured image if you&#8217;ve set one. We&#8217;ll even include your site icon and links for comments and sharing."
 msgstr "다른 사이트에서 자신의 글을 임베드 할 수 있게 됐으며 다른 워드프레스 사이트도 가능합니다. 글 URL을 편집기에 입력하면 바로 임베드 미리보기가 가능하며 제목, 요약글, 특성 이미지(있을 경우)를 추가하세요. 그러면 사이트 아이콘과 댓글, 공유도 포함 시킬 것입니다."
 
-#: wp-admin/about.php:117
+#: wp-admin/about.php:129
 msgid "Even more embed providers"
 msgstr "더 많은 임베드 제공자"
 
-#: wp-admin/about.php:90
+#: wp-admin/about.php:102
 msgid "WordPress now takes a smarter approach to displaying appropriate image sizes on any device, ensuring a perfect fit every time. You don&#8217;t need to do anything to your theme, it just works."
 msgstr "워드프레스는 이제 더 스마트한 접근을 시도해 어떤 기기에든 적절한 이미지 크기를 표시해 항상 완벽한 맟춤을 보장합니다. 테마에 대해 어떤 작업을 할 필요가 없으며 그냥 작동합니다."
 
-#: wp-admin/about.php:103
+#: wp-admin/about.php:115
 msgid "Embed your WordPress content"
 msgstr "워드프레스 콘텐츠 임베드"
 
-#: wp-admin/about.php:89
+#: wp-admin/about.php:101
 msgid "Responsive images"
 msgstr "반응형 이미지"
 
-#: wp-admin/about.php:67
+#: wp-admin/about.php:79
 msgid "Twenty Sixteen was built to look great on any device. A fluid grid design, flexible header, fun color schemes, and more, will make your content shine."
 msgstr "Twenty Sixteen은 어떤 기기에서든 훌륭하게 보이도록 설계됐습니다. 유동 그리드 디자인, 유연한 헤더, 재미있는 색상 조합, 등은 콘텐츠를 빛나게 할 것입니다."
 
-#: wp-admin/about.php:66
+#: wp-admin/about.php:78
 msgid "Our newest default theme, Twenty Sixteen, is a modern take on a classic blog design."
 msgstr "워드프레스 최신의 기본 테마인 Twenty Sixteen은 전통적인 블로그 디자인을 바탕으로 현대성을 강조했습니다."
 
-#: wp-admin/about.php:59
+#: wp-admin/about.php:71
 msgid "Twenty Sixteen"
 msgstr "Twenty Sixteen"
 
@@ -107,7 +107,7 @@ msgid "(Currently set to: %s)"
 msgstr "(현재 설정: %s)"
 
 #. translators: %s: WordPress version number
-#: wp-admin/about.php:214
+#: wp-admin/about.php:226
 msgid "<strong>Version %s</strong> addressed one security issue."
 msgstr "<strong>버전 %s</strong> 하나의 보안 문제 처리함."
 
@@ -129,15 +129,15 @@ msgstr "<a href=\"%s\">Gravatar</a>에서 프로필 사진을 변경할 수 있�
 msgid "Profile Picture"
 msgstr "프로필 사진"
 
-#: wp-admin/about.php:208
+#: wp-admin/about.php:220
 msgid "Security Releases"
 msgstr "보안 릴리즈"
 
-#: wp-admin/about.php:211
+#: wp-admin/about.php:223
 msgid "Maintenance and Security Releases"
 msgstr "유지보수 및 보안 릴리즈"
 
-#: wp-admin/about.php:205
+#: wp-admin/about.php:217
 msgid "Maintenance Releases"
 msgstr "유지 관리 릴리즈"
 
@@ -317,7 +317,7 @@ msgstr "%s 디렉토리의 파일들이 자동으로 실행됩니다."
 msgid "You are not allowed to manage these items."
 msgstr "이 아이템을 관리할 권한이 없습니다."
 
-#: wp-admin/widgets.php:431
+#: wp-admin/widgets.php:436
 msgid "This will clear all items from the inactive widgets list. You will not be able to restore any customizations."
 msgstr "이 작업은 비활성 위젯 목록에서 모든 아이템을 삭제합니다. 이 작업후에 사용자 정의 내용을 복구할 수 없습니다."
 
@@ -333,7 +333,7 @@ msgstr "사용자 목록"
 msgid "One of the selected users is not a member of this site."
 msgstr "선택된 사용자중 한명이 이 사이트의 회원이 아닙니다."
 
-#: wp-admin/widgets.php:423
+#: wp-admin/widgets.php:426
 msgid "Clear Inactive Widgets"
 msgstr "비활성 위젯 제거"
 
@@ -969,7 +969,7 @@ msgstr "현재 테마는 사용자 정의 헤더 이미지 업로드를 지원�
 msgid "You&rsquo;re using the auto-generated password for your account. Would you like to change it?"
 msgstr "자동생성된 비밀번호를 이용하여 로그인하였습니다. 지금 바꾸시겠습니까?"
 
-#: wp-admin/users.php:360
+#: wp-admin/users.php:361
 msgid "You have specified this user for removal:"
 msgstr "삭제할 사용자를 지정하십시요:"
 
@@ -1537,7 +1537,7 @@ msgstr "메인 메뉴"
 msgid "Enter the location on the server where the public and private keys are located. If a passphrase is needed, enter that in the password field above."
 msgstr "공개 키와 비밀 키가 있는 서버 위치를 입력하세요. 비밀 문구가 필요할 경우 비밀번호 란 위에 입력하세요."
 
-#: wp-admin/users.php:419
+#: wp-admin/users.php:420
 msgid "%s user deleted."
 msgid_plural "%s users deleted."
 msgstr[0] "%s 사용자 삭제됨."
@@ -1547,11 +1547,11 @@ msgid "%d media attachment moved to the trash."
 msgid_plural "%d media attachments moved to the trash."
 msgstr[0] "%d 미디어 첨부가 휴지통으로 이동됨."
 
-#: wp-admin/users.php:241
+#: wp-admin/users.php:242
 msgid "You have specified these users for deletion:"
 msgstr "삭제를 위해 다음 사용자를 특정했습니다:"
 
-#: wp-admin/users.php:266
+#: wp-admin/users.php:267
 msgid "What should be done with content owned by these users?"
 msgstr "이들 사용자 소유의 콘텐츠 처리 방법"
 
@@ -1959,7 +1959,7 @@ msgstr "현재 위치에만 로그인 돼있습니다."
 msgid "Log Out Everywhere"
 msgstr "모든 곳에서 로그아웃"
 
-#: wp-admin/about.php:65
+#: wp-admin/about.php:77
 msgid "Introducing Twenty Sixteen"
 msgstr "Twenty Sixteen 소개"
 
@@ -2447,15 +2447,15 @@ msgstr "상세 &amp; 미리보기"
 msgid "Delete brings you to the Delete Users screen for confirmation, where you can permanently remove a user from your site and delete their content. You can also delete multiple users at once by using Bulk Actions."
 msgstr "삭제는 확인을 위해 사용자 삭제 화면으로 이동합니다. 거기서 사이트로부터 사용자를 영구히 제거하고 콘텐츠도 삭세할 수 있습니다. 일괄작업을 이용해 한번에 다수의 사용자를 삭제할 수도 있습니다."
 
-#: wp-admin/users.php:264
+#: wp-admin/users.php:265
 msgid "What should be done with content owned by this user?"
 msgstr "이 사용자가 소유한 콘텐츠는 어떻게 할까요?"
 
-#: wp-admin/includes/ms.php:1055 wp-admin/users.php:270
+#: wp-admin/includes/ms.php:1055 wp-admin/users.php:271
 msgid "Delete all content."
 msgstr "모든 콘텐츠 제거하기"
 
-#: wp-admin/includes/ms.php:1057 wp-admin/users.php:272
+#: wp-admin/includes/ms.php:1057 wp-admin/users.php:273
 msgid "Attribute all content to:"
 msgstr "모든 콘텐츠를 다음으로 귀속:"
 
@@ -2749,7 +2749,7 @@ msgstr "이전 테마 보이기"
 msgid "Show next theme"
 msgstr "다음 테마 보이기"
 
-#: wp-admin/widgets.php:498
+#: wp-admin/widgets.php:504
 msgid "Add Widget"
 msgstr "위젯 추가"
 
@@ -3756,23 +3756,23 @@ msgstr "<strong>댓글이 달린 글</strong> 열에는 3가지 요소가 있습
 msgid "Used: %1$s%% of %2$s"
 msgstr "사용됨: %2$s 중에 %1$s%%"
 
-#: wp-admin/users.php:250
+#: wp-admin/users.php:251
 msgid "ID #%1$s: %2$s <strong>The current user will not be deleted.</strong>"
 msgstr "ID #%1$s: %2$s <strong>현재 사용자는 삭제되지 않습니다.</strong>"
 
-#: wp-admin/users.php:252 wp-admin/users.php:376
+#: wp-admin/users.php:253 wp-admin/users.php:377
 msgid "ID #%1$s: %2$s"
 msgstr "ID #%1$s: %2$s"
 
-#: wp-admin/users.php:372
+#: wp-admin/users.php:373
 msgid "ID #%1$s: %2$s <strong>The current user will not be removed.</strong>"
 msgstr "ID #%1$s: %2$s <strong>현제 사용자는 제거되지 않습니다.</strong>"
 
-#: wp-admin/users.php:374
+#: wp-admin/users.php:375
 msgid "ID #%1$s: %2$s <strong>You don't have permission to remove this user.</strong>"
 msgstr "ID #%1$s: %2$s <strong>해당 사용자를 제거할 권한이 없습니다.</strong>"
 
-#: wp-admin/users.php:234
+#: wp-admin/users.php:235
 msgid "Please select an option."
 msgstr "옵션을 선택해주세요."
 
@@ -4152,11 +4152,11 @@ msgstr "<code>wp-config.php</code>파일은 데이터베이스 테이블 접두�
 msgid "Revert to the <strong>Browser Uploader</strong> by clicking the link below the drag and drop box."
 msgstr "끌어놓기 박스 아래의 링크를 클릭하여 <strong>브라우저 업로더</strong>로 가세요."
 
-#: wp-admin/users.php:417
+#: wp-admin/users.php:418
 msgid "User deleted."
 msgstr "사용자 삭제됨"
 
-#: wp-admin/users.php:425
+#: wp-admin/users.php:426
 msgid "New user created. <a href=\"%s\">Edit user</a>"
 msgstr "새 사용자 생성됨. <a href=\"%s\">사용자 편집하기</a>"
 
@@ -4914,26 +4914,26 @@ msgid "Show Toolbar when viewing site"
 msgstr "사이트를 볼 때 툴바 보이기"
 
 #. translators: %s: Codex URL
-#: wp-admin/about.php:231
+#: wp-admin/about.php:55 wp-admin/about.php:59 wp-admin/about.php:243
 msgid "For more information, see <a href=\"%s\">the release notes</a>."
 msgstr "더 많은 정보는, <a href=\"%s\">릴리즈 노트</a>를 참조하세요."
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. Singular
 #. security issue.
-#: wp-admin/about.php:223
+#: wp-admin/about.php:235
 msgid "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed a security issue and fixed %2$s bugs."
 msgstr[0] "<strong>버전 %1$s</strong> 보안 문제와 %2$s 버그를 처리했습니다."
 
 #. translators: 1: WordPress version number, 2: plural number of bugs. More
 #. than one security issue.
-#: wp-admin/about.php:227
+#: wp-admin/about.php:53 wp-admin/about.php:57 wp-admin/about.php:239
 msgid "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed some security issues and fixed %2$s bugs."
 msgstr[0] "<strong>버전 %1$s</strong> 몇가지 보안 문제를 처리했고 %2$s 버그를 수리했습니다."
 
 #. translators: 1: WordPress version number, 2: plural number of bugs.
-#: wp-admin/about.php:219
+#: wp-admin/about.php:231
 msgid "<strong>Version %1$s</strong> addressed %2$s bug."
 msgid_plural "<strong>Version %1$s</strong> addressed %2$s bugs."
 msgstr[0] "<strong>버전 %1$s</strong>이(가) %2$s 버그를 해결함."
@@ -4946,20 +4946,21 @@ msgstr "워드프레스 알림판에 오신 것을 환영합니다! 이 화면�
 msgid "What&#8217;s New"
 msgstr "새로운 것"
 
-#: wp-admin/about.php:210
+#: wp-admin/about.php:52 wp-admin/about.php:222
 msgid "Maintenance and Security Release"
-msgstr "관리 보안 릴리즈"
+msgid_plural "Maintenance and Security Releases"
+msgstr[0] "관리 보안 릴리즈"
 
-#: wp-admin/about.php:207
+#: wp-admin/about.php:219
 msgid "Security Release"
 msgstr "보안 릴리즈"
 
-#: wp-admin/about.php:204
+#: wp-admin/about.php:216
 msgid "Maintenance Release"
 msgstr "관리 릴리즈"
 
 #. translators: %s: WordPress version number
-#: wp-admin/about.php:216
+#: wp-admin/about.php:228
 msgid "<strong>Version %s</strong> addressed some security issues."
 msgstr "<strong>버전 %s</strong> 보안 문제를 처리했습니다."
 
@@ -4967,7 +4968,7 @@ msgstr "<strong>버전 %s</strong> 보안 문제를 처리했습니다."
 msgid "This screen allows you to choose your permalink structure. You can choose from common settings or create custom URL structures."
 msgstr "이 화면은 기본 고유주소 구조를 선택할 수 있게 해줍니다. 일반 설정에서 선택하거나 사용자 정의 URL 구조를 만들 수 있습니다."
 
-#: wp-admin/about.php:189
+#: wp-admin/about.php:201
 msgid "Return to Updates"
 msgstr "업데이트로 돌아가기"
 
@@ -5259,11 +5260,11 @@ msgstr "add_meta_box()를 사용하기 위해서 wp-admin/includes/template.php�
 msgid "Welcome to WordPress %s"
 msgstr "WordPress %s 사용을 환영합니다"
 
-#: wp-admin/about.php:192
+#: wp-admin/about.php:204
 msgid "Go to Dashboard &rarr; Home"
 msgstr "대시보드 &rarr; 홈으로 가기"
 
-#: wp-admin/about.php:189
+#: wp-admin/about.php:201
 msgid "Return to Dashboard &rarr; Updates"
 msgstr "대시보드 &rarr; 업데이트로 돌아가기"
 
@@ -5275,7 +5276,7 @@ msgstr "워드프레스는 열정적인 개인들로 구성된 전세계 팀에 
 msgid "Core Developers"
 msgstr "코어 개발자들"
 
-#: wp-admin/about.php:125
+#: wp-admin/about.php:137
 msgid "Under the Hood"
 msgstr "개발 부분"
 
@@ -5478,7 +5479,7 @@ msgstr "속성"
 msgid "Caution:"
 msgstr "주의:"
 
-#: wp-admin/users.php:433
+#: wp-admin/users.php:434
 msgid "Changed roles."
 msgstr "권한이 바뀌었습니다."
 
@@ -5486,7 +5487,7 @@ msgstr "권한이 바뀌었습니다."
 msgid "Click to view entire list of files which will be deleted"
 msgstr "삭제될 파일의 목록을 봅니다."
 
-#: wp-admin/includes/ms.php:1085 wp-admin/users.php:286
+#: wp-admin/includes/ms.php:1085 wp-admin/users.php:287
 msgid "Confirm Deletion"
 msgstr "지우기 확인"
 
@@ -5557,14 +5558,14 @@ msgid "Plugins %s"
 msgstr "플러그인 %s"
 
 #: wp-admin/includes/dashboard.php:406 wp-admin/includes/dashboard.php:408
-#: wp-admin/users.php:487
+#: wp-admin/users.php:488
 msgid "Search Users"
 msgstr "사용자 검색"
 
 #. translators: %s: search keywords
 #: wp-admin/edit-comments.php:197 wp-admin/edit-tags.php:311
 #: wp-admin/edit.php:307 wp-admin/link-manager.php:78 wp-admin/plugins.php:515
-#: wp-admin/upload.php:224 wp-admin/users.php:480
+#: wp-admin/upload.php:224 wp-admin/users.php:481
 msgid "Search results for &#8220;%s&#8221;"
 msgstr "&#8220;%s&#8221; 검색 결과"
 
@@ -5586,7 +5587,7 @@ msgstr "업데이트 %s"
 msgid "User added."
 msgstr "사용자 추가됨."
 
-#: wp-admin/users.php:444
+#: wp-admin/users.php:445
 msgid "User removed from this site."
 msgstr "이 사이트로부터 사용자가 삭제되었습니다."
 
@@ -5607,8 +5608,8 @@ msgstr "버전 %s"
 msgid "View"
 msgstr "보기"
 
-#: wp-admin/users.php:300 wp-admin/users.php:308 wp-admin/users.php:335
-#: wp-admin/users.php:343
+#: wp-admin/users.php:301 wp-admin/users.php:309 wp-admin/users.php:336
+#: wp-admin/users.php:344
 msgid "You can&#8217;t remove users."
 msgstr "사용자를 삭제할 수 없습니다."
 
@@ -5618,7 +5619,7 @@ msgid "Editor"
 msgstr "편집기"
 
 #: wp-admin/menu.php:220 wp-admin/menu.php:222 wp-admin/user-edit.php:194
-#: wp-admin/users.php:474
+#: wp-admin/users.php:475
 msgctxt "user"
 msgid "Add New"
 msgstr "사용자 추가하기"
@@ -5948,7 +5949,7 @@ msgstr "업로드된 이미지들"
 msgid "Layout"
 msgstr "레이아웃"
 
-#: wp-admin/users.php:239
+#: wp-admin/users.php:240
 msgid "You have specified this user for deletion:"
 msgstr "이 사용자를 지우려고 선택합니다:"
 
@@ -5977,7 +5978,7 @@ msgstr "이 플러그인은 네트워크의 다른 사이트에서 활성화할 
 msgid "Default Post Format"
 msgstr "기본 글 형식"
 
-#: wp-admin/user-edit.php:196 wp-admin/users.php:476
+#: wp-admin/user-edit.php:196 wp-admin/users.php:477
 msgctxt "user"
 msgid "Add Existing"
 msgstr "존재하는 사용자 추가"
@@ -6578,7 +6579,7 @@ msgid "Home: %s"
 msgstr "홈: %s"
 
 #: wp-admin/import.php:57 wp-admin/includes/network.php:105
-#: wp-admin/includes/network.php:122 wp-admin/users.php:234
+#: wp-admin/includes/network.php:122 wp-admin/users.php:235
 msgid "ERROR:"
 msgstr "에러:"
 
@@ -6951,7 +6952,7 @@ msgstr "워드프레스 블로그"
 msgid "&mdash; No role for this site &mdash;"
 msgstr "&mdash; 이 사이트를 위한 규칙이 없습니다. &mdash;"
 
-#: wp-admin/users.php:357
+#: wp-admin/users.php:358
 msgid "Remove Users from Site"
 msgstr "사이트로부터 사용자 삭제"
 
@@ -7087,15 +7088,15 @@ msgstr "표시 옵션"
 msgid "Remove Image"
 msgstr "이미지 제거"
 
-#: wp-admin/users.php:384
+#: wp-admin/users.php:385
 msgid "Confirm Removal"
 msgstr "삭제 확인"
 
-#: wp-admin/users.php:448
+#: wp-admin/users.php:449
 msgid "Other users have been removed."
 msgstr "다른 사용자들이 삭제되었습니다."
 
-#: wp-admin/users.php:386
+#: wp-admin/users.php:387
 msgid "There are no valid users selected for removal."
 msgstr "삭제를 위한 유효한 사용자가 선택되지 않았습니다."
 
@@ -7103,7 +7104,7 @@ msgstr "삭제를 위한 유효한 사용자가 선택되지 않았습니다."
 msgid "User deletion is not allowed from this screen."
 msgstr "사용자 삭제는 이 화면에서 허용되지 않습니다."
 
-#: wp-admin/users.php:362
+#: wp-admin/users.php:363
 msgid "You have specified these users for removal:"
 msgstr "이 사용자들을 삭제하려고 합니다:"
 
@@ -7111,7 +7112,7 @@ msgstr "이 사용자들을 삭제하려고 합니다:"
 msgid "You can&#8217;t delete that user."
 msgstr "해당 사용자를 지울 수 없습니다."
 
-#: wp-admin/users.php:447
+#: wp-admin/users.php:448
 msgid "You can't remove the current user."
 msgstr "현재의 사용자를 삭제할 수 없습니다."
 
@@ -7411,10 +7412,6 @@ msgstr "올바른 메뉴명을 입력해주세요."
 msgid "This timezone does not observe daylight saving time."
 msgstr "이 시간대는 일광 절약 시간제를 사용하지 않습니다."
 
-#: wp-admin/options-general.php:171
-msgid "This timezone is currently in daylight saving time."
-msgstr "이 시간대는 현재 일광 절약 시간제 입니다."
-
 #: wp-admin/includes/nav-menu.php:387 wp-admin/includes/nav-menu.php:661
 msgid "View All"
 msgstr "모두 보기"
@@ -7432,7 +7429,7 @@ msgid "Must-Use <span class=\"count\">(%s)</span>"
 msgid_plural "Must-Use <span class=\"count\">(%s)</span>"
 msgstr[0] "Must-Use <span class=\"count\">(%s)</span>"
 
-#: wp-admin/about.php:192
+#: wp-admin/about.php:204
 msgid "Go to Dashboard"
 msgstr "대시보드로 가기 l&rsquo;홈"
 
@@ -7448,6 +7445,10 @@ msgstr "이 주소는 관리 목적으로 사용됩니다. 만약 이것을 변�
 #: wp-admin/plugins.php:310
 msgid "You are about to remove the following plugin:"
 msgstr "다음 플러그인을 삭제하려고 합니다:"
+
+#: wp-admin/options-general.php:171
+msgid "This timezone is currently in daylight saving time."
+msgstr "이 시간대는 현재 일광 절약 시간제입니다."
 
 #: wp-admin/includes/plugin.php:408
 msgid "Advanced caching plugin."
@@ -7689,10 +7690,6 @@ msgstr "시간대"
 msgid "<abbr title=\"Coordinated Universal Time\">UTC</abbr> time is %s"
 msgstr "<abbr title=\"Coordinated Universal Time\">UTC</abbr> 현재 시각은 <code>%s</code>입니다."
 
-#: wp-admin/options-general.php:287
-msgid "Week Starts On"
-msgstr "시작요일"
-
 #: wp-admin/options-media.php:15
 msgid "Media Settings"
 msgstr "미디어 설정"
@@ -7893,23 +7890,23 @@ msgstr "개인 정보"
 msgid "Share a little biographical information to fill out your profile. This may be shown publicly."
 msgstr "사용자 정보에 넣을 간단한 정보를 공유합니다. 이 내용은 공개됩니다."
 
-#: wp-admin/users.php:231
+#: wp-admin/users.php:232
 msgid "Delete Users"
 msgstr "사용자 지우기"
 
-#: wp-admin/users.php:288
+#: wp-admin/users.php:289
 msgid "There are no valid users selected for deletion."
 msgstr "지우려고 하는 적절한 사용자가 없습니다."
 
-#: wp-admin/users.php:429
+#: wp-admin/users.php:430
 msgid "New user created."
 msgstr "새 사용자가 만들어졌습니다."
 
-#: wp-admin/users.php:437
+#: wp-admin/users.php:438
 msgid "Other user roles have been changed."
 msgstr "다른 사용자의 권한이 바뀌었습니다."
 
-#: wp-admin/users.php:441
+#: wp-admin/users.php:442
 msgid "Other users have been deleted."
 msgstr "다른 사용자들이 지워졌습니다."
 
@@ -8410,7 +8407,7 @@ msgstr "보여줄 가장 최근의 신디케이션 피드 수"
 msgid "Tan"
 msgstr "황갈색"
 
-#: wp-admin/users.php:436
+#: wp-admin/users.php:437
 msgid "The current user&#8217;s role must have user editing capabilities."
 msgstr "현재 사용자의 권한은 반드시 사용자 정보를 고칠 수 있어야 합니다."
 
@@ -8437,10 +8434,6 @@ msgstr "이 타언어 버전은 번역된 언어와 그 국적에 맞게 고쳐�
 #: wp-admin/plugin-editor.php:172
 msgid "This plugin has been deactivated because your changes resulted in a <strong>fatal error</strong>."
 msgstr "수정 결과 <strong>심각한 에러<strong>가 발생해서 이 플러그인이 비활성화되었습니다."
-
-#: wp-admin/options-general.php:173
-msgid "This timezone is currently in standard time."
-msgstr "이 시간대는 현재 표준 시간제 입니다."
 
 #: wp-admin/includes/theme.php:245
 msgid "Threaded Comments"
@@ -8773,7 +8766,7 @@ msgstr "그 사용자를 편집할 수 없습니다."
 msgid "You can&#8217;t delete users."
 msgstr "사용자 정보를 지울 수 없습니다."
 
-#: wp-admin/users.php:440
+#: wp-admin/users.php:441
 msgid "You can&#8217;t delete the current user."
 msgstr "현재 사용자를 지울 수 없습니다."
 
@@ -8900,6 +8893,14 @@ msgstr "플러그인 %1$s는 에러로 인해 <strong>비활성화</strong>되�
 #: wp-admin/options-writing.php:117
 msgid "To post to WordPress by email you must set up a secret email account with POP3 access. Any mail received at this address will be posted, so it&#8217;s a good idea to keep this address very secret. Here are three random strings you could use: <kbd>%s</kbd>, <kbd>%s</kbd>, <kbd>%s</kbd>."
 msgstr "이메일을 이용해서 워드프레스에 글을 쓰려면 POP3 접근이 가능한 비밀 이메일 계정이 필요합니다. 이 주소로 보내진 메일은 바로 글로 저장되므로 이 주소를 다른 사람이 모르게 하는 것이 좋습니다. 워드프레스가 아무렇게 만든 3가지 글귀를 써도 됩니다: <kbd>%s</kbd>, <kbd>%s</kbd>, <kbd>%s</kbd>."
+
+#: wp-admin/options-general.php:287
+msgid "Week Starts On"
+msgstr "시작 요일"
+
+#: wp-admin/options-general.php:173
+msgid "This timezone is currently in standard time."
+msgstr "이 시간대는 현재 표준 시간제입니다."
 
 #: wp-admin/custom-background.php:275 wp-admin/custom-header.php:545
 #: wp-admin/includes/class-wp-theme-install-list-table.php:63

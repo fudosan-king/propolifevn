@@ -73,6 +73,9 @@ thumnail VARCHAR(5) DEFAULT '',
 comment VARCHAR(5) DEFAULT '',
 author VARCHAR(5) DEFAULT '',
 hidemenu VARCHAR(5) DEFAULT '',
+search VARCHAR(5) DEFAULT '',
+album VARCHAR(5) DEFAULT '',
+capability VARCHAR(5) DEFAULT ''
 UNIQUE KEY id (id)
 );";
 require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
@@ -563,4 +566,6 @@ include(dirname( __FILE__ ).DIRECTORY_SEPARATOR.'setting-page/setting-page.php')
 include(dirname( __FILE__ ).DIRECTORY_SEPARATOR.'post-thumbnail.php');
 //--------------------------------------------------------------------------------------------------------------------//
 include(dirname( __FILE__ ).DIRECTORY_SEPARATOR.'post-seo/seo-register.php');
+//--------------------------------------------------------------------------------------------------------------------//
+include(dirname( __FILE__ ).DIRECTORY_SEPARATOR.'post-mail-view.php');
 ?>

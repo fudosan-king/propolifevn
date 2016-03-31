@@ -1,14 +1,14 @@
-# Translation of Development in Korean
-# This file is distributed under the same license as the Development package.
+# Translation of Development (4.4.x) in Korean
+# This file is distributed under the same license as the Development (4.4.x) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-12-09 07:35:25+0000\n"
+"PO-Revision-Date: 2016-02-24 00:09:07+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: GlotPress/1.0-alpha-1100\n"
-"Project-Id-Version: Development\n"
+"Project-Id-Version: Development (4.4.x)\n"
 
 #. translators: 'rtl' or 'ltr'. This sets the text direction for WordPress.
 #: wp-includes/locale.php:201
@@ -46,11 +46,11 @@ msgid "https://codex.wordpress.org/Debugging_a_WordPress_Network"
 msgstr "https://codex.wordpress.org/Debugging_a_WordPress_Network"
 
 #. translators: %s: Codex URL
-#: wp-includes/functions.php:3784
+#: wp-includes/functions.php:3789
 msgid "Please see <a href=\"%s\">Debugging in WordPress</a> for more information."
 msgstr "<a href=\"%s\">워드프레스 디버깅 하기 페이지</a>를 참고하시면, 더 많은 정보를 얻을 수 있습니다."
 
-#: wp-includes/functions.php:3785
+#: wp-includes/functions.php:3790
 msgid "https://codex.wordpress.org/Debugging_in_WordPress"
 msgstr "https://codex.wordpress.org/Debugging_in_WordPress"
 
@@ -135,13 +135,13 @@ msgctxt "genitive"
 msgid "December"
 msgstr "12월"
 
-#: wp-includes/taxonomy.php:1578 wp-includes/taxonomy.php:1660
+#: wp-includes/taxonomy.php:1584 wp-includes/taxonomy.php:1666
 msgid "Term meta cannot be added to terms that are shared between taxonomies."
 msgstr "텀 메타는 택소노미에 공유된 텀에 추가될 수 없습니다."
 
 #. translators: If months in your language require a genitive case, translate
 #. this to 'on'. Do not translate into your own language.
-#: wp-includes/functions.php:178
+#: wp-includes/functions.php:183
 msgctxt "decline months names: on or off"
 msgid "off"
 msgstr "끄기"
@@ -339,19 +339,19 @@ msgstr "비밀번호 초기화 키를 데이터베이스에 저장할 수 없습
 msgid "<strong>ERROR</strong>: The password you entered for the username %s is incorrect."
 msgstr "<strong>오류</strong>: 사용자명 %s에 대한 비밀번호가 틀립니다."
 
-#: wp-includes/taxonomy.php:538
+#: wp-includes/taxonomy.php:541
 msgid "Categories list navigation"
 msgstr "카테고리 목록 탐색하기"
 
-#: wp-includes/taxonomy.php:538
+#: wp-includes/taxonomy.php:541
 msgid "Tags list navigation"
 msgstr "태그 목록 탐색하기"
 
-#: wp-includes/taxonomy.php:539
+#: wp-includes/taxonomy.php:542
 msgid "Tags list"
 msgstr "태그 목록"
 
-#: wp-includes/taxonomy.php:539
+#: wp-includes/taxonomy.php:542
 msgid "Categories list"
 msgstr "카테고리 목록"
 
@@ -494,7 +494,7 @@ msgid "Dec"
 msgstr "12월"
 
 #. translators: playlist item title
-#: wp-includes/media.php:1749 wp-includes/media.php:1764
+#: wp-includes/media.php:1777 wp-includes/media.php:1792
 msgctxt "playlist item title"
 msgid "&#8220;%s&#8221;"
 msgstr "&#8220;%s&#8221;"
@@ -613,7 +613,7 @@ msgstr "다음 댓글"
 msgid "Older comments"
 msgstr "이전 댓글"
 
-#: wp-includes/general-template.php:1950
+#: wp-includes/general-template.php:1946
 msgid "Posts published on %s"
 msgstr "%s 에 글이 발행됨"
 
@@ -665,7 +665,7 @@ msgctxt "adjective"
 msgid "Trash"
 msgstr "휴지통"
 
-#: wp-includes/comment-template.php:2110
+#: wp-includes/comment-template.php:2171
 msgid "<a href=\"%1$s\" aria-label=\"Logged in as %2$s. Edit your profile.\">Logged in as %2$s</a>. <a href=\"%3$s\">Log out?</a>"
 msgstr "<a href=\"%1$s\" aria-label=\"%2$s로 로그인 됨. 프로필 수정하기.\">%2$s로 로그인 됨</a>. <a href=\"%3$s\">로그 아웃?</a>"
 
@@ -751,7 +751,7 @@ msgstr "섹션 %s  토글:"
 #. Asian characters), enter 'characters_excluding_spaces' or
 #. 'characters_including_spaces'. Otherwise, enter 'words'. Do not translate
 #. into your own language.
-#: wp-includes/formatting.php:2960 wp-includes/script-loader.php:419
+#: wp-includes/formatting.php:2964 wp-includes/script-loader.php:419
 msgctxt "Word count type. Do not translate!"
 msgid "words"
 msgstr "characters_including_spaces"
@@ -810,7 +810,7 @@ msgstr "아이템 없음"
 msgid "Menu options"
 msgstr "메뉴 옵션"
 
-#: wp-login.php:732
+#: wp-login.php:731
 msgid "Registration confirmation will be emailed to you."
 msgstr "가입 확인용 이메일이 발송되었습니다."
 
@@ -862,15 +862,15 @@ msgstr "헤더 이미지 숨김"
 msgid "Expand Sidebar"
 msgstr "사이드바 확장"
 
-#: wp-includes/class-wp-customize-manager.php:1829
+#: wp-includes/class-wp-customize-manager.php:1831
 msgid "The Site Icon is used as a browser and app icon for your site. Icons must be square, and at least 512px wide and tall."
 msgstr "사이트 아이콘은 브라우저와 앱의 아이콘으로 사용됩니다. 아이콘은 사각형 이미지로 높이와 너비가 각각 512픽셀 이상이어야 합니다."
 
-#: wp-includes/class-wp-customize-manager.php:1828
+#: wp-includes/class-wp-customize-manager.php:1830
 msgid "Site Icon"
 msgstr "사이트 아이콘"
 
-#: wp-includes/class-wp-customize-manager.php:1795
+#: wp-includes/class-wp-customize-manager.php:1797
 msgid "Site Identity"
 msgstr "사이트 아이덴티티"
 
@@ -899,7 +899,7 @@ msgstr "WordPress 데이터베이스 오류:"
 msgid "Username may not be longer than 60 characters."
 msgstr "사용자이름은 60자를 넘을 수 없습니다."
 
-#: wp-includes/pluggable.php:1780
+#: wp-includes/pluggable.php:1789
 msgid "To set your password, visit the following address:"
 msgstr "비밀번호 설정하시려면, 다음 링크를 방문하십시오:"
 
@@ -961,7 +961,7 @@ msgctxt "HTML tag"
 msgid "Preformatted"
 msgstr "Preformatted"
 
-#: wp-includes/functions.php:3619
+#: wp-includes/functions.php:3624
 msgid "The called constructor method for %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "%1$s에서 호출한 생성자 함수는 %2$s 버전부터 <strong>폐지예정</strong>입니다. 대신 %3$s를 사용해주세요."
 
@@ -1040,7 +1040,7 @@ msgstr ""
 "All at ###SITENAME###\n"
 "###SITEURL###"
 
-#: wp-includes/taxonomy.php:537
+#: wp-includes/taxonomy.php:540
 msgid "No tags"
 msgstr "태그 없음"
 
@@ -1437,7 +1437,7 @@ msgstr "사용자 대시보드: %s"
 msgid "<span>Active:</span> %s"
 msgstr "<span>활성화:</span> %s"
 
-#: wp-login.php:781 wp-login.php:785
+#: wp-login.php:780 wp-login.php:784
 msgid "https://codex.wordpress.org/Cookies"
 msgstr "https://codex.wordpress.org/Cookies"
 
@@ -1514,7 +1514,7 @@ msgstr[0] "사용중인 테마가 %s개의 메뉴를 지원합니다. 각각의 
 msgid "Customizer"
 msgstr "사용자 정의 하기"
 
-#: wp-includes/taxonomy.php:3965
+#: wp-includes/taxonomy.php:3971
 msgid "Could not split shared term."
 msgstr "공유된 용어는 분리할 수 없습니다."
 
@@ -1627,7 +1627,7 @@ msgstr ""
 "\n"
 "--팀 @ SITE_NAME"
 
-#: wp-includes/media.php:3315
+#: wp-includes/media.php:3343
 msgid "Drag and drop to reorder media files."
 msgstr "끌어놓기로 미디어 파일을 정렬하세요."
 
@@ -1637,13 +1637,13 @@ msgid "<strong>Database tables are missing.</strong> This means that MySQL is no
 msgstr "<strong>데이터베이스 테이블이 누락되었습니다.</strong> 이런 경우 MySQL이 실행되고 있지 않거나 워드프레스가 정상적으로 설치되지 않거나, 누군가 %s를 삭제했을 수 있습니다. 지금 바로 데이터베이스를 살펴보셔야 합니다."
 
 #. translators: 1: comment author, 2: author IP, 3: author domain
-#: wp-includes/pluggable.php:1486 wp-includes/pluggable.php:1634
+#: wp-includes/pluggable.php:1495 wp-includes/pluggable.php:1643
 msgid "Author: %1$s (IP: %2$s, %3$s)"
 msgstr "글쓴이: %1$s (IP: %2$s, %3$s)"
 
 #. translators: 1: website name, 2: website IP, 3: website hostname
-#: wp-includes/pluggable.php:1466 wp-includes/pluggable.php:1476
-#: wp-includes/pluggable.php:1619 wp-includes/pluggable.php:1627
+#: wp-includes/pluggable.php:1475 wp-includes/pluggable.php:1485
+#: wp-includes/pluggable.php:1628 wp-includes/pluggable.php:1636
 msgid "Website: %1$s (IP: %2$s, %3$s)"
 msgstr "웹사이트: %1$s (IP: %2$s, %3$s)"
 
@@ -1669,23 +1669,23 @@ msgid "Select Year"
 msgstr "년도 선택"
 
 #. translators: %s: post title
-#: wp-includes/comment-template.php:1467
+#: wp-includes/comment-template.php:1491
 msgid "Comments Off<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "<span class=\"screen-reader-text\">%s에</span> 댓글 닫힘"
 
 #. translators: 1: Number of comments 2: post title
-#: wp-includes/comment-template.php:1461
+#: wp-includes/comment-template.php:1485
 msgid "%1$s Comment<span class=\"screen-reader-text\"> on %2$s</span>"
 msgid_plural "%1$s Comments<span class=\"screen-reader-text\"> on %2$s</span>"
 msgstr[0] "<span class=\"screen-reader-text\">%2$s에</span> 댓글 %1$s개"
 
 #. translators: %s: post title
-#: wp-includes/comment-template.php:1451
+#: wp-includes/comment-template.php:1475
 msgid "No Comments<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "<span class=\"screen-reader-text\">%s에</span> 댓글 없음"
 
 #. translators: %s: post title
-#: wp-includes/comment-template.php:1456
+#: wp-includes/comment-template.php:1480
 msgid "1 Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "<span class=\"screen-reader-text\">%s에</span> 댓글 1개"
 
@@ -1733,7 +1733,7 @@ msgctxt "previous post"
 msgid "Previous"
 msgstr "이전"
 
-#: wp-includes/taxonomy.php:536
+#: wp-includes/taxonomy.php:539
 msgid "No categories found."
 msgstr "카테고리를 찾을 수 없습니다."
 
@@ -1793,7 +1793,7 @@ msgstr "형식 어레이를 패스 해야 합니다."
 msgid "%s must set a database connection for use with escaping."
 msgstr "이스케이프를 사용하기 위해서는 %s의 데이터베이스 연결이 설정돼야 합니다."
 
-#: wp-includes/taxonomy.php:2646
+#: wp-includes/taxonomy.php:2652
 msgid "A term with the name provided already exists in this taxonomy."
 msgstr "해당 이름과 슬러그의 용어가 이 택소노미에 이미 존재합니다."
 
@@ -1802,30 +1802,30 @@ msgctxt "verb"
 msgid "Trash"
 msgstr "휴지통"
 
-#: wp-includes/pluggable.php:1490
+#: wp-includes/pluggable.php:1499
 msgid "You can see all comments on this post here:"
 msgstr "다음에서 이 글의 모든 댓글을 볼 수 있습니다:"
 
-#: wp-includes/pluggable.php:1479
+#: wp-includes/pluggable.php:1488
 msgid "You can see all pingbacks on this post here:"
 msgstr "다음에서 이 글의 모든 핑백을 볼 수 있습니다:"
 
-#: wp-includes/pluggable.php:1469
+#: wp-includes/pluggable.php:1478
 msgid "You can see all trackbacks on this post here:"
 msgstr "다음에서 이 글의 모든 트랙백을 볼 수 있습니다:"
 
-#: wp-includes/pluggable.php:1468 wp-includes/pluggable.php:1478
-#: wp-includes/pluggable.php:1489 wp-includes/pluggable.php:1637
+#: wp-includes/pluggable.php:1477 wp-includes/pluggable.php:1487
+#: wp-includes/pluggable.php:1498 wp-includes/pluggable.php:1646
 msgid "Comment: %s"
 msgstr "댓글: %s"
 
-#: wp-includes/pluggable.php:1467 wp-includes/pluggable.php:1477
-#: wp-includes/pluggable.php:1488 wp-includes/pluggable.php:1620
-#: wp-includes/pluggable.php:1628 wp-includes/pluggable.php:1636
+#: wp-includes/pluggable.php:1476 wp-includes/pluggable.php:1486
+#: wp-includes/pluggable.php:1497 wp-includes/pluggable.php:1629
+#: wp-includes/pluggable.php:1637 wp-includes/pluggable.php:1645
 msgid "URL: %s"
 msgstr "URL: %s"
 
-#: wp-includes/media.php:3333
+#: wp-includes/media.php:3361
 msgctxt "noun"
 msgid "Trash"
 msgstr "휴지통"
@@ -1857,33 +1857,33 @@ msgctxt "translations"
 msgid "Installed"
 msgstr "설치됨"
 
-#: wp-includes/general-template.php:1361
+#: wp-includes/general-template.php:1357
 msgid "Day: %s"
 msgstr "날짜: %s"
 
-#: wp-includes/general-template.php:1361 wp-includes/general-template.php:1949
+#: wp-includes/general-template.php:1357 wp-includes/general-template.php:1945
 msgctxt "daily archives date format"
 msgid "F j, Y"
 msgstr "Y F j"
 
-#: wp-includes/general-template.php:1364
+#: wp-includes/general-template.php:1360
 msgctxt "post format archive title"
 msgid "Asides"
 msgstr "추가정보"
 
-#: wp-includes/general-template.php:1357
+#: wp-includes/general-template.php:1353
 msgid "Year: %s"
 msgstr "년도: %s"
 
-#: wp-includes/general-template.php:1355
+#: wp-includes/general-template.php:1351
 msgid "Author: %s"
 msgstr "글쓴이: %s"
 
-#: wp-includes/general-template.php:1353
+#: wp-includes/general-template.php:1349
 msgid "Tag: %s"
 msgstr "태그: %s"
 
-#: wp-includes/general-template.php:1351
+#: wp-includes/general-template.php:1347
 msgid "Category: %s"
 msgstr "카테고리: %s"
 
@@ -1896,7 +1896,7 @@ msgstr "스타일 태그를 wp_add_inline_style()에 패스하지 마세요."
 msgid "The following values do not describe a valid date: year %1$s, month %2$s, day %3$s."
 msgstr "다음 값은 유효한 날짜를 표현하고 있지 않습니다: %1$s 년, %2$s 월, %3$s 일."
 
-#: wp-includes/comment-template.php:1558
+#: wp-includes/comment-template.php:1582
 msgid "Reply to %s"
 msgstr "%s에 답글 달기"
 
@@ -1928,56 +1928,56 @@ msgstr "사전에 추가하기"
 msgid "No alignment"
 msgstr "정렬 없음"
 
-#: wp-includes/general-template.php:1383
+#: wp-includes/general-template.php:1379
 msgid "Archives: %s"
 msgstr "보관함: %s"
 
 #. translators: 1: Taxonomy singular name, 2: Current taxonomy term
-#: wp-includes/general-template.php:1387
+#: wp-includes/general-template.php:1383
 msgid "%1$s: %2$s"
 msgstr "%1$s: %2$s"
 
-#: wp-includes/general-template.php:1378
+#: wp-includes/general-template.php:1374
 msgctxt "post format archive title"
 msgid "Audio"
 msgstr "오디오"
 
-#: wp-includes/general-template.php:1380
+#: wp-includes/general-template.php:1376
 msgctxt "post format archive title"
 msgid "Chats"
 msgstr "채팅"
 
-#: wp-includes/general-template.php:1376
+#: wp-includes/general-template.php:1372
 msgctxt "post format archive title"
 msgid "Statuses"
 msgstr "상태"
 
-#: wp-includes/general-template.php:1374
+#: wp-includes/general-template.php:1370
 msgctxt "post format archive title"
 msgid "Links"
 msgstr "링크"
 
-#: wp-includes/general-template.php:1370
+#: wp-includes/general-template.php:1366
 msgctxt "post format archive title"
 msgid "Videos"
 msgstr "비디오"
 
-#: wp-includes/general-template.php:1372
+#: wp-includes/general-template.php:1368
 msgctxt "post format archive title"
 msgid "Quotes"
 msgstr "인용"
 
-#: wp-includes/general-template.php:1366
+#: wp-includes/general-template.php:1362
 msgctxt "post format archive title"
 msgid "Galleries"
 msgstr "갤러리"
 
-#: wp-includes/general-template.php:1368
+#: wp-includes/general-template.php:1364
 msgctxt "post format archive title"
 msgid "Images"
 msgstr "이미지"
 
-#: wp-includes/general-template.php:1359
+#: wp-includes/general-template.php:1355
 msgid "Month: %s"
 msgstr "월: %s"
 
@@ -2054,15 +2054,15 @@ msgctxt "list style"
 msgid "Default"
 msgstr "기본"
 
-#: wp-login.php:851
+#: wp-login.php:850
 msgid "<strong>You have successfully updated WordPress!</strong> Please log back in to see what&#8217;s new."
 msgstr "<strong>WordPress를 성공적으로 업데이트하였습니다!</strong> what&#8217;s new를 보시려면 다시 로그인해주세요.."
 
-#: wp-includes/media.php:3340
+#: wp-includes/media.php:3368
 msgid "Trash Selected"
 msgstr "선택 항목 휴지통으로"
 
-#: wp-includes/media.php:3341
+#: wp-includes/media.php:3369
 msgid "Untrash Selected"
 msgstr "선택 항목 휴지통에서 복원"
 
@@ -2070,7 +2070,7 @@ msgstr "선택 항목 휴지통에서 복원"
 msgid "Untrash"
 msgstr "휴지통에서 복원"
 
-#: wp-includes/media.php:3337
+#: wp-includes/media.php:3365
 msgid ""
 "You are about to trash these items.\n"
 "  'Cancel' to stop, 'OK' to delete."
@@ -2082,15 +2082,15 @@ msgstr ""
 msgid "Press return or enter to open this panel"
 msgstr "이 패널을 열려면 리턴이나 엔터 키를 누르세요"
 
-#: wp-includes/media.php:3338
+#: wp-includes/media.php:3366
 msgid "Bulk Select"
 msgstr "일괄 선택"
 
-#: wp-includes/media.php:3339
+#: wp-includes/media.php:3367
 msgid "Cancel Selection"
 msgstr "선택 취소"
 
-#: wp-includes/media.php:3342
+#: wp-includes/media.php:3370
 msgid "Delete Selected"
 msgstr "선택 삭제"
 
@@ -2102,11 +2102,11 @@ msgstr "(레이블 없음)"
 
 #. translators: %s: taxonomy label, %l: list of terms formatted as per
 #. $term_template
-#: wp-includes/taxonomy.php:4451
+#: wp-includes/taxonomy.php:4457
 msgid "%s: %l."
 msgstr "%s: %l."
 
-#: wp-includes/media.php:2104
+#: wp-includes/media.php:2132
 msgid "Bitrate"
 msgstr "비트레이트"
 
@@ -2186,19 +2186,19 @@ msgstr "첨부 페이지 보기"
 msgid "Edit more details"
 msgstr "더 많은 상세 편집"
 
-#: wp-includes/media.php:2105
+#: wp-includes/media.php:2133
 msgid "Bitrate Mode"
 msgstr "비트레이트 모드"
 
-#: wp-includes/media.php:3329
+#: wp-includes/media.php:3357
 msgid "All dates"
 msgstr "모든 날짜"
 
-#: wp-includes/media.php:3332
+#: wp-includes/media.php:3360
 msgid "Unattached"
 msgstr "첨부되지 않음"
 
-#: wp-includes/media.php:3336 wp-includes/script-loader.php:82
+#: wp-includes/media.php:3364 wp-includes/script-loader.php:82
 msgid ""
 "You are about to permanently delete these items.\n"
 "  'Cancel' to stop, 'OK' to delete."
@@ -2206,15 +2206,15 @@ msgstr ""
 "이들 아이템을 영구적으로 삭제하려고 하고 있습니다.\n"
 "  중지하려면 '취소'를, 삭제는 'OK'."
 
-#: wp-includes/media.php:3345
+#: wp-includes/media.php:3373
 msgid "Filter by date"
 msgstr "날짜로 필터"
 
-#: wp-includes/media.php:3346
+#: wp-includes/media.php:3374
 msgid "Filter by type"
 msgstr "형식으로 필터"
 
-#: wp-includes/media.php:3347
+#: wp-includes/media.php:3375
 msgid "Search Media"
 msgstr "미디어 검색"
 
@@ -2275,11 +2275,11 @@ msgstr "마이크로소프트 워드에서 서식이 포함된 콘텐츠를 붙�
 msgid "Keyboard Shortcuts"
 msgstr "키보드 단축키"
 
-#: wp-login.php:780
+#: wp-login.php:779
 msgid "<strong>ERROR</strong>: Cookies are blocked due to unexpected output. For help, please see <a href=\"%1$s\">this documentation</a> or try the <a href=\"%2$s\">support forums</a>."
 msgstr "<strong>에러</strong>: 예상치 못한 출력으로 인해 쿠키가 차단됐습니다. 도움이 필요하시면 <a href=\"%1$s\">이 문서</a>를 보거나 <a href=\"%2$s\">지원 포럼</a>을 방문하세요."
 
-#: wp-login.php:784
+#: wp-login.php:783
 msgid "<strong>ERROR</strong>: Cookies are blocked or not supported by your browser. You must <a href=\"%s\">enable cookies</a> to use WordPress."
 msgstr "<strong>에러</strong>: 쿠키가 차단됐거나 사용 중인 브라우저가 지원하지 않습니다. 워드프레스를 사용하려면 <a href=\"%s\">쿠키를 활성화</a> 해야 합니다."
 
@@ -2316,7 +2316,7 @@ msgstr "폰트 사이즈"
 msgid "Split table cell"
 msgstr "테이블 셀 분리"
 
-#: wp-includes/media-template.php:238 wp-includes/media.php:3383
+#: wp-includes/media-template.php:238 wp-includes/media.php:3411
 msgid "Suggested image dimensions:"
 msgstr "제안된 이미지 크기:"
 
@@ -2337,53 +2337,53 @@ msgid "Image CSS Class"
 msgstr "이미지 CSS 클래스"
 
 #: wp-includes/media-template.php:383 wp-includes/media-template.php:562
-#: wp-includes/media.php:2095
+#: wp-includes/media.php:2123
 msgid "Artist"
 msgstr "아티스트"
 
 #: wp-includes/media-template.php:384 wp-includes/media-template.php:563
-#: wp-includes/media.php:2096
+#: wp-includes/media.php:2124
 msgid "Album"
 msgstr "앨범"
 
-#: wp-includes/media.php:2100
+#: wp-includes/media.php:2128
 msgid "Genre"
 msgstr "장르"
 
-#: wp-includes/media.php:2101
+#: wp-includes/media.php:2129
 msgid "Year"
 msgstr "년도"
 
-#: wp-includes/media.php:2102
+#: wp-includes/media.php:2130
 msgctxt "video or audio"
 msgid "Length"
 msgstr "길이"
 
-#: wp-includes/media.php:3384
+#: wp-includes/media.php:3412
 msgid "There has been an error cropping your image."
 msgstr "이미지를 자르는데 에러가 발생했습니다."
 
-#: wp-includes/media.php:3403
+#: wp-includes/media.php:3431
 msgid "Edit Audio Playlist"
 msgstr "오디오 실행 목록 편집"
 
-#: wp-includes/media.php:3404
+#: wp-includes/media.php:3432
 msgid "&#8592; Cancel Audio Playlist"
 msgstr "&#8592; 오디오 실행 목록 취소"
 
-#: wp-includes/media.php:3405
+#: wp-includes/media.php:3433
 msgid "Insert audio playlist"
 msgstr "오디오 실행 목록 삽입"
 
-#: wp-includes/media.php:3406
+#: wp-includes/media.php:3434
 msgid "Update audio playlist"
 msgstr "오디오 실행 목록 업데이트"
 
-#: wp-includes/media.php:3407
+#: wp-includes/media.php:3435
 msgid "Add to audio playlist"
 msgstr "오디오 실행 목록에 추가"
 
-#: wp-includes/media.php:3408
+#: wp-includes/media.php:3436
 msgid "Add to Audio Playlist"
 msgstr "오디오 실행 목록에 추가"
 
@@ -2436,7 +2436,7 @@ msgstr "자동"
 msgid "Move to another area&hellip;"
 msgstr "다른 영역으로 이동&hellip;"
 
-#: wp-includes/media.php:3382
+#: wp-includes/media.php:3410
 msgid "Cropping&hellip;"
 msgstr "자르기&hellip;"
 
@@ -2684,7 +2684,7 @@ msgstr "왼쪽에서 오른쪽으로"
 msgid "Add alternate sources for maximum HTML5 playback:"
 msgstr "최적화된 HTML5 실행을 위한 대체 소스 추가:"
 
-#: wp-includes/media.php:3371
+#: wp-includes/media.php:3399
 msgid "Image Details"
 msgstr "이미지 상세"
 
@@ -2693,7 +2693,7 @@ msgstr "이미지 상세"
 #: wp-includes/class-wp-customize-section.php:356
 #: wp-includes/class-wp-customize-widgets.php:711
 #: wp-includes/customize/class-wp-customize-nav-menus-panel.php:82
-#: wp-includes/media.php:3309
+#: wp-includes/media.php:3337
 msgid "Back"
 msgstr "돌아가기"
 
@@ -2711,17 +2711,17 @@ msgid "Search"
 msgstr "검색"
 
 #. translators: used to join items in a list with more than 2 items
-#: wp-includes/formatting.php:4064
+#: wp-includes/formatting.php:4074
 msgid "%s, %s"
 msgstr "%s, %s"
 
 #. translators: used to join last two items in a list with more than 2 times
-#: wp-includes/formatting.php:4066
+#: wp-includes/formatting.php:4076
 msgid "%s, and %s"
 msgstr "%s, %s"
 
 #. translators: used to join items in a list with only 2 items
-#: wp-includes/formatting.php:4068
+#: wp-includes/formatting.php:4078
 msgid "%s and %s"
 msgstr "%s 그리고 %s"
 
@@ -2749,113 +2749,113 @@ msgstr "포스터 이미지"
 msgid "There are no associated subtitles."
 msgstr "관련된 부제가 없습니다."
 
-#: wp-includes/media.php:3325
+#: wp-includes/media.php:3353
 msgid "Create a new playlist"
 msgstr "새 실행 목록 만들기"
 
-#: wp-includes/media.php:3326
+#: wp-includes/media.php:3354
 msgid "Create a new video playlist"
 msgstr "새 비디오 실행 목록 만들기"
 
-#: wp-includes/media.php:3372
+#: wp-includes/media.php:3400
 msgid "Replace Image"
 msgstr "이미지 교체"
 
-#: wp-includes/media.php:3373 wp-includes/media.php:3390
-#: wp-includes/media.php:3396
+#: wp-includes/media.php:3401 wp-includes/media.php:3418
+#: wp-includes/media.php:3424
 msgid "Cancel Edit"
 msgstr "편집 취소"
 
 #: wp-includes/customize/class-wp-customize-image-control.php:41
-#: wp-includes/media.php:3377
+#: wp-includes/media.php:3405
 msgid "Choose Image"
 msgstr "이미지 선택"
 
-#: wp-includes/media.php:3378
+#: wp-includes/media.php:3406
 msgid "Select and Crop"
 msgstr "선택 & 자르기"
 
-#: wp-includes/media.php:3379
+#: wp-includes/media.php:3407
 msgid "Skip Cropping"
 msgstr "자르기 생략"
 
-#: wp-includes/media.php:3380
+#: wp-includes/media.php:3408
 msgid "Crop Image"
 msgstr "이미지 자르기"
 
-#: wp-includes/media.php:3381
+#: wp-includes/media.php:3409
 msgid "Crop your image"
 msgstr "이미지 자르기"
 
-#: wp-includes/media.php:3387
+#: wp-includes/media.php:3415
 msgid "Audio Details"
 msgstr "오디오 상세"
 
-#: wp-includes/media.php:3388
+#: wp-includes/media.php:3416
 msgid "Replace Audio"
 msgstr "오디오 교체"
 
-#: wp-includes/media.php:3389
+#: wp-includes/media.php:3417
 msgid "Add Audio Source"
 msgstr "오디오 소스 추가"
 
-#: wp-includes/media.php:3393
+#: wp-includes/media.php:3421
 msgid "Video Details"
 msgstr "비디오 상세"
 
-#: wp-includes/media.php:3394
+#: wp-includes/media.php:3422
 msgid "Replace Video"
 msgstr "비디오 교체"
 
-#: wp-includes/media.php:3395
+#: wp-includes/media.php:3423
 msgid "Add Video Source"
 msgstr "비디오 소스 추가"
 
-#: wp-includes/media.php:3397
+#: wp-includes/media.php:3425
 msgid "Select Poster Image"
 msgstr "포스터 이미지 선택"
 
-#: wp-includes/media.php:3398
+#: wp-includes/media.php:3426
 msgid "Add Subtitles"
 msgstr "부제 추가"
 
-#: wp-includes/media.php:3401
+#: wp-includes/media.php:3429
 msgid "Drag and drop to reorder tracks."
 msgstr "트랙의 순서를 재정렬하러면 끌어놓기 하세요."
 
-#: wp-includes/media.php:3402
+#: wp-includes/media.php:3430
 msgid "Create Audio Playlist"
 msgstr "자동 실행 목록 만들기"
 
-#: wp-includes/media.php:3411
+#: wp-includes/media.php:3439
 msgid "Drag and drop to reorder videos."
 msgstr "비디오 순서를 재정렬하러면 끌어놓기 하세요."
 
-#: wp-includes/media.php:3412
+#: wp-includes/media.php:3440
 msgid "Create Video Playlist"
 msgstr "비디오 실행 목록 만들기"
 
-#: wp-includes/media.php:3413
+#: wp-includes/media.php:3441
 msgid "Edit Video Playlist"
 msgstr "비디오 실행 목록 편집"
 
-#: wp-includes/media.php:3414
+#: wp-includes/media.php:3442
 msgid "&#8592; Cancel Video Playlist"
 msgstr "&#8592; 비디오 실행 목록 취소"
 
-#: wp-includes/media.php:3415
+#: wp-includes/media.php:3443
 msgid "Insert video playlist"
 msgstr "비디오 실행 목록 삽입"
 
-#: wp-includes/media.php:3416
+#: wp-includes/media.php:3444
 msgid "Update video playlist"
 msgstr "비디오 실행 목록 업데이트"
 
-#: wp-includes/media.php:3417
+#: wp-includes/media.php:3445
 msgid "Add to video playlist"
 msgstr "비디오 실행 목록에 추가"
 
-#: wp-includes/media.php:3418
+#: wp-includes/media.php:3446
 msgid "Add to Video Playlist"
 msgstr "비디오 실행 목록에 추가"
 
@@ -2914,7 +2914,7 @@ msgid "https://wordpress.org/"
 msgstr "https://wordpress.org/"
 
 #: wp-includes/admin-bar.php:145 wp-includes/wp-db.php:1085
-#: wp-includes/wp-db.php:1551 wp-includes/wp-db.php:1655 wp-login.php:781
+#: wp-includes/wp-db.php:1551 wp-includes/wp-db.php:1655 wp-login.php:780
 msgid "https://wordpress.org/support/"
 msgstr "https://wordpress.org/support/"
 
@@ -3056,7 +3056,7 @@ msgstr "임베드"
 msgid "Paste as text"
 msgstr "텍스트로 붙여넣기"
 
-#: wp-includes/media-template.php:885 wp-includes/media.php:3307
+#: wp-includes/media-template.php:885 wp-includes/media.php:3335
 msgid "Replace"
 msgstr "교체"
 
@@ -3140,22 +3140,22 @@ msgstr "이 위젯을 이동할 영역을 선택하세요:"
 msgid "No image set"
 msgstr "설정된 이미지 없음"
 
-#: wp-includes/general-template.php:3146
+#: wp-includes/general-template.php:3142
 msgctxt "admin color scheme"
 msgid "Sunrise"
 msgstr "해돋이"
 
-#: wp-includes/general-template.php:3152
+#: wp-includes/general-template.php:3148
 msgctxt "admin color scheme"
 msgid "Ectoplasm"
 msgstr "유령"
 
-#: wp-includes/general-template.php:3158
+#: wp-includes/general-template.php:3154
 msgctxt "admin color scheme"
 msgid "Ocean"
 msgstr "대양"
 
-#: wp-includes/general-template.php:3164
+#: wp-includes/general-template.php:3160
 msgctxt "admin color scheme"
 msgid "Coffee"
 msgstr "커피"
@@ -3220,12 +3220,12 @@ msgctxt "Open Sans font: on or off"
 msgid "on"
 msgstr "off"
 
-#: wp-includes/general-template.php:3118
+#: wp-includes/general-template.php:3114
 msgctxt "admin color scheme"
 msgid "Default"
 msgstr "기본"
 
-#: wp-includes/general-template.php:3128
+#: wp-includes/general-template.php:3124
 msgctxt "admin color scheme"
 msgid "Light"
 msgstr "밝음"
@@ -3242,7 +3242,7 @@ msgctxt "Open Sans font: add new subset (greek, cyrillic, vietnamese)"
 msgid "no-subset"
 msgstr "cyrillic"
 
-#: wp-includes/general-template.php:3140
+#: wp-includes/general-template.php:3136
 msgctxt "admin color scheme"
 msgid "Midnight"
 msgstr "한밤중"
@@ -3259,7 +3259,7 @@ msgstr "번역 업데이트"
 msgid "The theme directory \"%s\" does not exist."
 msgstr "테마 디렉토리 \"%s\"가 존재하지 않습니다."
 
-#: wp-includes/functions.php:1216
+#: wp-includes/functions.php:1221
 msgid "ERROR: This is not a valid feed template."
 msgstr "에러: 이것은 유효한 피드 템플릿이 아닙니다."
 
@@ -3339,17 +3339,17 @@ msgstr "실행/일시정지"
 msgid "Unmute"
 msgstr "무음해제"
 
-#: wp-includes/formatting.php:2852
+#: wp-includes/formatting.php:2856
 msgid "%s week"
 msgid_plural "%s weeks"
 msgstr[0] "%s 주"
 
-#: wp-includes/formatting.php:2862
+#: wp-includes/formatting.php:2866
 msgid "%s year"
 msgid_plural "%s years"
 msgstr[0] "%s 년"
 
-#: wp-includes/formatting.php:2857
+#: wp-includes/formatting.php:2861
 msgid "%s month"
 msgid_plural "%s months"
 msgstr[0] "%s 개월"
@@ -3423,7 +3423,7 @@ msgstr "%1$s [현재 리비전]"
 msgid "%1$s %2$s, %3$s @ %4$s:%5$s"
 msgstr "%1$s %2$s, %3$s @ %4$s : %5$s"
 
-#: wp-login.php:837
+#: wp-login.php:836
 msgid "Session expired. Please log in again. You will not move away from this page."
 msgstr "세션이 만료됐습니다. 다시 로그인해주세요. 이 페이지에서 벗어나지 않습니다."
 
@@ -3440,7 +3440,7 @@ msgstr "세션이 만료됐습니다. 이 페이지에서 다시 로그인하거
 msgid "The site you were looking for, %s, does not exist, but you can create it now!"
 msgstr "찾고 있는 사이트인 %s는 존재하지 않습니다. 하지만 지금 만들 수 있습니다!"
 
-#: wp-includes/functions.php:4945
+#: wp-includes/functions.php:4950
 msgid "The login page will open in a new window. After logging in you can close it and return to this page."
 msgstr "로그인 페이지는 새 창에 열릴 것입니다. 로그인 후에 새 창을 닫고 이 페이지에 다시 올 수 있습니다."
 
@@ -3471,11 +3471,11 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "검색"
 
-#: wp-includes/functions.php:4943 wp-includes/script-loader.php:443
+#: wp-includes/functions.php:4948 wp-includes/script-loader.php:443
 msgid "Session expired"
 msgstr "세션이 만료됐습니다"
 
-#: wp-includes/taxonomy.php:536
+#: wp-includes/taxonomy.php:539
 msgid "No tags found."
 msgstr "태그를 찾을 수 없습니다."
 
@@ -3513,11 +3513,11 @@ msgstr "이 이미지에 캡션&hellip;"
 #. If there is not a word you can use in your language to avoid issues with
 #. the 		   lack of plural support here, turn it into "selected: %d" then
 #. translate it.
-#: wp-includes/media.php:3314
+#: wp-includes/media.php:3342
 msgid "%d selected"
 msgstr "%d 선택됨"
 
-#: wp-includes/media.php:3354
+#: wp-includes/media.php:3382
 msgid "Insert from URL"
 msgstr "URL에서 삽입하기"
 
@@ -3526,15 +3526,15 @@ msgctxt "Links widget"
 msgid "Random"
 msgstr "랜덤"
 
-#: wp-includes/media-template.php:1229 wp-includes/media.php:3330
+#: wp-includes/media-template.php:1229 wp-includes/media.php:3358
 msgid "No items found."
 msgstr "항목을 찾을 수 없습니다."
 
-#: wp-includes/media.php:3367
+#: wp-includes/media.php:3395
 msgid "Add to Gallery"
 msgstr "갤러리에 추가하기"
 
-#: wp-includes/media.php:3368
+#: wp-includes/media.php:3396
 msgid "Reverse order"
 msgstr "순서 바꾸기"
 
@@ -3551,7 +3551,7 @@ msgstr "선택 해제"
 msgid "Sorry, that file cannot be edited."
 msgstr "죄송합니다. 해당 파일은 편집할 수 없습니다."
 
-#: wp-includes/media.php:3335
+#: wp-includes/media.php:3363
 msgid ""
 "You are about to permanently delete this item.\n"
 "  'Cancel' to stop, 'OK' to delete."
@@ -3560,7 +3560,7 @@ msgstr ""
 "중지하려면 '취소'를, 삭제하려면 'OK'를 클릭하세요"
 
 #: wp-includes/media-template.php:436 wp-includes/media-template.php:537
-#: wp-includes/media.php:3343
+#: wp-includes/media.php:3371
 msgid "Delete Permanently"
 msgstr "영구적으로 삭제하기"
 
@@ -3572,7 +3572,7 @@ msgstr "업로드 제한 초과 "
 msgid "Dismiss Errors"
 msgstr "에러 무시하기"
 
-#: wp-includes/media.php:2823
+#: wp-includes/media.php:2851
 msgid "No editor could be selected."
 msgstr "편집기를 선택할 수 없습니다."
 
@@ -3619,7 +3619,7 @@ msgstr "페이지에 삽입하기"
 msgid "Uploaded to this page"
 msgstr "이 페이지에 업로드 됐습니다."
 
-#: wp-includes/media.php:3328
+#: wp-includes/media.php:3356
 msgid "All media items"
 msgstr "모든 미디어 아이템"
 
@@ -3631,7 +3631,7 @@ msgstr "오디오"
 msgid "Uploaded to this post"
 msgstr "이 글에 업로드된 것"
 
-#: wp-includes/media.php:3327
+#: wp-includes/media.php:3355
 msgid "&#8592; Return to library"
 msgstr "&#8592; 라이브러리로 돌아가기"
 
@@ -3640,7 +3640,7 @@ msgstr "&#8592; 라이브러리로 돌아가기"
 msgid "Custom URL"
 msgstr "사용자 정의 URL"
 
-#: wp-includes/media-template.php:494 wp-includes/media.php:3351
+#: wp-includes/media-template.php:494 wp-includes/media.php:3379
 msgid "Attachment Details"
 msgstr "첨부 상세"
 
@@ -3654,7 +3654,7 @@ msgid "Columns"
 msgstr "열(컬럼)"
 
 #: wp-includes/media-template.php:689 wp-includes/media-template.php:764
-#: wp-includes/media-template.php:938 wp-includes/media.php:3062
+#: wp-includes/media-template.php:938 wp-includes/media.php:3090
 msgid "Large"
 msgstr "최대 크기"
 
@@ -3666,11 +3666,11 @@ msgstr "첨부 표시 설정"
 msgid "Gallery Settings"
 msgstr "갤러리 설정"
 
-#: wp-includes/media.php:3319
+#: wp-includes/media.php:3347
 msgid "Upload Images"
 msgstr "이미지 업로드"
 
-#: wp-includes/media.php:3363
+#: wp-includes/media.php:3391
 msgid "&#8592; Cancel Gallery"
 msgstr "&#8592; 갤러리 취소"
 
@@ -3682,11 +3682,11 @@ msgstr "워드프레스 &rsaquo; 성공"
 msgid "Drop files anywhere to upload"
 msgstr "업로드 하려면 아무 곳에나 파일을 놓으세요"
 
-#: wp-includes/media.php:3318
+#: wp-includes/media.php:3346
 msgid "Upload Files"
 msgstr "파일 업로드"
 
-#: wp-includes/media.php:3364
+#: wp-includes/media.php:3392
 msgid "Insert gallery"
 msgstr "갤러리 삽입"
 
@@ -3694,13 +3694,21 @@ msgstr "갤러리 삽입"
 msgid "Drop files to upload"
 msgstr "업로드 하려면 파일을 놓으세요"
 
-#: wp-includes/media.php:3322
+#: wp-includes/media.php:3350
 msgid "Media Library"
 msgstr "미디어 라이브러리"
 
-#: wp-includes/media.php:3361
+#: wp-includes/media.php:3389
 msgid "Create Gallery"
 msgstr "갤러리 생성하기"
+
+#: wp-includes/ms-functions.php:1332
+msgid "Already Installed"
+msgstr "이미 설치됐습니다"
+
+#: wp-includes/ms-functions.php:1332
+msgid "You appear to have already installed WordPress. To reinstall please clear your old database tables first."
+msgstr "워드프레스를 이미 설치한 것 같습니다. 재설치 하려면 이전의 데이터베이스 테이블을 먼저 삭제하세요."
 
 #: wp-includes/ms-functions.php:908
 msgid ""
@@ -3710,19 +3718,11 @@ msgid ""
 "\n"
 "After you activate, you will receive *another email* with your login."
 msgstr ""
-"사용자를 활성화 하려면 아래의 링크를 클릭하세요:\n"
+"사용자를 활성화하려면 아래의 링크를 클릭하세요:\n"
 "\n"
 "%s\n"
 "\n"
 "활성화 후에는 로그인 링크가 있는 이메일을 하나 더 받게 됩니다."
-
-#: wp-includes/ms-functions.php:1332
-msgid "Already Installed"
-msgstr "이미 설치됐습니다"
-
-#: wp-includes/ms-functions.php:1332
-msgid "You appear to have already installed WordPress. To reinstall please clear your old database tables first."
-msgstr "워드프레스를 이미 설치한 것 같습니다. 재설치 하려면 이전의 데이터베이스 테이블을 먼저 삭제하세요."
 
 #: wp-includes/ms-functions.php:1180
 msgid ""
@@ -3777,7 +3777,7 @@ msgstr "이 오디오 파일에 대한 설명&hellip;"
 msgid "Describe this media file&hellip;"
 msgstr "이 미디어 파일에 대한 설명&hellip;"
 
-#: wp-includes/media.php:3365
+#: wp-includes/media.php:3393
 msgid "Update gallery"
 msgstr "갤러리 업데이트"
 
@@ -3840,11 +3840,11 @@ msgstr "첨부 페이지 보기"
 msgid "Whoops, the provided date is invalid."
 msgstr "제공된 날짜는 유효하지 않습니다."
 
-#: wp-includes/media.php:3323
+#: wp-includes/media.php:3351
 msgid "Insert Media"
 msgstr "미디어 삽입"
 
-#: wp-includes/media.php:3324
+#: wp-includes/media.php:3352
 msgid "Create a new gallery"
 msgstr "새 갤러리 생성하기"
 
@@ -3852,7 +3852,7 @@ msgstr "새 갤러리 생성하기"
 msgid "Insert into post"
 msgstr "글에 삽입하기"
 
-#: wp-includes/media.php:3366
+#: wp-includes/media.php:3394
 msgid "Add to gallery"
 msgstr "갤러리에 추가"
 
@@ -3868,7 +3868,7 @@ msgstr "색상 선택"
 msgid "Current Color"
 msgstr "현재 색상"
 
-#: wp-includes/taxonomy.php:2872
+#: wp-includes/taxonomy.php:2878
 msgid "Could not insert term relationship into the database"
 msgstr "용어의 관계를 데이터베이스에 삽입할 수 없습니다."
 
@@ -3891,7 +3891,7 @@ msgid "There is a revision of this post that is more recent."
 msgstr "최근의 글 버전이 있습니다."
 
 #. translators: 1: blog name, 2: separator(raquo), 3: post type name
-#: wp-includes/general-template.php:2522
+#: wp-includes/general-template.php:2518
 msgid "%1$s %2$s %3$s Feed"
 msgstr "%1$s %2$s %3$s 피드"
 
@@ -3955,11 +3955,11 @@ msgstr "텍스트"
 msgid "Hex Value"
 msgstr "16진수"
 
-#: wp-includes/class-wp-customize-manager.php:1862
+#: wp-includes/class-wp-customize-manager.php:1864
 msgid "Header Text Color"
 msgstr "헤더 글 색상"
 
-#: wp-includes/class-wp-customize-manager.php:1839
+#: wp-includes/class-wp-customize-manager.php:1841
 msgid "Colors"
 msgstr "색상"
 
@@ -3994,7 +3994,7 @@ msgstr "XML-RPC 메써드에 pass될 argument가 충분하지 않습니다."
 msgid "Sorry, you cannot stick a private post."
 msgstr "죄송합니다. 비공개 글을 붙박이로 할 수 없습니다."
 
-#: wp-includes/class-wp-customize-manager.php:1885
+#: wp-includes/class-wp-customize-manager.php:1887
 #: wp-includes/customize/class-wp-customize-header-image-control.php:31
 msgid "Header Image"
 msgstr "헤더 이미지"
@@ -4035,32 +4035,32 @@ msgstr "사이트 제목을 입력해주세요."
 msgid "Please enter a username."
 msgstr "사용자명을 입력해주세요."
 
-#: wp-includes/class-wp-customize-manager.php:2002
+#: wp-includes/class-wp-customize-manager.php:2004
 msgid "A static page"
 msgstr "정적인 페이지"
 
-#: wp-includes/class-wp-customize-manager.php:1855
+#: wp-includes/class-wp-customize-manager.php:1857
 msgid "Display Header Text"
 msgstr "헤더 글자 표시"
 
-#: wp-includes/class-wp-customize-manager.php:1877
+#: wp-includes/class-wp-customize-manager.php:1879
 msgid "Background Color"
 msgstr "배경 색상"
 
-#: wp-includes/class-wp-customize-manager.php:1905
+#: wp-includes/class-wp-customize-manager.php:1907
 #: wp-includes/customize/class-wp-customize-background-image-control.php:30
 msgid "Background Image"
 msgstr "배경 이미지"
 
-#: wp-includes/class-wp-customize-manager.php:1927
+#: wp-includes/class-wp-customize-manager.php:1929
 msgid "Background Repeat"
 msgstr "배경 반복"
 
-#: wp-includes/class-wp-customize-manager.php:1944
+#: wp-includes/class-wp-customize-manager.php:1946
 msgid "Background Position"
 msgstr "배경 포지션"
 
-#: wp-includes/class-wp-customize-manager.php:1960
+#: wp-includes/class-wp-customize-manager.php:1962
 msgid "Background Attachment"
 msgstr "배경 첨부"
 
@@ -4076,35 +4076,35 @@ msgstr "이미지 삭제"
 msgid "Sorry, you are not allowed to edit this post type."
 msgstr "죄송합니다. 이 글 타입 편집 권한이 없습니다."
 
-#: wp-includes/class-wp-customize-manager.php:1964
+#: wp-includes/class-wp-customize-manager.php:1966
 msgid "Scroll"
 msgstr "스크롤"
 
-#: wp-includes/class-wp-customize-manager.php:1965
+#: wp-includes/class-wp-customize-manager.php:1967
 msgid "Fixed"
 msgstr "고정"
 
-#: wp-includes/class-wp-customize-manager.php:1931
+#: wp-includes/class-wp-customize-manager.php:1933
 msgid "No Repeat"
 msgstr "반복 안 함"
 
-#: wp-includes/class-wp-customize-manager.php:1932
+#: wp-includes/class-wp-customize-manager.php:1934
 msgid "Tile"
 msgstr "반복"
 
-#: wp-includes/class-wp-customize-manager.php:1933
+#: wp-includes/class-wp-customize-manager.php:1935
 msgid "Tile Horizontally"
 msgstr "수평 반복"
 
-#: wp-includes/class-wp-customize-manager.php:1934
+#: wp-includes/class-wp-customize-manager.php:1936
 msgid "Tile Vertically"
 msgstr "수직 반복"
 
-#: wp-includes/class-wp-customize-manager.php:2025
+#: wp-includes/class-wp-customize-manager.php:2027
 msgid "Posts page"
 msgstr "글 페이지"
 
-#: wp-includes/class-wp-customize-manager.php:2013
+#: wp-includes/class-wp-customize-manager.php:2015
 msgid "Front page"
 msgstr "전면 페이지"
 
@@ -4117,7 +4117,7 @@ msgstr "허용된 파일"
 #: wp-includes/customize/class-wp-customize-image-control.php:37
 #: wp-includes/customize/class-wp-customize-media-control.php:62
 #: wp-includes/customize/class-wp-customize-nav-menu-item-control.php:141
-#: wp-includes/media-template.php:467 wp-includes/media.php:3308
+#: wp-includes/media-template.php:467 wp-includes/media.php:3336
 msgid "Remove"
 msgstr "삭제"
 
@@ -4151,8 +4151,8 @@ msgid "You are not allowed to create terms in this taxonomy."
 msgstr "이 택소노미의 용어를 만들 권한이 없습니다."
 
 #: wp-includes/class-wp-xmlrpc-server.php:1878
-#: wp-includes/class-wp-xmlrpc-server.php:1976 wp-includes/taxonomy.php:2569
-#: wp-includes/taxonomy.php:3161
+#: wp-includes/class-wp-xmlrpc-server.php:1976 wp-includes/taxonomy.php:2575
+#: wp-includes/taxonomy.php:3167
 msgid "Parent term does not exist."
 msgstr "상위 용어가 존재하지 않습니다."
 
@@ -4214,15 +4214,15 @@ msgstr "스타일시트를 읽을 수 없습니다."
 msgid "The \"%s\" theme is not a valid parent theme."
 msgstr "\"%s\" 테마는 유효한 부모 테마가 아닙니다."
 
-#: wp-includes/class-wp-customize-manager.php:1983
+#: wp-includes/class-wp-customize-manager.php:1985
 msgid "Static Front Page"
 msgstr "정적인 전면 페이지"
 
-#: wp-includes/class-wp-customize-manager.php:1997
+#: wp-includes/class-wp-customize-manager.php:1999
 msgid "Front page displays"
 msgstr "전면 페이지 표시"
 
-#: wp-includes/class-wp-customize-manager.php:1817
+#: wp-includes/class-wp-customize-manager.php:1819
 msgid "Tagline"
 msgstr "태그라인"
 
@@ -4232,11 +4232,11 @@ msgstr "태그라인"
 msgid "&mdash; Select &mdash;"
 msgstr "&mdash; 선택하기 &mdash;"
 
-#: wp-includes/class-wp-customize-manager.php:1986
+#: wp-includes/class-wp-customize-manager.php:1988
 msgid "Your theme supports a static front page."
 msgstr "테마는 정적인 전면 페이지를 지원합니다."
 
-#: wp-includes/class-wp-customize-manager.php:2001
+#: wp-includes/class-wp-customize-manager.php:2003
 msgid "Your latest posts"
 msgstr "최근 글"
 
@@ -4346,18 +4346,18 @@ msgstr "죄송합니다. 이 글 형식으로 비공개 글을 작성할 권한�
 msgid "You are not allowed to edit posts in this post type."
 msgstr "해당 글 형식의 글을 편집할 권한이 없습니다."
 
-#: wp-includes/general-template.php:892 wp-includes/general-template.php:1357
+#: wp-includes/general-template.php:888 wp-includes/general-template.php:1353
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: wp-includes/general-template.php:895 wp-includes/general-template.php:1359
+#: wp-includes/general-template.php:891 wp-includes/general-template.php:1355
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "Y F"
 
 #. translators: opening curly double quote
-#: wp-includes/formatting.php:88 wp-includes/formatting.php:4315
+#: wp-includes/formatting.php:88 wp-includes/formatting.php:4325
 msgctxt "opening curly double quote"
 msgid "&#8220;"
 msgstr "&#8220;"
@@ -4423,7 +4423,7 @@ msgstr "계정이 활성화되었습니다. 이제 선택한 &#8220;%2$s&#8221; 
 msgid "<a href=\"%1$s\">%2$s</a> is your new site. <a href=\"%3$s\">Log in</a> as &#8220;%4$s&#8221; using your existing password."
 msgstr "<a href=\"%1$s\">%2$s</a>가 새로운 사이트입니다. 기존의 비밀번호를 사용하여 &#8220;%4$s&#8221;로 <a href=\"%3$s\">로그인</a>하세요 ."
 
-#: wp-includes/functions.php:1397
+#: wp-includes/functions.php:1402
 msgid "One or more database tables are unavailable. The database may need to be <a href=\"%s\">repaired</a>."
 msgstr "하나 이상의 데이터베이스 테이블이 불가능합니다. 데이터베이스는 <a href=\"%s\">수리</a>가 필요할 수도 있습니다."
 
@@ -4518,15 +4518,15 @@ msgstr "문서"
 msgid "Support Forums"
 msgstr "지원 포럼"
 
-#: wp-includes/formatting.php:2949 wp-includes/general-template.php:3040
+#: wp-includes/formatting.php:2953 wp-includes/general-template.php:3036
 msgid "&hellip;"
 msgstr "&hellip;"
 
-#: wp-includes/functions.php:3504
+#: wp-includes/functions.php:3509
 msgid "Database Error"
 msgstr "데이터베이스 에러"
 
-#: wp-includes/functions.php:3508 wp-includes/ms-load.php:286
+#: wp-includes/functions.php:3513 wp-includes/ms-load.php:286
 #: wp-includes/wp-db.php:1533
 msgid "Error establishing a database connection"
 msgstr "데이터베이스 연결중 에러"
@@ -4545,12 +4545,12 @@ msgstr "WordPress.org"
 msgid "Network Admin: %s"
 msgstr "네트워크 관리자 : %s"
 
-#: wp-includes/taxonomy.php:522
+#: wp-includes/taxonomy.php:525
 msgctxt "taxonomy singular name"
 msgid "Tag"
 msgstr "태그"
 
-#: wp-includes/taxonomy.php:521
+#: wp-includes/taxonomy.php:524
 msgctxt "taxonomy general name"
 msgid "Tags"
 msgstr "태그"
@@ -4575,12 +4575,12 @@ msgstr "이것은 최대 사이즈보다 큽니다. 다른 것으로 올려주�
 msgid "This file is not an image. Please try another."
 msgstr "이 파일은 이미지 파일이 아닙니다. 다른 것으로 올려주세요."
 
-#: wp-includes/general-template.php:3134
+#: wp-includes/general-template.php:3130
 msgctxt "admin color scheme"
 msgid "Blue"
 msgstr "파란색"
 
-#: wp-includes/formatting.php:3828
+#: wp-includes/formatting.php:3832
 msgid "The timezone you have entered is not valid. Please select a valid timezone."
 msgstr "입력한 시간대가 잘못된 것 같습니다. 유효한 시간대를 선택해주세요."
 
@@ -4594,11 +4594,11 @@ msgctxt "add new from admin bar"
 msgid "User"
 msgstr "사용자"
 
-#: wp-includes/taxonomy.php:529
+#: wp-includes/taxonomy.php:532
 msgid "View Tag"
 msgstr "태그 보기"
 
-#: wp-includes/taxonomy.php:529
+#: wp-includes/taxonomy.php:532
 msgid "View Category"
 msgstr "카테고리 보기"
 
@@ -4660,7 +4660,7 @@ msgstr "파일 스트리밍을 위한 대상 디렉터리가 존재하지 않거
 
 #: wp-includes/class-http.php:361
 msgid "There are no HTTP transports available which can complete the requested request."
-msgstr "사용가능한 HTTP 전송이 없어서 요청한 요구를 완료할 수 없습니다."
+msgstr "사용 가능한 HTTP 전송이 없어서 요청한 요구를 완료할 수 없습니다."
 
 #: wp-includes/taxonomy.php:123 wp-includes/taxonomy.php:124
 msgctxt "post format"
@@ -4696,11 +4696,11 @@ msgstr "쿼리가 실행되기 전에 조건부 쿼리 태그가 작동하지 �
 msgid "The user is already active."
 msgstr "사용자는 이미 활동 중입니다."
 
-#: wp-includes/functions.php:3787
+#: wp-includes/functions.php:3792
 msgid "%1$s was called <strong>incorrectly</strong>. %2$s %3$s"
 msgstr "%1$s 은 <strong>잘못불렀습니다</strong>. %2$s %3$s"
 
-#: wp-includes/functions.php:3782
+#: wp-includes/functions.php:3787
 msgid "(This message was added in version %s.)"
 msgstr "(이 메세지는 버전 %s에서 추가되었습니다.)"
 
@@ -4708,7 +4708,7 @@ msgstr "(이 메세지는 버전 %s에서 추가되었습니다.)"
 msgid "Sorry, you cannot publish this post."
 msgstr "죄송합니다. 이 글을 발행할 수 없습니다."
 
-#: wp-includes/pluggable.php:1496
+#: wp-includes/pluggable.php:1505
 msgid "Permalink: %s"
 msgstr "고유주소: %s"
 
@@ -4908,7 +4908,7 @@ msgstr "잘못된 글"
 msgid "Invalid taxonomy: %s."
 msgstr "유효하지 않은 택소노미: %s"
 
-#: wp-includes/query.php:2549
+#: wp-includes/query.php:2552
 msgid "\"caller_get_posts\" is deprecated. Use \"ignore_sticky_posts\" instead."
 msgstr "\"caller_get_posts\" 는 사용 중지되었습니다. 대신 \"ignore_sticky_posts\" 을 사용하세요."
 
@@ -5038,56 +5038,56 @@ msgstr "by %1$s &#8212; %2$s @ <a href=\"#comment-%3$s\">%4$s</a>"
 msgid "You have searched the %1$s blog archives for <strong>&#8216;%2$s&#8217;</strong>. If you are unable to find anything in these search results, you can try one of these links."
 msgstr "<strong>&#8216;%2$s&#8217;</strong>의 %1$s 블로그 보관함을 검색했습니다.만약 아무것도 찾을 수 없다면 다음 링크들을 시도해보세요."
 
-#: wp-includes/taxonomy.php:535
+#: wp-includes/taxonomy.php:538
 msgid "Choose from the most used tags"
 msgstr "인기 태그 중에서 선택"
 
-#: wp-includes/taxonomy.php:522
+#: wp-includes/taxonomy.php:525
 msgctxt "taxonomy singular name"
 msgid "Category"
 msgstr "카테고리"
 
-#: wp-includes/taxonomy.php:523
+#: wp-includes/taxonomy.php:526
 msgid "Search Tags"
 msgstr "태그 검색"
 
-#: wp-includes/taxonomy.php:524
+#: wp-includes/taxonomy.php:527
 msgid "Popular Tags"
 msgstr "인기있는 태그"
 
-#: wp-includes/taxonomy.php:532
+#: wp-includes/taxonomy.php:535
 msgid "New Category Name"
 msgstr "새 카테고리 이름"
 
-#: wp-includes/taxonomy.php:532
+#: wp-includes/taxonomy.php:535
 msgid "New Tag Name"
 msgstr "새 태그 이름"
 
-#: wp-includes/taxonomy.php:531
+#: wp-includes/taxonomy.php:534
 msgid "Add New Category"
 msgstr "새 카테고리 추가"
 
-#: wp-includes/taxonomy.php:531
+#: wp-includes/taxonomy.php:534
 msgid "Add New Tag"
 msgstr "새 태그 추가"
 
-#: wp-includes/taxonomy.php:530
+#: wp-includes/taxonomy.php:533
 msgid "Update Tag"
 msgstr "태그 업데이트"
 
-#: wp-includes/taxonomy.php:527
+#: wp-includes/taxonomy.php:530
 msgid "Parent Category:"
 msgstr "상위 카테고리:"
 
-#: wp-includes/taxonomy.php:526
+#: wp-includes/taxonomy.php:529
 msgid "Parent Category"
 msgstr "상위 카테고리"
 
-#: wp-includes/taxonomy.php:525
+#: wp-includes/taxonomy.php:528
 msgid "All Tags"
 msgstr "모든 태그"
 
-#: wp-includes/taxonomy.php:521
+#: wp-includes/taxonomy.php:524
 msgctxt "taxonomy general name"
 msgid "Categories"
 msgstr "카테고리"
@@ -5168,7 +5168,7 @@ msgstr "<strong>상수 VHOST와 SUBDOMAIN_INSTALL의 충돌 값.</strong> SUBDOM
 msgid "<strong>ERROR</strong>: This username is invalid because it uses illegal characters. Please enter a valid username."
 msgstr "<strong>에러</strong>: 이 사용자명은 올바르지 않습니다. 올바른 사용자명을 입력하여 주십시오."
 
-#: wp-includes/comment-template.php:2094
+#: wp-includes/comment-template.php:2155
 msgid "Required fields are marked %s"
 msgstr "필수 입력창은 %s 로 표시되어 있습니다."
 
@@ -5291,7 +5291,7 @@ msgstr "죄송합니다. 이 사이트에서 글을 편집할 수 없습니다."
 msgid "You are not allowed access to details about this site."
 msgstr "이 사이트의 세부사항을 볼 수 없습니다."
 
-#: wp-includes/pluggable.php:1754
+#: wp-includes/pluggable.php:1763
 msgid "New user registration on your site %s:"
 msgstr "사이트 %s에 새로운 사용자 가입:"
 
@@ -5311,19 +5311,19 @@ msgstr "요청하신 사이트가 올바르게 설치되지 않았습니다. 시
 msgid "The given object ID is not that of a menu item."
 msgstr "주어진 객체 ID는 메뉴 아이템이 아닙니다."
 
-#: wp-includes/formatting.php:3657
+#: wp-includes/formatting.php:3661
 msgid "The email address entered did not appear to be a valid email address. Please enter a valid email address."
 msgstr "입력하신 이메일은 유효한 이메일이 아닙니다. 유효한 이메일을 입력하세요."
 
-#: wp-includes/formatting.php:3760
+#: wp-includes/formatting.php:3764
 msgid "The WordPress address you entered did not appear to be a valid URL. Please enter a valid URL."
 msgstr "입력하신 워드프레스 주소는 유효한 URL이 아닙니다. 유효한 URL을 입력하세요."
 
-#: wp-includes/formatting.php:3773
+#: wp-includes/formatting.php:3777
 msgid "The Site address you entered did not appear to be a valid URL. Please enter a valid URL."
 msgstr "입력하신 사이트 주소는 유효한 URL이 아닙니다. 유효한 URL을 입력하세요."
 
-#: wp-includes/taxonomy.php:2643
+#: wp-includes/taxonomy.php:2649
 msgid "A term with the name provided already exists with this parent."
 msgstr "제공한 이름이 이미 이 상위에 존재하고 있습니다."
 
@@ -5335,7 +5335,7 @@ msgstr "귀하를 이 사이트에 추가하던 중 에러가 발생했습니다
 msgid "This file is too big. Files must be less than %d KB in size."
 msgstr "이 파일은 너무 큽니다. 파일은  %d KB 보다 작아야 합니다."
 
-#: wp-includes/comment-template.php:2111
+#: wp-includes/comment-template.php:2172
 msgid "Your email address will not be published."
 msgstr "이메일은 공개되지 않습니다."
 
@@ -5384,7 +5384,7 @@ msgstr "이 플러그인을 설치하시겠습니까?"
 msgid "Use as featured image"
 msgstr "특성 이미지로 사용"
 
-#: wp-includes/general-template.php:903
+#: wp-includes/general-template.php:899
 msgid "Page %s"
 msgstr "페이지 %s"
 
@@ -5424,7 +5424,7 @@ msgstr ""
 "이 메뉴를 영구적으로 삭제하려고 합니다.\n"
 "멈추려면 '취소'를, 정말 지우려면 '확인'을 누르십시오."
 
-#: wp-includes/link-template.php:3643
+#: wp-includes/link-template.php:3647
 msgid "This is the short link."
 msgstr "이것은 단축 링크입니다."
 
@@ -5442,15 +5442,15 @@ msgid "%d Plugin Update"
 msgid_plural "%d Plugin Updates"
 msgstr[0] "%d 플러그인 업데이트"
 
-#: wp-includes/pluggable.php:1616
+#: wp-includes/pluggable.php:1625
 msgid "A new trackback on the post \"%s\" is waiting for your approval"
 msgstr "\"%s\" 글에 새로운 트랙백이 있습니다. 승인해주세요."
 
-#: wp-includes/pluggable.php:1624
+#: wp-includes/pluggable.php:1633
 msgid "A new pingback on the post \"%s\" is waiting for your approval"
 msgstr "\"%s\" 글에 새로운 핑백이 있습니다. 승인해주세요."
 
-#: wp-includes/pluggable.php:1632
+#: wp-includes/pluggable.php:1641
 msgid "A new comment on the post \"%s\" is waiting for your approval"
 msgstr "\"%s\" 글에 새로운 댓글이 있습니다. 승인해주세요."
 
@@ -5515,15 +5515,15 @@ msgstr "축하합니다! 새로운 사이트인 %s 이(가) 거의 준비되었�
 msgid "But, before you can start using your site, <strong>you must activate it</strong>."
 msgstr "하지만, 사이트를 사용하기 전에 <strong>활성화해야 합니다</strong>."
 
-#: wp-includes/pluggable.php:1464
+#: wp-includes/pluggable.php:1473
 msgid "New trackback on your post \"%s\""
 msgstr "\"%s\"글에 새로운 트랙백이 있습니다."
 
-#: wp-includes/pluggable.php:1484
+#: wp-includes/pluggable.php:1493
 msgid "New comment on your post \"%s\""
 msgstr "\"%s\"글에 새로운 댓글이 있습니다."
 
-#: wp-includes/pluggable.php:1474
+#: wp-includes/pluggable.php:1483
 msgid "New pingback on your post \"%s\""
 msgstr "\"%s\"글에 새로운 핑백이 있습니다."
 
@@ -5890,48 +5890,48 @@ msgstr "새 워드프레스 루프"
 msgid "%s is a protected WP option and may not be modified"
 msgstr "%s는 WP 옵션으로 보호되고 있습니다. 수정할 수 없습니다."
 
-#: wp-includes/functions.php:1921 wp-includes/functions.php:2058
+#: wp-includes/functions.php:1926 wp-includes/functions.php:2063
 msgid "Unable to create directory %s. Is its parent directory writable by the server?"
 msgstr "디렉토리 %s를 만들 수 없습니다. 서버에서 부모 디렉토리에 쓰기가 가능합니까?"
 
-#: wp-includes/functions.php:2022
+#: wp-includes/functions.php:2027
 msgid "Empty filename"
 msgstr "파일 이름이 비어 있습니다."
 
-#: wp-includes/functions.php:2064
+#: wp-includes/functions.php:2069
 msgid "Could not write file %s"
 msgstr "%s 파일을 저장할 수 없습니다."
 
-#: wp-includes/functions.php:2405
+#: wp-includes/functions.php:2410
 msgid "You are attempting to log out of %s"
 msgstr "%s에서 로그아웃 하려고 합니다."
 
-#: wp-includes/functions.php:2414
+#: wp-includes/functions.php:2419
 msgid "WordPress Failure Notice"
 msgstr "워드프레스 실패 알림"
 
-#: wp-includes/functions.php:2407
+#: wp-includes/functions.php:2412
 msgid "Do you really want to <a href='%s'>log out</a>?"
 msgstr "<a href='%s'>로그아웃</a>하시겠습니까?"
 
-#: wp-includes/functions.php:2411 wp-includes/ms-functions.php:1910
+#: wp-includes/functions.php:2416 wp-includes/ms-functions.php:1910
 msgid "Please try again."
 msgstr "재시도 하십시오."
 
-#: wp-includes/functions.php:2545 wp-load.php:92
+#: wp-includes/functions.php:2550 wp-load.php:92
 msgid "WordPress &rsaquo; Error"
 msgstr "워드프레스 &rsaquo; 오류"
 
-#: wp-includes/functions.php:3568 wp-includes/functions.php:3672
+#: wp-includes/functions.php:3573 wp-includes/functions.php:3677
 msgid "%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "%1$s는 버전 %2$s부터 <strong>사용 중단</strong>되었습니다! 대신 %3$s를 사용하십시오."
 
-#: wp-includes/functions.php:3570 wp-includes/functions.php:3674
+#: wp-includes/functions.php:3575 wp-includes/functions.php:3679
 msgid "%1$s is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s는 버전 %2$s때부터 대체할 내용이 없이 <strong>사용중단</strong>되었습니다."
 
 #: wp-includes/general-template.php:276 wp-login.php:544 wp-login.php:607
-#: wp-login.php:657 wp-login.php:739
+#: wp-login.php:657 wp-login.php:738
 msgid "Log in"
 msgstr "로그인"
 
@@ -5939,12 +5939,12 @@ msgstr "로그인"
 msgid "Log out"
 msgstr "로그아웃"
 
-#: wp-includes/general-template.php:413 wp-login.php:898
+#: wp-includes/general-template.php:413 wp-login.php:897
 msgid "Remember Me"
 msgstr "기억하기"
 
 #: wp-includes/general-template.php:542 wp-login.php:547 wp-login.php:660
-#: wp-login.php:735 wp-login.php:917
+#: wp-login.php:734 wp-login.php:916
 msgid "Register"
 msgstr "등록하기"
 
@@ -5952,30 +5952,30 @@ msgstr "등록하기"
 msgid "Site Admin"
 msgstr "사이트 관리"
 
-#: wp-includes/general-template.php:852 wp-includes/general-template.php:1071
+#: wp-includes/general-template.php:852 wp-includes/general-template.php:1067
 msgid "Page not found"
 msgstr "페이지가 없습니다."
 
 #. translators: 1: month name, 2: 4-digit year
-#: wp-includes/general-template.php:1632 wp-includes/media.php:3243
+#: wp-includes/general-template.php:1628 wp-includes/media.php:3271
 msgid "%1$s %2$d"
 msgstr "%2$d년 %1$s"
 
 #. translators: 1: blog name, 2: separator(raquo), 3: tag name
-#: wp-includes/general-template.php:2516
+#: wp-includes/general-template.php:2512
 msgid "%1$s %2$s %3$s Tag Feed"
 msgstr "%1$s %2$s %3$s 태그 피드"
 
 #. translators: 1: blog name, 2: separator(raquo), 3: author name
-#: wp-includes/general-template.php:2518
+#: wp-includes/general-template.php:2514
 msgid "%1$s %2$s Posts by %3$s Feed"
 msgstr "%3$s 피드의 %1$s %2$s 글"
 
-#: wp-includes/general-template.php:2954
+#: wp-includes/general-template.php:2950
 msgid "&laquo; Previous"
 msgstr "&laquo; 이전"
 
-#: wp-includes/general-template.php:2955
+#: wp-includes/general-template.php:2951
 msgid "Next &raquo;"
 msgstr "다음 &raquo;"
 
@@ -6312,7 +6312,7 @@ msgstr "전체 화면"
 msgid "Mute"
 msgstr "조용히"
 
-#: wp-includes/media.php:3362
+#: wp-includes/media.php:3390
 msgid "Edit Gallery"
 msgstr "갤러리 편집"
 
@@ -6373,40 +6373,40 @@ msgid "PM"
 msgstr "오후"
 
 #. translators: 1: blog name, 2: post title
-#: wp-includes/pluggable.php:1471
+#: wp-includes/pluggable.php:1480
 msgid "[%1$s] Trackback: \"%2$s\""
 msgstr "[%1$s] 엮인글(Trackback): \"%2$s\""
 
 #. translators: 1: blog name, 2: post title
-#: wp-includes/pluggable.php:1481
+#: wp-includes/pluggable.php:1490
 msgid "[%1$s] Pingback: \"%2$s\""
 msgstr "[%1$s] Pingback: \"%2$s\""
 
-#: wp-includes/pluggable.php:1502 wp-includes/pluggable.php:1645
+#: wp-includes/pluggable.php:1511 wp-includes/pluggable.php:1654
 msgid "Delete it: %s"
 msgstr "삭제: %s"
 
-#: wp-includes/pluggable.php:1504 wp-includes/pluggable.php:1646
+#: wp-includes/pluggable.php:1513 wp-includes/pluggable.php:1655
 msgid "Spam it: %s"
 msgstr "스팸처리: %s"
 
-#: wp-includes/pluggable.php:1621
+#: wp-includes/pluggable.php:1630
 msgid "Trackback excerpt: "
 msgstr "트랙백 요약: "
 
-#: wp-includes/pluggable.php:1629
+#: wp-includes/pluggable.php:1638
 msgid "Pingback excerpt: "
 msgstr "핑백 요약: "
 
-#: wp-includes/pluggable.php:1641
+#: wp-includes/pluggable.php:1650
 msgid "Approve it: %s"
 msgstr "받아들이기: %s"
 
-#: wp-includes/pluggable.php:1652
+#: wp-includes/pluggable.php:1661
 msgid "[%1$s] Please moderate: \"%2$s\""
 msgstr "[%1$s] 승인해 주세요: \"%2$s\""
 
-#: wp-includes/pluggable.php:1758
+#: wp-includes/pluggable.php:1767
 msgid "[%s] New User Registration"
 msgstr "[%s] 새로운 사용자 만들기"
 
@@ -6570,31 +6570,31 @@ msgstr "대량 편집에서 제거"
 msgid "Plugin Information:"
 msgstr "플러그인 정보:"
 
-#: wp-includes/taxonomy.php:2925
+#: wp-includes/taxonomy.php:2931
 msgid "Invalid Taxonomy"
 msgstr "잘못된 용어"
 
-#: wp-includes/taxonomy.php:750 wp-includes/taxonomy.php:3134
-#: wp-includes/taxonomy.php:4319
+#: wp-includes/taxonomy.php:753 wp-includes/taxonomy.php:3140
+#: wp-includes/taxonomy.php:4325
 msgid "Empty Term"
 msgstr "빈 용어"
 
 #: wp-includes/class-wp-xmlrpc-server.php:1404
 #: wp-includes/class-wp-xmlrpc-server.php:1956
 #: wp-includes/class-wp-xmlrpc-server.php:2047
-#: wp-includes/class-wp-xmlrpc-server.php:2118 wp-includes/taxonomy.php:2560
+#: wp-includes/class-wp-xmlrpc-server.php:2118 wp-includes/taxonomy.php:2566
 msgid "Invalid term ID"
 msgstr "잘못된 용어 ID"
 
-#: wp-includes/taxonomy.php:2563 wp-includes/taxonomy.php:3158
+#: wp-includes/taxonomy.php:2569 wp-includes/taxonomy.php:3164
 msgid "A name is required for this term"
 msgstr "이 용어를 위한 이름이 필요합니다."
 
-#: wp-includes/taxonomy.php:2654
+#: wp-includes/taxonomy.php:2660
 msgid "Could not insert term into the database"
 msgstr "데이터베이스에 용어를 추가할 수 없습니다."
 
-#: wp-includes/taxonomy.php:4522
+#: wp-includes/taxonomy.php:4528
 msgid "Invalid object ID"
 msgstr "잘못된 개체 ID"
 
@@ -6610,7 +6610,7 @@ msgstr "스타일시트를 찾을 수 없습니다."
 msgid "<strong>ERROR</strong>: The username field is empty."
 msgstr "<strong>오류</strong>: 이름 항목이 비었습니다."
 
-#: wp-includes/functions.php:4944 wp-includes/user.php:206
+#: wp-includes/functions.php:4949 wp-includes/user.php:206
 msgid "Please log in again."
 msgstr "다시 로그인하십시오."
 
@@ -6644,11 +6644,11 @@ msgstr "등록 양식"
 msgid "Register For This Site"
 msgstr "이 블로그에 등록하기"
 
-#: wp-login.php:841
+#: wp-login.php:840
 msgid "You are now logged out."
 msgstr "로그아웃 하셨습니다."
 
-#: wp-login.php:843
+#: wp-login.php:842
 msgid "User registration is currently not allowed."
 msgstr "현재 사용자 등록이 허용되지 않습니다."
 
@@ -6678,7 +6678,7 @@ msgid "Newer Comments &raquo;"
 msgstr "새로운 댓글 &raquo;"
 
 #. translators: 1: blog name, 2: post title
-#: wp-includes/pluggable.php:1492
+#: wp-includes/pluggable.php:1501
 msgid "[%1$s] Comment: \"%2$s\""
 msgstr "[%1$s] 댓글 : \"%2$s\""
 
@@ -6708,7 +6708,7 @@ msgctxt "post"
 msgid "Scheduled"
 msgstr "예약됨"
 
-#: wp-includes/comment-template.php:2124
+#: wp-includes/comment-template.php:2185
 msgid "Cancel reply"
 msgstr "응답 취소"
 
@@ -6751,17 +6751,17 @@ msgid "RSS Error: %s"
 msgstr "RSS 에러: %s"
 
 #. translators: min=minute
-#: wp-includes/formatting.php:2837
+#: wp-includes/formatting.php:2841
 msgid "%s min"
 msgid_plural "%s mins"
 msgstr[0] "%s 분"
 
-#: wp-includes/formatting.php:2842
+#: wp-includes/formatting.php:2846
 msgid "%s hour"
 msgid_plural "%s hours"
 msgstr[0] "%s 시간"
 
-#: wp-includes/formatting.php:2847
+#: wp-includes/formatting.php:2851
 msgid "%s day"
 msgid_plural "%s days"
 msgstr[0] "%s 일"
@@ -6771,59 +6771,59 @@ msgstr[0] "%s 일"
 msgid ", "
 msgstr ", "
 
-#: wp-includes/functions.php:2533
+#: wp-includes/functions.php:2538
 msgid "&laquo; Back"
 msgstr "&laquo; 뒤로"
 
-#: wp-includes/functions.php:3732
+#: wp-includes/functions.php:3737
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s! %3$s"
 msgstr "%1$s는 버전 %2$s부터 <strong>사용중단</strong>되었습니다! %3$s"
 
-#: wp-includes/functions.php:3734
+#: wp-includes/functions.php:3739
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s는 버전 %2$s때부터 대체할 내용이 없이 <strong>사용중단</strong>되었습니다."
 
-#: wp-includes/functions.php:4294
+#: wp-includes/functions.php:4299
 msgid "Select a city"
 msgstr "도시 선택"
 
-#: wp-includes/functions.php:4339 wp-includes/functions.php:4343
+#: wp-includes/functions.php:4344 wp-includes/functions.php:4348
 msgid "UTC"
 msgstr "UTC"
 
-#: wp-includes/functions.php:4347
+#: wp-includes/functions.php:4352
 msgid "Manual Offsets"
 msgstr "메뉴얼 오프셋"
 
 #. translators: 1: separator, 2: search phrase
-#: wp-includes/general-template.php:1066
+#: wp-includes/general-template.php:1062
 msgid "Search Results %1$s %2$s"
 msgstr "검색 결과 %1$s %2$s"
 
 #. translators: Calendar caption: 1: month name, 2: 4-digit year
-#: wp-includes/general-template.php:1857
+#: wp-includes/general-template.php:1853
 msgctxt "calendar caption"
 msgid "%1$s %2$s"
 msgstr "%1$s %2$s"
 
 #. translators: Separator between blog name and feed type in feed links
-#: wp-includes/general-template.php:2468 wp-includes/general-template.php:2510
+#: wp-includes/general-template.php:2464 wp-includes/general-template.php:2506
 msgctxt "feed link"
 msgid "&raquo;"
 msgstr "&raquo;"
 
 #. translators: 1: blog title, 2: separator (raquo)
-#: wp-includes/general-template.php:2470
+#: wp-includes/general-template.php:2466
 msgid "%1$s %2$s Feed"
 msgstr "%1$s %2$s 피드"
 
 #. translators: 1: blog title, 2: separator (raquo)
-#: wp-includes/general-template.php:2472
+#: wp-includes/general-template.php:2468
 msgid "%1$s %2$s Comments Feed"
 msgstr "%1$s %2$s 댓글 피드"
 
 #. translators: 1: blog name, 2: separator(raquo), 3: search phrase
-#: wp-includes/general-template.php:2520
+#: wp-includes/general-template.php:2516
 msgid "%1$s %2$s Search Results for &#8220;%3$s&#8221; Feed"
 msgstr "&#8220;%3$s&#8221; 의 검색 결과 %1$s %2$s 피드"
 
@@ -6887,7 +6887,7 @@ msgstr "새로운 사용자 등록: %s"
 msgid "New %1$s User: %2$s"
 msgstr "새로운 %1$s 사용자: %2$s"
 
-#: wp-includes/pluggable.php:1500 wp-includes/pluggable.php:1643
+#: wp-includes/pluggable.php:1509 wp-includes/pluggable.php:1652
 msgid "Trash it: %s"
 msgstr "버리기: %s"
 
@@ -6984,7 +6984,7 @@ msgstr "섬네일 이미지로 설정할 수 없습니다. 다른 첨부파일�
 msgid "Saving Draft&#8230;"
 msgstr "임시 글로 저장하기&#8230;"
 
-#: wp-includes/taxonomy.php:3218
+#: wp-includes/taxonomy.php:3224
 msgid "The slug &#8220;%s&#8221; is already in use by another term"
 msgstr "슬러그(Slug) &#8220;%s&#8221; 는 이미 다른 용어로 사용되고 있습니다."
 
@@ -6996,7 +6996,7 @@ msgstr "상위 테마가 없습니다. \"%s\" 상위 테마를 설치하세요."
 msgid "<strong>ERROR</strong>: WordPress %1$s requires MySQL %2$s or higher"
 msgstr "<strong>에러</strong>: 워드프레스 %1$s는 MySQL %2$s 또는 그 이상을 필요로 합니다."
 
-#: wp-login.php:803
+#: wp-login.php:802
 msgid "You have logged in successfully."
 msgstr "성공적으로 로그인하였습니다."
 
@@ -7040,7 +7040,7 @@ msgstr "가입이 중지되었습니다."
 msgid "User registration has been disabled."
 msgstr "사용자 등록이 중지되어 있습니다."
 
-#: wp-includes/comment-template.php:2125
+#: wp-includes/comment-template.php:2186
 msgid "Post Comment"
 msgstr "댓글 달기"
 
@@ -7049,7 +7049,7 @@ msgid "Select Category"
 msgstr "카테고리 선택"
 
 #. translators: 1: blog name, 2: separator(raquo), 3: category name
-#: wp-includes/general-template.php:2514
+#: wp-includes/general-template.php:2510
 msgid "%1$s %2$s %3$s Category Feed"
 msgstr "%1$s %2$s %3$s 카테고리 피드"
 
@@ -7066,7 +7066,7 @@ msgid "Could not update post in the database"
 msgstr "데이터베이스에 글을 업데이트 할 수 없습니다."
 
 #. translators: 1: blog name, 2: separator(raquo), 3: post title
-#: wp-includes/general-template.php:2512
+#: wp-includes/general-template.php:2508
 msgid "%1$s %2$s %3$s Comments Feed"
 msgstr "%1$s %2$s %3$s 댓글 피드"
 
@@ -7086,7 +7086,7 @@ msgstr "더이상의 댓글이 없습니다."
 msgid "Get your own %s account in seconds"
 msgstr "몇 초만에 자신만의 %s 계정을 만드세요"
 
-#: wp-includes/pluggable.php:1785
+#: wp-includes/pluggable.php:1794
 msgid "[%s] Your username and password info"
 msgstr "[%s] 사용자명과 비밀번호"
 
@@ -7107,7 +7107,7 @@ msgstr "%s 은(는) 새로운 사용자명입니다."
 msgid "But, before you can start using your new username, <strong>you must activate it</strong>."
 msgstr "하지만, 새로운 사용자명을 사용하기 전에 <strong>활성화해야 합니다</strong>."
 
-#: wp-includes/pluggable.php:1648
+#: wp-includes/pluggable.php:1657
 msgid "Currently %s comment is waiting for approval. Please visit the moderation panel:"
 msgid_plural "Currently %s comments are waiting for approval. Please visit the moderation panel:"
 msgstr[0] "%s개의 댓글이 승인을 받기 위해서 대기하고 있는 중입니다. 검토할 패널에 방문해 주세요:"
@@ -7134,11 +7134,11 @@ msgstr "보호된 댓글: 댓글을 보기 위해서 비밀번호를 입력해�
 msgid "<strong>ERROR</strong>: Invalid username or incorrect password."
 msgstr "<strong>오류</strong>:사용자이름이나 비밀번호가 올바르지 않습니다."
 
-#: wp-includes/pluggable.php:1715
+#: wp-includes/pluggable.php:1724
 msgid "Password Lost and Changed for user: %s"
 msgstr "다음 사용자의 비밀번호를 고쳤습니다: %s"
 
-#: wp-includes/pluggable.php:1719
+#: wp-includes/pluggable.php:1728
 msgid "[%s] Password Lost/Changed"
 msgstr "[%s] 비밀번호 잃어버림/고치기"
 
@@ -7166,12 +7166,12 @@ msgstr "비밀번호 분실"
 msgid "Get New Password"
 msgstr "새 비밀번호 얻기"
 
-#: wp-login.php:740 wp-login.php:923
+#: wp-login.php:739 wp-login.php:922
 msgid "Password Lost and Found"
 msgstr "비밀번호 분실 및 찾기"
 
-#: wp-includes/user.php:142 wp-includes/user.php:168 wp-login.php:740
-#: wp-login.php:923
+#: wp-includes/user.php:142 wp-includes/user.php:168 wp-login.php:739
+#: wp-login.php:922
 msgid "Lost your password?"
 msgstr "비밀번호를 잃어버렸나요?"
 
@@ -7252,7 +7252,7 @@ msgstr "."
 msgid "What do I do now?"
 msgstr "무엇을 해야 하나요?"
 
-#: wp-login.php:849
+#: wp-login.php:848
 msgid "Registration complete. Please check your email."
 msgstr "가입이 완료 되었습니다. 이메일을 확인하세요 :)"
 
@@ -7276,15 +7276,15 @@ msgstr "<strong>오류</strong>: 이메일 주소를 넣으세요."
 msgid "Username or Email:"
 msgstr "사용자명이나 이메일 주소:"
 
-#: wp-login.php:845
+#: wp-login.php:844
 msgid "Check your email for the confirmation link."
 msgstr "이메일에서 확인 링크를 클릭하세요."
 
-#: wp-login.php:847
+#: wp-login.php:846
 msgid "Check your email for your new password."
 msgstr "새 비밀번호는 이메일을 확인하세요."
 
-#: wp-includes/pluggable.php:1755 wp-includes/pluggable.php:1779
+#: wp-includes/pluggable.php:1764 wp-includes/pluggable.php:1788
 #: wp-login.php:324
 msgid "Username: %s"
 msgstr "사용자명: %s"
@@ -7313,7 +7313,7 @@ msgstr "이 위젯은 옵션이 없습니다."
 msgid "Dashboard"
 msgstr "알림판"
 
-#: wp-includes/general-template.php:414 wp-login.php:868 wp-login.php:900
+#: wp-includes/general-template.php:414 wp-login.php:867 wp-login.php:899
 msgid "Log In"
 msgstr "로그인"
 
@@ -7354,7 +7354,7 @@ msgstr "기본"
 msgid "(required)"
 msgstr "(필수)"
 
-#: wp-includes/comment-template.php:2090
+#: wp-includes/comment-template.php:2151
 #: wp-includes/theme-compat/comments.php:102
 msgid "Website"
 msgstr "웹사이트"
@@ -7364,7 +7364,7 @@ msgid "Strength indicator"
 msgstr "강도 표시기"
 
 #: wp-includes/admin-bar.php:735 wp-includes/class-wp-customize-widgets.php:359
-#: wp-includes/functions.php:3445
+#: wp-includes/functions.php:3450
 msgid "Widgets"
 msgstr "위젯"
 
@@ -7526,12 +7526,12 @@ msgid "%s topic"
 msgid_plural "%s topics"
 msgstr[0] "%s 토픽"
 
-#: wp-includes/comment-template.php:1826 wp-includes/comment-template.php:2118
+#: wp-includes/comment-template.php:1850 wp-includes/comment-template.php:2179
 #: wp-includes/theme-compat/comments.php:75
 msgid "Leave a Reply"
 msgstr "댓글 남기기"
 
-#: wp-includes/comment-template.php:1827 wp-includes/comment-template.php:2119
+#: wp-includes/comment-template.php:1851 wp-includes/comment-template.php:2180
 #: wp-includes/theme-compat/comments.php:75
 msgid "Leave a Reply to %s"
 msgstr "%s 에 응답 남기기"
@@ -7548,21 +7548,21 @@ msgstr "내 사이트"
 msgid "First Post"
 msgstr "첫번째 글"
 
-#: wp-includes/class-wp-customize-manager.php:1806
+#: wp-includes/class-wp-customize-manager.php:1808
 #: wp-includes/class-wp-xmlrpc-server.php:467
 msgid "Site Title"
 msgstr "사이트 제목"
 
-#: wp-includes/comment-template.php:2088
-#: wp-includes/theme-compat/comments-popup.php:81 wp-login.php:721
+#: wp-includes/comment-template.php:2149
+#: wp-includes/theme-compat/comments-popup.php:81 wp-login.php:720
 msgid "Email"
 msgstr "이메일"
 
-#: wp-includes/taxonomy.php:528
+#: wp-includes/taxonomy.php:531
 msgid "Edit Category"
 msgstr "카테고리 편집"
 
-#: wp-includes/category-template.php:528 wp-includes/taxonomy.php:537
+#: wp-includes/category-template.php:528 wp-includes/taxonomy.php:540
 msgid "No categories"
 msgstr "카테고리 없음"
 
@@ -7578,19 +7578,19 @@ msgstr "죄송합니다, 이 항목에는 댓글을 달 수 없습니다."
 msgid "Sorry, you must be logged in to post a comment."
 msgstr "죄송합니다, 로그인을 해야 댓글을 남길 수 있습니다."
 
-#: wp-includes/comment-template.php:1559
+#: wp-includes/comment-template.php:1583
 msgid "Log in to Reply"
 msgstr "댓글을 달기 위해 로그인"
 
-#: wp-includes/comment-template.php:1670
+#: wp-includes/comment-template.php:1694
 msgid "Leave a Comment"
 msgstr "댓글 남기기"
 
-#: wp-includes/comment-template.php:1671
+#: wp-includes/comment-template.php:1695
 msgid "Log in to leave a Comment"
 msgstr "댓글 남기기 위해 로그인하기"
 
-#: wp-includes/comment-template.php:1739
+#: wp-includes/comment-template.php:1763
 msgid "Click here to cancel reply."
 msgstr "댓글을 취소하려면 여기를 누르십시오."
 
@@ -7606,7 +7606,7 @@ msgstr "댓글 없음"
 msgid "1 Comment"
 msgstr "댓글 한 개"
 
-#: wp-includes/comment-template.php:2108
+#: wp-includes/comment-template.php:2169
 #: wp-includes/theme-compat/comments.php:82
 msgid "You must be <a href=\"%s\">logged in</a> to post a comment."
 msgstr "죄송합니다,<a href=\"%s\">로그인</a>을 해야 댓글을 남길 수 있습니다."
@@ -7625,7 +7625,7 @@ msgstr "입력한 댓글이 검토를 기다리고 있습니다."
 msgid "Powered by WordPress, state-of-the-art semantic personal publishing platform."
 msgstr "이 블로그는 가장 앞선 개인 발행 도구인 워드프레스로 운영됩니다."
 
-#: wp-includes/taxonomy.php:533
+#: wp-includes/taxonomy.php:536
 msgid "Separate tags with commas"
 msgstr "각 태그를 쉼표로 분리하세요."
 
@@ -7633,7 +7633,7 @@ msgstr "각 태그를 쉼표로 분리하세요."
 msgid "<strong>ERROR</strong>: This email is already registered, please choose another one."
 msgstr "<strong>오류</strong>: 이 이메일 주소는 이미 등록되어 있습니다. 다른 주소를 입력해주세요."
 
-#: wp-includes/comment-template.php:1476
+#: wp-includes/comment-template.php:1500
 msgid "Enter your password to view comments."
 msgstr "댓글을 보려면 비밀번호를 입력하십시오."
 
@@ -7674,11 +7674,11 @@ msgstr "글쓴이"
 #: wp-includes/class-wp-editor.php:1408
 #: wp-includes/customize/class-wp-customize-nav-menu-item-control.php:91
 #: wp-includes/media-template.php:371 wp-includes/media-template.php:550
-#: wp-includes/media.php:3301
+#: wp-includes/media.php:3329
 msgid "URL"
 msgstr "URL"
 
-#: wp-includes/deprecated.php:3082 wp-includes/functions.php:2409
+#: wp-includes/deprecated.php:3082 wp-includes/functions.php:2414
 msgid "Are you sure you want to do this?"
 msgstr "이 작업을 수행하시겠습니까?"
 
@@ -7696,7 +7696,7 @@ msgstr "편집"
 msgid "Undo"
 msgstr "되돌리기"
 
-#: wp-includes/class-wp-customize-widgets.php:669 wp-includes/media.php:3344
+#: wp-includes/class-wp-customize-widgets.php:669 wp-includes/media.php:3372
 msgid "Apply"
 msgstr "적용"
 
@@ -7720,7 +7720,7 @@ msgstr "저장하기"
 msgid "Advanced"
 msgstr "고급"
 
-#: wp-includes/comment-template.php:2086
+#: wp-includes/comment-template.php:2147
 #: wp-includes/theme-compat/comments-popup.php:76
 #: wp-includes/theme-compat/comments.php:96
 msgid "Name"
@@ -7733,7 +7733,7 @@ msgstr "이름"
 msgid "Description"
 msgstr "설명"
 
-#: wp-includes/taxonomy.php:528
+#: wp-includes/taxonomy.php:531
 msgid "Edit Tag"
 msgstr "태그 고치기"
 
@@ -7752,11 +7752,11 @@ msgstr "없음"
 #: wp-includes/class-wp-xmlrpc-server.php:2034
 #: wp-includes/class-wp-xmlrpc-server.php:2105
 #: wp-includes/class-wp-xmlrpc-server.php:2163
-#: wp-includes/class-wp-xmlrpc-server.php:2258 wp-includes/taxonomy.php:665
-#: wp-includes/taxonomy.php:754 wp-includes/taxonomy.php:905
-#: wp-includes/taxonomy.php:1078 wp-includes/taxonomy.php:2294
-#: wp-includes/taxonomy.php:2545 wp-includes/taxonomy.php:2788
-#: wp-includes/taxonomy.php:3121
+#: wp-includes/class-wp-xmlrpc-server.php:2258 wp-includes/taxonomy.php:668
+#: wp-includes/taxonomy.php:757 wp-includes/taxonomy.php:908
+#: wp-includes/taxonomy.php:1081 wp-includes/taxonomy.php:2300
+#: wp-includes/taxonomy.php:2551 wp-includes/taxonomy.php:2794
+#: wp-includes/taxonomy.php:3127
 msgid "Invalid taxonomy"
 msgstr "잘못된 용어"
 
@@ -7788,7 +7788,7 @@ msgstr "전송"
 msgid "RSS"
 msgstr "RSS"
 
-#: wp-includes/functions.php:2026
+#: wp-includes/functions.php:2031
 msgid "Invalid file type"
 msgstr "잘못된 파일 형식"
 
@@ -7797,7 +7797,7 @@ msgid "Preview"
 msgstr "미리보기"
 
 #: wp-includes/class-wp-editor.php:861 wp-includes/class-wp-editor.php:1446
-#: wp-includes/media.php:3305 wp-includes/script-loader.php:390
+#: wp-includes/media.php:3333 wp-includes/script-loader.php:390
 #: wp-includes/script-loader.php:438 wp-includes/script-loader.php:507
 msgid "Cancel"
 msgstr "취소"
@@ -7810,7 +7810,7 @@ msgstr "내용"
 msgid "Tags"
 msgstr "태그"
 
-#: wp-includes/comment-template.php:1557 wp-includes/script-loader.php:488
+#: wp-includes/comment-template.php:1581 wp-includes/script-loader.php:488
 msgid "Reply"
 msgstr "응답"
 
@@ -7830,14 +7830,7 @@ msgstr "알 수 없는 피드"
 msgid "Sidebar"
 msgstr "사이드바"
 
-#: wp-includes/general-template.php:1389
-#: wp-includes/theme-compat/sidebar.php:92
-#: wp-includes/widgets/class-wp-widget-archives.php:27
-#: wp-includes/widgets/class-wp-widget-archives.php:45
-msgid "Archives"
-msgstr "글목록"
-
-#: wp-includes/general-template.php:411 wp-login.php:717 wp-login.php:883
+#: wp-includes/general-template.php:411 wp-login.php:716 wp-login.php:882
 msgid "Username"
 msgstr "사용자명"
 
@@ -7846,7 +7839,7 @@ msgid "Redo"
 msgstr "다시하기"
 
 #: wp-includes/media-template.php:687 wp-includes/media-template.php:762
-#: wp-includes/media-template.php:936 wp-includes/media.php:3060
+#: wp-includes/media-template.php:936 wp-includes/media.php:3088
 msgid "Thumbnail"
 msgstr "작은 사진(썸네일)"
 
@@ -7854,7 +7847,7 @@ msgstr "작은 사진(썸네일)"
 msgid "The GD image library is not installed."
 msgstr "GD 이미지 라이브러리가 설치되지 않았습니다."
 
-#: wp-includes/media.php:3302
+#: wp-includes/media.php:3330
 msgid "Add Media"
 msgstr "미디어 추가"
 
@@ -7862,31 +7855,31 @@ msgstr "미디어 추가"
 msgid "Saved."
 msgstr "저장함"
 
-#: wp-includes/class-wp-customize-manager.php:1948
+#: wp-includes/class-wp-customize-manager.php:1950
 #: wp-includes/class-wp-editor.php:988 wp-includes/media-template.php:613
 #: wp-includes/media-template.php:844 wp-includes/media-template.php:910
 msgid "Left"
 msgstr "왼쪽"
 
-#: wp-includes/class-wp-customize-manager.php:1949
+#: wp-includes/class-wp-customize-manager.php:1951
 #: wp-includes/class-wp-editor.php:989 wp-includes/media-template.php:616
 #: wp-includes/media-template.php:847 wp-includes/media-template.php:913
 msgid "Center"
 msgstr "중앙"
 
-#: wp-includes/class-wp-customize-manager.php:1950
+#: wp-includes/class-wp-customize-manager.php:1952
 #: wp-includes/class-wp-editor.php:990 wp-includes/media-template.php:619
 #: wp-includes/media-template.php:850 wp-includes/media-template.php:916
 msgid "Right"
 msgstr "오른쪽"
 
 #: wp-includes/media-template.php:688 wp-includes/media-template.php:763
-#: wp-includes/media-template.php:937 wp-includes/media.php:3061
+#: wp-includes/media-template.php:937 wp-includes/media.php:3089
 msgid "Medium"
 msgstr "보통"
 
 #: wp-includes/media-template.php:690 wp-includes/media-template.php:765
-#: wp-includes/media-template.php:939 wp-includes/media.php:3063
+#: wp-includes/media-template.php:939 wp-includes/media.php:3091
 msgid "Full Size"
 msgstr "전체 크기"
 
@@ -7934,7 +7927,7 @@ msgid "Dismiss"
 msgstr "무시"
 
 #: wp-includes/admin-bar.php:809 wp-includes/admin-bar.php:810
-#: wp-includes/class-wp-editor.php:1421 wp-includes/media.php:3303
+#: wp-includes/class-wp-editor.php:1421 wp-includes/media.php:3331
 msgid "Search"
 msgstr "검색"
 
@@ -7947,12 +7940,12 @@ msgid "Uncategorized"
 msgstr "미분류"
 
 #: wp-includes/class-wp-editor.php:862 wp-includes/class-wp-editor.php:1402
-#: wp-includes/functions.php:4932 wp-includes/script-loader.php:256
+#: wp-includes/functions.php:4937 wp-includes/script-loader.php:256
 #: wp-includes/script-loader.php:337 wp-includes/script-loader.php:439
 msgid "Close"
 msgstr "닫기"
 
-#: wp-includes/media.php:3304
+#: wp-includes/media.php:3332
 msgid "Select"
 msgstr "선택"
 
@@ -7960,7 +7953,7 @@ msgstr "선택"
 msgid "Edit Media"
 msgstr "미디어 편집"
 
-#: wp-includes/media.php:3028 wp-includes/script-loader.php:406
+#: wp-includes/media.php:3056 wp-includes/script-loader.php:406
 #: wp-includes/script-loader.php:564
 msgid "(no title)"
 msgstr "(제목 없음)"
@@ -8008,7 +8001,7 @@ msgstr "스팸"
 msgid "Link Categories"
 msgstr "링크 카테고리"
 
-#: wp-includes/taxonomy.php:523
+#: wp-includes/taxonomy.php:526
 msgid "Search Categories"
 msgstr "카테고리 찾기"
 
@@ -8037,7 +8030,7 @@ msgstr "파일 &#8220;%s&#8221; 가 없습니까?"
 msgid "File &#8220;%s&#8221; is not an image."
 msgstr "파일 8220;%s&#8221; 은(는) 이미지가 아닙니다."
 
-#: wp-includes/taxonomy.php:534
+#: wp-includes/taxonomy.php:537
 msgid "Add or remove tags"
 msgstr "새로운 태그 추가/제거"
 
@@ -8056,7 +8049,7 @@ msgid "New Page"
 msgstr "새 페이지"
 
 #: wp-includes/media-template.php:327 wp-includes/media-template.php:521
-#: wp-includes/media.php:3374
+#: wp-includes/media.php:3402
 msgid "Edit Image"
 msgstr "이미지 편집"
 
@@ -8064,20 +8057,20 @@ msgstr "이미지 편집"
 msgid "Edit Link Category"
 msgstr "링크 카테고리 편집"
 
-#: wp-includes/taxonomy.php:530
+#: wp-includes/taxonomy.php:533
 msgid "Update Category"
 msgstr "카테고리 업데이트"
 
-#: wp-includes/taxonomy.php:525
+#: wp-includes/taxonomy.php:528
 msgid "All Categories"
 msgstr "모든 카테고리"
 
-#: wp-includes/media.php:3306 wp-includes/script-loader.php:404
+#: wp-includes/media.php:3334 wp-includes/script-loader.php:404
 #: wp-includes/script-loader.php:517
 msgid "Update"
 msgstr "업데이트"
 
-#: wp-includes/comment-template.php:1041 wp-includes/comment-template.php:2106
+#: wp-includes/comment-template.php:1041 wp-includes/comment-template.php:2167
 msgctxt "noun"
 msgid "Comment"
 msgstr "댓글"
@@ -8100,7 +8093,7 @@ msgstr "댓글이 없습니다."
 msgid "Number of comments to show:"
 msgstr "보여줄 댓글의 수:"
 
-#: wp-includes/general-template.php:412 wp-login.php:887
+#: wp-includes/general-template.php:412 wp-login.php:886
 msgid "Password"
 msgstr "비밀번호"
 
@@ -8113,7 +8106,7 @@ msgstr "비공개로 발행됨"
 msgid "Private"
 msgstr "비공개"
 
-#: wp-includes/media.php:3348
+#: wp-includes/media.php:3376
 msgid "No media attachments found."
 msgstr "미디어 첨부가 없습니다."
 
@@ -8122,10 +8115,17 @@ msgstr "미디어 첨부가 없습니다."
 msgid "Search Results for &#8220;%s&#8221;"
 msgstr "&#8220;%s&#8221;에 대한 검색 결과"
 
-#: wp-includes/pluggable.php:1487 wp-includes/pluggable.php:1635
-#: wp-includes/pluggable.php:1756
+#: wp-includes/pluggable.php:1496 wp-includes/pluggable.php:1644
+#: wp-includes/pluggable.php:1765
 msgid "Email: %s"
 msgstr "이메일: %s"
+
+#: wp-includes/general-template.php:1385
+#: wp-includes/theme-compat/sidebar.php:92
+#: wp-includes/widgets/class-wp-widget-archives.php:27
+#: wp-includes/widgets/class-wp-widget-archives.php:45
+msgid "Archives"
+msgstr "글 목록"
 
 #: wp-activate.php:81
 msgid "Activate"

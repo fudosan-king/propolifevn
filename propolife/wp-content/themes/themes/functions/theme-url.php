@@ -21,8 +21,8 @@ function getSlugCustomPosttype(){
 	}
 	elseif(is_tax()){	
 		$arr=explode('/',$link);
-		$tax = $arr[2];
-		$slug = $arr[3];
+		$tax = $arr[1];
+		$slug = $arr[2];
 		
 		$args = array('public'=> true,'_builtin' => false);
 		$output = 'names';

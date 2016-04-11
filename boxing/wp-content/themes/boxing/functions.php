@@ -220,14 +220,46 @@ function wp_get_archives_customer( $args = '' ) {
         if ( $results ) {
             $after = $r['after'];
             foreach ( (array) $results as $result ) {
+                $year = (string)$result->year;
+                if ($result->month && $result->month <= 9) {
+                    $month = '0' . (string)$result->month;
+                } else {
+                    $month = (string)$result->month;
+                }
+                $args = array(
+                    'cat'              => $cat,
+                    'm'                => $year . $month,
+                    'posts_per_page'   => 5,
+                    'offset'           => 0,
+                    'category'         => '',
+                    'category_name'    => '',
+                    'orderby'          => 'date',
+                    'order'            => 'DESC',
+                    'include'          => '',
+                    'exclude'          => '',
+                    'meta_key'         => '',
+                    'meta_value'       => '',
+                    'post_type'        => 'post',
+                    'post_mime_type'   => '',
+                    'post_parent'      => '',
+                    'author'       => '',
+                    'post_status'      => 'publish',
+                    'suppress_filters' => true
+                );
+
+                $posts_arrays = get_posts( $args );
+
                 $url = get_month_link( $result->year, $result->month );
                 /* translators: 1: month name, 2: 4-digit year */
                 $text = sprintf( __( '%1$s %2$d' ), $wp_locale->get_month( $result->month ), $result->year );
                 if ( $r['show_post_count'] ) {
                     $r['after'] = '&nbsp;(' . $result->posts . ')' . $after;
                 }
-
-                $output .= get_archives_link_customer( $url, $text, $r['format'], $r['before'], $r['after'], $cat );
+                if($posts_arrays) {
+                    $output .= get_archives_link_customer( $url, $text, $r['format'], $r['before'], $r['after'], $cat );
+                } else {
+                    $output .= '';
+                }
             }
         }
     }
@@ -271,7 +303,7 @@ function getLimitContent($page_id,$count){
 	$content = $content_post->post_content;
 	$content = strip_shortcodes($content);
 	$content = str_replace(']]>', ']]&gt;', $content);
-	$content = strip_tags($content);		
+	$content = strip_tags($content);
 	return mb_strimwidth($content,0,$count,'。。。');
 }
 ?>

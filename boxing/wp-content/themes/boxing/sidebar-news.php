@@ -1,3 +1,13 @@
+<?php
+    if ($lang == 'vi'){
+        $cat = 58;
+    } else if ($lang == 'ja') {
+        $cat = 52;
+    } else {
+        $cat = 56;
+    }
+?>
+
 <div class="list-group">
 <a href="#" class="list-group-item active"><h4 class="list-group-item-heading">最近の投稿</h4></a>
 <?php

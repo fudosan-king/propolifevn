@@ -116,8 +116,6 @@ add_action( 'wp_head', 'add_google_map', 0 );
 <span><?php echo $text_after; ?><abbr><?php echo $topics[0]['address'][0]['tel'] ?></abbr><?php echo $text_befor; ?></abbr></span>
 </div>
 
-<div align="center" style="margin-bottom:15px;"><a href="<?php echo get_permalink(52);?>"><img src="<?php echo $template_directory;?>/images/boxing-banner-medium.jpg" /></a></div>
-
 <div class="container">
 <div class="row show-grid">
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">

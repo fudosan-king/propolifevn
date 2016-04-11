@@ -27,6 +27,7 @@ get_header();
         'cat'              => $cat,
         'posts_per_page'   => $total_item,
         'offset'           => $total_item * ($page - 1),
+        'm'                => $m,
         'category'         => '',
         'category_name'    => '',
         'orderby'          => 'date',
@@ -45,6 +46,7 @@ get_header();
 
     $args_recent = array(
         'cat'              => $cat,
+        'm'                => $m,
         'posts_per_page'   => 5,
         'offset'           => 0,
         'category'         => '',
@@ -76,7 +78,8 @@ get_header();
             $image = get_the_post_thumbnail ( $posts_array->ID, array(240, 240, 'class' => ' img-responsive') );
 
             echo '
-            <a href="' . get_bloginfo('siteurl'). '&p='. $posts_array->ID . '" class="list-group-item">
+            <div class="news-items">
+            <a href="' . get_bloginfo('siteurl'). '&p='. $posts_array->ID . '">
             <figure class="row">
             <div class="col-md-4">'. $image . '</div>
             <figcaption class="col-md-8">
@@ -85,7 +88,9 @@ get_header();
             </figcaption>
             </figure>
             </a>
+            </div>
             ';
+
         endforeach;
         echo '</div>';
 

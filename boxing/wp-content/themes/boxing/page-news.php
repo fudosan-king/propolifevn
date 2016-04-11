@@ -11,7 +11,7 @@ if (!$lang) {
 }
 $template_directory = str_replace("twentyfifteen", "boxing", get_template_directory_uri());
 $page = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
-$total_item = 10;
+$total_item = 20;
 ?>
 <?php get_header(); ?>
 <?php
@@ -56,6 +56,7 @@ $total_item = 10;
     $args_total = array(
         'cat'              => $cat,
         'category'         => '',
+        'posts_per_page'   => -1,
         'category_name'    => '',
         'include'          => '',
         'exclude'          => '',

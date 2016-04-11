@@ -29,8 +29,7 @@ get_header(); ?>
 
     $args_recent = array(
         'cat'              => $cat,
-        'posts_per_page'   => 5,
-        'offset'           => 0,
+        'posts_per_page'   => -1,
         'category'         => '',
         'category_name'    => '',
         'orderby'          => 'date',

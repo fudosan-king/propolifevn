@@ -25,12 +25,18 @@ Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span>2015</span>.
 <script src="<?php bloginfo( 'template_directory' );?>/js/functions.js"></script>
 <script type="text/javascript" src="<?php bloginfo( 'template_directory' );?>/js/jquery.simplr.smoothscroll.stellar.min.js"></script>
 <script>
-jQuery(function($) {
-	$.srSmoothscroll({ease: 'easeOutQuart'});
-	$(window).load(function(){
-	  $.stellar({responsive: true,horizontalScrolling: false});
-	});
-});
+// jQuery(function($) {
+// 	$.srSmoothscroll(
+// 		{
+// 			ease: 'easeOutQuart',
+// 			step: 25,
+//     		speed: 250
+//     	}
+// 	);
+// 	$(window).load(function(){
+// 	  $.stellar({responsive: true,horizontalScrolling: false});
+// 	});
+// });
 </script>
 <script src="<?php bloginfo( 'template_directory' );?>/js/validator.min.js"></script>
 <script src="<?php bloginfo( 'template_directory' );?>/js/viewportchecker.js"></script>

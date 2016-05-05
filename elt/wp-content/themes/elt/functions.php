@@ -249,7 +249,6 @@ function add_script_footer(){
     echo '
         <script>
             jQuery(function($) {
-                $.srSmoothscroll({ease: "easeOutQuart"});
                 $(window).load(function(){
                   $.stellar({responsive: true,horizontalScrolling: false});
                 });

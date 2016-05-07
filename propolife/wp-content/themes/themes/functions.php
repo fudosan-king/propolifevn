@@ -27,7 +27,7 @@ function htmlContactButton2(){
 }
 function htmlContactButton3(){
 	ob_start();?>    
-<div align="center" style="margin-top:30px;"><a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-success btn-lg btn-big">問い合わせする<i class="fa fa-chevron-circle-right" style="margin:0px 0px 0px 10px;color:#ffffff"></i></a></div>
+<div align="center" style="margin-bottom:15px;"><a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-success btn-lg btn-big">問い合わせする<i class="fa fa-chevron-circle-right" style="margin:0px 0px 0px 10px;color:#ffffff"></i></a></div>
 <?php
 	$cform = ob_get_contents();
 	ob_end_clean();

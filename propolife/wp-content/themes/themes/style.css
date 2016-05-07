@@ -12,7 +12,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 @media (min-width: 769px) and (max-width: 991px){.nav > li > a {padding: 10px 8px;}.sildermain{padding-top:84px !important}.optical.logo{padding:15px !important}}
-@media (min-width: 768px) and (max-width: 991px) {.bgColor .col-xs-6{padding:0px;}.staff .img-circle{width:65%}}
+@media (min-width: 768px) and (max-width: 991px) {.bgColor .col-xs-6{padding:0px;}.staff .img-circle{width:65%}.navbar ul li a{padding: 10px 5px;}}
 @media (min-width: 992px) and (max-width: 1199px) {.staff .img-circle{width:65%}}
 @media (max-width: 767px){
 .center-block{text-align:center}
@@ -47,6 +47,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .slidermain {padding-top: 75px !important;}
 .align-top{padding-top:90px !important;}
 .jumbotron{background-color:#ffffff !important;text-align:center;padding:0px;}
+.title{margin-top:10px;}
 }
 /*----------Gerneral transition setup-------------*/
 .btn,.navbar-nav li,.navbar ul li ul,.jssora20l, .jssora20r,.optical.logo{-webkit-transition: all 0.2s linear;-moz-transition: all 0.2s linear;-o-transition: all 0.2s linear;transition: all 0.2s linear;}
@@ -415,3 +416,7 @@ h3{text-transform:uppercase}
 .news-date{color:#A90003}
 .list-web .list-group-item{line-height: 30px;}
 .align-top{padding-top:120px}
+.panel-body p .size-large,.panel-body p img{width: 100%;height: auto;}
+.private{border-radius:0px;border:10px solid #ddd;background-color:#fff;padding:15px;}
+.private h4{margin-top:20px;font-size:16px;font-weight:bold}
+.private hr{margin-top:10px;margin-bottom:10px;}

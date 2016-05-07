@@ -4,7 +4,7 @@
 <div class="effect">
 <div class="container" <?php echo $style;?>>
 <div class="row">
-<div class="col-md-9">
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
 <div class="panel panel-default">
 <?php if($post->ID==264){?><div class="panel-heading" style="background-color:#ffffff"><h4>幣サービスについて</h4></div><?php } ?>
 <div class="panel-body">
@@ -32,7 +32,7 @@ if($post->ID!=267 && ($post->ID!=268)){echo htmlContactButton3();}
 <?php echo htmlContactButton3();?>
 <?php } ?>
 </div>
-<div class="col-lg-3"><?php get_sidebar('right');?></div>
+<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"><?php get_sidebar('right');?></div>
 </div>
 </div>
 </div>

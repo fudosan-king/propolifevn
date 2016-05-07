@@ -47,7 +47,7 @@ while ( $the_query->have_posts() ) : $the_query->the_post();
 <h3 align="center" style="margin-top:0px;margin-bottom:15px;"><?php echo $term->name;?></h3>
 <?php echo nl2br($term->description); ?>
 <div style="margin-top:30px;margin-bottom:15px">
-<a href="<?php echo get_permalink(get_page_by_path('contact'));?>" class="btn btn-success btn-lg btn-big">内装工事について相談する<i class="fa fa-chevron-circle-right" style="margin:0px 0px 0px 10px;color:#ffffff"></i></a></div>
+<a href="<?php echo get_permalink(get_page_by_path('contact'));?>" class="btn btn-success btn-lg btn-big">制作について相談する<i class="fa fa-chevron-circle-right" style="margin:0px 0px 0px 10px;color:#ffffff"></i></a></div>
 </div>
 </div>
 </div>

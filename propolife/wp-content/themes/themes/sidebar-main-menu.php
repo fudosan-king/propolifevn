@@ -8,7 +8,7 @@
 </button>
 <h1 style="margin:0px;">
 <a href="<?php echo home_url();?>" class="navbar-brand logo hidden-lg available-xs"><img src="<?php bloginfo( 'template_directory' );?>/images/logo-tablet.png" class="img-responsive"></a>
-<a href="<?php echo home_url();?>" class="navbar-brand logo hidden-md hidden-xs">
+<a href="<?php echo home_url();?>" class="navbar-brand logo hidden-md hidden-sm hidden-xs">
 <?php
 $imgInfo = get_post( get_post_thumbnail_id(1));
 $caption=nl2br(str_replace(' ', '&nbsp;',$imgInfo->post_excerpt));

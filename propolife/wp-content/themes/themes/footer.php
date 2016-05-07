@@ -1,3 +1,4 @@
+<?php do_action('wp_get_archive'); ?>
 <?php global $lienhe;$hl = explode(';',$lienhe['hotline']);?>
 <footer class="doc-footer">
 <div class="container">

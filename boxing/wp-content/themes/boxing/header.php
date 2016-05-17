@@ -79,7 +79,7 @@ if (!$lang) {
             var _SlideshowTransitions = [{ $Duration: 1200, $Opacity: 2 }];
             var options = {
                 $FillMode:2,
-                $AutoPlay: true,
+                $AutoPlay: false,
                 $AutoPlayInterval: 2000,
                 $PauseOnHover: 1,
                 $ArrowKeyNavigation: true,

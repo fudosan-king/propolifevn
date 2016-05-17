@@ -93,7 +93,7 @@ add_action( 'wp_head', 'add_google_map', 0 );
     $template_directory = str_replace("twentyfifteen", "boxing", get_template_directory_uri());
 ?>
 
-<div align="center"><?php include('sidebar-banner.php');?></div>
+<div align="center" style="background:#000"><?php include('sidebar-banner.php');?></div>
 <div class="container">
 <div class="row topic">
 <?php include('sidebar-top-contact.php');?>

@@ -8,9 +8,16 @@
     $sliders = get_field('slider', 307);
         foreach($sliders as $slider):
             echo '<div>';
-            if ($slider['link']) { echo '<a href="' . $slider['link'] . '" target="_blank">';}
-            echo '<img u="image" src="' . $slider['image']['url'] . '" />';
-            if ($slider['link']) { echo '</a>';}
+        	if ($slider['video']) {
+        		echo '<iframe width="1067" height="600" src="https://www.youtube.com/embed/' . $slider['video'] . '?rel=0&amp;loop=1&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>';
+        	} else {
+	            if ($slider['link']) {
+	            	echo '<a href="' . $slider['link'] . '" target="_blank">';}
+	            	echo '<img u="image" src="' . $slider['image']['url'] . '" />';
+	            if ($slider['link']) {
+	            	echo '</a>';
+	            }
+	        }
             echo '</div>';
          endforeach;
 ?>

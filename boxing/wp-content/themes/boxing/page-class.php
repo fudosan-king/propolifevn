@@ -60,15 +60,34 @@ $template_directory = str_replace("twentyfifteen", "boxing", get_template_direct
                 }
             }
         }
+        $colum = count($class_arrays);
+        $index = 1;
         foreach($class_arrays as $class_array):
             $name = get_field('name', $class_array->ID);
             $href = $class_array->guid;
             $image = get_field('image', $class_array->ID);
             $description = substr(get_field('description', $class_array->ID), 0, 60);
 
+
+            if ($colum < 6) {
+                $col = intval(12 / $colum);
+                echo '
+                    <div class="col-lg-'. $col . ' col-md-' . $col . ' col-sm-' . $col . ' col-xs-12"><div class="course" align="center"';
+
+                if ($col == 12 ) { echo ' style="width: 50%; margin: 10px auto;"'; }
+                else if ($col == 6 ) { echo ' style="width: 70%; margin: 10px auto;"'; }
+                else if ($col == 4 ) { echo ' style="width: 100%; margin: 10px auto;"'; }
+
+                echo '>';
+
+            } else {
+                 echo '
+                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6" align="center">
+                <div class="course" align="center">
+                ';
+            }
+
             echo '
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-            <div class="course" align="center">
             <div class="view" align="center">
             <a href="' . get_bloginfo('siteurl'). '&p='. $class_array->ID . '">
                 <img src="' . $image['url'] . '" class="img-responsive">

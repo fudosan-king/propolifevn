@@ -74,7 +74,7 @@ get_header(); ?>
 
 </tbody>
 
-<tfoot>
+<tfoot class="hidden">
 <tr><td colspan="3">
 <?php if ($lang == 'vi') { ?>
     Lệ phí tuyển sinh và lệ phí hàng tháng chưa bao gồm 10% VAT

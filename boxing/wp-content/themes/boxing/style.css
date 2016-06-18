@@ -21,3 +21,5 @@ Version: 0.1
 .caption .excerpt{min-height:78px;}
 .caption .excerpt p{text-align:center;margin-top:10px;color:#FFFFFF;white-space: normal;margin-bottom:0px}
 .staffInfo .mask img {width:187px;height:164px;}
+.subtitleclass{text-align:right}
+@media (max-width: 767px){.subtitleclass{text-align:left !important;}.topic {margin-top: -0px !important;}}

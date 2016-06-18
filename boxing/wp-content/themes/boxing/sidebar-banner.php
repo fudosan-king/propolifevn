@@ -9,7 +9,7 @@
         foreach($sliders as $slider):
             echo '<div>';
         	if ($slider['video']) {
-        		echo '<iframe width="1067" height="600" src="https://www.youtube.com/embed/' . $slider['video'] . '?rel=0&amp;loop=1&amp;autoplay=1" frameborder="0" allowfullscreen></iframe>';
+        		echo '<iframe width="1067" height="600" src="https://www.youtube.com/embed/' . $slider['video'] . '?rel=0&amp;loop=1&amp;autoplay=0" frameborder="0" allowfullscreen></iframe>';
         	} else {
 	            if ($slider['link']) {
 	            	echo '<a href="' . $slider['link'] . '" target="_blank">';}

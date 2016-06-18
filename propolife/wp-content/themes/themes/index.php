@@ -36,6 +36,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 proCol" align="left">
 <div class="optical logo" align="left">
 <h1>
+<a href="<?php echo get_permalink(get_page_by_path('about'));?>">
 <?php
 $imgInfo = get_post( get_post_thumbnail_id(1));
 $caption=nl2br(str_replace(' ', '&nbsp;',$imgInfo->post_excerpt));
@@ -43,6 +44,7 @@ $imgTitle = $imgInfo->post_title;
 $imgAlt = get_post_meta(get_post_thumbnail_id(1), '_wp_attachment_image_alt', true);
 echo get_the_post_thumbnail(1,'full',array('class'=>'img-responsive','alt'=>$imgAlt,'title'=>$imgTitle));
 ?>
+</a>
 </h1>
 </div>
 </div>

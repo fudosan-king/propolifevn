@@ -25,7 +25,7 @@ echo get_the_post_thumbnail(1,'full',array('class'=>'img-responsive','alt'=>$img
 <li class="<?php echo get_post(4)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('about'));?>"><?php echo get_the_title(4);?></a></li>
 
 <li class="<?php echo get_post(11)->post_name;?>">
-<a href="#"><?php echo get_the_title(11);?></a>
+<a href="#" class="hidden-xs"><?php echo get_the_title(11);?></a>
 <ul>
 <?php
 $arg = array('post_type' => 'support','orderby' => 'menu_order','order' => 'desc','posts_per_page' =>-1,'post__not_in'=>array(273,274,275,277),'status' => array('publish','private'));
@@ -38,17 +38,17 @@ $smlink = html_entity_decode($smlink,null,'UTF-8');
 <?php endwhile;wp_reset_query();?>
 </ul>
 </li>
-<li class="<?php echo get_post(73)->post_name;?>"><a href="#"><?php echo get_the_title(73);?></a>
+<li class="<?php echo get_post(73)->post_name;?>"><a href="#" class="hidden-xs"><?php echo get_the_title(73);?></a>
 <ul><?php echo wp_list_categories('taxonomy=cat-chronicle&title_li=&hide_empty=0&orderby=ID&order=asc&exclude=7,11'); ?></ul>
 </li>   
-<li class="<?php echo get_post(13)->post_name; ?> <?php echo get_post(370)->post_name;?> <?php echo get_post(454)->post_name;?>"><a href="#">WEB制作・オフショア</a>
+<li class="<?php echo get_post(13)->post_name; ?> <?php echo get_post(370)->post_name;?> <?php echo get_post(454)->post_name;?>"><a href="#" class="hidden-xs">WEB制作・オフショア</a>
 <ul>
 <li><a href="<?php echo get_permalink(get_page_by_path('web-step'));?>">WEBサービスについて</a></li>
 <li><a href="<?php echo get_permalink(get_page_by_path('web'));?>">WEBサイト制作</a></li>
 <li><a href="<?php echo get_permalink(get_page_by_path('development'));?>">オフショア開発</a></li>
 </ul>
 </li>  
-<li><a href="#">不動産賃貸仲介</a>
+<li><a href="#" class="hidden-xs">不動産賃貸仲介</a>
 <ul>
 <li><a href="http://aodaihousing.com/" target="_blank">アパート検索</a></li>
 <li><a href="http://office-vn.com/" target="_blank">オフィス検索</a></li>

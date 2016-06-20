@@ -22,7 +22,14 @@ echo '
 <div class="list-group">
 <a href="#" class="list-group-item inews active"><h4 class="list-group-item-heading">スタッフから</h4></a>
 <?php
-$arg = array('post_type' => 'post','orderby' => 'date','order' => 'desc','posts_per_page' =>3);
+if ($lang == 'vi'){
+    $cat = 58;
+} else if ($lang == 'ja') {
+    $cat = 52;
+} else {
+    $cat = 56;
+}
+$arg = array('cat' => $cat,'post_type' => 'post','orderby' => 'date','order' => 'desc','posts_per_page' =>3);
 $the_query = new WP_Query($arg);
 while ( $the_query->have_posts() ) : $the_query->the_post();
 ?>

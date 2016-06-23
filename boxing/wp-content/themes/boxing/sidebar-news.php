@@ -11,7 +11,7 @@
 <div class="list-group">
 <a href="#" class="list-group-item active"><h4 class="list-group-item-heading">最近の投稿</h4></a>
 <?php
-$arg = array('post_type' => 'post','orderby' => 'date','order' => 'desc','posts_per_page' =>5);
+$arg = array('cat' => $cat, 'post_type' => 'post','orderby' => 'date','order' => 'desc','posts_per_page' =>5);
 $the_query = new WP_Query($arg);
 while ( $the_query->have_posts() ) : $the_query->the_post();
 ?>

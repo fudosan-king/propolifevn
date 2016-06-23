@@ -18,8 +18,7 @@ get_header(); ?>
     $name = get_field('name', $post_id);
     $badge_active = get_field('badge-active', $post_id);
     $image = get_field('image', $post_id);
-    $shop_ = get_field('shop', $post_id);
-    $description = get_field('description', $post_id);
+    $description_customer = get_field('description_customer', $post_id);
 ?>
 <div class="container">
 
@@ -47,50 +46,18 @@ get_header(); ?>
 <div class="row show-grid">
 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 center-block">
 <div class="panel panel-default">
-<div class="panel-heading"><h3 class="title-detail"><?php echo str_replace('<br>', '', $name); ?><small class="badge badge-active"><?php echo $badge_active; ?></small></h3></div>
+<div class="panel-heading"><h3 class="title-detail"><?php echo str_replace('<br>', '', $name); ?></h3></div>
 <div class="panel-body">
 <div class="row">
 <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 center-block" align="center"><img src="<?php echo $image['url'] ?>" class="img-responsive img-thumbnail"></div>
 <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12">
 <table class="table table-bordered table-striped table-hover">
-<?php if ($lang == 'vi') { ?>
-    <thead><tr><th>TÊN LỚP</th><th>GIÁ</th></tr></thead>
-
-<?php } else if ($lang == 'ja') { ?>
-    <thead><tr><th>商品名</th><th>価格</th></tr></thead>
-
-<?php } else { ?>
-    <thead><tr><th>PRODUCT NAME</th><th>PRICE</th></tr></thead>
-
-<?php } ?>
 <tbody>
-<?php foreach($shop_ as $shop):  ?>
 <tr>
-<td><?php echo $shop['name'] ?></td>
-<td><?php echo $shop['price'] ?></td>
+<td align="left" colspan="2"><?php echo $description_customer; ?></td>
 </tr>
-<tr>
-<td align="left" colspan="2"><?php echo $shop['detail'] ?></td>
-</tr>
-<?php  endforeach; ?>
 
 </tbody>
-
-<tfoot class="hidden">
-<tr><td colspan="3">
-<?php if ($lang == 'vi') { ?>
-    Lệ phí tuyển sinh và lệ phí hàng tháng chưa bao gồm 10% VAT
-
-<?php } else if ($lang == 'ja') { ?>
-    年間申し込み割引、6ヶ月申し込み割引、3ヶ月申し込み割引をご用意しております。詳しくはお問い合わせ下さい。<br>
-    入会金と月額料金にはVAT10%は含まれておりません。
-<?php } else { ?>
-    Entrance fee and monthly fee are not included 10% VAT
-
-<?php } ?>
-</td></tr>
-</tfoot>
-
 </table>
 </div>
 </div>
@@ -105,13 +72,13 @@ get_header(); ?>
 <div class="bg-default block-right mn-scroll">
 <div style="background-color: #000000;  color: #ffffff;  padding: 15px !important;  margin: -15px;">
 <?php if ($lang == 'ja') { ?>
-    ショップ
+    お客様の声
 
 <?php } else if ($lang == 'vi') { ?>
-    Cửa Hàng
+    Ý kiến khách hàng
 
 <?php } else { ?>
-    SHOP
+    CUSTOMER’S VOICE
 
 <?php } ?>
 </div>
@@ -121,11 +88,11 @@ get_header(); ?>
 
 <?php
     if ($lang == 'vi'){
-        $cat = 116;
+        $cat = 126;
     } else if ($lang == 'ja') {
-        $cat = 110;
+        $cat = 128;
     } else {
-        $cat = 114;
+        $cat = 124;
     }
     $args = array(
         'cat'              => $cat,
@@ -147,23 +114,23 @@ get_header(); ?>
         'suppress_filters' => true
     );
     $posts_arrays = get_posts( $args );
-    $shop_arrays = array();
+    $customer_arrays = array();
 
     if($posts_arrays):
         foreach (range(1, count($posts_arrays)) as $number) {
             foreach($posts_arrays as $posts_array){
                 if ($number == get_field('oder', $posts_array->ID)){
-                    array_push($shop_arrays, $posts_array);
+                    array_push($customer_arrays, $posts_array);
                 }
             }
         }
 
-        foreach($shop_arrays as $shop_array):
-            $name = get_field('name', $shop_array->ID);
-            $href = $shop_array->guid;
+        foreach($customer_arrays as $customer_array):
+            $name = get_field('name', $customer_array->ID);
+            $href = $customer_array->guid;
             $name = str_replace('<br>', '', $name);
             echo '
-            <li><a href="' . get_bloginfo('siteurl'). '&p='. $shop_array->ID . '"><i class="fa fa-angle-right"></i> ' . $name . '</a></li>
+            <li><a href="' . get_bloginfo('siteurl'). '&p='. $customer_array->ID . '"><i class="fa fa-angle-right"></i> ' . $name . '</a></li>
             ';
         endforeach;
     endif;

@@ -63,6 +63,10 @@ function wpsites_nav_class($classes, $item){
         $classes[] = "active";
     }
 
+    if ((is_page( 1944 ) || is_page( 1943 ) || is_page( 1947 )) && ($classes[8] == 'menu-item-1977')){
+        $classes[] = "active";
+    }
+
     if ((in_category( 'NEWS-VN' ) || in_category( 'NEWS-EN' ) || in_category( 'チャート' )) && ($classes[4] == 'menu-item-831' || $classes[4] == 'menu-item-832' || $classes[4] == 'menu-item-833') && !is_home()){
         $classes[] = "active";
     }
@@ -76,6 +80,10 @@ function wpsites_nav_class($classes, $item){
     }
 
     if ((in_category( 'SHOP-VN' ) || in_category( 'SHOP-EN' ) || in_category( 'SHOP-JP' )) && ($classes[4] == 'menu-item-1891' || $classes[4] == 'menu-item-1925') && !is_home()){
+        $classes[] = "active";
+    }
+
+    if ((in_category( 'CUSTOMER-VN' ) || in_category( 'CUSTOMER-EN' ) || in_category( 'CUSTOMER-JP' )) && ($classes[4] == 'menu-item-1977') && !is_home()){
         $classes[] = "active";
     }
 
@@ -138,6 +146,10 @@ function get_custom_cat_template($single_template) {
 
     if ( in_category( 'SHOP-VN' ) || in_category( 'SHOP-EN' ) || in_category( 'SHOP-JP' )) {
         $single_template = dirname( __FILE__ ) . '/single-shop.php';
+    }
+
+    if ( in_category( 'CUSTOMER-VN' ) || in_category( 'CUSTOMER-EN' ) || in_category( 'CUSTOMER-JP' )) {
+        $single_template = dirname( __FILE__ ) . '/single-customer.php';
     }
 
     return $single_template;

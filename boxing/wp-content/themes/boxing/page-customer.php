@@ -1,6 +1,6 @@
 <?php
 /**
-Template Name: ShopPage
+Template Name: CustomerPage
 */
 ?>
 
@@ -33,11 +33,11 @@ $template_directory = str_replace("twentyfifteen", "boxing", get_template_direct
 <div class="row show-grid">
 <?php
     if ($lang == 'vi'){
-        $cat = 116;
+        $cat = 126;
     } else if ($lang == 'ja') {
-        $cat = 110;
+        $cat = 128;
     } else {
-        $cat = 114;
+        $cat = 124;
     }
     $args = array(
         'cat'              => $cat,

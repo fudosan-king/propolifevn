@@ -63,7 +63,7 @@ function wpsites_nav_class($classes, $item){
         $classes[] = "active";
     }
 
-    if ((is_page( 1944 ) || is_page( 1943 ) || is_page( 1947 )) && ($classes[8] == 'menu-item-1977')){
+    if ((is_page( 1944 ) || is_page( 1943 ) || is_page( 1947 )) && ($classes[8] == 'menu-item-1977' || $classes[8] == 'menu-item-2041' || $classes[8] == 'menu-item-2040')){
         $classes[] = "active";
     }
 
@@ -83,7 +83,7 @@ function wpsites_nav_class($classes, $item){
         $classes[] = "active";
     }
 
-    if ((in_category( 'CUSTOMER-VN' ) || in_category( 'CUSTOMER-EN' ) || in_category( 'CUSTOMER-JP' )) && ($classes[4] == 'menu-item-1977') && !is_home()){
+    if ((in_category( 'CUSTOMER-VN' ) || in_category( 'CUSTOMER-EN' ) || in_category( 'CUSTOMER-JP' )) && ($classes[4] == 'menu-item-1977' || $classes[4] == 'menu-item-2040' || $classes[4] == 'menu-item-2041') && !is_home()){
         $classes[] = "active";
     }
 

@@ -12,9 +12,9 @@ $caption=nl2br(str_replace(' ', '&nbsp;',$imgInfo->post_excerpt));
 $imgTitle = $imgInfo->post_title;
 $imgAlt = get_post_meta(get_post_thumbnail_id(2), '_wp_attachment_image_alt', true);
 ?>
-<figure><?php the_post_thumbnail('thumbnail');?><figcaption><?php echo $caption; ?></figcaption></figure>
-<div class="excerpt clearfix"><?php the_excerpt();?></div>
+<figure><?php the_post_thumbnail('full',array('class'=>'img-responsive'));?><figcaption><?php echo $caption; ?></figcaption></figure>
 </div>
+<div class="detailthumb excerpt clearfix"><?php the_excerpt();?></div>
 <?php while ( have_posts() ) : the_post();the_content();endwhile;?>
 </div>
 <div class="col-md-2">&nbsp;</div>

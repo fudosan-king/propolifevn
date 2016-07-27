@@ -11,7 +11,7 @@ $the_query = new WP_Query($arg);
 while ( $the_query->have_posts() ) : $the_query->the_post();
 ?>
 <div class="title-table">
-<h3><?php the_title();?><small>詳細</small></h3>
+<h3><?php the_title();?></h3>
 <?php the_content();?>
 </div>
 <?php endwhile;wp_reset_query();?>

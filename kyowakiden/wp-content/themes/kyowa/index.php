@@ -1,8 +1,10 @@
 <?php get_header();?>
 <header class="header" role="masthead"><?php get_sidebar('main-menu');?></header>
 <div align="center" class="top-video">
-<video name="media" loop width="100%" height="auto" autoplay loop="loop" onstart="this.play();" onended="this.play();" ><source src="https://t.pimg.jp/mp4/007/832/300/1/7832300.mp4" type="video/mp4"></video>
-<div class="video-caption"><small>水処理・電気設備から</small><br>環境改善を提案します</div>
+<div class="embed-responsive embed-responsive-16by9">
+<iframe class="embed-responsive-item" src="https://www.youtube.com/embed/GB5kD0Eq3x0?version=3&rel=0&loop=1&autoplay=1&showinfo=0&controls=0&playlist=GB5kD0Eq3x0"></iframe>
+</div>
+<div class="video-caption"><small><?php echo __('Từ xử lý nước và thiết bị điện,','theme');?></small><br><?php echo __('Chúng tôi sẽ đề xuất cải tạo môi trường.','theme');?></div>
 </div>
 
 <div class="container">
@@ -20,7 +22,7 @@
 <div class="block-company">
 <div class="container">
 <div class="row">
-<div class="col-md-6" align="right">
+<div class="col-md-6 col-sm-6" align="right">
 <div class="block-1">
 <a href="<?php echo get_permalink(get_page_by_path('head-office'))?>">
 <div><img src="<?php bloginfo( 'template_directory' );?>/images/pic02.gif" width="66" height="66"></div>
@@ -30,7 +32,7 @@
 
 </div>
 </div>
-<div class="col-md-6" align="left">
+<div class="col-md-6 col-sm-6" align="left">
 <div class="block-2">
 <a href="<?php echo get_permalink(get_page_by_path('about'))?>">
 <div><img src="<?php bloginfo( 'template_directory' );?>/images/pic03.jpg" width="66" height="66"></div>

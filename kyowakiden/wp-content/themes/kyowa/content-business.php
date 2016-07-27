@@ -1,8 +1,8 @@
 <?php global $temp;if($temp%2==0){?>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 <aside class="bg-default">
-<div class="caption" id="<?php echo $post->ID;?>">
-<h3><?php the_title();?></h3>
+<div class="caption">
+<h3 class="hidden"><?php the_title();?></h3>
 <?php the_content();?>
 </div>
 </aside>
@@ -53,8 +53,8 @@ foreach($_list as $key){
 </div>
 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
 <div class="bg-default">
-<div class="caption" id="<?php echo $post->ID;?>">
-<h3><?php the_title();?></h3>
+<div class="caption">
+<h3 class="hidden"><?php the_title();?></h3>
 <?php the_content();?>
 </div>
 </div>

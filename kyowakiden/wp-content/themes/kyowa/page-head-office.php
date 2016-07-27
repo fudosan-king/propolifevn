@@ -3,22 +3,23 @@
 <div class="show-body">
 <div class="container">
 <div class="row">
-<div class="col-md-2">&nbsp;</div>
-<div class="col-md-8">
-<div class="thumbview">
+<div class="col-lg-2 hidden-md hidden-sm hiddex-xs">&nbsp;</div>
+<div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+<div class="thumbview center-block" align="center">
 <?php
 $imgInfo = get_post( get_post_thumbnail_id(5));
 $caption=nl2br(str_replace(' ', '&nbsp;',$imgInfo->post_excerpt));
 $imgTitle = $imgInfo->post_title;
 $imgAlt = get_post_meta(get_post_thumbnail_id(5), '_wp_attachment_image_alt', true);
 ?>
-<figure><?php the_post_thumbnail();?><figcaption><?php echo $caption; ?></figcaption></figure>
-<div class="excerpt clearfix"><?php the_excerpt();?></div>
+<figure>
+<?php the_post_thumbnail('full',array('class'=>'img-responsive'));?>
+<figcaption><?php echo __('CÔNG TY CỔ PHẦN CÔNG NGHIỆP KYOWAKIDEN','theme');?><br><?php echo __('<span>Giám Đốc đại diện</span><br>HIDEYUKI SAKAI','theme');?></figcaption>
+</figure>
 </div>
-<div class="title-table"><h3><?php the_title();?></h3></div>
 <?php while ( have_posts() ) : the_post();the_content();endwhile;?>
 </div>
-<div class="col-md-2">&nbsp;</div>
+<div class="col-lg-2 hidden-md hidden-sm hiddex-xs">&nbsp;</div>
 </div>
 </div>
 </div>

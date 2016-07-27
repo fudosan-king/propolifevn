@@ -1,11 +1,11 @@
 <div class="col-lg-12">
 <div class="bgtopnews">
 <div class="row">
-<div class="col-lg-2 hidden-xs">
+<div class="col-lg-2 col-sm-2 hidden-xs">
 <div style="text-align:center;margin-top: 43px; margin-left:30px;"><i class="fa fa-newspaper-o fa-5x"></i></div>
 </div>
 
-<div class="col-lg-10 col-xs-12">
+<div class="col-lg-10 col-sm-10 col-xs-12">
 <dl class="dl-horizontal topnews">
 
 <?php

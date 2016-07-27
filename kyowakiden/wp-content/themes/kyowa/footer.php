@@ -6,7 +6,7 @@
 <li class="home"><a href="index.html"><?php echo __('TRANG CHỦ','theme'); ?></a></li>
 <li class="<?php echo get_post(4)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('business'))?>"><?php echo get_the_title(4);?></a></li>     
 <li class="<?php echo get_post(5)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('head-office'))?>"><?php echo get_the_title(5);?></a></li>
-<li class="<?php echo get_post(2)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('about-us'))?>"><?php echo get_the_title(2);?></a></li>
+<li class="<?php echo get_post(2)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('about'))?>"><?php echo get_the_title(2);?></a></li>
 <li class="<?php echo get_post(3)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('group'))?>"><?php echo get_the_title(3);?></a></li>
 <li class="<?php echo get_post(6)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('news'))?>"><?php echo get_the_title(6);?></a></li>
 <li class="<?php echo get_post(1)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('contact'))?>"><?php echo get_the_title(1);?></a></li>
@@ -17,13 +17,13 @@
 <address>
 <div class="container">
 <div class="row">
-<div class="col-md-12 col-sm-12" align="center"><img src="<?php bloginfo( 'template_directory' );?>/images/logo.gif" class="img-responsive center-block"></div>
+<div class="col-md-12 col-sm-12" align="center"><img src="<?php bloginfo( 'template_directory' );?>/images/top-logo.jpg" class="img-responsive center-block"></div>
 </div>
 </div>
 </address>
 
 <div class="clearfix"></div>
-<div class="footer-privacy">Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span id="copyright-year">2016</span>. <a href="#">Privacy Policy</a></div>
+<div class="footer-privacy">Copyright&nbsp;&copy;&nbsp;KYOWAKIDEN VIETNAM Co .,Ltd. ALL rights reserved.<span id="copyright-year"> 2016</span></div>
 </div>
 <div class="modal fade bs-example-modal-sm" id="messageDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"></div>
 </footer>

@@ -15,10 +15,10 @@
 <div><div id="map-canvas"></div></div>
 <div class="container">
 <div class="row">
-<div class="col-lg-4 col-sm-4 hidden-xs" align="left">
+<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs" align="left">
 <div class="bgContact"><h3 style="margin:0px;padding:0px 15px;"><?php echo __('Địa chỉ','theme');?></h3></div>
 </div>
-<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 <div class="bgContact"><h3 style="margin:0px;padding:0px 15px;"><?php echo __('Liên hệ','theme');?></h3></div>
 </div>
 </div>
@@ -28,7 +28,7 @@
 <div class="container">
 <div class="row">
 
-<div class="col-lg-4 col-sm-4 hidden-xs" align="left">
+<div class="col-lg-4 col-md-4 col-sm-4 hidden-xs" align="left">
 <div class="contact-form" style="margin-top:5px;">
 <?php echo getExcerptByID(1);?><br>
 <p>m: <?php echo $lienhe['hotline'];?></p><br>
@@ -37,7 +37,7 @@
 </div>
 </div>
 
-<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
 
 <div class="row">
 <div class="col-md-4 col-xs-12">

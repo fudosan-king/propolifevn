@@ -9,7 +9,6 @@
 
 <div class="row">
 <?php
-for($i=0;$i<5;$i++){
 $arg = array('post_type' => 'news','orderby' => 'date','order' => 'desc','posts_per_page' =>-1);
 $the_query = new WP_Query($arg);
 while ( $the_query->have_posts() ) : $the_query->the_post();
@@ -32,7 +31,7 @@ while ( $the_query->have_posts() ) : $the_query->the_post();
 </div>
 </div>
 </div>
-<?php endwhile;wp_reset_query();} ?>
+<?php endwhile;wp_reset_query(); ?>
 </div>
 
 </div>

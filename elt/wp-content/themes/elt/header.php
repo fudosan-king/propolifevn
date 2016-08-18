@@ -31,10 +31,10 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
     ?>
     <?php if (($title_seo) && ($description_seo)) { ?>
         <title><?php echo $title_seo; ?></title>
-        <meta property="og:title" content="<?php echo $title_og; ?>">
-        <meta property="og:description" content="<?php echo $description_og; ?>">
-        <meta name="description" content="<?php echo $description_seo; ?>">
-        <meta name="keywords" content="<?php echo $keywords; ?>">
+        <meta property="og:title" content="<?php _e($title_og); ?>">
+        <meta property="og:description" content="<?php _e($description_og); ?>">
+        <meta name="description" content="<?php _e($description_seo); ?>">
+        <meta name="keywords" content="<?php _e($keywords); ?>">
     <?php } else { ?>
         <title>ELTベトナム │ ホーチミン市の肉の総合商社 │ 精肉業者 </title>
         <meta property="og:title" content="ELTベトナム │ ホーチミン市の肉の総合商社 │ 精肉業者">

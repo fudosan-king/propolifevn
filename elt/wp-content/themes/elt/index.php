@@ -57,7 +57,7 @@
 <div class="container">
 <div class="row">
 <div class="col-lg-12"><div class="slogan">
-    <div style="font-size: 50px;">
+    <div>
         <?php _e('品質管理された新鮮なお肉を手間なく使える状態でお届けしております。', 'elt'); ?>
     </div>
 </div></div>

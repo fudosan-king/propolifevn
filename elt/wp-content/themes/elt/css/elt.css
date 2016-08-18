@@ -29,14 +29,14 @@
     width: 79.2%;
 }
 
-.lang-kr {
+/*.lang-kr {
     border-right: none !important;
 }
-
-.lang-en {
+*/
+/*.lang-en {
     display: none !important;
 }
-
+*/
 .ourservice .panel-body {
     min-height: 170px;
 }

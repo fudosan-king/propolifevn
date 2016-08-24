@@ -572,7 +572,7 @@ function add_services_clients() {
         ;
     echo ': <a href="tel:08 3873 4081" class="tel">08 3873 4081</a></p>';
 
-    echo '<p>Email: info@eltvn.com</p>';
+    echo '<p>Email: info-eltvn@eltvn.com</p>';
 
     echo '</p>';
     _e('＊自社加工工場は、ベトナムホーチミン市より車で40分程度の中心地からとても近いロンハウ工業団地内にございます。', 'elt');

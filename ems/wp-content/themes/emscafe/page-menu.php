@@ -17,13 +17,14 @@ $arg = array(
 );
 $the_query = new WP_Query($arg);
 while ( $the_query->have_posts() ) : $the_query->the_post();
+$price = number_format(get_post_meta($post->ID,'price',true));
 ?>
 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
 <div class="listDrink">
 <a href="<?php echo get_permalink($post->ID);?>"><?php the_post_thumbnail('medium',array('class'=>'img-responsive'));?>
 <div class="caption" align="center">
 <h4><?php the_title();?></h4>
-<span>Price:VND</span>
+<span>Price:<?php echo $price;?> VND</span>
 <div><?php the_excerpt();?></div>
 <div class="btn btn-danger">View menu</div>
 </div>

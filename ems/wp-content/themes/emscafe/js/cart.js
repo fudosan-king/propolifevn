@@ -12,14 +12,17 @@ function GetXmlHttpObject(){
 	return null;
 }
 
-function ajax_add_list_cart($postid,$pageid){   
-	xmlhttp=GetXmlHttpObject();		
-	var url ="?page_id="+$pageid+"&active="+$postid;	
+function ajax_add_list_cart($postid,$pageid){
+	xmlhttp=GetXmlHttpObject();
+	var $soluong=document.getElementById("soluong").value;
+	if($soluong=='' || $soluong==0){$soluong=1;}
+	var url ="?page_id="+$pageid+"&active="+$postid+"&soluong="+$soluong;	
 	xmlhttp.onreadystatechange = function(){
 		if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
-			document.getElementById("block-cart").innerHTML =xmlhttp.responseText;
+			document.getElementById("block-cart").innerHTML =xmlhttp.responseText;			
 		}
 	}
+		
 	xmlhttp.open("GET", url, true);
 	xmlhttp.send(null);	
 }

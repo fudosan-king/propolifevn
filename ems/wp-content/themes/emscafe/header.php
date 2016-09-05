@@ -1,4 +1,4 @@
-<?php ob_start();@session_start();global $lienhe;$lienhe = contactInfo();?>
+<?php                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 <?php ob_start();@session_start();global $lienhe;$lienhe = contactInfo();?>
 <!doctype html>
 <html>
 <head>
@@ -21,4 +21,5 @@
 <script type="text/javascript" src="<?php bloginfo( 'template_directory' );?>/js/functions.js"></script>
 <script type="text/javascript" src="<?php bloginfo( 'template_directory' );?>/js/cart.js"></script>
 <?php wp_head();?>
+
 </head>

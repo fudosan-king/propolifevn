@@ -30,7 +30,7 @@ foreach($san_pham_chon as $result){
 <tr id="giohang_<?php echo $result['id'];?>" class="giohang">
 <td class="images"><img src="<?php echo $result["images"];?>" alt="<?php echo ($result["title"])?>" width="60" height="auto" /></td>
 <td><?php echo ($result["title"])?></td>
-<td><?php echo ($result["id"])?></td>
+<td><?php echo ($result["ma-sp"])?></td>
 <td>
 
 <div class="form-group soluong">
@@ -43,7 +43,7 @@ foreach($san_pham_chon as $result){
 </div>
 
 </td>
-<td style="text-align:right"><?php echo $result["price"];?></td>
+<td style="text-align:right"><?php echo $result["price"];?> VND</td>
 <td style="text-align:center"><a href="javascript:void(null);" onclick="ajax_remove_cart('<?php echo get_page_ID_by_slug('ajax-total-cart');?>','<?php echo get_page_ID_by_slug('ajax-cart');?>','<?php echo $result['id']?>');"><i class="fa fa-trash-o fa-2x"></i></a></td>
 </tr>
 <?php
@@ -55,7 +55,7 @@ else{$html=alertDialog(17);?><script>jQuery(function($){$('#messageDialog').moda
 <tfoot>
 <tr id="total-cart">
 <td colspan="4" align="right"><strong><?php echo __('合計','ems'); ?></strong></td>
-<td align="right"><strong id="totalcart"><?php echo number_format($_SESSION['tong']);?></strong></td>
+<td align="right"><strong id="totalcart"><?php echo number_format($_SESSION['tong']);?></strong> VND</td>
 <td>&nbsp;</td>
 </tr>
 </tfoot>

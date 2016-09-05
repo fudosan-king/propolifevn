@@ -1,7 +1,5 @@
 <?php get_header();
 $term_list = wp_get_post_terms($post->ID, 'cat-manga', array("fields" => "ids"));
-print_r($term_list);
-echo get_the_term_list( $post->ID, 'cat-manga', '', ', ' ); 
 ?>
 <body>
 <header class="header" role="masthead"><div class="container"><?php get_sidebar('main-menu');?></div></header>

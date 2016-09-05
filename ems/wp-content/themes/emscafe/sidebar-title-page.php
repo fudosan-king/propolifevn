@@ -25,10 +25,14 @@ if(is_tax()){
 <meta name="viewport" content="width=device-width, user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="UTF-8">
-<meta name="description" content="<?php echo $description; ?>" />
-<meta name="keywords" content="<?php echo $metakeyword; ?>" />
 <?php if($titlepage=='') {?>
 <title><?php wp_title('|', true, 'right'); ?></title>
+<meta property="og:title" content="<?php wp_title('|', true, 'right'); ?>" />
 <?php } else { ?>
 <title><?php echo $titlepage; ?></title>
+<meta property="og:title" content="<?php echo $titlepage; ?>" />
 <?php } ?>
+<meta property="og:description" content="<?php echo $description; ?>" />
+<meta name="description" content="<?php echo $description; ?>" />
+<meta name="keywords" content="<?php echo $metakeyword; ?>" />
+<meta name="robots" content="index, follow" />

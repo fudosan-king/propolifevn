@@ -39,10 +39,6 @@ jQuery(function($) {
 	
 });
 </script>
-<script>jQuery(function($) {if(jQuery && !jQuery.fn.live) {jQuery.fn.live = function(evt, func) {$('body').on(evt, this.selector, func);}}});</script> 
-<script>jQuery(function($) {
-	//$('.staffInfo').live('click', function(){alert($(this).attr("href"));return false;});
-});</script>
 <script src="<?php bloginfo( 'template_directory' );?>/js/validator.min.js"></script>
 <?php wp_footer();?>
 

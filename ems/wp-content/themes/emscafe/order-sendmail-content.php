@@ -39,9 +39,9 @@ $htmlOrder.='</tr></thead><tbody>';
 
 $htmlHeader='<div style="background-color:#f2f2f2;font-size:12px;font-family:arial;line-height:21px;margin-top: 20px;width:100%">
 <div style="width:600px;margin:auto;background-color:#6b6b6b">
-<div align="center" style="padding:20px 0px;color:#ffffff;"><img src="'.('template_directory').'/images/logomail.jpg">
+<div align="center" style="padding:20px 0px;color:#ffffff;"><img src="http://www.emscafe.vn/wp-content/themes/emscafe/images/top-logo.png">
 <h2>'.$lienhe['hotline'].'</h2>営業時間:月曜日 – 金曜日 8.00-17:00</div>
-<div style="background-color:#e3e3e3;padding:10px;">'.__('Cảm ơn quý khách','ems').' '.$customname.' '.__('đã đặt hàng tại EMS.','ems').'<br>'.__('ems.com rất vui thông báo đơn hàng','ems').' '.$madonhang.' '.__('của quý khách đã được tiếp nhận và đang trong quá trình xử lý. EMS sẽ thông báo đến quý khách ngay khi hàng chuẩn bị được giao.','ems').'</div>
+<div style="background-color:#e3e3e3;padding:10px;">'.__('Cảm ơn quý khách','ems').' '.$customname.' '.__('đã đặt hàng tại EMS.','ems').'<br>'.$lienhe['web'].' '.__('rất vui thông báo đơn hàng','ems').' '.$madonhang.' '.__('của quý khách đã được tiếp nhận và đang trong quá trình xử lý. EMS sẽ thông báo đến quý khách ngay khi hàng chuẩn bị được giao.','ems').'</div>
 <div style="background-color:#e3e3e3;padding:0px 10px;font-weight:bold">'.__('THÔNG TIN ĐƠN HÀNG','ems').' '.$madonhang.' ('.$date.')</div>
 <table width="100%" cellpadding="0" cellspacing="0" border="1" bordercolor="#e3e3e3" bgcolor="#e3e3e3" style="border-collapse: collapse;border-color: #E3E3E3;">
 <tr>
@@ -79,26 +79,26 @@ $htmlOrder.='<tr class="inactive">
 <td align="center">'.$dem.'</td>
 <td><img src="'.$result["images"].'" alt='.$result["title"].' width="60" height="auto" /></td>
 <td align="left" style="text-align:left">'.$result["title"].'</td>
-<td align="center">'.$result["id"].'</td>
+<td align="center">'.$result["ma-sp"].'</td>
 <td class="num" align="center">'.$result["soluong"].'</td>
-<td class="price" align="right">'.$result["price"].'</td>
+<td class="price" align="right">'.$result["price"].' VND</td>
 </tr>';
 $htmlBody.='<tr>
 <td align="center" style="padding:10px">'.$dem.'</td>
 <td align="left" style="padding:10px">'.$result["title"].'</td>
-<td align="right" style="padding:10px">'.$result["price"].'</td>
+<td align="right" style="padding:10px">'.$result["price"].' VND</td>
 <td align="center" style="padding:10px">'.$result["soluong"].'</td>
-<td align="right" style="padding:10px">'.$result["price"].'</td>
+<td align="right" style="padding:10px">'.$result["price"].' VND</td>
 </tr>';
 }
 }
 $htmlFooter='</table>
 <div style="padding:20px 10px;color:#000000;background-color:#e3e3e3;font-size:18px" align="right">'.__('TỔNG CỘNG','ems').':<span style="color:#f20000">'.number_format($_SESSION["tong"]).' VND</span></div>
 <div align="center" style="padding:10px;color:#ffffff">'.__('Quý khách nhận được email này vì đã mua hàng tại EMS.','ems').'<br>'
-.__('Để chắc chắn luôn nhận được email thông báo, xác nhận mua hàng từ ems.com, quý khách vui lòng thêm địa chỉ hotro@ems.com vào số địa chỉ (Address Book, Contacts) của hộp email.','ems').'<br>
+.__('Để chắc chắn luôn nhận được email thông báo, xác nhận mua hàng từ','ems').' '.$lienhe['web'].','.__('quý khách vui lòng thêm địa chỉ hotro@emscafe.vn vào số địa chỉ (Address Book, Contacts) của hộp email.','ems').'<br>
 <address style="border-top:solid;border-color:#515151;border-width:1px;margin-top:10px;padding-top:10px">'.__('Văn phòng EMS:'.$lienhe['diachigmap'],'ems').'</address></div></div></div>';
 
-$htmlOrder.='</tbody><tfoot><tr><td colspan="5" align="right">'.__('TỔNG CỘNG','ems').'</td><td align="right">'.number_format($_SESSION["tong"]).' VND</td></tr></tfoot></table>';
+$htmlOrder.='</tbody><tfoot><tr><td colspan="5" align="right">'.__('TỔNG CỘNG','ems').'</td><td align="right"> '.number_format($_SESSION["tong"]).' VND</td></tr></tfoot></table>';
 $my_post = array('post_title' =>$madonhang,'post_type' => 'dathang','post_status' => 'publish');
 
 $post_ID = wp_insert_post($my_post);

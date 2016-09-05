@@ -1,3 +1,11 @@
+/*
+Theme Name: Ems Cafe
+Author: Propolife team
+Author URI: https://propolifevietnam.com/
+Description: Cafe shop, mange store, Asia foods.
+Version: 1
+Text Domain: emscafe
+*/
 @charset "UTF-8";
 /* CSS Document */
 @media (min-width: 768px) and (max-width: 991px) {.navbar-brand .img-responsive{transition: all 0.5s ease;margin-top: 10px;}.panel-facebook{margin-top:10px;}.center-block{text-align:center}}
@@ -141,7 +149,7 @@ hr{border-color:#C8C8C8;margin:10px 0px}
 .theme-position{position:relative;top:300px;}
 .socials {float: right;right: 50%;position: relative;margin-left: auto;margin-right: auto}
 .socials_wrapper {float: left;left: 50%;position: relative;}
-.socials a {float: left;display: block;width:35px;height:35px;margin-left: 7px;margin-right: 7px;font-size:15px;line-height:35px;text-align: center;text-decoration: none;border: 2px solid #fff;border-radius: 50%;transition: border-color ease 0.4s}
+.socials a {display:inline-block;width:35px;height:35px;font-size:15px;line-height:35px;text-align: center;text-decoration: none;border: 2px solid #fff;border-radius: 50%;transition: border-color ease 0.4s}
 .socials .fa{color:#000;background-color:#FFFFFF}
 .socials a:hover {color: #ffffff;background-color: #C36666;border-color: #C36666;}
 .footer-privacy,.footer-privacy a {padding-top:15px;text-align: center;font-size: 12px;line-height:30px;color:#ffffff}
@@ -243,3 +251,7 @@ transform: rotate(-5deg) translateX(-10px) translateY(-25px);
 .caption h4{white-space: nowrap;text-overflow: ellipsis;overflow: hidden;}
 .viewdetail{background-color: #C36666;padding: 15px;color: #ffffff;}
 p img{max-width: 658px;height: auto;margin-bottom:15px;}
+.fa-plus:hover,.fa-minus:hover{cursor:pointer}
+.aodai-popup{position:fixed;right:0px;top:45%;box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);}
+.aodai-popup a{transition: all .5s linear;-o-transition: all .5s linear;-moz-transition: all .5s linear;-webkit-transition: all .5s linear;;opacity:0.5}
+.aodai-popup a:hover{opacity:100}

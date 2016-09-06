@@ -29,6 +29,7 @@ $(window).load(function() {$(".se-pre-con").fadeOut("slow");$(".view-effect").ad
 
 
 <?php wp_head();?>
+
 </head>
 <body>
 <div class="se-pre-con"></div>

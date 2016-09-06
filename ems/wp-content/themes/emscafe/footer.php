@@ -30,14 +30,13 @@
 </div>
 </div>
 <div class="clearfix"></div>
-<div class="footer-privacy">Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span id="copyright-year">2015</span>. Privacy Policy&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.propolifevietnam.com/" target="_blank">Propolife Viet Nam</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://aodaihousing.com/" target="_blank">Aodaihousing</a></div>
+<div class="footer-privacy">Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span id="copyright-year">2015</span>. <a href="#">Privacy Policy</a></div>
 </div>
 <div class="modal fade bs-example-modal-sm" id="messageDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"></div>
 </footer>
 <script src="<?php bloginfo( 'template_directory' );?>/js/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="<?php bloginfo( 'template_directory' );?>/js/validator.min.js"></script>
 <?php  wp_footer();?>
-
 </body>
 </html>
 <?php ob_end_flush();?>

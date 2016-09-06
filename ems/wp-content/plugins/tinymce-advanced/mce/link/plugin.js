@@ -287,12 +287,12 @@ tinymce.PluginManager.add('link', function(editor) {
 				function delayedConfirm(message, callback) {
 					var rng = editor.selection.getRng();
 
-					tinymce.util.Delay.setEditorTimeout(editor, function() {
+					window.setTimeout(function() {
 						editor.windowManager.confirm(message, function(state) {
 							editor.selection.setRng(rng);
 							callback(state);
 						});
-					});
+					}, 0);
 				}
 
 				function insertLink() {

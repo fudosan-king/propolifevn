@@ -16,7 +16,8 @@ $arg = array(
 'post_type' => 'manga',
 'orderby' => 'date',
 'order' => 'asc',
-'posts_per_page' =>-1,
+'posts_per_page' =>1,
+'paged'=>get_query_var('page')?get_query_var('page'):1,
 'taxonomy'=>'cat-manga',
 'term'=>get_query_var('cat-manga')
 );
@@ -37,31 +38,7 @@ $new = get_post_meta($post->ID,'new',true);
 <div class="viewdetail">VIEW DETAIL</div>
 </a>
 </div>
-<?php endwhile;wp_reset_query();?>
-</div>
-
-<div class="row" style="margin-bottom:30px;">
-<div class="col-lg-12" align="center">
-<nav>
-  <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><a href="#">1</a></li>
-    <li><a href="#">2</a></li>
-    <li><a href="#">3</a></li>
-    <li><a href="#">4</a></li>
-    <li><a href="#">5</a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-</div>
+<?php endwhile;echo'<div class="clearfix"></div>';include("nav-main.php");wp_reset_query();?>
 </div>
 
 </div>

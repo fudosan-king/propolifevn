@@ -2,7 +2,7 @@
 $arg = array(
 'post_type' => 'menu',
 'orderby' => 'date',
-'order' => 'desc',
+'order' => 'asc',
 'posts_per_page' =>4,
 'taxonomy'=>'cat-menu',
 'term' =>'japanese-food'

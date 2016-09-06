@@ -10,11 +10,11 @@ $description = get_option('seo_index_description');
 $metakeyword = get_option('seo_index_metakeyword');
 }
 if(is_tax()){
-	$link = $_SERVER['QUERY_STRING'];
+	$link = $_SERVER['REQUEST_URI'];
 	$arr = array();
-	$arr=explode( '=', $link );
-	$tax = $arr[0];
-	$slug = $arr[1];
+	$arr=explode( '/', $link );
+	$tax = $arr[2];
+	$slug = $arr[3];
 	$terms = get_term_by('slug',$slug,$tax);		
 	$titlepage = get_tax_meta($terms->term_taxonomy_id,'term_meta[title_meta]',true);
 	$description = get_tax_meta($terms->term_taxonomy_id,'term_meta[description_meta]',true);

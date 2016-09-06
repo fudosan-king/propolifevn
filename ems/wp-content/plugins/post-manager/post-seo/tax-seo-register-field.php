@@ -55,16 +55,10 @@ function save_taxonomy_custom_meta($term_id){
 		$cat_keys = array_keys( $_POST['term_meta'] );
 		foreach ( $cat_keys as $key ) {
 			$term_meta[$key] = $_POST['term_meta'][$key];
-			/*echo 'Term ID:'.$term_id.'<br>';
-			echo '<pre>';
-			print_r($_POST['term_meta']);
-			echo $term_meta[$key].':'.$key;
-			echo '</pre>';*/	
 			update_tax_meta($term_id, 'term_meta['.$key.']',$term_meta[$key]);
 		}
 	}
 }
-
 function getAllTax(){	
 	$tax = get_taxonomies();		
 	unset($tax['post_tag']);unset($tax['nav_menu']);unset($tax['link_category']);unset($tax['post_format']);
@@ -75,7 +69,6 @@ function getAllTax(){
 		add_action('created_'.$t, 'save_taxonomy_custom_meta', 10, 2);
 	}	
 }
-
 //add_action('admin_menu','getAllTax');
 //add_action('init','getAllTax');
 add_action('admin_init','getAllTax');

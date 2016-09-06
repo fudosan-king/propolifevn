@@ -96,7 +96,7 @@ jQuery(function($){$('.ure-sidebar').remove()})
 jQuery(function($){
 	$.each(['maso','ma-so','ma-sp','masp','codeid'], function(index, value ){	  
 	if($('input[name="'+value+'"]').length){		
-		//$('input[name="'+value+'"]').attr('readonly','readonly');
+		$('input[name="'+value+'"]').attr('readonly','readonly');
 		return false;
 	}
 	});

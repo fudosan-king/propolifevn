@@ -6,7 +6,7 @@ getItermFiled($seo, $post);
 function seo_add_custom_box() {
 $post_types = get_post_types( '', 'names' ); 
 foreach ( $post_types as $post_type ) {
-add_meta_box('customer-seo',__( 'Custom SEO', 'woothemes' ),'display_meta_box_seo',$post_type);
+add_meta_box('customer-seo',__( 'Post SEO', 'woothemes' ),'display_meta_box_seo',$post_type);
 }    
 }
 

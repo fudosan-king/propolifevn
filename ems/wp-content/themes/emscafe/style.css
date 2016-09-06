@@ -149,7 +149,7 @@ hr{border-color:#C8C8C8;margin:10px 0px}
 .theme-position{position:relative;top:300px;}
 .socials {float: right;right: 50%;position: relative;margin-left: auto;margin-right: auto}
 .socials_wrapper {float: left;left: 50%;position: relative;}
-.socials a {display:inline-block;width:35px;height:35px;font-size:15px;line-height:35px;text-align: center;text-decoration: none;border: 2px solid #fff;border-radius: 50%;transition: border-color ease 0.4s}
+.socials a {float: left;display: block;width:35px;height:35px;margin-left: 7px;margin-right: 7px;font-size:15px;line-height:35px;text-align: center;text-decoration: none;border: 2px solid #fff;border-radius: 50%;transition: border-color ease 0.4s}
 .socials .fa{color:#000;background-color:#FFFFFF}
 .socials a:hover {color: #ffffff;background-color: #C36666;border-color: #C36666;}
 .footer-privacy,.footer-privacy a {padding-top:15px;text-align: center;font-size: 12px;line-height:30px;color:#ffffff}

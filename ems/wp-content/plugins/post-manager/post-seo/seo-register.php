@@ -17,7 +17,7 @@ foreach ($list_fields['fields'] as $field) {
 $meta = get_post_meta($post->ID, $field['id'], true);
 include(dirname( __FILE__ ).DIRECTORY_SEPARATOR.'../includes/content-controls.php');
 }
-echo '</table>';	
+echo '</table>';
 }
 include(dirname( __FILE__ ).DIRECTORY_SEPARATOR.'post-seo-add-post-field.php');
 include(dirname( __FILE__ ).DIRECTORY_SEPARATOR.'tax-seo-register-field.php');

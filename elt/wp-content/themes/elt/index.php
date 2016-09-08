@@ -17,6 +17,8 @@
 <?php
     $lang = get_bloginfo('language');
     $template_directory = str_replace("twentyfifteen", "elt", get_template_directory_uri());
+    $slogan = get_field('slogan', 167);
+    $name = get_field('name', 167);
 ?>
 
 <?php
@@ -58,7 +60,7 @@
 <div class="row">
 <div class="col-lg-12"><div class="slogan">
     <div>
-        <?php _e('品質管理された新鮮なお肉を手間なく使える状態でお届けしております。', 'elt'); ?>
+        <?php _e($slogan, 'elt'); ?>
     </div>
 </div></div>
 </div>
@@ -70,7 +72,7 @@
     <div class="row">
     <div class="col-lg-12" align="center">
     <h3>
-        <?php _e('ELTベトナム', 'elt');?>
+        <?php _e($name, 'elt');?>
     </h3>
 
     </div>

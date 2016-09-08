@@ -29,7 +29,13 @@
 
 <?php
     // show slider
-    show_slider();
+    // show_slider();
+    $arg = array('page_id' => 395);
+    $the_query = new WP_Query($arg);
+    while ( $the_query->have_posts() ) : $the_query->the_post();
+        the_content();
+    endwhile;
+    wp_reset_query();
 ?>
 
 

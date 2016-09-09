@@ -23,11 +23,19 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
     <link rel="icon" href="<?php echo $template_directory ?>/images/favico.gif" type="image/gif" sizes="16x16">
     <?php
         $post_id = get_post()->ID;
-        $title_seo = get_field('title_seo', $post_id);
-        $title_og = get_field('title_og', $post_id);
-        $description_seo = get_field('description_seo', $post_id);
-        $description_og = get_field('description_og', $post_id);
-        $keywords = get_field('keywords', $post_id);
+        if ($post_id == 1) {
+            $title_seo = get_field('title_seo', 167);
+            $title_og = get_field('title_og', 167);
+            $description_seo = get_field('description_seo', 167);
+            $description_og = get_field('description_og', 167);
+            $keywords = get_field('keywords', 167);
+        }else {
+            $title_seo = get_field('title_seo', $post_id);
+            $title_og = get_field('title_og', $post_id);
+            $description_seo = get_field('description_seo', $post_id);
+            $description_og = get_field('description_og', $post_id);
+            $keywords = get_field('keywords', $post_id);
+        }
     ?>
     <?php if (($title_seo) && ($description_seo)) { ?>
         <title><?php echo $title_seo; ?></title>

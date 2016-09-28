@@ -276,7 +276,7 @@ msgstr "오늘"
 msgid "Edit Menu"
 msgstr "메뉴 편집"
 
-#: wp-includes/wp-db.php:1782 wp-includes/wp-db.php:1788
+#: wp-includes/wp-db.php:1797 wp-includes/wp-db.php:1803
 msgid "Unable to retrieve the error message from MySQL"
 msgstr "MySQL에서 오류 메시지를 가져올 수 없습니다."
 
@@ -599,11 +599,11 @@ msgstr "로고 선택하기"
 
 #. translators: 1: PHP class name, 2: PHP parent class name, 3: version number,
 #. 4: __construct() method
-#: wp-includes/functions.php:3765
+#: wp-includes/functions.php:3766
 msgid "The called constructor method for %1$s in %2$s is <strong>deprecated</strong> since version %3$s! Use %4$s instead."
 msgstr "%2$s에서 %1$s에 호출된 컨스트럭터 메소드는 버전 %3$s로(으로) 인해 <strong>폐기 예정입니다.</strong> 대신 %4$s을(를) 사용하세요."
 
-#: wp-includes/functions.php:5122
+#: wp-includes/functions.php:5123
 msgid "Close dialog"
 msgstr "대화상자 닫기"
 
@@ -734,11 +734,11 @@ msgid "https://codex.wordpress.org/Debugging_a_WordPress_Network"
 msgstr "https://codex.wordpress.org/Debugging_a_WordPress_Network"
 
 #. translators: %s: Codex URL
-#: wp-includes/functions.php:3992
+#: wp-includes/functions.php:3993
 msgid "Please see <a href=\"%s\">Debugging in WordPress</a> for more information."
 msgstr "<a href=\"%s\">워드프레스 디버깅 하기 페이지</a>를 참고하시면, 더 많은 정보를 얻을 수 있습니다."
 
-#: wp-includes/functions.php:3993
+#: wp-includes/functions.php:3994
 msgid "https://codex.wordpress.org/Debugging_in_WordPress"
 msgstr "https://codex.wordpress.org/Debugging_in_WordPress"
 
@@ -947,66 +947,66 @@ msgstr "메세지 %s 삭제 완료."
 msgid "Author:"
 msgstr "글쓴이:"
 
-#: wp-includes/wp-db.php:1575
+#: wp-includes/wp-db.php:1590
 msgid "Are you sure that you have typed the correct hostname?"
 msgstr "정말 올바른 호스트이름을 입력하신게 맞나요?"
 
-#: wp-includes/wp-db.php:1576 wp-includes/wp-db.php:1679
+#: wp-includes/wp-db.php:1591 wp-includes/wp-db.php:1694
 msgid "Are you sure that the database server is running?"
 msgstr "데이타베이스서버가 작동하고있는가요?"
 
-#: wp-includes/wp-db.php:1670
+#: wp-includes/wp-db.php:1685
 msgid "Error reconnecting to the database"
 msgstr "데이터베이스 재접속 오류입니다."
 
 #. translators: %s: database host
-#: wp-includes/wp-db.php:1674
+#: wp-includes/wp-db.php:1689
 msgid "This means that we lost contact with the database server at %s. This could mean your host&#8217;s database server is down."
 msgstr "이러한 현상은 데이터베이스 서버 %s 에 접속을 실패했음을 의미합니다. 호스트의 데이터베이스 서버가 다운 됐을 수도 있습니다."
 
-#: wp-includes/wp-db.php:1680
+#: wp-includes/wp-db.php:1695
 msgid "Are you sure that the database server is not under particularly heavy load?"
 msgstr "데이터베이스 서버에 과중한 부하가 걸리지 않고 있는지 체크 하셨나요?"
 
 #. translators: %s: support forums URL
-#: wp-includes/wp-db.php:1581 wp-includes/wp-db.php:1685
+#: wp-includes/wp-db.php:1596 wp-includes/wp-db.php:1700
 msgid "If you&#8217;re unsure what these terms mean you should probably contact your host. If you still need help you can always visit the <a href=\"%s\">WordPress Support Forums</a>."
 msgstr "이 용어들의 의미를 알 수 없으면 호스트 관리자에게 문의하세요. 더 많은 도움이 필요하면, <a href=\"%s\"> 워드프레스 지원 포럼</a>을 방문하세요."
 
-#: wp-includes/wp-db.php:1574
+#: wp-includes/wp-db.php:1589
 msgid "Are you sure you have the correct username and password?"
 msgstr "옳바른 아이디와 비밀번호를 입력하신게 맞나요?"
 
 #. translators: 1: wp-config.php. 2: database host
-#: wp-includes/wp-db.php:1568
+#: wp-includes/wp-db.php:1583
 msgid "This either means that the username and password information in your %1$s file is incorrect or we can&#8217;t contact the database server at %2$s. This could mean your host&#8217;s database server is down."
 msgstr "이러한 현상은 %1$s 파일의 데이터베이스 사용자명과 비밀번호 정보가 올바르지 않거나 %2$s 에 있는 데이터베이스 서버에 접속할 수 없기 입니다. 이러한 현상은 데이터베이스 서버가 다운되었음을 의미하기도 합니다."
 
 #. translators: %s: support forums URL
-#: wp-includes/wp-db.php:1113
+#: wp-includes/wp-db.php:1128
 msgid "If you don&#8217;t know how to set up a database you should <strong>contact your host</strong>. If all else fails you may find help at the <a href=\"%s\">WordPress Support Forums</a>."
 msgstr "데이터베이스 셋업 방법을 모르시면 <strong>호스트 서버 관리자에게 문의하세요</strong>. 다른 모든 방법이 실패하면 <a href=\"%s\">워드프레스 서포트 포럼</a>에서 도움을 받을 수 있습니다."
 
-#: wp-includes/wp-db.php:1085
+#: wp-includes/wp-db.php:1100
 msgid "Can&#8217;t select database"
 msgstr "데이터베이스를 지정할 수 없습니다."
 
-#: wp-includes/wp-db.php:1094
+#: wp-includes/wp-db.php:1109
 msgid "Are you sure it exists?"
 msgstr "데이터베이스가 존재하는게 확실한가요?"
 
 #. translators: 1: database user, 2: database name
-#: wp-includes/wp-db.php:1098
+#: wp-includes/wp-db.php:1113
 msgid "Does the user %1$s have permission to use the %2$s database?"
 msgstr "사용자 %1$s 의 데이터베이스 %2$s 에 대한 사용 권한이 있나요?"
 
 #. translators: %s: database name
-#: wp-includes/wp-db.php:1105
+#: wp-includes/wp-db.php:1120
 msgid "On some systems the name of your database is prefixed with your username, so it would be like <code>username_%1$s</code>. Could that be the problem?"
 msgstr "일부 시스템에서는 데이터베이스 이름에 사용자명이 접두어로 사용될 수도 있습니다. 따라서 <code>username_%1$s</code>처럼 될 수도 있습니다. 이것이 문제가 될 수도 있습니다."
 
 #. translators: %s: database name
-#: wp-includes/wp-db.php:1089
+#: wp-includes/wp-db.php:1104
 msgid "We were able to connect to the database server (which means your username and password is okay) but not able to select the %s database."
 msgstr "데이터베이스 서버에는 접속(사용자명과 비밀번호는 정상) 할 수 있지만, %s 데이터베이스를 선택할 수 없습니다."
 
@@ -1551,7 +1551,7 @@ msgstr "비밀번호 초기화 링크가 만료되었습니다. 새 링크를 �
 msgid "Your password reset link appears to be invalid. Please request a new link below."
 msgstr "비밀번호 초기화 링크가 올바르지 않은 것 같습니다. 새 링크를 요청하십시오"
 
-#: wp-includes/wp-db.php:1366 wp-includes/wp-db.php:1383
+#: wp-includes/wp-db.php:1381 wp-includes/wp-db.php:1398
 msgid "WordPress database error:"
 msgstr "WordPress 데이터베이스 오류:"
 
@@ -1612,7 +1612,7 @@ msgid "Preformatted"
 msgstr "Preformatted"
 
 #. translators: 1: PHP class name, 2: version number, 3: __construct() method
-#: wp-includes/functions.php:3769
+#: wp-includes/functions.php:3770
 msgid "The called constructor method for %1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "%1$s에서 호출한 생성자 함수는 %2$s 버전부터 <strong>폐지예정</strong>입니다. 대신 %3$s를 사용해주세요."
 
@@ -2036,7 +2036,7 @@ msgstr "CSS 클래스"
 msgid "Title Attribute"
 msgstr "제목 속성"
 
-#: wp-includes/class-wp-editor.php:1431
+#: wp-includes/class-wp-editor.php:1439
 #: wp-includes/customize/class-wp-customize-nav-menu-item-control.php:105
 #: wp-includes/media-template.php:1001
 msgid "Open link in a new tab"
@@ -2356,7 +2356,7 @@ msgid "1 Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr "<span class=\"screen-reader-text\">%s에</span> 댓글 1개"
 
 #: wp-includes/class-wp-customize-nav-menus.php:788
-#: wp-includes/class-wp-editor.php:1426 wp-includes/media-template.php:813
+#: wp-includes/class-wp-editor.php:1434 wp-includes/media-template.php:813
 msgid "Link Text"
 msgstr "링크 텍스트"
 
@@ -2456,7 +2456,7 @@ msgstr "형식 어레이를 패스 해야 합니다."
 
 #. translators: %s: database access abstraction class, usually wpdb or a class
 #. extending wpdb
-#: wp-includes/wp-db.php:1165
+#: wp-includes/wp-db.php:1180
 msgid "%s must set a database connection for use with escaping."
 msgstr "이스케이프를 사용하기 위해서는 %s의 데이터베이스 연결이 설정돼야 합니다."
 
@@ -2781,7 +2781,7 @@ msgstr "비트레이트"
 msgid "Your browser does not support direct access to the clipboard. Please use keyboard shortcuts or your browser&#8217;s edit menu instead."
 msgstr "사용 중인 브라우저가 클립보드로 직접 접근을 지원하지 않습니다. 대신 키보드 단축키를 사용하거나 브라우저 편집 메뉴를 사용하세요."
 
-#: wp-includes/class-wp-editor.php:1452
+#: wp-includes/class-wp-editor.php:1460
 msgid "Search or use up and down arrow keys to select an item."
 msgstr "아이템을 선택하려면 검색이나 상하 방향키를 사용하세요."
 
@@ -3531,7 +3531,7 @@ msgstr "비디오 실행 목록에 추가"
 msgid "Invalid menu ID."
 msgstr "유효하지 않은 메뉴 ID."
 
-#: wp-includes/wp-db.php:1281
+#: wp-includes/wp-db.php:1296
 msgid "The query argument of %s must have a placeholder."
 msgstr "%s의 쿼리 변수는 플레이스홀더가 있어야 합니다."
 
@@ -3581,8 +3581,8 @@ msgstr "키워드"
 msgid "https://wordpress.org/"
 msgstr "https://wordpress.org/"
 
-#: wp-includes/admin-bar.php:147 wp-includes/wp-db.php:1114
-#: wp-includes/wp-db.php:1582 wp-includes/wp-db.php:1686 wp-login.php:801
+#: wp-includes/admin-bar.php:147 wp-includes/wp-db.php:1129
+#: wp-includes/wp-db.php:1597 wp-includes/wp-db.php:1701 wp-login.php:801
 msgid "https://wordpress.org/support/"
 msgstr "https://wordpress.org/support/"
 
@@ -4101,7 +4101,7 @@ msgstr "세션이 만료됐습니다. 이 페이지에서 다시 로그인하거
 msgid "The site you were looking for, %s, does not exist, but you can create it now!"
 msgstr "찾고 있는 사이트인 %s는 존재하지 않습니다. 하지만 지금 만들 수 있습니다!"
 
-#: wp-includes/functions.php:5135
+#: wp-includes/functions.php:5136
 msgid "The login page will open in a new window. After logging in you can close it and return to this page."
 msgstr "로그인 페이지는 새 창에 열릴 것입니다. 로그인 후에 새 창을 닫고 이 페이지에 다시 올 수 있습니다."
 
@@ -4131,7 +4131,7 @@ msgctxt "submit button"
 msgid "Search"
 msgstr "검색"
 
-#: wp-includes/functions.php:5133 wp-includes/script-loader.php:461
+#: wp-includes/functions.php:5134 wp-includes/script-loader.php:461
 msgid "Session expired"
 msgstr "세션이 만료됐습니다"
 
@@ -5208,12 +5208,12 @@ msgstr "지원 포럼"
 msgid "&hellip;"
 msgstr "&hellip;"
 
-#: wp-includes/functions.php:3642
+#: wp-includes/functions.php:3643
 msgid "Database Error"
 msgstr "데이터베이스 에러"
 
-#: wp-includes/functions.php:3646 wp-includes/ms-load.php:471
-#: wp-includes/wp-db.php:1564
+#: wp-includes/functions.php:3647 wp-includes/ms-load.php:471
+#: wp-includes/wp-db.php:1579
 msgid "Error establishing a database connection"
 msgstr "데이터베이스 연결중 에러"
 
@@ -5346,7 +5346,7 @@ msgstr "툴바"
 msgid "Destination directory for file streaming does not exist or is not writable."
 msgstr "파일 스트리밍을 위한 대상 디렉터리가 존재하지 않거나 쓰기 가능하지 않습니다."
 
-#: wp-includes/class-http.php:532
+#: wp-includes/class-http.php:535
 msgid "There are no HTTP transports available which can complete the requested request."
 msgstr "사용 가능한 HTTP 전송이 없어서 요청한 요구를 완료할 수 없습니다."
 
@@ -5355,11 +5355,11 @@ msgctxt "post format"
 msgid "Format"
 msgstr "글 형식"
 
-#: wp-includes/class-wp-editor.php:1420
+#: wp-includes/class-wp-editor.php:1428
 msgid "Enter the destination URL"
 msgstr "대상 URL을 입력하세요"
 
-#: wp-includes/class-wp-editor.php:1434
+#: wp-includes/class-wp-editor.php:1442
 msgid "Or link to existing content"
 msgstr "또는 기존의 컨텐츠에 링크하기"
 
@@ -5383,11 +5383,11 @@ msgstr "쿼리가 실행되기 전에 조건부 쿼리 태그가 작동하지 �
 msgid "The user is already active."
 msgstr "사용자는 이미 활동 중입니다."
 
-#: wp-includes/functions.php:3995
+#: wp-includes/functions.php:3996
 msgid "%1$s was called <strong>incorrectly</strong>. %2$s %3$s"
 msgstr "%1$s 은 <strong>잘못불렀습니다</strong>. %2$s %3$s"
 
-#: wp-includes/functions.php:3990
+#: wp-includes/functions.php:3991
 msgid "(This message was added in version %s.)"
 msgstr "(이 메세지는 버전 %s에서 추가되었습니다.)"
 
@@ -5419,7 +5419,7 @@ msgstr "오디오"
 msgid "Invalid post format"
 msgstr "잘못된 글 형식"
 
-#: wp-includes/class-wp-editor.php:1451
+#: wp-includes/class-wp-editor.php:1459
 msgid "No search term specified. Showing recent items."
 msgstr "지정된 검색어를 찾을 수 없습니다. 최근의 아이템을 보여줍니다."
 
@@ -6307,11 +6307,11 @@ msgstr "요청한 target URL이 존재하지 않습니다."
 msgid "Your PHP installation appears to be missing the MySQL extension which is required by WordPress."
 msgstr "PHP에 MySQL 확장이 설치되어 있지 않은 것 같습니다. 워드프레스는 이 확장이 필요합니다."
 
-#: wp-includes/wp-db.php:1352
+#: wp-includes/wp-db.php:1367
 msgid "WordPress database error %1$s for query %2$s made by %3$s"
 msgstr "%3$s이(가) 만든 워드프레스 데이터베이스 오류 %1$s(쿼리 %2$s)"
 
-#: wp-includes/wp-db.php:1354
+#: wp-includes/wp-db.php:1369
 msgid "WordPress database error %1$s for query %2$s"
 msgstr "워드프레스 데이터베이스 오류 %1$s(쿼리 : %2$s)"
 
@@ -6527,13 +6527,13 @@ msgstr "재시도 하십시오."
 msgid "WordPress &rsaquo; Error"
 msgstr "워드프레스 &rsaquo; 오류"
 
-#: wp-includes/functions.php:3706 wp-includes/functions.php:3830
-#: wp-includes/functions.php:3945
+#: wp-includes/functions.php:3707 wp-includes/functions.php:3831
+#: wp-includes/functions.php:3946
 msgid "%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
 msgstr "%1$s는 버전 %2$s부터 <strong>사용 중단</strong>되었습니다! 대신 %3$s를 사용하십시오."
 
-#: wp-includes/functions.php:3708 wp-includes/functions.php:3832
-#: wp-includes/functions.php:3947
+#: wp-includes/functions.php:3709 wp-includes/functions.php:3833
+#: wp-includes/functions.php:3948
 msgid "%1$s is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s는 버전 %2$s때부터 대체할 내용이 없이 <strong>사용중단</strong>되었습니다."
 
@@ -6585,7 +6585,7 @@ msgstr "다음 &raquo;"
 msgid "Gray"
 msgstr "회색"
 
-#: wp-includes/class-http.php:963 wp-includes/class-wp-http-curl.php:232
+#: wp-includes/class-http.php:966 wp-includes/class-wp-http-curl.php:232
 #: wp-includes/class-wp-http-curl.php:271
 msgid "Too many redirects."
 msgstr "전환요청이 너무 많음."
@@ -6705,7 +6705,7 @@ msgstr "인쇄"
 msgid "Insert/edit image"
 msgstr "이미지 삽입/편집"
 
-#: wp-includes/class-wp-editor.php:936 wp-includes/class-wp-editor.php:1416
+#: wp-includes/class-wp-editor.php:936 wp-includes/class-wp-editor.php:1424
 #: wp-includes/script-loader.php:419
 msgid "Insert/edit link"
 msgstr "링크 삽입/편집"
@@ -7271,23 +7271,23 @@ msgstr ", "
 msgid "&laquo; Back"
 msgstr "&laquo; 뒤로"
 
-#: wp-includes/functions.php:3890
+#: wp-includes/functions.php:3891
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s! %3$s"
 msgstr "%1$s는 버전 %2$s부터 <strong>사용중단</strong>되었습니다! %3$s"
 
-#: wp-includes/functions.php:3892
+#: wp-includes/functions.php:3893
 msgid "%1$s was called with an argument that is <strong>deprecated</strong> since version %2$s with no alternative available."
 msgstr "%1$s는 버전 %2$s때부터 대체할 내용이 없이 <strong>사용중단</strong>되었습니다."
 
-#: wp-includes/functions.php:4484
+#: wp-includes/functions.php:4485
 msgid "Select a city"
 msgstr "도시 선택"
 
-#: wp-includes/functions.php:4529 wp-includes/functions.php:4533
+#: wp-includes/functions.php:4530 wp-includes/functions.php:4534
 msgid "UTC"
 msgstr "UTC"
 
-#: wp-includes/functions.php:4537
+#: wp-includes/functions.php:4538
 msgid "Manual Offsets"
 msgstr "메뉴얼 오프셋"
 
@@ -7460,7 +7460,7 @@ msgstr "슬러그(Slug) &#8220;%s&#8221; 는 이미 다른 용어로 사용되�
 msgid "The parent theme is missing. Please install the \"%s\" parent theme."
 msgstr "상위 테마가 없습니다. \"%s\" 상위 테마를 설치하세요."
 
-#: wp-includes/wp-db.php:3197
+#: wp-includes/wp-db.php:3212
 msgid "<strong>ERROR</strong>: WordPress %1$s requires MySQL %2$s or higher"
 msgstr "<strong>에러</strong>: 워드프레스 %1$s는 MySQL %2$s 또는 그 이상을 필요로 합니다."
 
@@ -7780,7 +7780,7 @@ msgstr "해당 사용자명은 이미 활성화 되었습니다."
 msgid "Registration complete. Please check your email."
 msgstr "가입이 완료 되었습니다. 이메일을 확인하세요."
 
-#: wp-includes/functions.php:5134 wp-includes/user.php:280
+#: wp-includes/functions.php:5135 wp-includes/user.php:280
 msgid "Please log in again."
 msgstr "다시 로그인하세요."
 
@@ -7866,7 +7866,7 @@ msgid "Strength indicator"
 msgstr "강도 표시기"
 
 #: wp-includes/admin-bar.php:736 wp-includes/class-wp-customize-widgets.php:418
-#: wp-includes/functions.php:3583
+#: wp-includes/functions.php:3584
 msgid "Widgets"
 msgstr "위젯"
 
@@ -8159,7 +8159,7 @@ msgid "Author"
 msgstr "글쓴이"
 
 #: wp-includes/class-wp-customize-nav-menus.php:784
-#: wp-includes/class-wp-editor.php:1422
+#: wp-includes/class-wp-editor.php:1430
 #: wp-includes/customize/class-wp-customize-nav-menu-item-control.php:91
 #: wp-includes/media-template.php:371 wp-includes/media-template.php:550
 #: wp-includes/media.php:3351
@@ -8197,7 +8197,7 @@ msgstr "공개하기"
 msgid "Excerpt"
 msgstr "요약"
 
-#: wp-includes/class-wp-editor.php:1466 wp-includes/script-loader.php:421
+#: wp-includes/class-wp-editor.php:1474 wp-includes/script-loader.php:421
 msgid "Add Link"
 msgstr "링크 추가"
 
@@ -8264,7 +8264,7 @@ msgstr "잘못된 파일 형식"
 msgid "Preview"
 msgstr "미리보기"
 
-#: wp-includes/class-wp-editor.php:871 wp-includes/class-wp-editor.php:1463
+#: wp-includes/class-wp-editor.php:871 wp-includes/class-wp-editor.php:1471
 #: wp-includes/media.php:3355 wp-includes/script-loader.php:406
 #: wp-includes/script-loader.php:456 wp-includes/script-loader.php:531
 msgid "Cancel"
@@ -8383,7 +8383,7 @@ msgid "Dismiss"
 msgstr "무시"
 
 #: wp-includes/admin-bar.php:810 wp-includes/admin-bar.php:811
-#: wp-includes/class-wp-editor.php:1438 wp-includes/media.php:3353
+#: wp-includes/class-wp-editor.php:1446 wp-includes/media.php:3353
 msgid "Search"
 msgstr "검색"
 
@@ -8395,7 +8395,7 @@ msgstr "링크"
 msgid "Uncategorized"
 msgstr "미분류"
 
-#: wp-includes/class-wp-editor.php:872 wp-includes/class-wp-editor.php:1417
+#: wp-includes/class-wp-editor.php:872 wp-includes/class-wp-editor.php:1425
 #: wp-includes/script-loader.php:261 wp-includes/script-loader.php:342
 #: wp-includes/script-loader.php:457 wp-includes/script-loader.php:951
 msgid "Close"
@@ -8592,7 +8592,7 @@ msgstr "글을 찾을 수 없습니다."
 msgid "Pending Review"
 msgstr "검토중"
 
-#: wp-includes/class-wp-editor.php:1365
+#: wp-includes/class-wp-editor.php:1373
 msgid "Y/m/d"
 msgstr "Y-m-d"
 

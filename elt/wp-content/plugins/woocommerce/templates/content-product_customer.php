@@ -43,8 +43,6 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 }
 ?>
 
-<div class="container">
-<div class="row thumbcats">
     <?php do_action( 'woocommerce_before_shop_loop_item' ); ?>
     <?php
         $href = get_permalink();
@@ -77,7 +75,7 @@ if ( 0 == $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
                 ?>
             </a>
                 <p><?php do_action( 'woocommerce_after_shop_loop_item_title' ); ?></p>
-                <a class="btn btn-default" href="<?php echo $href; ?>"><span>Read more</span></a>
+                <a class="btn btn-default" href="<?php echo $href; ?>"><span><?php _e( 'Read more', 'woocommerce' ) ;?></span></a>
 
             </div>
         </div>

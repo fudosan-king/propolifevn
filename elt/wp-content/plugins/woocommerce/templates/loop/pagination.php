@@ -17,6 +17,7 @@ if ( $wp_query->max_num_pages <= 1 ) {
 	return;
 }
 ?>
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center">
 <nav class="woocommerce-pagination">
 	<?php
 		echo paginate_links( apply_filters( 'woocommerce_pagination_args', array(
@@ -33,3 +34,4 @@ if ( $wp_query->max_num_pages <= 1 ) {
 		) ) );
 	?>
 </nav>
+</div>

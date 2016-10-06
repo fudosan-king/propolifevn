@@ -139,7 +139,7 @@ class WC_Checkout {
 	 * Output the billing information form
 	 */
 	public function checkout_form_billing() {
-		wc_get_template( 'checkout/form-billing.php', array( 'checkout' => $this ) );
+		wc_get_template( 'checkout/form-billing-customer.php', array( 'checkout' => $this ) );
 	}
 
 	/**

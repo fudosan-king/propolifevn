@@ -86,7 +86,7 @@
 
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" align="center">
         <a href="/?page_id=35" class="lazy-item">
-        <span class="list-title"><?php _e( '私達について', 'elt' ); ?></span>
+        <span class="list-title none-bottom"><?php _e( '私達について', 'elt' ); ?></span>
         <span class="lazy-container lazyloaded">
         <span class="lazy_preloader"></span>
         <img src="<?php echo $template_directory;?>/images/blank.gif" data-src="http://www.eltvn.com/wp-content/uploads/2015/10/elt-thumb.jpg" class="lazy img-responsive" alt="牛の肉鶏肉" style="display: block;">
@@ -96,7 +96,7 @@
 
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" align="center">
         <a href="/?page_id=38" class="lazy-item">
-        <span class="list-title"><?php _e( '私たちのサービス', 'elt' ); ?></span>
+        <span class="list-title none-bottom"><?php _e( '私たちのサービス', 'elt' ); ?></span>
         <span class="lazy-container lazyloaded">
         <span class="lazy_preloader"></span>
         <img src="<?php echo $template_directory;?>/images/blank.gif" data-src="http://www.eltvn.com/wp-content/uploads/2015/09/2.jpg" class="lazy img-responsive" alt="鶏肉" style="display: block;">
@@ -106,7 +106,7 @@
 
         <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" align="center">
         <a href="/?page_id=40" class="lazy-item">
-        <span class="list-title"><?php _e( 'クライアント', 'elt' ); ?></span>
+        <span class="list-title none-bottom"><?php _e( 'クライアント', 'elt' ); ?></span>
         <span class="lazy-container lazyloaded">
         <span class="lazy_preloader"></span>
         <img src="<?php echo $template_directory;?>/images/blank.gif" data-src="http://www.eltvn.com/wp-content/uploads/2015/09/3.jpg" class="lazy img-responsive" alt="PORK MEAT" style="display: block;">

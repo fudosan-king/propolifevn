@@ -53,13 +53,16 @@ get_header( 'shop' ); ?>
 
     </div>
             <div class="clearfix"></div>
+            <div class="container">
+			<div class="row thumbcats">
 			<?php // woocommerce_product_loop_start(); ?>
 
 				<?php woocommerce_product_subcategories(); ?>
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php wc_get_template_part( 'content', 'product_customer' ); ?>
+						<?php wc_get_template_part( 'content', 'product_customer' ); ?>
+
 
 				<?php endwhile; // end of the loop. ?>
 
@@ -79,6 +82,9 @@ get_header( 'shop' ); ?>
 			<?php wc_get_template( 'loop/no-products-found.php' ); ?>
 
 		<?php endif; ?>
+
+			</div>
+			</div>
 
     </div>
 

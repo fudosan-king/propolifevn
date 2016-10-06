@@ -89,6 +89,9 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
     <a href="https://www.facebook.com/ELT-VIET-NAM-COLTD-1539948359594705/timeline/" target="_blank"><i class="fa fa-facebook"></i></a>
     <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
     <a href="#" target="_blank"><i class="fa fa-google-plus"></i></a>
+    <?php if (is_user_logged_in() && !WC()->cart->is_empty()) { ?>
+    <a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=431"><i class="fa fa-shopping-cart i_cart"><span class="number_cart"><?php echo WC()->cart->get_cart_contents_count(); ?></span></i></a>
+    <?php } ?>
     <a href="sms:08 6288 2008"><span class="hotline">08 3873 4081</span></a>
     </div>
     </div>
@@ -136,6 +139,7 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
     <li <?php if (is_page( 122 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=122"><?php _e( 'メッセージ', 'elt' ); ?></a></li>
     <?php if (is_user_logged_in()) { ?>
         <li <?php if (is_page( 141 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=141"><?php _e( '品質', 'elt' ); ?></a></li>
+        <li <?php if ('product' == get_post_type()) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=430"><?php echo get_the_title(430); ?></a></li>
     <?php } ?>
 <li <?php if (is_page(310)) { echo 'class="active"';} ?>><a href="<?php echo get_permalink(get_page_by_path('video')); ?>"><?php echo get_the_title(310); ?></a></li>
     <li <?php if (is_page(316)) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=316"><?php echo get_the_title(316); ?></a></li>

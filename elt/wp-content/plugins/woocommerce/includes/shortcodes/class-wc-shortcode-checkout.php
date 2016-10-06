@@ -201,7 +201,11 @@ class WC_Shortcode_Checkout {
 	 * Show the checkout
 	 */
 	private static function checkout() {
-
+		echo '<div class="bg-default" style="padding: 50px 0 15px;"><div class="container"><div class="row"><div class="col-lg-12"><ol class="breadcrumb2"><li><a href="/">';
+        echo _e( 'Home', 'woocommerce' );
+        echo '</a></li><li class="active"><a>';
+        echo _e( 'Checkout', 'woocommerce' );
+        echo '</a></li></ol></div></div>';
 		// Show non-cart errors
 		wc_print_notices();
 

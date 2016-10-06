@@ -73,7 +73,8 @@ class WC_Shortcode_Cart {
 		if ( WC()->cart->is_empty() ) {
 			wc_get_template( 'cart/cart-empty.php' );
 		} else {
-			wc_get_template( 'cart/cart.php' );
+			wc_get_template( 'cart/cart-customer.php' );
+			// wc_get_template( 'cart/cart.php' );
 		}
 	}
 }

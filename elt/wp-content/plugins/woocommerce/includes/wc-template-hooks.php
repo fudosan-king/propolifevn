@@ -36,7 +36,7 @@ add_action( 'get_the_generator_xhtml', 'wc_generator_tag', 10, 2 );
 add_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 15 );
 add_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 add_action( 'woocommerce_after_main_content', 'woocommerce_add_footer', 15 );
-add_action( 'woocommerce_after_main_content', 'show_product_categories', 20 );
+// add_action( 'woocommerce_after_main_content', 'show_product_categories', 20 );
 
 
 /**

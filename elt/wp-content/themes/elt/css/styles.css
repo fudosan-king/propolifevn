@@ -975,7 +975,7 @@ ol.breadcrumb2 li {
 .order_detail thead tr th {
     background: #f7f6f3;
 }
-.order_detail tr:last-child td {
+.order_detail tr.last td {
     background: #f7f6f3;
 }
 .btn_Gohome {
@@ -999,6 +999,9 @@ ol.breadcrumb2 li {
     padding-right: 20px;
 }
 
+
+
+
 @media (max-width: 768px) {
     .btn {
         font-size: 12px;
@@ -1009,6 +1012,19 @@ ol.breadcrumb2 li {
     }
     .title_thanks, .price_thanks {
         width: auto;
+    }
+    .navbar-toggle {
+        display: inline-block;
+        top: 3px;
+    }
+    .btn_cart {
+        display: inline-block !important;
+        background: #000;
+        color: #fff;
+        padding: 3px 40px;
+        margin: 0 auto;
+        margin-bottom: 0;
+        width: 104px;
     }
 }
 

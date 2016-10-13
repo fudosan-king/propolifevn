@@ -2361,6 +2361,59 @@ if ( ! function_exists( 'woocommerce_product_thumbnails_customer' ) ) {
     }
 }
 
+if ( ! function_exists( 'woocommerce_template_single_add_to_delivery' ) ) {
+    function woocommerce_template_single_add_to_delivery() {
+    	$lang = get_locale();
+       	if ($lang == 'ja') {
+       		echo '<div><h4 style="border-left: solid 10px #ff2000;padding-left: 10px;">配達時間のお知らせ</h4></div>';
+			echo '<div>';
+			echo '	<table style="width: 100%">';
+			echo '	  <tr>';
+			echo '      <th style="width: 20%">平日</th><td style="width: 80%">10:00~17:00</td>';
+			echo '	  </tr>';
+			echo '	  <tr>';
+			echo '      <th style="width: 20%">土曜日</th><td style="width: 80%">10:00~12:00</td>';
+			echo '	  </tr>';
+			echo '	  <tr>';
+			echo '	    <th style="width: 20%">日曜日</th><td style="width: 80%">休み</td>';
+			echo '	  </tr>';
+			echo '  </table>';
+			echo '</div>';
+
+       	} elseif ($lang == 'en_US') {
+       		echo '<div><h4 style="border-left: solid 10px #ff2000;padding-left: 10px;">Delivery service time</h4></div>';
+			echo '<div>';
+			echo '	<table style="width: 100%">';
+			echo '	  <tr>';
+			echo '      <th style="width: 20%">Weekday</th><td style="width: 80%">10:00~17:00</td>';
+			echo '	  </tr>';
+			echo '	  <tr>';
+			echo '      <th style="width: 20%">Saturday</th><td style="width: 80%">10:00~12:00</td>';
+			echo '	  </tr>';
+			echo '	  <tr>';
+			echo '	    <th style="width: 20%">Sunday</th><td style="width: 80%">Not avairable</td>';
+			echo '	  </tr>';
+			echo '  </table>';
+			echo '</div>';
+       	} elseif ($lang == 'vi') {
+       		echo '<div><h4 style="border-left: solid 10px #ff2000;padding-left: 10px;">Dịch vụ giao hàng</h4></div>';
+			echo '<div>';
+			echo '	<table style="width: 100%">';
+			echo '	  <tr>';
+			echo '      <th style="width: 20%">Trong tuần</th><td style="width: 80%">10:00~17:00</td>';
+			echo '	  </tr>';
+			echo '	  <tr>';
+			echo '      <th style="width: 20%">Thứ 7</th><td style="width: 80%">10:00~12:00</td>';
+			echo '	  </tr>';
+			echo '	  <tr>';
+			echo '	    <th style="width: 20%">Chủ Nhật</th><td style="width: 80%">Nghỉ</td>';
+			echo '	  </tr>';
+			echo '  </table>';
+			echo '</div>';
+       	}
+    }
+}
+
 if ( ! function_exists( 'woocommerce_single_product_summary_content' ) ) {
     function woocommerce_single_product_summary_content() {
         global $post, $product, $woocommerce;

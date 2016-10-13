@@ -420,3 +420,92 @@ h3{text-transform:uppercase}
 .private{border-radius:0px;border:10px solid #ddd;background-color:#fff;padding:15px;}
 .private h4{margin-top:20px;font-size:16px;font-weight:bold}
 .private hr{margin-top:10px;margin-bottom:10px;}
+
+
+
+
+/*nicker*/
+.mb15 {margin-bottom: 15px;} .mb30 {margin-bottom: 30px;} .f12 {font-size: 12px;} .f30 {font-size: 30px;}
+.btn-big {
+    color: #f20;
+    font-size: 35px;
+}
+.center img {margin: 15px auto 30px;}
+.list-group-item.active, .list-group-item.active:hover, .list-group-item.active:focus {
+    background: #41BDCE;
+    border-color: #41BDCE;
+}
+.w_QA p {
+    color: #333;
+}
+.w_QA .panel-primary > .panel-heading{
+    background: #66b683;
+    border-radius: 0;
+    border-color: #ecebeb;
+    border-bottom: none;
+}
+.w_QA .panel-primary {
+    border-color: #ecebeb;
+}
+
+.w_QA .panel-title {
+    font-size: 18px;
+    line-height: 1.8em;
+    font-weight: bold;
+}
+.panel_highline {
+    background: #f5896b;
+    text-align: center;
+    padding: 8px 15px;
+    box-shadow: 0 3px #e3e6e6;
+}
+.panel_highline p {
+    margin-bottom: 0;
+    color: #fff;
+}
+.link_bold {
+    color: #c82506;
+    font-size: 18px;
+    border-bottom: 1px solid;
+}
+.link_bold:hover {
+    color: #c82506;
+}
+.text_underImage {
+    font-size: 12px;
+    margin-top: 15px;
+}
+.table_QA thead tr th {
+    background: #30abbe;
+    color: #fff;
+    font-weight: normal;
+    text-align: center;
+}
+.table_QA > thead > tr > th, .table_QA  > tbody > tr > th, .table_QA > tfoot > tr > th, .table_QA > thead > tr > td, .table_QA > tbody > tr > td, .table_QA > tfoot > tr > td {
+    text-align: center;
+    vertical-align: middle;
+}
+.table_QA tr:nth-child(even) {background: #fff;}
+.table_QA tr:nth-child(odd) {background: #f8f9f9;}
+
+.box_panel_body {
+    background: #f0f079;
+    border: 1px solid #f5896b;
+    padding: 15px;
+    line-height: 1.8em;
+}
+.support_page {
+    padding-top: 90px;
+}
+@media (max-width: 768px) {
+    .w_QA img {
+        margin: 0 auto 15px;
+    }
+    .btn-big {
+        font-size: 20px;
+    }
+    .f30 {font-size: 20px;}
+    .support_page {
+        padding-top: 75px;
+    }
+}

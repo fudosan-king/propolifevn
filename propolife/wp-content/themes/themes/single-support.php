@@ -5,11 +5,11 @@
 <div class="container" <?php echo $style;?>>
 <div class="row">
 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
-<div style="margin-bottom:15px"><img src="<?php bloginfo( 'template_directory' );?>/images/lotus_banner.png" class="img-responsive" alt=""/></div>
+<div class="lotus-banner" style="margin-bottom:15px"><img src="<?php bloginfo( 'template_directory' );?>/images/lotus_banner.png" class="img-responsive" alt=""/></div>
 <div class="panel panel-default">
 <?php if($post->ID==264){?><div class="panel-heading" style="background-color:#ffffff"><h4>幣サービスについて</h4></div><?php } ?>
 <div class="panel-body">
-<?php 
+<?php
 $term_id = wp_get_post_terms($post->ID, 'cat-support', array("fields" => "ids"));
 $attachID = get_tax_meta($term_id[0],'tax_thumbnail',true);
 $thumbUrl = wp_get_attachment_image_src($attachID,'full');

@@ -67,6 +67,10 @@ function wpsites_nav_class($classes, $item){
         $classes[] = "active";
     }
 
+    if ((is_page( 2094 ) || is_page( 2098 ) || is_page( 2100 )) && ($classes[8] == 'menu-item-2103' || $classes[8] == 'menu-item-2102' || $classes[8] == 'menu-item-2104')){
+        $classes[] = "active";
+    }
+
     if ((in_category( 'NEWS-VN' ) || in_category( 'NEWS-EN' ) || in_category( 'チャート' )) && ($classes[4] == 'menu-item-831' || $classes[4] == 'menu-item-832' || $classes[4] == 'menu-item-833') && !is_home()){
         $classes[] = "active";
     }

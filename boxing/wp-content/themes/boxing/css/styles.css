@@ -115,7 +115,7 @@ hr{border-color:#C8C8C8;margin:10px 0px}
 /*----------Top menu-------------*/
 .navbar-brand{margin-left:5px !important;margin-right:10px;padding: 10px 10px;color:#ffffff !important}
 .navbar-brand .fa{color:#FFFFFF;font-size:30px;margin-left:5px;}
-.navbar-default .navbar-nav > li > a { color: #FFF;font-size:12px;  line-height: 85px;}
+.navbar-default .navbar-nav > li > a { color: #FFF;font-size:11px;  line-height: 85px;}
 .navbar-default .navbar-nav li{transition: all .5s linear;-o-transition: all .5s linear;-moz-transition: all .5s linear;-webkit-transition: all .5s linear;}
 .navbar-default .navbar-nav li:hover{background-color:#f20000;cursor:pointer}
 .navbar-default{border:none}

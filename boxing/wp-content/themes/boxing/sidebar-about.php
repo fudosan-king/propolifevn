@@ -49,7 +49,7 @@ $url = get_post_meta($post->ID,'web-url',true);
 <?php endwhile;wp_reset_query(); ?>
 </div>
 
-<div class="logo-list" align="center">
+<!--<div class="logo-list" align="center">
 <a href="http://aodaihousing.com/" target="_blank"><img src="<?php echo $template_directory ?>/images/aodaihousing-onanohito.png" class="img-responsive" /></a>
-</div>
+</div>-->
 </div>

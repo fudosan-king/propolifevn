@@ -25,11 +25,13 @@ class WC_Email_Customer_Processing_Order extends WC_Email {
 	function __construct() {
 
 		$this->id               = 'customer_processing_order';
-		$this->title            = __( 'Processing order', 'woocommerce' );
-		$this->description      = __( 'This is an order notification sent to customers containing their order details after payment.', 'woocommerce' );
 
-		$this->heading          = __( 'Thank you for your order', 'woocommerce' );
-		$this->subject          = __( 'Your {site_title} order receipt from {order_date}', 'woocommerce' );
+		//Cast any text of product to en_US text
+        //Writer: kns
+		$this->title            = $this->genTextEmailCustomerProcessingEnLocale('Processing order', 'en_US', true);
+		$this->description      = $this->genTextEmailCustomerProcessingEnLocale('This is an order notification sent to customers containing their order details after payment.', 'en_US', true);;
+		$this->heading          = $this->genTextEmailCustomerProcessingEnLocale('Thank you for your order', 'en_US', false);
+		$this->subject          = $this->genTextEmailCustomerProcessingEnLocale('Your {site_title} order receipt from {order_date}', 'en_US', true);
 
 		$this->template_html    = 'emails/customer-processing-order.php';
 		$this->template_plain   = 'emails/plain/customer-processing-order.php';
@@ -97,6 +99,22 @@ class WC_Email_Customer_Processing_Order extends WC_Email {
 			'plain_text'    => true
 		) );
 		return ob_get_clean();
+	}
+
+	function genTextEmailCustomerProcessingEnLocale($text, $locale, $headInfo = true){
+		//Cast any text of product to en_US text
+        //Writer: kns
+		$res = __($text, 'woocommerce');
+
+		if($headInfo)
+			$htmlTag = " - $text";
+		else
+			$htmlTag = "<div style='font-style:italic;font-size:20px;margin-top:-20px;'>($text)</div>";
+
+		if(get_locale()!=$locale)
+			$res .= $htmlTag;
+
+		return $res;
 	}
 }
 

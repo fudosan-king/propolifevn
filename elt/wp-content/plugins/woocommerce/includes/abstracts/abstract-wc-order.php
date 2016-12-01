@@ -1822,6 +1822,9 @@ abstract class WC_Abstract_Order {
 
 		if ( $subtotal = $this->get_subtotal_to_display( false, $tax_display ) ) {
 			$total_rows['cart_subtotal'] = array(
+				//Cast any text of product to en_US text
+                //Writer: kns
+                'raw_label' => 'Subtotal',
 				'label' => __( 'Subtotal:', 'woocommerce' ),
 				'value'	=> $subtotal
 			);
@@ -1829,6 +1832,9 @@ abstract class WC_Abstract_Order {
 
 		if ( $this->get_total_discount() > 0 ) {
 			$total_rows['discount'] = array(
+				//Cast any text of product to en_US text
+                //Writer: kns
+                'raw_label' => 'Discount',
 				'label' => __( 'Discount:', 'woocommerce' ),
 				'value'	=> '-' . $this->get_discount_to_display()
 			);
@@ -1836,6 +1842,9 @@ abstract class WC_Abstract_Order {
 
 		if ( $this->get_shipping_method() ) {
 			$total_rows['shipping'] = array(
+				//Cast any text of product to en_US text
+                //Writer: kns
+                'raw_label' => 'Shipping',
 				'label' => __( 'Shipping:', 'woocommerce' ),
 				'value'	=> $this->get_shipping_to_display()
 			);
@@ -1852,6 +1861,9 @@ abstract class WC_Abstract_Order {
 				if ( 'excl' == $tax_display ) {
 
 					$total_rows[ 'fee_' . $id ] = array(
+						//Cast any text of product to en_US text
+                        //Writer: kns
+                        'raw_label' => ( $fee['name'] ? '' : 'Fee' ),
 						'label' => ( $fee['name'] ? $fee['name'] : __( 'Fee', 'woocommerce' ) ) . ':',
 						'value'	=> wc_price( $fee['line_total'], array('currency' => $this->get_order_currency()) )
 					);
@@ -1859,6 +1871,9 @@ abstract class WC_Abstract_Order {
 				} else {
 
 					$total_rows[ 'fee_' . $id ] = array(
+						//Cast any text of product to en_US text
+                        //Writer: kns
+                        'raw_label' => '',
 						'label' => $fee['name'] . ':',
 						'value'	=> wc_price( $fee['line_total'] + $fee['line_tax'], array('currency' => $this->get_order_currency()) )
 					);
@@ -1873,6 +1888,9 @@ abstract class WC_Abstract_Order {
 				foreach ( $this->get_tax_totals() as $code => $tax ) {
 
 					$total_rows[ sanitize_title( $code ) ] = array(
+						//Cast any text of product to en_US text
+                        //Writer: kns
+                        'raw_label' => '',
 						'label' => $tax->label . ':',
 						'value'	=> $tax->formatted_amount
 					);
@@ -1881,6 +1899,9 @@ abstract class WC_Abstract_Order {
 			} else {
 
 				$total_rows['tax'] = array(
+					//Cast any text of product to en_US text
+                    //Writer: kns
+                    'raw_label' => '',
 					'label' => WC()->countries->tax_or_vat() . ':',
 					'value'	=> wc_price( $this->get_total_tax(), array( 'currency' => $this->get_order_currency() ) )
 				);
@@ -1889,12 +1910,18 @@ abstract class WC_Abstract_Order {
 
 		if ( $this->get_total() > 0 && $this->payment_method_title ) {
 			$total_rows['payment_method'] = array(
+				//Cast any text of product to en_US text
+                //Writer: kns
+                'raw_label' => 'Payment Method',
 				'label' => __( 'Payment Method:', 'woocommerce' ),
 				'value' => $this->payment_method_title
 			);
 		}
 
 		$total_rows['order_total'] = array(
+			//Cast any text of product to en_US text
+            //Writer: kns
+            'raw_label' => 'Total',
 			'label' => __( 'Total:', 'woocommerce' ),
 			'value'	=> $this->get_formatted_order_total( $tax_display )
 		);
@@ -2597,4 +2624,22 @@ abstract class WC_Abstract_Order {
 	public function is_editable() {
 		return apply_filters( 'wc_order_is_editable', in_array( $this->get_status(), array( 'pending', 'on-hold', 'auto-draft' ) ), $this );
 	}
+
+	//Cast any text of product to en_US text
+    //Writer: kns
+    public function getTitleEnLocale($item, $locale){
+        $res = '';
+        if(get_locale()!='en_US'):
+            $id = $item['product_id'];
+            $post = get_post($id);
+            $startSearch = strpos($post->post_title, '[:'.$locale.']');
+
+            if(!($startSearch<0)){
+                $res = substr($post->post_title, $startSearch+5);
+                $endsignal = strpos($res, '[:');
+                $res = substr($res, 0, $endsignal);
+            }
+        endif;
+        return $res;
+    }
 }

@@ -28,9 +28,42 @@ if ( ! defined( 'ABSPATH' ) ) {
 <table class="td" cellspacing="0" cellpadding="6" style="width: 100%; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" border="1">
 	<thead>
 		<tr>
-			<th class="td" scope="col" style="text-align:left;"><?php _e( 'Product', 'woocommerce' ); ?></th>
-			<th class="td" scope="col" style="text-align:left;"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-			<th class="td" scope="col" style="text-align:left;"><?php _e( 'Price', 'woocommerce' ); ?></th>
+			<th class="td" scope="col" style="text-align:left;">
+				<?php
+					//Cast any text of product to en_US text
+    				//Writer: kns
+					_e( 'Product', 'woocommerce' );
+					if(get_locale()!='en_US'){
+						?>
+							<div style="font-style:italic;font-size:11px;">(Product)</div>
+						<?php
+					}
+				?>
+			</th>
+			<th class="td" scope="col" style="text-align:left;">
+				<?php
+					//Cast any text of product to en_US text
+    				//Writer: kns
+					_e( 'Quantity', 'woocommerce' );
+					if(get_locale()!='en_US'){
+						?>
+							<div style="font-style:italic;font-size:11px;">(Quantity)</div>
+						<?php
+					}
+				?>
+			</th>
+			<th class="td" scope="col" style="text-align:left;">
+				<?php
+					//Cast any text of product to en_US text
+    				//Writer: kns
+					_e( 'Price', 'woocommerce' );
+					if(get_locale()!='en_US'){
+						?>
+							<div style="font-style:italic;font-size:11px;">(Price)</div>
+						<?php
+					}
+				?>
+			</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -43,7 +76,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 				foreach ( $totals as $total ) {
 					$i++;
 					?><tr>
-						<th class="td" scope="row" colspan="2" style="text-align:left; <?php if ( $i == 1 ) echo 'border-top-width: 4px;'; ?>"><?php echo $total['label']; ?></th>
+						<th class="td" scope="row" colspan="2" style="text-align:left; <?php if ( $i == 1 ) echo 'border-top-width: 4px;'; ?>">
+							<?php
+								echo $total['label'];
+								//Cast any text of product to en_US text
+    							//Writer: kns
+								if(get_locale()!='en_US' && $total['raw_label']!=''){
+									?>
+										<div style="font-style:italic;font-size:11px;">(<?php echo $total['raw_label']; ?>:)</div>
+									<?php
+								}
+							?>
+						</th>
 						<td class="td" style="text-align:left; <?php if ( $i == 1 ) echo 'border-top-width: 4px;'; ?>"><?php echo $total['value']; ?></td>
 					</tr><?php
 				}

@@ -318,16 +318,30 @@ class WC_Emails {
 	public function customer_details( $order, $sent_to_admin = false, $plain_text = false ) {
 		$fields = array();
 
+		//Cast any text of product to en_US text
+		//Writer: kns
+		$em = __( 'Email', 'woocommerce' );
+		$emailEn = get_locale()=='en_US'? $em : $em." / Email";
+
 		if ( $order->billing_email ) {
 			$fields['billing_email'] = array(
-				'label' => __( 'Email', 'woocommerce' ),
+				//Cast any text of product to en_US text
+        		//Writer: kns
+				'label' => $emailEn,
 				'value' => wptexturize( $order->billing_email )
 			);
 	    }
 
+	    //Cast any text of product to en_US text
+		//Writer: kns
+	    $tel = __( 'Tel', 'woocommerce' );
+		$telEn = get_locale()=='en_US'? $tel : $tel." / Tel";
+
 	    if ( $order->billing_phone ) {
 			$fields['billing_phone'] = array(
-				'label' => __( 'Tel', 'woocommerce' ),
+				//Cast any text of product to en_US text
+        		//Writer: kns
+				'label' => $telEn,
 				'value' => wptexturize( $order->billing_phone )
 			);
 	    }
@@ -336,7 +350,13 @@ class WC_Emails {
 
 		if ( $fields ) {
 
-			$heading = $sent_to_admin ? __( 'Customer details', 'woocommerce' ) : __( 'Your details', 'woocommerce' );
+			$ctmDetail = __( 'Customer details', 'woocommerce' );
+			$ctmDetailEn = get_locale()=='en_US'? $ctmDetail : $ctmDetail."<div style='font-style:italic;font-size:15px;'>(Customer details:)</div>";
+
+			$yourDetail = __( 'Your details', 'woocommerce' );
+			$yourDetailEn = get_locale()=='en_US'? $yourDetail : $yourDetail."<div style='font-style:italic;font-size:15px;'>(Your details:)</div>";
+
+			$heading = $sent_to_admin ? $ctmDetailEn : $yourDetailEn;
 
 			$heading = apply_filters( 'woocommerce_email_custom_details_header', $heading, $sent_to_admin, $order );
 

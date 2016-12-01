@@ -25,11 +25,11 @@ class WC_Email_New_Order extends WC_Email {
 	function __construct() {
 
 		$this->id               = 'new_order';
-		$this->title            = __( 'New order', 'woocommerce' );
-		$this->description      = __( 'New order emails are sent to the recipient list when an order is received.', 'woocommerce' );
 
-		$this->heading          = __( 'New customer order', 'woocommerce' );
-		$this->subject          = __( '[{site_title}] New customer order ({order_number}) - {order_date}', 'woocommerce' );
+		$this->title            = $this->genTextEmailNewOrderEnLocale('New order', 'en_US', true);
+		$this->description      = $this->genTextEmailNewOrderEnLocale('New order emails are sent to the recipient list when an order is received.', 'en_US', true);
+		$this->heading          = $this->genTextEmailNewOrderEnLocale('New customer order', 'en_US', false);
+		$this->subject          = $this->genTextEmailNewOrderEnLocale('[{site_title}] New customer order ({order_number}) - {order_date}', 'en_US', true);
 
 		$this->template_html    = 'emails/admin-new-order.php';
 		$this->template_plain   = 'emails/plain/admin-new-order.php';
@@ -149,6 +149,22 @@ class WC_Email_New_Order extends WC_Email {
 				'options'       => $this->get_email_type_options()
 			)
 		);
+	}
+
+	function genTextEmailNewOrderEnLocale($text, $locale, $headInfo = true){
+		//Cast any text of product to en_US text
+        //Writer: kns
+		$res = __($text, 'woocommerce');
+
+		if($headInfo)
+			$htmlTag = " - $text";
+		else
+			$htmlTag = "<div style='font-style:italic;font-size:20px;margin-top:-20px;'>($text)</div>";
+
+		if(get_locale()!=$locale)
+			$res .= $htmlTag;
+
+		return $res;
 	}
 }
 

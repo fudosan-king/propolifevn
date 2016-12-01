@@ -15,18 +15,74 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php do_action('woocommerce_email_header', $email_heading); ?>
 
-<p><?php _e( "Your order has been received and is now being processed. Your order details are shown below for your reference:", 'woocommerce' ); ?></p>
+<div>
+    <?php
+
+        _e( "Your order has been received and is now being processed. Your order details are shown below for your reference:", 'woocommerce' );
+        //Cast any text of product to en_US text
+        //Writer: kns
+        if(get_locale()!='en_US'){
+            ?>
+                <div style="font-style:italic;font-size:11px;">(Your order has been received and is now being processed. Your order details are shown below for your reference:)</div>
+            <?php
+        }
+    ?>
+
+</div><br>
 
 <?php do_action( 'woocommerce_email_before_order_table', $order, $sent_to_admin, $plain_text ); ?>
 
-<h2><?php printf( __( 'Order #%s', 'woocommerce' ), $order->get_order_number() ); ?></h2>
+<h2>
+	<?php
+		printf( __( 'Order #%s', 'woocommerce' ), $order->get_order_number() );
+
+		if(get_locale()!='en_US'){
+			?>
+				<div style="font-style:italic;font-size:15px;">(<?php printf('Order #%s', $order->get_order_number()); ?>)</div>
+			<?php
+		}
+	?>
+</h2>
 
 <table class="td" cellspacing="0" cellpadding="6" style="width: 100%; font-family: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;" border="1">
 	<thead>
 		<tr>
-			<th class="td" scope="col" style="text-align:left;"><?php _e( 'Product', 'woocommerce' ); ?></th>
-			<th class="td" scope="col" style="text-align:left;"><?php _e( 'Quantity', 'woocommerce' ); ?></th>
-			<th class="td" scope="col" style="text-align:left;"><?php _e( 'Price', 'woocommerce' ); ?></th>
+			<th class="td" scope="col" style="text-align:left;">
+				<?php
+					//Cast any text of product to en_US text
+    				//Writer: kns
+					_e( 'Product', 'woocommerce' );
+					if(get_locale()!='en_US'){
+						?>
+							<div style="font-style:italic;font-size:11px;">(Product)</div>
+						<?php
+					}
+				?>
+			</th>
+			<th class="td" scope="col" style="text-align:left;">
+				<?php
+					//Cast any text of product to en_US text
+    				//Writer: kns
+					_e( 'Quantity', 'woocommerce' );
+					if(get_locale()!='en_US'){
+						?>
+							<div style="font-style:italic;font-size:11px;">(Quantity)</div>
+						<?php
+					}
+				?>
+			</th>
+			<th class="td" scope="col" style="text-align:left;">
+				<?php
+					//Cast any text of product to en_US text
+    				//Writer: kns
+					_e( 'Price', 'woocommerce' );
+					if(get_locale()!='en_US'){
+						?>
+							<div style="font-style:italic;font-size:11px;">(Price)</div>
+						<?php
+					}
+				?>
+			</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -39,7 +95,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 				foreach ( $totals as $total ) {
 					$i++;
 					?><tr>
-						<th class="td" scope="row" colspan="2" style="text-align:left; <?php if ( $i == 1 ) echo 'border-top-width: 4px;'; ?>"><?php echo $total['label']; ?></th>
+						<th class="td" scope="row" colspan="2" style="text-align:left; <?php if ( $i == 1 ) echo 'border-top-width: 4px;'; ?>">
+							<?php
+								echo $total['label'];
+								//Cast any text of product to en_US text
+    							//Writer: kns
+								if(get_locale()!='en_US' && $total['raw_label']!=''){
+									?>
+										<div style="font-style:italic;font-size:11px;">(<?php echo $total['raw_label']; ?>:)</div>
+									<?php
+								}
+							?>
+						</th>
 						<td class="td" style="text-align:left; <?php if ( $i == 1 ) echo 'border-top-width: 4px;'; ?>"><?php echo $total['value']; ?></td>
 					</tr><?php
 				}

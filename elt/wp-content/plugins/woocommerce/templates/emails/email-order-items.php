@@ -46,6 +46,14 @@ foreach ( $items as $item_id => $item ) :
 					$order->display_item_downloads( $item );
 				}
 
+				//Cast any text of product to en_US text
+    			//Writer: kns
+				if(get_locale()!='en_US' && $order->getTitleEnLocale($item, 'en')!=''){
+					?>
+						<div style="font-style:italic;font-size:11px;">(<?php echo $order->getTitleEnLocale($item, 'en'); ?>)</div>
+					<?php
+				}
+
 				// allow other plugins to add additional product information here
 				do_action( 'woocommerce_order_item_meta_end', $item_id, $item, $order );
 

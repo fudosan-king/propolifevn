@@ -2379,6 +2379,7 @@ if ( ! function_exists( 'woocommerce_template_single_add_to_delivery' ) ) {
 			echo '	  </tr>';
 			echo '  </table>';
 			echo '</div>';
+			echo '<div>祝日・テトの期間中はお休みさせて頂きます。</div>';
 
        	} elseif ($lang == 'en_US') {
        		echo '<div><h4 style="border-left: solid 10px #ff2000;padding-left: 10px;">Delivery service time</h4></div>';
@@ -2395,6 +2396,7 @@ if ( ! function_exists( 'woocommerce_template_single_add_to_delivery' ) ) {
 			echo '	  </tr>';
 			echo '  </table>';
 			echo '</div>';
+			echo '<div>Our service is off on holiday and Tet</div>';
        	} elseif ($lang == 'vi') {
        		echo '<div><h4 style="border-left: solid 10px #ff2000;padding-left: 10px;">Dịch vụ giao hàng</h4></div>';
 			echo '<div>';
@@ -2410,6 +2412,7 @@ if ( ! function_exists( 'woocommerce_template_single_add_to_delivery' ) ) {
 			echo '	  </tr>';
 			echo '  </table>';
 			echo '</div>';
+			echo '<div>Cửa hàng tạm nghỉ vào thời gian Tết</div>';
        	}
     }
 }

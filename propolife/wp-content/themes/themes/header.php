@@ -15,7 +15,6 @@
 <![endif]-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="<?php bloginfo( 'template_directory' );?>/js/jquery.easing.1.3.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
 <script>
 function imgLoaded(img){
     var imgWrapper = img.parentNode;

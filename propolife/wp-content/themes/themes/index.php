@@ -60,7 +60,7 @@ echo get_the_post_thumbnail(1,'full',array('class'=>'img-responsive','alt'=>$img
 <div class="thumb">
 <p style="padding:0px 40px;color:#000000" align="justify">プロポライフベトナムは、ベトナム進出時、進出後の様々な支援サービスをご提供して おります。会社設立、ライセンス取得から進出のトータルコーディネートまで、進出企業と働く方がベトナムで必要な環境造りをお手伝いしております。
 </p>
-<div class="tel"><?php echo $hl[0];?><br><?php echo $hl[1];?></div>
+<div class="tel"><?php echo $hl[0];?></div>
 <div class="fa-right"><i class="fa fa-angle-right fa-3x" style="color: #000000;"></i><div class="clearfix"></div></div>
 </div>
 </a>
@@ -170,7 +170,6 @@ echo get_the_post_thumbnail(1,'full',array('class'=>'img-responsive','alt'=>$img
 <address>Address: <?php echo $lienhe['diachigmap'];?></address>
 <div style="padding:0px 40px 40px 40px;color:#000000">
 <div><?php echo $hl[0];?></div>
-<div><?php echo $hl[1];?></div>
 </div>
 </div>
 </a>

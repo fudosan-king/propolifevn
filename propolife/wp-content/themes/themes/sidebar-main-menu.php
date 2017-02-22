@@ -19,10 +19,17 @@ echo get_the_post_thumbnail(1,'full',array('class'=>'img-responsive','alt'=>$img
 </a>
 </h1>
 </div>
+
 <div class="collapse navbar-collapse navbar-right" id="navbar-collapse">
 <ul class="nav navbar-nav">
 <li><a href="<?php echo home_url();?>">ホーム</a></li>
-<li class="<?php echo get_post(4)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('about'));?>"><?php echo get_the_title(4);?></a></li>
+
+<li class="<?php echo get_post(4)->post_name;?>"><a href="#" class="hidden-xs"><?php echo get_the_title(4);?></a>
+    <ul>
+        <li class="<?php echo get_post(4)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('about'));?>"><?php echo get_the_title(4);?></a></li>
+        <li class="<?php echo get_post(1466)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('recruitment'));?>"><?php echo get_the_title(1466);?></a></li>
+    </ul>
+</li>
 
 <li class="<?php echo get_post(11)->post_name;?>">
 <a href="#" class="hidden-xs"><?php echo get_the_title(11);?></a>

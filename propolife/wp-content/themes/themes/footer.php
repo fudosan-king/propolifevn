@@ -13,7 +13,6 @@
 <address><?php echo $lienhe['diachigmap'];?></address>
 <ul>
 <li><?php echo $hl[0];?></li>
-<li><?php echo $hl[1];?></li>
 </ul>
 Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span>2015</span>. <a href="http://propolife.co.jp" target="_blank">Privacy Policy</a>
 </div>

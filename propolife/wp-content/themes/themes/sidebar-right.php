@@ -1,6 +1,6 @@
 <?php global $lienhe;$dienthoai = explode(';',$lienhe['dienthoai']);$dt=explode('(',$dienthoai[1]);$listmail = explode(';',$lienhe['mail']);?>
 <?php if(is_page('about')){$dt=explode('(',$dienthoai[0]);}?>
-<?php if(is_tax('cat-chronicle') || is_singular('chronicle')){$dt=explode('(',$dienthoai[3]);}?>
+<?php if(is_tax('cat-chronicle') || is_singular('chronicle')){$dt=explode('(',$dienthoai[1]);}?>
 <?php if(is_page('support') || is_singular('support')){$dt=explode('(',$dienthoai[2]);?>
 <div class="list-group">
 <a href="#" class="list-group-item active"><h4 class="list-group-item-heading">ロータスサービス</h4></a>

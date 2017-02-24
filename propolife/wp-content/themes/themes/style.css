@@ -190,7 +190,7 @@ a.captionOrange:hover{color: #eb5100;text-decoration: underline;background-color
 .doc-footer{background-color:#41BDCE;margin-top: 15px;padding:15px 0px;color:#FFFFFF}
 .footer-title{color:#000000;font-size:18px;display: inline-block;margin:15px 0px;}
 .doc-footer ul li{display:inline;font-size: 15px;color: #000000;margin-bottom:20px;padding: 0px 10px;}
-.doc-footer ul li:first-child{border-right:solid 1px #000000}
+#.doc-footer ul li:first-child{border-right:solid 1px #000000}
 .doc-footer a{color:#FFFFFF}
 .doc-footer a.btn-default{color:#000000}
 .doc-footer address{background-color:#C6FF00;padding:10px;color:#000000;text-transform:uppercase;border-radius: 10px;}

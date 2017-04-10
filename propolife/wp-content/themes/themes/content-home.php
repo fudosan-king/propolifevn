@@ -47,7 +47,7 @@ foreach($_list as $key){
 $_key = json_decode($key);
 $key = $_key->key;
 $o = $_key->attach_id;
-$order = $_key->order;	
+$order = $_key->order;
 $image_thumb=wp_get_attachment_image_src($o,'full');
 ?>
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"><img src="<?php echo $image_thumb[0];?>" class="img-responsive" ></div>
@@ -106,10 +106,9 @@ echo '<p>'.nl2br($term->description).'</p>';
 <div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <aside><section style="font-size:35px;">弊社ホームページをご覧頂き、ありがとうございます。</section><br>
-<p>弊社では、お客様のオフィスの内装・施工はもちろ
-ご希望のオフィスを実験できる物件のご紹介・現地調査も随時0円にて行っております。<br>
-現在、ホーチミンにて活躍されている企業様これからホーチミンにいらっしゃる企業様<br>
-どうぞご遠慮なくお問い合わせくださいませ。</p>
+<p>弊社では、現地調査を無料にて行っております。<br>
+現在、ホーチミンにて活躍されている企業様、これからホーチミンにいらっしゃる企業様お気軽にお問い合わせください。
+</p>
 </aside>
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><?php echo htmlContactButton2();?></div>

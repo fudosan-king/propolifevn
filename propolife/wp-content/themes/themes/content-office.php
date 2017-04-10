@@ -24,10 +24,10 @@ echo '<h3 align="center">'.$term->name.'</h3>';
 
 <?php
 $arg = array('post_type' => 'chronicle','orderby' => 'date','order' => 'asc','posts_per_page' =>-1,'status' => array('publish','private'),'taxonomy'=>'cat-chronicle','term'=>'work');
-$args = array('orderby'=> 'custom_sort','order'=> 'ASC','hide_empty'=>0); 
+$args = array('orderby'=> 'custom_sort','order'=> 'ASC','hide_empty'=>0);
 $the_query = new WP_Query($arg);
 while ( $the_query->have_posts() ) : $the_query->the_post();
-$f_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); 
+$f_url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 ?>
 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 <a href="<?php echo get_permalink($post->ID);?>" class="thumbnail" target="_blank">
@@ -106,10 +106,9 @@ echo '<p>'.nl2br($term->description).'</p>';
 <div class="row">
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <aside><section style="font-size:35px;">弊社ホームページをご覧頂き、ありがとうございます。</section><br>
-<p>弊社では、お客様のオフィスの内装・施工はもちろ
-ご希望のオフィスを実験できる物件のご紹介・現地調査も随時0円にて行っております。<br>
-現在、ホーチミンにて活躍されている企業様これからホーチミンにいらっしゃる企業様<br>
-どうぞご遠慮なくお問い合わせくださいませ。</p>
+<p>弊社では、現地調査を無料にて行っております。<br>
+現在、ホーチミンにて活躍されている企業様、これからホーチミンにいらっしゃる企業様お気軽にお問い合わせください。
+</p>
 </aside>
 </div>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><?php echo htmlContactButton2();?></div>

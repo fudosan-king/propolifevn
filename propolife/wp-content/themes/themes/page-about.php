@@ -19,6 +19,20 @@ $imgAlt = get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', tru
 echo get_the_post_thumbnail($post->ID,'full',array('class'=>'img-responsive','alt'=>$imgAlt,'title'=>$imgTitle));
 ?>
 <figcaption style="text-align: center;margin-top:15px;margin-bottom:15px;"><?php echo $caption;?></figcaption>
+<?php
+
+    if(class_exists('MultiPostThumbnails')){
+        $image_name = 'feature-image-2';
+        if(MultiPostThumbnails::has_post_thumbnail('page', $image_name)){
+            $image_id = MultiPostThumbnails::get_post_thumbnail_id('page', $image_name, $post->ID);
+            $image = wp_get_attachment_image_src($image_id, 'full');
+            ?>
+                <img src="<?php echo $image[0]; ?>" width="100%" style="margin-bottom: 10px;">
+            <?php
+        }
+    }
+
+?>
 </figure>
 </div>
 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12"><h4 style="margin-top:0px">お客様により良いご提案をさせて頂いております。</h4><?php while ( have_posts() ) : the_post(); the_excerpt(); endwhile;?></div>

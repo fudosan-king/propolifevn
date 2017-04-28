@@ -38,7 +38,7 @@ echo get_the_post_thumbnail(1,'full',array('class'=>'img-responsive','alt'=>$img
 $arg = array('post_type' => 'support','orderby' => 'menu_order','order' => 'desc','posts_per_page' =>-1,'post__not_in'=>array(273,274,275,277),'status' => array('publish','private'));
 $the_query = new WP_Query($arg);
 while ( $the_query->have_posts() ) : $the_query->the_post();
-$smlink = preg_replace("/%u([0-9a-f]{3,4})/i","&#x\\1;",urldecode(get_permalink($post->ID))); 
+$smlink = preg_replace("/%u([0-9a-f]{3,4})/i","&#x\\1;",urldecode(get_permalink($post->ID)));
 $smlink = html_entity_decode($smlink,null,'UTF-8');
 ?>
 <li><a href="<?php echo $smlink;?>"><?php the_title();?></a></li>
@@ -47,14 +47,14 @@ $smlink = html_entity_decode($smlink,null,'UTF-8');
 </li>
 <li class="<?php echo get_post(73)->post_name;?>"><a href="#" class="hidden-xs"><?php echo get_the_title(73);?></a>
 <ul><?php echo wp_list_categories('taxonomy=cat-chronicle&title_li=&hide_empty=0&orderby=ID&order=asc&exclude=7,11'); ?></ul>
-</li>   
-<li class="<?php echo get_post(13)->post_name; ?> <?php echo get_post(370)->post_name;?> <?php echo get_post(454)->post_name;?>"><a href="#" class="hidden-xs">WEB制作・オフショア</a>
+</li>
+<li class="<?php echo get_post(13)->post_name; ?> <?php echo get_post(370)->post_name;?> <?php echo get_post(454)->post_name;?>"><a href="#" class="hidden-xs">WEBサービス</a>
 <ul>
 <li><a href="<?php echo get_permalink(get_page_by_path('web-step'));?>">WEBサービスについて</a></li>
 <li><a href="<?php echo get_permalink(get_page_by_path('web'));?>">WEBサイト制作</a></li>
-<li><a href="<?php echo get_permalink(get_page_by_path('development'));?>">オフショア開発</a></li>
+<li><a href="<?php echo get_permalink(get_page_by_path('development'));?>">WEB広告</a></li>
 </ul>
-</li>  
+</li>
 <li><a href="#" class="hidden-xs">不動産賃貸仲介</a>
 <ul>
 <li><a href="http://aodaihousing.com/" target="_blank">アパート検索</a></li>
@@ -72,7 +72,7 @@ $smlink = html_entity_decode($smlink,null,'UTF-8');
 </div>
 <?php echo $lienhe['diachigmap'];?>
 </address>
-</li> 
+</li>
 </ul>
 </div>
 </nav>

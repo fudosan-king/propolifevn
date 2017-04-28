@@ -58,9 +58,9 @@ echo get_the_post_thumbnail(1,'full',array('class'=>'img-responsive','alt'=>$img
 <div class="optical">
 <a href="<?php echo get_permalink(get_page_by_path('about'));?>" class="hidden-xs" style="display:block">
 <div class="thumb">
-<p style="padding:0px 40px;color:#000000" align="justify">プロポライフベトナムは、ベトナム進出時、進出後の様々な支援サービスをご提供して おります。会社設立、ライセンス取得から進出のトータルコーディネートまで、進出企業と働く方がベトナムで必要な環境造りをお手伝いしております。
+<p style="padding:0px 40px;color:#000000" align="justify">ベトナムホーチミンで会社設立ライセンス取得・賃貸不動産紹介・内装工事・WEBサイト制作などを行っているプロポライフベトナムのコーポレートサイトです。ベトナム進出時も進出後も企業様、働かれる方をサポートさせて頂いております。
 </p>
-<div class="tel"><?php echo $hl[0];?></div>
+<!-- <div class="tel"><?php echo $hl[0];?></div> -->
 <div class="fa-right"><i class="fa fa-angle-right fa-3x" style="color: #000000;"></i><div class="clearfix"></div></div>
 </div>
 </a>

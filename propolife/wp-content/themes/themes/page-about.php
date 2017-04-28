@@ -26,8 +26,10 @@ echo get_the_post_thumbnail($post->ID,'full',array('class'=>'img-responsive','al
         if(MultiPostThumbnails::has_post_thumbnail('page', $image_name)){
             $image_id = MultiPostThumbnails::get_post_thumbnail_id('page', $image_name, $post->ID);
             $image = wp_get_attachment_image_src($image_id, 'full');
+            $captionImg = get_post( $image_id )->post_excerpt;
             ?>
                 <img src="<?php echo $image[0]; ?>" width="100%" style="margin-bottom: 10px;">
+                <figcaption style="text-align: center;margin-top:15px;margin-bottom:15px;"><?php echo $captionImg; ?></figcaption>
             <?php
         }
     }

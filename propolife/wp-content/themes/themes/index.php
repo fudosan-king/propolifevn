@@ -54,9 +54,9 @@ echo get_the_post_thumbnail(1,'full',array('class'=>'img-responsive','alt'=>$img
 <div class="row">
 <div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
 
-<div class="col-lg-4 col-md-4 hidden-sm hidden-xs proCol">
+<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 proCol">
 <div class="optical">
-<a href="<?php echo get_permalink(get_page_by_path('about'));?>" class="hidden-xs" style="display:block">
+<a href="<?php echo get_permalink(get_page_by_path('about'));?>" class="" style="display:block">
 <div class="thumb">
 <p style="padding:0px 40px;color:#000000" align="justify">ベトナムホーチミンで会社設立ライセンス取得・賃貸不動産紹介・内装工事・WEBサイト制作などを行っているプロポライフベトナムのコーポレートサイトです。ベトナム進出時も進出後も企業様、働かれる方をサポートさせて頂いております。
 </p>

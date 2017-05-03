@@ -39,7 +39,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .optical.logo{padding:15px !important}
 .btn-big{font-size:18px !important}
 .news dd {margin-left: initial !important;}
-.proCol .thumb{height: 360px !important;}
+.proCol .thumb{height: 160px !important;}
 .proCol .yellow, .proCol .orange, .proCol .green, .proCol .blue, .proCol .black, .proCol .greenlight{min-height:360px !important;}
 .orange.news{min-height:260px !important;}
 .proCol .optical{}
@@ -238,7 +238,7 @@ box-shadow: 0 0 0 0 rgba(255,255,255,0.2);
 -ms-transition: box-shadow .4s ease-in-out;
 transition: box-shadow .4s ease-in-out;opacity:0.5
 }
-	
+
 .bgColor-1 .thumb,.bgColor-2 .thumb,.bgColor-3 .thumb,.bgColor-4 .thumb{position:absolute;}
 .bgColor-1 .title,.bgColor-2 .title,.bgColor-3 .title,.bgColor-4 .title{font-size: 20px;margin-top: 15px;}
 
@@ -403,8 +403,8 @@ h3{text-transform:uppercase}
 .logo-inside{margin-bottom:15px;}
 .material a{display:inline-block}
 .material a.material-1 img,.material a.material-2 img,.material a.material-3 img{height:254px;}
-.material a.material-4 img,.material a.material-5 img{height:391px;} 
-.material a.material-6 img,.material a.material-7 img{height:337px} 
+.material a.material-4 img,.material a.material-5 img{height:391px;}
+.material a.material-6 img,.material a.material-7 img{height:337px}
 .material a img{width:auto}
 .news dt,.news dd{text-align:left}
 .news dt{width:100px;}.news dd{margin-left:100px;}

@@ -3,7 +3,7 @@
 <a href="#" class="list-group-item active">WEB DESIGN</a>
 <a href="<?php echo get_permalink(get_page_by_path('web-step'));?>" class="list-group-item">WEBサービスについて</a>
 <a href="<?php echo get_permalink(get_page_by_path('web'));?>" class="list-group-item">WEBサイト制作</a>
-<a href="<?php echo get_permalink(get_page_by_path('development'));?>" class="list-group-item">オフショア開発</a>
+<a href="<?php echo get_permalink(get_page_by_path('development'));?>" class="list-group-item">WEB広告</a>
 </div>
 
 <div class="list-group">

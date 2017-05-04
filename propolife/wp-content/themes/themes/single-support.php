@@ -1,6 +1,6 @@
 <?php get_header();global $lienhe;$hl = explode(';',$lienhe['hotline']);$style = 'style="padding-top:120px;"';?>
 <header class="header" role="masthead"><div class="container"><?php get_sidebar('main-menu');?></div></header>
-<?php if($post->ID==264 || $post->ID==267 || $post->ID==266 || $post->ID==407){?><div align="center" class="slidermain"><?php get_sidebar('banner');?></div><?php $style = 'style="padding-top:15px;"'; }?>
+<?php if($post->ID==264 || $post->ID==267 || $post->ID==266 || $post->ID==407 || $post->ID==1530){?><div align="center" class="slidermain"><?php get_sidebar('banner');?></div><?php $style = 'style="padding-top:15px;"'; }?>
 <div class="effect">
 <div class="container" <?php echo $style;?>>
 <div class="row">

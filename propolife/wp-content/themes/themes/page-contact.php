@@ -44,7 +44,7 @@
 </div>
 
 <div class="col-lg-3"></div>
-<div class="col-lg-12" align="center"><input type="submit" name="sendmail" value="送信する" class="btn btn-info"></div>
+<div class="col-lg-12" align="center"><input type="submit" id ="sendmail" name="sendmail" value="送信する" class="btn btn-info disabled"></div>
 
 </div>
 </div>

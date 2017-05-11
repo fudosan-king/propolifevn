@@ -173,12 +173,12 @@ a.captionOrange:hover{color: #eb5100;text-decoration: underline;background-color
 .navbar ul li {position:relative;z-index:99;}
 .navbar ul li .socials{border-top: solid 1px #33808A;padding-top: 10px;}
 .navbar ul li .socials .fa{line-height:45px;}
-.navbar ul li a{-webkit-transition: color .15s;-moz-transition: color .15s;-o-transition: color .15s;transition: color .15s;color:#ffffff;line-height:59px;text-transform:uppercase}
+.navbar ul li a{border-bottom: 1px solid #ffffff; -webkit-transition: color .15s;-moz-transition: color .15s;-o-transition: color .15s;transition: color .15s;color:#ffffff;line-height:59px;text-transform:uppercase}
 .navbar ul li:hover{border-bottom: solid 5px #000000;background-color:#ffffff}
 .navbar ul li:hover a{color: black;}
 .navbar ul li.active{color: #ffffff;border-bottom: solid 5px #000000;}
 .current-cat:parent ul li.chronicle{color: #ffffff;border-bottom: solid 5px #41BDCE !important;}
-.navbar ul ul li a{color:#ffffff !important;text-shadow: none;line-height:35px;display: block;-webkit-transition: background-color .1s;-moz-transition: background-color .1s;-o-transition: background-color .1s;transition: background-color .1s;}
+.navbar ul ul li a{border-bottom: 1px solid #ffffff; color:#ffffff !important;text-shadow: none;line-height:35px;display: block;-webkit-transition: background-color .1s;-moz-transition: background-color .1s;-o-transition: background-color .1s;transition: background-color .1s;}
 .navbar ul li ul{opacity:0;visibility:hidden;background-color: #000000;text-align:left;position: absolute;z-index:999;top:110px;*top:40px;width:195px;text-transform: uppercase;}
 .navbar ul li:hover ul{opacity: 1; top:94px;*top:40px; visibility: visible; z-index: 9999;}
 .navbar ul li ul li:hover{background-color:#ffffff;border-bottom:solid 1px}

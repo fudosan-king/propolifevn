@@ -1,5 +1,8 @@
 <?php
 add_action('wp_head','pluginname_ajaxurl');
+
+add_theme_support( 'post-thumbnails' );
+
 // Load external file to add support for MultiPostThumbnails. Allows you to set more than one "feature image" per post.
 require_once('multiple-post-thumbnails/multi-post-thumbnails.php');
 function pluginname_ajaxurl() {?>

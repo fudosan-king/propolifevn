@@ -1,7 +1,7 @@
 <div id="sliderContainer" style="position: relative; width:2000px;height:700px; overflow: hidden;">
 <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-<div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;background-color: #000; top: 0px; left: 0px;width: 100%; height:100%;"></div> 
-<div style="position: absolute; display: block; background: url(<?php bloginfo( 'template_directory' );?>/images/controls/ajax-loader.gif) no-repeat center center;top: 0px; left: 0px;width: 100%;height:100%;"></div> 
+<div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;background-color: #000; top: 0px; left: 0px;width: 100%; height:100%;"></div>
+<div style="position: absolute; display: block; background: url(<?php bloginfo( 'template_directory' );?>/images/controls/ajax-loader.gif) no-repeat center center;top: 0px; left: 0px;width: 100%;height:100%;"></div>
 </div>
 <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:2000px; height:700px;overflow: hidden;">
 <?php
@@ -36,7 +36,7 @@ if(is_tax('cat-chronicle','reform-home')){
 <a class="captionOrange" u="caption" t="CLIP|L" d=-300 href="#" style="left:82%;top:315px;"><?php echo $listtext[4];?></a>
 </div>
 
-<div> 
+<div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/home/2.jpg" />
 <div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:24%;top:425px;">
 <span class="title-slide"><?php echo $listtext[0];?></span><br><?php echo $listtext[1];?>.
@@ -46,7 +46,7 @@ if(is_tax('cat-chronicle','reform-home')){
 <div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:772px;top:250px;"><?php echo $listtext[4];?></div>
 </div>
 
-<div> 
+<div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/home/3.jpg" />
 <div u="caption" t="T" t2="NO" class="textBig" style="left:150px;top:80px;">
 <span class="title-slide"><?php echo $listtext[0];?></span><br><?php echo $listtext[1];?>.
@@ -80,7 +80,7 @@ elseif(is_tax('cat-chronicle','reform-interior')){
 <a class="captionOrange" u="caption" t="CLIP|L" d=-300 href="#" style="left:1637px;top:315px;"><?php echo $listtext[4];?></a>
 </div>
 
-<div> 
+<div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/home/2.jpg" />
 <div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:24%;top:425px;">
 <span class="title-slide"><?php echo $listtext[0];?></span><br><?php echo $listtext[1];?>.</div>
@@ -89,7 +89,7 @@ elseif(is_tax('cat-chronicle','reform-interior')){
 <div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:772px;top:250px;"><?php echo $listtext[4];?></div>
 </div>
 
-<div> 
+<div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/3.jpg" />
 <div u="caption" t="T" t2="NO" class="textBig" style="left:150px;top:30px;">
 <span class="title-slide"><?php echo $listtext[5];?></span><br><?php echo $listtext[6];?>.
@@ -108,7 +108,7 @@ elseif(is_tax('cat-chronicle','reform-interior')){
 <div u="caption" t="T|IB" t2="T" d=-300 class="captionOrange"  style="position:absolute; left:180px; top: 170px;"><?php echo $listtext[2];?></div>
 <div u="caption" t="T|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; left:325px; top: 170px;"><?php echo $listtext[3];?></div>
 <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="captionOrange" style="position: absolute; top:170px; left:470px;text-align: left;"><?php echo $listtext[4];?></div>
-</div>    
+</div>
 <?php
 }
 elseif(is_tax('cat-chronicle','reform-office')){
@@ -123,7 +123,7 @@ elseif(is_tax('cat-chronicle','reform-office')){
 <a class="captionOrange" u="caption" t="CLIP|L" d=-300 href="#" style="left:82%;top:315px;"><?php echo $listtext[4];?></a>
 </div>
 
-<div> 
+<div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/2.jpg" />
 <div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:24%; top:425px;">
 <span class="title-slide"><?php echo $listtext[5];?></span><br><?php echo $listtext[6];?>.</div>
@@ -132,7 +132,7 @@ elseif(is_tax('cat-chronicle','reform-office')){
 <div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:772px;top:250px;"><?php echo $listtext[4];?></div>
 </div>
 
-<div> 
+<div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/3.jpg" />
 <div u="caption" t="T" t2="NO" class="textBig" style="left:150px; top:120px;">
 <span class="title-slide"><?php echo $listtext[5];?></span><br><?php echo $listtext[6];?>.
@@ -152,7 +152,7 @@ elseif(is_tax('cat-chronicle','reform-office')){
 <div u="caption" t="T|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; left:340px; top:250px;"><?php echo $listtext[3];?></div>
 <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="captionOrange" style="position: absolute; top:250px; left:484px;text-align: left;"><?php echo $listtext[4];?></div>
 </div>
-<?php	
+<?php
 }
 elseif(is_tax('cat-chronicle','perth-design')){
 	?>
@@ -166,7 +166,7 @@ elseif(is_tax('cat-chronicle','perth-design')){
 <a class="captionOrange" u="caption" t="CLIP|L" d=-300 href="#" style="left:82%;top:315px;"><?php echo $listtext[4];?></a>
 </div>
 
-<div> 
+<div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/2.jpg" />
 <div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:24%; top:425px;">
 <span class="title-slide"><?php echo $listtext[5];?></span><br><?php echo $listtext[6];?>.</div>
@@ -175,7 +175,7 @@ elseif(is_tax('cat-chronicle','perth-design')){
 <div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:772px;top:250px;"><?php echo $listtext[4];?></div>
 </div>
 
-<div> 
+<div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/3.jpg" />
 <div u="caption" t="T" t2="NO" class="textBig" style="left:150px; top:120px;">
 <span class="title-slide"><?php echo $listtext[5];?></span><br><?php echo $listtext[6];?>.
@@ -194,7 +194,7 @@ elseif(is_tax('cat-chronicle','perth-design')){
 <div u="caption" t="T|IB" t2="T" d=-300 class="captionOrange"  style="position:absolute; left:190px; top:250px;"><?php echo $listtext[2];?></div>
 <div u="caption" t="T|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; left:340px; top:250px;"><?php echo $listtext[3];?></div>
 <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="captionOrange" style="position: absolute; top:250px; left:484px;text-align: left;"><?php echo $listtext[4];?></div>
-</div>    
+</div>
 <?php
 }
 }
@@ -217,9 +217,9 @@ elseif(is_singular()){?>
 <div u="caption" t="T|IB" t2=L d=-900 class="captionBlack" style="position:absolute; left:150px; top: 170px;">会社設立・ライセンス取得</div>
 <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="captionOrange" style="position: absolute; top:170px; left:550px;text-align: left;">ベトナムビザ・労働許可証</div>
 <div u="caption" t="LISTH|R"  t2=R d=-900 class="captionBlack" style="left:950px; top:170px;">進出後のライセンス関係サポート</div>
-</div> 
+</div>
 
-<div> 
+<div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/lotus/3.jpg" />
 <div u="caption" t="T" t2="NO" class="textBig" style="left:150px;top:30px;text-align:left;">
 <span class="title-slide">ロータスサービス</span><br>ベトナム進出支援・進出後サポート
@@ -237,7 +237,7 @@ elseif(is_singular()){?>
 <div u="caption" t="T|IB" t2="T" d=-300 class="captionOrange"  style="position:absolute; left:150px; top: 100px;">会社設立・ライセンス取得</div>
 <div u="caption" t="T|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; left:150px; top: 170px;">ベトナムビザ・労働許可証</div>
 <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="captionOrange" style="position: absolute; top:242px; left:150px;text-align: left;">進出後のライセンス関係サポート</div>
-</div>  
+</div>
 
 <div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/lotus/5.jpg" />
@@ -248,7 +248,7 @@ elseif(is_singular()){?>
 <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="captionOrange" style="position: absolute; top:170px; left:550px;text-align: left;">ベトナムビザ・労働許可証</div>
 <div u="caption" t="LISTH|R"  t2=R d=-900 class="captionBlack" style="left:950px; top:170px;">進出後のライセンス関係サポート</div>
 </div>
-<?php }?>   
+<?php }?>
 </div>
 <div u="navigator" class="jssorb03" style="bottom: 16px; right: 6px;"><div u="prototype"><div u="numbertemplate"></div></div></div>
 <span u="arrowleft" class="jssora20l" style="left:81%;"><i class="fa fa-angle-left fa-5x"></i></span>

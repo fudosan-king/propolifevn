@@ -19,10 +19,10 @@
 define('DB_NAME', 'propolife');
 
 /** MySQL database username */
-define('DB_USER', 'da_admin');
+define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'TUViSEkV');
+define('DB_PASSWORD', '5fZ7mcBSZ2L:s![p');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');

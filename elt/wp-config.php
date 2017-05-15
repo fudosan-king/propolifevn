@@ -34,7 +34,7 @@ define('MY_TEXTDOMAIN', 'my_domain');
 // define('DB_NAME', 'eltvn');
 // define('DB_USER', 'da_admin');
 // define('DB_PASSWORD', 'TUViSEkV');
-// define('DB_HOST', '103.54.250.108:3306');
+// define('DB_HOST', '43.239.148.40:3306');
 // define('MY_TEXTDOMAIN', 'my_domain');
 
 /** Database Charset to use in creating database tables. */

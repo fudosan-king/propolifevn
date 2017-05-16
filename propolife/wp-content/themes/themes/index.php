@@ -37,12 +37,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="optical logo" align="left">
 <h1>
 <a href="<?php echo get_permalink(get_page_by_path('about'));?>">
+<img width="316" height="54" src="<?php bloginfo( 'template_directory' );?>/images/logo-toppage.png" class="img-responsive wp-post-image" alt="logo-propolife" title="logo-propolife" srcset="<?php bloginfo( 'template_directory' );?>/images/logo-toppage.png" sizes="(max-width: 316px) 100vw, 316px">
 <?php
-$imgInfo = get_post( get_post_thumbnail_id(1));
-$caption=nl2br(str_replace(' ', '&nbsp;',$imgInfo->post_excerpt));
-$imgTitle = $imgInfo->post_title;
-$imgAlt = get_post_meta(get_post_thumbnail_id(1), '_wp_attachment_image_alt', true);
-echo get_the_post_thumbnail(1,'full',array('class'=>'img-responsive','alt'=>$imgAlt,'title'=>$imgTitle));
+// $imgInfo = get_post( get_post_thumbnail_id(1));
+// $caption=nl2br(str_replace(' ', '&nbsp;',$imgInfo->post_excerpt));
+// $imgTitle = $imgInfo->post_title;
+// $imgAlt = get_post_meta(get_post_thumbnail_id(1), '_wp_attachment_image_alt', true);
+// echo get_the_post_thumbnail(1,'full',array('class'=>'img-responsive','alt'=>$imgAlt,'title'=>$imgTitle));
 ?>
 </a>
 </h1>

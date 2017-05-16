@@ -9,12 +9,13 @@
 <h1 style="margin:0px;">
 <a href="<?php echo home_url();?>" class="navbar-brand logo hidden-lg available-xs"><img src="<?php bloginfo( 'template_directory' );?>/images/logo-tablet.png" class="img-responsive"></a>
 <a href="<?php echo home_url();?>" class="navbar-brand logo hidden-md hidden-sm hidden-xs">
+<img width="316" height="54" src="<?php bloginfo( 'template_directory' );?>/images/logo-toppage.png" class="img-responsive wp-post-image" alt="logo-propolife" title="logo-propolife" srcset="<?php bloginfo( 'template_directory' );?>/images/logo-toppage.png" sizes="(max-width: 316px) 100vw, 316px">
 <?php
-$imgInfo = get_post( get_post_thumbnail_id(1));
-$caption=nl2br(str_replace(' ', '&nbsp;',$imgInfo->post_excerpt));
-$imgTitle = $imgInfo->post_title;
-$imgAlt = get_post_meta(get_post_thumbnail_id(1), '_wp_attachment_image_alt', true);
-echo get_the_post_thumbnail(1,'full',array('class'=>'img-responsive','alt'=>$imgAlt,'title'=>$imgTitle));
+// $imgInfo = get_post( get_post_thumbnail_id(1));
+// $caption=nl2br(str_replace(' ', '&nbsp;',$imgInfo->post_excerpt));
+// $imgTitle = $imgInfo->post_title;
+// $imgAlt = get_post_meta(get_post_thumbnail_id(1), '_wp_attachment_image_alt', true);
+// echo get_the_post_thumbnail(1,'full',array('class'=>'img-responsive','alt'=>$imgAlt,'title'=>$imgTitle));
 ?>
 </a>
 </h1>

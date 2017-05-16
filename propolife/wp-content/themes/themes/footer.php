@@ -3,7 +3,7 @@
 <footer class="doc-footer">
 <div class="container">
 <div class="row">
-<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 center" align="center"><a href="<?php echo home_url();?>" class="logo-ft"><img src="http://www.propolifevietnam.com/wp-content/uploads/2016/01/logo-ft.png" class="img-responsive" /></a></div>
+<div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 center" align="center"><a href="<?php echo home_url();?>" class="logo-ft"><img src="<?php bloginfo( 'template_directory' );?>/images/logo-ft.png" class="img-responsive" /></a></div>
 <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12 center" align="center">
 <div class="socials hidden-xs">
 <a class="fa fa-facebook" href="<?php echo $lienhe['facebook'];?>" target="_blank"></a>

@@ -18,7 +18,7 @@ echo htmlContactButton6();
 </div>
 <div class="panel-footer" align="center"><h4>TEL <?php echo $hl[0];?></h4></div>
 </div>
-<?php get_sidebar('step-web');?>
+<?php get_sidebar('step-aodaihousing-support');?>
 </div>
 <div class="col-lg-3"><?php get_sidebar('menu-web');?></div>
 </div>

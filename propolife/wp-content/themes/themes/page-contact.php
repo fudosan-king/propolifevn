@@ -11,7 +11,7 @@
 <div class="form-group has-feedback">
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-user"></i></span>
-<input type="text" id="fullname" class="form-control" placeholder="お名前（アルファベット）(*)" data-error="Oh, must be input fullname" required>
+<input type="text" id="fullname" class="form-control" placeholder="お名前" data-error="Oh, must be input fullname" required>
 </div>
 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 <span class="help-block with-errors"></span>
@@ -20,7 +20,7 @@
 <div class="form-group has-feedback">
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-<input type="email" id="mailaddress" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="メールアドレス, name@email.com" data-error="Oh, The value is not a valid email address" required>
+<input type="email" id="mailaddress" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="form-control" placeholder="メールアドレス" data-error="Oh, The value is not a valid email address" required>
 </div>
 <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
 <span class="help-block with-errors"></span>

@@ -53,7 +53,7 @@ $smlink = html_entity_decode($smlink,null,'UTF-8');
 <ul>
 <li><a href="<?php echo get_permalink(get_page_by_path('web-step'));?>">WEBサービスについて</a></li>
 <li><a href="<?php echo get_permalink(get_page_by_path('web'));?>">WEBサイト制作</a></li>
-<li><a href="<?php echo get_permalink(get_page_by_path('development'));?>">WEB広告</a></li>
+<li><a href="<?php echo get_permalink(get_page_by_path('development'));?>">WEB広告支援</a></li>
 </ul>
 </li>
 <li><a href="#" class="hidden-xs">不動産賃貸仲介</a>

@@ -145,14 +145,14 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 <div class="col-lg-2 col-md-2 col-xs-6 proCol">
-<a class="thumbnail orange" href="http://aodaihousing.com" target="_blank" style="background:#dbeef4;color:#000000">
+<a class="thumbnail orange" href="<?php echo get_permalink(get_page_by_path('aodaihousing-support')); ?>" target="_blank" style="background:#dbeef4;color:#000000">
 <h2 class="title"><img src="<?php bloginfo( 'template_directory' );?>/images/logo-aodaihousing.png" class="img-responsive" width="200" height="0" alt=""></h2>
 <div class="fa-right"><i class="fa fa-angle-right fa-3x"></i></div>
 </a>
 </div>
 
 <div class="col-lg-2 col-md-2 col-xs-6 proCol">
-<a class="thumbnail black" href="http://aodaihousing.com" target="_blank">
+<a class="thumbnail black" href="<?php echo get_permalink(get_page_by_path('aodaihousing-support')); ?>" target="_blank">
 <h2 class="title">アオザイハウジング事業部<br>住居オフィス<br>賃貸不動産仲介</h2>
 <p style="margin-bottom:20px;">アオザイハウジングでは、ベトナムホーチミン市のオフィス・サービスアパート・コンドミ二アムを紹介手数料無料でご紹介しております。</p>
 <div class="fa-right"><i class="fa fa-angle-right fa-3x"></i></div>

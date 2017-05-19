@@ -10,9 +10,9 @@
 <a href="#" class="list-group-item active"><h4 class="list-group-item-heading">メニュー</h4></a>
 <a href="<?php echo get_permalink(get_page_by_path('about'));?>" class="list-group-item"><span class="list_num">01.</span><?php echo get_the_title(4);?></a>
 <a href="<?php echo get_permalink(264);?>" class="list-group-item"><span class="list_num">02.</span><?php echo get_the_title(11);?></a>
-<a href="/cat-chronicle/reform-office" class="list-group-item"><span class="list_num">03.</span><?php echo get_the_title(73);?></a>
+<a href="/cat-chronicle/reform-interior" class="list-group-item"><span class="list_num">03.</span><?php echo get_the_title(73);?></a>
 <a href="<?php echo get_permalink(get_page_by_path('web-step'));?>" class="list-group-item"><span class="list_num">04.</span><?php echo get_the_title(13);?></a>
-<a href="http://aodaihousing.com" target="_blank" class="list-group-item"><span class="list_num">05.</span>不動産賃貸仲介</a>
+<a href="<?php echo get_permalink(get_page_by_path('aodaihousing-support'));?>" target="_blank" class="list-group-item"><span class="list_num">05.</span>不動産賃貸仲介</a>
 <a href="<?php echo get_permalink(get_page_by_path('contact'));?>" class="list-group-item"><span class="list_num">06.</span><?php echo get_the_title(1);?></a>
 </div>
 

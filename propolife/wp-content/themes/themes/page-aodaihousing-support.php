@@ -13,7 +13,7 @@ while ( have_posts() ) : the_post();
 if(has_post_thumbnail()){the_post_thumbnail('full',array('class'=>'img-responsive lotus-featured'));}
 the_content();
 endwhile;
-echo htmlContactButton6();
+echo htmlContactButton5();
 ?>
 </div>
 <div class="panel-footer" align="center"><h4>TEL <?php echo $hl[0];?></h4></div>

@@ -1,28 +1,25 @@
-VPS samaurai-boxing-gym
+VPS Propolife VietNam
 ======
 VPS Information:
--       IP: 103.54.250.108
+-       IP: 43.239.148.40
 -       Port ssh: 22
 -       Login Name: root
--       Password: moBs8kB@1
+-       Password: M39gRauG@1
 
-
-Control panel information:
--       Link: http://103.54.250.108:2222
--       User: admin
--       Password: TUViSEkV
+-       Login Name: propolife
+-       Password: T8p7xDWh@1
 
 
 Mysql:
--       Link: http://103.54.250.108/phpmyadmin
--       User: da_admin
--       Password: TUViSEkV
+-       http://43.239.148.40/mysql/
+-       User: root
+-       Password: 5fZ7mcBSZ2L:s![p
 
 
 Auto login ssh:
 
 
--       cat ~/.ssh/id_rsa.pub | ssh root@103.54.250.108 'cat >> .ssh/authorized_keys'
+-       cat ~/.ssh/id_rsa.pub | ssh root@43.239.148.40 'cat >> .ssh/authorized_keys'
 -       cat ~/.ssh/id_rsa.pub | ssh -i /Users/propolife/fdk/deployment/fdk-production.pem ec2-user@52.69.0.54 'cat >> .ssh/authorized_keys'
 
 

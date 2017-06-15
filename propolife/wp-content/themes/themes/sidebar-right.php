@@ -51,3 +51,4 @@ $smlink = html_entity_decode($smlink,null,'UTF-8');
 <a href="<?php echo get_permalink(get_page_by_path('contact'));?>" class="list-group-item"><span class="list_num">06.</span><?php echo get_the_title(1);?></a>
 </div>
 <?php   include('contact-right.php');?>
+<?php   include('aodaihousing-right.php');?>

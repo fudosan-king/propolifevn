@@ -1,0 +1,480 @@
+@media (max-width: 1366px) {
+
+}
+@media (max-width: 1280px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+@media (max-width: 1024px) {
+	.navbar_sub .container, .nav_top .container{
+		width: 100%;
+	}
+	.nav > li > a {
+		padding: 10px;
+	}
+	.navbar-right {
+		margin-right: 0;
+	}
+	.box_business_info {
+		top: 15px;
+	}
+}
+
+@media (max-width: 980px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (max-width: 991px) {
+	.navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px 0;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .navbar-text {
+        float: none;
+        margin: 15px 0;
+    }
+    .navbar-collapse.collapse.in {
+        display: block!important;
+    }
+    .collapsing {
+        overflow: hidden!important;
+    }
+}
+
+@media (max-width: 800px) {
+
+}
+
+@media (min-width: 768px) {
+  ul.language-chooser-image{
+      float: right !important;
+      margin-right: -15px;
+  }
+}
+
+@media (max-width: 768px) {
+
+	.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+		margin-left: 10px;
+	}
+	.navbar_sub .navbar-nav {
+		float: none;
+	}
+	.navbar-nav>li {
+		display: block;
+		border-bottom: 1px solid #D6DBDF;
+	}
+	.navbar-nav > li:last-child {
+		border-bottom: none;
+	}
+	.navbar-default .navbar-nav > li > a {
+		padding: 10px 5px;
+    font-weight: bold;
+	}
+	.navbar-default .navbar-nav > li > a:after {
+		margin-left: 15px;
+		border-right: none;
+	}
+	.navbar_sub .container {
+		padding-left: 0;
+		padding-right: 0;
+		width: 100%;
+	}
+	.menu .container {
+		width: 100%;
+	}
+
+	.navbar_sub ul.nav_lang, .navbar_sub ul.qtranxs_language_chooser {
+		float: none !important;
+		text-align: center;
+		margin-top: 0;
+		border-top: 1px solid #fff;
+		padding: 10px 0 5px;
+	}
+	.navbar_sub .navbar-toggle {
+		border-color: #fff;
+		border: none;
+	}
+	.navbar_sub .navbar-toggle {
+		margin-top: 15px;
+	}
+
+	.navbar_sub .navbar-toggle .icon-bar {
+		background: #fff;
+		-webkit-transition: all 0.2s;
+		transition: all 0.2s;
+	}
+	.navbar_sub .navbar-toggle:hover, .navbar_sub .navbar-toggle:focus {
+		background: transparent;
+	}
+	.navbar_sub .navbar-toggle .icon-bar {
+		/* width: 33px;
+		height: 3px; */
+	}
+	ul.list_menu_footer li a {
+		padding: 0 5px;
+	}
+	ul.list_menu_footer > li > a:after {
+		margin-left: 15px;
+	}
+	section {
+		padding: 0 0 30px;
+	}
+	.title {
+		padding: 15px;
+		margin-bottom: 30px;
+	}
+	.title_text {
+		line-height: 1.5em;
+	}
+	.box_product {
+		margin-bottom: 30px;
+	}
+	.box_map {
+		margin-bottom: 15px;
+	}
+	.box_map_content {
+		top: 0;
+	}
+	.box_customer_col {
+		margin-bottom: 30px;
+	}
+	.box_business_info {
+		top: 0;
+		margin: 0 0 30px 0;
+	}
+	.box_business_info:before {
+		right: 0;
+	}
+	.box_contact {
+		padding: 30px 0;
+	}
+	.frm_contact .form-control {
+		margin-bottom: 10px;
+	}
+	.main_content {
+		margin-top: 90px;
+	}
+	.title_sub {
+		width: 100%;
+		margin-bottom: 30px;
+	}
+	h2.title_sub span {
+		font-size: 20px;
+	}
+
+}
+
+@media (max-width: 736px) {
+	.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+		margin-left: 15px;
+	}
+	.navbar-brand {
+		width: 240px;
+		background-position: center;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		margin-left: -10px;
+	}
+	.menu .container {
+		margin: 0;
+		padding: 0;
+	}
+	.container > .navbar-header, .container-fluid > .navbar-header, .container > .navbar-collapse, .container-fluid > .navbar-collapse {
+		margin-right: 0;
+		margin-left: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.i_star {
+		margin-bottom: 15px;
+	}
+	.banner {
+		padding-top: 30px;
+	}
+	.banner_text {
+		margin-bottom: 30px;
+	}
+	.banner_text_content h1 {
+		font-size: 20px;
+	}
+	.box_product
+	{
+		min-height: 495px;
+	}
+}
+
+@media (max-width: 667px) {
+	.box_product {
+		min-height: 500px;
+	}
+	.box_customer_col {
+		min-height: 910px;
+	}
+}
+
+@media (max-width: 640px) {
+
+}
+
+@media (max-width: 568px) {
+	.box_product {
+		min-height: 510px;
+	}
+	.box_customer_col {
+		min-height: 1150px;
+	}
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .col-ms-1, .col-ms-2, .col-ms-3, .col-ms-4, .col-ms-5, .col-ms-6, .col-ms-7, .col-ms-8, .col-ms-9, .col-ms-10, .col-ms-11, .col-ms-12 {
+    float: left;
+  }
+  .col-ms-12 {
+    width: 100%;
+  }
+  .col-ms-11 {
+    width: 91.66666667%;
+  }
+  .col-ms-10 {
+    width: 83.33333333%;
+  }
+  .col-ms-9 {
+    width: 75%;
+  }
+  .col-ms-8 {
+    width: 66.66666667%;
+  }
+  .col-ms-7 {
+    width: 58.33333333%;
+  }
+  .col-ms-6 {
+    width: 50%;
+  }
+  .col-ms-5 {
+    width: 41.66666667%;
+  }
+  .col-ms-4 {
+    width: 33.33333333%;
+  }
+  .col-ms-3 {
+    width: 25%;
+  }
+  .col-ms-2 {
+    width: 16.66666667%;
+  }
+  .col-ms-1 {
+    width: 8.33333333%;
+  }
+  .col-ms-pull-12 {
+    right: 100%;
+  }
+  .col-ms-pull-11 {
+    right: 91.66666667%;
+  }
+  .col-ms-pull-10 {
+    right: 83.33333333%;
+  }
+  .col-ms-pull-9 {
+    right: 75%;
+  }
+  .col-ms-pull-8 {
+    right: 66.66666667%;
+  }
+  .col-ms-pull-7 {
+    right: 58.33333333%;
+  }
+  .col-ms-pull-6 {
+    right: 50%;
+  }
+  .col-ms-pull-5 {
+    right: 41.66666667%;
+  }
+  .col-ms-pull-4 {
+    right: 33.33333333%;
+  }
+  .col-ms-pull-3 {
+    right: 25%;
+  }
+  .col-ms-pull-2 {
+    right: 16.66666667%;
+  }
+  .col-ms-pull-1 {
+    right: 8.33333333%;
+  }
+  .col-ms-pull-0 {
+    right: auto;
+  }
+  .col-ms-push-12 {
+    left: 100%;
+  }
+  .col-ms-push-11 {
+    left: 91.66666667%;
+  }
+  .col-ms-push-10 {
+    left: 83.33333333%;
+  }
+  .col-ms-push-9 {
+    left: 75%;
+  }
+  .col-ms-push-8 {
+    left: 66.66666667%;
+  }
+  .col-ms-push-7 {
+    left: 58.33333333%;
+  }
+  .col-ms-push-6 {
+    left: 50%;
+  }
+  .col-ms-push-5 {
+    left: 41.66666667%;
+  }
+  .col-ms-push-4 {
+    left: 33.33333333%;
+  }
+  .col-ms-push-3 {
+    left: 25%;
+  }
+  .col-ms-push-2 {
+    left: 16.66666667%;
+  }
+  .col-ms-push-1 {
+    left: 8.33333333%;
+  }
+  .col-ms-push-0 {
+    left: auto;
+  }
+  .col-ms-offset-12 {
+    margin-left: 100%;
+  }
+  .col-ms-offset-11 {
+    margin-left: 91.66666667%;
+  }
+  .col-ms-offset-10 {
+    margin-left: 83.33333333%;
+  }
+  .col-ms-offset-9 {
+    margin-left: 75%;
+  }
+  .col-ms-offset-8 {
+    margin-left: 66.66666667%;
+  }
+  .col-ms-offset-7 {
+    margin-left: 58.33333333%;
+  }
+  .col-ms-offset-6 {
+    margin-left: 50%;
+  }
+  .col-ms-offset-5 {
+    margin-left: 41.66666667%;
+  }
+  .col-ms-offset-4 {
+    margin-left: 33.33333333%;
+  }
+  .col-ms-offset-3 {
+    margin-left: 25%;
+  }
+  .col-ms-offset-2 {
+    margin-left: 16.66666667%;
+  }
+  .col-ms-offset-1 {
+    margin-left: 8.33333333%;
+  }
+  .col-ms-offset-0 {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 420px) {
+    .navbar-brand > img{
+        width: 220px;
+        margin-top: -9px;
+    }
+	.box_customer_col {
+		min-height: auto;
+	}
+
+  .box_map_content h3{
+    font-size: 17px;
+  }
+
+  .banner img {
+      margin: 0 auto 20px;
+  }
+
+  .text_bellow_extras.pc{
+    display: none;
+  }
+  .text_bellow_extras.sp{
+    display: initial;
+  }
+}
+
+@media (max-width: 375px) {
+	.box_product {
+		min-height: auto;
+	}
+}
+
+@media (max-width: 360px) {
+	.navbar-brand {
+		width: 220px;
+	}
+}
+
+@media (max-width: 320px) {
+	.navbar-brand {
+		width: 220px;
+	}
+    .navbar-brand > img{
+        width: 200px;
+        margin-top: -7px;
+    }
+	ul.nav_lang li{
+		width: 20px;
+	}
+
+	.nav > li > a > img {
+		width: 100%;
+	}
+
+  ul.nav_lang li > a, ul.qtranxs_language_chooser li > a > img {
+      width: 18px;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25),
+only screen and (min-device-pixel-ratio: 1.25),
+only screen and (min-resolution: 200dpi),
+only screen and (min-resolution: 1.25dppx) {
+ -webkit-font-smoothing: subpixel-antialiased;
+}
+

@@ -63,3 +63,24 @@ Hosting:
 Copy:
 -       scp -P 32768 -r fudosanking@103.9.92.69:/var/www/starmica-r.co.jp /home/ec2-user
 -       scp -r webapp1.intra.fudosan-king.jp:/home/ec2-user/starmica-r.co.jp ~/Desktop
+
+Namita VietNam
+======
+Shared Host Information:
+-       IP: 133.18.34.114
+-       Port ssh: 10022
+-       Login Name: kir824922
+-       Via Public Key (namitavn.key)
+
+-       Login Name (wp-admin): admin
+-       Password: rnUq4YJ5rD7hmt9#(I
+
+
+Mysql:
+-       https://mysql.kagoya.com/mysql56s-21/
+-       Host: mysql56s-21.kagoya.net
+-       User: kir824922
+-       Password: dtg-pz2-KNB-FLQ
+-       DB Name: kir824922_namita-vn
+
+

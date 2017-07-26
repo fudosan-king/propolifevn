@@ -59,7 +59,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="optical">
 <a href="<?php echo get_permalink(get_page_by_path('about'));?>" class="" style="display:block">
 <div class="thumb">
-<p style="padding:0px 40px;color:#000000" align="justify">ベトナムホーチミンで会社設立ライセンス取得・賃貸不動産紹介・内装工事・WEBサイト制作などを行っているプロポライフベトナムのコーポレートサイトです。ベトナム進出時も進出後も企業様、働かれる方をサポートさせて頂いております。
+<p style="padding:0px 40px;color:#000000" align="justify">
+    ベトナムホーチミンで会社設立・ライセンス・賃貸不動産仲介・内装工事・WEBサイト制作などを中心に行っているプロポライフベトナムのコーポレートサイトです。ベトナム進出時、進出後の企業様、働かれる方をサポートさせて頂いております。
 </p>
 <!-- <div class="tel"><?php echo $hl[0];?></div> -->
 <div class="fa-right"><i class="fa fa-angle-right fa-3x" style="color: #000000;"></i><div class="clearfix"></div></div>
@@ -76,8 +77,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 proCol"><a class="thumbnail green" href="<?php echo get_permalink(264);?>">
-<h2 class="title">ロータスサービス事業部<br>進出トータルコーディネート<br>会社設立<br>ライセンス取得・変更<br>労働許可証・ビザ</h2>
-<p>ロータスサービス事業部では、会社設立・事業ライセンス・労働許可証・ビザの取得から進出のトタールコーディネートまで進出支援経験豊富な日本人担当者がお手伝いをしております。</p></a>
+<h2 class="title">
+ロータスサービス事業部 <br>
+進出スタートアップ支援 <br>
+労働許可証・ベトナムビザ
+</h2>
+<p>ロータスサービス事業部では、進出時の会社設立から開業までに準備すべきことまでをサポートしております。</p></a>
 </div>
 
 <div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
@@ -88,9 +93,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="col-lg-2 col-md-2 col-xs-6 proCol">
 <a class="thumbnail yellow" href="cat-chronicle/reform-office">
 <h2 class="title"><img src="<?php bloginfo( 'template_directory' );?>/images/logo-chronicle.png" class="img-responsive" width="200" height="0" alt="">
-クロニクルリフォーム事業部<br>内装デザイン設計施工
+クロニクルリフォーム事業部 <br>
+オフィスの内装デザイン <br>
+設計施工
 </h2>
-<p>クロニクルリフォーム事業部では、ベトナムホーチミン市でデザイン性と機能性がある快適なオフィス、店舗、住宅の内装デザイン、設計施工までをワンストップでご提供しております。</p>
+<p>クロニクルリフォーム事業部では、デザイン性、機能性ある快適なオフィス空間のご提供を行っております。</p>
 <div class="fa-right"><i class="fa fa-angle-right fa-3x"></i></div>
 </a>
 </div>
@@ -120,9 +127,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="col-lg-2 col-md-2 col-xs-6 proCol">
 <a class="thumbnail blue" href="<?php echo get_permalink(get_page_by_path('web-step'));?>">
 <h2 class="title"><img src="<?php bloginfo( 'template_directory' );?>/images/web-logo.png" class="img-responsive pull-left" width="50" height="0" style="margin-right:10px;" alt="">
-<span class="pull-left">WEB DESIGN事業部<br>WEBサイト制作<br>広告支援</span><div class="clearfix"></div>
+<span class="pull-left">
+WEB DESIGN事業部 <br>
+WEBサイト制作 <br>
+WEB広告支援
+</span><div class="clearfix"></div>
 </h2>
-<p>WEB DESIGN事業部では、ベトナムホーチミン市で集客の柱となる良質なWEBサイトの制作、インターネットを利用した広告のデザインをご提供しております。</p>
+<p>WEB DESIGN事業部では、割安WEBサイトのご提供とWEB広告のお手伝いを行っております。</p>
 <div class="fa-right"><i class="fa fa-angle-right fa-3x"></i></div>
 </a>
 </div>
@@ -153,8 +164,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <div class="col-lg-2 col-md-2 col-xs-6 proCol">
 <a class="thumbnail black" href="<?php echo get_permalink(get_page_by_path('aodaihousing-support')); ?>" target="_blank">
-<h2 class="title">アオザイハウジング事業部<br>住居オフィス<br>賃貸不動産仲介</h2>
-<p style="margin-bottom:20px;">アオザイハウジングでは、ベトナムホーチミン市のオフィス・サービスアパート・コンドミ二アムを紹介手数料無料でご紹介しております。</p>
+<h2 class="title">
+アオザイハウジング事業部 <br>
+住居・オフィス <br>
+賃貸不動産仲介
+</h2>
+<p style="margin-bottom:20px;">アオザイハウジング事業部では、サービスアパート・コンドミニアム・オフィス・サービスオフィスの賃貸不動産仲介を行っております。</p>
 <div class="fa-right"><i class="fa fa-angle-right fa-3x"></i></div>
 </a>
 </div>

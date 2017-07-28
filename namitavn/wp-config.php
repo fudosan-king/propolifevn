@@ -26,16 +26,16 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define('DB_NAME', 'namitavn');
+define('DB_NAME', 'kir824922_namitavn');
 
 /** MySQL データベースのユーザー名 */
-define('DB_USER', 'root');
+define('DB_USER', 'kir824922');
 
 /** MySQL データベースのパスワード */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'dtg-pz2-KNB-FLQ');
 
 /** MySQL のホスト名 */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'mysql56s-21.kagoya.net');
 
 /** データベースのテーブルを作成する際のデータベースの文字セット */
 define('DB_CHARSET', 'utf8mb4');
@@ -61,6 +61,9 @@ define('SECURE_AUTH_SALT', 'dM|Kf~;a*G#MeL:gBV~XBe>YH!v,L-q8a^M]PxT4e;5@*x}MMg44
 define('LOGGED_IN_SALT',   'D+<+/p#Z|983ldXrU|aZtE`uq;z;>dUwC-o,U~`s}`GKF,zW!Z]dU(6 vdjZ{Rcl');
 define('NONCE_SALT',       '%=T#)&mOu|&SV7mQ:y[zWBFKV>%hK>:6wLkU}Ry8&t69pC)8t-h f@Nzj9?#MJ6m');
 
+// define('WP_HOME', 'http://www.namita-vn.com');
+// define('WP_SITEURL', 'http://www.namita-vn.com');
+
 /**#@-*/
 
 /**
@@ -81,7 +84,7 @@ $table_prefix  = 'wp_';
  *
  * @link http://wpdocs.osdn.jp/WordPress%E3%81%A7%E3%81%AE%E3%83%87%E3%83%90%E3%83%83%E3%82%B0
  */
-define('WP_DEBUG', true);
+define('WP_DEBUG', false);
 
 /* 編集が必要なのはここまでです ! WordPress でブログをお楽しみください。 */
 

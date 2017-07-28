@@ -26,16 +26,16 @@
 
 // ** MySQL 設定 - この情報はホスティング先から入手してください。 ** //
 /** WordPress のためのデータベース名 */
-define('DB_NAME', 'kir824922_namitavn');
+define('DB_NAME', 'namitavn');
 
 /** MySQL データベースのユーザー名 */
-define('DB_USER', 'kir824922');
+define('DB_USER', 'root');
 
 /** MySQL データベースのパスワード */
-define('DB_PASSWORD', 'dtg-pz2-KNB-FLQ');
+define('DB_PASSWORD', '');
 
 /** MySQL のホスト名 */
-define('DB_HOST', 'mysql56s-21.kagoya.net');
+define('DB_HOST', 'localhost');
 
 /** データベースのテーブルを作成する際のデータベースの文字セット */
 define('DB_CHARSET', 'utf8mb4');
@@ -81,7 +81,7 @@ $table_prefix  = 'wp_';
  *
  * @link http://wpdocs.osdn.jp/WordPress%E3%81%A7%E3%81%AE%E3%83%87%E3%83%90%E3%83%83%E3%82%B0
  */
-define('WP_DEBUG', false);
+define('WP_DEBUG', true);
 
 /* 編集が必要なのはここまでです ! WordPress でブログをお楽しみください。 */
 

@@ -14,8 +14,8 @@
         $terms = wp_get_post_terms( $post->ID, 'nmt-category');
         $category = $terms[0]->name;
       }
-      if (has_term( '', 'nmt-vendor' )){
-        $terms = wp_get_post_terms( $post->ID, 'nmt-vendor');
+      if (has_term( '', 'nmt-product-ven' )){
+        $terms = wp_get_post_terms( $post->ID, 'nmt-product-ven');
         $vendor = $terms[0]->name;
       }
  ?>
@@ -59,8 +59,10 @@
                 <div class="col-lg-5 col-md-5 col-sm-6 col-xs-12">
                     <h3 class="title_red"><?php the_title(); ?></h3>
                     <p>* <?php echo get_post_meta($post->ID, 'product_no', true ); ?><br>
-                    * <?php echo $category; ?><br>
-                    * <?php echo $vendor; ?></p>
+
+			<?php echo $category != 'Undefined' ? '* '.$category.'<br>' : '' ?>
+			<?php echo $vendor != 'Undefined' ? '* '.$vendor : '' ?>
+</p>
                     <div class="content mCustomScrollbar" data-mcs-theme="dark">
 
                         <?php

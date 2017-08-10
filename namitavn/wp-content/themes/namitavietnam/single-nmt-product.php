@@ -60,9 +60,9 @@
                     <h3 class="title_red"><?php the_title(); ?></h3>
                     <p>* <?php echo get_post_meta($post->ID, 'product_no', true ); ?><br>
 
-			<?php echo $category != 'Undefined' ? '* '.$category.'<br>' : '' ?>
-			<?php echo $vendor != 'Undefined' ? '* '.$vendor : '' ?>
-</p>
+                  			<?php echo ($category != 'Undefined' && !empty($category)) ? '* '.$category.'<br>' : ''; ?>
+                  			<?php echo ($vendor != 'Undefined' && !empty($vendor)) ? '* '.$vendor : ''; ?>
+                    </p>
                     <div class="content mCustomScrollbar" data-mcs-theme="dark">
 
                         <?php

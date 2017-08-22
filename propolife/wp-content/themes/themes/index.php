@@ -82,7 +82,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 進出スタートアップ支援 <br>
 労働許可証・ベトナムビザ
 </h2>
-<p>ロータスサービス事業部では、進出時の会社設立から開業までに準備すべきことまでをサポートしております。</p></a>
+<p>ロータスサービス事業部では、進出時の会社設立から開業までに準備すべきことまでを経験豊富な日本人担当者、弁護士、会計資格保有者でサポートしております。</p></a>
 </div>
 
 <div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>

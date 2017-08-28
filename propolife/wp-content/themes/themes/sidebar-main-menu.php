@@ -19,6 +19,7 @@
 ?>
 </a>
 </h1>
+<a href="tel:+842838275068" class="call-sp hidden-lg available-xs"><img src="<?php bloginfo( 'template_directory' );?>/images/call.png" class="img-responsive" alt="Call"></a>
 </div>
 
 <div class="collapse navbar-collapse navbar-right" id="navbar-collapse">

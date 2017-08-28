@@ -15,6 +15,11 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @media (min-width: 768px) and (max-width: 991px) {.bgColor .col-xs-6{padding:0px;}.staff .img-circle{width:65%}.navbar ul li a{padding: 10px 5px;}}
 @media (min-width: 992px) and (max-width: 1199px) {.staff .img-circle{width:65%}}
 @media (max-width: 767px){
+.call-sp {
+  position: relative;
+  float: right;
+  margin-top: 21px;
+}
 .center-block{text-align:center}
 .navbar-toggle{padding-right:0px;margin-right:0px;padding: 21px 10px;}
 .navbar-nav > li > a {line-height:normal !important;color:#ffffff;text-align:center}

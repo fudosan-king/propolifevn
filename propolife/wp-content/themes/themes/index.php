@@ -91,7 +91,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="row">
 
 <div class="col-lg-2 col-md-2 col-xs-6 proCol">
-<a class="thumbnail yellow" href="cat-chronicle/reform-office">
+<a class="thumbnail yellow" href="cat-chronicle/オフィスの内装工事">
 <h2 class="title"><img src="<?php bloginfo( 'template_directory' );?>/images/logo-chronicle.png" class="img-responsive" width="200" height="0" alt="">
 クロニクルリフォーム事業部 <br>
 オフィスの内装デザイン <br>
@@ -103,7 +103,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 <div class="col-lg-2 col-md-2 col-xs-6 proCol">
-<a class="thumbnail" href="cat-chronicle/reform-office">
+<a class="thumbnail" href="cat-chronicle/オフィスの内装工事">
 <div class="thumb">
 
 <div id="slider1" style="position: relative; width:400px;height:400px; overflow: hidden;">

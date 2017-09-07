@@ -1,4 +1,4 @@
-<?php if(get_query_var('cat-chronicle')=='reform-office' || get_query_var('cat-chronicle')=='reform-home'){?>
+<?php if(get_queried_object()->term_id=='2' || get_queried_object()->term_id=='1'){?>
 
 <div class="col-lg-3"></div>
 <div class="col-lg-2 col-md-4 col-sm-4" align="center">
@@ -27,7 +27,7 @@
 <div class="col-lg-3"></div>
 <?php }?>
 
-<?php if(get_query_var('cat-chronicle')=='reform-interior'){?>
+<?php if(get_queried_object()->term_id=='6'){?>
 <div class="col-lg-4 col-md-4 col-sm-4" align="center">
 <div style="background-color:#000000;color:#ffffff"><img src="<?php bloginfo( 'template_directory' );?>/images/people-2.jpg" class="img-responsive" />
 <div style="" class="per-name">Mr. Suzuki Hideaki</div>

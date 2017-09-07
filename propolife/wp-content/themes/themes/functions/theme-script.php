@@ -65,7 +65,7 @@ jQuery(function($) {
 <?php } add_action('wp_footer','fancybox');?>
 <?php
 function scriptBanner(){global $post;
-	if(is_tax('cat-chronicle') || is_page('chronicle') || (is_singular('support') && $post->ID==264 || $post->ID==266 || $post->ID==267 || $post->ID==1530) || $post->ID==407 || is_page('web-step') || is_page('web') || is_page('development')){
+	if(is_tax('cat-chronicle') || is_page('chronicle') || (is_singular('support') && $post->ID==264 || $post->ID==266 || $post->ID==267 || $post->ID==1530) || $post->ID==407 || is_page(370) || is_page(13) || is_page(454)){
 	?>
 <script>
 jQuery(document).ready(function ($) {

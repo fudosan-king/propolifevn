@@ -15,7 +15,7 @@ $listtext = array(
 6=>"We always make design and construct"
 );
 if(is_page()){
-if(is_page('web-step') || is_page('web') || is_page('development')){?>
+if(is_page(370) || is_page(13) || is_page(454)){?>
 <div><img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/temps/2.jpg" /></div>
 <div><img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/temps/1.jpg" /></div>
 <div><img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/temps/3.jpg" /></div>

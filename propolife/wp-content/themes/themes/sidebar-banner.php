@@ -24,7 +24,7 @@ if(is_page('web-step') || is_page('web') || is_page('development')){?>
 }
 }
 elseif(is_tax()){
-if(is_tax('cat-chronicle','reform-home')){
+if(is_tax('cat-chronicle','1')){
 ?>
 <div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/home/1.jpg" />
@@ -68,7 +68,7 @@ if(is_tax('cat-chronicle','reform-home')){
 </div>
 <?php
 }
-elseif(is_tax('cat-chronicle','reform-interior')){
+elseif(is_tax('cat-chronicle','6')){
 ?>
 <div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/1.jpg" />
@@ -111,7 +111,7 @@ elseif(is_tax('cat-chronicle','reform-interior')){
 </div>
 <?php
 }
-elseif(is_tax('cat-chronicle','reform-office')){
+elseif(is_tax('cat-chronicle','2')){
 ?>
 <div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/1.jpg" />
@@ -154,7 +154,7 @@ elseif(is_tax('cat-chronicle','reform-office')){
 </div>
 <?php
 }
-elseif(is_tax('cat-chronicle','perth-design')){
+elseif(is_tax('cat-chronicle','13')){
 	?>
 <div>
 <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/1.jpg" />

@@ -11,7 +11,16 @@
 <div class="row">
 
 <?php
-$arg = array('post_type' => 'chronicle','orderby' => 'date','order' => 'asc','posts_per_page' =>-1,'taxonomy'=>'cat-chronicle','term'=>'perth-design');
+$arg = array('post_type' => 'chronicle','orderby' => 'date','order' => 'asc','posts_per_page' =>-1,
+    'tax_query' => array(
+        array(
+            'taxonomy' => 'cat-chronicle',
+            'field'    => 'term_id',
+            'terms'    => 13,
+            'operator' => 'IN',
+        )
+    )
+);
 $the_query = new WP_Query($arg);
 while ( $the_query->have_posts() ) : $the_query->the_post();
 ?>

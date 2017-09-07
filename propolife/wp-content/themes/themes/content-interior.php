@@ -22,7 +22,7 @@
 <div class="media" style="background-color:#000000;color:#ffffff">
 <div class="media-left"><img src="<?php bloginfo( 'template_directory' );?>/images/of.jpg" width="100" height="auto"></div>
 <div class="media-body" align="justify">
-<?php $term = get_term_by('slug','reform-office','cat-chronicle');?>
+<?php $term = get_term_by('term_id','2','cat-chronicle');?>
 <h5 class="media-heading" style="color:#ffffff;font-size:18px;"><?php echo $term->name;?></h5>
 </div>
 </div>
@@ -33,7 +33,7 @@
 <div class="media" style="background-color:#000000;color:#ffffff">
 <div class="media-left"><img src="<?php bloginfo( 'template_directory' );?>/images/h.jpg" width="100" height="auto"></div>
 <div class="media-body" align="justify">
-<?php $term = get_term_by('slug','reform-home','cat-chronicle');?>
+<?php $term = get_term_by('term_id','1','cat-chronicle');?>
 <h5 class="media-heading" style="color:#ffffff;font-size:18px;"><?php echo $term->name;?></h5>
 </div>
 </div>

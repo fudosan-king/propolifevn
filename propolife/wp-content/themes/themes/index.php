@@ -125,7 +125,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 <div class="col-lg-2 col-md-2 col-xs-6 proCol">
-<a class="thumbnail blue" href="<?php echo get_permalink(get_page_by_path('web-step'));?>">
+<a class="thumbnail blue" href="<?php echo get_permalink(370);?>">
 <h2 class="title"><img src="<?php bloginfo( 'template_directory' );?>/images/web-logo.png" class="img-responsive pull-left" width="50" height="0" style="margin-right:10px;" alt="">
 <span class="pull-left">
 WEB DESIGN事業部 <br>
@@ -139,7 +139,7 @@ WEB広告支援
 </div>
 
 <div class="col-lg-2 col-md-2 col-xs-6 proCol">
-<a class="thumbnail" href="<?php echo get_permalink(get_page_by_path('web-step'));?>" style="background: #0F68B6;">
+<a class="thumbnail" href="<?php echo get_permalink(370);?>" style="background: #0F68B6;">
 <div class="thumb">
 <div id="slider2" style="position: relative; width:400px;height:400px; overflow: hidden;">
 <div u="loading" style="position: absolute; top: 0px; left: 0px;">

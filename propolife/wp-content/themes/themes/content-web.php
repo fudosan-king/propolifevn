@@ -14,6 +14,12 @@ $dem=0;
 while ( $the_query->have_posts() ) : $the_query->the_post();
 $weburl = get_post_meta($post->ID,'web-url',true);
 $newtemp = get_post_meta($post->ID,'new-temp',true);
+
+if ($dem > 3){
+    echo '</div><div class="row">';
+    $dem = 0;
+}
+
 ?>
 
 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -32,13 +38,16 @@ $newtemp = get_post_meta($post->ID,'new-temp',true);
 </div>
 </div>
 
-<?php endwhile;wp_reset_query();?>
+<?php $dem++; endwhile;wp_reset_query();?>
 <div class="clearfix"></div>
 
-<?php echo htmlContactButton6();?>
-<div class="col-md-12" align="center"><h3 align="center">オリジナルWEBサイトはお打ち合わせ後お見積もりを出させて頂いております。テンプレートWEBサイトの価格はこちらになります。</h3></div>
-
 </div>
+
+<div class="row">
+    <?php echo htmlContactButton6();?>
+    <div class="col-md-12" align="center"><h3 align="center">オリジナルWEBサイトはお打ち合わせ後お見積もりを出させて頂いております。テンプレートWEBサイトの価格はこちらになります。</h3></div>
+</div>
+
 </div>
 </div>
 </div>
@@ -50,7 +59,7 @@ $newtemp = get_post_meta($post->ID,'new-temp',true);
 <div class="effect"><div class="container">
 <div class="row">
 <div class="col-lg-9">
-<?php 
+<?php
 if(has_post_thumbnail()){the_post_thumbnail('full',array('class'=>'img-responsive lotus-featured'));}
 the_content();
 ?>

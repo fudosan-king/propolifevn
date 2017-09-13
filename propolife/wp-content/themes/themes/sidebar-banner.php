@@ -172,15 +172,17 @@
                 }
                 elseif(is_tax('cat-chronicle','13')){
                    ?>
-                   <div>
-                    <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/1.jpg" />
-                    <div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:55%;top:115px; width:700px;text-align:right;">
-                        <span class="title-slide"><?php // echo $listtext[5];?></span><br><?php // echo $listtext[6];?>.
+
+
+                <div>
+                        <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/home/1.jpg" />
+                        <div u="caption" t="RTTS|T" d=-300 t2="B" class="textBig" style="left:150px; top: 330px;">
+                            <span class="title-slide"><?php // echo $listtext[5];?></span><br><?php // echo $listtext[6];?>.
+                        </div>
+                        <div u="caption" t="T|IB" t2="T" d=-300 class="captionOrange"  style="position:absolute; left:190px; top:250px;"><?php echo $listtext[2];?></div>
+                        <div u="caption" t="T|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; left:340px; top:250px;"><?php echo $listtext[3];?></div>
+                        <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="captionOrange" style="position: absolute; top:250px; left:484px;text-align: left;"><?php echo $listtext[4];?></div>
                     </div>
-                    <div u="caption" t="ZMF|10" d=-1300 class="captionOrange" style="left:67%;top:315px;"><?php echo $listtext[2];?></div>
-                    <div u="caption" t="CLIP|L" d=-300 class="captionBlack" style="left:74.5%;top:315px;text-align: center;"><?php echo $listtext[3];?></div>
-                    <a class="captionOrange" u="caption" t="CLIP|L" d=-300 href="#" style="left:82%;top:315px;"><?php echo $listtext[4];?></a>
-                </div>
 
                 <div>
                     <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/2.jpg" />
@@ -203,14 +205,16 @@
                     </div>
 
                     <div>
-                        <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/home/1.jpg" />
-                        <div u="caption" t="RTTS|T" d=-300 t2="B" class="textBig" style="left:150px; top: 330px;">
-                            <span class="title-slide"><?php // echo $listtext[5];?></span><br><?php // echo $listtext[6];?>.
-                        </div>
-                        <div u="caption" t="T|IB" t2="T" d=-300 class="captionOrange"  style="position:absolute; left:190px; top:250px;"><?php echo $listtext[2];?></div>
-                        <div u="caption" t="T|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; left:340px; top:250px;"><?php echo $listtext[3];?></div>
-                        <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="captionOrange" style="position: absolute; top:250px; left:484px;text-align: left;"><?php echo $listtext[4];?></div>
+                    <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/1.jpg" />
+                    <div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:55%;top:115px; width:700px;text-align:right;">
+                        <span class="title-slide"><?php // echo $listtext[5];?></span><br><?php // echo $listtext[6];?>.
                     </div>
+                    <div u="caption" t="ZMF|10" d=-1300 class="captionOrange" style="left:67%;top:315px;"><?php echo $listtext[2];?></div>
+                    <div u="caption" t="CLIP|L" d=-300 class="captionBlack" style="left:74.5%;top:315px;text-align: center;"><?php echo $listtext[3];?></div>
+                    <a class="captionOrange" u="caption" t="CLIP|L" d=-300 href="#" style="left:82%;top:315px;"><?php echo $listtext[4];?></a>
+                </div>
+
+
                     <?php
                 }
             }

@@ -41,12 +41,12 @@ Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span>2015</span>.
 <script src="<?php bloginfo( 'template_directory' );?>/js/validator.min.js"></script>
 <script src="<?php bloginfo( 'template_directory' );?>/js/viewportchecker.js"></script>
 <script type="text/javascript">
-jQuery(document).ready(function() {
-	jQuery('.effect').css('opacity','0').viewportChecker({
-	    classToAdd: 'visible animated fadeInUp',
-	    offset:10
-	   });
-});
+// jQuery(document).ready(function() {
+// 	jQuery('.effect').css('opacity','0').viewportChecker({
+// 	    classToAdd: 'visible animated fadeInUp',
+// 	    offset:10
+// 	   });
+// });
 </script>
 <?php if(is_page('lotus') || is_singular('lotus')){?>
 <script type="text/javascript">

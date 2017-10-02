@@ -16,7 +16,10 @@ endwhile;
 echo htmlContactButton6();
 ?>
 </div>
-<div class="panel-footer" align="center"><h4>TEL <?php echo $hl[0];?></h4></div>
+<div class="panel-footer" align="center">
+	<h4>ベトナム国内028 3827 5068</h4>
+	<h4>日本海外から+84 28 3827 5068（日本語）</h4>
+</div>
 </div>
 <?php get_sidebar('step-web');?>
 </div>

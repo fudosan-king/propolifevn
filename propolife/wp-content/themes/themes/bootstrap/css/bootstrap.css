@@ -3526,6 +3526,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 18px;
   line-height: 20px;
   height: 50px;
+  position: relative;
+  z-index: 100;
 }
 .navbar-brand:hover,
 .navbar-brand:focus {
@@ -3551,6 +3553,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   background-image: none;
   border: 1px solid transparent;
   border-radius: 4px;
+  z-index: 100;
 }
 .navbar-toggle:focus {
   outline: 0;

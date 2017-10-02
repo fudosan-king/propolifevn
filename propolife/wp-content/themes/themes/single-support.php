@@ -25,7 +25,11 @@ if($post->ID==268){echo htmlContactButton4();}
 if($post->ID!=267 && ($post->ID!=268)){echo htmlContactButton3();}
 ?>
 </div>
-<div class="panel-footer" align="center"><h4>TEL <?php echo $hl[2];?></h4></div>
+<div class="panel-footer" align="center">
+	<h4>ベトナム国内028 3824 1418</h4>
+	<h4>日本海外から+84(0)28 3824 1418(ロータスサービス直通・日本語)</h4>
+</div>
+
 </div>
 
 <?php if($post->ID==264){?>

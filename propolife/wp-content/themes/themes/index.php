@@ -185,7 +185,8 @@ WEB広告支援
 <div class="optical">
 <address>Address: <?php echo $lienhe['diachigmap'];?></address>
 <div style="padding:0px 40px 40px 40px;color:#000000">
-<div><?php echo $hl[0];?></div>
+<div>ベトナム国内 028 3827 5068<br>
+日本海外から +84 28 3827 5068（日本語）</div>
 </div>
 </div>
 </a>

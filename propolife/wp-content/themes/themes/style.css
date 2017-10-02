@@ -514,3 +514,20 @@ h3{text-transform:uppercase}
         padding-top: 75px;
     }
 }
+@media (max-width: 767px) {
+  .call-sp {
+      float: none;
+      display: block;
+      margin-top: 11px;
+  }
+  .call-sp img {
+      margin: 0 auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .call-sp {
+    float: right;
+    width: 60%;
+    margin-top: 18px;
+}

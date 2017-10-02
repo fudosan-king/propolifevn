@@ -12,7 +12,8 @@
 </div>
 <address><?php echo $lienhe['diachigmap'];?></address>
 <ul>
-<li><?php echo $hl[0];?></li>
+<li>ベトナム国内 028 3827 5068</li>
+<li>日本海外から +84 28 3827 5068（日本語）</li>
 </ul>
 Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span>2015</span>. <a href="http://propolife.co.jp" target="_blank">Privacy Policy</a>
 </div>

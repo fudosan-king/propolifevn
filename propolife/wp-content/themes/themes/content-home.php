@@ -114,7 +114,7 @@ echo '<p>'.nl2br($term->description).'</p>';
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><?php echo htmlContactButton2();?></div>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 <h5><strong>お電話でお問い合わせはこちら</strong></h5>
-<p>+84-(0)28-3824-1578（クロニクルリフォーム代表　日本語）<br>+84-(0)91-663-1088（日本人）</p>
+<p>ベトナム国内028-3824-1578<br>日本海外から+84-(0)28-3824-1578（クロニクルリフォーム直通・日本語）</p>
 </div>
 </div>
 </div>

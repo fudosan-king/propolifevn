@@ -16,7 +16,10 @@ endwhile;
 echo htmlContactButton6();
 ?>
 </div>
-<div class="panel-footer" align="center"><h4>TEL <?php echo $hl[0];?></h4></div>
+<div class="panel-footer" align="center">
+	<h4>ベトナム国内028 3824 1418</h4>
+	<h4>日本海外から+84(0)28 3824 1418(ロータスサービス直通・日本語)</h4>
+</div>
 </div>
 </div>
 <div class="col-lg-3"><?php get_sidebar('menu-web');?></div>

@@ -212,7 +212,7 @@ box-shadow: 0 0 0 0 rgba(255,255,255,0.2);
 -ms-transition: box-shadow .4s ease-in-out;
 transition: box-shadow .4s ease-in-out;opacity:0.5
 }
-	
+
 .bgColor-1 .thumb,.bgColor-2 .thumb,.bgColor-3 .thumb,.bgColor-4 .thumb{position:absolute;}
 .bgColor-1 .title,.bgColor-2 .title,.bgColor-3 .title,.bgColor-4 .title{font-size: 20px;margin-top: 15px;}
 

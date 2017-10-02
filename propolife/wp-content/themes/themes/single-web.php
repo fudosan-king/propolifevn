@@ -7,9 +7,9 @@
 <div class="panel panel-default">
 <div class="panel-heading" style="background-color:#ffffff"><h4><?php the_title();?></h4></div>
 <div class="panel-body">
-<?php 
+<?php
 $term_id = wp_get_post_terms($post->ID, 'cat-support', array("fields" => "ids"));
-$attachID = get_tax_meta($term_id[0],'tax_thumbnail',true);	
+$attachID = get_tax_meta($term_id[0],'tax_thumbnail',true);
 $thumbUrl = wp_get_attachment_image_src($attachID,'full');
 ?>
 <?php
@@ -20,7 +20,10 @@ endwhile;
 echo htmlContactButton6();
 ?>
 </div>
-<div class="panel-footer" align="center"><h4>TEL <?php echo $hl[2];?></h4></div>
+<div class="panel-footer" align="center">
+	<h4>ベトナム国内028 3827 5068</h4>
+	<h4>日本海外から+84 28 3827 5068（日本語）</h4>
+</div>
 </div>
 <?php get_sidebar('step-web');?>
 </div>

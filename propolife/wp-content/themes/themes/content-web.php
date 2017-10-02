@@ -56,7 +56,7 @@ if ($dem > 3){
 <div align="center" style="margin-bottom:30px"><img src="<?php bloginfo( 'template_directory' );?>/images/price.jpg" class="img-responsive"  alt="ご利用料金"/></div>
 <hr>
 
-<div class="effect"><div class="container">
+<div class="effect visible animated fadeInDown"><div class="container">
 <div class="row">
 <div class="col-lg-9">
 <?php

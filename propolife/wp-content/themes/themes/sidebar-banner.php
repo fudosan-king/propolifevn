@@ -24,6 +24,12 @@
         }
     }
     elseif(is_tax()){
+
+        // 内装サービスについて | cat-chronicle : 6
+        // オフィスの内装工事 | cat-chronicle : 2
+        // 住居の内装工事 | cat-chronicle : 1
+        // パースデザイン制作 | cat-chronicle : 13
+
         if(is_tax('cat-chronicle','1')){
             ?>
             <div>
@@ -93,7 +99,7 @@
             </div> -->
 
             <div>
-                <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/home/2.jpg" />
+                <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/6.jpg" />
                 <div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:24%;top:425px;">
                     <span class="title-slide"><?php echo $listtext[0];?></span><br><?php echo $listtext[1];?>.</div>
                     <div u="caption" t="MCLIP|T" t2="T" class="captionOrange" d=-450 style="left:505px;top:250px;"><?php echo $listtext[2];?></div>
@@ -114,7 +120,7 @@
 
 
                 <div>
-                    <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/home/4.jpg" />
+                    <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/5.jpg" />
                     <div u="caption" t="RTTS|T" d=-300 t2="B" class="textBig" style="left:150px; top: 330px;">
                         <span class="title-slide"><?php echo $listtext[0];?></span><br><?php echo $listtext[1];?>.
                     </div>
@@ -194,7 +200,7 @@
                     </div>
 
                     <div>
-                        <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/3.jpg" />
+                        <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/8.jpg" />
                         <div u="caption" t="T" t2="NO" class="textBig" style="left:150px; top:120px;">
                             <span class="title-slide"><?php // echo $listtext[5];?></span><br><?php // echo $listtext[6];?>.
                         </div>
@@ -205,7 +211,7 @@
                     </div>
 
                     <div>
-                    <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/1.jpg" />
+                    <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/7.jpg" />
                     <div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:55%;top:115px; width:700px;text-align:right;">
                         <span class="title-slide"><?php // echo $listtext[5];?></span><br><?php // echo $listtext[6];?>.
                     </div>

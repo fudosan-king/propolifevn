@@ -1,11 +1,6 @@
 <div align="center" class="ct-right">
 <a href="<?php echo get_permalink(get_page_by_path('contact')); ?>">
-<img src="<?php bloginfo( 'template_directory' );?>/images/s1.png" class="img-responsive">
-<div class="caption" align="center" style="margin-bottom: 0px;">
-
-<div class="title"><h4 style="font-weight: bold; color: #fff">WEB からのお問い合わせはこちらから</h4></div>
-
-</div>
+<img style="width: 100%" src="<?php bloginfo( 'template_directory' );?>/images/banner_right.jpg" class="img-responsive">
 <div align="center" style="border: solid 1px #4dd0e4;">
 <div><h5 style="font-weight: bold;">電話でのお問い合わせはこちら</h5></div>
 

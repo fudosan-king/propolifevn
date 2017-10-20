@@ -1,7 +1,7 @@
-echo '\n### ### [LYS Box - K Group] ### ###\n'
+echo '\n### ### [FGM Group - KN] ### ###\n'
 echo 'Parameters Description:  change_env.sh [param]\n' ;
 
-case $1 in 
+case $1 in
     -golive)
         if [ -f "wp-config.golive.php" ] ; then
             mv wp-config.php wp-config.dev.php

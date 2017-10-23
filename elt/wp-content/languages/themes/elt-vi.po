@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: ELT Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: Sat Sep 19 2015 09:53:24 GMT+0700 (ICT)\n"
-"PO-Revision-Date: Sat Sep 19 2015 10:13:01 GMT+0700 (ICT)\n"
+"PO-Revision-Date: Wed Oct 05 2016 16:33:25 GMT+0700 (ICT)\n"
 "Last-Translator: admin <tam@fudosan-king.jp>\n"
 "Language-Team: \n"
 "Language: Vietnamese\n"
@@ -22,68 +22,23 @@ msgstr ""
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
 "X-Loco-Target-Locale: vi_VN"
 
-#: ../functions.php:296 ../functions.php:385
-msgid "その他の製品"
-msgstr ""
-
-#: ../functions.php:302
-msgid "あなたの玄関口に毎週配信！"
-msgstr ""
-
-#: ../functions.php:350 ../functions.php:433
-msgid "続きを読みます"
-msgstr ""
-
-#: ../functions.php:485 ../functions.php:494 ../functions.php:503 ../functions.
-#: php:512
-msgid "食肉の加工"
-msgstr ""
-
-#: ../functions.php:537
-msgid ""
-"アドレス: Đường Trung tâm, KCN Long Hậu mở rộng, Xã Long Hậu, Huyện Cần Giuộc, "
-"Long An"
-msgstr ""
-
-#: ../functions.php:561 ../header.php:91 ../index.php:90
-msgid "私たちのサービス"
-msgstr ""
-
-#: ../functions.php:594
-msgid "当社のクライアント"
-msgstr ""
-
-#: ../functions.php:649
-#, php-format
-msgid "Page %s"
-msgstr ""
-
-#: ../header.php:72
-msgid "プロダクト"
-msgstr ""
-
-#: ../header.php:92 ../index.php:100
-msgid "クライアント"
-msgstr ""
-
-#: ../header.php:93
-msgid "お問い合わせ"
-msgstr ""
-
-#: ../index.php:57
-msgid "食品新鮮な"
-msgstr ""
-
-#: ../index.php:60
-msgid "すべての家族のために必要な"
-msgstr ""
-
-#: ../index.php:72
-msgid "ELT Vietnam について"
+#. Name of the template
+msgid "AboutPage"
 msgstr ""
 
 #. Name of the template
-msgid "AboutPage"
+msgid "QualityPage"
+msgstr ""
+
+#: ../header.php:41 ../header.php:42
+msgid ""
+"ベトナムホーチミン市至近に自社の加工工場を持つ、肉の総合商社ELT "
+"VIETNAM公式HPです。精肉業者として、新鮮なお肉を直接輸入し、業務用お肉の仕入れ向けからご家庭の食卓向けまで、手間なくすぐに使えるように加工をして、"
+"ご提供しております。"
+msgstr ""
+
+#: ../header.php:43
+msgid "ホーチミン,ベトナム,精肉,和牛,豚肉,輸入,肉商社,肉仕入れ,加工工場,ELTベトナム,ELT VIETNAM"
 msgstr ""
 
 #. Name of the template
@@ -91,11 +46,74 @@ msgid "ClientsPage"
 msgstr ""
 
 #. Name of the template
-msgid "ContactPage"
+msgid "MessagePage"
 msgstr ""
 
 #. Name of the template
 msgid "ServicesPage"
+msgstr ""
+
+#. Name of the template
+msgid "ContactPage"
+msgstr ""
+
+#: ../functions.php:354 ../functions.php:437
+msgid "続きを読みます"
+msgstr "Xem thêm"
+
+#: ../functions.php:558
+msgid "ELT VIETNAM CO.,LTD概要"
+msgstr ""
+
+#: ../functions.php:562
+msgid "営業時間:月曜日 – 金曜日  8:00 - 17:00"
+msgstr ""
+
+#: ../functions.php:566
+msgid ""
+"アドレス: Lot M-5A, Trung Tam st, Long Hau Expand lP, Long Hau Commune, Can "
+"Giuoc Dist, Long An Province"
+msgstr ""
+
+#: ../functions.php:571
+msgid "電話"
+msgstr ""
+
+#: ../functions.php:578
+msgid "＊自社加工工場は、ベトナムホーチミン市より車で40分程度の中心地からとても近いロンハウ工業団地内にございます。"
+msgstr ""
+
+#: ../functions.php:615
+msgid ""
+"温度管理、衛生管理が徹底した自社加工工場で、高品質の新鮮なお肉をお客様がすぐに使えるようにカット加工、ミンチ加工、パン粉付け加工、加熱加工などの加工をいた"
+"します。お客様が調理場で均一に加工する手間とコストの負担を省きます。"
+msgstr ""
+
+#: ../functions.php:630
+msgid "鮮度を保った状態でお肉をお届け致します。日本通運様と配送に関する業務提携を行い、食料品スーパー様、飲食店様、ご家庭などに柔軟に個別配送を行っております。"
+msgstr ""
+
+#: ../functions.php:645
+msgid ""
+"お肉の加工以外にも様々な商品作りのご相談が可能です。新鮮な野菜、魚、鶏肉なども仕入れることができるので、焼肉セットや鍋セットなどの商品作りにも対応可能です"
+"。"
+msgstr ""
+
+#: ../functions.php:725
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#. Name of the template
+msgid "FactoryPage"
+msgstr ""
+
+#: ../index.php:61
+msgid "品質管理された新鮮なお肉を手間なく使える状態でお届けしております。"
+msgstr ""
+
+#: ../index.php:73
+msgid "ELTベトナム"
 msgstr ""
 
 #. Name of the theme
@@ -114,10 +132,82 @@ msgstr ""
 msgid "Propolife"
 msgstr ""
 
-#: ../header.php:69
-msgid "ホーム"
-msgstr "TRANG CHỦ"
+#: ../header.php:128
+msgid "メッセージ"
+msgstr "thông điệp"
 
-#: ../header.php:70 ../index.php:38 ../index.php:80
+#: ../header.php:130
+msgid "品質"
+msgstr "phẩm chất"
+
+#: ../header.php:104
+msgid "ホーム"
+msgstr "Trang chủ"
+
+#: ../header.php:105 ../index.php:81
 msgid "私達について"
-msgstr "GIỚI THIỆU"
+msgstr "Giới thiệu"
+
+#: ../header.php:107
+msgid "プロダクト"
+msgstr "Sản phẩm"
+
+#: ../header.php:126 ../functions.php:601 ../index.php:91
+msgid "私たちのサービス"
+msgstr "Dịch vụ"
+
+#: ../header.php:127 ../index.php:101
+msgid "クライアント"
+msgstr "Khách hàng"
+
+#: ../header.php:134
+msgid "お問い合わせ"
+msgstr "Liên hệ"
+
+#: ../functions.php:300 ../functions.php:389
+msgid "その他の製品"
+msgstr "Các sản phẩm khác"
+
+#: ../functions.php:306
+msgid "あなたの玄関口に毎週配信！"
+msgstr "Giao hàng mỗi tuần đến tận nhà của bạn!"
+
+#: ../functions.php:489 ../functions.php:502 ../functions.php:515 ../functions.
+#: php:528
+msgid "食肉の加工"
+msgstr "Chế biến thịt"
+
+#: ../functions.php:494 ../functions.php:507 ../functions.php:520 ../functions.
+#: php:533
+msgid "当社では、安心で安全な商品とサービスを通じて、 常にお客様に満足して頂く事を念頭に 置いています。"
+msgstr ""
+"Yên tâm với các sản phẩm an toàn và dịch vụ với khách hàng, bạn sẽ luôn luôn "
+"hài lòng với chúng tôi."
+
+#: ../functions.php:610
+msgid "加工"
+msgstr "Gia công"
+
+#: ../functions.php:625
+msgid "配送"
+msgstr "Giao hàng"
+
+#: ../functions.php:640
+msgid "パートナー"
+msgstr "Đối tác"
+
+#: ../functions.php:658
+msgid "当社のクライアント"
+msgstr "Khách hàng của chúng tôi"
+
+#: ../functions.php:668
+msgid "レストラン"
+msgstr "Nhà hàng"
+
+#: ../functions.php:681
+msgid "ホテル"
+msgstr "Khách sạn"
+
+#: ../functions.php:694
+msgid "ショップ"
+msgstr "Cửa hàng"

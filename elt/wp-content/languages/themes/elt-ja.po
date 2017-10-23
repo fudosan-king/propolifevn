@@ -60,7 +60,7 @@ msgstr ""
 
 #: ../header.php:69
 msgid "ホーム"
-msgstr ""
+msgstr "Home"
 
 #: ../header.php:70 ../index.php:38 ../index.php:80
 msgid "私達について"

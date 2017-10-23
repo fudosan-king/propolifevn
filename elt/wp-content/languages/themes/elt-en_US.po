@@ -1,0 +1,203 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ELT Theme\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: Sat Sep 19 2015 09:53:24 GMT+0700 (ICT)\n"
+"PO-Revision-Date: Wed Oct 05 2016 16:35:21 GMT+0700 (ICT)\n"
+"Last-Translator: admin <tam@fudosan-king.jp>\n"
+"Language-Team: \n"
+"Language: English\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
+"__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
+"_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
+"esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
+"esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Loco-Target-Locale: en_US"
+
+#. Name of the template
+msgid "AboutPage"
+msgstr ""
+
+#. Name of the template
+msgid "QualityPage"
+msgstr ""
+
+#: ../header.php:49 ../header.php:50
+msgid ""
+"ベトナムホーチミン市至近に自社の加工工場を持つ、肉の総合商社ELT "
+"VIETNAM公式HPです。精肉業者として、新鮮なお肉を直接輸入し、業務用お肉の仕入れ向けからご家庭の食卓向けまで、手間なくすぐに使えるように加工をして、"
+"ご提供しております。"
+msgstr ""
+
+#: ../header.php:51
+msgid "ホーチミン,ベトナム,精肉,和牛,豚肉,輸入,肉商社,肉仕入れ,加工工場,ELTベトナム,ELT VIETNAM"
+msgstr ""
+
+#. Name of the template
+msgid "ClientsPage"
+msgstr ""
+
+#. Name of the template
+msgid "MessagePage"
+msgstr ""
+
+#. Name of the template
+msgid "ServicesPage"
+msgstr ""
+
+#. Name of the template
+msgid "ContactPage"
+msgstr ""
+
+#: ../functions.php:300 ../functions.php:389
+msgid "その他の製品"
+msgstr "Other products"
+
+#: ../functions.php:306
+msgid "あなたの玄関口に毎週配信！"
+msgstr "It delivered weekly to your doorstep!"
+
+#: ../functions.php:354 ../functions.php:437
+msgid "続きを読みます"
+msgstr "Read more"
+
+#: ../functions.php:489 ../functions.php:502 ../functions.php:515 ../functions.
+#: php:528
+msgid "食肉の加工"
+msgstr ""
+
+#: ../functions.php:494 ../functions.php:507 ../functions.php:520 ../functions.
+#: php:533
+msgid "当社では、安心で安全な商品とサービスを通じて、 常にお客様に満足して頂く事を念頭に 置いています。"
+msgstr ""
+
+#: ../functions.php:558
+msgid "ELT VIETNAM CO.,LTD概要"
+msgstr ""
+
+#: ../functions.php:562
+msgid "営業時間:月曜日 – 金曜日  8:00 - 17:00"
+msgstr ""
+
+#: ../functions.php:566
+msgid ""
+"アドレス: Lot M-5A, Trung Tam st, Long Hau Expand lP, Long Hau Commune, Can "
+"Giuoc Dist, Long An Province"
+msgstr ""
+
+#: ../functions.php:571
+msgid "電話"
+msgstr ""
+
+#: ../functions.php:578
+msgid "＊自社加工工場は、ベトナムホーチミン市より車で40分程度の中心地からとても近いロンハウ工業団地内にございます。"
+msgstr ""
+
+#: ../functions.php:610
+msgid "加工"
+msgstr ""
+
+#: ../functions.php:615
+msgid ""
+"温度管理、衛生管理が徹底した自社加工工場で、高品質の新鮮なお肉をお客様がすぐに使えるようにカット加工、ミンチ加工、パン粉付け加工、加熱加工などの加工をいた"
+"します。お客様が調理場で均一に加工する手間とコストの負担を省きます。"
+msgstr ""
+
+#: ../functions.php:625
+msgid "配送"
+msgstr ""
+
+#: ../functions.php:630
+msgid "鮮度を保った状態でお肉をお届け致します。日本通運様と配送に関する業務提携を行い、食料品スーパー様、飲食店様、ご家庭などに柔軟に個別配送を行っております。"
+msgstr ""
+
+#: ../functions.php:640
+msgid "パートナー"
+msgstr ""
+
+#: ../functions.php:645
+msgid ""
+"お肉の加工以外にも様々な商品作りのご相談が可能です。新鮮な野菜、魚、鶏肉なども仕入れることができるので、焼肉セットや鍋セットなどの商品作りにも対応可能です"
+"。"
+msgstr ""
+
+#: ../functions.php:658
+msgid "当社のクライアント"
+msgstr ""
+
+#: ../functions.php:668
+msgid "レストラン"
+msgstr ""
+
+#: ../functions.php:681
+msgid "ホテル"
+msgstr ""
+
+#: ../functions.php:694
+msgid "ショップ"
+msgstr ""
+
+#: ../functions.php:725
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#. Name of the template
+msgid "FactoryPage"
+msgstr ""
+
+#. Name of the theme
+msgid "ELT Theme"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "https://www.propolife.co.jp/"
+msgstr ""
+
+#. Description of the theme
+msgid "Propolife VietNam"
+msgstr ""
+
+#. Author of the theme
+msgid "Propolife"
+msgstr ""
+
+#: ../header.php:112
+msgid "ホーム"
+msgstr "Home"
+
+#: ../header.php:113 ../index.php:89
+msgid "私達について"
+msgstr "About Us"
+
+#: ../header.php:115
+msgid "プロダクト"
+msgstr "Product"
+
+#: ../header.php:134 ../functions.php:601 ../index.php:99
+msgid "私たちのサービス"
+msgstr "Our service"
+
+#: ../header.php:135 ../index.php:109
+msgid "クライアント"
+msgstr "Customer"
+
+#: ../header.php:136
+msgid "メッセージ"
+msgstr "Message"
+
+#: ../header.php:138
+msgid "品質"
+msgstr "Quality"
+
+#: ../header.php:142
+msgid "お問い合わせ"
+msgstr "Contact"

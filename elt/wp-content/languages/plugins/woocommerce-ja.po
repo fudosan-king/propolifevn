@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WooCommerce\n"
 "Report-Msgid-Bugs-To: https://github.com/woothemes/woocommerce/issues\n"
-"POT-Creation-Date: 2015-08-14 02:36:08+00:00\n"
-"PO-Revision-Date: 2015-08-14 02:43+0000\n"
+"POT-Creation-Date: 2015-08-20 16:47:26+00:00\n"
+"PO-Revision-Date: 2015-08-20 16:49+0000\n"
 "Last-Translator: 田中　昌平 <shohei.tanaka@artisanworkshop.biz>\n"
 "Language-Team: Japanese (http://www.transifex.com/woothemes/woocommerce/language/ja/)\n"
 "MIME-Version: 1.0\n"
@@ -996,6 +996,10 @@ msgstr "ザンビア"
 #: i18n/countries.php:261
 msgid "Zimbabwe"
 msgstr "ジンバブエ"
+
+#: i18n/locale-info.php:351
+msgid "Consumption tax"
+msgstr ""
 
 #: i18n/states/AR.php:13
 msgid "Ciudad Aut&oacute;noma de Buenos Aires"
@@ -5126,35 +5130,41 @@ msgid "Fee"
 msgstr "費用"
 
 #: includes/abstracts/abstract-wc-order.php:1892
-#: includes/shortcodes/class-wc-shortcode-checkout.php:141
+#: includes/shortcodes/class-wc-shortcode-checkout.php:143
 #: templates/checkout/thankyou.php:53
 msgid "Payment Method:"
 msgstr "お支払方法:"
 
 #: includes/abstracts/abstract-wc-order.php:1898
-#: includes/shortcodes/class-wc-shortcode-checkout.php:136
+#: includes/shortcodes/class-wc-shortcode-checkout.php:138
 #: templates/checkout/thankyou.php:48
 msgid "Total:"
 msgstr "合計金額:"
 
-#: includes/abstracts/abstract-wc-order.php:2134
-msgid "Download file%s"
-msgstr "ダウンロードファイル%s"
+#: includes/abstracts/abstract-wc-order.php:2135
+#: templates/emails/plain/email-order-items.php:49
+msgid "Download %d"
+msgstr "ダウンロード %d"
+
+#: includes/abstracts/abstract-wc-order.php:2135
+#: templates/emails/plain/email-order-items.php:51
+msgid "Download"
+msgstr "ダウンロード"
 
 #. Plugin Name of the plugin/theme
 msgid "WooCommerce"
 msgstr "WooCommerce"
 
-#: includes/abstracts/abstract-wc-order.php:2219
+#: includes/abstracts/abstract-wc-order.php:2222
 msgid "Order status changed from %s to %s."
 msgstr "注文状況は %s から %s に変更されました。"
 
-#: includes/abstracts/abstract-wc-order.php:2477
+#: includes/abstracts/abstract-wc-order.php:2480
 msgid "Item #%s variation #%s stock reduced from %s to %s."
 msgstr "商品#%sのバリエーション#%sの在庫は%sに%sから減少しました。"
 
-#: includes/abstracts/abstract-wc-order.php:2479
-#: includes/class-wc-ajax.php:1374
+#: includes/abstracts/abstract-wc-order.php:2482
+#: includes/class-wc-ajax.php:1409
 msgid "Item #%s stock reduced from %s to %s."
 msgstr "商品 #%s の在庫数は %s から %s に減少"
 
@@ -5192,7 +5202,7 @@ msgstr "続きを読む"
 #: includes/abstracts/abstract-wc-product.php:626
 #: includes/abstracts/abstract-wc-product.php:637
 #: includes/abstracts/abstract-wc-product.php:659
-#: includes/class-wc-ajax.php:782 includes/class-wc-ajax.php:2451
+#: includes/class-wc-ajax.php:823 includes/class-wc-ajax.php:2486
 #: includes/class-wc-product-variation.php:527
 #: includes/class-wc-product-variation.php:537
 #: includes/class-wc-product-variation.php:553
@@ -5223,7 +5233,7 @@ msgstr "取り寄せの注文(予約注文など)が利用できます"
 
 #: includes/abstracts/abstract-wc-product.php:664
 #: includes/abstracts/abstract-wc-product.php:670
-#: includes/class-wc-ajax.php:783 includes/class-wc-ajax.php:2452
+#: includes/class-wc-ajax.php:824 includes/class-wc-ajax.php:2487
 #: includes/class-wc-product-variation.php:556
 #: includes/class-wc-product-variation.php:560
 msgid "Out of stock"
@@ -6071,92 +6081,92 @@ msgstr "申し訳ありませんが、セッションが期限切れになって
 msgid "Return to homepage"
 msgstr "HOMEに戻る"
 
-#: includes/class-wc-ajax.php:767 includes/class-wc-ajax.php:2434
+#: includes/class-wc-ajax.php:806 includes/class-wc-ajax.php:2469
 #: includes/gateways/simplify-commerce/class-wc-gateway-simplify-commerce.php:210
 msgid "Standard"
 msgstr "標準"
 
-#: includes/class-wc-ajax.php:776 includes/class-wc-ajax.php:2444
+#: includes/class-wc-ajax.php:816 includes/class-wc-ajax.php:2479
 msgid "Do not allow"
 msgstr "許可しない"
 
-#: includes/class-wc-ajax.php:777 includes/class-wc-ajax.php:2445
+#: includes/class-wc-ajax.php:817 includes/class-wc-ajax.php:2480
 msgid "Allow, but notify customer"
 msgstr "許可し、顧客に通知する"
 
-#: includes/class-wc-ajax.php:778 includes/class-wc-ajax.php:2446
+#: includes/class-wc-ajax.php:818 includes/class-wc-ajax.php:2481
 msgid "Allow"
 msgstr "許可する"
 
-#: includes/class-wc-ajax.php:1075
+#: includes/class-wc-ajax.php:1110
 msgid "File %d"
 msgstr "ファイル %d"
 
-#: includes/class-wc-ajax.php:1385
+#: includes/class-wc-ajax.php:1420
 msgid ""
 "No products had their stock reduced - they may not have stock management "
 "enabled."
 msgstr "商品在庫は減少していませんでした。- 在庫管理が有効になっていないかもしれません。"
 
-#: includes/class-wc-ajax.php:1426 includes/class-wc-ajax.php:2237
+#: includes/class-wc-ajax.php:1461 includes/class-wc-ajax.php:2272
 msgid "Item #%s stock increased from %s to %s."
 msgstr "商品 #%s の在庫数は %s から %s に増加"
 
-#: includes/class-wc-ajax.php:1436
+#: includes/class-wc-ajax.php:1471
 msgid ""
 "No products had their stock increased - they may not have stock management "
 "enabled."
 msgstr "商品在庫が増加していませんでした。- 在庫管理が有効になっていないかもしれません。"
 
-#: includes/class-wc-ajax.php:1455
+#: includes/class-wc-ajax.php:1490
 #: includes/widgets/class-wc-widget-product-categories.php:52
 #: templates/single-product-reviews.php:65
 msgid "Name"
 msgstr "名前"
 
-#: includes/class-wc-ajax.php:1455
+#: includes/class-wc-ajax.php:1490
 msgid "Value"
 msgstr "値"
 
-#: includes/class-wc-ajax.php:1705
+#: includes/class-wc-ajax.php:1740
 msgid "Delete note"
 msgstr "メモを削除"
 
-#: includes/class-wc-ajax.php:2177
+#: includes/class-wc-ajax.php:2212
 msgid "Invalid refund amount"
 msgstr "無効な払戻額"
 
-#: includes/class-wc-ajax.php:2222
+#: includes/class-wc-ajax.php:2257
 msgid "Refund failed"
 msgstr "払戻が失敗しました"
 
-#: includes/class-wc-ajax.php:2319
+#: includes/class-wc-ajax.php:2354
 msgid "Description is missing."
 msgstr "説明が入力されていません。"
 
-#: includes/class-wc-ajax.php:2322
+#: includes/class-wc-ajax.php:2357
 msgid "User is missing."
 msgstr "ユーザーが指定されていません。"
 
-#: includes/class-wc-ajax.php:2325
+#: includes/class-wc-ajax.php:2360
 msgid "Permissions is missing."
 msgstr "権限がありません。"
 
-#: includes/class-wc-ajax.php:2354
+#: includes/class-wc-ajax.php:2389
 msgid "API Key updated successfully."
 msgstr "APIキーを更新しました。"
 
-#: includes/class-wc-ajax.php:2385
+#: includes/class-wc-ajax.php:2420
 msgid ""
 "API Key generated successfully. Make sure to copy your new API keys now. You"
 " won't be able to see it again!"
 msgstr "APIキーが正常に生成されました。今、新しいAPIキーをコピーしてください。このキーは再表示されません!"
 
-#: includes/class-wc-ajax.php:2386
+#: includes/class-wc-ajax.php:2421
 msgid "Revoke Key"
 msgstr "キーの取り消し"
 
-#: includes/class-wc-ajax.php:2602
+#: includes/class-wc-ajax.php:2637
 msgid "Dismiss this notice."
 msgstr "この通知を非表示にする。"
 
@@ -6226,7 +6236,7 @@ msgstr "商品を表示及び管理"
 
 #: includes/class-wc-auth.php:164
 msgid "Invalid scope %s"
-msgstr ""
+msgstr "%sは無効な範囲（scope）です。"
 
 #: includes/class-wc-auth.php:169
 msgid "The %s is not a valid URL"
@@ -6252,7 +6262,7 @@ msgstr "APIは無効!"
 
 #: includes/class-wc-auth.php:337
 msgid "Invalid nonce verification"
-msgstr ""
+msgstr "無効なnonce検証"
 
 #: includes/class-wc-auth.php:348
 msgid "You do not have permissions to access this page!"
@@ -6658,7 +6668,7 @@ msgstr "無効なダウンロードリンク。"
 
 #: includes/class-wc-download-handler.php:98
 #: includes/class-wc-form-handler.php:558
-#: includes/shortcodes/class-wc-shortcode-checkout.php:163
+#: includes/shortcodes/class-wc-shortcode-checkout.php:165
 #: includes/shortcodes/class-wc-shortcode-my-account.php:108
 msgid "Invalid order."
 msgstr "無効な注文です"
@@ -6732,7 +6742,7 @@ msgstr "%sは在庫が少ないです。"
 
 #: includes/class-wc-emails.php:394
 msgid "There are %d left"
-msgstr ""
+msgstr "在庫が%d個残っています"
 
 #: includes/class-wc-emails.php:411
 msgid "Product out of stock"
@@ -6893,7 +6903,7 @@ msgstr "評価を選択してください"
 
 #: includes/class-wc-frontend-scripts.php:229
 msgid "Error processing checkout. Please try again."
-msgstr ""
+msgstr "支払処理でエラーが起こりました。再度やり直してください。"
 
 #: includes/class-wc-frontend-scripts.php:236
 #: includes/wc-template-functions.php:1626
@@ -6950,6 +6960,30 @@ msgstr "プレミアムカスタマーサポートに訪問する"
 #: includes/class-wc-install.php:706
 msgid "Premium Support"
 msgstr "プレミアムサポート"
+
+#: includes/class-wc-language-pack-upgrader.php:254
+#: includes/class-wc-language-pack-upgrader.php:257
+#: includes/class-wc-language-pack-upgrader.php:260
+msgid "Failed to install/update the translation:"
+msgstr "翻訳ファイルのインストール／アップデートに失敗しました："
+
+#: includes/class-wc-language-pack-upgrader.php:254
+msgid "Seems you don't have permission to do this!"
+msgstr "この作業を行なう権限が無いようです！"
+
+#: includes/class-wc-language-pack-upgrader.php:257
+msgid ""
+"An authentication error occurred while updating the translation. Please try "
+"again or configure your %sUpgrade Constants%s."
+msgstr "翻訳ファイルを更新中に認証エラーが発生しました。もう一度やり直すか、%sアップグレード設定%sを設定してください。"
+
+#: includes/class-wc-language-pack-upgrader.php:260
+msgid "Sorry but there is no translation available for your language =/"
+msgstr "申し訳ありませんが、利用可能な翻訳にあなたの言語は存在しておりません =/"
+
+#: includes/class-wc-language-pack-upgrader.php:267
+msgid "Translations installed/updated successfully!"
+msgstr "翻訳ファイルのインストール／アップデートが完了しました！"
 
 #: includes/class-wc-order.php:40 includes/wc-cart-functions.php:246
 msgid "(Includes %s)"
@@ -7472,7 +7506,7 @@ msgstr "[{site_title}] キャンセル注文 ({order_number})"
 
 #: includes/emails/class-wc-email-cancelled-order.php:110
 #: includes/emails/class-wc-email-customer-completed-order.php:138
-#: includes/emails/class-wc-email-customer-refunded-order.php:171
+#: includes/emails/class-wc-email-customer-refunded-order.php:174
 #: includes/emails/class-wc-email-new-order.php:117
 #: includes/emails/class-wc-email.php:475
 #: includes/gateways/bacs/class-wc-gateway-bacs.php:74
@@ -7486,7 +7520,7 @@ msgstr "有効化/無効化"
 
 #: includes/emails/class-wc-email-cancelled-order.php:112
 #: includes/emails/class-wc-email-customer-completed-order.php:140
-#: includes/emails/class-wc-email-customer-refunded-order.php:173
+#: includes/emails/class-wc-email-customer-refunded-order.php:176
 #: includes/emails/class-wc-email-new-order.php:119
 #: includes/emails/class-wc-email.php:477
 msgid "Enable this email notification"
@@ -7534,7 +7568,7 @@ msgstr "Eメール通知内に含まれる主な見出しを制御します。�
 
 #: includes/emails/class-wc-email-cancelled-order.php:137
 #: includes/emails/class-wc-email-customer-completed-order.php:172
-#: includes/emails/class-wc-email-customer-refunded-order.php:205
+#: includes/emails/class-wc-email-customer-refunded-order.php:208
 #: includes/emails/class-wc-email-new-order.php:144
 #: includes/emails/class-wc-email.php:495
 msgid "Email type"
@@ -7543,7 +7577,7 @@ msgstr "Eメール タイプ"
 #: includes/emails/class-wc-email-cancelled-order.php:139
 #: includes/emails/class-wc-email-customer-completed-order.php:174
 #: includes/emails/class-wc-email-customer-invoice.php:175
-#: includes/emails/class-wc-email-customer-refunded-order.php:207
+#: includes/emails/class-wc-email-customer-refunded-order.php:210
 #: includes/emails/class-wc-email-new-order.php:146
 #: includes/emails/class-wc-email.php:497
 msgid "Choose which format of email to send."
@@ -7584,10 +7618,10 @@ msgstr "{site_title}の注文（{order_date}）は完了しました。 - ファ
 #: includes/emails/class-wc-email-customer-invoice.php:154
 #: includes/emails/class-wc-email-customer-invoice.php:161
 #: includes/emails/class-wc-email-customer-invoice.php:168
-#: includes/emails/class-wc-email-customer-refunded-order.php:179
-#: includes/emails/class-wc-email-customer-refunded-order.php:186
-#: includes/emails/class-wc-email-customer-refunded-order.php:193
-#: includes/emails/class-wc-email-customer-refunded-order.php:200
+#: includes/emails/class-wc-email-customer-refunded-order.php:182
+#: includes/emails/class-wc-email-customer-refunded-order.php:189
+#: includes/emails/class-wc-email-customer-refunded-order.php:196
+#: includes/emails/class-wc-email-customer-refunded-order.php:203
 #: includes/emails/class-wc-email.php:483
 #: includes/emails/class-wc-email.php:490
 msgid "Defaults to <code>%s</code>"
@@ -7603,7 +7637,7 @@ msgstr "Eメール Heading (ダウンロード可能)"
 
 #: includes/emails/class-wc-email-customer-invoice.php:31
 msgid "Customer invoice"
-msgstr "請求書（管理者へ）"
+msgstr "請求書"
 
 #: includes/emails/class-wc-email-customer-invoice.php:32
 msgid ""
@@ -7634,31 +7668,31 @@ msgstr "メール件名"
 
 #: includes/emails/class-wc-email-customer-invoice.php:159
 msgid "Email Subject (paid)"
-msgstr ""
+msgstr "メール件名(paid)"
 
 #: includes/emails/class-wc-email-customer-invoice.php:166
 msgid "Email Heading (paid)"
-msgstr ""
+msgstr "メールヘッダー(paid)"
 
 #: includes/emails/class-wc-email-customer-invoice.php:173
 msgid "Email Type"
 msgstr "メールタイプ"
 
-#: includes/emails/class-wc-email-customer-new-account.php:32
+#: includes/emails/class-wc-email-customer-new-account.php:33
 msgid "New account"
 msgstr "新しいアカウント"
 
-#: includes/emails/class-wc-email-customer-new-account.php:33
+#: includes/emails/class-wc-email-customer-new-account.php:34
 msgid ""
 "Customer \"new account\" emails are sent to the customer when a customer "
 "signs up via checkout or account pages."
 msgstr "お客様の新しいアカウントの案内メールは会員登録や支払いの時の登録の際にお客様に送られます。"
 
-#: includes/emails/class-wc-email-customer-new-account.php:38
+#: includes/emails/class-wc-email-customer-new-account.php:39
 msgid "Your account on {site_title}"
 msgstr "{site_title} アカウント登録のお知らせ"
 
-#: includes/emails/class-wc-email-customer-new-account.php:39
+#: includes/emails/class-wc-email-customer-new-account.php:40
 msgid "Welcome to {site_title}"
 msgstr "ようこそ {site_title} へ"
 
@@ -7696,55 +7730,55 @@ msgstr "ご注文ありがとうございます"
 msgid "Your {site_title} order receipt from {order_date}"
 msgstr "{site_title} {order_date} 注文を受け付けいたしました"
 
-#: includes/emails/class-wc-email-customer-refunded-order.php:37
+#: includes/emails/class-wc-email-customer-refunded-order.php:40
 msgid "Your {site_title} order from {order_date} has been partially refunded"
 msgstr "{order_date}からの{site_title}の注文は部分的に返金されました"
 
-#: includes/emails/class-wc-email-customer-refunded-order.php:38
+#: includes/emails/class-wc-email-customer-refunded-order.php:41
 msgid "Your {site_title} order from {order_date} has been refunded"
 msgstr "{order_date}からの{site_title}の注文は返金されました"
 
-#: includes/emails/class-wc-email-customer-refunded-order.php:40
+#: includes/emails/class-wc-email-customer-refunded-order.php:43
 msgid "Your order has been fully refunded"
 msgstr "ご注文は、全額に返金されました"
 
-#: includes/emails/class-wc-email-customer-refunded-order.php:41
+#: includes/emails/class-wc-email-customer-refunded-order.php:44
 msgid "Your order has been partially refunded"
 msgstr "ご注文は、部分的に返金されました"
 
-#: includes/emails/class-wc-email-customer-refunded-order.php:45
+#: includes/emails/class-wc-email-customer-refunded-order.php:48
 msgid "Partially Refunded order"
 msgstr "一部返金注文"
 
-#: includes/emails/class-wc-email-customer-refunded-order.php:46
+#: includes/emails/class-wc-email-customer-refunded-order.php:49
 msgid ""
 "Order partially refunded emails are sent to customers when their orders are "
 "partially refunded."
 msgstr "注文が部分的に払い戻されたときに注文の一部返金電子メールがお客様に送信されます。"
 
-#: includes/emails/class-wc-email-customer-refunded-order.php:54
+#: includes/emails/class-wc-email-customer-refunded-order.php:57
 msgid "Refunded order"
 msgstr "払い戻し注文"
 
-#: includes/emails/class-wc-email-customer-refunded-order.php:55
+#: includes/emails/class-wc-email-customer-refunded-order.php:58
 msgid ""
 "Order refunded emails are sent to customers when their orders are marked "
 "refunded."
 msgstr "注文が払い戻しされた時にお客様に注文払い戻しメールが送られます。"
 
-#: includes/emails/class-wc-email-customer-refunded-order.php:177
+#: includes/emails/class-wc-email-customer-refunded-order.php:180
 msgid "Full Refund Subject"
 msgstr "全額払い戻し時の件名"
 
-#: includes/emails/class-wc-email-customer-refunded-order.php:184
+#: includes/emails/class-wc-email-customer-refunded-order.php:187
 msgid "Partial Refund Subject"
 msgstr "一部払い戻し時の件名"
 
-#: includes/emails/class-wc-email-customer-refunded-order.php:191
+#: includes/emails/class-wc-email-customer-refunded-order.php:194
 msgid "Full Refund Email Heading"
 msgstr "全額払い戻し時のヘッダー"
 
-#: includes/emails/class-wc-email-customer-refunded-order.php:198
+#: includes/emails/class-wc-email-customer-refunded-order.php:201
 msgid "Partial Refund Email Heading"
 msgstr "一部払い戻し時のヘッダー"
 
@@ -8282,7 +8316,7 @@ msgid ""
 "> My Selling Tools > Website Preferences) and then copy your identity token "
 "here. This will allow payments to be verified without the need for PayPal "
 "IPN."
-msgstr ""
+msgstr "必要に応じて「支払いデータ転送」(プロフィール>プロフィールと設定>マイ販売ツール>ウェブサイトの環境設定)を有効にしてIDトークンをここにコピーします。これは、PayPalのIPNを必要とせずに支払いを検証することができます。"
 
 #: includes/gateways/paypal/includes/settings-paypal.php:75
 msgid "Invoice Prefix"
@@ -8643,11 +8677,11 @@ msgstr "%s - 定期購入 for \"%s\""
 #: includes/shipping/flat-rate/class-wc-shipping-flat-rate.php:24
 #: includes/shipping/flat-rate/includes/settings-flat-rate.php:23
 msgid "Flat Rate"
-msgstr "定額料金"
+msgstr "定額送料"
 
 #: includes/shipping/flat-rate/class-wc-shipping-flat-rate.php:25
 msgid "Flat Rate Shipping lets you charge a fixed rate for shipping."
-msgstr ""
+msgstr "定額送料は出荷に対して固定の金額を請求できるようになります。"
 
 #: includes/shipping/flat-rate/includes/settings-flat-rate.php:7
 msgid "Enter a cost (excl. tax) or sum, e.g. <code>10 * [qty]</code>."
@@ -8718,7 +8752,7 @@ msgstr "配送クラス費用"
 #: includes/shipping/flat-rate/includes/settings-flat-rate.php:73
 msgid ""
 "These costs can optionally be added based on the %sproduct shipping class%s."
-msgstr ""
+msgstr "これらの費用は、必要に応じて、%s商品の配送クラス%sに基づいて追加することができます。"
 
 #: includes/shipping/flat-rate/includes/settings-flat-rate.php:80
 msgid "\"%s\" Shipping Class Cost"
@@ -8743,11 +8777,11 @@ msgstr "算出形式"
 
 #: includes/shipping/flat-rate/includes/settings-flat-rate.php:102
 msgid "Per Class: Charge shipping for each shipping class individually"
-msgstr ""
+msgstr "配送クラス毎: それぞれの配送クラスの送料"
 
 #: includes/shipping/flat-rate/includes/settings-flat-rate.php:103
 msgid "Per Order: Charge shipping for the most expensive shipping class"
-msgstr ""
+msgstr "注文毎: 最も高額な配送クラスの送料を請求"
 
 #: includes/shipping/flat-rate/includes/settings-flat-rate.php:110
 #: includes/shipping/flat-rate/includes/settings-flat-rate.php:115
@@ -8758,7 +8792,7 @@ msgstr "追加割合"
 msgid ""
 "These rates are extra shipping options with additional costs (based on the "
 "flat rate)."
-msgstr ""
+msgstr "これらの料金は(定額送料に基づいて)追加費用で別途送料オプションです。"
 
 #: includes/shipping/flat-rate/includes/settings-flat-rate.php:117
 msgid ""
@@ -8820,12 +8854,12 @@ msgstr "ユーザーは送料無料を得るために、金額を費やす必要
 
 #: includes/shipping/international-delivery/class-wc-shipping-international-delivery.php:21
 msgid "International Flat Rate"
-msgstr "国際便固定費"
+msgstr "国際定額送料"
 
 #: includes/shipping/international-delivery/class-wc-shipping-international-delivery.php:22
 msgid ""
 "International Flat Rate Shipping lets you charge a fixed rate for shipping."
-msgstr ""
+msgstr "国際定額送料は出荷に対して固定の金額を請求できるようになります。"
 
 #: includes/shipping/international-delivery/class-wc-shipping-international-delivery.php:40
 msgid "Selected countries"
@@ -8890,9 +8924,8 @@ msgid "Allowed Zip/Post Codes"
 msgstr "郵便番号を許可"
 
 #: includes/shipping/local-delivery/class-wc-shipping-local-delivery.php:125
-#: includes/shipping/local-pickup/class-wc-shipping-local-pickup.php:81
-msgid "What zip/post codes are available for local pickup?"
-msgstr "どの郵便番号のエリアが商品受け取りに使えますか？"
+msgid "What zip/post codes are available for local delivery?"
+msgstr ""
 
 #: includes/shipping/local-delivery/class-wc-shipping-local-delivery.php:127
 #: includes/shipping/local-pickup/class-wc-shipping-local-pickup.php:83
@@ -8917,43 +8950,47 @@ msgstr "ローカルピックアップは、顧客が注文自分自身で受け
 msgid "Enable local pickup"
 msgstr "店頭渡しを有効にする"
 
+#: includes/shipping/local-pickup/class-wc-shipping-local-pickup.php:81
+msgid "What zip/post codes are available for local pickup?"
+msgstr "どの郵便番号のエリアが商品受け取りに使えますか？"
+
 #: includes/shortcodes/class-wc-shortcode-cart.php:42
 msgid "Shipping costs updated."
 msgstr "配送料を更新しました。"
 
-#: includes/shortcodes/class-wc-shortcode-checkout.php:88
+#: includes/shortcodes/class-wc-shortcode-checkout.php:90
 msgid "Invalid order. If you have an account please log in and try again."
 msgstr "無効な注文です。アカウントをお持ちのお客様はログインして、もう一度やり直してください。"
 
-#: includes/shortcodes/class-wc-shortcode-checkout.php:88
+#: includes/shortcodes/class-wc-shortcode-checkout.php:90
 #: includes/shortcodes/class-wc-shortcode-my-account.php:108
 #: templates/checkout/thankyou.php:30
 msgid "My Account"
 msgstr "マイアカウント"
 
-#: includes/shortcodes/class-wc-shortcode-checkout.php:107
-#: includes/shortcodes/class-wc-shortcode-checkout.php:155
+#: includes/shortcodes/class-wc-shortcode-checkout.php:109
+#: includes/shortcodes/class-wc-shortcode-checkout.php:157
 msgid ""
 "This order&rsquo;s status is &ldquo;%s&rdquo;&mdash;it cannot be paid for. "
 "Please contact us if you need assistance."
 msgstr "この注文&rsquo;s 状況は &ldquo;%s&rdquo;&mdash;支払いが出来ません。必要があればご連絡ください。"
 
-#: includes/shortcodes/class-wc-shortcode-checkout.php:111
-#: includes/shortcodes/class-wc-shortcode-checkout.php:159
+#: includes/shortcodes/class-wc-shortcode-checkout.php:113
+#: includes/shortcodes/class-wc-shortcode-checkout.php:161
 msgid "Sorry, this order is invalid and cannot be paid for."
 msgstr "この注文は無効であり、支払われることができません。"
 
-#: includes/shortcodes/class-wc-shortcode-checkout.php:128
+#: includes/shortcodes/class-wc-shortcode-checkout.php:130
 #: templates/checkout/thankyou.php:40
 msgid "Order Number:"
 msgstr "注文番号: "
 
-#: includes/shortcodes/class-wc-shortcode-checkout.php:132
+#: includes/shortcodes/class-wc-shortcode-checkout.php:134
 #: templates/checkout/thankyou.php:44
 msgid "Date:"
 msgstr "日付:"
 
-#: includes/shortcodes/class-wc-shortcode-checkout.php:227
+#: includes/shortcodes/class-wc-shortcode-checkout.php:231
 msgid ""
 "The order totals have been updated. Please confirm your order by pressing "
 "the Place Order button at the bottom of the page."
@@ -9009,7 +9046,7 @@ msgstr "恐れ入りますが、その注文番号がデータベースにあり
 #: includes/updates/woocommerce-update-2.4.php:171
 #: includes/wc-order-functions.php:801
 msgid "Order Fully Refunded"
-msgstr ""
+msgstr "注文を全て払い戻されました"
 
 #: includes/wc-attribute-functions.php:122
 msgid "Select"
@@ -9026,7 +9063,7 @@ msgstr "この商品はプロテクトされ、購入出来ません。"
 #: includes/wc-cart-functions.php:78
 msgid "%s has been added to your cart."
 msgid_plural "%s have been added to your cart."
-msgstr[0] ""
+msgstr[0] "%sはカートに追加されました。"
 
 #: includes/wc-cart-functions.php:83
 msgid "Continue Shopping"
@@ -9034,7 +9071,7 @@ msgstr "買い物を続ける"
 
 #: includes/wc-cart-functions.php:103
 msgid "and"
-msgstr ""
+msgstr "と"
 
 #: includes/wc-cart-functions.php:191
 msgid "Coupon:"
@@ -9294,19 +9331,19 @@ msgstr "未払いの注文をキャンセルしました - 制限期間に達し
 msgid "Refund &ndash; %s"
 msgstr "払い戻し &ndash; %s"
 
-#: includes/wc-product-functions.php:510
+#: includes/wc-product-functions.php:508
 msgid "Simple product"
 msgstr "基本的な商品"
 
-#: includes/wc-product-functions.php:511
+#: includes/wc-product-functions.php:509
 msgid "Grouped product"
 msgstr "グループ化された商品"
 
-#: includes/wc-product-functions.php:512
+#: includes/wc-product-functions.php:510
 msgid "External/Affiliate product"
 msgstr "外部/アフィリエイト商品"
 
-#: includes/wc-product-functions.php:513
+#: includes/wc-product-functions.php:511
 msgid "Variable product"
 msgstr "バリエーションのある商品"
 
@@ -9734,7 +9771,7 @@ msgstr "%sはあなたのお店に接続しようとしています"
 
 #: templates/auth/form-grant-access.php:20
 msgid "This will give \"%s\" <strong>%s</strong> access which will allow it to:"
-msgstr ""
+msgstr "\"%s\"を提供して<strong>%s</strong>アクセスを出来るようにします: "
 
 #: templates/auth/form-grant-access.php:30
 msgid "Logged in as %s"
@@ -9756,7 +9793,7 @@ msgstr "非承認"
 msgid ""
 "To connect to %1$s you need to be logged in. Log in to your store below, or "
 "%2$scancel and return to %1$s%3$s"
-msgstr ""
+msgstr "%1$sに接続するにはログインが必要です。以下からログインするか、%2$sキャンセルして%1$sに戻ってください%3$s"
 
 #: templates/auth/form-login.php:26 templates/myaccount/form-login.php:35
 msgid "Username or email address"
@@ -10098,16 +10135,16 @@ msgstr "お客様のご注文は問題なく受信され、現在弊社にて処
 
 #: templates/emails/customer-refunded-order.php:20
 msgid "Hi there. Your order on %s has been partially refunded."
-msgstr ""
+msgstr "こんにちは、%sでの注文は部分的に払い戻しされました。"
 
 #: templates/emails/customer-refunded-order.php:23
 msgid "Hi there. Your order on %s has been refunded."
-msgstr ""
+msgstr "こんにちは、%sでの注文は払い戻しされました。"
 
 #: templates/emails/customer-refunded-order.php:50
 #: templates/emails/plain/customer-refunded-order.php:32
 msgid "Amount Refunded"
-msgstr ""
+msgstr "全額払い戻し"
 
 #: templates/emails/customer-reset-password.php:18
 #: templates/emails/plain/customer-reset-password.php:16
@@ -10143,16 +10180,6 @@ msgstr "請求先住所"
 #: templates/emails/plain/email-addresses.php:18
 msgid "Shipping address"
 msgstr "お届け先住所"
-
-#: templates/emails/email-order-items.php:54
-#: templates/emails/plain/email-order-items.php:49
-msgid "Download %d"
-msgstr "ダウンロード %d"
-
-#: templates/emails/email-order-items.php:56
-#: templates/emails/plain/email-order-items.php:51
-msgid "Download"
-msgstr "ダウンロード"
 
 #: templates/emails/plain/admin-cancelled-order.php:21
 #: templates/emails/plain/admin-new-order.php:22
@@ -10191,7 +10218,7 @@ msgstr "あなたのパスワードは <strong>%s</strong> です。"
 msgid ""
 "Hi there. Your order on %s has been refunded. Your order details are shown "
 "below for your reference:"
-msgstr ""
+msgstr "こんにちは、%sでの注文は部分的に払い戻しされました。ご注文の詳細は、ご確認のために以下に示します。"
 
 #: templates/emails/plain/email-order-items.php:35
 msgid "Quantity: %s"
@@ -10886,8 +10913,8 @@ msgstr "なし"
 
 #: includes/wc-cart-functions.php:100
 msgctxt "Item name in quotes"
-msgid "&ldquo;%s&ldquo;"
-msgstr "&ldquo;%s&ldquo;"
+msgid "&ldquo;%s&rdquo;"
+msgstr ""
 
 #: includes/wc-core-functions.php:78 includes/wc-order-functions.php:629
 msgctxt "Order date parsed by strftime"

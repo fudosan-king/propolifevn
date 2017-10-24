@@ -129,6 +129,7 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
             'include'    => $ids
         );
 
+        $product_cat = !isset($_REQUEST['product_cat'])? "" : $_REQUEST['product_cat'];
         $product_categories = get_terms( 'product_cat', $args );
         foreach ($product_categories as $product_categorie) {
             echo '<li><a href="' . get_bloginfo('url') . '/?product_cat=' . $product_categorie->slug . '">' . $product_categorie->name . '</a></li>';
@@ -143,7 +144,8 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
     <?php if (is_user_logged_in()) { ?>
         <li <?php if (is_page( 141 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=141"><?php _e( '品質', 'elt' ); ?></a></li>
     <?php } ?>
-    <li <?php if ('product' == get_post_type()) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=430"><?php echo get_the_title(430); ?></a></li>
+    <li <?php if ( $product_cat == 'lunch-box') { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?product_cat=lunch-box"><?php _e( 'お弁当', 'elt' ); ?></a></li>
+    <li <?php if ('product' == get_post_type() && $product_cat != 'lunch-box') { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=430"><?php echo get_the_title(430); ?></a></li>
     <li <?php if (is_page(310)) { echo 'class="active"';} ?>><a href="<?php echo get_permalink(get_page_by_path('video')); ?>"><?php echo get_the_title(310); ?></a></li>
     <li <?php if (is_page(316)) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=316"><?php echo get_the_title(316); ?></a></li>
     <li <?php if (is_page( 42 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=42"><?php _e( 'お問い合わせ', 'elt' ); ?></a></li>

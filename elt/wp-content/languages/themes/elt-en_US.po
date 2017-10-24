@@ -3,24 +3,32 @@ msgstr ""
 "Project-Id-Version: ELT Theme\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-23 08:29+0000\n"
-"PO-Revision-Date: 2017-10-23 08:30+0000\n"
+"PO-Revision-Date: 2017-10-23 08:29+0000\n"
 "Last-Translator: admin <tam@fudosan-king.jp>\n"
-"Language-Team: Vietnamese\n"
-"Language: vi\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Team: English (United States)\n"
+"Language: en-US\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Generator: Loco - https://localise.biz/\n"
 "X-Poedit-Basepath: .\n"
-"X-Poedit-SearchPath-0: ../../themes/elt\n"
+"X-Poedit-SearchPath-0: ..\n"
 "X-Poedit-KeywordsList: _:1;gettext:1;dgettext:2;ngettext:1,2;dngettext:2,3;"
 "__:1;_e:1;_c:1;_n:1,2;_n_noop:1,2;_nc:1,2;__ngettext:1,2;__ngettext_noop:1,2;"
 "_x:1,2c;_ex:1,2c;_nx:1,2,4c;_nx_noop:1,2,3c;_n_js:1,2;_nx_js:1,2,3c;"
 "esc_attr__:1;esc_html__:1;esc_attr_e:1;esc_html_e:1;esc_attr_x:1,2c;"
 "esc_html_x:1,2c;comments_number_link:2,3;t:1;st:1;trans:1;transChoice:1,2\n"
-"X-Loco-Target-Locale: vi_VN"
+"X-Generator: Loco - https://localise.biz/\n"
+"X-Loco-Target-Locale: en_US"
+
+#: functions.php:489 functions.php:502 functions.php:515 functions.php:528
+msgid "食肉の加工"
+msgstr ""
+
+#: functions.php:494 functions.php:507 functions.php:520 functions.php:533
+msgid "当社では、安心で安全な商品とサービスを通じて、 常にお客様に満足して頂く事を念頭に 置いています。"
+msgstr ""
 
 #: functions.php:558
 msgid "ELT VIETNAM CO.,LTD概要"
@@ -44,9 +52,17 @@ msgstr ""
 msgid "＊自社加工工場は、ベトナムホーチミン市より車で40分程度の中心地からとても近いロンハウ工業団地内にございます。"
 msgstr ""
 
+#: functions.php:610
+msgid "加工"
+msgstr ""
+
 #: functions.php:615
 msgid ""
 "温度管理、衛生管理が徹底した自社加工工場で、高品質の新鮮なお肉をお客様がすぐに使えるようにカット加工、ミンチ加工、パン粉付け加工、加熱加工などの加工をいたします。お客様が調理場で均一に加工する手間とコストの負担を省きます。"
+msgstr ""
+
+#: functions.php:625
+msgid "配送"
 msgstr ""
 
 #: functions.php:630
@@ -54,9 +70,29 @@ msgid ""
 "鮮度を保った状態でお肉をお届け致します。日本通運様と配送に関する業務提携を行い、食料品スーパー様、飲食店様、ご家庭などに柔軟に個別配送を行っております。"
 msgstr ""
 
+#: functions.php:640
+msgid "パートナー"
+msgstr ""
+
 #: functions.php:645
 msgid ""
 "お肉の加工以外にも様々な商品作りのご相談が可能です。新鮮な野菜、魚、鶏肉なども仕入れることができるので、焼肉セットや鍋セットなどの商品作りにも対応可能です。"
+msgstr ""
+
+#: functions.php:658
+msgid "当社のクライアント"
+msgstr ""
+
+#: functions.php:668
+msgid "レストラン"
+msgstr ""
+
+#: functions.php:681
+msgid "ホテル"
+msgstr ""
+
+#: functions.php:694
+msgid "ショップ"
 msgstr ""
 
 #: header.php:49 header.php:50
@@ -71,7 +107,7 @@ msgstr ""
 
 #: header.php:146
 msgid "お弁当"
-msgstr "Bento"
+msgstr "Lunch Box"
 
 #. Name of the template
 msgid "AboutPage"
@@ -119,82 +155,44 @@ msgstr ""
 
 #: functions.php:300 functions.php:389
 msgid "その他の製品"
-msgstr "Các sản phẩm khác"
+msgstr "Other products"
 
 #: functions.php:306
 msgid "あなたの玄関口に毎週配信！"
-msgstr "Giao hàng mỗi tuần đến tận nhà của bạn!"
+msgstr "It delivered weekly to your doorstep!"
 
 #: functions.php:354 functions.php:437
 msgid "続きを読みます"
-msgstr "Xem thêm"
-
-#: functions.php:489 functions.php:502 functions.php:515 functions.php:528
-msgid "食肉の加工"
-msgstr "Chế biến thịt"
-
-#: functions.php:494 functions.php:507 functions.php:520 functions.php:533
-msgid "当社では、安心で安全な商品とサービスを通じて、 常にお客様に満足して頂く事を念頭に 置いています。"
-msgstr ""
-"Yên tâm với các sản phẩm an toàn và dịch vụ với khách hàng, bạn sẽ luôn luôn "
-"hài lòng với chúng tôi."
+msgstr "Read more"
 
 #: functions.php:601 header.php:140 index.php:99
 msgid "私たちのサービス"
-msgstr "Dịch vụ"
-
-#: functions.php:610
-msgid "加工"
-msgstr "Gia công"
-
-#: functions.php:625
-msgid "配送"
-msgstr "Giao hàng"
-
-#: functions.php:640
-msgid "パートナー"
-msgstr "Đối tác"
-
-#: functions.php:658
-msgid "当社のクライアント"
-msgstr "Khách hàng của chúng tôi"
-
-#: functions.php:668
-msgid "レストラン"
-msgstr "Nhà hàng"
-
-#: functions.php:681
-msgid "ホテル"
-msgstr "Khách sạn"
-
-#: functions.php:694
-msgid "ショップ"
-msgstr "Cửa hàng"
+msgstr "Our service"
 
 #: header.php:118
 msgid "ホーム"
-msgstr "Trang chủ"
+msgstr "Home"
 
 #: header.php:119 index.php:89
 msgid "私達について"
-msgstr "Giới thiệu"
+msgstr "About Us"
 
 #: header.php:121
 msgid "プロダクト"
-msgstr "Sản phẩm"
+msgstr "Product"
 
 #: header.php:141 index.php:109
 msgid "クライアント"
-msgstr "Khách hàng"
+msgstr "Customer"
 
 #: header.php:142
 msgid "メッセージ"
-msgstr "thông điệp"
+msgstr "Message"
 
 #: header.php:144
 msgid "品質"
-msgstr "phẩm chất"
+msgstr "Quality"
 
 #: header.php:150
 msgid "お問い合わせ"
-msgstr "Liên hệ"
+msgstr "Contact"

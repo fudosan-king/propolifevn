@@ -127,3 +127,7 @@ msgstr ""
 #. Author of the theme
 msgid "Propolife"
 msgstr ""
+
+#: header.php:146
+msgid "お弁当"
+msgstr ""

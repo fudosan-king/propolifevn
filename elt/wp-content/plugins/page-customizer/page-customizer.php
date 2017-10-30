@@ -15,4 +15,6 @@ Version: 1.0
 include ('wc-exclude-product-category-from-shop-page.php');
 // WooCommerce Custom Submenu
 include ('wc-specified-product-category-submenu.php');
+// WooCommerce Drag & Drop Products
+include ('wc-sortable-products.php');
 ?>

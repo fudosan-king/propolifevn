@@ -16,3 +16,17 @@ jQuery(function($) {
 		return false;
 	});	
 });
+
+jQuery(function ($) {
+	$('span.onsale').each(function () {
+		var $title = $(this).prev();
+		var $container = $(this).parent().parent();
+		if(!$container.hasClass('onsale-container')) {
+			$container.addClass('onsale-container');
+		}
+		if($title.hasClass('list-title')) {
+			$title.css('background-color', '#F5BD31');
+			$title.css('height', '57px');
+		}
+	});
+});

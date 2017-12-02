@@ -570,7 +570,11 @@ function add_services_clients() {
 
     _e('電話', 'elt');
         ;
-    echo ': <a href="tel:08 3873 4081" class="tel">08 3873 4081</a></p>';
+    echo ': <a href="tel:028 3873 4081" class="tel">028 3873 4081 – EXT 135, 131 ';
+
+    _e('営業部', 'elt');
+
+    echo '</a></p>';
 
     echo '<p>Email: info-eltvn@eltvn.com</p>';
 

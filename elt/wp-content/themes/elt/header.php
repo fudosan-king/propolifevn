@@ -11,6 +11,7 @@
 ?><!DOCTYPE html>
 <?php
 $template_directory = str_replace("twentyfifteen", "elt", get_template_directory_uri());
+$lang = get_bloginfo('language');
 ?>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -72,6 +73,31 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
     </script>
 
 	<?php wp_head_customer(); ?>
+    <style type="text/css">
+        .content-tel-ja {
+            left: -15px;
+            top: 10px;
+            position: relative;
+        }
+        .content-tel-vi {
+            left: -38px;
+            top: 10px;
+            position: relative;
+        }
+        .content-tel-en-US {
+            left: -9px;
+            top: 10px;
+            position: relative;
+        }
+        .content-tel-kr {
+            left: 20px;
+            top: 10px;
+            position: relative;
+        }
+        .languageSelect {
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 
 <body <?php if (is_user_logged_in()) { echo 'class="user-logged-in"'; }?>>
@@ -81,7 +107,10 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" align="center">
         <h1 class="h1tag"><a href="<?php echo get_bloginfo('siteurl'); ?>" class="logo"><img src="<?php echo $template_directory; ?>/images/top-logo.png" class="img-responsive" alt="ベトナムホーチミン市至近に自社加工工場を持つお肉の総合商社ELT VIETNAMのクライアント様の声です。"></a></h1>
     </div>
-    <div class="col-lg-9 col-md-9 col-sm-9">
+    <div class="col-lg-6 col-md-6 col-sm-6 content-tel-<?php echo $lang; ?> hidden-xs">
+        <img src="<?php echo $template_directory; ?>/images/telefon.png" alt="0909 069 948">
+    </div>
+    <div class="col-lg-3 col-md-3 col-sm-3">
     <div class="socials-top center-block" align="right">
     <div class="languageSelect"><?php echo qtrans_generateLanguageSelectCode(''); ?></div>
 
@@ -92,7 +121,8 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
     <?php if (!WC()->cart->is_empty()) { ?>
     <a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=431"><i class="fa fa-shopping-cart i_cart"><span class="number_cart"><?php echo WC()->cart->get_cart_contents_count(); ?></span></i></a>
     <?php } ?>
-    <a href="sms:08 6288 2008"><span class="hotline">08 3873 4081</span></a>
+    <a href="tel:0932098178"><span class="hotline">0932 098 178</span></a>
+
     </div>
     </div>
     </div>

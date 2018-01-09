@@ -11,7 +11,7 @@
 
 <body>
     <div id="page" class="animsition">
-    
+
       <?php require 'header.php';?>
 
       <main id="content">
@@ -45,8 +45,8 @@
           <div class="container">
             <div class="row content_underpages">
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <h3>ライセンス支援/変更・追加・更新など <br>
-                    支店・営業所の開設、事業撤退・縮小手続きなど <br>
+                  <h3>ライセンス支援/変更・追加・更新など<br />
+                    支店・営業所の開設、事業撤退・縮小手続きなど<br />
                   不動産登記変更</h3>
                   <p>ロータスサービスでは、ライセンス手続きのお手伝いを行っております。</p>
                   <p>ベトナム法の運用に長けた日本語が話せるベトナム人弁護士と日本人担当者で事業に必要なライセンスの最新情報に基づいて取得をサポートしております。</p>
@@ -70,7 +70,7 @@
                   <p>お気軽にご相談下さい。</p>
               </div>
             </div>
-            
+
             <hr>
             <p class="text-center w_btnInquiry">
               <a href="contact.php" class="btn-0"><i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i> 問い合わせをする</a>

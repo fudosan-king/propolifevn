@@ -21,7 +21,7 @@
       <main id="content">
         <section class="banner">
           <div class="swiper-container">
-            <div class="parallax-bg" style="background-image:url('images/stock-photo-228794369.jpg')" data-swiper-parallax="-23%"></div>
+            <div class="parallax-bg" style="background-image:url('images/stock_photo_228794369.jpg')" data-swiper-parallax="-23%"></div>
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="title" data-swiper-parallax="-300">ベトナム進出支援</div>
@@ -132,13 +132,39 @@
                         </div>
                       </article>
                     </div>
+                    
+                    <div class="clearfix"></div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                      <article class="service_item">
+                        <div class="img">
+                          <a href="#"><img src="images/staff_ebuchi_larg.jpg" alt="" class="img-responsive"></a>
+                        </div>
+                        <div class="box_content_top">
+                          <h3><a href="#">責任者 江渕真也</a></h3>
+                          <p>宮城県出身、ベトナム在住歴15年。これまで設立、ライセンス関係、労働許可証、ビザまで幅広い進出サービスを提供してきた実績があるベテランコンサルタント。</p>
+                        </div>
+                      </article>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                      <article class="service_item">
+                        <div class="img">
+                          <a href="#"><img src="images/staff_thong_larg.jpg" alt="" class="img-responsive"></a>
+                        </div>
+                        <div class="box_content_top">
+                          <h3><a href="#">弁護士トーン</a></h3>
+                          <p>キャリア17年目。ベトナムでは数少ない日本語が使え、これまで240社超へ様々な法務サポートを提供してきた実績を持つ弁護士。</p>
+                        </div>
+                      </article>
+                    </div>
                   </div>
 
                   <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                    <!-- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                       <div class="info_staff sameify">
                         <a href="#"><img src="images/staff_ebuchi.jpg" alt="" class="img-responsive"></a>
-                        <h4>江渕真也</h4>
+                        <h4>責任者 江渕真也</h4>
                         <p>ベトナム在住15年。設立、ライセンス関係、労働許可証、ビザまで幅広い進出サービスを提供してきた実績があるベテランコンサルタント。</p>
                       </div>
                     </div>
@@ -148,10 +174,10 @@
                         <h4>弁護士トン</h4>
                         <p>15年超のキャリアを持ち、ベトナムでは数少ない日本語が使える弁護士。これまで270社超をサポート。</p>
                       </div>
-                    </div>
+                    </div> -->
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                       <div class="box_info_staff">
-                        <h2 class="title">ご挨拶</h2>
+                        <h2 class="title">責任者ご挨拶</h2>
                         <p>ロータスサービスのホームページにお越し下さり誠にありがとうございます。</p>
                         <p>ベトナムでは法整備を急いでおり、法改正や法運用の変更が多い状況と言えます。そのような中、幣サービスでは、これまでの実績だけに拘らず、最新情報や最新の当局現場の運用方針を確認しながら、確かなサービスのご提供を心がけてきました。</p>
                         <p>サービスラインナップも進出時から進出後まで幅広く取り扱わせて頂いており、会社や駐在員事務所の設立、ライセンスの取得、更新、変更、労働許可証、ベトナムビザを中心にサービス提供を行っており、進出時、進出後問わず多くのお客様にご利用頂いてまいりました。</p>

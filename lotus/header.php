@@ -28,8 +28,12 @@
 						<li>
 							<div class="display_table boxmH hidden-xs">
 								<div class="table_content">
-								<p class="call"><i class="i_call"></i> <span>ベトナム国内から: <a href="tel:028-3824 -1418">028-3824 -1418</a><br>
-								日本・海外から: <a href="tel:+84-(0)28-3824-1418">+84-(0)28-3824-1418</a></span></p>
+								<p class="call"><i class="i_call"></i> 
+									<span>ベトナム国内から: <a href="tel:028-3824 -1418">028-3824 -1418</a><br>
+										日本・海外から: <a href="tel:+84-(0)28-3824-1418">+84-(0)28-3824-1418</a><br>
+										担当江渕直通: <a href="tel:+84-(0)90-300-5571">+84-(0)90-300-5571</a>
+									</span>
+								</p>
 								</div>
 							</div>
 						</li>
@@ -65,7 +69,7 @@
 
 			    <div id="navbarCollapse" class="collapse navbar-collapse">
 			        <ul class="nav navbar-nav" data-hover="dropdown" data-animations="fadeInDown fadeInLeft fadeInUp fadeInRight">
-			            <li class="active"><a href="index.php">トップ</a></li>
+			            <li><a href="index.php">トップ</a></li>
 			            <li class="dropdown">
 			            	<a href="#">ベトナム進出支援について <span class="caret hidden-lg hidden-md"></span></a>
 			            	<ul class="dropdown-menu" role="menu">

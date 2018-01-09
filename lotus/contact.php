@@ -54,7 +54,7 @@ if(isset($_POST['email'])) {
   // EDIT THE 2 LINES BELOW AS REQUIRED
   $email_to = "tam@fudosan-king.jp";
   $name_to = "Truong Tam";
-  $email_subject = "Email form www.lotusservice-vn.com";
+  $email_subject = "ロータスサービスWEBお問い合わせ";
 
   function died($error) {
     // your error code can go here
@@ -125,7 +125,7 @@ if(isset($_POST['email'])) {
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'propolifevn@gmail.com';           // SMTP username
+    $mail->Username = 'propolifevn@gmail.com';            // SMTP username
     $mail->Password = 'qqawtigjgfesgien';                 // SMTP password
     $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
     $mail->Port = 587;                                    // TCP port to connect to
@@ -134,7 +134,8 @@ if(isset($_POST['email'])) {
     //Recipients
     $mail->setFrom($email, $name);
     $mail->addAddress($email_to, $name_to);     // Add a recipient
-    // $mail->addAddress('ellen@example.com');                  // Name is optional
+    $mail->addAddress('info@aodaihousing.com');
+    $mail->addAddress('info@propolifevietnam.com');
     // $mail->addReplyTo('info@example.com', 'Information');
     // $mail->addCC('cc@example.com');
     // $mail->addBCC('bcc@example.com');

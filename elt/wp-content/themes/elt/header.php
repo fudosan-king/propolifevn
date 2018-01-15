@@ -244,7 +244,6 @@ $lang = get_bloginfo('language');
     <div class="collapse navbar-collapse navbar-right" id="navbar-collapse">
     <ul class="nav navbar-nav">
     <li <?php if (is_home()) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>"><?php _e( 'ホーム', 'elt' ); ?></a></li>
-    <li <?php if (is_page( 35 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=35"><?php _e( '私達について', 'elt' ); ?></a></li>
     <li id="blockCategory" <?php if (is_product_category() || is_product() ) { echo 'class="active"';} ?>>
     <a href="javascript:void(0)"><?php _e( 'プロダクト', 'elt' ); ?></a>
     <ul>
@@ -266,16 +265,17 @@ $lang = get_bloginfo('language');
     ?>
     </ul>
     </li>
+    <?php if (is_user_logged_in() && False) { ?>
     <li <?php if (is_page( 38 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=38"><?php _e( '私たちのサービス', 'elt' ); ?></a></li>
     <li <?php if (is_page( 40 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=40"><?php _e( 'クライアント', 'elt' ); ?></a></li>
     <li <?php if (is_page( 122 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=122"><?php _e( 'メッセージ', 'elt' ); ?></a></li>
-    <?php if (is_user_logged_in()) { ?>
-        <li <?php if (is_page( 141 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=141"><?php _e( '品質', 'elt' ); ?></a></li>
+    <li <?php if (is_page( 141 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=141"><?php _e( '品質', 'elt' ); ?></a></li>
     <?php } ?>
     <li <?php if ( $product_cat == 'lunch-box') { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?product_cat=lunch-box"><?php _e( 'お弁当', 'elt' ); ?></a></li>
     <li <?php if ('product' == get_post_type() && $product_cat != 'lunch-box') { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=430"><?php echo get_the_title(430); ?></a></li>
-    <li <?php if (is_page(310)) { echo 'class="active"';} ?>><a href="<?php echo get_permalink(get_page_by_path('video')); ?>"><?php echo get_the_title(310); ?></a></li>
+    <!-- <li <?php // if (is_page(310)) { echo // 'class="active"';} ?>><a href="<?php // echo get_permalink(get_page_by_path('video')); ?>"><?php // echo get_the_title(310); ?></a></li> -->
     <li <?php if (is_page(316)) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=316"><?php echo get_the_title(316); ?></a></li>
+    <li <?php if (is_page( 35 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=35"><?php _e( '私達について', 'elt' ); ?></a></li>
     <li <?php if (is_page( 42 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=42"><?php _e( 'お問い合わせ', 'elt' ); ?></a></li>
     </ul>
     </div>

@@ -10,7 +10,7 @@
 	        <a target="_blank" class="link" href="http://ameblo.jp/aozaihousing/"><img style="width: 100%;" src="<?php bloginfo( 'template_directory' );?>/images/banner.png"></a>
 	    </li>
 	    <li style="margin: 10px 0 10px 0;">
-	        <a target="_blank" class="link" href="http://www.yappango.com/support/propolife-vietnam.html"><img style="width: 100%;" src="<?php bloginfo( 'template_directory' );?>/images/support_propolifevn.png"></a>
+	        <a target="_blank" class="link" href="http://www.yappango.com/support/propolife-vietnam.html"><img style="width: 100%;" src="<?php bloginfo( 'template_directory' );?>/images/new_banner.jpg"></a>
 	    </li>
 	</ul>
 </div>

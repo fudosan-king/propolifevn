@@ -2,10 +2,16 @@
 <html>
 
 <head>
-  <meta property="og:title" content="運営会社について┃ロータスサービス">
-    <meta property="og:description" content="ロータスサービスは、PROPOLIFE VIETNAM CO.,LTDが運営するコンサルティングサービスです。PROPOLIFE VIETNAM CO.,LTDではこの他にも賃貸不動産仲介、内装工事、WEBサイト制作サービスなどを中心に進出支援をご提供しております。">
-    <meta name="description" content="ロータスサービスは、PROPOLIFE VIETNAM CO.,LTDが運営するコンサルティングサービスです。PROPOLIFE VIETNAM CO.,LTDではこの他にも賃貸不動産仲介、内装工事、WEBサイト制作サービスなどを中心に進出支援をご提供しております。">
+    <meta property="og:title" content="運営会社について┃信頼と実績のロータスサービス">
+
+    <meta property="og:description" content="ロータスサービスは、PROPOLIFE VIETNAM CO.,LTDが運営するコンサルティングサービスです。経験豊富な日本人担当者と日本語堪能なベトナム人弁護士で安心をご提供。会社設立、労働許可証、ビザから進出後のライセンス関係、契約書関係などまで幅広く対応しております。">
+
+    <meta name="description" content="ロータスサービスは、PROPOLIFE VIETNAM CO.,LTDが運営するコンサルティングサービスです。経験豊富な日本人担当者と日本語堪能なベトナム人弁護士で安心をご提供。会社設立、労働許可証、ビザから進出後のライセンス関係、契約書関係などまで幅広く対応しております。">
+
     <meta name="keywords" content="ベトナム,ホーチミン,進出支援,プロポライフベトナム, PROPOLIFE VIETNAM CO.,LTD">
+
+    <title>運営会社について┃信頼と実績のロータスサービス</title>
+
     <?php require 'head.php'; ?>
 </head>
 

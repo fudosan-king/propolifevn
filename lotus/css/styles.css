@@ -12,7 +12,7 @@ html {width: 100%; height: 100%;}
 body {width: 100%; height: 100%;background-color: #fff; font-family: 'Meiryo-Regular', sans-serif; line-height: 1.8em; font-size: 14px;
 -webkit-font-smoothing: subpixel-antialiased; -webkit-font-smoothing: antialiased !important; -moz-osx-font-smoothing: grayscale; color: #3a3a3a;}
 .btn-link {color: #3a3a3a; word-break: normal; word-break: break-all; word-break: keep-all;} .btn-link:hover {color: #D23D44; text-decoration: underline;}
-h1, h2, h3, h4, h5, h6 {font-family: HiraMinPro-W6-AlphaNum, sans-serif; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; color: #402637; }
+h1, h2, h3, h4, h5, h6 {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; color: #402637; }
 a:hover, a:focus { text-decoration: none; color: #009AAC;}
 h2 {font-size: 22px;} h3 {font-size: 20px;} .mt5 {margin-top: 5px;} .mb0 {margin-bottom: 0;}
 .mb60 {margin-bottom: 60px;} .mt30 {margin-top: 30px;} .mb30 {margin-bottom: 30px;} .mt15 {margin-top: 15px;} .w135 {width: 135px;} .red {color: #ec1d25;} .brown {color: #a77b25;} .purple {color: #c6046d;}
@@ -815,7 +815,25 @@ h3.title_sub {
   right: auto;
 }
 
-
+.banner_top {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+.banner_top img {
+  width: 100%;
+  height: 362px;
+}
+.banner_top h2 {
+  margin-top: 0;
+  text-align: center;
+  padding: 30px 0;
+  border-bottom: none;
+  background: #f2f2f2;
+  border-top: 5px solid #479eac;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  color: #4e4e4e;
+}
 
 
 

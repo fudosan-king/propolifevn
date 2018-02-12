@@ -149,6 +149,9 @@
         position: relative;
         top: -3px;
     }
+    .banner_top img {
+        height: auto;
+    }
 
 }
 

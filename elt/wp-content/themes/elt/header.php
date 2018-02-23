@@ -155,50 +155,51 @@ $lang = get_bloginfo('language');
         }
     </style>
     <script type="text/javascript">
-        function setCookie(cname, cvalue, exdays) {
-            var d = new Date();
-            d.setTime(d.getTime() + (exdays*24*60*60*1000));
-            var expires = "expires="+ d.toUTCString();
-            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-        }
-        function getCookie(cname) {
-            var name = cname + "=";
-            var decodedCookie = decodeURIComponent(document.cookie);
-            var ca = decodedCookie.split(';');
-            for(var i = 0; i <ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') {
-                    c = c.substring(1);
-                }
-                if (c.indexOf(name) == 0) {
-                    return c.substring(name.length, c.length);
-                }
-            }
-            return "";
-        }
-        function checkNotification() {
-            var notification = getCookie("notification");
-            if (notification == "") {
-                $("#notification").css("display", "block");
-                $("#cover").css("display", "block");
-                setCookie("notification", "notification", 1);
-            }
-        }
-        function cancelNotification() {
-            $("#notification").css("display", "none");
-            $("#cover").css("display", "none");
-        }
+        // function setCookie(cname, cvalue, exdays) {
+        //     var d = new Date();
+        //     d.setTime(d.getTime() + (exdays*24*60*60*1000));
+        //     var expires = "expires="+ d.toUTCString();
+        //     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+        // }
+        // function getCookie(cname) {
+        //     var name = cname + "=";
+        //     var decodedCookie = decodeURIComponent(document.cookie);
+        //     var ca = decodedCookie.split(';');
+        //     for(var i = 0; i <ca.length; i++) {
+        //         var c = ca[i];
+        //         while (c.charAt(0) == ' ') {
+        //             c = c.substring(1);
+        //         }
+        //         if (c.indexOf(name) == 0) {
+        //             return c.substring(name.length, c.length);
+        //         }
+        //     }
+        //     return "";
+        // }
+        // function checkNotification() {
+        //     var notification = getCookie("notification");
+        //     if (notification == "") {
+        //         $("#notification").css("display", "block");
+        //         $("#cover").css("display", "block");
+        //         setCookie("notification", "notification", 1);
+        //     }
+        // }
+        // function cancelNotification() {
+        //     $("#notification").css("display", "none");
+        //     $("#cover").css("display", "none");
+        // }
 
     </script>
 </head>
 
-<body <?php if (is_user_logged_in()) { echo 'class="user-logged-in"'; }?> onload="checkNotification()">
-<div id="notification">
+<body <?php if (is_user_logged_in()) { echo 'class="user-logged-in"'; }?> >
+<!-- <div id="notification">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="cancelNotification()">×</button>
-    <img class="sp-device" src="<?php echo $template_directory; ?>/images/tet_banner_sp.jpg">
-    <img class="pc-device" src="<?php echo $template_directory; ?>/images/tet_banner_pc.jpg">
+    <img class="sp-device" src="<?php // echo $template_directory; ?>/images/tet_banner_sp.jpg">
+    <img class="pc-device" src="<?php // echo $template_directory; ?>/images/tet_banner_pc.jpg">
 </div>
 <div id="cover" onclick="cancelNotification()"></div>
+-->
 <header>
     <div class="container">
     <div class="row top-row">

@@ -51,10 +51,11 @@
           <div class="container">
             <div class="row content_underpages">
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                  <h3 class="text-center">ベトナムビザ<br>
-                    空港到着時のアライバルビザにも対応<br>
-                    レジデンスカード<br>
-                  労働許可証と合わせ2500件以上の実績！</h3>
+                  <h3 class="text-center">ベトナムビザ取り扱い2500件以上の実績！<br>
+                  割安な空港到着時に取得するビザ<br>
+                  長期ビザも取得可能<br>
+                  お急ぎ対応可能<br>
+                  カード払いも可能になりました</h3>
                   <p class="img_center"><img src="http://www.propolifevietnam.com/wp-content/uploads/2015/12/passportvisa-800x600.jpg" alt="" class="img-responsive"></p>
                   <h4>ベトナムビザはほとんどの種類をお取り扱いしております。</h4>
                   <p>幣サービスでは、ベトナムビザのほとんどのお取り扱いを行っております。</p>

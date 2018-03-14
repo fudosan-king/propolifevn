@@ -36,8 +36,8 @@ define('DB_COLLATE', '');
 define('FS_METHOD','direct');
 define('WP_POST_REVISIONS', false );
 
-define( 'WP_SITEURL', 'http://propolifevietnam.dev' );
-define( 'WP_HOME', 'http://propolifevietnam.dev' );
+define( 'WP_SITEURL', 'http://propolifevietnam.localhost' );
+define( 'WP_HOME', 'http://propolifevietnam.localhost' );
 
 /**#@+
  * Authentication Unique Keys and Salts.

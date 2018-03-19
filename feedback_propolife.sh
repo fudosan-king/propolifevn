@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -e 'ssh -i root@43.239.148.40' -rlpcDvz --exclude-from=excludes root@43.239.148.40:/var/www/html/propolife ./
+rsync -e 'ssh -i root@222.255.217.23' -rlpcDvz --exclude-from=excludes root@222.255.217.23:/var/www/html/propolife ./

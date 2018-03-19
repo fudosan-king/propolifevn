@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync --delete -e 'ssh -i root@43.239.148.40' -rlpcgz -v --exclude-from=excludes ./ems root@43.239.148.40:/var/www/html
+rsync --delete -e 'ssh -i root@222.255.217.23' -rlpcgz -v --exclude-from=excludes ./ems root@222.255.217.23:/var/www/html

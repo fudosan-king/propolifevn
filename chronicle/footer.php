@@ -4,7 +4,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <p>ロータスサービスは、PROPOLIFE VIETNAM CO.,LTDの運営するコンサルティングサービスです。実績豊富な日本人担当者と法の運用に強く日本語堪能なベトナム人弁護士で、安心のサポートをご提供しており、特に進出支援はご担当者からご好評頂いております。進出ご検討の際や進出後にお困りのことが御座いましたらお気軽に御相談下さい。</p>
+                    <p>クロニクルインテリアは、PROPOLIFE VIETNAM CO LTDの運営する内装工事、パース作成に関するサービスです。日本国内、また、ベトナムの日系企業の皆様にご利用頂いております。
+日本人監修の元、実績豊富なベトナム人スタッフがコストパフォーマンスに優れるサービスをご提供いたします。</p>
                 </div>
             </div>
         </div>
@@ -13,7 +14,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 col_footer_bottom">
-                    <a href="index.php"><img src="images/logo_footer.svg" alt="" class="img-responsive logo_footer"></a>
+                    <a href="index.php"><img src="images/logo_white_footer.png" alt="" class="img-responsive logo_footer"></a>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 col_footer_bottom">
                     <p class="text-center">Unit1904 19Floor CJ BUILDING, 6 Le Thanh Ton, District1,HCMC,<br>

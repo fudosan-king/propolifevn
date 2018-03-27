@@ -1,3 +1,8 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FT9PC3"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <header>
 	<div class="nav_top">
 		<div class="container">
@@ -27,7 +32,7 @@
 						<li>
 							<div class="display_table boxmH hidden-xs">
 								<div class="table_content">
-									<p class="call"><i class="i_call"></i> 
+									<p class="call"><i class="i_call"></i>
 										<span>ベトナム国内から: <a href="tel:028‐3824‐1578">028‐3824‐1578</a><br>
 											日本・海外から: <a href="tel:+84-(0)28-3824-1418">+ 84‐(0)28‐3824‐1578</a><br>
 											担当者直通: <a href="tel:+84‐(0)91-663-1088"> +84‐(0)91-663-1088（渡邉）</a>

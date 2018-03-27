@@ -2,10 +2,11 @@
 <html>
 
 <head>
-    <meta property="og:title" content="ベトナムのライセンス支援┃ロータスサービス">
-    <meta property="og:description" content="ベトナムホーチミンでのライセンス支援ならロータスサービスにお任せ下さい。取得、追加、更新、変更などあらゆる手続きに対応。日本人担当者とベトナム人弁護士で安心をご提供しております。">
-    <meta name="description" content="ベトナムホーチミンでのライセンス支援ならロータスサービスにお任せ下さい。取得、追加、更新、変更などあらゆる手続きに対応。日本人担当者とベトナム人弁護士で安心をご提供しております。">
+    <meta property="og:title" content="Propolife Vietnam｜会社概要">
+    <meta property="og:description" content="Propolife Vietnam（屋号クロニクルインテリア）の会社概要です。パース作成、内装工事にとどまらず、在越日系企業、日本企業の皆様へ多岐にわたる事業・サービスを提供しております。">
+    <meta name="description" content="Propolife Vietnam（屋号クロニクルインテリア）の会社概要です。パース作成、内装工事にとどまらず、在越日系企業、日本企業の皆様へ多岐にわたる事業・サービスを提供しております。">
     <meta name="keywords" content="ベトナム,ホーチミン,ライセンス,登記">
+    <title>Propolife Vietnam｜会社概要</title>
     <?php require 'head.php'; ?>
 </head>
 
@@ -81,61 +82,64 @@ if(isset($_POST['email'])) {
     $error_message .= 'The Comments you entered do not appear to be valid.<br />';
   }
 
-  if(strlen($error_message) > 0) {
-    died($error_message);
-  }
-
   function clean_string($string) {
     $bad = array("content-type","bcc:","to:","cc:","href");
     return str_replace($bad,"",$string);
   }
 
-  $email_message  = "お名前: ".clean_string($name)."\n<br />";
-  $email_message .= "電話番号: ".clean_string($phone)."\n<br />";
-  $email_message .= "メールアドレス: ".clean_string($email)."\n<br />";
-  $email_message .= "ご住所: ".clean_string($address)."\n<br />";
-  $email_message .= "お問い合わせ: ".clean_string($comments)."\n<br />";
+  if(strlen($error_message) > 0) {
+    died($error_message);
+  } else {
+    $email_message  = "お名前: ".clean_string($name)."\n<br />";
+    $email_message .= "電話番号: ".clean_string($phone)."\n<br />";
+    $email_message .= "メールアドレス: ".clean_string($email)."\n<br />";
+    $email_message .= "ご住所: ".clean_string($address)."\n<br />";
+    $email_message .= "お問い合わせ: ".clean_string($comments)."\n<br />";
 
-  $mail = new PHPMailer(true);
-  echo '<section class="main_content" style="color: red;"><div class="container"><div class="row content_underpages"><div class="col-lg-6 col-lg-offset-3">';
-  try {
-    echo '<div style="display: none;">';
-    //Server settings
-    $mail->CharSet = 'UTF-8';
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
-    $mail->isSMTP();                                      // Set mailer to use SMTP
-    $mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
-    $mail->SMTPAuth = true;                               // Enable SMTP authentication
-    $mail->Username = 'propolifevn@gmail.com';            // SMTP username
-    $mail->Password = 'qqawtigjgfesgien';                 // SMTP password
-    $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
-    $mail->Port = 587;                                    // TCP port to connect to
-    $mail->SMTPAuth = true;
+    $mail = new PHPMailer(true);
+    echo '<section class="main_content" style="color: red;"><div class="container"><div class="row content_underpages"><div class="col-lg-6 col-lg-offset-3">';
+    try {
+      echo '<div style="display: none;">';
+      //Server settings
+      $mail->CharSet = 'UTF-8';
+      $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+      $mail->isSMTP();                                      // Set mailer to use SMTP
+      $mail->Host = 'smtp.gmail.com';                       // Specify main and backup SMTP servers
+      $mail->SMTPAuth = true;                               // Enable SMTP authentication
+      $mail->Username = 'propolifevn@gmail.com';            // SMTP username
+      $mail->Password = 'qqawtigjgfesgien';                 // SMTP password
+      $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+      $mail->Port = 587;                                    // TCP port to connect to
+      $mail->SMTPAuth = true;
 
-    //Recipients
-    $mail->setFrom($email, $name);
-    $mail->addAddress($email_to, $name_to);     // Add a recipient
-    $mail->addAddress('info@aodaihousing.com');
-    $mail->addAddress('info@propolifevietnam.com');
-    // $mail->addReplyTo('info@example.com', 'Information');
-    // $mail->addCC('cc@example.com');
-    // $mail->addBCC('bcc@example.com');
+      //Recipients
+      $mail->setFrom($email, $name);
+      $mail->addAddress($email_to, $name_to);     // Add a recipient
+      $mail->addAddress('info@aodaihousing.com');
+      $mail->addAddress('info@propolifevietnam.com');
+      // $mail->addReplyTo('info@example.com', 'Information');
+      // $mail->addCC('cc@example.com');
+      // $mail->addBCC('bcc@example.com');
 
-    //Content
-    $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = $email_subject;
-    $mail->Body    = $email_message;
+      //Content
+      $mail->isHTML(true);                                  // Set email format to HTML
+      $mail->Subject = $email_subject;
+      $mail->Body    = $email_message;
 
-    $mail->send();
-    echo '</div>';
-    echo '<h3 style="color: #009AAC;">The mail has been sent successfully.</h3>';
-  } catch (Exception $e) {
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+      $mail->send();
+      echo '</div>';
+      echo '<h3 style="color: #009AAC;">The mail has been sent successfully.</h3>';
+      echo '<script type="text/javascript">dataLayer.push({"event": "inquiry-complete"});</script>';
+
+    } catch (Exception $e) {
+      echo 'Mailer Error: ' . $mail->ErrorInfo;
+    }
+    echo '</div></div></div></section>';
   }
-  echo '</div></div></div></section>';
 }else{
 ?>
                 <section class="main_content">
+
                     <div class="container">
                         <div class="row content_underpages">
                             <div class="col-lg-6 col-lg-offset-3">

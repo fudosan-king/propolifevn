@@ -2,10 +2,11 @@
 <html>
 
 <head>
-    <meta property="og:title" content="ベトナムの魅力┃ロータスサービス">
-    <meta property="og:description" content="ベトナムでは人口が9,000万人を突破。平均年齢が29歳と若く豊富な労働力があり、成長が期待できる国です。また親日的な国なのも魅力です。">
-    <meta name="description" content="ベトナムでは人口が9,000万人を突破。平均年齢が29歳と若く豊富な労働力があり、成長が期待できる国です。また親日的な国なのも魅力です。">
-    <meta name="keywords" content="ベトナム,ホーチミン,魅力,メリット,デメリット,人口,成長,親日">
+    <meta property="og:title" content="クロニクルインテリア｜3Dパースの作成をオフショアならではの低価格で提供致します">
+    <meta property="og:description" content="内観、外観のパース作成はプロポライフベトナムにおまかせください。3dsMaxを用いたパース作成で図面に忠実なパースを低価格で制作いたします。 仕上げをphotoshopで施し、広告販促物にすぐに使える状態で納品いたします。4カット500USDにて提供しております。">
+    <meta name="description" content="内観、外観のパース作成はプロポライフベトナムにおまかせください。3dsMaxを用いたパース作成で図面に忠実なパースを低価格で制作いたします。 仕上げをphotoshopで施し、広告販促物にすぐに使える状態で納品いたします。4カット500USDにて提供しております。">
+    <meta name="keywords" content="パース, pers, CG, ホーチミン, ベトナム, オフショア, cad">
+    <title>クロニクルインテリア｜3Dパースの作成をオフショアならではの低価格で提供致します</title>
     <?php require 'head.php'; ?>
 </head>
 

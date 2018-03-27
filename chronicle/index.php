@@ -6,10 +6,11 @@
 <html>
 
 <head>
-    <meta property="og:title" content="ロータスサービス┃ベトナムホーチミンの進出支援">
-    <meta property="og:description" content="ホーチミンでの会社設立、労働許可証、ビザ、ライセンス関係など進出支援に関わることならロータスサービスにお任せ下さい。日本人担当者とベトナム人弁護士で安心をご提供しております。">
-    <meta name="description" content="ホーチミンでの会社設立、労働許可証、ビザ、ライセンス関係など進出支援に関わることならロータスサービスにお任せ下さい。日本人担当者とベトナム人弁護士で安心をご提供しております。">
-    <meta name="keywords" content="ベトナム,ホーチミン,会社設立,法人設立,進出,労働許可証,ベトナムビザ,ライセンス">
+    <meta name="og:title" content="クロニクルインテリア｜3Dパースの作成とHCMの内装工事">
+    <meta name="description" content="ホーチミンのオフィス内装工事、オフショアのパース作成はおまかせください。日本人監修の元、コストパフォーマンスと品質にこだわったサービスをご提供いたします。">
+    <meta name="og:description" content="ホーチミンのオフィス内装工事、オフショアのパース作成はおまかせください。日本人監修の元、コストパフォーマンスと品質にこだわったサービスをご提供いたします。">
+    <meta name="keywords" content="パース, pers, CG, 内装工事, ホーチミン, ベトナム, オフショア, cad, オフィス">
+    <title>クロニクルインテリア｜3Dパースの作成とHCMの内装工事</title>
     <?php require 'head.php'; ?>
 </head>
 

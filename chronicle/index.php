@@ -156,7 +156,7 @@
                   <div id="fb-root"></div>
                   <div class="fb-page"
                     data-tabs="timeline,events,messages"
-                    data-href="https://www.facebook.com/loutus.vn/"
+                    data-href="https://www.facebook.com/chronicle.vn/"
                     data-width="380"
                     data-hide-cover="false"
                     data-show-facepile="false">

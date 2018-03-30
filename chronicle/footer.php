@@ -1,4 +1,5 @@
   <div id="footer" class="cf"></div>
+  <div id="hzroot7054227" style="text-align:center;font-size:12px;padding:0;border:0;margin:0;"><div style="font-size:18px;margin-bottom:3px;"><a href="https://www.houzz.jp/jsGalleryWidget/gallery/106271965/new_window=no/title_on=no/width=620" target="_blank">Masaruさんのアイデアブック</a></div><div style="padding:0;margin:0;border:0;margin-bottom:3px;"><iframe data-hzvt="MjAxODAzMzA6ZnVuY3Rpb24gKCkgeyBbbmF0aXZlIGNvZGVdIH0=" name="HouzzWidget9023366" id="HouzzWidget9023366" border=0 frameborder="0" SCROLLING=NO style="border:0 none;width:620px;height:490px;" src="https://www.houzz.jp/jsGalleryWidget/gallery/106271965/new_window=no/title_on=no/width=620"></iframe></div></div>
 <footer>
     <div class="footer_top">
         <div class="container">

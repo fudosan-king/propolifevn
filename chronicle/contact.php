@@ -36,7 +36,7 @@ if(isset($_POST['email'])) {
   // EDIT THE 2 LINES BELOW AS REQUIRED
   $email_to = "tam@fudosan-king.jp";
   $name_to = "Truong Tam";
-  $email_subject = "ロータスサービスWEBお問い合わせ";
+  $email_subject = "クロニクルリフォームWEBお問合わせ";
 
   function died($error) {
     // your error code can go here

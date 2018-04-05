@@ -51,6 +51,15 @@
         $( "#datepicker" ).datepicker({ dateFormat: "yy-mm-dd" });
       } );
   </script>
+  <style type="text/css">
+  .btn-warning a {
+    color: #ffffff;
+  }
+  .btn-warning {
+    margin-bottom: 20px;
+    float: right;
+  }
+  </style>
 <body>
     <div id="page" class="animsition">
 
@@ -83,6 +92,9 @@
         <section class="main_content">
           <div class="container">
             <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button type="button" class="btn btn-warning"><a href="/edit-infor.php">エディット</a></button>
+              </div>
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="box_aodai">
                     <div class="panel panel-default">

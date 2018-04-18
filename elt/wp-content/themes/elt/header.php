@@ -12,6 +12,7 @@
 <?php
 $template_directory = str_replace("twentyfifteen", "elt", get_template_directory_uri());
 $lang = get_bloginfo('language');
+$product_cat = !isset($_REQUEST['product_cat'])? "" : $_REQUEST['product_cat'];
 ?>
 <html <?php language_attributes(); ?> class="no-js">
 <head>
@@ -30,6 +31,12 @@ $lang = get_bloginfo('language');
             $description_seo = get_field('description_seo', 167);
             $description_og = get_field('description_og', 167);
             $keywords = get_field('keywords', 167);
+        }elseif ($product_cat == 'lunch-box') {
+            $title_seo = get_field('title_seo', 854);
+            $title_og = get_field('title_og', 854);
+            $description_seo = get_field('description_seo', 854);
+            $description_og = get_field('description_og', 854);
+            $keywords = get_field('keywords', 854);
         }else {
             $title_seo = get_field('title_seo', $post_id);
             $title_og = get_field('title_og', $post_id);
@@ -257,7 +264,6 @@ $lang = get_bloginfo('language');
             'include'    => $ids
         );
 
-        $product_cat = !isset($_REQUEST['product_cat'])? "" : $_REQUEST['product_cat'];
         $product_categories = get_terms( 'product_cat', $args );
         foreach ($product_categories as $product_categorie) {
             echo '<li><a href="' . get_bloginfo('url') . '/?product_cat=' . $product_categorie->slug . '">' . $product_categorie->name . '</a></li>';

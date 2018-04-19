@@ -12,5 +12,8 @@
 	    <li style="margin: 10px 0 10px 0;">
 	        <a target="_blank" class="link" href="http://www.yappango.com/support/propolife-vietnam.html"><img style="width: 100%;" src="<?php bloginfo( 'template_directory' );?>/images/new_banner.jpg"></a>
 	    </li>
+	    <li style="margin: 10px 0 10px 0;">
+	        <a target="_blank" class="link" href="http://chronicle.propolifevietnam.com/"><img style="width: 100%;" src="<?php bloginfo( 'template_directory' );?>/images/img_chronicle.png"></a>
+	    </li>
 	</ul>
 </div>

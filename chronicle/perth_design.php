@@ -21,27 +21,25 @@
                     <div class="parallax-bg" style="background-image:url('http://www.propolifevietnam.com/wp-content/themes/themes/images/slides/office/1.jpg')" data-swiper-parallax="-23%"></div>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="title" data-swiper-parallax="-300">パースデザイン制作</div>
+                            <div class="title" data-swiper-parallax="-300">CG パース制作について</div>
                         </div>
                     </div>
                 </div>
             </section>
             <section class="main_content">
                 <div class="container">
-                    <h2 class="big_title"><span class="red">500USD</span>/<span class="yellow">4カット</span></h2>
+                    <h3 class="text-center">内観・外観パースをご提供しております</h3>
                     <h4 class="text-center">にて制作しております</h4>
-                    <hr>
+                    <a href="contact.php"><img src="images/phoicanh.jpg" alt="" class="img-responsive mt30"></a>
+                    <div class="box_3dsmax">
+                        <p>3ds Max を用いて設計図面に忠実なパース作成を行います。
+                        設計図面のファイルはJWW 形式、DXF 形式など拡張子を問わず可能です。<br>
+                        また、配置する家具や外壁の塗装、フローリングの床などもEC サイト等のお写真を頂ければそこ<br>
+                        から描き起こすことも可能です。</p>
+                        <p>新築一戸建てや新築マンションの外観パースや内観パースはもちろん、業態を問わずショップの内装などにも幅広く対応しております。</p>
+                    </div>
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                            <div class="box_topInfo">
-                                <h3>3ds Max を用いた内観・外観パースの作成</h3>
-                                <p>3ds Maxを用いて設計図面に忠実なパース作成を行います。
-                                    <br> 設計図面のファイルはJWW形式、DXF形式など拡張子を問いません。
-                                    <br> 配置する家具や外壁の塗装、フローリングの床などもECサイト等のお写真をいただければそこから描き起こして納品いたします。
-                                </p>
-                                <p>新築一戸建ての外観パースや内観パースはもちろん、業態を問わずショップの内装にも幅広く対応しております。</p>
-                                <p>また、レンダリング時に発生する光加減の調整も、最終的にphotoshopやsketchにて仕上げ修正を加えて参ります。</p>
-                            </div>
                             <div class="row">
                                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2">
                                     <div class="slider_design">
@@ -159,9 +157,7 @@
                         <a href="contact.php" class="btn btn-lg btnContact">
                             <i class="fa fa-envelope" aria-hidden="true"></i> 制作について相談する <span class="arrow_right"></span>
                         </a>
-                        <h3>カラーバリエーションを変えていただくこともできます。<br>DESIGN</h3>
-                        <h1 class="title_production">パースデザイン制作</h1>
-                        <a href="contact.php"><img src="images/phoicanh.jpg" alt="" class="img-responsive mb60"></a>
+                        
                     </div>
             </section>
         </main>

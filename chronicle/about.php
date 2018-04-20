@@ -3,10 +3,8 @@
 
 <head>
   <meta property="og:title" content="運営会社プロポライフベトナム概要｜クロニクルリフォーム">
-    <meta property="og:description" content="クロニクルリフォームの運営会社PROPOLIFE VIETNAM CO.,LTD の概要です。内装工事、パース制作にとどまらず、日系
-企業の皆様を中心に多岐にわたる進出サポート、安心のサービスをご提供しております。">
-    <meta name="description" content="クロニクルリフォームの運営会社PROPOLIFE VIETNAM CO.,LTD の概要です。内装工事、パース制作にとどまらず、日系
-企業の皆様を中心に多岐にわたる進出サポート、安心のサービスをご提供し
+    <meta property="og:description" content="クロニクルリフォームの運営会社PROPOLIFE VIETNAM CO.,LTD の概要です。内装工事、パース制作にとどまらず、日系企業の皆様を中心に多岐にわたる進出サポート、安心のサービスをご提供しております。">
+    <meta name="description" content="クロニクルリフォームの運営会社PROPOLIFE VIETNAM CO.,LTD の概要です。内装工事、パース制作にとどまらず、日系企業の皆様を中心に多岐にわたる進出サポート、安心のサービスをご提供し
 ております。">
     <meta name="keywords" content="CG パース,パース,クロニクルリフォーム,ホーチミン,ベトナム,オフショア,cad,内装工事,インテリア">
     <title>運営会社プロポライフベトナム概要｜クロニクルリフォーム</title>

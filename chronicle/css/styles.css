@@ -24,6 +24,7 @@ h2 {font-size: 22px;} h3 {font-size: 20px;} .mt5 {margin-top: 5px;} .mb0 {margin
 section {padding: 30px 0;}
 .display_table {
     display: table;
+    width: 100%;
 }
 .table_content {
     display: table-cell;
@@ -188,6 +189,7 @@ ul.list_topmenu li:last-child {
 }
 #content {
   position: relative;
+  margin-bottom: 30px;
 }
 #menu.fixed {
   position: fixed;
@@ -1127,7 +1129,7 @@ figure.snip1205.hover i {
 }
 .contract_construction {
   background: #808B97;
-  margin-top: 30px;
+  margin-top: 0;
   padding: 60px 0;  
 }
 .contract_construction_box {
@@ -1467,4 +1469,35 @@ figure.snip1205.hover i {
 
 .box_topInfo {
   margin-bottom: 30px;
+}
+.step_perthDesign .panel {
+  margin: 0;
+}
+.step_perthDesign {
+  margin-bottom: 60px;
+}
+.step_perthDesign .panel-body {
+  min-height: 275px;
+  text-align: center;
+}
+.step_perthDesign_col {
+  padding-left: 30px;
+  padding-right: 30px;
+  position: relative;
+}
+.step_perthDesign_col:after {
+  content: '';
+  position: absolute;
+  right: -15px;
+  top: 50%;
+  background: url('../images/1x/i_arrow.png') no-repeat;
+  width: 30px;
+  height: 13px;
+}
+.no_arrow.step_perthDesign_col:after {
+  display: none;
+}
+.box_3dsmax {
+  margin: 30px 0;
+  text-align: center;
 }

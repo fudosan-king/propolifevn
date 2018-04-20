@@ -31,32 +31,15 @@
         <section class="main_content">
           <div class="container">
             <div class="row">
-              <div class="aside_list clearfix">
-                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                      <aside>
-                          <h4>クロニクルリフォーム</h4>
-                          <ul>
-                              <li><a href="services.php"><span>01.</span> 内装サービスについて</a></li>
-                              <li><a href="interior_work.php"><span>02.</span> オフィスの内装工事</a></li>
-                              <li class="active"><a href="interior_construction.php"><span>03.</span> 住居の内装工事</a></li>
-                              <li><a href="perth_design.php"><span>04.</span> パースデザイン制作</a></li>
-                          </ul>
-                      </aside>
-                  </div>
-              </div>
-
               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                   <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                      <div class="box_info_general">
+                      <div class="box_info_general" style="padding-bottom: 70px;">
                         <img src="images/magazines-desk-work-workspace-355x235.jpg" alt="" class="img-responsive">
                         <h3>クロニクルリフォーム</h3>
-                        <p>進出企業様がホーチミン市でも少しずつ増え、またオフィスの引越しをされる企業様も増えてまいりました。<br>
-                          フィスの役割も単なる職場から、社員のモチベーション、採用面談、接客を意識されたご要望も多くなってきております。<br>
-                        私たちクロニクルリフォームでは、これまでベトナムホーチミン市でオフィスを中心とした内装工事（デザイン・設計・施工）の実績を積み上げてきました。</p>
-                        <p>ベトナムのオフィスでは、床・壁のコンセント配線、インターネット配線などを床の下に配線できる置き床は多くなく、床スラブの上のモルタルを彫り、その溝に直接配線して再度モルタルで埋める施工方法が一般的です。<br>
-                        のような中、オフィス空間デザインだけでなく、レイアウトや家具なども含めてきちんと御提案させて頂くことで、機能性の高いオフィス空間をご提供させて頂いてきました。<br>
-                        オフィスの内装工事については弊社にお気軽にご相談下さい。</p>
+                        <p>幣サービスでは、スケルトン物件のリノベーションを得意としており、家具インテリアや間接照明などの照明計画も取り入れた空間デザインをご提供しております。</p>
+                        <p>ホーチミン市もコンドミニアムの建築ラッシュとなり、賃貸に出されるケース、ご自宅で利用されるケースなどの違いはあるものの日本人の方がオーナーになられることも珍しくなくなってきました。</p>
+                        <p>用途に合わせた価値あるご提案をさせて頂いております。</p>
                       </div>
                     </div>
                   </div>
@@ -106,72 +89,6 @@
                 マンションを買われた目的や日本風の仕上げにしたいなど御希望を<br>
                 取り入れ、プランニングいたします。<br>
               バリエーション豊かに住空間を提案いたします。</h4>
-              <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                  <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                      <img src="http://www.propolifevietnam.com/wp-content/uploads/2016/02/kitchen-ceilling.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                      <img src="http://www.propolifevietnam.com/wp-content/uploads/2016/02/bedroom-ceilling.jpg" alt="" class="img-responsive">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                      <img src="http://www.propolifevietnam.com/wp-content/uploads/2016/02/living-wood-floor.jpg" alt="" class="img-responsive">
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
-
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="interior_work mt0">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <h3>オフィスの内装工事</h3>
-                <h4>Furniture & Interior</h4>
-                <p>進出企業様がホーチミン市でも少しずつ増え、またオフィスの引越しをされる企業様も増えてまいりました。<br>
-                オフィスの役割も単なる職場から、社員のモチベーション、採用面談、接客を意識されたご要望も多くなってきております。<br>
-                私たちクロニクルリフォームでは、これまでベトナムホーチミン市でオフィスを中心とした内装工事（デザイン・設計・施工）の実績を積み上げてきました。</p>
-                <p>ベトナムのオフィスでは、床・壁のコンセント配線、インターネット配線などを床の下に配線できる置き床は多くなく、床スラブの上のモルタルを彫り、その溝に直接配線して再度モルタルで埋める施工方法が一般的です。<br>
-                このような中、オフィス空間デザインだけでなく、レイアウトや家具なども含めてきちんと御提案させて頂くことで、機能性の高いオフィス空間をご提供させて頂いてきました。<br>
-                オフィスの内装工事については弊社にお気軽にご相談下さい。</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <section class="gallery_interior_work">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="swiper_gallery_interior_work">
-                  <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                      <div class="swiper-slide">
-                        <a data-fancybox="gallery" href="http://www.propolifevietnam.com/wp-content/uploads/2016/01/image-from-2-9.jpg"><img src="http://www.propolifevietnam.com/wp-content/uploads/2016/01/image-from-2-9.jpg" alt="" class="img-responsive">
-                        </a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a data-fancybox="gallery" href="http://www.propolifevietnam.com/wp-content/uploads/2016/01/image-from-2-8.jpg"><img src="http://www.propolifevietnam.com/wp-content/uploads/2016/01/image-from-2-8.jpg" alt="" class="img-responsive"></a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a data-fancybox="gallery" href="http://www.propolifevietnam.com/wp-content/uploads/2016/01/image-from-2-7.jpg"><img src="http://www.propolifevietnam.com/wp-content/uploads/2016/01/image-from-2-7.jpg" alt="" class="img-responsive"></a>
-                      </div>
-                      <div class="swiper-slide">
-                        <a data-fancybox="gallery" href="http://www.propolifevietnam.com/wp-content/uploads/2016/01/image-from-2-4.jpg"><img src="http://www.propolifevietnam.com/wp-content/uploads/2016/01/image-from-2-4.jpg" alt="" class="img-responsive"></a>
-                      </div>
-                    </div>
-                    
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next swiper-button-white"></div>
-                    <div class="swiper-button-prev swiper-button-white"></div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>

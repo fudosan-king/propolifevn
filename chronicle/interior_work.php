@@ -2,11 +2,13 @@
 <html>
 
 <head>
-    <meta property="og:title" content="クロニクルインテリア｜ホーチミンのオフィス内装工事">
-    <meta property="og:description" content="ホーチミンのオフィス内装工事はおまかせください。日本人監修の元、コストパフォーマンスと品質にこだわったサービスをご提供いたします。お打ち合わせ開始から施工完了まで最短1ヶ月で対応いたします。日系法人が登記可能なオフィス探しも承ります。">
-    <meta name="description" content="ホーチミンのオフィス内装工事はおまかせください。日本人監修の元、コストパフォーマンスと品質にこだわったサービスをご提供いたします。お打ち合わせ開始から施工完了まで最短1ヶ月で対応いたします。日系法人が登記可能なオフィス探しも承ります。">
-    <meta name="keywords" content="内装工事, ホーチミン, ベトナム, オフィス, インテリア, 増床, 室内装飾">
-    <title>クロニクルインテリア｜ホーチミンのオフィス内装工事</title>
+    <meta property="og:title" content="ホーチミンのオフィス内装工事｜クロニクルリフォーム">
+    <meta property="og:description" content="ホーチミンのオフィス内装工事はクロニクルリフォームにお任せ下さい。日本人監修の元、内装デザイン、設計、施工まで
+をワンストップでご提供しております。お打ち合わせ開始から施工完了まで最短1 ヶ月から可能。日系法人が登記可能なオフィス探しも承ります。">
+    <meta name="description" content="ホーチミンのオフィス内装工事はクロニクルリフォームにお任せ下さい。日本人監修の元、内装デザイン、設計、施工まで
+をワンストップでご提供しております。お打ち合わせ開始から施工完了まで最短1 ヶ月から可能。日系法人が登記可能なオフィス探しも承ります。">
+    <meta name="keywords" content="ホーチミンオフィス内装工事,内装工事,ホーチミン,ベトナム,オフィス,インテリア,増床,室内装飾">
+    <title>ホーチミンのオフィス内装工事｜クロニクルリフォーム</title>
     <?php require 'head.php'; ?>
 </head>
 
@@ -28,34 +30,17 @@
             <section class="main_content">
                 <div class="container">
                     <div class="row">
-                        <div class="aside_list clearfix">
-                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <aside>
-                                    <h4>クロニクルリフォーム</h4>
-                                    <ul>
-                                        <li><a href="services.php"><span>01.</span> 内装サービスについて</a></li>
-                                        <li class="active"><a href="interior_work.php"><span>02.</span> オフィスの内装工事</a></li>
-                                        <li><a href="interior_construction.php"><span>03.</span> 住居の内装工事</a></li>
-                                        <li><a href="perth_design.php"><span>04.</span> パースデザイン制作</a></li>
-                                    </ul>
-                                </aside>
-                            </div>
-                        </div>
-
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="row">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <div class="box_info_general">
                                         <img src="images/magazines-desk-work-workspace-355x235.jpg" alt="" class="img-responsive">
                                         <h3>クロニクルリフォーム</h3>
-                                        <p>進出企業様がホーチミン市でも少しずつ増え、またオフィスの引越しをされる企業様も増えてまいりました。
-                                            <br> フィスの役割も単なる職場から、社員のモチベーション、採用面談、接客を意識されたご要望も多くなってきております。
-                                            <br> 私たちクロニクルリフォームでは、これまでベトナムホーチミン市でオフィスを中心とした内装工事（デザイン・設計・施工）の実績を積み上げてきました。
-                                        </p>
-                                        <p>ベトナムのオフィスでは、床・壁のコンセント配線、インターネット配線などを床の下に配線できる置き床は多くなく、床スラブの上のモルタルを彫り、その溝に直接配線して再度モルタルで埋める施工方法が一般的です。
-                                            <br> のような中、オフィス空間デザインだけでなく、レイアウトや家具なども含めてきちんと御提案させて頂くことで、機能性の高いオフィス空間をご提供させて頂いてきました。
-                                            <br> オフィスの内装工事については弊社にお気軽にご相談下さい。
-                                        </p>
+                                        <p>進出企業様がホーチミン市でも少しずつ増え、サービスオフィスから引越しされる企業様、増床の為にオフィスの引越しをされる企業様、設立用のオフィスをご契約される企業様も増えてまいりました。</p>
+                                        <p>私たちクロニクルリフォームでは、これまでベトナムホーチミン市でオフィスを中心としたデザイン、設計、施工のワンストップでの内装工事の実績を積み上げてきました。</p>
+                                        <p>オフィスの内装への期待もこれまでの単なる職場から、優秀な人材を確保したい、スタッフの離職率を下げて育成していきたいというご要望の企業様も増え始めてきたことから、働く方にも喜ばれるオフィス空間を求められるケースも増えてきました。</p>
+                                        <p>レイアウトや家具インテリアなども含めた空間できちんと御提案させて頂いたり、機能性を高めたオフィスをご提案させて頂くことでこのようなご要望にも応えてきました。 <br>
+                                        是非ホーチミンでのオフィスの内装工事については弊サービスにご相談下さい。</p>
                                     </div>
                                 </div>
                             </div>
@@ -119,7 +104,7 @@
                                             <a href="samurai.php"></a>
                                         </figure>
                                         <div class="show_text">
-                                            <h5><a href="samurai.php">フォトロンベトナム（Photron Vietnam）様</a></h5>
+                                            <h5><a href="samurai.php">レストランサムライ様</a></h5>
                                         </div>
                                     </div>
                                     <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 construction_cases_item">
@@ -165,16 +150,10 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-12">
-                                <h3>オフィスの内装工事</h3>
+                                <h3>オフィス家具とインテリア</h3>
                                 <h4>Furniture & Interior</h4>
-                                <p>進出企業様がホーチミン市でも少しずつ増え、またオフィスの引越しをされる企業様も増えてまいりました。
-                                    <br> オフィスの役割も単なる職場から、社員のモチベーション、採用面談、接客を意識されたご要望も多くなってきております。
-                                    <br> 私たちクロニクルリフォームでは、これまでベトナムホーチミン市でオフィスを中心とした内装工事（デザイン・設計・施工）の実績を積み上げてきました。
-                                </p>
-                                <p>ベトナムのオフィスでは、床・壁のコンセント配線、インターネット配線などを床の下に配線できる置き床は多くなく、床スラブの上のモルタルを彫り、その溝に直接配線して再度モルタルで埋める施工方法が一般的です。
-                                    <br> このような中、オフィス空間デザインだけでなく、レイアウトや家具なども含めてきちんと御提案させて頂くことで、機能性の高いオフィス空間をご提供させて頂いてきました。
-                                    <br> オフィスの内装工事については弊社にお気軽にご相談下さい。
-                                </p>
+                                <p>オフィスの内装工事の際は、レイアウトに合わせた机、いす、キャビネット、会議机など家具・インテリアも ご提案させて頂けます。 <br>
+                                お気軽にご相談下さい。</p>
                             </div>
                         </div>
                     </div>
@@ -199,6 +178,19 @@
                                             <div class="swiper-slide">
                                                 <a data-fancybox="gallery" href="http://www.propolifevietnam.com/wp-content/uploads/2016/01/image-from-2-4.jpg"><img src="http://www.propolifevietnam.com/wp-content/uploads/2016/01/image-from-2-4.jpg" alt="" class="img-responsive"></a>
                                             </div>
+
+                                            <div class="swiper-slide">
+                                                <a data-fancybox="gallery" href="http://www.propolifevietnam.com/wp-content/uploads/2016/01/photron-4.jpg"><img src="http://www.propolifevietnam.com/wp-content/uploads/2016/01/photron-4.jpg" alt="" class="img-responsive"></a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a data-fancybox="gallery" href="http://www.propolifevietnam.com/wp-content/uploads/2017/09/3.jpg"><img src="http://www.propolifevietnam.com/wp-content/uploads/2017/09/3.jpg" alt="" class="img-responsive"></a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a data-fancybox="gallery" href="http://www.propolifevietnam.com/wp-content/uploads/2017/09/5-450x600.jpg"><img src="images/img06.jpg" alt="" class="img-responsive"></a>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <a data-fancybox="gallery" href="http://www.propolifevietnam.com/wp-content/uploads/2017/08/item4.jpg"><img src="http://www.propolifevietnam.com/wp-content/uploads/2017/08/item4.jpg" alt="" class="img-responsive"></a>
+                                            </div>
                                         </div>
                                         <!-- Add Arrows -->
                                         <div class="swiper-button-next swiper-button-white"></div>
@@ -217,23 +209,22 @@
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 services_item">
                             <img src="images/i_consultation.svg" alt="" class="img-responsive">
                             <h4>01. ご相談</h4>
-                            <p>まずはお気軽にご相談ください。ご相談はお電話でも、こちらのサイトのお問い合わせフォームからでも承っております。</p>
+                            <p>いつ頃からオープンしたい、何人位が働けるスペースを確保したいなど物件を見つける前からのご相談も可能です。お問い合わせは、お電話でもこちらのサイトのフォームからでも承っております。</p>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 services_item">
                             <img src="images/i_field_survey.svg" alt="" class="img-responsive">
                             <h4>02. 現地調査</h4>
-                            <p>実際の現場を拝見した上で、御希望をお伺いさせて頂きます。</p>
+                            <p>ご希望が実現が可能かどうか、レイアウトのご提案の為に現地を確認させて頂きます。</p>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 services_item">
                             <img src="images/i_plan_proposal.svg" alt="" class="img-responsive">
                             <h4>03. プラン提案</h4>
-                            <p>現地測量とお客様のご希望からレイアウト図面を引き、2つのプランを提案いたします。</p>
+                            <p>レイアウトのご提案させて頂きます。</p>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 services_item">
                             <img src="images/i_quotation.svg" alt="" class="img-responsive">
                             <h4>03. お見積</h4>
-                            <p>プランを練り直すために、実現可能なお見積もりをその都度提出させていただきます。
-                            ランと見積もりをつき合わせながら、最適な内装プランをお選びください。</p>
+                            <p>確定したプランと合わせてお見積もりも作成させて頂きます。</p>
                         </div>
                     </div>
                 </div>

@@ -28,8 +28,6 @@
             <section class="main_content">
                 <div class="container">
                     <div class="row">
-                        <?php require 'aside_list.php'; ?>
-
                         <div class="sub_Contentpage">
                             
                             <h3>クロニクルリフォーム<br>

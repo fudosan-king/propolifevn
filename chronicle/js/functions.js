@@ -1,8 +1,8 @@
 jQuery(function($) {
-    
     $(window).on('load', function(){
         $(".se-pre-con").fadeOut("slow");;
     });
+    
 
     $(".navbar-toggle").on("click", function() {
         $(this).toggleClass("active");
@@ -81,6 +81,7 @@ jQuery(function($) {
 
     var swiper = new Swiper('.banner .swiper-container', {
         speed: 600,
+        loop: true,
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
@@ -93,6 +94,15 @@ jQuery(function($) {
             delay: 2500,
             disableOnInteraction: false,
         },
+        autoplayHoverPause: true,
+    });
+
+    
+
+    $('.banner .swiper-container').hover(function(){
+         swiper.autoplay.stop();
+    }, function(){
+         swiper.autoplay.start();
     });
 
     var swiper2 = new Swiper('.banner_sub .swiper-container', {
@@ -101,9 +111,9 @@ jQuery(function($) {
     });
 
     var swiper3 = new Swiper('.swiper_staff .swiper-container', {
-      slidesPerView: 5,
+      slidesPerView: 7,
       spaceBetween: 15,
-      slidesPerGroup: 5,
+      slidesPerGroup: 7,
       loop: true,
       loopFillGroupWithBlank: true,
       navigation: {
@@ -153,7 +163,7 @@ jQuery(function($) {
         asNavFor: '.slider-nav'
     });
     $('.slider-nav').slick({
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
         focusOnSelect: true,

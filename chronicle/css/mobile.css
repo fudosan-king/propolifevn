@@ -167,6 +167,23 @@
         display: block;
         float: none;
     }
+    .banner .swiper-container {
+        height: auto;
+    }
+    #hzroot7054227 iframe {
+      width: 100%;
+    }
+    .img {
+        width: 100%;
+    }
+    .img img {
+        width: 100%;
+    }
+    .box_content_right {
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
 
 }
 

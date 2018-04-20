@@ -2,17 +2,18 @@
 <html>
 
 <head>
-    <meta property="og:title" content="クロニクルインテリア｜3Dパースの作成をオフショアならではの低価格で提供致します">
-    <meta property="og:description" content="内観、外観のパース作成はプロポライフベトナムにおまかせください。3dsMaxを用いたパース作成で図面に忠実なパースを低価格で制作いたします。 仕上げをphotoshopで施し、広告販促物にすぐに使える状態で納品いたします。4カット500USDにて提供しております。">
-    <meta name="description" content="内観、外観のパース作成はプロポライフベトナムにおまかせください。3dsMaxを用いたパース作成で図面に忠実なパースを低価格で制作いたします。 仕上げをphotoshopで施し、広告販促物にすぐに使える状態で納品いたします。4カット500USDにて提供しております。">
-    <meta name="keywords" content="パース, pers, CG, ホーチミン, ベトナム, オフショア, cad">
-    <title>クロニクルインテリア｜3Dパースの作成をオフショアならではの低価格で提供致します</title>
+    <meta property="og:title" content="クロニクルリフォーム｜内外装CGパースをオフショアならではの価格で">
+    <meta property="og:description" content="内観、外観のパース作成はクロニクルリフォームにおまかせください。3dsMaxを用いて、図面に忠実なパースを低価格で制作しております。仕上げをphotoshopで施し、広告販促物にすぐに使うことができる品質を4カット500USDで可能。">
+    <meta name="description" content="内観、外観のパース作成はクロニクルリフォームにおまかせください。3dsMaxを用いて、図面に忠実なパースを低価格で制作しております。仕上げをphotoshopで施し、広告販促物にすぐに使うことができる品質を4カット500USDで可能。">
+    <meta name="keywords" content="CGパース,パース,ホーチミン,ベトナム,オフショア,cad">
+    <title>クロニクルリフォーム｜内外装CGパースをオフショアならではの価格で</title>
     <?php require 'head.php'; ?>
 </head>
 
 <body>
+    <div class="se-pre-con"></div>
     <div id="page">
-        <div class="se-pre-con"></div>
+        
         <?php require 'header.php';?>
         <main id="content">
             <section class="banner_sub">
@@ -29,23 +30,20 @@
                 <div class="container">
                     <h2 class="big_title"><span class="red">500USD</span>/<span class="yellow">4カット</span></h2>
                     <h4 class="text-center">にて制作しております</h4>
+                    <hr>
                     <div class="row">
-                        <div class="aside_list clearfix">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <aside>
-                                    <h4>クロニクルリフォーム</h4>
-                                    <ul>
-                                        <li><a href="services.php"><span>01.</span> 内装サービスについて</a></li>
-                                        <li><a href="interior_work.php"><span>02.</span> オフィスの内装工事</a></li>
-                                        <li><a href="interior_construction.php"><span>03.</span> 住居の内装工事</a></li>
-                                        <li class="active"><a href="perth_design.php"><span>04.</span> パースデザイン制作</a></li>
-                                    </ul>
-                                </aside>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                            <div class="box_topInfo">
+                                <h3>3ds Max を用いた内観・外観パースの作成</h3>
+                                <p>3ds Maxを用いて設計図面に忠実なパース作成を行います。
+                                    <br> 設計図面のファイルはJWW形式、DXF形式など拡張子を問いません。
+                                    <br> 配置する家具や外壁の塗装、フローリングの床などもECサイト等のお写真をいただければそこから描き起こして納品いたします。
+                                </p>
+                                <p>新築一戸建ての外観パースや内観パースはもちろん、業態を問わずショップの内装にも幅広く対応しております。</p>
+                                <p>また、レンダリング時に発生する光加減の調整も、最終的にphotoshopやsketchにて仕上げ修正を加えて参ります。</p>
                             </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="row">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 boxmH">
+                                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2">
                                     <div class="slider_design">
                                         <div class="slider slider-for">
                                             <div><img src="images/1x/van_living1.jpg" alt="" class="img-responsive"></div>
@@ -53,6 +51,18 @@
                                             <div><img src="images/1x/van_living3.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_kitchen.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_bedroom.jpg" alt="" class="img-responsive"></div>
+
+                                            <div><img src="images/1x/nhung_living1.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/nhung_living2.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/nhung_living3.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/nhung_living4.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/nhung_washitsu.jpg" alt="" class="img-responsive"></div>
+
+                                            <div><img src="images/1x/tien_living1.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/tien_living2.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/tien_living3.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/tien_living4.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/tien_bedroom.jpg" alt="" class="img-responsive"></div>
                                         </div>
                                         <div class="slider slider-nav">
                                             <div><img src="images/1x/van_living1.jpg" alt="" class="img-responsive"></div>
@@ -60,19 +70,17 @@
                                             <div><img src="images/1x/van_living3.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_kitchen.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_bedroom.jpg" alt="" class="img-responsive"></div>
+
+                                            <div><img src="images/1x/tien_living1.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/tien_living2.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/tien_living3.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/tien_living4.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/tien_bedroom.jpg" alt="" class="img-responsive"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 boxmH">
-                                    <h3>3ds Max を用いた内観・外観パースの作成</h3>
-                                    <p>3ds Maxを用いて設計図面に忠実なパース作成を行います。
-                                        <br> 設計図面のファイルはJWW形式、DXF形式など拡張子を問いません。
-                                        <br> 配置する家具や外壁の塗装、フローリングの床などもECサイト等のお写真をいただければそこから描き起こして納品いたします。
-                                    </p>
-                                    <p>新築一戸建ての外観パースや内観パースはもちろん、業態を問わずショップの内装にも幅広く対応しております。</p>
-                                    <p>また、レンダリング時に発生する光加減の調整も、最終的にphotoshopやsketchにて仕上げ修正を加えて参ります。</p>
-                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>

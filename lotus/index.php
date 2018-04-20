@@ -9,7 +9,7 @@
     <meta property="og:title" content="ロータスサービス┃ベトナムホーチミンでの進出支援">
 
     <meta property="og:description" content="ベトナムホーチミンでの進出支援なら信頼と実績のロータスサービスにお任せ下さい。経験豊富な日本人担当者と日本語堪能なベトナム人弁護士で安心をご提供。会社設立、労働許可証、ビザから進出後のライセンス関係、契約書関係などまで幅広く対応しております。">
-    
+
     <meta name="description" content="ベトナムホーチミンでの進出支援なら信頼と実績のロータスサービスにお任せ下さい。経験豊富な日本人担当者と日本語堪能なベトナム人弁護士で安心をご提供。会社設立、労働許可証、ビザから進出後のライセンス関係、契約書関係などまで幅広く対応しております。">
 
     <meta name="keywords" content="ベトナム,ホーチミン,会社設立,法人設立,ベトナム進出,ベトナムライセンス,ベトナム労働許可証,ベトナムビザ">
@@ -144,7 +144,7 @@
                         </div>
                       </article>
                     </div>
-                    
+
                     <div class="clearfix"></div>
 
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -246,7 +246,7 @@
                   </div>
                   <a target="_blank" href="https://ameblo.jp/aozaihousing/"><img src="images/img_blog.png" alt="" class="img-responsive"></a>
                   <a target="_blank" href="https://aodaihousing.com/"><img src="images/img_aodaihousing.png" alt="" class="img-responsive"></a>
-                  <a target="_blank" href="http://www.propolifevietnam.com/cat-chronicle/%E3%82%AA%E3%83%95%E3%82%A3%E3%82%B9%E3%81%AE%E5%86%85%E8%A3%85%E5%B7%A5%E4%BA%8B"><img src="images/img_chronicle.png" alt="" class="img-responsive"></a>
+                  <a target="_blank" href="http://chronicle.propolifevietnam.com/"><img src="images/img_chronicle.png" alt="" class="img-responsive"></a>
                   <a target="_blank" href="http://www.propolifevietnam.com/web%E3%82%B5%E3%82%A4%E3%83%88%E5%88%B6%E4%BD%9C.html"><img src="images/img_web.png" alt="" class="img-responsive"></a>
                   <a target="_blank" href="http://www.propolifevietnam.com/"><img src="images/img_propolifevn.png" alt="" class="img-responsive"></a>
                 </div>

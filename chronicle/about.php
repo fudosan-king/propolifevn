@@ -2,11 +2,14 @@
 <html>
 
 <head>
-  <meta property="og:title" content="Propolife Vietnam｜会社概要">
-    <meta property="og:description" content="Propolife Vietnam（屋号クロニクルインテリア）の会社概要です。パース作成、内装工事にとどまらず、在越日系企業、日本企業の皆様へ多岐にわたる事業・サービスを提供しております。">
-    <meta name="description" content="Propolife Vietnam（屋号クロニクルインテリア）の会社概要です。パース作成、内装工事にとどまらず、在越日系企業、日本企業の皆様へ多岐にわたる事業・サービスを提供しております。">
-    <meta name="keywords" content="パース, pers, CG, ホーチミン, ベトナム, オフショア, cad, 内装工事, インテリア">
-    <title>Propolife Vietnam｜会社概要</title>
+  <meta property="og:title" content="運営会社プロポライフベトナム概要｜クロニクルリフォーム">
+    <meta property="og:description" content="クロニクルリフォームの運営会社PROPOLIFE VIETNAM CO.,LTD の概要です。内装工事、パース制作にとどまらず、日系
+企業の皆様を中心に多岐にわたる進出サポート、安心のサービスをご提供しております。">
+    <meta name="description" content="クロニクルリフォームの運営会社PROPOLIFE VIETNAM CO.,LTD の概要です。内装工事、パース制作にとどまらず、日系
+企業の皆様を中心に多岐にわたる進出サポート、安心のサービスをご提供し
+ております。">
+    <meta name="keywords" content="CG パース,パース,クロニクルリフォーム,ホーチミン,ベトナム,オフショア,cad,内装工事,インテリア">
+    <title>運営会社プロポライフベトナム概要｜クロニクルリフォーム</title>
     <?php require 'head.php'; ?>
 </head>
 
@@ -98,7 +101,7 @@
                   <div class="swiper-container">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <a data-fancybox="gallery" href="images/staff_chi.jpg"><img src="images/staff_chi.jpg" alt="" class="img-responsive"></a>
+                        <a data-fancybox="gallery" href="images/staff_chi_big.jpg"><img src="images/staff_chi.jpg" alt="" class="img-responsive"></a>
                       </div>
                       <div class="swiper-slide">
                         <a data-fancybox="gallery" href="images/staff_chokku.jpg"><img src="images/staff_chokku.jpg" alt="" class="img-responsive"></a>
@@ -140,7 +143,7 @@
                         <a data-fancybox="gallery" href="images/staff_cuong.jpg"><img src="images/staff_cuong.jpg" alt="" class="img-responsive"></a>
                       </div>
                       <div class="swiper-slide">
-                        <a data-fancybox="gallery" href="images/staff_thuyanh.jpg"><img src="images/staff_thuyanh.jpg" alt="" class="img-responsive"></a>
+                        <a data-fancybox="gallery" href="images/staff_man_big.jpg"><img src="images/staff_man.jpg" alt="" class="img-responsive"></a>
                       </div>
                       <div class="swiper-slide">
                         <a data-fancybox="gallery" href="images/staff_tien.jpg"><img src="images/staff_tien.jpg" alt="" class="img-responsive"></a>
@@ -219,6 +222,10 @@
                     <tr>
                       <td>社員数</td>
                       <td>22名（日本人5名、ベトナム人17名）</td>
+                    </tr>
+                    <tr>
+                      <td>加入団体</td>
+                      <td>ホーチミン日本商工会正会員</td>
                     </tr>
                     <tr>
                       <td>運営Website </td>

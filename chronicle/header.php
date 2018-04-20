@@ -23,16 +23,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 						<li>
 							<div class="display_table boxmH hidden-xs">
 								<div class="table_content">
-									<p class="specialize">内装工事<br>
+									<p class="specialize">オフィスの内装工事<br>
 									家具の設計制作<br>
-									CG/3Dパース制作</p>
+									CG パース</p>
 								</div>
 							</div>
 						</li>
 						<li>
 							<div class="display_table boxmH hidden-xs">
 								<div class="table_content">
-									<p class="call"><i class="i_call"></i>
+									<p class="call"><i class="i_call"></i> 
 										<span>ベトナム国内から: <a href="tel:028‐3824‐1578">028‐3824‐1578</a><br>
 											日本・海外から: <a href="tel:+84-(0)28-3824-1418">+ 84‐(0)28‐3824‐1578</a><br>
 											担当者直通: <a href="tel:+84‐(0)91-663-1088"> +84‐(0)91-663-1088（渡邉）</a>
@@ -45,8 +45,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 							<div class="display_table boxmH hidden-xs">
 								<div class="table_content">
 									<a href="/contact.php" class="btn btnWeb hidden-sm">
-										<span>各支援サービスについて<br>
-										WEBから問い合わせる</span>
+										<span>WEB から問い合わせる</span>
 										<i class="i_arrow_right"></i>
 									</a>
 								</div>
@@ -74,8 +73,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			    <div id="navbarCollapse" class="collapse navbar-collapse">
 			        <ul class="nav navbar-nav" data-hover="dropdown" data-animations="fadeInDown fadeInLeft fadeInUp fadeInRight">
 			            <li><a href="index.php">トップ</a></li>
-			            <li><a href="interior_work.php">内装工事について</a></li>
-			            <li><a href="perth_design.php">3Dパース制作について</a></li>
+			            <li class="dropdown">
+			            	<a href="interior_work.php">内装工事について</a>
+			            	<ul class="dropdown-menu" role="menu">
+			            		<li><a href="services.php" title="">内装サービスについて</a></li>
+			            		<li><a href="interior_work.php" title="">オフィスの内装工事</a></li>
+			            	</ul>
+			            </li>
+			            <li><a href="perth_design.php">CGパース制作について</a></li>
 			            <li><a href="about.php">運営会社概要</a></li>
 			            <li><a href="contact.php">お問い合わせ</a></li>
 			        </ul>

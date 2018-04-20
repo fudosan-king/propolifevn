@@ -28,10 +28,7 @@
             <section class="main_content">
                 <div class="container">
                     <div class="row">
-                        <?php require 'aside_list.php'; ?>
-
                         <div class="sub_Contentpage">
-                            
                             <h3>クロニクルリフォーム<br>
                             ベトナムホーチミン市内装工事施工事例 <br>
                             リーガル（REGAL）様</h3>

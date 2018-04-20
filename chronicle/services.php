@@ -2,10 +2,11 @@
 <html>
 
 <head>
-    <meta property="og:title" content="ベトナムの魅力┃ロータスサービス">
-    <meta property="og:description" content="ベトナムでは人口が9,000万人を突破。平均年齢が29歳と若く豊富な労働力があり、成長が期待できる国です。また親日的な国なのも魅力です。">
-    <meta name="description" content="ベトナムでは人口が9,000万人を突破。平均年齢が29歳と若く豊富な労働力があり、成長が期待できる国です。また親日的な国なのも魅力です。">
-    <meta name="keywords" content="ベトナム,ホーチミン,魅力,メリット,デメリット,人口,成長,親日">
+    <meta property="og:title" content="ホーチミン内装工事の流れ┃クロニクルリフォーム">
+    <meta property="og:description" content="ホーチミンでの内装工事の流れになります。クロニクルリフォームでは、働く方にも喜ばれるオフィス空間をご提供しております。">
+    <meta name="description" content="ホーチミンでの内装工事の流れになります。クロニクルリフォームでは、働く方にも喜ばれるオフィス空間をご提供しております。">
+    <meta name="keywords" content="ベトナム,ホーチミン,内装工事,オフィス内装,家具,インテリア">
+    <title>ホーチミン内装工事の流れ┃クロニクルリフォーム</title>
     <?php require 'head.php'; ?>
 </head>
 
@@ -19,7 +20,7 @@
                     <div class="parallax-bg" style="background-image:url('http://www.propolifevietnam.com/wp-content/themes/themes/images/slides/office/1.jpg')" data-swiper-parallax="-23%"></div>
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <div class="title" data-swiper-parallax="-300">住居の内装工事</div>
+                            <div class="title" data-swiper-parallax="-300">内装工事の流れ</div>
                         </div>
                     </div>
                 </div>
@@ -27,37 +28,7 @@
             <section class="main_content">
                 <div class="container">
                     <div class="row">
-                        <div class="aside_list clearfix">
-                          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <aside>
-                                    <h4>クロニクルリフォーム</h4>
-                                    <ul>
-                                        <li class="active"><a href="services.php"><span>01.</span> 内装サービスについて</a></li>
-                                        <li><a href="interior_work.php"><span>02.</span> オフィスの内装工事</a></li>
-                                        <li><a href="interior_construction.php"><span>03.</span> 住居の内装工事</a></li>
-                                        <li><a href="perth_design.php"><span>04.</span> パースデザイン制作</a></li>
-                                    </ul>
-                                </aside>
-                            </div>
-                        </div>
-                        
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="row">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <div class="box_info_general">
-                                        <img src="images/magazines-desk-work-workspace-355x235.jpg" alt="" class="img-responsive">
-                                        <h3>クロニクルリフォーム</h3>
-                                        <p>進出企業様がホーチミン市でも少しずつ増え、またオフィスの引越しをされる企業様も増えてまいりました。
-                                            <br> フィスの役割も単なる職場から、社員のモチベーション、採用面談、接客を意識されたご要望も多くなってきております。
-                                            <br> 私たちクロニクルリフォームでは、これまでベトナムホーチミン市でオフィスを中心とした内装工事（デザイン・設計・施工）の実績を積み上げてきました。
-                                        </p>
-                                        <p>ベトナムのオフィスでは、床・壁のコンセント配線、インターネット配線などを床の下に配線できる置き床は多くなく、床スラブの上のモルタルを彫り、その溝に直接配線して再度モルタルで埋める施工方法が一般的です。
-                                            <br> のような中、オフィス空間デザインだけでなく、レイアウトや家具なども含めてきちんと御提案させて頂くことで、機能性の高いオフィス空間をご提供させて頂いてきました。
-                                            <br> オフィスの内装工事については弊社にお気軽にご相談下さい。
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="list_construction_cases">
                                 <h3 class="title_sub">内装工事の流れ</h3>
                                 <div class="row">
@@ -100,6 +71,62 @@
                                                         <br>プランと見積もりをつき合わせながら、最適な内装プランをお選びください。</p>
                                                 </div>
                                             </div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-icon">
+                                                    <span>5</span>
+                                                </div>
+                                                <div class="timeline-content">
+                                                    <h2>ご契約</h2>
+                                                    <p>お打ち合わせが終わりましたらご契約をさせて頂きます。</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-icon">
+                                                    <span>6</span>
+                                                </div>
+                                                <div class="timeline-content right">
+                                                    <h2>着工の準備</h2>
+                                                    <p>オフィスへの工事許可をもらう為に提出書類を確認し、図面の作成、申請書類を作成し提出いたします。</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-icon">
+                                                    <span>7</span>
+                                                </div>
+                                                <div class="timeline-content">
+                                                    <h2>工事</h2>
+                                                    <p>着工の許可が出ましたら工事に入ります。</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-icon">
+                                                    <span>8</span>
+                                                </div>
+                                                <div class="timeline-content right">
+                                                    <h2>竣工、お引渡し</h2>
+                                                    <p>竣工しましたらお引渡し手続きをさせて頂きます。不具合等がありましたらすぐ修正をさせて頂きます。</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-icon">
+                                                    <span>9</span>
+                                                </div>
+                                                <div class="timeline-content">
+                                                    <h2>オフィス側との立会いと竣工図面の提出</h2>
+                                                    <p>オフィス側が内装を確認しにきます。また竣工図面を提出させて頂きます。</p>
+                                                </div>
+                                            </div>
+                                            <div class="timeline-item">
+                                                <div class="timeline-icon">
+                                                    <span>10</span>
+                                                </div>
+                                                <div class="timeline-content right">
+                                                    <h2>アフターサポート</h2>
+                                                    <p>ご入居後不具合などが御座いましたら対応させて頂いております。期間内は費用も無料で対応させて頂いております。</p>
+                                                </div>
+                                            </div>
+
+
                                         </div>
                                     </div>
                                 </div>

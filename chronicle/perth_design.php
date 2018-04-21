@@ -29,7 +29,6 @@
             <section class="main_content">
                 <div class="container">
                     <h3 class="text-center">内観・外観パースをご提供しております</h3>
-                    <h4 class="text-center">にて制作しております</h4>
                     <a href="contact.php"><img src="images/phoicanh.jpg" alt="" class="img-responsive mt30"></a>
                     <div class="box_3dsmax">
                         <p>3ds Max を用いて設計図面に忠実なパース作成を行います。
@@ -161,6 +160,10 @@
                                 <i class="fa fa-search" aria-hidden="true"></i>
                                 <a data-fancybox="gallery" href="images/1x/tien_living4.jpg"></a>
                             </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h3 class="lead">内装４カット/500USD</h3>
+                            <h3 class="lead">戸建外観/500USD ~</h3>
                         </div>
                         <a href="contact.php" class="btn btn-lg btnContact">
                             <i class="fa fa-envelope" aria-hidden="true"></i> 制作について相談する <span class="arrow_right"></span>

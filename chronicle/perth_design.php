@@ -44,18 +44,19 @@
                                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2">
                                     <div class="slider_design">
                                         <div class="slider slider-for">
+                                            <div><img src="images/1x/322_AobakuEnogaoka_4house_Cam2.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/322_AobakuEnogaoka_4house_Cam4.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/323_Machidashi-nakamachi_Extorior_20170304.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living1.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living2.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living3.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_kitchen.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_bedroom.jpg" alt="" class="img-responsive"></div>
-
                                             <div><img src="images/1x/nhung_living1.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/nhung_living2.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/nhung_living3.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/nhung_living4.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/nhung_washitsu.jpg" alt="" class="img-responsive"></div>
-
                                             <div><img src="images/1x/tien_living1.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/tien_living2.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/tien_living3.jpg" alt="" class="img-responsive"></div>
@@ -63,12 +64,19 @@
                                             <div><img src="images/1x/tien_bedroom.jpg" alt="" class="img-responsive"></div>
                                         </div>
                                         <div class="slider slider-nav">
+                                            <div><img src="images/1x/322_AobakuEnogaoka_4house_Cam2.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/322_AobakuEnogaoka_4house_Cam4.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/323_Machidashi-nakamachi_Extorior_20170304.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living1.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living2.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living3.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_kitchen.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_bedroom.jpg" alt="" class="img-responsive"></div>
-
+                                            <div><img src="images/1x/nhung_living1.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/nhung_living2.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/nhung_living3.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/nhung_living4.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/nhung_washitsu.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/tien_living1.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/tien_living2.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/tien_living3.jpg" alt="" class="img-responsive"></div>

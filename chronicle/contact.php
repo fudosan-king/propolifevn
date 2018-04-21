@@ -1,12 +1,11 @@
 <!doctype html>
 <html>
-
 <head>
-    <meta property="og:title" content="Propolife Vietnam｜会社概要">
-    <meta property="og:description" content="Propolife Vietnam（屋号クロニクルインテリア）の会社概要です。パース作成、内装工事にとどまらず、在越日系企業、日本企業の皆様へ多岐にわたる事業・サービスを提供しております。">
-    <meta name="description" content="Propolife Vietnam（屋号クロニクルインテリア）の会社概要です。パース作成、内装工事にとどまらず、在越日系企業、日本企業の皆様へ多岐にわたる事業・サービスを提供しております。">
-    <meta name="keywords" content="ベトナム,ホーチミン,ライセンス,登記">
-    <title>Propolife Vietnam｜会社概要</title>
+    <meta property="og:title" content="WEBからのお問い合わせ｜クロニクルリフォーム">
+    <meta property="og:description" content="クロニクルリフォームへのWEBからのお問い合わせページです。ホーチミンでオフィスの内装工事ならお任せ下さい。内装空間デザイン、設計、施工をワンストップで、働く方に喜ばれる空間をご提供しております。">
+    <meta name="description" content="クロニクルリフォームへのWEBからのお問い合わせページです。ホーチミンでオフィスの内装工事ならお任せ下さい。内装空間デザイン、設計、施工をワンストップで、働く方に喜ばれる空間をご提供しております。">
+    <meta name="keywords" content="ベトナム,ホーチミン,クロニクルリフォーム,内装工事,進出">
+    <title>WEBからのお問い合わせ｜クロニクルリフォーム</title>
     <?php require 'head.php'; ?>
 </head>
 

@@ -162,6 +162,7 @@
                       ?>
                     </div>
                   </div>
+                  <a target="_blank" href="https://ameblo.jp/chronicle-reform-vn/"><img src="images/1x/blog_chornicle.png" alt="" class="img-responsive"></a>
                   <a target="_blank" href="https://ameblo.jp/aozaihousing/"><img src="images/img_blog.png" alt="" class="img-responsive"></a>
                   <a target="_blank" href="https://aodaihousing.com/"><img src="images/img_aodaihousing.png" alt="" class="img-responsive"></a>
                   <a target="_blank" href="http://www.lotusservice-vn.com/"><img src="http://www.propolifevietnam.com/wp-content/themes/themes/images/banner_lotus.png" alt="" class="img-responsive"></a>

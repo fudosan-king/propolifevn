@@ -45,6 +45,8 @@
                                         <div class="slider slider-for">
                                             <div><img src="images/1x/322_AobakuEnogaoka_4house_Cam4.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/323_Machidashi-nakamachi_Extorior_20170304.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/decor_entrance1_20180119.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/restaurant1_20180119.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living1.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living2.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living3.jpg" alt="" class="img-responsive"></div>
@@ -64,6 +66,8 @@
                                         <div class="slider slider-nav">
                                             <div><img src="images/1x/322_AobakuEnogaoka_4house_Cam4.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/323_Machidashi-nakamachi_Extorior_20170304.jpg" alt="" class="img-responsive"></div>
+                                             <div><img src="images/1x/decor_entrance1_20180119.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/restaurant1_20180119.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living1.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living2.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living3.jpg" alt="" class="img-responsive"></div>

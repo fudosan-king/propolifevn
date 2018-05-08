@@ -20,6 +20,7 @@
 </head>
 
 <body>
+    <?php require_once 'extend_script.php'; ?>
     <div id="page" class="animsition">
 
       <?php require 'header.php';?>

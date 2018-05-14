@@ -67,21 +67,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
 			        </button>
-
 			    </div>
 
 			    <div id="navbarCollapse" class="collapse navbar-collapse">
 			        <ul class="nav navbar-nav" data-hover="dropdown" data-animations="fadeInDown fadeInLeft fadeInUp fadeInRight">
 			            <li><a href="index.php">トップ</a></li>
 			            <li class="dropdown">
-			            	<a href="interior_work.php">内装工事について</a>
+			            	<a href="interior_work.php">内装工事について <b class="caret visible-xs"></b></a>
 			            	<ul class="dropdown-menu" role="menu">
 			            		<li><a href="services.php" title="">内装サービスについて</a></li>
 			            		<li><a href="interior_work.php" title="">オフィスの内装工事</a></li>
 			            	</ul>
 			            </li>
 			            <li><a href="perth_design.php">CGパース制作について</a></li>
-			            <li><a href="about.php">運営会社概要</a></li>
+			            <li>
+			            	<a href="about.php">運営会社概要</a>
+			            	<ul class="dropdown-menu" role="menu">
+			            		<li><a href="recruitment.php" title="">内装サービスについて</a></li>
+			            	</ul>
+			            </li>
 			            <li><a href="contact.php">お問い合わせ</a></li>
 			        </ul>
 			    </div>

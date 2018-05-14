@@ -83,6 +83,9 @@
 			            <li><a href="license_support.php">ベトナムライセンス支援</a></li>
 			            <li>
 			            	<a href="about.php">運営会社について</a>
+			            	<ul class="dropdown-menu" role="menu">
+					            <li><a href="recruitment.php">不動産賃貸仲介</a></li>
+					        </ul>
 			            </li>
 			        </ul>
 			    </div>

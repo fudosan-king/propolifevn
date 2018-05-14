@@ -156,14 +156,14 @@
       <?php require 'footer.php';?>
     </div>
     
-    <script src="js/jquery.samesizr-min.js"></script>
+    <!-- <script src="js/jquery.samesizr-min.js"></script>
     <script type="text/javascript">
         $(window).on("load resize", function() {
             $('.example').samesizr({
                 mobile: 0
             });
         });
-    </script>
+    </script> -->
 
 </body>
 

@@ -83,7 +83,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			            <li>
 			            	<a href="about.php">運営会社概要</a>
 			            	<ul class="dropdown-menu" role="menu">
-			            		<li><a href="recruitment.php" title="">内装サービスについて</a></li>
+			            		<li><a href="recruitment.php" title="">不動産賃貸仲介</a></li>
 			            	</ul>
 			            </li>
 			            <li><a href="contact.php">お問い合わせ</a></li>

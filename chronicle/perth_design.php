@@ -43,8 +43,10 @@
                                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2">
                                     <div class="slider_design">
                                         <div class="slider slider-for">
-                                            <div><img src="images/1x/322_AobakuEnogaoka_4house_Cam4.jpg" alt="" class="img-responsive"></div>
-                                            <div><img src="images/1x/323_Machidashi-nakamachi_Extorior_20170304.jpg" alt="" class="img-responsive"></div>
+                                            <!-- <div><img src="images/1x/322_AobakuEnogaoka_4house_Cam4.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/323_Machidashi-nakamachi_Extorior_20170304.jpg" alt="" class="img-responsive"></div> -->
+                                            <div><img src="images/1x/1.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/2.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/decor_entrance1_20180119.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/restaurant1_20180119.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living1.jpg" alt="" class="img-responsive"></div>
@@ -64,8 +66,10 @@
                                             <div><img src="images/1x/tien_bedroom.jpg" alt="" class="img-responsive"></div>
                                         </div>
                                         <div class="slider slider-nav">
-                                            <div><img src="images/1x/322_AobakuEnogaoka_4house_Cam4.jpg" alt="" class="img-responsive"></div>
-                                            <div><img src="images/1x/323_Machidashi-nakamachi_Extorior_20170304.jpg" alt="" class="img-responsive"></div>
+                                            <!-- <div><img src="images/1x/322_AobakuEnogaoka_4house_Cam4.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/323_Machidashi-nakamachi_Extorior_20170304.jpg" alt="" class="img-responsive"></div> -->
+                                            <div><img src="images/1x/1.jpg" alt="" class="img-responsive"></div>
+                                            <div><img src="images/1x/2.jpg" alt="" class="img-responsive"></div>
                                              <div><img src="images/1x/decor_entrance1_20180119.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/restaurant1_20180119.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/van_living1.jpg" alt="" class="img-responsive"></div>

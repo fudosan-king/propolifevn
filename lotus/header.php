@@ -84,7 +84,8 @@
 			            <li>
 			            	<a href="about.php">運営会社について</a>
 			            	<ul class="dropdown-menu" role="menu">
-					            <li><a href="recruitment.php">不動産賃貸仲介</a></li>
+			            		<li><a href="about.php">運営会社について</a></li>
+					            <li><a href="recruitment.php">日本人スタッフ募集</a></li>
 					        </ul>
 			            </li>
 			        </ul>

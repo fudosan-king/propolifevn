@@ -81,9 +81,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			            </li>
 			            <li><a href="perth_design.php">CGパース制作について</a></li>
 			            <li>
-			            	<a href="about.php">運営会社概要</a>
+			            	<a href="about.php">運営会社概要 <b class="caret visible-xs"></b></a>
 			            	<ul class="dropdown-menu" role="menu">
-			            		<li><a href="recruitment.php" title="">不動産賃貸仲介</a></li>
+			            		<li><a href="about.php">運営会社概要</a></li>
+			            		<li><a href="recruitment.php" title="">日本人スタッフ募集</a></li>
 			            	</ul>
 			            </li>
 			            <li><a href="contact.php">お問い合わせ</a></li>

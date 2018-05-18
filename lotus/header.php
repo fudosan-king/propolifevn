@@ -81,6 +81,7 @@
 			            <li><a href="work_permit.php">ベトナム労働許可証</a></li>
 			            <li><a href="visavn.php">ベトナムビザ</a></li>
 			            <li><a href="license_support.php">ベトナムライセンス支援</a></li>
+			            <li><a href="news.php">ニュース</a></li>
 			            <li>
 			            	<a href="about.php">運営会社について</a>
 			            	<ul class="dropdown-menu" role="menu">

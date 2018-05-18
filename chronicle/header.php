@@ -87,6 +87,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 			            		<li><a href="recruitment.php" title="">日本人スタッフ募集</a></li>
 			            	</ul>
 			            </li>
+			            <li><a href="news.php">ニュース</a></li>
 			            <li><a href="contact.php">お問い合わせ</a></li>
 			        </ul>
 			    </div>

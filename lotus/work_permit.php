@@ -16,8 +16,9 @@
 </head>
 
 <body>
+  <?php require_once 'extend_script.php'; ?>
     <div id="page" class="animsition">
-    
+
       <?php require 'header.php';?>
 
       <main id="content">
@@ -73,7 +74,7 @@
                     <li>専門家</li>
                   </ul>
                   <h4>【労働許可証取得必要書類】</h4>
-                  
+
                   <ul>
                     <li>雇用会社による労働許可証申請書（弊社フォームがあります）</li>
                     <li>専門家証明書（弊社参考フォームあります）</li>

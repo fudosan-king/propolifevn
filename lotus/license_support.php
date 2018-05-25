@@ -11,11 +11,12 @@
     <meta name="keywords" content="ベトナム,ホーチミン,ベトナムライセンス,ベトナム投資ライセンス,ベトナムライセンス更新,ベトナムライセンス変更">
 
     <title>ベトナムホーチミンでライセンス支援ならロータスサービス</title>
-    
+
     <?php require 'head.php'; ?>
 </head>
 
 <body>
+  <?php require_once 'extend_script.php'; ?>
     <div id="page" class="animsition">
 
       <?php require 'header.php';?>

@@ -9,15 +9,16 @@
     <meta name="description" content="ベトナムホーチミンでの進出支援なら信頼と実績のロータスサービスにお任せ下さい。経験豊富な日本人担当者と日本語堪能なベトナム人弁護士で安心をご提供。駐在員事務所の設立時には、設立後に事務所を運営していく上で、準備すべきこともアドバイス、サポートしております。">
 
     <meta name="keywords" content="ベトナム,ホーチミン,駐在員事務所設立,ベトナム進出">
-    
+
     <title>駐在事務所設立＆スタートアップ支援┃ロータスサービスの進出支援</title>
 
     <?php require 'head.php'; ?>
 </head>
 
 <body>
+  <?php require_once 'extend_script.php'; ?>
     <div id="page" class="animsition">
-    
+
       <?php require 'header.php';?>
 
       <main id="content">

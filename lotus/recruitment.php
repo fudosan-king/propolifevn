@@ -11,8 +11,9 @@
 </head>
 
 <body>
+    <?php require_once 'extend_script.php'; ?>
     <div id="page">
-    
+
       <?php require 'header.php';?>
 
       <main id="content">
@@ -155,7 +156,7 @@
 
       <?php require 'footer.php';?>
     </div>
-    
+
     <!-- <script src="js/jquery.samesizr-min.js"></script>
     <script type="text/javascript">
         $(window).on("load resize", function() {

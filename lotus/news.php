@@ -11,11 +11,12 @@
     <meta name="keywords" content="ベトナム,ホーチミン,ベトナムライセンス,ベトナム投資ライセンス,ベトナムライセンス更新,ベトナムライセンス変更">
 
     <title>ニュース | Propolife VietNam</title>
-    
+
     <?php require 'head.php'; ?>
 </head>
 
 <body>
+  <?php require_once 'extend_script.php'; ?>
     <div id="page" class="animsition">
 
       <?php require 'header.php';?>
@@ -79,7 +80,7 @@
                       <a class="btn btn-default btn_newDetail" href="news_detail.php" title="">詳細を見る »</a>
                     </div>
 
-                    
+
                   </div>
 
                   <div class="text-center">

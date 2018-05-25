@@ -16,8 +16,9 @@
 </head>
 
 <body>
+  <?php require_once 'extend_script.php'; ?>
     <div id="page" class="animsition">
-    
+
       <?php require 'header.php';?>
 
       <main id="content">
@@ -96,7 +97,7 @@
                   <p>＊必ずメール受信できて、プリントアウトできる環境にいて頂くのが条件になります。</p>
 
                   <h4>【レジデンスカード取得必要書類】</h4>
-                  <p>– 労働許可証原本                  
+                  <p>– 労働許可証原本
                   -パスポート原本<br>
                   -顔写真　2枚　2cm X 3cm <br>
                   -会社ライセンス公証　1部<br>

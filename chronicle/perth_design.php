@@ -31,7 +31,7 @@
                     <h3 class="text-center">内観・外観パースをご提供しております</h3>
                     <a href="contact.php"><img src="images/phoicanh.jpg" alt="" class="img-responsive mt30"></a>
                     <div class="box_3dsmax">
-                        <p>3ds Max を用いて設計図面に忠実なパース作成を行います。
+                        <p>3ds Max を用いて設計図面に忠実なパース作成を行います。<br>
                         設計図面のファイルはJWW 形式、DXF 形式など拡張子を問わず可能です。<br>
                         また、配置する家具や外壁の塗装、フローリングの床などもEC サイト等のお写真を頂ければそこ<br>
                         から描き起こすことも可能です。</p>
@@ -43,6 +43,7 @@
                                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 col-lg-offset-2">
                                     <div class="slider_design">
                                         <div class="slider slider-for">
+                                            <div><img src="images/1x/building_01.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/building_02.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/building_03.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/1.jpg" alt="" class="img-responsive"></div>
@@ -66,6 +67,7 @@
                                             <div><img src="images/1x/tien_bedroom.jpg" alt="" class="img-responsive"></div>
                                         </div>
                                         <div class="slider slider-nav">
+                                            <div><img src="images/1x/building_01.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/building_02.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/building_03.jpg" alt="" class="img-responsive"></div>
                                             <div><img src="images/1x/1.jpg" alt="" class="img-responsive"></div>
@@ -174,7 +176,6 @@
                         <a href="contact.php" class="btn btn-lg btnContact">
                             <i class="fa fa-envelope" aria-hidden="true"></i> 制作について相談する <span class="arrow_right"></span>
                         </a>
-                        
                     </div>
             </section>
         </main>

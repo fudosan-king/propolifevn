@@ -1,4 +1,5 @@
 .git
 wp-content/uploads
+wp-content/cache
 .DS_Store
 informations.txt

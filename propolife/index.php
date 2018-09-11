@@ -12,6 +12,7 @@
  * @var bool
  */
 define('WP_USE_THEMES', true);
+
 if (isset($_GET) && $_GET['tw']){
     header('Location: http://www.propolifevietnam.com/');
 }

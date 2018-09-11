@@ -4,6 +4,19 @@
  * Root > List > Bundle > Resource
  */
 abstract class Loco_admin_file_BaseController extends Loco_admin_bundle_BaseController {
+    
+    /**
+     * @var Loco_Locale
+     */
+    private $locale;
+
+
+    /**
+     * @return Loco_Locale
+     */
+    protected function getLocale(){
+        return $this->locale;
+    }
 
 
     /**
@@ -19,11 +32,6 @@ abstract class Loco_admin_file_BaseController extends Loco_admin_bundle_BaseCont
             $this->set('info', Loco_mvc_FileParams::create($file) );
             return $this->view( 'admin/errors/file-isdir', array() );
         }
-        /*/ just warn if file isn't writable
-        if( ! $file->writable() ){
-            $message = __("This file isn't writable. Click the 'File info' tab for help setting the right permissions",'loco');
-            Loco_error_AdminNotices::add( new Loco_error_Warning($message) ); // <- TODO add contextual help link
-        }*/
         
         return '';
     }
@@ -53,20 +61,27 @@ abstract class Loco_admin_file_BaseController extends Loco_admin_bundle_BaseCont
         // else file may have a locale suffix (unless invalid, such as "default.po")
         else {
             $locale = $file->getLocale();
-            if( $locale->isValid() ){
-                $locale->fetchName( new Loco_api_WordPressTranslations ) or $locale->buildName();
-            }
-            else {
-                $locale = null;
-            }
+        }
+        
+        if( $locale && $locale->isValid() ){
+            $this->locale = $locale;
+            $code = (string) $locale;
+            $this->set( 'locale', new Loco_mvc_ViewParams( array(
+                'code' => $code,
+                'lang' => $locale->lang,
+                'icon' => $locale->getIcon(),
+                'name' => $locale->ensureName( new Loco_api_WordPressTranslations ),
+                'href' => Loco_mvc_AdminRouter::generate('lang-view', array('locale'=>$code) ),
+            ) ) );
+        }
+        else {
+            $this->set( 'locale', null );
         }
 
         $this->set('file', $file );
         $this->set('filetype', strtoupper($ext) );
         $this->set('title', $file->basename() );
-        $this->set('locale', $locale );        
-        
-        
+    
         // navigate up to root from this bundle sub view
         $bundle = $this->getBundle();
         $breadcrumb = Loco_admin_Navigation::createBreadcrumb( $bundle );
@@ -76,11 +91,13 @@ abstract class Loco_admin_file_BaseController extends Loco_admin_bundle_BaseCont
         $tabs = new Loco_admin_Navigation;
         $this->set( 'tabs', $tabs );
         $actions = array (
-            'file-edit' => __('Editor','loco'),
-            'file-view' => __('Source','loco'),
-            'file-info' => __('File info','loco'),
-            'file-delete' => __('Delete','loco'),
+            'file-edit' => __('Editor','loco-translate'),
+            'file-view' => __('Source','loco-translate'),
+            'file-info' => __('File info','loco-translate'),
+            'file-diff' => __('Restore','loco-translate'),
+            'file-delete' => __('Delete','loco-translate'),
         );
+ 
         $suffix = $this->get('action');
         $prefix = $this->get('type');
         foreach( $actions as $action => $name ){
@@ -94,7 +111,7 @@ abstract class Loco_admin_file_BaseController extends Loco_admin_bundle_BaseCont
             $args = array( 'bundle' => $bundle->getHandle(), 'domain' => $project->getId() );
             $this->set( 'msginit', new Loco_mvc_ViewParams( array (
                 'href' => Loco_mvc_AdminRouter::generate( $prefix.'-msginit', $args ),
-                'text' => __('New language','loco'),
+                'text' => __('New language','loco-translate'),
             ) ) );
         }
         catch( Exception $e ){

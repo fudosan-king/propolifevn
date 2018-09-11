@@ -25,26 +25,30 @@ endforeach;
 if( $unknown ):?> 
     <div class="loco-project">
         <div class="notice inline notice-info">
-            <h2><?php esc_html_e('Additional files found','loco')?></h2>
+            <h2><?php esc_html_e('Additional files found','loco-translate')?></h2>
             <p>
-                This bundle is only partially configured, so we don't know what the following files are for.<br />
-                Click the <a href="<?php $tabs[1]->e('href')?>">setup</a> tab to complete the bundle configuration.
+                <?php
+                esc_html_e("This bundle isn't fully configured, so we don't know what the following files are for",'loco-translate')?>. <?php
+                printf( __('Click the <a href="%s">setup</a> tab to complete the bundle configuration','loco-translate'), $tabs[1]->href )?>.
             </p>
         </div>
-        <?php echo $this->render('inc-po-table', array( 'pairs' => $unknown, 'domain' => null ) )?> 
+        <?php 
+        echo $this->render('../common/inc-table-filter');
+        echo $this->render('inc-po-table', array( 'pairs' => $unknown, 'domain' => null ) )?> 
     </div><?php
 endif;
    
  
 
-// showing fully incompatible message if the additional files section won't be shown
-else://if( ! $unknown ):?> 
+// showing incompatibility message if no configured projects available 
+else:?> 
 <div class="loco-project">
     <div class="notice inline notice-error">
-        <h2><?php $params->e('name')?> <span>(unconfigured)</span></h2>
+        <h2><?php $params->e('name')?> <span>(<?php esc_html_e('unconfigured','loco-translate')?>)</span></h2>
         <p>
-            This bundle isn't automatically compatible and requires configuring before you can use all the functions of Loco Translate.<br />
-            Click the <a href="<?php $tabs[1]->e('href')?>">setup</a> tab to complete the bundle configuration.
+            <?php
+            esc_html_e("This bundle isn't automatically compatible and requires configuring before you can use all the functions of Loco Translate",'loco-translate')?>. <?php
+            printf( __('Click the <a href="%s">setup</a> tab to complete the bundle configuration','loco-translate'), $tabs[1]->href )?>.
         </p>
     </div>
 </div><?php
@@ -54,6 +58,3 @@ if( $unknown ):?>
     </div><?php
 endif;
 endif;
-
-
-// show unknown files for restricted editing functionality

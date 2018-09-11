@@ -9,10 +9,11 @@ $this->extend('../layout');
         <div class="notice inline notice-danger">
             <h3>
                 <span class="has-icon icon-trash"> </span>
-                <span><?php esc_html_e('Confirm delete','loco')?></span>
+                <span><?php esc_html_e('Confirm delete','loco-translate')?></span>
             </h3>
             <p>
-                Are you sure you want to <strong>permanently</strong> delete the following file?
+                <?php
+                echo __('Are you sure you want to <strong>permanently</strong> delete the following file?','loco-translate')?> 
             </p>
             <p>
                 <code><?php $info->e('relpath')?></code>
@@ -26,7 +27,7 @@ $this->extend('../layout');
             </p><?php
             endif?> 
             <p class="submit">
-                <input type="submit" class="button button-danger" value="<?php esc_html_e('Delete Permanently','default')?>" />
+                <button type="submit" class="button button-danger" disabled><?php esc_html_e('Delete Permanently','default')?></button>
             </p>
         </div>
         <?php

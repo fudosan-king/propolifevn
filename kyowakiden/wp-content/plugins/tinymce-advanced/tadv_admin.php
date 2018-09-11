@@ -17,6 +17,7 @@ if ( ! current_user_can( 'manage_options' ) ) {
 
 $message = '';
 
+$this->set_paths();
 $imgpath = TADV_URL . 'images/';
 $tadv_options_updated = false;
 $settings = $admin_settings = array();
@@ -330,7 +331,7 @@ foreach( $all_buttons as $button => $name ) {
 	<div>
 		<label><input type="checkbox" name="options[]" value="fontsize_formats" id="fontsize_formats" <?php if ( $this->check_user_setting( 'fontsize_formats' ) ) echo ' checked="checked"'; ?> />
 		<?php _e( 'Font sizes', 'tinymce-advanced' ); ?></label>
-		<p><?php _e( 'Replace the size setting available for fonts with: 8px 10px 12px 14px 16px 20px 24px 28px 32px 36px 48px 60px.', 'tinymce-advanced' ); ?></p>
+		<p><?php printf( __( 'Replace the size setting available for fonts with: %s.', 'tinymce-advanced' ), $this->fontsize_formats ); ?></p>
 	</div>
 </div>
 <?php

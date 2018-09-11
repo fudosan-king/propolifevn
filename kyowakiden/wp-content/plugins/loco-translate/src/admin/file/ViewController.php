@@ -23,7 +23,7 @@ class Loco_admin_file_ViewController extends Loco_admin_file_BaseController {
      */
     public function getHelpTabs(){
         return array (
-            __('Overview','default') => $this->view('tab-file-view'),
+            __('Overview','default') => $this->viewSnippet('tab-file-view'),
         );
     }
 
@@ -56,11 +56,13 @@ class Loco_admin_file_ViewController extends Loco_admin_file_BaseController {
         try {
             $this->set('modified', $file->modified() );
             $data = Loco_gettext_Data::load( $file );
-            $this->set( 'meta', Loco_gettext_Metadata::create($file, $data) );
         }
         catch( Exception $e ){
             Loco_error_AdminNotices::add( Loco_error_Exception::convert($e) );
+            $data = Loco_gettext_Data::dummy();
         }
+
+        $this->set( 'meta', Loco_gettext_Metadata::create($file, $data) );
 
         // binary MO will be hex-formated in template
         if( 'mo' === $type ){
@@ -79,17 +81,15 @@ class Loco_admin_file_ViewController extends Loco_admin_file_BaseController {
             'nonces' => array(
                 'fsReference' => wp_create_nonce('fsReference'),
             ),
-            'project' => $project ? array (
-                'bundle' => $this->getBundle()->getId(),
-                'domain' => $project->getId(),
+            'project' => $bundle ? array (
+                'bundle' => $bundle->getId(),
+                'domain' => $project ? $project->getId() : '',
             ) : null,
         ) ) ); 
 
         
         // treat as PO if file name has locale
-        if( $locale = $this->get('locale') ){
-            $lname = $locale->getName() or $lname = (string) $locale;
-            $this->set( 'localeName', $lname );
+        if( $this->getLocale() ){
             return $this->view('admin/file/view-po' );
         }
 

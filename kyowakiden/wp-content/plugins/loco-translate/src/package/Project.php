@@ -36,7 +36,7 @@ class Loco_package_Project {
     private $dpaths;
 
     /**
-     * Additional system domain path[s] added separately from bindle config
+     * Additional system domain path[s] added separately from bundle config
      * @var Loco_fs_FileList
      */
     private $gpaths;
@@ -103,7 +103,12 @@ class Loco_package_Project {
         $this->name = $name;
         $this->bundle = $bundle;
         $this->domain = $domain;
-        $this->slug = $domain->getName();
+        // take default slug from domain, avoiding wildcard
+        $slug = $domain->getName();
+        if( '*' === $slug ){
+            $slug = '';
+        }
+        $this->slug = $slug;
         // sources
         $this->sfiles = new Loco_fs_FileList;
         $this->spaths = new Loco_fs_FileList;
@@ -184,6 +189,14 @@ class Loco_package_Project {
         return $this->domain;
     }
 
+    
+    /**
+     * @var Loco_package_Bundle
+     */
+    public function getBundle(){
+        return $this->bundle;
+    }
+
 
     /**
      * Whether project is the default for its domain.
@@ -194,7 +207,7 @@ class Loco_package_Project {
         $name = $this->getDomain()->getName();
         // default if slug matches text domain.
         // else special case for Core "default" domain which has empty slug
-        return $slug === $name || ( 'default' === $name && '' === $slug );
+        return $slug === $name || ( 'default' === $name && '' === $slug ) || 1 === count($this->bundle);
     }
 
 
@@ -211,6 +224,7 @@ class Loco_package_Project {
 
     /**
      * Add a global search path where translation files may live
+     * @param string | Loco_fs_Directory
      * @return Loco_package_Project
      */
     public function addSystemTargetDirectory( $location ){
@@ -252,12 +266,12 @@ class Loco_package_Project {
      * @return Loco_fs_FileFinder
      */
     private function getTargetFinder(){    
-        if( ! $this->target ){        
+        if( ! $this->target ){
             $target = new Loco_fs_FileFinder;
             $target->setRecursive(false)->group('pot','po','mo');
             foreach( $this->dpaths as $path ){
                 // TODO search need not be recursive if it was the configured DomainPath
-                // currenly no way to know at this point, so recursing by default.
+                // currently no way to know at this point, so recursing by default.
                 $target->addRoot( (string) $path, true );
             }
             foreach( $this->gpaths as $path ){
@@ -317,7 +331,11 @@ class Loco_package_Project {
     private function getSourceFinder(){
         if( ! $this->source ){    
             $source = new Loco_fs_FileFinder;
-            $source->setRecursive(true)->group('php');
+            // .php extensions configured in plugin options
+            $conf = Loco_data_Settings::get();
+            $exts = $conf->php_alias or $exts = array('php');
+            $source->setRecursive(true)->groupBy( $exts );
+            /* @var $file Loco_fs_File */
             foreach( $this->spaths as $file ){
                 $path = realpath( (string) $file );    
                 if( $path && is_dir($path) ){
@@ -536,8 +554,8 @@ class Loco_package_Project {
                 }
             }
         }
-        // Failed to find correctly named POT file.
-        // if a single POT file is found letuse it
+        // Failed to find correctly named POT file,
+        // but if a single POT file is found we'll use it.
         if( 1 === count($files['pot']) ){
             return $files['pot'][0];
         }
@@ -575,8 +593,10 @@ class Loco_package_Project {
         // augment file list from directories unless already done so
         if( ! $source->isCached() ){
             $crawled = $source->exportGroups();
-            foreach( $crawled['php'] as $file ){
-                $this->sfiles->add($file);
+            foreach( $crawled as $ext => $files ){
+                foreach( $files as $file ){
+                    $this->sfiles->add($file);
+                }
             }
         }
         return $this->sfiles;
@@ -635,7 +655,8 @@ class Loco_package_Project {
 
 
     /**
-     * Intialize choice of PO file paths for a given locale
+     * Initialize choice of PO file paths for a given locale
+     * @param Loco_Locale locale to initialize translation files for
      * @return Loco_fs_FileList
      */
     public function initLocaleFiles( Loco_Locale $locale ){

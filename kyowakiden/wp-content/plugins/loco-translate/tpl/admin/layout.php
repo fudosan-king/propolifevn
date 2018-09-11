@@ -23,7 +23,7 @@
             endforeach?> 
         </ul>
     </h1><?php
-    else:?> 
+    elseif( $this->has('title') ):?> 
     <h1>
         <?php $params->e('title')?> 
     </h1><?php
@@ -51,10 +51,10 @@
     <div id="loco-notices"><?php 
         // flush message buffer
         do_action('loco_admin_notices');
-        // standard file system lock dialogue
+        // standard file system dialogues
         if( $params->has('fsFields') ):
             echo $this->render('common/inc-fsconn');
-        endif?> 
+        endif;?> 
     </div>
 
 
@@ -72,4 +72,3 @@ var locoConf = <?php echo $js->exportJson()?>;
 /*]]>*/
 </script><?php
 endif;
-

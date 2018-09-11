@@ -12,7 +12,7 @@ class Loco_admin_bundle_SetupController extends Loco_admin_bundle_BaseController
         $bundle = $this->getBundle();
         
         // translators: where %s is a plugin or theme
-        $this->set( 'title', sprintf( __('Set up %s','loco'),$bundle->getName() ) );
+        $this->set( 'title', sprintf( __('Set up %s','loco-translate'),$bundle->getName() ) );
     }
 
 
@@ -22,7 +22,7 @@ class Loco_admin_bundle_SetupController extends Loco_admin_bundle_BaseController
      */
     public function getHelpTabs(){
         return array (
-            __('Setup tab','loco') => $this->view('tab-bundle-setup'),
+            __('Setup tab','loco-translate') => $this->viewSnippet('tab-bundle-setup'),
         );
     }
 
@@ -32,7 +32,7 @@ class Loco_admin_bundle_SetupController extends Loco_admin_bundle_BaseController
      */
     public function render(){
 
-        $this->prepareNavigation()->add( __('Bundle setup','loco') );
+        $this->prepareNavigation()->add( __('Bundle setup','loco-translate') );
         $bundle = $this->getBundle();
         $action = 'setup:'.$bundle->getId();
  
@@ -105,8 +105,13 @@ class Loco_admin_bundle_SetupController extends Loco_admin_bundle_BaseController
         }
         // if extra files found consider incomplete
         if( $bundle->isTheme() || ( $bundle->isPlugin() && ! $bundle->isSingleFile() ) ){
-            if( Loco_package_Inverter::export($bundle) ){
-                $notices[] = "Translation files found that can't be matched to a known set of strings";
+            $unknown = Loco_package_Inverter::export($bundle);
+            $n = 0;
+            foreach( $unknown as $ext => $files ){
+                $n += count($files);
+            }
+            if( $n ){
+                $notices[] = sprintf( _n("One file can't be matched to a known set of strings","%s files can't be matched to a known set of strings",$n,'loco-translate'), number_format($n) );
             }
         }
         

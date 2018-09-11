@@ -1,0 +1,11 @@
+.git
+.gitignore
+wp-config.php
+var/
+db/
+wp-content/uploads/
+wp-content/plugins/really-simple-ssl/
+wp-content/plugins/really-simple-ssl-disabled/
+really-simple-ssl/
+really-simple-ssl-disabled/
+.DS_Store

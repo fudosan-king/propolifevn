@@ -22,7 +22,7 @@ class Loco_admin_bundle_ViewController extends Loco_admin_bundle_BaseController 
      */
     public function getHelpTabs(){
         return array (
-            __('Overview','default') => $this->view('tab-bundle-view'),
+            __('Overview','default') => $this->viewSnippet('tab-bundle-view'),
         );
     }
 
@@ -44,20 +44,9 @@ class Loco_admin_bundle_ViewController extends Loco_admin_bundle_BaseController 
     private function getProjectLink( $page, Loco_package_Project $project, array $args = array() ){
         $args['bundle'] = $this->get('bundle');
         $args['domain'] = $project->getId();
-        return $this->getLink( $page, $args );
-    }
-
-
-
-    /**
-     * Generate a link for the same type of bundle as this one
-     * @return string
-     */
-    private function getLink( $page, array $args ){
         $route = strtolower( $this->get('type') ).'-'.$page;
         return Loco_mvc_AdminRouter::generate( $route, $args );
     }
-
 
 
     /**
@@ -79,7 +68,7 @@ class Loco_admin_bundle_ViewController extends Loco_admin_bundle_BaseController 
         // POT template file
         $file = $project->getPot();
         if( $file && $file->exists() ){
-            $meta = Loco_gettext_Metadata::load($file)->persist( 0, true );
+            $meta = Loco_gettext_Metadata::load($file)->persistIfDirty( 0, true );
             $p['pot'] = new Loco_mvc_ViewParams( array(
                 // POT info
                 'name' => $file->basename(),
@@ -103,7 +92,7 @@ class Loco_admin_bundle_ViewController extends Loco_admin_bundle_BaseController 
         // always offer msginit even if we find out later we can't extract any strings
         $p['nav'][] = new Loco_mvc_ViewParams( array( 
             'href' => $this->getProjectLink('msginit', $project ),
-            'name' => __('New language','loco'),
+            'name' => __('New language','loco-translate'),
             'icon' => 'add',
         ) );
 
@@ -112,10 +101,10 @@ class Loco_admin_bundle_ViewController extends Loco_admin_bundle_BaseController 
             $pot = $project->getPot();
             if( $pot && $pot->exists() ){
                 $p['pot'] = $pot;
-                $meta = Loco_gettext_Metadata::load($pot)->persist( 0, true );
+                $meta = Loco_gettext_Metadata::load($pot)->persistIfDirty( 0, true );
                 $p['nav'][] = new Loco_mvc_ViewParams( array( 
                     'href' => $this->getResourceLink('file-edit', $project, $meta ),
-                    'name' => __('Edit template','loco'),
+                    'name' => __('Edit template','loco-translate'),
                     'icon' => 'pencil',
                 ) );
             }
@@ -123,7 +112,7 @@ class Loco_admin_bundle_ViewController extends Loco_admin_bundle_BaseController 
             else {
                 $p['nav'][] = new Loco_mvc_ViewParams( array( 
                     'href' => $this->getProjectLink('xgettext', $project ),
-                    'name' => __('Create template','loco'),
+                    'name' => __('Create template','loco-translate'),
                     'icon' => 'add',
                 ) );
             }
@@ -174,7 +163,7 @@ class Loco_admin_bundle_ViewController extends Loco_admin_bundle_BaseController 
             $api = new Loco_api_WordPressTranslations;
             /* @var $locale Loco_Locale */
             foreach( $locales as $tag => $locale ){
-                $locale->fetchName($api) or $locale->buildName() or $locale->setName($tag);
+                $locale->ensureName($api);
             }
         }
         // collate as unique [PO,MO] pairs ensuring canonical template excluded
@@ -205,11 +194,13 @@ class Loco_admin_bundle_ViewController extends Loco_admin_bundle_BaseController 
      */
     private function createFileParams( Loco_package_Project $project, Loco_fs_File $file, Loco_Locale $locale = null ){
         // Pull Gettext meta data from cache if possible
-        // TODO save write when cached version was used
-        $meta = Loco_gettext_Metadata::load($file)->persist( 0, true );
-        // Establish whether translations are official or otherwise
+        $meta = Loco_gettext_Metadata::load($file)->persistIfDirty( 0, true );
         $dir = new Loco_fs_LocaleDirectory( $file->dirname() );
-        // Retuen data required for PO table row
+        // routing arguments
+        $args = array (
+            'path' => $meta->getPath(false), 
+        );
+        // Return data required for PO table row
         return new Loco_mvc_ViewParams( array (
             // locale info
             'lcode' => $locale ? (string) $locale : '',
@@ -219,15 +210,17 @@ class Loco_admin_bundle_ViewController extends Loco_admin_bundle_BaseController 
             'meta' => $meta,
             'name' => $file->basename(),
             'time' => $file->modified(),
+            'type' => strtoupper( $file->extension() ),
             'todo' => $meta->countIncomplete(),
             'total' => $meta->getTotal(),
-            // author / contrib
+            // author / system / custom / other
             'store' => $dir->getTypeLabel( $dir->getTypeId() ),
             // links
-            'info' => $this->getResourceLink('file-info', $project, $meta ),
-            'edit' => $this->getResourceLink('file-edit', $project, $meta ),
-            'delete' => $this->getResourceLink('file-delete', $project, $meta ),
-            'copy' => $this->getProjectLink('msginit', $project, array( 'source' => $meta->getPath(false) ) ),
+            'view' => $this->getProjectLink('file-view', $project, $args ),
+            'info' => $this->getProjectLink('file-info', $project, $args ),
+            'edit' => $this->getProjectLink('file-edit', $project, $args ),
+            'delete' => $this->getProjectLink('file-delete', $project, $args ),
+            'copy' => $this->getProjectLink('msginit', $project, $args ),
         ) );
     }
 

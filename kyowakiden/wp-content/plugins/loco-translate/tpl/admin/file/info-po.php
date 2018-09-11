@@ -8,20 +8,24 @@ $this->start('header');
 
     <div class="notice inline notice-info">
         <h3>
-            <span class="<?php $locale->e('icon')?>" lang="<?php $locale->e('lang')?>"> </span>
-            <span><?php $locale->e('name')?></span>
-            <code><?php $locale->e('code')?></code>
+            <a href="<?php $locale->e('href')?>" class="has-lang">
+                <span class="<?php $locale->e('icon')?>" lang="<?php $locale->e('lang')?>"><code><?php $locale->e('code')?></code></span>
+                <span><?php $locale->e('name')?></span>
+            </a>
         </h3>
         <dl>
-            <dt>File modified:</dt>
+            <dt><?php self::e( __('File size','loco-translate') )?>:</dt>
+            <dd><?php $file->e('size')?></dd>
+
+            <dt><?php self::e( __('File modified','loco-translate') )?>:</dt>
             <dd><?php $file->date('mtime')?></dd>
 
-            <dt>Last translation:</dt>
+            <dt><?php self::e( __('Last translation','loco-translate') )?>:</dt>
             <dd><?php $params->e('author')?> &mdash; <date><?php $params->date('potime')?></date></dd>
             
-            <dt>Translation progress:</dt>
+            <dt><?php self::e( __('Translation progress','loco-translate') )?>:</dt>
             <dd>
-                <?php echo esc_html( $meta->getProgressSummary() )?> 
+                <?php self::e( $meta->getProgressSummary() )?> 
             </dd>
             <dd>
                 <?php $meta->printProgress()?> 
@@ -30,13 +34,13 @@ $this->start('header');
     </div>
  
     <?php
-    if( ! $sibling->existant ):?> 
+    if( ! $sibling->existent ):?> 
     <div class="notice inline notice-warning">
         <h3 class="has-icon">
-            Binary file missing
+            <?php self::e( __('Binary file missing','loco-translate') )?> 
         </h3>
         <p>
-            We can't find the binary MO file that belongs with these translations.
+            <?php self::e( __("We can't find the binary MO file that belongs with these translations",'loco-translate') )?>.
         </p>
     </div><?php
     endif;
@@ -46,40 +50,35 @@ $this->start('header');
     if( $potfile->synced ):?> 
     <div class="notice inline notice-success">
         <h3 class="has-icon">
-            In sync with template
+            <?php self::e( __('In sync with template','loco-translate') )?> 
         </h3>
         <p>
-            PO file has the same source strings as "<?php $potfile->e('name')?>"
+            <?php // Translators: Where %s is the name of a template file
+            self::e( __('PO file has the same source strings as "%s"','loco-translate'), $potfile->name )?>.
         </p>
     </div><?php
 
     else:?> 
-    <div class="notice inline notice-debug">
+    <div class="notice inline notice-info">
         <h3 class="has-icon">
-            Out of sync with template
+            <?php self::e( __('Out of sync with template','loco-translate') )?> 
         </h3>
         <p>
-            PO file has different source strings to "<?php $potfile->e('name')?>". Try running Sync before making any changes.
+            <?php // Translators: Where %s is the name of a template file
+            self::e( __('PO file has different source strings to "%s". Try running Sync before making any changes.','loco-translate'), $potfile->name )?> 
         </p>
     </div><?php
     endif;
     
-    /*if( $params->has('altpot') ):?> 
+    // only showing missing template warning when project was matched. Avoids confusion if something went wrong
+    elseif( $params->has('project') ):?> 
     <div class="notice inline notice-debug">
         <h3 class="has-icon">
-            Alternative template file
-        </h3>
-    </div><?php
-    endif;*/
-    
-    else:?> 
-    <div class="notice inline notice-debug">
-        <h3 class="has-icon">
-            Missing template
+            <?php self::e( __('Missing template','loco-translate') )?> 
         </h3>
         <p>
-            These translations are not linked to a POT file. Sync operations will extract strings directly from source code.
+            <?php
+            self::e( __('These translations are not linked to a POT file. Sync operations will extract strings directly from source code.','loco-translate') )?> 
         </p>
     </div><?php
     endif;
-    

@@ -29,7 +29,6 @@
 <li class="<?php echo get_post(4)->post_name;?>"><a href="#" class="hidden-xs"><?php echo get_the_title(4);?></a>
     <ul>
         <li class="<?php echo get_post(4)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('about'));?>"><?php echo get_the_title(4);?></a></li>
-        <li class="<?php echo get_post(1466)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('recruitment'));?>"><?php echo get_the_title(1466);?></a></li>
     </ul>
 </li>
 

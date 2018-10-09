@@ -45,6 +45,13 @@ $product_cat = !isset($_REQUEST['product_cat'])? "" : $_REQUEST['product_cat'];
             $keywords = get_field('keywords', $post_id);
         }
     ?>
+    <?php
+        if ($post_id == 952) {
+    ?>
+        <meta http-equiv="refresh" content="0;URL='http://www.eltvn.com/'"/>
+    <?php
+        }
+    ?>
     <?php if (($title_seo) && ($description_seo)) { ?>
         <title><?php echo $title_seo; ?></title>
         <meta property="og:title" content="<?php _e($title_og); ?>">
@@ -200,6 +207,7 @@ $product_cat = !isset($_REQUEST['product_cat'])? "" : $_REQUEST['product_cat'];
 </head>
 
 <body <?php if (is_user_logged_in()) { echo 'class="user-logged-in"'; }?> >
+
 <!-- <div id="notification">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="cancelNotification()">×</button>
     <img class="sp-device" src="<?php // echo $template_directory; ?>/images/tet_banner_sp.jpg">
@@ -279,7 +287,7 @@ $product_cat = !isset($_REQUEST['product_cat'])? "" : $_REQUEST['product_cat'];
     <li <?php if (is_page( 141 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=141"><?php _e( '品質', 'elt' ); ?></a></li>
     <?php } ?>
     <li <?php if ( $product_cat == 'lunch-box') { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?product_cat=lunch-box"><?php _e( 'お弁当', 'elt' ); ?></a></li>
-    <li <?php if ('product' == get_post_type() && $product_cat != 'lunch-box') { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=430"><?php echo get_the_title(430); ?></a></li>
+    <!-- <li <?php if ('product' == get_post_type() && $product_cat != 'lunch-box') { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=430"><?php echo get_the_title(430); ?></a></li> -->
     <!-- <li <?php // if (is_page(310)) { echo // 'class="active"';} ?>><a href="<?php // echo get_permalink(get_page_by_path('video')); ?>"><?php // echo get_the_title(310); ?></a></li> -->
     <li <?php if (is_page(316)) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=316"><?php echo get_the_title(316); ?></a></li>
     <li <?php if (is_page( 35 )) { echo 'class="active"';} ?>><a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=35"><?php _e( '私達について', 'elt' ); ?></a></li>

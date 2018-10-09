@@ -39,6 +39,7 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
 
 
 <?php wp_footer(); ?>
+
     </body>
 </html>
 

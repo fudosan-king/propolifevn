@@ -86,10 +86,27 @@ $product_cat = !isset($_REQUEST['product_cat'])? "" : $_REQUEST['product_cat'];
             top: 10px;
             position: relative;
         }
-        .content-tel-vi {
-            left: -38px;
+        .content-tel {
+            left: 40px;
             top: 10px;
             position: relative;
+        }
+        .content-tel a {
+            float: right;
+        }
+        .content-tel-mobile {
+            height: 50px;
+        }
+        .content-tel-mobile .content-tel-left {
+            position: relative;
+            left: -30px;
+        }
+        .content-tel-mobile .content-tel-right {
+            position: relative;
+            right: -15px;
+        }
+        .content-tel-mobile img {
+            height: 50px;
         }
         .content-tel-en-US {
             left: -9px;
@@ -160,6 +177,27 @@ $product_cat = !isset($_REQUEST['product_cat'])? "" : $_REQUEST['product_cat'];
                 right: -24px;
             }
         }
+        @media (max-width: 414px) {
+            .content-tel-mobile .content-tel-right {
+                right: -30px;
+            }
+        }
+        @media (max-width: 375px) {
+            .content-tel-mobile .content-tel-right {
+                right: -15px;
+            }
+        }
+        @media (max-width: 360px) {
+            .content-tel-mobile .content-tel-right {
+                right: -10px;
+            }
+        }
+        @media (max-width: 320px) {
+            .content-tel-mobile .content-tel-right {
+                right: 10px;
+            }
+        }
+
     </style>
     <script type="text/javascript">
         // function setCookie(cname, cvalue, exdays) {
@@ -211,11 +249,20 @@ $product_cat = !isset($_REQUEST['product_cat'])? "" : $_REQUEST['product_cat'];
 <header>
     <div class="container">
     <div class="row top-row">
+    <div class="col-lg-12 col-md-12 col-sm-12 hidden-lg hidden-md hidden-sm content-tel-mobile">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 content-tel-left" align="left">
+            <a href="tel:0909704614"><img src="<?php echo $template_directory; ?>/images/sp-meatp.png" alt="0909704614"></a>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 content-tel-right" align="right">
+            <a href="tel:0931349334"><img src="<?php echo $template_directory; ?>/images/sp-bento.png" alt="0931349334"></a>
+        </div>
+    </div>
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" align="center">
         <h1 class="h1tag"><a href="<?php echo get_bloginfo('siteurl'); ?>" class="logo"><img src="<?php echo $template_directory; ?>/images/top-logo.png" class="img-responsive" alt="ベトナムホーチミン市至近に自社加工工場を持つお肉の総合商社ELT VIETNAMのクライアント様の声です。"></a></h1>
     </div>
-    <div class="col-lg-6 col-md-6 col-sm-6 content-tel-<?php echo $lang; ?> hidden-xs">
-        <img src="<?php echo $template_directory; ?>/images/telefon.png" alt="0909 069 948">
+    <div class="col-lg-6 col-md-6 col-sm-6 content-tel hidden-xs" align="right">
+        <a href="tel:0909704614"><img src="<?php echo $template_directory; ?>/images/meatp-phone.png" alt="0909704614"></a>
+        <a href="tel:0931349334"><img src="<?php echo $template_directory; ?>/images/bento-phone.png" alt="0931349334"></a>
     </div>
     <div class="col-lg-3 col-md-3 col-sm-3">
     <div class="socials-top center-block" align="right">
@@ -228,7 +275,7 @@ $product_cat = !isset($_REQUEST['product_cat'])? "" : $_REQUEST['product_cat'];
     <?php if (!WC()->cart->is_empty()) { ?>
     <a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=431"><i class="fa fa-shopping-cart i_cart"><span class="number_cart"><?php echo WC()->cart->get_cart_contents_count(); ?></span></i></a>
     <?php } ?>
-    <a href="tel:0932098178"><span class="hotline">0932 098 178</span></a>
+    <a href="tel:0932098178"><span class="hotline">ELTVN 0932 098 178</span></a>
 
     </div>
     </div>

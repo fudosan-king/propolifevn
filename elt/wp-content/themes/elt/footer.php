@@ -16,15 +16,13 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
 
 
 <?php
-    if (!is_page( 38 ) && !is_page( 40 ) ) {
-        // add_services_clients();
-		$arg = array('page_id' => 381);
-		$the_query = new WP_Query($arg);
-		while ( $the_query->have_posts() ) : $the_query->the_post();
-			the_content();
-		endwhile;
-		wp_reset_query();
-    }
+    // add_services_clients();
+	$arg = array('page_id' => 381);
+	$the_query = new WP_Query($arg);
+	while ( $the_query->have_posts() ) : $the_query->the_post();
+		the_content();
+	endwhile;
+	wp_reset_query();
 ?>
 <footer class="doc-footer">
 <div class="container">

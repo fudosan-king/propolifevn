@@ -132,7 +132,4 @@ $lang = get_bloginfo('language');
 
 </div>
 </div>
-
-<?php
-    get_footer();
-?>
+<?php get_footer();?>

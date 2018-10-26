@@ -275,7 +275,7 @@ $product_cat = !isset($_REQUEST['product_cat'])? "" : $_REQUEST['product_cat'];
     <?php if (!WC()->cart->is_empty()) { ?>
     <a href="<?php echo get_bloginfo('siteurl'); ?>/?page_id=431"><i class="fa fa-shopping-cart i_cart"><span class="number_cart"><?php echo WC()->cart->get_cart_contents_count(); ?></span></i></a>
     <?php } ?>
-    <a href="tel:0932098178"><span class="hotline">ELTVN 0932 098 178</span></a>
+    <a href="tel:0932098178"><span class="hotline">ELTVN 028 3873 4081</span></a>
 
     </div>
     </div>

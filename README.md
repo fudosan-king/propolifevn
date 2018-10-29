@@ -11,7 +11,8 @@ VPS Information:
 
 
 Mysql:
--       http://222.255.217.23/mysql/
+-       Add `/etc/hosts` 222.255.217.23 mysql.propolifevietnam.com
+-       http://mysql.propolifevietnam.com/
 -       User: root
 -       Password: 5fZ7mcBSZ2L:s![p
 

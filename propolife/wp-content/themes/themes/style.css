@@ -10,7 +10,7 @@ Text Domain: propolife
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
-@import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700);
 @media (min-width: 769px) and (max-width: 991px){.nav > li > a {padding: 10px 8px;}.sildermain{padding-top:84px !important}.optical.logo{padding:15px !important}}
 @media (min-width: 768px) and (max-width: 991px) {.bgColor .col-xs-6{padding:0px;}.staff .img-circle{width:65%}.navbar ul li a{padding: 10px 5px;}}
 @media (min-width: 992px) and (max-width: 1199px) {.staff .img-circle{width:65%}}
@@ -502,6 +502,47 @@ h3{text-transform:uppercase}
 .support_page {
     padding-top: 90px;
 }
+
+/*KHANH*/
+
+.thumbnail.interior {
+  /*padding:40px;*/
+  height: 270px;
+  position: relative;
+}
+
+.thumbnail.interior img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-height: 100%;
+    display: block;
+
+    transition: all 0.03s ease;
+    -moz-transition: all 0.03s ease;
+    -o-transition: all 0.03s ease;
+    -webkit-transition: all 0.03s ease;
+}
+
+.thumbnail.interior:hover img {
+  cursor: pointer;
+  opacity: 0.5;
+  /*-webkit-filter: grayscale(100%);*/
+  /*filter: grayscale(100%);*/
+}
+
+.thumbnail.interior a {
+    display: block;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: absolute;
+}
+
 @media (max-width: 768px) {
     .w_QA img {
         margin: 0 auto 15px;

@@ -14,6 +14,7 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 <script src="<?php bloginfo( 'template_directory' );?>/js/jquery.easing.1.3.js"></script>
 <script>
 function imgLoaded(img){
@@ -21,10 +22,13 @@ function imgLoaded(img){
     imgWrapper.className += imgWrapper.className ? ' loaded' : 'loaded';
 };
 $(window).load(function() {$(".se-pre-con").fadeOut("slow");$(".view-effect").addClass('animated');});
+// $(window).on('load', function(){$(".se-pre-con").fadeOut("slow");$(".view-effect").addClass('animated');});
 </script>
 <script src="<?php bloginfo( 'template_directory' );?>/bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo( 'template_directory' );?>/js/jssor.js"></script>
 <script type="text/javascript" src="<?php bloginfo( 'template_directory' );?>/js/jssor.slider.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js"></script> -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css"> -->
 <?php wp_head();?>
 
 </head>

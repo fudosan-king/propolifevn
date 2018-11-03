@@ -1,9 +1,14 @@
-<div id="sliderContainer" style="position: relative; width:2000px;height:700px; overflow: hidden;">
+<?php 
+    $interior_width = is_tax('cat-chronicle','13') ? '2000px' : '2000px'; 
+    $interior_height = is_tax('cat-chronicle','13') ? '950px' : '700px'; 
+?>
+
+<div id="sliderContainer" style="position: relative; width:<?php echo $interior_width; ?>;height:<?php echo $interior_height; ?>; overflow: hidden;">
     <div u="loading" style="position: absolute; top: 0px; left: 0px;">
         <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;background-color: #000; top: 0px; left: 0px;width: 100%; height:100%;"></div>
         <div style="position: absolute; display: block; background: url(<?php bloginfo( 'template_directory' );?>/images/controls/ajax-loader.gif) no-repeat center center;top: 0px; left: 0px;width: 100%;height:100%;"></div>
     </div>
-    <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:2000px; height:700px;overflow: hidden;">
+    <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:<?php echo $interior_width; ?>;height:<?php echo $interior_height; ?>;overflow: hidden;">
         <?php
         $listtext = array(
             0=>"「住み方」を施工する",
@@ -178,48 +183,100 @@
                 }
                 elseif(is_tax('cat-chronicle','13')){
                    ?>
+                    <!-- ADJUST HERE -->
 
+                    <?php 
+                        $gallery_demo = get_field('interior_carousel_content', 'option');
+                        foreach ($gallery_demo as $key => $obj) {
+                            $imgUrl = wp_get_attachment_image_url( $obj['ID'], $size = 'full', $icon = false );
+                            $random_effect = mt_rand(0,3);
+                            ?>
+                            <div style="background: url(<?php echo $imgUrl; ?>)">
+                                <img u="image" src="<?php echo $imgUrl;?>" />
+                                <?php 
+                                    switch ($random_effect) {
+                                        case 0:
+                                            echo '<div u="caption" t="RTTS|T" d=-300 t2="B" class="textBig" style="left:150px; top: 330px;">
+                            <span class="title-slide">'.$listtext[5].'</span><br>'.$listtext[6].'.
+                        </div>
+                        <div u="caption" t="T|IB" t2="T" d=-300 class="captionOrange"  style="position:absolute; left:190px; top:250px;">'.$listtext[2].'</div>
+                        <div u="caption" t="T|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; left:340px; top:250px;">'.$listtext[3].'</div>
+                        <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="captionOrange" style="position: absolute; top:250px; left:484px;text-align: left;">'.$listtext[4].'</div>';
+                                            break;
+                                        case 1:
+                                            echo ' <div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:24%; top:425px;">
+                            <span class="title-slide">'.$listtext[5].'</span><br>'.$listtext[6].'.
+                        </div>
+                        <div u="caption" t="MCLIP|T" t2="T" class="captionOrange" d=-450 style="left:505px;top:250px;">'.$listtext[2].'</div>
+                        <div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:638px;top:250px;">'.$listtext[3].'</div>
+                        <div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:772px;top:250px;">'.$listtext[4].'</div>';
+                                            break;
+                                        case 2:
+                                            echo ' <div u="caption" t="T" t2="NO" class="textBig" style="left:150px; top:120px;">
+                            <span class="title-slide">'.$listtext[5].'</span><br>'.$listtext[6].'.
+                        </div>
+                        <div u="caption" t="L" d=-750 class="captionOrange" style="left:195px; top: 300px;">'.$listtext[2].'</div>
+                        <div u="caption" t="DDG|TR" t2="TORTUOUS|VB" d=-750 class="captionOrange" style="left:350px; top: 300px;">'.$listtext[3].'</div>
+                        <div u="caption" t="CLIP|L" t2=B d=-450 class="captionBlack" style="left:500px; top: 300px;">and</div>
+                        <div u="caption" t="TORTUOUS|VB" d=-750 class="captionOrange" style="left:605px; top:300px;">'.$listtext[4].'</div>';
+                                            break;
+                                        case 3:
+                                            echo '<div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:55%;top:115px; width:700px;text-align:right;">
+                            <span class="title-slide">'.$listtext[5].'</span><br>'.$listtext[6].'.
+                        </div>
+                        <div u="caption" t="ZMF|10" d=-1300 class="captionOrange" style="left:67%;top:315px;">'.$listtext[2].'</div>
+                        <div u="caption" t="CLIP|L" d=-300 class="captionBlack" style="left:74.5%;top:315px;text-align: center;">'.$listtext[3].'</div>
+                        <a class="captionOrange" u="caption" t="CLIP|L" d=-300 href="#" style="left:82%;top:315px;">'.$listtext[4].'</a>';
+                                            break;
+                                    }
+                                ?>
+                            </div>
+                            <?php
+                        }
+                    ?>
 
-                <div>
-                        <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/home/1.jpg" />
+                    <!-- <div>
+                        <img u="image" src="<?php //bloginfo( 'template_directory' );?>/images/slides/home/1.jpg" />
                         <div u="caption" t="RTTS|T" d=-300 t2="B" class="textBig" style="left:150px; top: 330px;">
-                            <span class="title-slide"><?php // echo $listtext[5];?></span><br><?php // echo $listtext[6];?>.
+                            <span class="title-slide"><?php echo $listtext[5];?></span><br><?php echo $listtext[6];?>.
                         </div>
                         <div u="caption" t="T|IB" t2="T" d=-300 class="captionOrange"  style="position:absolute; left:190px; top:250px;"><?php echo $listtext[2];?></div>
                         <div u="caption" t="T|IB" t2=L d=-900 class="captionBlack"  style="position:absolute; left:340px; top:250px;"><?php echo $listtext[3];?></div>
                         <div u="caption" t="LISTH|R" t2="CLIP|TB" d=-600 class="captionOrange" style="position: absolute; top:250px; left:484px;text-align: left;"><?php echo $listtext[4];?></div>
                     </div>
 
-                <div>
-                    <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/2.jpg" />
-                    <div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:24%; top:425px;">
-                        <span class="title-slide"><?php // echo $listtext[5];?></span><br><?php // echo $listtext[6];?>.</div>
-                        <div u="caption" t="MCLIP|T" t2="T" class="captionOrange" d=-450 style="left:505px;top:250px;"><?php echo $listtext[2];?></div>
-                        <div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:638px;top:250px;"><?php echo $listtext[3];?></div>
-                        <div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:772px;top:250px;"><?php echo $listtext[4];?></div>
+                    <div>
+                        <img u="image" src="<?php //bloginfo( 'template_directory' );?>/images/slides/perth/2.jpg" />
+                        <div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:24%; top:425px;">
+                            <span class="title-slide"><?php // echo $listtext[5];?></span><br><?php // echo $listtext[6];?>.
+                        </div>
+                        <div u="caption" t="MCLIP|T" t2="T" class="captionOrange" d=-450 style="left:505px;top:250px;"><?php //echo $listtext[2];?></div>
+                        <div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:638px;top:250px;"><?php //echo $listtext[3];?></div>
+                        <div u="caption" t="MCLIP|R" d=-300 class="captionOrange" style="left:772px;top:250px;"><?php //echo $listtext[4];?></div>
                     </div>
 
                     <div>
-                        <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/8.jpg" />
+                        <img u="image" src="<?php //bloginfo( 'template_directory' );?>/images/slides/perth/8.jpg" />
                         <div u="caption" t="T" t2="NO" class="textBig" style="left:150px; top:120px;">
                             <span class="title-slide"><?php // echo $listtext[5];?></span><br><?php // echo $listtext[6];?>.
                         </div>
-                        <div u="caption" t="L" d=-750 class="captionOrange" style="left:195px; top: 300px;"><?php echo $listtext[2];?></div>
-                        <div u="caption" t="DDG|TR" t2="TORTUOUS|VB" d=-750 class="captionOrange" style="left:350px; top: 300px;"><?php echo $listtext[3];?></div>
+                        <div u="caption" t="L" d=-750 class="captionOrange" style="left:195px; top: 300px;"><?php //echo $listtext[2];?></div>
+                        <div u="caption" t="DDG|TR" t2="TORTUOUS|VB" d=-750 class="captionOrange" style="left:350px; top: 300px;"><?php //echo $listtext[3];?></div>
                         <div u="caption" t="CLIP|L" t2=B d=-450 class="captionBlack" style="left:500px; top: 300px;">and</div>
-                        <div u="caption" t="TORTUOUS|VB" d=-750 class="captionOrange" style="left:605px; top:300px;"><?php echo $listtext[4];?></div>
+                        <div u="caption" t="TORTUOUS|VB" d=-750 class="captionOrange" style="left:605px; top:300px;"><?php //echo $listtext[4];?></div>
                     </div>
 
                     <div>
-                    <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/perth/7.jpg" />
-                    <div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:55%;top:115px; width:700px;text-align:right;">
-                        <span class="title-slide"><?php // echo $listtext[5];?></span><br><?php // echo $listtext[6];?>.
-                    </div>
-                    <div u="caption" t="ZMF|10" d=-1300 class="captionOrange" style="left:67%;top:315px;"><?php echo $listtext[2];?></div>
-                    <div u="caption" t="CLIP|L" d=-300 class="captionBlack" style="left:74.5%;top:315px;text-align: center;"><?php echo $listtext[3];?></div>
-                    <a class="captionOrange" u="caption" t="CLIP|L" d=-300 href="#" style="left:82%;top:315px;"><?php echo $listtext[4];?></a>
-                </div>
-
+                        <img u="image" src="<?php //bloginfo( 'template_directory' );?>/images/slides/perth/7.jpg" />
+                        <div u="caption" t="CLIP|LR" du="1500" class="textBig" style="left:55%;top:115px; width:700px;text-align:right;">
+                            <span class="title-slide"><?php // echo $listtext[5];?></span><br><?php // echo $listtext[6];?>.
+                        </div>
+                        <div u="caption" t="ZMF|10" d=-1300 class="captionOrange" style="left:67%;top:315px;"><?php //echo $listtext[2];?></div>
+                        <div u="caption" t="CLIP|L" d=-300 class="captionBlack" style="left:74.5%;top:315px;text-align: center;"><?php //echo $listtext[3];?></div>
+                        <a class="captionOrange" u="caption" t="CLIP|L" d=-300 href="#" style="left:82%;top:315px;"><?php //echo $listtext[4];?></a>
+                    </div> -->
+                    
+                     <!-- END ADJUST HERE -->
 
                     <?php
                 }

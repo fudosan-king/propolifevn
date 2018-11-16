@@ -25,27 +25,20 @@
 // define('MY_TEXTDOMAIN', 'my_domain');
 
 // Server
-define('DB_NAME', 'eltvncom');
-
-/** MySQL database username */
-define('DB_USER', 'root');
-
-/** MySQL database password */
-define('DB_PASSWORD', '5fZ7mcBSZ2L:s![p');
-
-/** MySQL hostname */
+define('DB_NAME', 'eltvncom_new');
+define('DB_USER', 'eltvncom_new');
+define('DB_PASSWORD', '04ZCyl!$');
 define('DB_HOST', 'localhost');
-
 define('MY_TEXTDOMAIN', 'my_domain');
 
 // define('DB_NAME', 'eltvn');
 // define('DB_USER', 'da_admin');
 // define('DB_PASSWORD', 'TUViSEkV');
-// define('DB_HOST', '43.239.148.40:3306');
+// define('DB_HOST', '103.54.250.108:3306');
 // define('MY_TEXTDOMAIN', 'my_domain');
 
 /** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
+define('DB_CHARSET', 'utf8mb4');
 
 define('WP_MEMORY_LIMIT','256M');
 

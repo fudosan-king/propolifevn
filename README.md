@@ -42,7 +42,9 @@ Hosting:
 
 
 Mysql:
--       phpMyAdmin: eltvncom_elt 04ZCyl!$
+-       phpMyAdmin:
+-       https://118.69.204.220/phpmyadmin/
+-       eltvncom_new 04ZCyl!$
 
 
 

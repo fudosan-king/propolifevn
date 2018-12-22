@@ -15,6 +15,9 @@ endwhile;
 ?>
 </div>
 </div>
+<?php
+echo htmlContactButton6();
+?>
 </div>
 <div class="col-lg-3"><?php get_sidebar('right');?></div>
 </div>

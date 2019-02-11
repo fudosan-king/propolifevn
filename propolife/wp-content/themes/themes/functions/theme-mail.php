@@ -27,10 +27,8 @@ function sendmail(){
 	$fromlocation = $localtime.'/'.$query['city'].'/'.$query['country'];
 	$posttitle = $hoten.'-'.$query['city'].'-'.$query['country'];
 	}
-	$listmail = explode(';',$lienhe['mail']);
-	foreach($listmail as $m){
-		wp_mail($m,$title, $html,$headers);
-	}
+	$listmail = str_replace(';',',',$lienhe['mail']);;
+	wp_mail($listmail,$title, $html,$headers);
 
 	$my_post = array('post_title' =>$posttitle,'post_type' => 'mail-inbox','post_excerpt'=>$noidung,'post_status' => 'publish');
 	$postID = wp_insert_post($my_post);

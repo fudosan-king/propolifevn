@@ -13,7 +13,7 @@ $dem++;
 <div class="title center-block"><span class="badge">0<?php echo $dem?>. <?php the_title();?></span></div>
 <div class="detail"><?php the_content();?></div>
 <?php if($dem==1){?>
-<div class="center-block"><a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-success">問い合わせする<i class="fa fa-chevron-circle-right" style="margin:0px 0px 0px 10px;color:#ffffff"></i></a></div>
+<div class="center-block"><a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-success">相談する<i class="fa fa-chevron-circle-right" style="margin:0px 0px 0px 10px;color:#ffffff"></i></a></div>
 <?php }?>
 </div>
 <div class="clearfix"></div>

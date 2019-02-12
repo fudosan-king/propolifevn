@@ -14,7 +14,7 @@ function htmlContactButton(){global $lienhe;$hl = explode(';',$lienhe['hotline']
     <div style="font-size:25px;background-color:#ffffff;padding:5px 10px;color:#000000;display: inline-block;border-radius: 25px;"><?php echo $hl[1];?></div>
     <div class="clearfix"></div>
 	<a href="<?php echo get_permalink(get_page_by_path('contact')); ?>" class="btn btn-default btn-lg btn-contact" style="color: #04978D;">
-    <i class="fa fa-envelope"></i><span class="hidden-xs">WEBからの お問い合わせ</span>
+    <i class="fa fa-envelope"></i><span class="hidden-xs">WEBから相談</span>
     </a>
 <?php
 	$cform = ob_get_contents();

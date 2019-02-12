@@ -7,7 +7,7 @@
 <div class="row">
 <div class="col-lg-3"></div>
 <div class="col-lg-6">
-<div class="well"><h3 align="center" style="margin-top:0px;line-height:normal;margin-bottom:0px;">WEBからの お問い合わせ</h3></div>
+<div class="well"><h3 align="center" style="margin-top:0px;line-height:normal;margin-bottom:0px;">WEBから相談</h3></div>
 <div class="form-group has-feedback">
 <div class="input-group">
 <span class="input-group-addon"><i class="fa fa-user"></i></span>

@@ -421,7 +421,7 @@ h3{text-transform:uppercase}
 .news-date{color:#A90003}
 .list-web .list-group-item{line-height: 30px;}
 .align-top{padding-top:120px}
-.panel-body p .size-large,.panel-body p img{width: 100%;height: auto;}
+/*.panel-body p .size-large,.panel-body p img{width: 100%;height: auto;}*/
 .private{border-radius:0px;border:10px solid #ddd;background-color:#fff;padding:15px;}
 .private h4{margin-top:20px;font-size:16px;font-weight:bold}
 .private hr{margin-top:10px;margin-bottom:10px;}

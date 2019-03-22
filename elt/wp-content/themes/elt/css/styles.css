@@ -88,6 +88,12 @@
     .list-detail li p {
         height: auto !important
     }
+    .time-oder-pc {
+        display: none !important;
+    }
+    .time-oder-sp {
+        display: block !important;
+    }
     header {
         height: inherit !important
     }
@@ -698,7 +704,7 @@ address .tel {
     width: 60%
 }
 .list-detail li:last-child {
-    padding: 10px 0px 0px 10px;
+    padding: 0px 0px 0px 10px;
     vertical-align: top;
     width: 39%
 }
@@ -946,6 +952,12 @@ ol.breadcrumb2 li {
     font-size: 18px;
     background-color: #ffffff;
     border-radius: 5px;
+}
+.time-oder-pc {
+    height: auto !important;
+}
+.time-oder-sp {
+    display: none;
 }
 /* Small Sizes */
 

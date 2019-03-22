@@ -2321,8 +2321,19 @@ if ( ! function_exists( 'woocommerce_add_footer_product_cat' ) ) {
 if ( ! function_exists( 'woocommerce_show_product_images_customer' ) ) {
     function woocommerce_show_product_images_customer() {
         global $post, $woocommerce, $product;
-
+        $lang = get_locale();
         echo '<li>';
+        if ($lang == 'ja') {
+        	echo '<p class="time-oder-sp">当日お昼までのお弁当の注文は、10：00までにお願い致します。<br>';
+        	echo '10：00以降のご注文は午後の配達になりますので、ご了承下さい。<br>';
+        	echo 'また、ご不明な点がございましたらお電話にてご連絡下さい。';
+        	echo '</p>';
+    	} else {
+    		echo '<p class="time-oder-sp">Please order the lunch box by 10:00 on the day.<br>';
+    		echo 'Please note that orders after 10:00 will be delivered in the afternoon.<br>';
+    		echo 'Also, please contact us by phone if you have any questions.<br>';
+    		echo '</p>';
+    	}
         if ( has_post_thumbnail() ) {
 
             $image_title    = esc_attr( get_the_title( get_post_thumbnail_id() ) );
@@ -2425,7 +2436,19 @@ if ( ! function_exists( 'woocommerce_single_product_summary_content' ) ) {
         $tag_count = sizeof( get_the_terms( $post->ID, 'product_tag' ) );
         $attachment_ids = $product->get_gallery_attachment_ids();
         $template_directory = str_replace("twentyfifteen", "elt", get_template_directory_uri());
+        $lang = get_locale();
 
+        if ($lang == 'ja') {
+        	echo '<p class="time-oder-pc">当日お昼までのお弁当の注文は、10：00までにお願い致します。<br>';
+        	echo '10：00以降のご注文は午後の配達になりますので、ご了承下さい。<br>';
+        	echo 'また、ご不明な点がございましたらお電話にてご連絡下さい。';
+        	echo '</p>';
+    	} else {
+    		echo '<p class="time-oder-pc">Please order the lunch box by 10:00 on the day.<br>';
+    		echo 'Please note that orders after 10:00 will be delivered in the afternoon.<br>';
+    		echo 'Also, please contact us by phone if you have any questions.<br>';
+    		echo '</p>';
+    	}
         // Title
         echo '<h3>';
         echo the_title();

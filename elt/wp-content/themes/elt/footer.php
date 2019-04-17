@@ -28,7 +28,7 @@ $template_directory = str_replace("twentyfifteen", "elt", get_template_directory
 <div class="container">
 <div class="row">
 <div class="col-lg-12">
-<div class="footer-privacy center-block" align="left">Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span id="copyright-year">2015</span>. <a href="http://propolife.co.jp" target="_blank">Privacy Policy</a></div>
+<div class="footer-privacy center-block" align="left">Copyright&nbsp;&copy;&nbsp;Propolife INC. ALL rights reserved.<span id="copyright-year">2015</span>. Privacy Policy</div>
 </div>
 </div>
 </div>

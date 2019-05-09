@@ -16,14 +16,14 @@
 	 	echo '<div class="row">';
 		while($query->have_posts()): $query->the_post();
 			$thumbnailURL = wp_get_attachment_image_url( get_post_thumbnail_id($post->ID), $size = 'origin', $icon = false );
-	?>
+	?>		<h1><?php echo str_replace(substr(get_field('comment_1'), 81, 500), "...", get_field('comment_1')); ?></h1>
 			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="pro_item" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
 					<h4><?php the_title(); ?></h4>
 					<div class="pro_item_img">
 						<span class="label">残り<?php the_field('remaining'); ?>棟</span>
 						<a href="<?php echo esc_url(get_permalink()); ?>"><img src="<?php echo $thumbnailURL; ?>" alt="" class="img-fluid"></a>
-						<a href="<?php echo esc_url(get_permalink()); ?>" class="text_cover">◆木造在来工法◆全室フローリングに高級感のある天然無垢材を使用◆駐車スぺー …</a>
+						<a href="<?php echo esc_url(get_permalink()); ?>" class="text_cover"><?php echo str_replace(substr(get_field('comment_1'), 81, 1000), " ...", get_field('comment_1')); ?></a>
 					</div>
 					<div class="pro_item_info">
 						<div class="row">

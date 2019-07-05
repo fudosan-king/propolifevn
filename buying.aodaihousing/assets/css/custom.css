@@ -1,0 +1,27 @@
+/*Pagination */
+.page-item.active .page-link {
+    z-index: 0 !important;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/*Breadcrumbs*/
+#breadcrumbs {
+	padding-left: 165px;
+}
+#breadcrumbs span {
+	font-size: 18px;
+    font-weight: inherit;
+    color: #0000CD
+}
+
+/*Contact form*/
+#estates_name input {
+	width: 477px;
+    font-size: 22px;
+    font-weight: inherit;
+    color: #696969;
+    padding-left: -10px;
+}
+input[type="text"]:disabled

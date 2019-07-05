@@ -13,10 +13,10 @@
     <li><a href="/#section_work">制作実例</a></li>
     <li><a href="/#section_price">価格</a></li>
     <li><a href="/360sphere-pers/">360°天球パース</a></li>
-    <li><a href="javascript:void(0);">製作日記</a></li>
+    <li><a href="javascript:void(0);">製作日記（準備中）</a></li>
     <li><a href="/company/">会社概要</a></li>
-    <li><a href="https://www.propolifevietnam.com/">コーポレートサイト</a></li>
-    <li><a href="https://www.propolife.co.jp/">日本法人（親会社）</a></li>
+    <li><a href="https://www.propolifevietnam.com/" target="_blank">コーポレートサイト</a></li>
+    <li><a href="https://www.propolife.co.jp/" target="_blank">日本法人（親会社）</a></li>
     <li><a href="https://propolife.s3-ap-northeast-1.amazonaws.com/3dmodeling_propolifevietnam.pdf">資料ダウンロード</a></li>
   </ul>
   <a href="/" class="logo_footer"><img src="/wp-content/themes/cg_propolife/images/1x/logo_footer.svg" alt="" class="img-fluid" width="130"></a>

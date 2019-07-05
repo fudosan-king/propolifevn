@@ -116,7 +116,7 @@ p {margin-bottom: 10px;}
   /* Fx 5+ */
   -o-animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
   /* Opera 12+ */
-  animation: elasticus 1.2s cubic-bezier(1, 0, 0, 1) infinite;
+  animation: elasticus 2.5s cubic-bezier(1, 0, 0, 1) infinite;
   /* IE 10+, Fx 29+ */
   position: absolute;
   top: 0px;
@@ -613,7 +613,7 @@ p {margin-bottom: 10px;}
 .menu_footer a {
   display: block;
   color: #fff;
-  font-size: 23px;
+  font-size: 19px;
   font-family: "Ubuntu Condensed", sans-serif;
   margin-bottom: 5px;
 }
@@ -628,6 +628,7 @@ p {margin-bottom: 10px;}
   background: rgba(255, 255, 255, .5);
   padding: 15px;
   margin-top: 30px;
+  font-size: 14px;
 }
 .impresse_img {
   position: relative;
@@ -639,6 +640,7 @@ p {margin-bottom: 10px;}
   font-size: 36px;
   color: rgba(99, 104, 106, 1);
   margin-bottom: 25px;
+  font-weight: bold;
 }
 .section_impresse .sub_title {
   font-family: "source-han-sans-japanese", Helvetica, Arial, Lucida, sans-serif;
@@ -1229,4 +1231,17 @@ ul.list_social li a {
 }
 .section_companyprofile .table th {
   width: 30%;
+}
+#banner_sub_bg_image .caption_right p {
+  position: relative;
+  color: rgba(74, 68, 68, 1);
+  text-shadow: 1px 2px 1px rgba(137, 130, 130, 0.91);
+}
+#banner_sub_bg_image .caption_right p:nth-child(2) {
+  right: 40px;
+  top: -60px;
+}
+#banner_sub_bg_image .caption_right p:last-child {
+  right: 100px;
+  top: -200px;
 }

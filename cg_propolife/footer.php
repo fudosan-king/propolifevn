@@ -20,7 +20,7 @@
             </div>
             <div class="col-6 col-md-6">
               <ul class="list_footer mt-5 mt-md-0">
-                <li><a href="javascript:void(0);">製作日記</a></li>
+                <li><a href="javascript:void(0);">製作日記（準備中）</a></li>
                 <li><a href="https://propolife.s3-ap-northeast-1.amazonaws.com/3dmodeling_propolifevietnam.pdf">資料ダウンロード</a></li>
               </ul>
             </div>
@@ -34,12 +34,12 @@
                 <div class="col-6 col-md-12">
                   <ul class="list_footer">
                     <li><a href="/contact/">お問い合わせフォーム</a></li>
-                    <li><a href="tel:+84 28-3824-1578">Office<br> +84 28-3824-1578</a></li>
+                    <li><a href="tel:+84 28-3824-1578" class="phone">Office<br> +84 28-3824-1578</a></li>
                   </ul>
                 </div>
                 <div class="col-6 col-md-12">
                   <ul class="list_footer">
-                    <li><a href="tel:+81 50-3551-2103">日本人Staff<br> +81 50-3551-2103</a></li>
+                    <li><a href="tel:+81 50-3551-2103" class="phone">日本人Staff<br> +81 50-3551-2103</a></li>
                   </ul>
                 </div>
               </div>
@@ -68,9 +68,7 @@
         </div>
         <div class="col-12 col-md-1">
           <ul class="list_social">
-            <li><a href="javascript:void(0);"><i class="fab fa-instagram fa-lg"></i></a></li>
-            <li><a href="javascript:void(0);"><i class="fab fa-twitter fa-lg"></i></a></li>
-            <li><a href="javascript:void(0);"><i class="fab fa-facebook-f fa-lg"></i></a></li>
+            <li><a href="https://www.facebook.com/propolife.vn/?__tn__=%2Cd%2CP-R&eid=ARBKikG0HXwEl2RgmJRpc3G7V2xKqwUYMLwx-2qpbwqF47zH5Bc71XxqL27Qs95lwu8VPbWyrVjpSzO9"><i class="fab fa-facebook-f fa-lg"></i></a></li>
           </ul>
         </div>
         <div class="col-12">

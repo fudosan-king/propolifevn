@@ -9,7 +9,7 @@
 					the_row();
 					$title = get_sub_field('title');
 					$sub_title = get_sub_field('sub_title');
-					$text = get_sub_field('text');
+					$text = nl2br(get_sub_field('text'));
 					$image = get_sub_field('image');
 			?>
 			<div class="col-12">
@@ -386,7 +386,7 @@
 								$name = get_sub_field('name');
 								$sub_name = get_sub_field('sub_name');
 								$price = get_sub_field('price');
-								$text = get_sub_field('text');
+								$text = nl2br(get_sub_field('text'));
 								$image = get_sub_field('image');
 						?>
 							<div class="col-12 col-md-4">

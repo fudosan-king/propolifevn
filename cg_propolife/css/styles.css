@@ -362,7 +362,7 @@ p {margin-bottom: 10px;}
 .carousel_topbanner .carousel-cell {
   width: 100%;
   height: 100%;
-  position: relative;
+  position: relative !important;
 }
 .carousel_topbanner .carousel-cell img {
   width: 100%;

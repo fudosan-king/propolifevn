@@ -1,5 +1,15 @@
 @media (max-width: 1024px) {
-
+	.btn_Mobile {
+		height: 60%;
+		margin-top: 12px;
+		font-size: 35px;
+	}
+	.btn_Mobile span {
+		padding-left: 5px;
+	}
+	.btn_Mobile_div {
+	  padding-top: 15px;
+	}
 }
 @media (max-width: 823px) {
 
@@ -19,6 +29,28 @@
 }
 
 @media (max-width: 768px) {
+	.btn_Mobile {
+		height: 45%;
+		margin-top: 22px;
+		font-size: 30px;
+	}
+	.btn_Mobile_div {
+	  padding-top: 10px;
+	}
+	#main-content img {
+		width: 100%;
+	}
+	.pro_item .pro_item_btn span {
+	    right: 140px;
+	}
+	.btn_Contactus_Mobile {
+		top: 90%;
+    	width: 100%;
+    	border-radius: 0px;
+    	background: #696969;
+    	opacity: 0.9;
+    	color: #fcd307;
+	}
 	.top_info {
 		width: 350px !important;
 	}
@@ -32,7 +64,7 @@
 		z-index: 999;
 	}
 	.bsnav-mobile.in .navbar {
-		width: 80%;
+		width: 100%;
 	}
 	.bsnav-mobile .navbar {
 		padding-top: 0;
@@ -43,9 +75,14 @@
 	}
 	.bsnav-mobile .bsnav-mobile-overlay {
 		background: #2aabe1de;
+		display: none;
 	}
 	.bsnav-mobile, .bsnav-mobile .bsnav-mobile-overlay, .bsnav-sticky.navbar-fade, .bsnav-sticky.navbar-slide {
-		top: 111px;
+		/*top: 111px;*/
+		top: 132px;
+	}
+	.bsnavFooterMenu, .bsnav-mobile .bsnav-mobile-overlay, .bsnav-sticky.navbar-fade, .bsnav-sticky.navbar-slide {
+		top: 53px !important;
 	}
 	.bsnav-mobile .navbar-nav {
 		padding: 0;
@@ -213,6 +250,11 @@
 }
 
 @media (max-width: 736px) {
+	.btn_Mobile {
+		height: 30%;
+		margin-top: 12px;
+		font-size: 20px;
+	}
 	.top_info {
 		width: 100% !important;
 	}
@@ -235,6 +277,14 @@
 	
 }
 @media (max-width: 414px) {
+	.btn_Mobile {
+		height: 30%;
+		margin-top: 20px;
+		font-size: 20px;
+	}
+	.btn_Mobile_div {
+	  padding-top: 5px;
+	}
 	.top_info {
 		width: 100% !important;
 	}
@@ -273,6 +323,12 @@
 }
 
 @media (max-width: 375px) {
+	.btn_Mobile {
+		margin-top: 20px;
+	}
+	.btn_Mobile_div {
+	  padding-top: 5px;
+	}
 	.top_info {
 		width: 100% !important;
 	}
@@ -283,6 +339,9 @@
 }
 
 @media (max-width: 360px) {
+	.btn_Mobile {
+		margin-top: 12px;
+	}
 	.top_info {
 		width: 100% !important;
 	}
@@ -292,6 +351,14 @@
 	
 }
 @media (max-width: 320px) {
+	.btn_Mobile {
+		height: 25%;
+		font-size: 16px;
+		margin-top: 13px;
+	}
+	.btn_Mobile_div {
+	    padding-top: 2px;
+	}
 	.top_info {
 		width: 100% !important;
 	}

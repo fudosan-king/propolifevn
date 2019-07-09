@@ -56,9 +56,14 @@
 							<div class="col-9 col-sm-9">
 								<p><?php echo $info_estates['site_area'] ?></p>	
 							</div>
-						</div>
-						
+						</div>						
 					</div>
+					<div class="pro_item_btn">
+						<a href="<?php echo esc_url(get_permalink()); ?>">
+							<span>詳細を見る</span>
+						</a>
+					</div>
+					<div class="pro_item_space"></div>
 				</div>
 			</div>
 			<?php endif; ?>

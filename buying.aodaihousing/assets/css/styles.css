@@ -363,6 +363,34 @@ p {margin-bottom: 10px;}
   overflow: hidden;
   line-height: 3em;
 }
+.pro_item .pro_item_space {
+  height: 10px;
+}
+.pro_item .pro_item_btn {
+    background-color: #DAA520;  
+    height: 45px;
+    border-radius: 5px 5px;
+    width: 80%;
+    margin-left: 36px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pro_item .pro_item_btn a:hover{
+    opacity: 0.5;
+}
+.pro_item .pro_item_btn span {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+  position: absolute;
+  bottom: 20px;
+  right: 120px;
+}
 .pro_item .pro_item_info {
   padding: 15px;
   min-height: 280px;
@@ -627,6 +655,22 @@ hr {
 .btn_Contactus:hover {
   color: #fff;
   background: #2aabe1;
+}
+.btn_Contactus_Mobile {
+  position: fixed;
+  height: 120px;
+  top: 93%;
+  width: 100%;
+  background: rgba(76, 76, 76, 0.5); 
+  text-align: center;
+  }
+.btn_Mobile {
+  width: 50%;
+  background-color: #DAA520;
+  color: #ffffff;
+  border-radius: 7px 7px;
+  display: inline-table;
+  font-weight: 800;
 }
 .box_topinfo {
   border: 1px solid #ccc;
@@ -970,5 +1014,13 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .section_banner {
   padding: 60px 0;
   background: #ccc url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAH0lEQVQIW2NkYGBg+P///38QzQgCIA6IhklgCqBrAQA/2xf95FNTIAAAAABJRU5ErkJggg==) repeat;
+}
+/*CrollMenu*/
+.userMenuArea {
+  position: fixed;
+  top: 0;
+  display: block;
+  width: 100%;
+  z-index: 101;
 }
 /* End Top-page CSS */

@@ -64,11 +64,13 @@
 	</div>
 </footer>
 
+<?php if (!is_single() and $post->post_type != 'sale-estates'): ?>
 <div class='back-to-top' id='back-to-top' title='Back to top'>
 	<i class="fal fa-arrow-up fa-lg"></i>
 </div>
+<?php endif; ?> 
 
-<div class="bsnav-mobile">
+<div class="bsnav-mobile" id="bsnavMobileCroll">
   <div class="bsnav-mobile-overlay"></div>
   <div class="navbar"></div>
 </div>

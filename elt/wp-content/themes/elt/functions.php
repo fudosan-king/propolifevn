@@ -736,5 +736,13 @@ add_filter( 'wp_title', 'theme_name_wp_title', 10, 2 );
 // Return 12 item page shop
 add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 12;' ), 12 );
 remove_filter ('the_content',  'wpautop');
+
+function woocommerce_custom_address_format( $formats ) {
+    $formats[ 'VN' ]  = "{name}\n{company}\n{address_1}\n{address_2}\n{city}\n{country}";
+    return $formats;
+}
+add_filter( 'woocommerce_localisation_address_formats', 'woocommerce_custom_address_format', 20 );
 ?>
+
+
 

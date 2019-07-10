@@ -1,3 +1,9 @@
+@media (max-height: 800px) and (max-width: 1280px) {
+	.menu .nav li a {
+		padding: 5px 0 5px;
+	}
+}
+
 @media (min-width: 1200px) {
 	.container {
 		max-width: 1280px;
@@ -48,12 +54,17 @@
 	.headlogo {
 		position: relative;
 		left: -30px;
-		top: -20px;
+		top: 20px;
+		z-index: 9999;
 	}
 	.menu.active .headlogo {
 		top: 20px;
 		left: 20px;
 		position: absolute;
+		z-index: 9999;
+	}
+	.menu .nav li a {
+	    padding: 15px 0 10px;
 	}
 	.menu .nav li:last-child a {
 		padding: 10px 0;
@@ -386,6 +397,13 @@
 	}
 	.benefit_img {
 		margin-bottom: 10px;
+	}
+
+	.menu .menu_content {
+		right: inherit;
+	}
+	.menu .nav {
+		padding-right: 70px;
 	}
 }
 

@@ -366,7 +366,7 @@ p {margin-bottom: 10px;}
 .pro_item .pro_item_space {
   height: 10px;
 }
-.pro_item .pro_item_btn {
+.pro_item .pro_item_btn a{
     background-color: #DAA520;  
     height: 45px;
     border-radius: 5px 5px;
@@ -381,7 +381,7 @@ p {margin-bottom: 10px;}
     justify-content: center;
 }
 .pro_item .pro_item_btn a:hover{
-    opacity: 0.5;
+    opacity: 0.7;
 }
 .pro_item .pro_item_btn span {
   color: #ffffff;

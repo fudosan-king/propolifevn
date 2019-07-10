@@ -31,9 +31,13 @@
             <h4>CONTACT to US</h4>
             <div class="box_footer_content">
               <div class="row">
-                <div class="col-6 col-md-12">
+                <div class="col-12">
                   <ul class="list_footer">
                     <li><a href="/contact/">お問い合わせフォーム</a></li>
+                  </ul>
+                </div>
+                <div class="col-6 col-md-12">
+                  <ul class="list_footer">
                     <li><a href="tel:+84 28-3824-1578" class="phone">Office<br> +84 28-3824-1578</a></li>
                   </ul>
                 </div>

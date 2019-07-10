@@ -379,17 +379,15 @@ p {margin-bottom: 10px;}
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0.9;
 }
 .pro_item .pro_item_btn a:hover{
-    opacity: 0.7;
+    opacity: 1;
 }
 .pro_item .pro_item_btn span {
   color: #ffffff;
   font-size: 18px;
   font-weight: 800;
-  position: absolute;
-  bottom: 20px;
-  right: 120px;
 }
 .pro_item .pro_item_info {
   padding: 15px;

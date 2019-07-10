@@ -405,6 +405,11 @@
 	.menu .nav {
 		padding-right: 70px;
 	}
+	.work_gallery_content,
+	.img_work_gallery,
+	.img_work_gallery_sm {
+		background: #1A2A33;
+	}
 }
 
 @media (max-width: 736px) {

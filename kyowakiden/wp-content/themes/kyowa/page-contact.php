@@ -12,7 +12,8 @@
 </div>
 </div>
 </div>
-<div><div id="map-canvas"></div></div>
+<!-- <div><div id="map-canvas"></div></div> -->
+<div ><div id="map-canvas"><iframe width="1300" height="450" id="gmap_canvas" src="https://maps.google.com/maps?q=C%C3%94NG%20TY%20TNHH%20KYOWAKIDEN%20VI%E1%BB%86T%20NAM&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div></div>
 <div class="container">
 <div class="row">
 <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs" align="left">

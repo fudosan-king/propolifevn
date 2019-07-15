@@ -57,5 +57,5 @@ google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 <?php
 }}
-add_action('wp_head','gMapContact');
+//add_action('wp_head','gMapContact');
 ?>

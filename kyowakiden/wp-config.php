@@ -26,10 +26,10 @@ define('DB_NAME', 'wp_kyowakiden');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', '');
+define('DB_PASSWORD', 'root');
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'localhost:3307');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
@@ -57,8 +57,8 @@ define('NONCE_SALT',       'mK1-5Oga>/tHQ?rqrJyE-qv1Odi-e}fgqf:_kSMJeW4k}DC#zK1V
 
 define('WP_POST_REVISIONS', false );
 define('FS_METHOD',        'direct');
-define('WP_SITEURL',       'http://kyowakidenvn.test');
-define('WP_HOME',          'http://kyowakidenvn.test');
+define('WP_SITEURL',       'http://kyowakiden-vietnam.test/');
+define('WP_HOME',          'http://kyowakiden-vietnam.test/');
 /**#@-*/
 
 /**

@@ -1264,4 +1264,6 @@ ul.list_social li a {
   right: 100px;
   top: -200px;
 }
-
+.work_gallery .container-fluid .owl-carousel button {
+  color: #ffffff;
+}

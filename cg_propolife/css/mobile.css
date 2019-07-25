@@ -330,7 +330,8 @@
 		line-height: 50px;
 	}
 	.frm_contactus label {
-		height: 50px;
+		height: 30px;
+		border-bottom: none;
 	}
 	.frm_contactus textarea.form-control {
 		line-height: 1.5em;
@@ -339,22 +340,24 @@
 		display: block;
 	}
 	.nf-field-label {
-		width: 30% !important;
+		width: 100% !important;
 	}
 	.nf-field-label label {
 		padding-left: 10px !important;
+		font-weight: 300;
 	}
 	.nf-field-element {
-		width: 70% !important;
-		height: 49px;
+		width: 100% !important;
+		height: 41px;
+		margin-bottom: 5px !important;
 	}
 	.nf-field-element input {
-		height: 49px !important;
+		height: 41px !important;
 	}
 	.nf-error.field-wrap .nf-field-element:after {
-		width: 48px !important;
-		height: 48px !important;
-		line-height: 48px !important;
+		width: 39px !important;
+		height: 39px !important;
+		line-height: 39px !important;
 	}
 	.nf-before-form-content {
 		padding-top: 20px;
@@ -362,7 +365,7 @@
 	}
 	.textarea-container.comment .nf-field-label,
 	.textarea-container.comment .nf-field-label label {
-		height: 200px !important;
+		height: 30px !important;
 	}
 	.nf-form-layout .nf-before-form-content {
 		display: none;
@@ -377,6 +380,9 @@
 		padding: 0 !important;
 		margin: 0 !important;
 	}
+	.nf-field-container.comment {
+		margin-bottom: 120px !important;
+	}
 	.submit-wrap .nf-field-label {
 		width: 0;
 	}
@@ -389,8 +395,8 @@
 	}
 	.textarea-container.comment .nf-field-element:after {
 		width: 93px !important;
-		height: 199px !important;
-		line-height: 199px !important;
+		height: 148px !important;
+		line-height: 148px !important;
 	}
 	.frm_contactus {
 		margin-bottom: 30px;
@@ -409,6 +415,17 @@
 	.img_work_gallery,
 	.img_work_gallery_sm {
 		background: #1A2A33;
+	}
+
+	.nf-field-container .nf-field-label {
+		margin-bottom: 0!important;
+	}
+	.nf-form-content .list-select-wrap .nf-field-element>div, .nf-form-content input:not([type=button]), .nf-form-content textarea {
+		border-color: #192a33;
+	}
+	.nf-form-content textarea.ninja-forms-field {
+		height: 150px;
+		width: 100%;
 	}
 }
 

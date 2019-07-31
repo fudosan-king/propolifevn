@@ -413,14 +413,14 @@
 								<div class="col-12 col-md-6 align-self-center">
 									<div class="box_download_img">
   									<img src="/wp-content/themes/cg_propolife/images/1x/DLdocument@2x.png" alt="" class="img-fluid">
-  									<a class="btn btnDownload d-none d-md-block" href="https://propolife.s3-ap-northeast-1.amazonaws.com/3dmodeling_propolifevietnam.pdf">Down Load <i class="fal fa-angle-down fa-lg"></i></a>
+  									<a class="btn btnDownload d-none d-md-block" href="https://propolife.s3-ap-northeast-1.amazonaws.com/3dmodeling_propolifevietnam.pdf" target="_blank">Down Load <i class="fal fa-angle-down fa-lg"></i></a>
 									</div>
 								</div>
 								<div class="col-12 col-md-6 align-self-center">
 									<h2>資料をダウンロードいただけます</h2>
 									<p>バナーをクリックして頂きますと、PDF資料のダウンロードができます。 ぜひご覧くださいませ。 こちらの資料に載っているプラン以外にも個別にお見積りをさせて 頂いております。 お気軽にご相談下さい。</p>
 									<p class="d-none d-md-block">Skype、Appear-inなどのウェブミーティングにも対応しております。</p>
-									<a class="btn btnDownload d-block d-md-none" href="https://propolife.s3-ap-northeast-1.amazonaws.com/3dmodeling_propolifevietnam.pdf">Down Load <i class="fal fa-angle-down fa-lg"></i></a>
+									<a class="btn btnDownload d-block d-md-none" href="https://propolife.s3-ap-northeast-1.amazonaws.com/3dmodeling_propolifevietnam.pdf" target="_blank">Down Load <i class="fal fa-angle-down fa-lg"></i></a>
 								</div>
 							</div>
 						</div>

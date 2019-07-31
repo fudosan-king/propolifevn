@@ -18,7 +18,7 @@
       <li><a href="/company/">会社概要</a></li>
       <li><a href="https://www.propolifevietnam.com/" target="_blank">コーポレートサイト</a></li>
       <li><a href="https://www.propolife.co.jp/" target="_blank">日本法人（親会社）</a></li>
-      <li><a href="https://propolife.s3-ap-northeast-1.amazonaws.com/3dmodeling_propolifevietnam.pdf">資料ダウンロード</a></li>
+      <li><a href="https://propolife.s3-ap-northeast-1.amazonaws.com/3dmodeling_propolifevietnam.pdf" target="_blank">資料ダウンロード</a></li>
     </ul>
     <a href="/" class="logo_footer"><img src="/wp-content/themes/cg_propolife/images/1x/logo_footer.svg" alt="" class="img-fluid" width="130"></a>
     <p class="menu_footer">

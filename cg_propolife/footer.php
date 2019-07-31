@@ -21,7 +21,7 @@
             <div class="col-6 col-md-6">
               <ul class="list_footer mt-5 mt-md-0">
                 <li><a href="javascript:void(0);">製作日記（準備中）</a></li>
-                <li><a href="https://propolife.s3-ap-northeast-1.amazonaws.com/3dmodeling_propolifevietnam.pdf">資料ダウンロード</a></li>
+                <li><a href="https://propolife.s3-ap-northeast-1.amazonaws.com/3dmodeling_propolifevietnam.pdf" target="_blank">資料ダウンロード</a></li>
               </ul>
             </div>
           </div>

@@ -496,6 +496,7 @@ p {margin-bottom: 10px;}
   transform: rotate(-270deg);
   right: -75px;
   font-size: 30px;
+  font-weight: bold;
   line-height: 1em;
   color: #fff;
   font-family: 'snellregular';
@@ -1266,4 +1267,13 @@ ul.list_social li a {
 }
 .work_gallery .container-fluid .owl-carousel button {
   color: #ffffff;
+}
+.summer_sale {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  width: 500px;
+}
+.summer_sale img {
+  height: auto !important;
 }

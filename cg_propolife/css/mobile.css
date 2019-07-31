@@ -427,6 +427,10 @@
 		height: 150px;
 		width: 100%;
 	}
+	.summer_sale {
+	    width: 50%;
+	    left: 10px;
+	}
 }
 
 @media (max-width: 736px) {

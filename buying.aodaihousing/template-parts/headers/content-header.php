@@ -6,11 +6,13 @@
           /*WORKING HOUR AND NUMBER PHONE CONTACT*/
           $working_hour = get_field('contact_company_info')['work_house'];
         ?>
-        <div class="top_info">
-          <a class="top_call" href="tel:+84-28-3827-5068"><i class="fal fa-phone-volume fa-lg"></i>+84 (0)28 3827 5068</a> 
-          <div class="time">
-            <p>受付時間 : <?php echo $working_hour ?></p>
-            <p>担当正木 : <a href="tel:+84-91-6670-027">+84 (0)91 667 0027</a></p> 
+        <div class="row top_info no-gutters">
+          <div class="col-5 align-self-center">
+            <a class="top_call" href="tel:+84-28-3827-5068"><i class="fal fa-phone-volume fa-lg"></i>+84 (0)28 3827 5068</a> 
+          </div>
+          <div class="col-7 align-self-center">
+            <p class="mb-0"><span class="time">受付時間 : <?php echo $working_hour ?></span></p>
+            <p class="mb-0"><span class="man_charge">担当正木:</span> <a href="tel:+84-91-6670-027">+84 (0)91 667 0027</a></p>
           </div>
         </div>
       </div>
@@ -39,13 +41,16 @@
               foreach ($topNav as $nav){
                     /* Action here */
                     $active = $nav->object_id == $post->ID ? 'active' : "";
-                    if($nav->ID == 147)
+                    if($nav->ID == 147) {
                       if(wp_is_mobile())
-                        echo ' <li style="width:331px;height:46px;padding:8px 0px 10px 0px;" id="section_pro" class="nav-item nav-item-line navbar-toggler '.$active.'"><a class="nav-link link_pro" href="'.$homeUrl.'#section_projects" target="'.$nav->target.'">'.$nav->title.'</a></li>';
+                        echo ' <li style="width:411px;height:46px;padding:8px 0px 10px 0px;" id="section_pro" class="nav-item nav-item-line navbar-toggler '.$active.'"><a class="nav-link link_pro" href="'.$homeUrl.'#section_projects" target="'.$nav->target.'">'.$nav->title.'</a></li>';
                       else
                         echo ' <li class="nav-item nav-item-line '.$active.'"><a class="nav-link link_pro" href="'.$homeUrl.'#section_projects" target="'.$nav->target.'">'.$nav->title.'</a></li>';
-                    else
+                    }elseif($nav->ID == 22) {
+                      echo '<li class="nav-item nav-item-line '.$active.'"><a class="nav-link" href="'.$nav->url.'" target="'.$nav->target.'">'.$nav->title.'<span class="update">UPDATE</span></a></li>';
+                    }else {
                       echo ' <li class="nav-item nav-item-line '.$active.'"><a class="nav-link" href="'.$nav->url.'" target="'.$nav->target.'">'.$nav->title.'</a></li>';
+                    }
                 }
             }
           ?>

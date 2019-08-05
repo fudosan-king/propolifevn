@@ -229,20 +229,24 @@
 		display: none;
 	}
 	.banner .caption_content h1 {
-		font-size: 22px;
+		font-size: 17px;
 		line-height: 33px;
 		letter-spacing: 0.1em;
+		margin-bottom: 15px;
 	}
 	.banner .caption_content h1 span {
-		font-size: 21px;
+		font-size: 18px;
 		line-height: 25px;
 	}
 	.banner .caption_content p {
 		font-size: 18px;
 		line-height: 25px;
+		text-shadow: 0 2px 4px rgba(0,0,0,0.50);
+    	font-weight: 700;
 	}
 	.top_info .time::before {
-		left: -50px;
+		left: -19px;
+		top: -21px;
 	}
 	.break_line {
 		display: block;
@@ -317,9 +321,6 @@
 	.map .bookends, .section_projectoverview .bookends {
 		width: 30%;
 	}
-	.top_info .time::before {
-		left: -50px;
-	}
 }
 
 @media (max-width: 375px) {
@@ -333,9 +334,8 @@
 		width: 100% !important;
 	}
 	.top_info .time::before {
-		left: -23px;
-	}
-	
+		left: -8px;
+	}	
 }
 
 @media (max-width: 360px) {
@@ -346,7 +346,7 @@
 		width: 100% !important;
 	}
 	.top_info .time::before {
-		left: -30px;
+		left: -5px;
 	}
 	
 }
@@ -365,9 +365,10 @@
 	.top_info a, .top_info .time {
 		font-size: 7px;
 	}
-	/*.top_info .time::before {
-		top: -19px;
-	}*/
+	.top_info .time::before {
+		left: -5px;
+		top: -23px;
+	}
 }
 
 @supports (-webkit-overflow-scrolling: touch) {

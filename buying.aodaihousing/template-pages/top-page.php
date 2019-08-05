@@ -3,7 +3,7 @@
 ?>
 <?php get_header(); ?>
 <section class="banner">
-	<div class="carousel" data-flickity='{ "autoPlay": 3000, "selectedAttraction": 0.01, "friction": 0.15 }'>
+	<div class="carousel" data-flickity='{ "prevNextButtons": false, "autoPlay": 5500, "freeScroll": true, "contain": true }'>
 		<div class="carousel-cell"><img src="<?php Uri::the_assets_uri(); ?>/images/1x/twilight.jpg" alt="" class="img-fluid"></div>
 	  	<div class="carousel-cell"><img src="<?php Uri::the_assets_uri(); ?>/images/1x/0416roma.jpg" alt="" class="img-fluid"></div>
 	  	<div class="carousel-cell"><img src="<?php Uri::the_assets_uri(); ?>/images/1x/0416infiniti.jpg" alt="" class="img-fluid"></div>
@@ -13,22 +13,25 @@
 	<div class="caption">
 		<div class="caption_content">
 			<h1 data-aos="fade-down"><?php echo get_field('content_top_page')['content_slider'][0]['content']; ?><span><?php echo get_field('content_top_page')['content_slider'][1]['content']; ?></span></h1>
-			<p class="d-none d-sm-block" data-aos="fade-up">
-				<span class="blue"><?php echo get_field('content_top_page')['content_slider'][2]['content']; ?></span>
-				<span class=""><?php echo get_field('content_top_page')['content_slider'][3]['content']; ?>
-				<span></span>
-				<?php echo get_field('content_top_page')['content_slider'][4]['content']; ?>
-				<span></span>
-				<span class="oranges"><?php echo get_field('content_top_page')['content_slider'][5]['content']; ?></span><br>
-			</p>
-			<P class="d-none d-sm-block" data-aos="fade-up" style="padding-top: 20px;"><?php echo get_field('content_top_page')['content_slider'][6]['content']; ?></P>
-			<p class="d-block d-sm-none"><span class="blue"><?php echo get_field('content_top_page')['content_slider'][2]['content']; ?></span><span class=""><?php echo get_field('content_top_page')['content_slider'][3]['content']; ?></span><br><?php echo get_field('content_top_page')['content_slider'][4]['content']; ?><span class="oranges"><?php echo get_field('content_top_page')['content_slider'][5]['content']; ?></span><br><span><?php echo get_field('content_top_page')['content_slider'][6]['content']; ?></span></p>
+			<p><?php echo get_field('content_top_page')['content_slider'][2]['content']; ?></p>
 		</div>
 	</div>
 	<div class="arrow_banner"></div>
 </section>
 
 <main>
+	<section class="section_topic">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 col-md-10 mx-auto">
+					<h2>TOPICS</h2>
+					<div class="topic_content">
+						<?php get_template_part( 'template-parts/homes/block', 'news' ); ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 	<div class="container">
 		<div class="row">
 			<div class="col-12">

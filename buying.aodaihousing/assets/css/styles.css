@@ -241,8 +241,7 @@ p {margin-bottom: 10px;}
 }
 .top_info .time {
   position: relative;
-  /*padding-left: 15px;*/
-  float: right;
+  padding-left: 15px;
 }
 .top_info .time::before {
   content: '';
@@ -279,7 +278,8 @@ p {margin-bottom: 10px;}
   height: 2px;  
   background-image: linear-gradient(90deg, #424242 0%, rgba(66,66,66,0.00) 90%);
   position: absolute;
-  bottom: 23px;
+  /*bottom: 23px;*/
+  bottom: -5px;
 }
 .section_projects {
   background: url('../images/1x/bg_projects.jpg') no-repeat fixed;
@@ -367,22 +367,22 @@ p {margin-bottom: 10px;}
   height: 10px;
 }
 .pro_item .pro_item_btn a{
-    background-color: #DAA520;  
-    height: 45px;
-    border-radius: 5px 5px;
-    width: 80%;
-    margin-left: 36px;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.9;
+  background-color: #DAA520;  
+  height: 45px;
+  border-radius: 5px 5px;
+  width: 80%;
+  margin-left: 36px;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .pro_item .pro_item_btn a:hover{
-    opacity: 1;
+  background-color: #fcd307;
+  color: #ae8148 !important;
 }
 .pro_item .pro_item_btn span {
   color: #ffffff;
@@ -392,6 +392,7 @@ p {margin-bottom: 10px;}
 .pro_item .pro_item_info {
   padding: 15px;
   min-height: 280px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .pro_item .pro_item_img {
   height: 263px;
@@ -590,6 +591,10 @@ hr {
   justify-content: center;
   align-items: center;
   align-content: stretch;
+}
+.w_map iframe {
+  width: 100%;
+  height: 300px;
 }
 .info_content {
   padding: 0 30px;
@@ -1022,3 +1027,140 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
   z-index: 101;
 }
 /* End Top-page CSS */
+/*update 31/07/2019*/
+.update {
+  display: inline-block;
+  background: #F50202;
+  color: #fff;
+  padding: 0 5px;
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  width: 77px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 1.8em;
+}
+.section_topic {
+  padding: 70px 0;
+  background: #fff;
+}
+.section_topic h2 {
+  text-align: center;
+  font-size: 28px;
+  letter-spacing: 2px;
+  color: #333333;
+  position: relative;
+  margin-bottom: 40px;
+}
+.section_topic h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  background: #F3A438;
+  height: 2px;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  margin: 0 auto;
+}
+.section_topic article {
+  margin-bottom: 35px;
+}
+.topic_content article:last-child {
+  margin-bottom: 0;
+}
+.section_topic article h4 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+.section_topic article p {
+  font-size: 17px;
+}
+.topic_content {
+  height: 175px;
+  overflow: auto;
+  padding-right: 15px;
+}
+
+.topic_content::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+}
+
+.topic_content::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5;
+}
+
+.topic_content::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #3B4043;
+}
+.top_info a {
+  font-size: 14px;
+}
+.top_nav p {
+  width: auto;
+}
+.top_info .time::before {
+  left: -10px;
+  top: -17px;
+  height: 74px;
+}
+.man_charge {
+  font-size: 14px;
+  padding-left: 15px;
+}
+.top_info .top_call {
+  font-weight: bold;
+  color: #ae8148;
+}
+
+@media (max-width: 768px) {
+  .section_topic {
+    margin-bottom: 30px;
+    padding: 30px 0;
+  }
+  .section_topic h2 {
+    font-size: 15px;
+  }
+  .section_topic article {
+    margin-bottom: 20px;
+  }
+  .section_topic article h4 {
+    font-size: 10px;
+  }
+  .section_topic article p {
+    font-size: 12px;
+  }
+  .bsnav-mobile .navbar-nav .nav-item .nav-link {
+    text-align: left;
+  }
+  .update {
+    bottom: 15px;
+    left: 90px;
+  }
+  .man_charge {
+    font-size: 9px;
+  }
+    .headline .f16 {
+        font-size: 16px;
+    }
+    .headline span.break_line {
+        display: block;
+    }
+    .banner .caption_content h1 {
+        font-size: 17px;
+        margin-bottom: 15px;
+    }
+    .banner .caption_content h1 span {
+        font-size: 18px;
+    }
+
+}

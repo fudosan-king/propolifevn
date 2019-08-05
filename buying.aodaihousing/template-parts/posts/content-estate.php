@@ -101,20 +101,10 @@
 				<hr class="bookends">
 				<div class="row w_map">
 					<div class="col-12 col-sm-6">
-						
-						<?php if($post->ID == 133) { ?>
-							<iframe width="100%" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=1056a%20Nguy%E1%BB%85n%20V%C4%83n%20Linh%2C%20T%C3%A2n%20Phong%2C%20Qu%E1%BA%ADn%207%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-						<?php }elseif($post->ID == 219){ ?>
-							<iframe width="100%" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=Song%20H%C3%A0nh%2C%20An%20Ph%C3%BA%2C%20Qu%E1%BA%ADn%202%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-						<?php }elseif($post->ID == 241){ ?>
-							<iframe width="100%" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=Nguy%E1%BB%85n%20V%C4%83n%20T%C6%B0%E1%BB%9Fng%2C%20T%C3%A2n%20Ph%C3%BA%2C%20Qu%E1%BA%ADn%207%2C%20H%E1%BB%93%20Ch%C3%AD%20Minh&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-						<?php }else{ ?>
-							<iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?q=<?php echo $info_estates_detail['address']; ?>+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=19&amp;iwloc=B&amp;&output=embed"></iframe>
-						<?php } ?>
-						
+						<iframe width="100%" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=<?php if ($info_estates['address']){echo $info_estates['address'];} else {echo 'CJ Building, 6 Lê Thánh Tôn, Bến Nghé ,Quận 1, Hồ Chí Minh, Việt Nam';} ?>&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
 					</div>
-					<div class="col-12 col-sm-6">												
-						<p><?php echo $feature_and_comment_estate['comment_address']; ?></p>
+					<div class="col-12 col-sm-6">										
+						<p><?php echo $feature_and_comment_estate['comment_location']; ?></p>
 					</div>
 				</div>
 			</div>

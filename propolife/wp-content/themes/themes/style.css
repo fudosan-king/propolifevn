@@ -542,6 +542,26 @@ h3{text-transform:uppercase}
     bottom: 0;
     position: absolute;
 }
+.detail-pro {
+  margin-top: 30px;
+}
+.detail-pro tr td {
+  padding: 15px;
+  border: 1px solid #dddddd;
+}
+.detail-pro tr td.label {
+  display: table-cell;
+  border-radius: 0;
+  color: #000;
+  text-align: left;
+  padding: 15px;
+
+  border-left: 1px solid #dddddd;
+  border-right: 0;
+  vertical-align: inherit;
+  font-size: 100%;
+  font-weight: 500;
+}
 
 @media (max-width: 768px) {
     .w_QA img {

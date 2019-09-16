@@ -60,7 +60,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a href="<?php echo get_permalink(get_page_by_path('about'));?>" class="" style="display:block">
 <div class="thumb">
 <p style="padding:0px 40px;color:#000000" align="justify">
-    プロポライフベトナムでは、日本人コンサルタントと弁護士、会計資格者、不動産資格者、設計士で、進出コンサルティングサービスと不動産仲介サービスを中心に行っております。実績に裏づけされた確かなアドバイス、サポートをご提供させて頂きます。
+    プロポライフベトナムでは、日本人コンサルタントと弁護士、会計資格者、不動産資格者、設計士で進出コンサルティングと不動産サービスを中心にご提供させて頂いております。実績に裏づけされた確かなアドバイス、サポートをさせて頂きます。
 </p>
 <!-- <div class="tel"><?php echo $hl[0];?></div> -->
 <div class="fa-right"><i class="fa fa-angle-right fa-3x" style="color: #000000;"></i><div class="clearfix"></div></div>
@@ -79,10 +79,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 proCol"><a class="thumbnail green" href="<?php echo get_permalink(264);?>">
 <h2 class="title">
 ロータスサービス事業部 <br>
-進出スタートアップ支援 <br>
-労働許可証・ベトナムビザ
+法人設立・ライセンス取得 <br>
+労働許可証・ビザ
 </h2>
-<p>ロータスサービス事業部では、進出時の会社設立から開業までに準備すべきことまでを経験豊富な日本人担当者、弁護士、会計資格保有者でサポートしております。</p></a>
+<p>ロータスサービス事業部では、進出時の法人設立から設立後の準備までのスタートアップの支援、進出後のライセンス取得支援などを行っております。</p></a>
 </div>
 
 <div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
@@ -96,10 +96,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a class="thumbnail yellow" href="cat-chronicle/オフィスの内装工事">
 <h2 class="title"><img src="<?php bloginfo( 'template_directory' );?>/images/logo-chronicle.png" class="img-responsive" width="200" height="0" alt="">
 クロニクルリフォーム事業部 <br>
-オフィスの内装デザイン <br>
-設計施工
+オフィスの内装工事 <br>
+CGパース制作
 </h2>
-<p>クロニクルリフォーム事業部では、デザイン性、機能性ある快適なオフィス空間のご提供を行っております。</p>
+<p>クロニクルリフォーム事業部では、オフィスのデザイン設計施工、CGパースをご提供しております。</p>
 <div class="fa-right"><i class="fa fa-angle-right fa-3x"></i></div>
 </a>
 </div>
@@ -168,10 +168,9 @@ WEB広告支援
 <a class="thumbnail black" href="<?php echo get_permalink(get_page_by_path('aodaihousing-support')); ?>" target="_blank">
 <h2 class="title">
 アオザイハウジング事業部 <br>
-住居・オフィス <br>
-賃貸不動産仲介
+不動産の賃貸・管理・売買
 </h2>
-<p style="margin-bottom:20px;">アオザイハウジング事業部では、サービスアパート・コンドミニアム・オフィス・サービスオフィスの賃貸不動産仲介を行っております。</p>
+<p style="margin-bottom:20px;">アオザイハウジング事業部では、サービスアパート、コンドミニアム、オフィスの賃貸仲介、コンドミニアムの管理、不動産売買仲介をご提供させて頂いております。</p>
 <div class="fa-right"><i class="fa fa-angle-right fa-3x"></i></div>
 </a>
 </div>

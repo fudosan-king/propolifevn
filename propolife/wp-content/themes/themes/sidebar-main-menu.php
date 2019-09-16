@@ -48,7 +48,7 @@
 					<?php endwhile;wp_reset_query();?>
 				</ul>
 			</li>
-			<li><a href="#" class="hidden-xs">不動産賃貸仲介</a>
+			<li><a href="#" class="hidden-xs">不動産サービス</a>
 				<ul>
 					<li><a href="<?php echo get_permalink(get_page_by_path('aodaihousing-support'));?>"><?php echo get_the_title(1583);?></a></li>
 					<li><a href="http://aodaihousing.com/" target="_blank">アパート検索</a></li>

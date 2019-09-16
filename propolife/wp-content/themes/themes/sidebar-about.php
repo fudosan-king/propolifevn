@@ -47,7 +47,7 @@ foreach($_list as $key){
 <li><a href="<?php echo get_permalink(get_page_by_path('lotus'));?>"><span class="list_num">01.</span>ベトナム進出支援</a></li>
 <li><a href="<?php echo get_permalink(get_page_by_path('chronicle'));?>"><span class="list_num">02.</span>内装工事</a></li>
 <li><a href="<?php echo get_permalink(get_page_by_path('web'));?>"><span class="list_num">03.</span>WEBサイト制作</a></li>
-<li><a href="http://aodaihousing.com" target="_blank"><span class="list_num">04.</span>不動産賃貸仲介</a></li>
+<li><a href="http://aodaihousing.com" target="_blank"><span class="list_num">04.</span>不動産サービス</a></li>
 <li class="list-last"><a href="<?php echo get_permalink(get_page_by_path('contact'));?>"><span class="list_num">05.</span>お問い合わせ</a></li>
 </ul>
 </div>

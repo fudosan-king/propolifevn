@@ -46,9 +46,9 @@ $smlink = html_entity_decode($smlink,null,'UTF-8');
 ?>
 <a href="<?php echo $smlink;?>" class="list-group-item"><span class="list_num">02.</span><?php echo get_the_title(11);?></a>
 <a href="/cat-chronicle/オフィスの内装工事" class="list-group-item"><span class="list_num">03.</span><?php echo get_the_title(73);?></a>
-<a href="<?php echo get_permalink(370);?>" class="list-group-item"><span class="list_num">04.</span><?php echo get_the_title(13);?></a>
-<a href="http://aodaihousing.com" target="_blank" class="list-group-item"><span class="list_num">05.</span>不動産賃貸仲介</a>
-<a href="<?php echo get_permalink(get_page_by_path('contact'));?>" class="list-group-item"><span class="list_num">06.</span><?php echo get_the_title(1);?></a>
+<!-- <a href="<?php //echo get_permalink(370);?>" class="list-group-item"><span class="list_num">04.</span><?php //echo get_the_title(13);?></a> -->
+<a href="http://aodaihousing.com" target="_blank" class="list-group-item"><span class="list_num">04.</span>不動産賃貸仲介</a>
+<a href="<?php echo get_permalink(get_page_by_path('contact'));?>" class="list-group-item"><span class="list_num">05.</span><?php echo get_the_title(1);?></a>
 </div>
 <?php   include('contact-right.php');?>
 <?php   include('aodaihousing-right.php');?>

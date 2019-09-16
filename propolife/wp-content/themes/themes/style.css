@@ -555,13 +555,14 @@ h3{text-transform:uppercase}
   color: #000;
   text-align: left;
   padding: 15px;
-
+  
   border-left: 1px solid #dddddd;
   border-right: 0;
   vertical-align: inherit;
   font-size: 100%;
   font-weight: 500;
 }
+
 
 @media (max-width: 768px) {
     .w_QA img {

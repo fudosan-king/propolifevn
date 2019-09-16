@@ -57,8 +57,8 @@ define('NONCE_SALT',       'kVe#b[_PyAJpCd8$jFkm,X)a`<e6(LL0BWGtuoY 2*TAYae8I,OF
 
 define('WP_POST_REVISIONS', false );
 define('FS_METHOD',        'direct');
-define('WP_SITEURL',       'http://propolifevietnam.test');
-define('WP_HOME',          'http://propolifevietnam.test');
+define('WP_SITEURL',       'http://www.propolifevietnam.test');
+define('WP_HOME',          'http://www.propolifevietnam.test');
 
 /**#@-*/
 

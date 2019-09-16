@@ -60,7 +60,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <a href="<?php echo get_permalink(get_page_by_path('about'));?>" class="" style="display:block">
 <div class="thumb">
 <p style="padding:0px 40px;color:#000000" align="justify">
-    ベトナムホーチミンで会社設立・ライセンス・賃貸不動産仲介・内装工事・WEBサイト制作などを中心に行っているプロポライフベトナムのコーポレートサイトです。ベトナム進出時、進出後の企業様、働かれる方をサポートさせて頂いております。
+    プロポライフベトナムでは、日本人コンサルタントと弁護士、会計資格者、不動産資格者、設計士で、進出コンサルティングサービスと不動産仲介サービスを中心に行っております。実績に裏づけされた確かなアドバイス、サポートをご提供させて頂きます。
 </p>
 <!-- <div class="tel"><?php echo $hl[0];?></div> -->
 <div class="fa-right"><i class="fa fa-angle-right fa-3x" style="color: #000000;"></i><div class="clearfix"></div></div>
@@ -89,6 +89,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 </div>
 <div class="row">
+
+	<div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
 
 <div class="col-lg-2 col-md-2 col-xs-6 proCol">
 <a class="thumbnail yellow" href="cat-chronicle/オフィスの内装工事">
@@ -124,9 +126,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </a>
 </div>
 
-<div class="col-lg-2 col-md-2 col-xs-6 proCol">
-<a class="thumbnail blue" href="<?php echo get_permalink(370);?>">
-<h2 class="title"><img src="<?php bloginfo( 'template_directory' );?>/images/web-logo.png" class="img-responsive pull-left" width="50" height="0" style="margin-right:10px;" alt="">
+<!-- <div class="col-lg-2 col-md-2 col-xs-6 proCol">
+<a class="thumbnail blue" href="<?php //echo get_permalink(370);?>">
+<h2 class="title"><img src="<?php //bloginfo( 'template_directory' );?>/images/web-logo.png" class="img-responsive pull-left" width="50" height="0" style="margin-right:10px;" alt="">
 <span class="pull-left">
 WEB DESIGN事業部 <br>
 WEBサイト制作 <br>
@@ -139,21 +141,21 @@ WEB広告支援
 </div>
 
 <div class="col-lg-2 col-md-2 col-xs-6 proCol">
-<a class="thumbnail" href="<?php echo get_permalink(370);?>" style="background: #0F68B6;">
+<a class="thumbnail" href="<?php //echo get_permalink(370);?>" style="background: #0F68B6;">
 <div class="thumb">
 <div id="slider2" style="position: relative; width:400px;height:400px; overflow: hidden;">
 <div u="loading" style="position: absolute; top: 0px; left: 0px;">
 <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;background-color: #000; top: 0px; left: 0px;width: 100%; height:100%;"></div>
-<div style="position: absolute; display: block; background: url(<?php bloginfo( 'template_directory' );?>/images/controls/ajax-loader.gif) no-repeat center center;top: 0px; left: 0px;width: 100%;height:100%;"></div>
+<div style="position: absolute; display: block; background: url(<?php //bloginfo( 'template_directory' );?>/images/controls/ajax-loader.gif) no-repeat center center;top: 0px; left: 0px;width: 100%;height:100%;"></div>
 </div>
 <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:400px; height:400px;overflow: hidden;">
-<div><img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/web/1.jpg" alt="" /></div>
-<div><img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/web/2.png" alt="" /></div>
+<div><img u="image" src="<?php //bloginfo( 'template_directory' );?>/images/slides/web/1.jpg" alt="" /></div>
+<div><img u="image" src="<?php //bloginfo( 'template_directory' );?>/images/slides/web/2.png" alt="" /></div>
 </div>
 </div>
 </div>
 </a>
-</div>
+</div> -->
 
 <div class="col-lg-2 col-md-2 col-xs-6 proCol">
 <a class="thumbnail orange" href="<?php echo get_permalink(get_page_by_path('aodaihousing-support')); ?>" target="_blank" style="background:#dbeef4;color:#000000">

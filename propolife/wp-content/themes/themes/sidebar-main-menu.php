@@ -29,6 +29,7 @@
 			<li class="<?php echo get_post(4)->post_name;?> <?php if(is_page('recruitment-propolife')){echo 'active';}?>"><a href="#" class="hidden-xs"><?php echo get_the_title(4);?></a>
 				<ul>
 					<li class="<?php echo get_post(4)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('about'));?>"><?php echo get_the_title(4);?></a></li>
+
 					<li class="<?php echo get_post(2587)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('recruitment-propolife'));?>">日本人スタッフ募集</a></li>
 				</ul>
 			</li>
@@ -47,16 +48,6 @@
 					<?php endwhile;wp_reset_query();?>
 				</ul>
 			</li>
-			<li class="<?php echo get_post(73)->post_name;?>"><a href="#" class="hidden-xs"><?php echo get_the_title(73);?></a>
-				<ul><?php echo wp_list_categories('taxonomy=cat-chronicle&title_li=&hide_empty=0&orderby=ID&order=asc&exclude=1,7,11'); ?></ul>
-			</li>
-			<li class="<?php echo get_post(13)->post_name; ?> <?php echo get_post(370)->post_name;?> <?php echo get_post(454)->post_name;?>"><a href="#" class="hidden-xs">WEBサービス</a>
-				<ul>
-					<li><a href="<?php echo get_permalink(370);?>">WEBサービスについて</a></li>
-					<li><a href="<?php echo get_permalink(13);?>">WEBサイト制作</a></li>
-					<li><a href="<?php echo get_permalink(454);?>">WEB広告支援</a></li>
-				</ul>
-			</li>
 			<li><a href="#" class="hidden-xs">不動産賃貸仲介</a>
 				<ul>
 					<li><a href="<?php echo get_permalink(get_page_by_path('aodaihousing-support'));?>"><?php echo get_the_title(1583);?></a></li>
@@ -64,6 +55,17 @@
 					<li><a href="http://office-vn.com/" target="_blank">オフィス検索</a></li>
 				</ul>
 			</li>
+			<li class="<?php echo get_post(73)->post_name;?>"><a href="#" class="hidden-xs"><?php echo get_the_title(73);?></a>
+				<ul><?php echo wp_list_categories('taxonomy=cat-chronicle&title_li=&hide_empty=0&orderby=ID&order=asc&exclude=1,7,11'); ?></ul>
+			</li>
+			<!-- <li class="<?php //echo get_post(13)->post_name; ?> <?php //echo get_post(370)->post_name;?> <?php //echo get_post(454)->post_name;?>"><a href="#" class="hidden-xs">WEBサービス</a>
+				<ul>
+					<li><a href="<?php //echo get_permalink(370);?>">WEBサービスについて</a></li>
+					<li><a href="<?php //echo get_permalink(13);?>">WEBサイト制作</a></li>
+					<li><a href="<?php //echo get_permalink(454);?>">WEB広告支援</a></li>
+				</ul>
+			</li> -->
+			
 			<li class="<?php echo get_post(311)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('news'));?>"><?php echo get_the_title(311);?></a></li>
 			<li class="<?php echo get_post(1)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('contact'));?>"><?php echo get_the_title(1);?></a></li>
 			<li>

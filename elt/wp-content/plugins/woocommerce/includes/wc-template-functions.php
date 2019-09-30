@@ -1342,9 +1342,10 @@ if ( ! function_exists( 'woocommerce_breadcrumb_customer' ) ) {
      * Output the WooCommerce Breadcrumb
      */
     function woocommerce_breadcrumb_customer( $args = array() ) {
+        $htmlAnnounce = $_GET['product_cat'] == 'lunch-box' ? '<div class="col-lg-12"><p style="color:red; text-align:center">※お弁当のご注文は、3個以上からお請けしています。</p></div>' : '';
         $args = wp_parse_args( $args, apply_filters( 'woocommerce_breadcrumb_defaults', array(
             'delimiter'   => '&nbsp;&#47;&nbsp;',
-            'wrap_before' => '<div class="container"><div class="row"><div class="col-lg-12"><ol class="breadcrumb">',
+            'wrap_before' => '<div class="container"><div class="row">'.$htmlAnnounce.'<div class="col-lg-12"><ol class="breadcrumb">',
             'wrap_after'  => '</ol></div></div></div>',
             'before'      => '',
             'after'       => '',

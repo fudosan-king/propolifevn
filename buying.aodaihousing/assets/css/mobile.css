@@ -245,8 +245,8 @@
     	font-weight: 700;
 	}
 	.top_info .time::before {
-		left: -19px;
-		top: -21px;
+		left: -15px;
+		top: -19px;
 	}
 	.break_line {
 		display: block;

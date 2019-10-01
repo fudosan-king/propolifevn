@@ -26,7 +26,7 @@ function custom_wp_pagination($pages = '', $range = 2)
         }
  
         if($paged > 1 && $showitems < $pages) 
-            echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($paged - 1).'" aria-label="Previous Page">&lsaquo;<span class="hidden-sm-down d-none d-md-block"> Previous</span></a></li>';
+            echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($paged - 1).'" aria-label="Previous Page">&lsaquo;<span class="hidden-sm-down d-none d-md-block"> </span></a></li>';
  
         for ($i=1; $i <= $pages; $i++)
     {
@@ -35,7 +35,7 @@ function custom_wp_pagination($pages = '', $range = 2)
     }
  
     if ($paged < $pages && $showitems < $pages) 
-        echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($paged + 1).'" aria-label="Next Page"><span class="hidden-sm-down d-none d-md-block">Next </span>&rsaquo;</a></li>';  
+        echo '<li class="page-item"><a class="page-link" href="'.get_pagenum_link($paged + 1).'" aria-label="Next Page"><span class="hidden-sm-down d-none d-md-block"></span>&rsaquo;</a></li>';  
 
     $next = get_next_posts_link('Next');
     if($next) {

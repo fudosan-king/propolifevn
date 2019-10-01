@@ -15,7 +15,7 @@
                 <p><?php echo $news_part_1['comment']; ?></p>
                 <?php endif; ?>
                 <?php if($news_part_2): ?>
-                <h1 class="head_title"><?php echo $news_part_2['title']; ?></h1>
+                <h2 class="head_title"><?php echo $news_part_2['title']; ?></h2>
                 <div class="row no-gutters box_img_text">
                     <div class="col-12 col-sm-6 align-self-center">
                         <img src="<?php echo $news_part_2['image_1']['url']; ?>" alt="" class="img-fluid">
@@ -38,7 +38,8 @@
                 </div>
                 <?php endif; ?>
                 <?php if($news_part_3): ?>
-                <h3 class="text-center"><?php echo $news_part_3['title']; ?></h3>
+                <h2 class="head_title"><?php echo $news_part_3['title']; ?></h2>
+                <!-- <h3 class="text-center"><?php //echo $news_part_3['title']; ?></h3> -->
                 <div class="row">
                     <div class="col-6 col-sm-6 align-self-center">
                         <img src="<?php echo $news_part_3['image_1']['url']; ?>" alt="" class="img-fluid w-100">

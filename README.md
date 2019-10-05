@@ -1,7 +1,7 @@
 VPS Propolife VietNam
 ======
 VPS Information:
--       IP: 222.255.217.23
+-       IP: 222.255.117.23
 -       Port ssh: 22
 -       Login Name: root
 -       Password: M39gRauG@1
@@ -11,7 +11,7 @@ VPS Information:
 
 
 Mysql:
--       Add `/etc/hosts` 222.255.217.23 mysql.propolifevietnam.com
+-       Add `/etc/hosts` 222.255.117.23 mysql.propolifevietnam.com
 -       http://mysql.propolifevietnam.com/
 -       User: root
 -       Password: 5fZ7mcBSZ2L:s![p
@@ -20,7 +20,7 @@ Mysql:
 Auto login ssh:
 
 
--       cat ~/.ssh/id_rsa.pub | ssh root@222.255.217.23 'cat >> .ssh/authorized_keys'
+-       cat ~/.ssh/id_rsa.pub | ssh root@222.255.117.23 'cat >> .ssh/authorized_keys'
 -       cat ~/.ssh/id_rsa.pub | ssh -i /Users/propolife/fdk/deployment/fdk-production.pem ec2-user@52.69.0.54 'cat >> .ssh/authorized_keys'
 
 

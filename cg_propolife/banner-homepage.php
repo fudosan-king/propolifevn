@@ -2,9 +2,9 @@
 	<div class="carousel carousel_topbanner" data-flickity='{" prevNextButtons": false, "pageDots": false }'>
 	  	<div class="carousel-cell">
 	  		<img src="/wp-content/themes/cg_propolife/images/1x/view 1- Living@2x.png" alt="" class="img-fluid">
-		  	<div class="summer_sale">
+		  	<!-- <div class="summer_sale">
               <img src="/wp-content/themes/cg_propolife/images/1x/summer_sale.png" alt="" class="img-fluid">
-          	</div>
+          	</div> -->
 		  	<div class="caption d-none d-md-block">
             	<div class="caption_content">
                 	<h1>PROPOLIFE VIETNAM</h1>

@@ -29,8 +29,6 @@
 			<li class="<?php echo get_post(4)->post_name;?> <?php if(is_page('recruitment-propolife')){echo 'active';}?>"><a href="#" class="hidden-xs"><?php echo get_the_title(4);?></a>
 				<ul>
 					<li class="<?php echo get_post(4)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('about'));?>"><?php echo get_the_title(4);?></a></li>
-
-					<li class="<?php echo get_post(2587)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('recruitment-propolife'));?>">日本人スタッフ募集</a></li>
 				</ul>
 			</li>
 
@@ -65,7 +63,7 @@
 					<li><a href="<?php //echo get_permalink(454);?>">WEB広告支援</a></li>
 				</ul>
 			</li> -->
-			
+
 			<li class="<?php echo get_post(311)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('news'));?>"><?php echo get_the_title(311);?></a></li>
 			<li class="<?php echo get_post(1)->post_name;?>"><a href="<?php echo get_permalink(get_page_by_path('contact'));?>"><?php echo get_the_title(1);?></a></li>
 			<li>

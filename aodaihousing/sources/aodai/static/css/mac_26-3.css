@@ -1,0 +1,37 @@
+.menu-item{
+    width: 990px;
+    padding: 0;
+    margin: 0;
+    margin-left: 14px;
+}
+.menu-item ul li{
+    margin-right: 7px;
+}
+.menu-item ul li span{
+    margin-left: 13px;
+}
+.menu-item ul > li a{
+    margin-left: 22px;
+    margin-right: 24px;
+}
+ol.sub-menu li a{
+    margin: 0;
+}
+.header-main .header .sologan span{
+    font-size: 16px;
+}
+.footer .footer-left{
+    top: 100px;
+}
+.footer .footer-left{
+    width: 690px;
+}
+.menu-item ul >li:hover ol.sub-1-4{
+    left: -110px
+}
+.sroll_content .descption{
+    font-size: 10px !important;
+}
+ol.sub-1{
+    width: 900px;
+}

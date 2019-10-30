@@ -1,0 +1,1 @@
+<a href="javascript:void(0)" onclick="updateStatus(<?php echo $id?>,<?php echo $status?>,'<?php echo $module?>')"><img alt="Checked item" src="<?php echo PATH_URL_IMAGES.'static/images/admin/icons/'?><?php ($status==0) ? print 'uncheck_16x16.png' : print 'check_16x16.png' ?>" /></a>

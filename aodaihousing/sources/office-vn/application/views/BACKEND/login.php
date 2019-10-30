@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="<?=PATH_URL.'static/css/admin/login.css?ver=3.8.2'?>" type="text/css">
+<script type="text/javascript">
+var root = '<?=PATH_URL?>';
+</script>
+<script type="text/javascript" src="<?=PATH_URL.'static/js/jquery-1.7.1.min.js'?>"></script>
+<script type="text/javascript" src="<?=PATH_URL.'static/js/admin/login.js?ver=2.1.5'?>"></script>
+<title>Admin Control Panel</title>
+<!--[if ie 6]>
+<style>
+html, body{
+behavior: url('<?php echo PATH_URL.'static/css/' ?>csshover3.htc');
+}
+
+.png{
+behavior: url('<?php echo PATH_URL.'static/css/' ?>iepngfix.htc');
+}
+</style>
+<script type="text/javascript" src="<?php echo PATH_URL.'static/js/' ?>iepngfix_tilebg.js"></script>
+<![endif]-->
+</head>
+<body>
+
+<div id="body">
+	<div id="main">
+		<div class="bg_login png">
+			<div class="divInpUsername">
+				<p>
+					<span>Username</span>
+					<input  onkeypress="return EnterLogin(event)" class="inpLogin" type="text" id="loginUser" />
+				</p>
+				<p class="erorr_username"><img src="<?=PATH_URL_IMAGES.'static/images/admin/login/erorr_username.png'?>" /></p>
+			</div>
+
+			<div class="divInpPass">
+				<p>
+					<span>Password</span>
+					<input style="width: 237px; margin-left: 38px;" onkeypress="return EnterLogin(event)" class="inpLogin" type="password" id="loginPass" />
+				</p>
+				<p class="erorr_password"><img src="<?=PATH_URL_IMAGES.'static/images/admin/login/erorr_pass.png'?>" /></p>
+			</div>
+
+			<div id="divError"></div>
+			<div onclick="return login();" class="btLogin"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

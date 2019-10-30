@@ -1,0 +1,43 @@
+/*custom scrollbar*/
+
+.mCSB_scrollTools .mCSB_draggerRail {
+	width: 6px;
+	background-color: #e8e3e3 !important;
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: #bdbdbd !important;
+}
+
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,
+.mCS-dark-3.mCSB_scrollTools .mCSB_dragger:focus .mCSB_dragger_bar {
+    background-color: #e8e3e3 !important;
+}
+
+.mCSB_inside > .mCSB_container {
+	margin-right: 10px;
+}
+
+/*style line-clamp & scroll search*/
+
+.scrollbar {    
+    float: left;
+    max-height: 242px;
+    width: 100%;
+}
+
+.line-clamp-search {
+	background-color: #FFFFFF;
+	display: block;
+	/* Fallback for non-webkit */
+	display: -webkit-box;
+	/* Fallback for non-webkit */
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
+    box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+}

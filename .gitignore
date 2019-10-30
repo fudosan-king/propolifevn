@@ -1,2 +1,10 @@
-propolife/wp-content/uploads
+.git
+.gitignore
 .DS_Store
+.quarantine
+.tmb
+.idea
+propolife/wp-content/uploads
+aodaihousing/sources/aodai/static/uploads
+aodaihousing/sources/aodai/ja/static/uploads
+aodaihousing/sources/office-vn/static/uploads

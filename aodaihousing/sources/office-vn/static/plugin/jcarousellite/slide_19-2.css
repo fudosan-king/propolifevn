@@ -1,0 +1,68 @@
+.carousel{
+    width: 990px;
+    margin: 0 auto;
+    background: white;
+    padding: 5px 0;
+}
+.carousel .jCarouselLite li .sroll_content{
+    border: 1px solid #9ca2a2;
+    margin-right: 12px;
+}
+.carousel .jCarouselLite {
+    float: left;
+}
+.carousel .next{
+    background: url("next.jpg") no-repeat white center;
+    display: block;
+    float: right;
+    height: 170px;
+    width: 30px;
+}
+.carousel .prev{
+    background: url("prev.jpg") no-repeat white center;
+    display: block;
+    float: left;
+    height: 170px;
+    width: 32px;
+    margin-right: 4px;
+}
+.sroll_content{
+    position: relative;
+}
+.sroll_content .caption{
+    background: none repeat scroll 0 0 #D4F0FE;
+    border: 1px solid #CCCCCC;
+    height: 27px;
+    line-height: 27px;
+    text-align: center;
+    color: #666060;
+    font-size: 14px;
+}
+.sroll_content .caption a{
+    text-decoration: none;
+    color: #666060;
+}
+.sroll_content .descption {
+  background: none repeat scroll 0 0 #000000;
+  bottom: 29px;
+  color: #FFFFFF;
+  height: 27px;
+  line-height: 27px;
+  opacity: 0.8;
+  position: absolute;
+  text-align: center;
+  width: 99%;
+  margin: 1px;
+  font-size: 11px;
+}
+.sroll_content .descption span a{
+    opacity: 1;
+    color: white;
+    text-decoration: none;
+}
+.sroll_content img{
+    padding: 1px;
+}
+.sroll_content img:hover{
+    opacity: 0.8;
+}

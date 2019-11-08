@@ -1,0 +1,11 @@
+#custom-controls
+{
+    width: 340px;
+    margin: 20px auto;
+}
+/* khanh */
+.visible-container{
+    height: 365px !important;
+    top: -55px;
+    background-color: #373737;
+}

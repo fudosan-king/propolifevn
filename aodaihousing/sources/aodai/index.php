@@ -35,7 +35,7 @@ if (defined('ENVIRONMENT'))
 		case 'development':
 			error_reporting(E_ALL);
 		break;
-	
+
 		case 'testing':
 		case 'production':
 			error_reporting(0);
@@ -200,14 +200,16 @@ if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == 'on') {
 }
 define('BASEFOLDER', substr(BASEPATH, 0, count(BASEPATH)-8));
 define('PREFIX', 'cli_');
-define('DB_USER', 'phung');
-define('DB_PASS', 'sdj#8ghk*');
+// define('DB_USER', 'phung');
+// define('DB_PASS', 'sdj#8ghk*');
+define('DB_USER', 'root');
+define('DB_PASS', 'root');
 define('DB_NAME', 'aodai_renewal');
 
 //Config Login Google
 define('G_CLIENT_ID', '314546500985.apps.googleusercontent.com');
 define('G_CLIENT_SECRET', 'BemSNVQznf4rxozjEONVC8-L');
-define('G_REDIRECT_URL', PATH_URL.'login');	
+define('G_REDIRECT_URL', PATH_URL.'login');
 
 /*
  * --------------------------------------------------------------------

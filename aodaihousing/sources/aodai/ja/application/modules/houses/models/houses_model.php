@@ -1,4 +1,3 @@
-
 <?php
 
 class Houses_model extends MY_Model {
@@ -30,7 +29,7 @@ class Houses_model extends MY_Model {
             $content = str_replace('\\', '%\\\\\\\\%', $content);
             $this->db->where('(`comment` LIKE "%' . $content . '%" or introduction LIKE "%' . $content . '%" or other_notice LIKE "%' . $content . '%" or name_jp LIKE "%' . $content . '%" or name_en LIKE "%' . $content . '%")');
         }
-        
+
         // search with key word title
          if ($this->input->post('title') != '') {
             $content = json_encode($this->input->post('title'));
@@ -38,7 +37,7 @@ class Houses_model extends MY_Model {
             $content = str_replace('\\', '%\\\\\\\\%', $content);
             $content = $this->removeCommaAndDot($content);
             $this->db->where('(
-                REPLACE (name_jp, ",", " ") LIKE "%' . $content . '%" 
+                REPLACE (name_jp, ",", " ") LIKE "%' . $content . '%"
                 or REPLACE (name_en, ",", " ") LIKE "%' . $content . '%")');
         }
 
@@ -53,7 +52,7 @@ class Houses_model extends MY_Model {
             $this->db->where('created <= "' . date('Y-m-d 23:59:59', strtotime($this->input->post('dateTo'))) . '"');
         }
         if ($this->input->post('price_from') != '' && is_numeric($this->input->post('price_from'))) {
-          
+
                 $this->db->where('rent >=' . $this->input->post('price_from'));
         }
         if ($this->input->post('price_to') != '' && is_numeric($this->input->post('price_to'))) {
@@ -75,7 +74,7 @@ class Houses_model extends MY_Model {
             $content = str_replace('\\', '%\\\\\\\\%', $content);
             $this->db->where('(`comment` LIKE "%' . $content . '%" or introduction LIKE "%' . $content . '%" or other_notice LIKE "%' . $content . '%" or name_jp LIKE "%' . $content . '%" or name_en LIKE "%' . $content . '%")');
         }
-        
+
          // search with key word title
         if ($this->input->post('title') != '') {
             $content = json_encode($this->input->post('title'));
@@ -83,10 +82,10 @@ class Houses_model extends MY_Model {
             $content = str_replace('\\', '%\\\\\\\\%', $content);
             $content = $this->removeCommaAndDot($content);
             $this->db->where('(
-                REPLACE (name_jp, ",", " ") LIKE "%' . $content . '%" 
+                REPLACE (name_jp, ",", " ") LIKE "%' . $content . '%"
                 or REPLACE (name_en, ",", " ") LIKE "%' . $content . '%")');
         }
-        
+
         if ($this->input->post('dateFrom') != '' && $this->input->post('dateTo') == '') {
             $this->db->where('created >= "' . date('Y-m-d 00:00:00', strtotime($this->input->post('dateFrom'))) . '"');
         }
@@ -254,7 +253,7 @@ class Houses_model extends MY_Model {
         $publish_to = $this->input->post('vcp_publish_to');
 
         // Using for building type: 1: 人気マンションコンドミニアム(popular), 2: 高級サービスアパート (luxury serviced apartment), 3: 日本人学校のバスが停まる物件特集 (near school bus)
-        
+
 
         if ($this->input->post('hiddenIdAdmincp') == 0) {
 
@@ -288,7 +287,7 @@ class Houses_model extends MY_Model {
                 $this->db->where('house_id', $id_house);
                 $this->db->insert(PREFIX . $this->table_areas_house_db, $data_select);
 
-                
+
                 /********save building*********/
                 $type = $this->input->post('type');
                 if($type == '0'){
@@ -310,7 +309,7 @@ class Houses_model extends MY_Model {
                             'created' => date('Y-m-d H:i:s', time()),
                         );
                 $this->db->insert(PREFIX . $this->table_building_house_db, $data_select);
-                    
+
                 }
 
                 /********save category*********/
@@ -341,7 +340,7 @@ class Houses_model extends MY_Model {
                         $this->db->insert(PREFIX . $this->table_category_house_db, $data_select);
                     }
                 }
-                
+
                 /********save tags*********/
                 $tags = $this->input->post('tags');
                 if ($tags) {
@@ -432,7 +431,7 @@ class Houses_model extends MY_Model {
                 $this->db->insert(PREFIX . $this->table_areas_house_db, $data_select);
 
 
-               
+
                 /******** Update Building *********/
                 $type = $this->input->post('type');
                 if($type == '0'){
@@ -446,7 +445,7 @@ class Houses_model extends MY_Model {
                 }
                 $this->db->where('house_id', $id_house);
                 $this->db->delete(PREFIX . $this->table_building_house_db);
-                    
+
                 if ($building_type) {
                     $data_select = array(
                         'house_id' => $id_house,
@@ -490,7 +489,7 @@ class Houses_model extends MY_Model {
                         $this->db->insert(PREFIX . $this->table_category_house_db, $data_select);
                     }
                 }
-                
+
                 /********save tags*********/
                 $tags = $this->input->post('tags');
                 $this->db->where('office_house_id', $id_house);
@@ -524,7 +523,7 @@ class Houses_model extends MY_Model {
                         }
                     }
                 }
-               
+
                 /********save Facilities*********/
                 $facilities = $this->input->post('facilities');
                 if (isset($facilities)) {
@@ -544,7 +543,7 @@ class Houses_model extends MY_Model {
 
                 /* ============Search================ */
                 $this->insertDBTmp($id_house, $data_test);
-                
+
 
                 return true;
             }
@@ -666,8 +665,8 @@ class Houses_model extends MY_Model {
 
     function prevRecord($id) {
         $sql = "
-            SELECT * 
-            FROM (`cli_news`) 
+            SELECT *
+            FROM (`cli_news`)
             WHERE id = (SELECT MIN(id) FROM (`cli_news`) where id > $id)";
         $query = $this->db->query($sql);
         if ($query->result()) {
@@ -679,8 +678,8 @@ class Houses_model extends MY_Model {
 
     function nextRecord($id) {
         $sql = "
-            SELECT * 
-            FROM (`cli_news`) 
+            SELECT *
+            FROM (`cli_news`)
             WHERE id = (SELECT MAX(id) FROM (`cli_news`) where id < $id)";
         $query = $this->db->query($sql);
         if ($query->result()) {
@@ -740,14 +739,14 @@ class Houses_model extends MY_Model {
     function getListItem($per_page, $cur_page) {
         $this->db->distinct();
         $this->db->select('
-            cli_houses.id, 
-            cli_houses.name_en, 
-            cli_houses.name_jp, 
-            cli_houses.house_layout_id, 
-            cli_houses.introduction, 
-            cli_houses.rent, 
-            cli_houses.images_thumb, 
-            cli_house_layouts.name as house_layouts, 
+            cli_houses.id,
+            cli_houses.name_en,
+            cli_houses.name_jp,
+            cli_houses.house_layout_id,
+            cli_houses.introduction,
+            cli_houses.rent,
+            cli_houses.images_thumb,
+            cli_house_layouts.name as house_layouts,
             cli_areas.name as area
         ');
 
@@ -779,14 +778,14 @@ class Houses_model extends MY_Model {
     function getListItemBack($per_page, $cur_page){
         $this->db->distinct();
         $this->db->select('
-            cli_houses.id, 
-            cli_houses.name_en, 
-            cli_houses.name_jp, 
-            cli_houses.house_layout_id, 
-            cli_houses.introduction, 
-            cli_houses.rent, 
-            cli_houses.images_thumb, 
-            cli_house_layouts.name as house_layouts, 
+            cli_houses.id,
+            cli_houses.name_en,
+            cli_houses.name_jp,
+            cli_houses.house_layout_id,
+            cli_houses.introduction,
+            cli_houses.rent,
+            cli_houses.images_thumb,
+            cli_house_layouts.name as house_layouts,
             cli_areas.name as area
         ');
 
@@ -1181,7 +1180,7 @@ class Houses_model extends MY_Model {
             return array();
         }
     }
-    // khanh 07082014 
+    // khanh 07082014
     function updateListHouse($rent,$introduction,$comment,$other_notice){
         $data=array();
         foreach ($rent as $key=>$value){
@@ -1196,12 +1195,12 @@ class Houses_model extends MY_Model {
             $this->insertDBTmpUpdate($key);
         }
     }
-    
+
     function update_img_sort($id, $data_img){
         $this->db->where('id', $id);
         $this->db->update(PREFIX.$this->table_image, $data_img);
     }
-    
+
     function insertDBTmpUpdate($id) {
         $data_field = array(
             'name_en' => '',
@@ -1253,7 +1252,7 @@ class Houses_model extends MY_Model {
                     $data_test[] = implode(',', (array)json_decode($item->$key));
                 }
             }
-            
+
             $areas_db = $this->getAreasDb($id);
             if($areas_db) {
                 $tmp  = $this->getAreaID($areas_db->area_id);
@@ -1261,7 +1260,7 @@ class Houses_model extends MY_Model {
                     $data_test[] = implode(',', (array)json_decode($tmp->name));
                 }
             }
-            
+
             $category_db = $this->getCategoryDb($id);
             $category_id = array();
             if($category_db){
@@ -1278,7 +1277,7 @@ class Houses_model extends MY_Model {
                     }
                 }
             }
-            
+
             $category_special = $this->getCategory(1, 2);
             $category_special_id = array();
             if($category_special[0] && isset($category_special[0]))
@@ -1295,7 +1294,7 @@ class Houses_model extends MY_Model {
                     }
                 }
             }
-            
+
             $facilitie_db = $this->getFacilitiesDb($id);
             if($facilitie_db[0] && $facilitie_db[0]) {
                 $data_tmp = $facilitie_db[0];
@@ -1306,7 +1305,7 @@ class Houses_model extends MY_Model {
                     }
                 }
             }
-            
+
             $equipments_db = $this->getEquipmentsDb($id);
             $equipments_id = array();
             if($equipments_db){
@@ -1315,7 +1314,7 @@ class Houses_model extends MY_Model {
                     $equipments_id[] = $v->equipment_id;
                 }
             }
-   
+
             if($equipments_id) {
                 $tmp  = $this->getEquipmentID($equipments_id);
                 if($tmp){
@@ -1332,7 +1331,7 @@ class Houses_model extends MY_Model {
                     }
                 }
             }
-            
+
             $this->db->where('houses_id', $id);
             $this->db->delete(PREFIX . 'houses_db');
             $data_select = array(
@@ -1340,7 +1339,7 @@ class Houses_model extends MY_Model {
                 'content' => implode(',', array_unique($data_test))
             );
             $this->db->insert(PREFIX . 'houses_db', $data_select);
-        
+
         }
     }
 
@@ -1355,7 +1354,7 @@ class Houses_model extends MY_Model {
             return array();
         }
     }
-    
+
     function getTagsDB($id, $type) {
         $this->db->select('*');
         $this->db->where('office_house_id', $id);
@@ -1369,7 +1368,7 @@ class Houses_model extends MY_Model {
             return array();
         }
     }
-    
+
     function getTagsList() {
         $this->db->select('*');
         $this->db->where('status', 1);

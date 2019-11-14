@@ -1110,6 +1110,9 @@ ul.list_social li a {
   font-weight: 300;
   border-color: #ccc;
 }
+
+.section_companyprofile table tr:nth-child(1) th, .section_companyprofile table tr:nth-child(1) td {border-top: none;}
+
 .section_topcompanyprofile {
   padding: 30px 0 128px;
 }
@@ -1277,3 +1280,13 @@ ul.list_social li a {
 .summer_sale img {
   height: auto !important;
 }
+
+.box_staff {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section_companyprofile h2 {position: absolute;color: #fff; text-shadow: 2px 2px 6px #000000;}

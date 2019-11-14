@@ -300,10 +300,10 @@
 		font-size: 19px;
 		margin-bottom: 15px;
 	}
-	.section_companyprofile h2 {
+	/*.section_companyprofile h2 {
 		font-size: 31px;
 		margin-top: 100px;
-	}
+	}*/
 	.section_companyprofile table tr th, .section_companyprofile table tr td {
 		padding-top: 15px;
 		font-size: 14px;
@@ -313,7 +313,7 @@
 		font-size: 13px;
 	}
 	.box_staff {
-		margin-bottom: 100px;
+		/*margin-bottom: 100px;*/
 	}
 	.owl_top360sphere .caption_right h6 {
 		color: #fff;
@@ -444,7 +444,12 @@
 
 }
 @media (max-width: 414px) {
-
+	.section_companyprofile h2 {
+		font-size: 31px;
+	}
+	.box_staff {
+		margin-top: 20px;
+	}
 }
 @media (max-width: 375px) {
 

@@ -6,11 +6,17 @@ global $post;
 ?>
 <section class="section_general section_companyprofile">
 	<div class="container">
-		<div class="row flex-row-reverse">
+		<div class="row">
 
-			<div class="col-12 col-md-6 align-self-center">
-				<h2>Company Profile</h2>
-				<p>お近くにいらっしゃる際は、ぜひお立ち寄りください。</p>
+			<div class="col-12 col-md-8 offset-md-2 align-self-center">
+				<div class="box_staff">
+					<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
+					<img src="<?php echo $url ?>" alt="" class="img-fluid">
+					<h2>Company Profile</h2>
+				</div>
+			</div>
+
+			<div class="col-12 col-md-6 offset-md-3 align-self-center">
 				<table class="table">
 					<?php if (have_rows('table')) {
 						while (have_rows('table')) {
@@ -28,12 +34,7 @@ global $post;
 					?>
 				</table>
 			</div>
-			<div class="col-12 col-md-6 align-self-center">
-				<div class="box_staff">
-					<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'thumbnail' ); ?>
-					<img src="<?php echo $url ?>" alt="" class="img-fluid">
-				</div>
-			</div>
+			
 		</div>
 	</div>
 </section>

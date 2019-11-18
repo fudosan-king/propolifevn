@@ -32,15 +32,15 @@
 <link rel="stylesheet" href="<?php Uri::the_assets_uri(); ?>/css/custom.css" type="text/css">
 <link rel="stylesheet" href="<?php Uri::the_assets_uri(); ?>/css/contact.css" type="text/css">
 
-<!-- Global site tag (gtag.js) - Google Analytics - for account minh@fudosan-king.jp -->
-<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142154078-1"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-142154078-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'UA-142154078-1');
-</script> -->
+</script>
 <!-- Google Tag Manager -->
 <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

@@ -42,10 +42,10 @@
                 <!-- <h3 class="text-center"><?php //echo $news_part_3['title']; ?></h3> -->
                 <div class="row">
                     <div class="col-6 col-sm-6 align-self-center">
-                        <img src="<?php echo $news_part_3['image_1']['url']; ?>" alt="" class="img-fluid w-100">
+                        <img src="<?php echo $news_part_3['image_1']['url']; ?>" alt="" class="img-fluid w-100 <?php if (wp_is_mobile()) { echo 'h-120'; } else { echo 'h-340'; } ?>">
                     </div>
                     <div class="col-6 col-sm-6 align-self-center">
-                        <img src="<?php echo $news_part_3['image_2']['url']; ?>" alt="" class="img-fluid w-100">
+                        <img src="<?php echo $news_part_3['image_2']['url']; ?>" alt="" class="img-fluid w-100 <?php if (wp_is_mobile()) { echo 'h-120'; } else { echo 'h-340'; } ?>">
                     </div>
                 </div>
                 <p class="mt-3"><?php echo $news_part_3['comment']; ?></p>

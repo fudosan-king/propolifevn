@@ -156,7 +156,7 @@
 		border-bottom: 1px solid #ccc;
 	}
 	.box_prices {
-		font-size: 20px;
+		font-size: 13px;
 		padding: 10px;
 		font-weight: 700;
 	}
@@ -246,7 +246,7 @@
 	}
 	.top_info .time::before {
 		left: -15px;
-		top: -19px;
+		top: -21px;
 	}
 	.break_line {
 		display: block;
@@ -281,6 +281,9 @@
 	
 }
 @media (max-width: 414px) {
+	#breadcrumbs {
+	    padding-top: 10px;
+	}
 	.btn_Mobile {
 		height: 30%;
 		margin-top: 20px;
@@ -321,9 +324,15 @@
 	.map .bookends, .section_projectoverview .bookends {
 		width: 30%;
 	}
+	.top_info .time::before {
+		top: -20px;
+	}
 }
 
 @media (max-width: 375px) {
+	#breadcrumbs {
+	    padding-top: 10px;
+	}
 	.btn_Mobile {
 		margin-top: 20px;
 	}
@@ -335,6 +344,7 @@
 	}
 	.top_info .time::before {
 		left: -8px;
+		top: -21px;
 	}	
 }
 

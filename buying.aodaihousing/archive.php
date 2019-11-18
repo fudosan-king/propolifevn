@@ -1,6 +1,16 @@
 <?php get_header();?>
 
 <?php 
+global $wp;
+$home_url = get_home_url();
+$estates = '/sale-estates';
+$projects = '/#section_projects';
+$news = '/アオザイマガジン';
+if (home_url($wp->request) == $home_url . $estates){
+	wp_redirect($home_url . $projects);
+}else {
+	wp_redirect($home_url . $news);
+}
 if (is_archive()){
 	?>
 

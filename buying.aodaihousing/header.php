@@ -17,8 +17,12 @@
 	    <div id="page">
 	    	<?php 
 	    		get_template_part('template-parts/headers/content', 'header'); 
-	    	// Show breadcrumb
-			// if ( function_exists('yoast_breadcrumb') ) {
-			//   yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-			// }
+	    	?>
+	    	<div class="container" <?php if(is_front_page()) { echo 'style="display:none;"';} ?>>
+	    	<?php
+	    	//Show breadcrumb
+			if ( function_exists('yoast_breadcrumb') ) {
+			  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+			}
 			?>
+			</div>

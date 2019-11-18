@@ -55,7 +55,7 @@
 			<p><?php echo $feature_and_comment_estate['description']; ?></p>
 			<div class="row mt-5 row_info no-gutters">
 				<div class="col-12 col-sm-6">
-					<img src="<?php echo $feature_and_comment_estate['image_1']['url']; ?>" alt="" class="img-fluid w-100">
+					<img src="<?php echo $feature_and_comment_estate['image_1']['url']; ?>" alt="" class="img-fluid w-100 <?php if (!wp_is_mobile()) { echo 'h-340'; } ?>">
 				</div>
 				<div class="col-12 col-sm-6">
 					<div class="info_content">
@@ -72,17 +72,17 @@
 					</div>
 				</div>
 				<div class="col-12 col-sm-6">
-					<img src="<?php echo $feature_and_comment_estate['image_2']['url']; ?>" alt="" class="img-fluid w-100">
+					<img src="<?php echo $feature_and_comment_estate['image_2']['url']; ?>" alt="" class="img-fluid w-100 <?php if (!wp_is_mobile()) { echo 'h-340'; } ?>">
 				</div>
 			</div>
 			
 			<h2 class="text-center mt-5 mb-3"><?php echo $feature_and_comment_estate['feature_3']; ?></h2>
 			<div class="row row_info mb-3">
 				<div class="col-6 col-sm-6">
-					<img src="<?php echo $feature_and_comment_estate['image_3']['url']; ?>" alt="" class="img-fluid w-100">
+					<img src="<?php echo $feature_and_comment_estate['image_3']['url']; ?>" alt="" class="img-fluid w-100 <?php if (wp_is_mobile()) { echo 'h-120'; } else { echo 'h-340'; } ?>">
 				</div>
 				<div class="col-6 col-sm-6">
-					<img src="<?php echo $feature_and_comment_estate['image_4']['url']; ?>" alt="" class="img-fluid w-100">
+					<img src="<?php echo $feature_and_comment_estate['image_4']['url']; ?>" alt="" class="img-fluid w-100 <?php if (wp_is_mobile()) { echo 'h-120'; } else { echo 'h-340'; } ?>">
 				</div>
 			</div>
 			<p><?php echo $feature_and_comment_estate['description_3']; ?></p>

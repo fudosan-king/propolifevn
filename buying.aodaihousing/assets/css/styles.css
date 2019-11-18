@@ -262,7 +262,7 @@ p {margin-bottom: 10px;}
 .headline {
   font-size: 20px;
   position: relative;
-  margin: 70px 0;
+  margin: 20px 0;
 }
 .headline span {
   display: inline-block;
@@ -830,7 +830,7 @@ h2.title span {
 .head_title {
   border-left: 5px solid rgb(42,171,225);
   padding-left: 15px;
-  margin-bottom: 15px !important;
+  margin: 15px 0 !important;
 }
 .section_about_info {
   margin-bottom: 60px;
@@ -1046,7 +1046,7 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
   line-height: 1.8em;
 }
 .section_topic {
-  padding: 70px 0;
+  padding: 20px 0;
   background: #fff;
 }
 .section_topic h2 {
@@ -1079,7 +1079,7 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
   margin-bottom: 0;
 }
 .section_topic article p {
-  font-size: 17px;
+  font-size: 18px;
 }
 .topic_content {
   height: 175px;
@@ -1111,7 +1111,7 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 .top_info .time::before {
   left: -10px;
   top: -17px;
-  height: 74px;
+  /*height: 74px;*/
 }
 .man_charge {
   font-size: 14px;
@@ -1131,6 +1131,20 @@ img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
   font-size: 20px;
   border-left: 5px solid rgb(42,171,225);
   padding-left: 15px;
+}
+
+/*Custommize image post news*/
+
+.h-340 {
+    height: 340px;
+}
+
+.h-120 {
+    height: 120px;
+}
+
+.section_magazine_detail p {
+  font-size: 15px;
 }
 
 @media (max-width: 768px) {

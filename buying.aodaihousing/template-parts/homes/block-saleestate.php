@@ -25,7 +25,16 @@
 	?>	
 			<div class="col-12 col-sm-6 col-md-6 col-lg-4">
 				<div class="pro_item" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-					<h4><?php the_title(); ?></h4>
+					<h4>
+						<?php 
+							$title = get_the_title();
+							if (strlen($title) >= 37){
+								echo mb_substr($title,0,12, "utf-8").'...';
+							} else {
+								echo $title;
+							}
+						?>
+					</h4>
 					<div class="pro_item_img">
 						<a href="<?php echo esc_url(get_permalink()); ?>"><img src="<?php echo $thumbnailURL; ?>" alt="" class="img-fluid"></a>
 						<a href="<?php echo esc_url(get_permalink()); ?>" class="text_cover"><?php echo str_replace(substr($feature_and_comment_estate['description'], 81, 1000), " ...", $feature_and_comment_estate['description']); ?></a>

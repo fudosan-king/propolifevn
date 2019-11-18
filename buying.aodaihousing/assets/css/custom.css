@@ -7,11 +7,8 @@
 }
 
 /*Breadcrumbs*/
-#breadcrumbs {
-	padding-left: 165px;
-}
 #breadcrumbs span {
-	font-size: 18px;
+	font-size: 13px;
     font-weight: inherit;
     color: #0000CD
 }

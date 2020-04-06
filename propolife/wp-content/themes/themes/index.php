@@ -99,7 +99,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 オフィスの内装工事 <br>
 CGパース制作
 </h2>
-<p>クロニクルリフォーム事業部では、オフィスのデザイン設計施工、CGパースをご提供しております。</p>
+<p>クロニクルリフォーム事業部ではオフィスの内装工事を行っております。</p>
 <div class="fa-right"><i class="fa fa-angle-right fa-3x"></i></div>
 </a>
 </div>
@@ -170,7 +170,7 @@ WEB広告支援
 アオザイハウジング事業部 <br>
 不動産の賃貸・管理・売買
 </h2>
-<p style="margin-bottom:20px;">アオザイハウジング事業部では、サービスアパート、コンドミニアム、オフィスの賃貸仲介、コンドミニアムの管理、不動産売買仲介をご提供させて頂いております。</p>
+<p style="margin-bottom:20px;">アオザイハウジング事業部ではホーチミンの素敵なお部屋探しをお手伝いさせて頂いております。 </p>
 <div class="fa-right"><i class="fa fa-angle-right fa-3x"></i></div>
 </a>
 </div>

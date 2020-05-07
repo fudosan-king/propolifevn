@@ -1,41 +1,48 @@
-<?php ob_start();global $lienhe;$lienhe = contactInfo();$hl = explode(';',$lienhe['dienthoai']);?>
+<?php ob_start();global $lienhe;$lienhe=contactInfo();$hl=explode( ';',$lienhe[ 'dienthoai']);?>
 <!doctype html>
 <html class="no-js" lang="ja">
+
 <head>
-<?php get_sidebar('title-page');?>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
-<link media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" rel="stylesheet" />
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
+    <?php get_sidebar( 'title-page');?>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" type="text/css" rel="stylesheet">
+    <link media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.min.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script>$(window).load(function() {$(".se-pre-con").fadeOut("slow");});</script>
-<?php include('content-scripts-index.php');?>
-<!-- Google Tag Manager -->
-<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PF7LZC"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PF7LZC');</script>
-<!-- End Google Tag Manager -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.0/flickity.pkgd.min.js"></script>
+    <script>
+        $(window).load(function() {$(".se-pre-con").fadeOut("slow");});
+    </script>
+    <?php include( 'content-scripts-index.php');?>
+    <!-- Google Tag Manager -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-PF7LZC" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PF7LZC');
+    </script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body class="home">
-<div class="se-pre-con"></div>
-
-<div>
-<div class="container-fluid">
-<div class="row">
-<div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
-<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 proCol" align="left">
-<div class="optical logo" align="left">
-<h1>
+    <div class="se-pre-con"></div>
+    <div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 proCol" align="left">
+                    <div class="optical logo" align="left">
+                        <h1>
 <a href="<?php echo get_permalink(get_page_by_path('about'));?>">
 <img width="316" height="54" src="<?php bloginfo( 'template_directory' );?>/images/logo-toppage.png" class="img-responsive wp-post-image" alt="logo-propolife" title="logo-propolife" srcset="<?php bloginfo( 'template_directory' );?>/images/logo-toppage.png" sizes="(max-width: 316px) 100vw, 316px">
 <?php
@@ -47,86 +54,105 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 ?>
 </a>
 </h1>
-</div>
-</div>
-<div class="col-lg-6 col-md-6 hidden-sm hidden-xs proCol">&nbsp;</div>
-</div>
-
-<div class="row">
-<div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
-
-<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 proCol">
-<div class="optical">
-<a href="<?php echo get_permalink(get_page_by_path('about'));?>" class="" style="display:block">
-<div class="thumb">
-<p style="padding:0px 40px;color:#000000" align="justify">
-    プロポライフベトナムでは、日本人コンサルタントと弁護士、会計資格者、不動産資格者、設計士で進出コンサルティングと不動産サービスを中心にご提供させて頂いております。実績に裏づけされた確かなアドバイス、サポートをさせて頂きます。
-</p>
-<!-- <div class="tel"><?php echo $hl[0];?></div> -->
-<div class="fa-right"><i class="fa fa-angle-right fa-3x" style="color: #000000;"></i><div class="clearfix"></div></div>
-</div>
-</a>
-</div>
-</div>
-
-<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 proCol">
-<a class="thumbnail greenlight" href="<?php echo get_permalink(264);?>">
-<div><img src="<?php bloginfo( 'template_directory' );?>/images/lotus-service.png" class="img-responsive" width="180" height="73" alt="">
-<div class="fa-right"><i class="fa fa-angle-right fa-3x" style="color: #009A6D;"></i></div></div>
-</a>
-</div>
-
-<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 proCol"><a class="thumbnail green" href="<?php echo get_permalink(264);?>">
-<h2 class="title">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 hidden-sm hidden-xs proCol">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 proCol">
+                    <div class="optical">
+                        <a href="<?php echo get_permalink(get_page_by_path('about'));?>" class="" style="display:block">
+                            <div class="thumb">
+                                <p style="padding:0px 40px;color:#000000" align="justify">プロポライフベトナムでは、日本人コンサルタントと弁護士、会計資格者、不動産資格者、設計士で進出コンサルティングと不動産サービスを中心にご提供させて頂いております。実績に裏づけされた確かなアドバイス、サポートをさせて頂きます。</p>
+                                <!-- <div class="tel"><?php echo $hl[0];?></div> -->
+                                <div class="fa-right"><i class="fa fa-angle-right fa-3x" style="color: #000000;"></i>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 proCol">
+                    <a class="thumbnail greenlight" href="<?php echo get_permalink(264);?>">
+                        <div>
+                            <img src="<?php bloginfo( 'template_directory' );?>/images/lotus-service.png" class="img-responsive" width="180" height="73" alt="">
+                            <div class="fa-right"><i class="fa fa-angle-right fa-3x" style="color: #009A6D;"></i>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-6 col-xs-6 proCol">
+                    <a class="thumbnail green" href="<?php echo get_permalink(264);?>">
+                        <h2 class="title">
 ロータスサービス事業部 <br>
 法人設立・ライセンス取得 <br>
 労働許可証・ビザ
 </h2>
-<p>ロータスサービス事業部では、進出時の法人設立から設立後の準備までのスタートアップの支援、進出後のライセンス取得支援などを行っております。</p></a>
-</div>
-
-<div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
-
-</div>
-<div class="row">
-
-	<div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
-
-<div class="col-lg-2 col-md-2 col-xs-6 proCol">
-<a class="thumbnail yellow" href="cat-chronicle/オフィスの内装工事">
-<h2 class="title"><img src="<?php bloginfo( 'template_directory' );?>/images/logo-chronicle.png" class="img-responsive" width="200" height="0" alt="">
+                        <p>ロータスサービス事業部では、進出時の法人設立から設立後の準備までのスタートアップの支援、進出後のライセンス取得支援などを行っております。</p>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-xs-6 proCol">
+                    <a class="thumbnail yellow" href="cat-chronicle/オフィスの内装工事">
+                        <h2 class="title"><img src="<?php bloginfo( 'template_directory' );?>/images/logo-chronicle.png" class="img-responsive" width="200" height="0" alt="">
 クロニクルリフォーム事業部 <br>
 オフィスの内装工事 <br>
 CGパース制作
 </h2>
-<p>クロニクルリフォーム事業部ではオフィスの内装工事を行っております。</p>
-<div class="fa-right"><i class="fa fa-angle-right fa-3x"></i></div>
-</a>
-</div>
-
-<div class="col-lg-2 col-md-2 col-xs-6 proCol">
-<a class="thumbnail" href="cat-chronicle/オフィスの内装工事">
-<div class="thumb">
-
-<div id="slider1" style="position: relative; width:400px;height:400px; overflow: hidden;">
-<div u="loading" style="position: absolute; top: 0px; left: 0px;">
-<div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;background-color: #000; top: 0px; left: 0px;width: 100%; height:100%;"></div>
-<div style="position: absolute; display: block; background: url(<?php bloginfo( 'template_directory' );?>/images/controls/ajax-loader.gif) no-repeat center center;top: 0px; left: 0px;width: 100%;height:100%;"></div>
-</div>
-<div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:400px; height:400px;overflow: hidden;">
-<div><img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/5.jpg" alt="" /></div>
-<div><img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/6.jpg" alt="" ></div>
-<div><img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/7.jpg" alt="" ></div>
-<div><img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/8.jpg" alt="" /></div>
-<div><img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/3.jpg" alt="" /></div>
-</div>
-</div>
-
-</div>
-</a>
-</div>
-
-<!-- <div class="col-lg-2 col-md-2 col-xs-6 proCol">
+                        <p>クロニクルリフォーム事業部ではオフィスの内装工事を行っております。</p>
+                        <div class="fa-right"><i class="fa fa-angle-right fa-3x"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-2 col-xs-6 proCol">
+                    <a class="thumbnail brown" href="https://www.prostyle-hotels.com/hcm/ja/">
+                        <img src="<?php bloginfo( 'template_directory' );?>/images/logo-prostylehotelhcm.png" width="180" alt="">
+                        <h2>プロスタイルホテルホーチミン</h2>
+                        <p>観光にも出張ビジネスにも便利なレタントン通り日本人町とドンコイ通りの近くのホテルを運営しております。</p>
+                        <div align="right" class="fa-right"><i class="fa fa-angle-right fa-3x"></i></div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-2 col-xs-12 proCol">
+                    <a class="thumbnail" href="cat-chronicle/オフィスの内装工事">
+                        <div class="thumb thumb_slider">
+                            <!-- <div id="slider1" style="position: relative; width:400px;height:400px; overflow: hidden;">
+                                <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                                    <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;background-color: #000; top: 0px; left: 0px;width: 100%; height:100%;"></div>
+                                    <div style="position: absolute; display: block; background: url(<?php bloginfo( 'template_directory' );?>/images/controls/ajax-loader.gif) no-repeat center center;top: 0px; left: 0px;width: 100%;height:100%;"></div>
+                                </div>
+                                <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width:400px; height:400px;overflow: hidden;">
+                                    <div>
+                                        <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/5.jpg" alt="" />
+                                    </div>
+                                    <div>
+                                        <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/6.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/7.jpg" alt="">
+                                    </div>
+                                    <div>
+                                        <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/8.jpg" alt="" />
+                                    </div>
+                                    <div>
+                                        <img u="image" src="<?php bloginfo( 'template_directory' );?>/images/slides/office/3.jpg" alt="" />
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="carousel carousel_slider" data-flickity='{ "prevNextButtons": false, "pageDots": false, "autoPlay": true} '>
+                                <div class="carousel-cell"><img class="img-responsive" src="<?php bloginfo( 'template_directory' );?>/images/slides/hotel/accommodations01_.jpg" alt=""></div>
+                                <div class="carousel-cell"><img class="img-responsive" src="<?php bloginfo( 'template_directory' );?>/images/slides/hotel/accommodations02_.jpg" alt=""></div>
+                                <div class="carousel-cell"><img class="img-responsive" src="<?php bloginfo( 'template_directory' );?>/images/slides/hotel/accommodations03_.jpg" alt=""></div>
+                                <div class="carousel-cell"><img class="img-responsive" src="<?php bloginfo( 'template_directory' );?>/images/slides/hotel/accommodations04_.jpg" alt=""></div>
+                                <div class="carousel-cell"><img class="img-responsive" src="<?php bloginfo( 'template_directory' );?>/images/slides/hotel/accommodations05_.jpg" alt=""></div>
+                                <div class="carousel-cell"><img class="img-responsive" src="<?php bloginfo( 'template_directory' );?>/images/slides/hotel/accommodations06_.jpg" alt=""></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- <div class="col-lg-2 col-md-2 col-xs-6 proCol">
 <a class="thumbnail blue" href="<?php //echo get_permalink(370);?>">
 <h2 class="title"><img src="<?php //bloginfo( 'template_directory' );?>/images/web-logo.png" class="img-responsive pull-left" width="50" height="0" style="margin-right:10px;" alt="">
 <span class="pull-left">
@@ -156,53 +182,55 @@ WEB広告支援
 </div>
 </a>
 </div> -->
-
-<div class="col-lg-2 col-md-2 col-xs-6 proCol">
-<a class="thumbnail orange" href="<?php echo get_permalink(get_page_by_path('aodaihousing-support')); ?>" target="_blank" style="background:#dbeef4;color:#000000">
-<h2 class="title"><img src="<?php bloginfo( 'template_directory' );?>/images/logo-aodaihousing.png" class="img-responsive" width="200" height="0" alt=""></h2>
-<div class="fa-right"><i class="fa fa-angle-right fa-3x"></i></div>
-</a>
-</div>
-
-<div class="col-lg-2 col-md-2 col-xs-6 proCol">
-<a class="thumbnail black" href="<?php echo get_permalink(get_page_by_path('aodaihousing-support')); ?>" target="_blank">
-<h2 class="title">
+                <div class="col-lg-2 col-md-2 col-xs-6 proCol">
+                    <a class="thumbnail orange" href="<?php echo get_permalink(get_page_by_path('aodaihousing-support')); ?>" target="_blank" style="background:#dbeef4;color:#000000">
+                        <h2 class="title"><img src="<?php bloginfo( 'template_directory' );?>/images/logo-aodaihousing.png" class="img-responsive" width="200" height="0" alt=""></h2>
+                        <div class="fa-right"><i class="fa fa-angle-right fa-3x"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-2 col-xs-6 proCol">
+                    <a class="thumbnail black" href="<?php echo get_permalink(get_page_by_path('aodaihousing-support')); ?>" target="_blank">
+                        <h2 class="title">
 アオザイハウジング事業部 <br>
 不動産の賃貸・管理・売買
 </h2>
-<p style="margin-bottom:20px;">アオザイハウジング事業部ではホーチミンの素敵なお部屋探しをお手伝いさせて頂いております。 </p>
-<div class="fa-right"><i class="fa fa-angle-right fa-3x"></i></div>
-</a>
-</div>
-
-</div>
-
-<div class="row">
-<div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
-
-<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 proCol">
-<div class="visible-sm visible-xs"><?php include('sidebar-news.php'); ?></div><div class="clearfix"></div>
-<a href="<?php echo get_permalink(get_page_by_path('about'));?>">
-<div class="optical">
+                        <p style="margin-bottom:20px;">アオザイハウジング事業部ではホーチミンの素敵なお部屋探しをお手伝いさせて頂いております。</p>
+                        <div class="fa-right"><i class="fa fa-angle-right fa-3x"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
+                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 proCol">
+                    <div class="visible-sm visible-xs">
+                        <?php include( 'sidebar-news.php'); ?>
+                    </div>
+                    <div class="clearfix"></div>
+                    <a href="<?php echo get_permalink(get_page_by_path('about'));?>">
+                        <div class="optical">
 <address>Address: <?php echo $lienhe['diachigmap'];?></address>
-<div style="padding:0px 40px 40px 40px;color:#000000">
-<div>ベトナム国内 028 3827 5068<br>
-日本海外から +84 28 3827 5068（日本語）</div>
-</div>
-</div>
-</a>
-</div>
-
-<div class="col-lg-4 col-md-4 col-sm-12 hidden-xs proCol"><div class="visible-lg visible-md"><?php include('sidebar-news.php'); ?></div></div>
-<div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
-</div>
-
-</div>
-</div>
-
-<footer>
-<div class="back-top"></div>
-</footer>
+                            <div style="padding:0px 40px 40px 40px;color:#000000">
+                                <div>ベトナム国内 028 3827 5068
+                                    <br>日本海外から +84 28 3827 5068（日本語）</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 hidden-xs proCol">
+                    <div class="visible-lg visible-md">
+                        <?php include( 'sidebar-news.php'); ?>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-2 hidden-sm hidden-xs proCol">&nbsp;</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="back-top"></div>
+    </footer>
 </body>
+
 </html>
 <?php ob_end_flush();?>

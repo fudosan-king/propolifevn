@@ -563,6 +563,30 @@ h3{text-transform:uppercase}
   font-weight: 500;
 }
 
+.proCol .brown {
+  padding: 15px;
+    min-height: 260px;
+}
+.thumbnail.brown {
+  background: #50401B;
+}
+.thumbnail.brown p {
+  color: #b3ac9d;
+}
+.proCol .optical {
+  min-height: 170px;
+}
+
+.carousel_slider .carousel-cell {
+  width: 100%; /* full width */
+  height: 260px; /* height of carousel */
+  margin-right: 10px;
+}
+.carousel_slider .carousel-cell img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
 
 @media (max-width: 768px) {
     .w_QA img {
@@ -574,6 +598,15 @@ h3{text-transform:uppercase}
     .f30 {font-size: 20px;}
     .support_page {
         padding-top: 75px;
+    }
+    .proCol .brown {
+      min-height: 360px;
+    }
+    .proCol .thumb.thumb_slider {
+      height: auto !important;
+    }
+    .carousel_slider .carousel-cell, .carousel_slider .carousel-cell img {
+      height: 369px;
     }
 }
 @media (max-width: 767px) {

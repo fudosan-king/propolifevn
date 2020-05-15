@@ -50,8 +50,7 @@
 			<li><a href="#" class="hidden-xs">不動産サービス</a>
 				<ul>
 					<li><a href="<?php echo get_permalink(get_page_by_path('aodaihousing-support'));?>"><?php echo get_the_title(1583);?></a></li>
-					<li><a href="http://aodaihousing.com/" target="_blank">アパート検索</a></li>
-					<li><a href="http://office-vn.com/" target="_blank">オフィス検索</a></li>
+					<li><a href="http://aodaihousing.com/" target="_blank">アパート・オフィス検索</a></li>
 				</ul>
 			</li>
 			<li class="<?php echo get_post(73)->post_name;?>"><a href="#" class="hidden-xs"><?php echo get_the_title(73);?></a>

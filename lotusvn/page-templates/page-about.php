@@ -11,13 +11,13 @@
 	<div class="container about_page">
 
 		<!-- PROPOSAL CONTENT -->
-		<?php 
+		<?php
 		if (have_rows('proposal_content')):
 			$group = get_field('proposal_content');
 			$proposal_image = $group['proposal_image'];
 			$proposal_image_title = $group['proposal_image_title'];
 			$proposal_text = $group['proposal_text'];
-			
+
 			$imgUrl = wp_get_attachment_image_url( $proposal_image['ID'], $size = 'medium', $icon = false );
 			?>
 			<div class="row">
@@ -45,13 +45,13 @@
 		?>
 
 		<!-- BUILDING CONTENT -->
-		<?php 
+		<?php
 		if (have_rows('building_content')):
 			$group = get_field('building_content');
 			$building_image = $group['building_image'];
 			$building_image_title = $group['building_image_title'];
 			$building_text = $group['building_text'];
-			
+
 			$imgUrl = wp_get_attachment_image_url( $building_image['ID'], $size = 'medium', $icon = false );
 			?>
 			<div class="box_about">
@@ -80,7 +80,7 @@
 
 
 			<!-- STAFF CONTENT -->
-			<?php 
+			<?php
 			if (have_rows('staff_content')):
 				$group = get_field('staff_content');
 
@@ -124,12 +124,12 @@
 
 
 			<!-- PROFILE CONTENT -->
-			<?php 
+			<?php
 			if (have_rows('profile_content')):
 				$group = get_field('profile_content');
 				$profile_content_title = $group['profile_content_title'];
 				$general_addition_info = $group['profile_content_info'];
-				
+
 				$profile_group = get_field('company_profile', $general_addition_info->ID);
 
 
@@ -174,7 +174,7 @@
 									<tr>
 										<td>運営Website </td>
 										<td>
-											<?php 
+											<?php
 											$operation_website = $profile_group['operation_website'];
 											if (!empty($operation_website)):
 												echo '<p>';
@@ -206,7 +206,7 @@
 									<tr>
 										<td>関連会社/支店</td>
 										<td>
-											<?php 
+											<?php
 											$company_branch = $profile_group['company_branch'];
 											if (!empty($company_branch)):
 												echo '<p>';
@@ -216,11 +216,7 @@
 													$company_branch_address = $field['company_branch_address'];
 													$company_branch_phone = $field['company_branch_phone'];
 
-
-													echo '<b>'.$company_branch_name.'</b> <br>
-													'.$company_branch_address.'<br>
-													TEL: '.$company_branch_phone.'<br>';
-
+													echo '<b>' . $company_branch_name . '</b><br>' . $company_branch_address . '<br>TEL: ' . $company_branch_phone . '<br>';
 													?>
 
 
@@ -244,9 +240,9 @@
 
 
 				<hr>
-				
+
 				<!-- CONTACT LINK -->
-				<?php 
+				<?php
 				if (have_rows('contact_link')):
 					$contact_link = get_field('contact_link');
 					echo '<p class="text-center w_btnInquiry">
@@ -254,7 +250,7 @@
 				</p>';
 				endif;
 				?>
-				
+
 				<!-- PHONE LIST MAP -->
 				<?php
 				if (have_rows('phone_list_map')):
@@ -275,7 +271,7 @@
 					</div>';
 				endif;
 				?>
-							
+
 
 				</div>
 			</section>

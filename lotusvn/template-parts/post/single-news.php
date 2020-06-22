@@ -8,12 +8,14 @@
         <div class="box_left">
           <h2 class="title">ニュース</h2>
           <div class="box_newsDetail">
+            <div style="margin-bottom:15px"><small><?php the_time(); ?></small></div>
             <h3><?php the_title(); ?></h3>
             <?php the_content(); ?>
           </div>
 
         </div>
         <p class="text-center w_btnInquiry">
+          <a href="https://www.lotusservice-vn.com/" class="btn-0">トップ</a> <br style="display: contents;">
           <a href="https://www.lotusservice-vn.com/contact/" class="btn-0"><i class="fa fa-question-circle-o fa-lg" aria-hidden="true" target="_blank"></i> 相談する</a>
         </p>
       </div>

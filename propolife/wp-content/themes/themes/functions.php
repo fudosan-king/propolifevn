@@ -62,6 +62,14 @@ function htmlContactButton6(){
 	ob_end_clean();
 	return $cform;
 }
+function htmlAboutButton(){
+    ob_start();?>
+<div align="center" style="margin-top:30px; margin-bottom:15px;"><a href="<?php echo get_permalink(get_page_by_path('about')); ?>" class="btn btn-success btn-lg btn-big">会社概要<i class="fa fa-chevron-circle-right" style="margin:0px 0px 0px 10px;color:#ffffff"></i></a></div>
+<?php
+    $cform = ob_get_contents();
+    ob_end_clean();
+    return $cform;
+}
 /*-----------------------------------------------------------------------*/
 function new_wp_title( $title, $sep ) {
 	global $paged, $page;
@@ -170,6 +178,17 @@ if (class_exists('MultiPostThumbnails')) {
     );
 };
 
-
+add_filter('the_time', 'dynamictime');
+function dynamictime() {
+  global $post;
+  $date = $post->post_date;
+  $time = get_post_time('G', true, $post);
+  $mytime = time() - $time;
+  if($mytime > 0 && $mytime < 2*24*60*60)
+    $mytimestamp = sprintf(__('%s ago'), human_time_diff($time));
+  else
+    $mytimestamp = date(get_option('date_format'), strtotime($date));
+  return $mytimestamp;
+}
 
 ?>

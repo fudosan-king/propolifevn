@@ -15,8 +15,8 @@
 	    <li style="margin: 10px 0 10px 0;">
 	        <a target="_blank" class="link" href="https://buying.aodaihousing.com/"><img style="width: 100%;" src="<?php bloginfo( 'template_directory' );?>/images/banner_RealEstate.jpg"></a>
 	    </li>
-	    <li style="margin: 10px 0 10px 0;">
+	    <!-- <li style="margin: 10px 0 10px 0;">
 	        <a target="_blank" class="link" href="https://www.propolifevietnam.com/recruitment-propolife.html/"><img style="width: 100%;" src="https://www.propolifevietnam.com/wp-content/uploads/2019/09/recruitment.png"></a>
-	    </li>
+	    </li> -->
 	</ul>
 </div>

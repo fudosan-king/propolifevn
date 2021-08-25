@@ -4,7 +4,7 @@ VPS Information:
 -       IP: 222.255.117.23
 -       Port ssh: 22
 -       Login Name: root
--       Password: M39gRauG@1
+-       Password: M39gRauG
 
 -       Login Name: propolife
 -       Password: T8p7xDWh@1

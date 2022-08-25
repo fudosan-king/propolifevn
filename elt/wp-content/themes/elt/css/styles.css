@@ -607,6 +607,7 @@ address .tel {
 }
 .lazy-container.lazyloaded {
     background: none;
+    height: 270px;
 }
 .lazy-container .lazy_preloader {
     height: 0;
@@ -750,6 +751,13 @@ p.excerpt {
     margin: 15px 0px;
     max-height: 58px;
     height: 58px;
+}
+.onsale {
+    font-size: 30px;    
+    color: red;
+}
+.onsale-container {
+    background-color: #F5BD31 !important;
 }
 /*----------Cats List-------------*/
 
